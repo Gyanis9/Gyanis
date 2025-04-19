@@ -58,11 +58,11 @@ namespace Gyanis::net::http
         bool has_conn = false;
         for (const auto& [fst, snd] : headers)
         {
-            if (strcasecmp(fst.c_str(), "connection") == 0)
+            if (strcasecmp(fst.c_str(), "Connection") == 0)
             {
                 has_conn = true;
             }
-            else if (!has_host && strcasecmp(fst.c_str(), "host") == 0)
+            else if (!has_host && strcasecmp(fst.c_str(), "Host") == 0)
             {
                 has_host = !snd.empty();
             }
@@ -72,7 +72,7 @@ namespace Gyanis::net::http
         request->setWebSocket(true);
         if (!has_conn)
         {
-            request->setHeader("connection", "Upgrade");
+            request->setHeader("Connection", "Upgrade");
         }
         request->setHeader("Upgrade", "websocket");
         request->setHeader("Sec-WebSocket-Version", "13");

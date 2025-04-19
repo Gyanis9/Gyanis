@@ -266,16 +266,16 @@ namespace Gyanis::net::http
         bool has_host = false;
         for (const auto& [fst, snd] : headers)
         {
-            if (strcasecmp(fst.c_str(), "connection") == 0)
+            if (strcasecmp(fst.c_str(), "Connection") == 0)
             {
-                if (strcasecmp(snd.c_str(), "keep-alive") == 0)
+                if (strcasecmp(snd.c_str(), "Keep-Alive") == 0)
                 {
                     req->setClose(false);
                 }
                 continue;
             }
 
-            if (!has_host && strcasecmp(fst.c_str(), "host") == 0)
+            if (!has_host && strcasecmp(fst.c_str(), "Host") == 0)
             {
                 has_host = !snd.empty();
             }
@@ -463,16 +463,16 @@ namespace Gyanis::net::http
         bool has_host = false;
         for (const auto& [fst, snd] : headers)
         {
-            if (strcasecmp(fst.c_str(), "connection") == 0)
+            if (strcasecmp(fst.c_str(), "Connection") == 0)
             {
-                if (strcasecmp(snd.c_str(), "keep-alive") == 0)
+                if (strcasecmp(snd.c_str(), "Keep-Alive") == 0)
                 {
                     req->setClose(false);
                 }
                 continue;
             }
 
-            if (!has_host && strcasecmp(fst.c_str(), "host") == 0)
+            if (!has_host && strcasecmp(fst.c_str(), "Host") == 0)
             {
                 has_host = !snd.empty();
             }

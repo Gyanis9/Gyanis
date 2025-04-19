@@ -204,7 +204,7 @@ namespace Gyanis::net::http
 
     uint64_t HttpRequestParser::getContentLength() const
     {
-        return m_data->getHeaderAs<uint64_t>("content-length", 0);
+        return m_data->getHeaderAs<uint64_t>("Content-Length", 0);
     }
 
     const http_parser& HttpRequestParser::getParser() const
@@ -328,7 +328,7 @@ namespace Gyanis::net::http
 
     uint64_t HttpResponseParser::getContentLength() const
     {
-        return m_data->getHeaderAs<uint64_t>("content-length", 0);
+        return m_data->getHeaderAs<uint64_t>("Content-Length", 0);
     }
 
     const httpclient_parser& HttpResponseParser::getParser() const

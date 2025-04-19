@@ -403,11 +403,11 @@ namespace Gyanis::net::http
             << "\r\n";
         if (!m_websocket)
         {
-            os << "connection: " << (m_close ? "close" : "keep-alive") << "\r\n";
+            os << "Connection: " << (m_close ? "Close" : "Keep-Alive") << "\r\n";
         }
         for (const auto& [fst, snd] : m_headers)
         {
-            if (!m_websocket && strcasecmp(fst.c_str(), "connection") == 0)
+            if (!m_websocket && strcasecmp(fst.c_str(), "Connection") == 0)
             {
                 continue;
             }
@@ -416,7 +416,7 @@ namespace Gyanis::net::http
 
         if (!m_body.empty())
         {
-            os << "content-length: " << m_body.size() << "\r\n\r\n"
+            os << "Content-Length: " << m_body.size() << "\r\n\r\n"
                 << m_body;
         }
         else
@@ -435,10 +435,10 @@ namespace Gyanis::net::http
 
     void HttpRequest::init()
     {
-        const std::string conn = getHeader("connection");
+        const std::string conn = getHeader("Connection");
         if (!conn.empty())
         {
-            if (strcasecmp(conn.c_str(), "keep-alive") == 0)
+            if (strcasecmp(conn.c_str(), "Keep-Alive") == 0)
             {
                 m_close = false;
             }
@@ -502,7 +502,7 @@ namespace Gyanis::net::http
             return;
         }
 
-        const std::string content_type = getHeader("content-type");
+        const std::string content_type = getHeader("Content-Type");
         if (strcasestr(content_type.c_str(), "application/x-www-form-urlencoded") == nullptr)
         {
             m_parserParamFlag |= 0x2;
@@ -549,7 +549,7 @@ namespace Gyanis::net::http
             return;
         }
 
-        std::string cookie = getHeader("cookie");
+        std::string cookie = getHeader("Cookie");
         if (cookie.empty())
         {
             m_parserParamFlag |= 0x4;
@@ -696,7 +696,7 @@ namespace Gyanis::net::http
 
         for (const auto& [fst, snd] : m_headers)
         {
-            if (!m_websocket && strcasecmp(fst.c_str(), "connection") == 0)
+            if (!m_websocket && strcasecmp(fst.c_str(), "Connection") == 0)
             {
                 continue;
             }
@@ -708,11 +708,11 @@ namespace Gyanis::net::http
         }
         if (!m_websocket)
         {
-            os << "connection: " << (m_close ? "close" : "keep-alive") << "\r\n";
+            os << "Connection: " << (m_close ? "Close" : "Keep-Alive") << "\r\n";
         }
         if (!m_body.empty())
         {
-            os << "content-length: " << m_body.size() << "\r\n\r\n"
+            os << "Content-Length: " << m_body.size() << "\r\n\r\n"
                 << m_body;
         }
         else
