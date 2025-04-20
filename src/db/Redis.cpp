@@ -27,11 +27,11 @@ namespace Gyanis::db
             sw::redis::ConnectionOptions opts;
             opts.host = base::GetParamValue<std::string>(g_redis->getValue(), "host", "127.0.0.1");
             opts.port = base::GetParamValue<int>(g_redis->getValue(), "port", 6379);
-            if (auto password = base::GetParamValue<std::string>(g_redis->getValue(), "password", "");
-                !password.empty())
-            {
-                opts.password = password;
-            }
+            // if (auto password = base::GetParamValue<std::string>(g_redis->getValue(), "password", "");
+            //     !password.empty())
+            // {
+            //     opts.password = password;
+            // }
             opts.db = base::GetParamValue<int>(g_redis->getValue(), "db", 0);
 
             sw::redis::ConnectionPoolOptions pool_opts;

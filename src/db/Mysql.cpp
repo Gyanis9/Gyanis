@@ -98,6 +98,13 @@ namespace Gyanis::db
                 return nullptr;
             }
         }
+        const unsigned int ssl_mode = SSL_MODE_DISABLED;
+        if (mysql_options(mysql, MYSQL_OPT_SSL_MODE, &ssl_mode) != 0)
+        {
+            LOG_ERROR(g_logger) << "Failed to disable SSL: " << mysql_error(mysql);
+            mysql_close(mysql);
+            return nullptr;
+        }
 
         if (mysql_set_character_set(mysql, "utf8mb4") != 0)
         {
@@ -145,7 +152,6 @@ namespace Gyanis::db
             mysql_close(mysql);
             return nullptr;
         }
-
         return mysql;
     }
 
