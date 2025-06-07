@@ -1,0 +1,14 @@
+digraph "Gyanis::net::http::HttpServer"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [id="Node000001",label="Gyanis::net::http::\lHttpServer",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="HTTP 服务器类"];
+  Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::net::web::TcpServer",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1web_1_1TcpServer.html",tooltip="TCP 服务器类"];
+  Node3 -> Node2 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="std::enable_shared\l_from_this\< TcpServer \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node2 [id="edge3_Node000002_Node000004",dir="back",color="firebrick4",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="NonCopyable",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classNonCopyable.html",tooltip="对象无法拷贝,赋值"];
+}

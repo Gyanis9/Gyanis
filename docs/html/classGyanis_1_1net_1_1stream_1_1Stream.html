@@ -1,0 +1,706 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: Gyanis::net::stream::Stream类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGyanis_1_1net_1_1stream_1_1Stream.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classGyanis_1_1net_1_1stream_1_1Stream-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Gyanis::net::stream::Stream类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>流接口类  
+ <a href="classGyanis_1_1net_1_1stream_1_1Stream.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Stream_8h_source.html">Stream.h</a>&gt;</code></p>
+<div class="dynheader">
+类 Gyanis::net::stream::Stream 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1stream_1_1Stream__inherit__graph.png" border="0" usemap="#aGyanis_1_1net_1_1stream_1_1Stream_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a2ebee442ebc409dfa047840728193f2b" id="r_a2ebee442ebc409dfa047840728193f2b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html#a2ebee442ebc409dfa047840728193f2b">~Stream</a> ()=default</td></tr>
+<tr class="memdesc:a2ebee442ebc409dfa047840728193f2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <br /></td></tr>
+<tr class="separator:a2ebee442ebc409dfa047840728193f2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a533d88001fabfaf45ad488b52dda4684" id="r_a533d88001fabfaf45ad488b52dda4684"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html#a533d88001fabfaf45ad488b52dda4684">read</a> (void *buffer, size_t length)=0</td></tr>
+<tr class="memdesc:a533d88001fabfaf45ad488b52dda4684"><td class="mdescLeft">&#160;</td><td class="mdescRight">从流中读取数据  <br /></td></tr>
+<tr class="separator:a533d88001fabfaf45ad488b52dda4684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af34db7e5d9ffc992c0609dc8f6da0978" id="r_af34db7e5d9ffc992c0609dc8f6da0978"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html#af34db7e5d9ffc992c0609dc8f6da0978">read</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html">ByteArray</a> &gt; &amp;buffer, size_t length)=0</td></tr>
+<tr class="memdesc:af34db7e5d9ffc992c0609dc8f6da0978"><td class="mdescLeft">&#160;</td><td class="mdescRight">从流中读取数据到 <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html" title="二进制数据数组类">ByteArray</a>  <br /></td></tr>
+<tr class="separator:af34db7e5d9ffc992c0609dc8f6da0978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10aae9283f1a40ad1600e85beb058c26" id="r_a10aae9283f1a40ad1600e85beb058c26"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html#a10aae9283f1a40ad1600e85beb058c26">readFixSize</a> (void *buffer, size_t length)</td></tr>
+<tr class="memdesc:a10aae9283f1a40ad1600e85beb058c26"><td class="mdescLeft">&#160;</td><td class="mdescRight">从流中读取固定大小的数据  <br /></td></tr>
+<tr class="separator:a10aae9283f1a40ad1600e85beb058c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7cca0e0f5169ed06f433ca3a0338db7" id="r_af7cca0e0f5169ed06f433ca3a0338db7"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html#af7cca0e0f5169ed06f433ca3a0338db7">readFixSize</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html">ByteArray</a> &gt; &amp;buffer, size_t length)</td></tr>
+<tr class="memdesc:af7cca0e0f5169ed06f433ca3a0338db7"><td class="mdescLeft">&#160;</td><td class="mdescRight">从流中读取固定大小的数据到 <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html" title="二进制数据数组类">ByteArray</a>  <br /></td></tr>
+<tr class="separator:af7cca0e0f5169ed06f433ca3a0338db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64aaf7141092169fa3e30a60aeae992b" id="r_a64aaf7141092169fa3e30a60aeae992b"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html#a64aaf7141092169fa3e30a60aeae992b">write</a> (const void *buffer, size_t length)=0</td></tr>
+<tr class="memdesc:a64aaf7141092169fa3e30a60aeae992b"><td class="mdescLeft">&#160;</td><td class="mdescRight">向流中写入数据  <br /></td></tr>
+<tr class="separator:a64aaf7141092169fa3e30a60aeae992b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f4b24e0db0d7dc9536fc94d6ed54d3d" id="r_a4f4b24e0db0d7dc9536fc94d6ed54d3d"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html#a4f4b24e0db0d7dc9536fc94d6ed54d3d">write</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html">ByteArray</a> &gt; &amp;buffer, size_t length)=0</td></tr>
+<tr class="memdesc:a4f4b24e0db0d7dc9536fc94d6ed54d3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">向流中写入数据来自 <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html" title="二进制数据数组类">ByteArray</a>  <br /></td></tr>
+<tr class="separator:a4f4b24e0db0d7dc9536fc94d6ed54d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b8c448a949fbd16f50befc025bd9ff2" id="r_a0b8c448a949fbd16f50befc025bd9ff2"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html#a0b8c448a949fbd16f50befc025bd9ff2">writeFixSize</a> (const void *buffer, size_t length)</td></tr>
+<tr class="memdesc:a0b8c448a949fbd16f50befc025bd9ff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">向流中写入固定大小的数据  <br /></td></tr>
+<tr class="separator:a0b8c448a949fbd16f50befc025bd9ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac90dc78a3fe394bdb568e759f0f3d010" id="r_ac90dc78a3fe394bdb568e759f0f3d010"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html#ac90dc78a3fe394bdb568e759f0f3d010">writeFixSize</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html">ByteArray</a> &gt; &amp;buffer, size_t length)</td></tr>
+<tr class="memdesc:ac90dc78a3fe394bdb568e759f0f3d010"><td class="mdescLeft">&#160;</td><td class="mdescRight">向流中写入固定大小的数据来自 <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html" title="二进制数据数组类">ByteArray</a>  <br /></td></tr>
+<tr class="separator:ac90dc78a3fe394bdb568e759f0f3d010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07e35d7134561598e42b1324e7f504f5" id="r_a07e35d7134561598e42b1324e7f504f5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html#a07e35d7134561598e42b1324e7f504f5">close</a> ()=0</td></tr>
+<tr class="memdesc:a07e35d7134561598e42b1324e7f504f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭流  <br /></td></tr>
+<tr class="separator:a07e35d7134561598e42b1324e7f504f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>流接口类 </p>
+
+<p class="definition">在文件 <a class="el" href="Stream_8h_source.html">Stream.h</a> 第 <a class="el" href="Stream_8h_source.html#l00015">15</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a2ebee442ebc409dfa047840728193f2b" name="a2ebee442ebc409dfa047840728193f2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ebee442ebc409dfa047840728193f2b">&#9670;&#160;</a></span>~Stream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Gyanis::net::stream::Stream::~Stream </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>析构函数 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a07e35d7134561598e42b1324e7f504f5" name="a07e35d7134561598e42b1324e7f504f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07e35d7134561598e42b1324e7f504f5">&#9670;&#160;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Gyanis::net::stream::Stream::close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>关闭流 </p>
+
+<p>在 <a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#a0067b43785bf4fcfb11f5699aae2a267">Gyanis::net::stream::SocketStream</a> , 以及 <a class="el" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a6b30b1b0716fbc2de79e9c7536f2c79a">Gyanis::net::stream::ZlibStream</a> 内被实现.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1stream_1_1Stream_a07e35d7134561598e42b1324e7f504f5_icgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1stream_1_1Stream_a07e35d7134561598e42b1324e7f504f5_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af34db7e5d9ffc992c0609dc8f6da0978" name="af34db7e5d9ffc992c0609dc8f6da0978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af34db7e5d9ffc992c0609dc8f6da0978">&#9670;&#160;</a></span>read() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual long Gyanis::net::stream::Stream::read </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html">ByteArray</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从流中读取数据到 <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html" title="二进制数据数组类">ByteArray</a> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td><code><a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html" title="二进制数据数组类">ByteArray</a></code> 对象，用于存储读取的数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>要读取的字节数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回读取的字节数，失败时返回负值 </dd></dl>
+
+<p>在 <a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#a6047f7322af9470c0a7aa2298051b98f">Gyanis::net::stream::SocketStream</a> , 以及 <a class="el" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a88edabba3fe8a8065d66ced12e85ca41">Gyanis::net::stream::ZlibStream</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a533d88001fabfaf45ad488b52dda4684" name="a533d88001fabfaf45ad488b52dda4684"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a533d88001fabfaf45ad488b52dda4684">&#9670;&#160;</a></span>read() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual long Gyanis::net::stream::Stream::read </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从流中读取数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>数据缓冲区，用于存储读取的数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>要读取的字节数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回读取的字节数，失败时返回负值 </dd></dl>
+
+<p>在 <a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#ab0ea3e080fa20a42638d05dd2e17934b">Gyanis::net::stream::SocketStream</a> , 以及 <a class="el" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a0e22f32214f9c03866f29a0ae6ae836d">Gyanis::net::stream::ZlibStream</a> 内被实现.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1stream_1_1Stream_a533d88001fabfaf45ad488b52dda4684_icgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1stream_1_1Stream_a533d88001fabfaf45ad488b52dda4684_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af7cca0e0f5169ed06f433ca3a0338db7" name="af7cca0e0f5169ed06f433ca3a0338db7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7cca0e0f5169ed06f433ca3a0338db7">&#9670;&#160;</a></span>readFixSize() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long Gyanis::net::stream::Stream::readFixSize </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html">ByteArray</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从流中读取固定大小的数据到 <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html" title="二进制数据数组类">ByteArray</a> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td><code><a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html" title="二进制数据数组类">ByteArray</a></code> 对象，用于存储读取的数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>要读取的字节数（固定大小） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回读取的字节数，失败时返回负值 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="Stream_8cpp_source.html">Stream.cpp</a> 第 <a class="el" href="Stream_8cpp_source.html#l00022">22</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>    {</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordtype">size_t</span> left = length;</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">while</span> (left &gt; 0)</div>
+<div class="line"><span class="lineno">   26</span>        {</div>
+<div class="line"><span class="lineno">   27</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> len = <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1Stream.html#a533d88001fabfaf45ad488b52dda4684">read</a>(buffer, left);</div>
+<div class="line"><span class="lineno">   28</span>            <span class="keywordflow">if</span> (len == 0)</div>
+<div class="line"><span class="lineno">   29</span>            {</div>
+<div class="line"><span class="lineno">   30</span>                <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   31</span>            }</div>
+<div class="line"><span class="lineno">   32</span>            left -= len;</div>
+<div class="line"><span class="lineno">   33</span>        }</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span><span class="keyword">&gt;</span>(length);</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1Stream_html_a533d88001fabfaf45ad488b52dda4684"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1Stream.html#a533d88001fabfaf45ad488b52dda4684">Gyanis::net::stream::Stream::read</a></div><div class="ttdeci">virtual long read(void *buffer, size_t length)=0</div><div class="ttdoc">从流中读取数据</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1stream_1_1Stream_af7cca0e0f5169ed06f433ca3a0338db7_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1stream_1_1Stream_af7cca0e0f5169ed06f433ca3a0338db7_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a10aae9283f1a40ad1600e85beb058c26" name="a10aae9283f1a40ad1600e85beb058c26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10aae9283f1a40ad1600e85beb058c26">&#9670;&#160;</a></span>readFixSize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long Gyanis::net::stream::Stream::readFixSize </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从流中读取固定大小的数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>数据缓冲区，用于存储读取的数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>要读取的字节数（固定大小） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回读取的字节数，失败时返回负值 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="Stream_8cpp_source.html">Stream.cpp</a> 第 <a class="el" href="Stream_8cpp_source.html#l00005">5</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>    {</div>
+<div class="line"><span class="lineno">    7</span>        <span class="keywordtype">size_t</span> offset = 0;</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordtype">size_t</span> left = length;</div>
+<div class="line"><span class="lineno">    9</span>        <span class="keywordflow">while</span> (left &gt; 0)</div>
+<div class="line"><span class="lineno">   10</span>        {</div>
+<div class="line"><span class="lineno">   11</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> len = <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1Stream.html#a533d88001fabfaf45ad488b52dda4684">read</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(buffer) + offset, left);</div>
+<div class="line"><span class="lineno">   12</span>            <span class="keywordflow">if</span> (len == 0)</div>
+<div class="line"><span class="lineno">   13</span>            {</div>
+<div class="line"><span class="lineno">   14</span>                <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   15</span>            }</div>
+<div class="line"><span class="lineno">   16</span>            offset += len;</div>
+<div class="line"><span class="lineno">   17</span>            left -= len;</div>
+<div class="line"><span class="lineno">   18</span>        }</div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span><span class="keyword">&gt;</span>(length);;</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1stream_1_1Stream_a10aae9283f1a40ad1600e85beb058c26_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1stream_1_1Stream_a10aae9283f1a40ad1600e85beb058c26_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1stream_1_1Stream_a10aae9283f1a40ad1600e85beb058c26_icgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1stream_1_1Stream_a10aae9283f1a40ad1600e85beb058c26_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a4f4b24e0db0d7dc9536fc94d6ed54d3d" name="a4f4b24e0db0d7dc9536fc94d6ed54d3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f4b24e0db0d7dc9536fc94d6ed54d3d">&#9670;&#160;</a></span>write() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual long Gyanis::net::stream::Stream::write </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html">ByteArray</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>向流中写入数据来自 <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html" title="二进制数据数组类">ByteArray</a> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td><code><a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html" title="二进制数据数组类">ByteArray</a></code> 对象，包含要写入的数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>要写入的字节数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回写入的字节数，失败时返回负值 </dd></dl>
+
+<p>在 <a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#ab0faecce34e2b9cc391e21435b14d106">Gyanis::net::stream::SocketStream</a> , 以及 <a class="el" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#ae7f0609887cf8dafc706e7a5221347b3">Gyanis::net::stream::ZlibStream</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a64aaf7141092169fa3e30a60aeae992b" name="a64aaf7141092169fa3e30a60aeae992b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64aaf7141092169fa3e30a60aeae992b">&#9670;&#160;</a></span>write() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual long Gyanis::net::stream::Stream::write </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>向流中写入数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>数据缓冲区，包含要写入的数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>要写入的字节数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回写入的字节数，失败时返回负值 </dd></dl>
+
+<p>在 <a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#a63e711e50a0b19ab9678813c374427ad">Gyanis::net::stream::SocketStream</a> , 以及 <a class="el" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a7110b53bad62036a32db23e3a3b4d925">Gyanis::net::stream::ZlibStream</a> 内被实现.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1stream_1_1Stream_a64aaf7141092169fa3e30a60aeae992b_icgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1stream_1_1Stream_a64aaf7141092169fa3e30a60aeae992b_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ac90dc78a3fe394bdb568e759f0f3d010" name="ac90dc78a3fe394bdb568e759f0f3d010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac90dc78a3fe394bdb568e759f0f3d010">&#9670;&#160;</a></span>writeFixSize() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long Gyanis::net::stream::Stream::writeFixSize </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html">ByteArray</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>向流中写入固定大小的数据来自 <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html" title="二进制数据数组类">ByteArray</a> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td><code><a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html" title="二进制数据数组类">ByteArray</a></code> 对象，包含要写入的数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>要写入的字节数（固定大小） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回写入的字节数，失败时返回负值 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="Stream_8cpp_source.html">Stream.cpp</a> 第 <a class="el" href="Stream_8cpp_source.html#l00054">54</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordtype">size_t</span> left = length;</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">while</span> (left &gt; 0)</div>
+<div class="line"><span class="lineno">   58</span>        {</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keyword">const</span> int64_t len = <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1Stream.html#a64aaf7141092169fa3e30a60aeae992b">write</a>(buffer, left);</div>
+<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (len == 0)</div>
+<div class="line"><span class="lineno">   61</span>            {</div>
+<div class="line"><span class="lineno">   62</span>                <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   63</span>            }</div>
+<div class="line"><span class="lineno">   64</span>            left -= len;</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span><span class="keyword">&gt;</span>(length);</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1Stream_html_a64aaf7141092169fa3e30a60aeae992b"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1Stream.html#a64aaf7141092169fa3e30a60aeae992b">Gyanis::net::stream::Stream::write</a></div><div class="ttdeci">virtual long write(const void *buffer, size_t length)=0</div><div class="ttdoc">向流中写入数据</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1stream_1_1Stream_ac90dc78a3fe394bdb568e759f0f3d010_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1stream_1_1Stream_ac90dc78a3fe394bdb568e759f0f3d010_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a0b8c448a949fbd16f50befc025bd9ff2" name="a0b8c448a949fbd16f50befc025bd9ff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b8c448a949fbd16f50befc025bd9ff2">&#9670;&#160;</a></span>writeFixSize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long Gyanis::net::stream::Stream::writeFixSize </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>向流中写入固定大小的数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>数据缓冲区，包含要写入的数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>要写入的字节数（固定大小） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回写入的字节数，失败时返回负值 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="Stream_8cpp_source.html">Stream.cpp</a> 第 <a class="el" href="Stream_8cpp_source.html#l00037">37</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>    {</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordtype">size_t</span> offset = 0;</div>
+<div class="line"><span class="lineno">   40</span>        <span class="keywordtype">size_t</span> left = length;</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">while</span> (left &gt; 0)</div>
+<div class="line"><span class="lineno">   42</span>        {</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keyword">const</span> int64_t len = <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1Stream.html#a64aaf7141092169fa3e30a60aeae992b">write</a>(<span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(buffer) + offset, left);</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">if</span> (len == 0)</div>
+<div class="line"><span class="lineno">   45</span>            {</div>
+<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   47</span>            }</div>
+<div class="line"><span class="lineno">   48</span>            offset += len;</div>
+<div class="line"><span class="lineno">   49</span>            left -= len;</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span><span class="keyword">&gt;</span>(length);</div>
+<div class="line"><span class="lineno">   52</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1stream_1_1Stream_a0b8c448a949fbd16f50befc025bd9ff2_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1stream_1_1Stream_a0b8c448a949fbd16f50befc025bd9ff2_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1stream_1_1Stream_a0b8c448a949fbd16f50befc025bd9ff2_icgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1stream_1_1Stream_a0b8c448a949fbd16f50befc025bd9ff2_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/net/stream/<a class="el" href="Stream_8h_source.html">Stream.h</a></li>
+<li>src/net/stream/<a class="el" href="Stream_8cpp_source.html">Stream.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGyanis.html">Gyanis</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1net.html">net</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1net_1_1stream.html">stream</a></li><li class="navelem"><a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html">Stream</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

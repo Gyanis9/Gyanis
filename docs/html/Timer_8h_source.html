@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: include/base/Timer.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Timer_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Timer.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Timer_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef TIMER_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define TIMER_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;set&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;shared_mutex&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceGyanis_1_1base.html">Gyanis::base</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structGyanis_1_1base_1_1Timer.html">   21</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structGyanis_1_1base_1_1Timer.html">Timer</a></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structGyanis_1_1base_1_1Timer.html#ad3464054bd06970bb8f9c14dfae957a2">   23</a></span>        uint64_t <a class="code hl_variable" href="structGyanis_1_1base_1_1Timer.html#ad3464054bd06970bb8f9c14dfae957a2">id</a>; </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structGyanis_1_1base_1_1Timer.html#a2b02547e76808bab41279fd97e55b5d6">   24</a></span>        std::chrono::time_point&lt;std::chrono::high_resolution_clock&gt; <a class="code hl_variable" href="structGyanis_1_1base_1_1Timer.html#a2b02547e76808bab41279fd97e55b5d6">expired</a>; </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structGyanis_1_1base_1_1Timer.html#a53c578191119930c01d6d0181eea2c46">   25</a></span>        std::chrono::milliseconds <a class="code hl_variable" href="structGyanis_1_1base_1_1Timer.html#a53c578191119930c01d6d0181eea2c46">interval</a>; </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structGyanis_1_1base_1_1Timer.html#a3fa1cdb2fbe3504144015be48bd6e021">   26</a></span>        std::function&lt;void()&gt; <a class="code hl_variable" href="structGyanis_1_1base_1_1Timer.html#a3fa1cdb2fbe3504144015be48bd6e021">callback</a>; </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structGyanis_1_1base_1_1Timer.html#a7c8fd83008cf79e640c128628e3b2083">   27</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="structGyanis_1_1base_1_1Timer.html#a7c8fd83008cf79e640c128628e3b2083">recurring</a>; </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">explicit</span> <a class="code hl_struct" href="structGyanis_1_1base_1_1Timer.html">Timer</a>(uint64_t <span class="keywordtype">id</span>, std::chrono::milliseconds <a class="code hl_variable" href="structGyanis_1_1base_1_1Timer.html#a53c578191119930c01d6d0181eea2c46">interval</a>, std::function&lt;<span class="keywordtype">void</span>()&gt; <a class="code hl_variable" href="structGyanis_1_1base_1_1Timer.html#a3fa1cdb2fbe3504144015be48bd6e021">callback</a>,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                       <span class="keywordtype">bool</span> <a class="code hl_variable" href="structGyanis_1_1base_1_1Timer.html#a7c8fd83008cf79e640c128628e3b2083">recurring</a>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structGyanis_1_1base_1_1Timer_1_1Comparator.html">   42</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="structGyanis_1_1base_1_1Timer_1_1Comparator.html">Comparator</a></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="structGyanis_1_1base_1_1Timer_1_1Comparator.html#a0567f38856254eb7a8cffb00a096de3c">operator()</a>(<span class="keyword">const</span> std::shared_ptr&lt;Timer&gt;&amp; lhs, <span class="keyword">const</span> std::shared_ptr&lt;Timer&gt;&amp; rhs) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        };</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    };</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="};">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1TimerManager.html">   51</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyanis_1_1base_1_1TimerManager.html">TimerManager</a></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <a class="code hl_function" href="classGyanis_1_1base_1_1TimerManager.html#a2f3f40b0bd870566b38c554be361f909">TimerManager</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1TimerManager.html#aac1b89462b0e47f3d1d47508350e76d2">   62</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="classGyanis_1_1base_1_1TimerManager.html#aac1b89462b0e47f3d1d47508350e76d2">~TimerManager</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        uint64_t <a class="code hl_function" href="classGyanis_1_1base_1_1TimerManager.html#af7727acb34ed68e8b012d3ac3e5a08e9">addTimer</a>(uint64_t interval, <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp; callback, <span class="keywordtype">bool</span> recurring = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        uint64_t <a class="code hl_function" href="classGyanis_1_1base_1_1TimerManager.html#a13fc09b620e8d828f566cb0811e92ffe">addConditionTimer</a>(uint64_t interval, std::function&lt;<span class="keywordtype">void</span>()&gt; callback, std::weak_ptr&lt;void&gt; weak_cond,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                                   <span class="keywordtype">bool</span> recurring = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1base_1_1TimerManager.html#a0a2ccb0e88edf5a2128b5f1b429a671e">cancel</a>(uint64_t <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1base_1_1TimerManager.html#a5ee064b97fbd8a6508706b6196f1251e">refresh</a>(uint64_t <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1base_1_1TimerManager.html#a6441fac2adba7cd1838b983dc407dd1e">reset</a>(uint64_t <span class="keywordtype">id</span>, uint64_t interval, <span class="keywordtype">bool</span> from_now);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        std::chrono::milliseconds <a class="code hl_function" href="classGyanis_1_1base_1_1TimerManager.html#a03793c146802c34144f7eb6dbc7cef71">getNextTimer</a>();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1base_1_1TimerManager.html#a7ade1522bef5cadf2ebb82ac97406a37">ListExpiredCb</a>(std::vector&lt;std::function&lt;<span class="keywordtype">void</span>()&gt;&gt;&amp; callbacks);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1base_1_1TimerManager.html#a63a8be723dd8c540e3344316724331bc">hasTimer</a>();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1TimerManager.html#a4a56217c95ec028e693418dafab3eb96">  118</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1base_1_1TimerManager.html#a4a56217c95ec028e693418dafab3eb96">onTimerInsertedAtFront</a>() = 0;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1base_1_1TimerManager.html#a91c6972de0c8cf575a0180d9151282c6">handleTimeRollback</a>();</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1base_1_1TimerManager.html#ae111e847cc7b48b70ab9d70f913148e1">checkTimeRollback</a>();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        uint64_t <a class="code hl_function" href="classGyanis_1_1base_1_1TimerManager.html#a768b2b5531106c7fb9b43fd9b06bed29">addTimerInternal</a>(<span class="keyword">const</span> std::shared_ptr&lt;Timer&gt;&amp; timer);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1TimerManager.html#a45b02a3a1fb43084dc4a17cbe508a81f">  139</a></span>        std::shared_mutex <a class="code hl_variable" href="classGyanis_1_1base_1_1TimerManager.html#a45b02a3a1fb43084dc4a17cbe508a81f">m_mutex</a>; </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1TimerManager.html#a84ed43fbddc6cdf46a412ff40edda098">  140</a></span>        std::atomic&lt;uint64_t&gt; <a class="code hl_variable" href="classGyanis_1_1base_1_1TimerManager.html#a84ed43fbddc6cdf46a412ff40edda098">cur_id</a>{0}; </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1TimerManager.html#abc154f244f9aa7185030213070be6fab">  141</a></span>        std::atomic&lt;bool&gt; <a class="code hl_variable" href="classGyanis_1_1base_1_1TimerManager.html#abc154f244f9aa7185030213070be6fab">m_tickled</a>{<span class="keyword">false</span>}; </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1TimerManager.html#a018c5c4972e81392d6275eeb48eff766">  142</a></span>        std::multiset&lt;std::shared_ptr&lt;Timer&gt;, <a class="code hl_struct" href="structGyanis_1_1base_1_1Timer_1_1Comparator.html">Timer::Comparator</a>&gt; <a class="code hl_variable" href="classGyanis_1_1base_1_1TimerManager.html#a018c5c4972e81392d6275eeb48eff766">m_timers</a>; </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1TimerManager.html#a99b289975dc5a998037054fdd9eb59b5">  143</a></span>        std::unordered_map&lt;uint64_t, std::multiset&lt;std::shared_ptr&lt;Timer&gt;&gt;::iterator&gt; <a class="code hl_variable" href="classGyanis_1_1base_1_1TimerManager.html#a99b289975dc5a998037054fdd9eb59b5">m_timer_map</a>; </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1TimerManager.html#ab2d2384ef64fc9577544766779d30d71">  144</a></span>        std::chrono::high_resolution_clock::time_point <a class="code hl_variable" href="classGyanis_1_1base_1_1TimerManager.html#ab2d2384ef64fc9577544766779d30d71">m_last_check_time</a>; </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    };</div>
+</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>}</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html">Gyanis::base::TimerManager</a></div><div class="ttdoc">定时器管理器，用于管理多个定时器的添加、删除和执行</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00051">Timer.h:52</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_a018c5c4972e81392d6275eeb48eff766"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#a018c5c4972e81392d6275eeb48eff766">Gyanis::base::TimerManager::m_timers</a></div><div class="ttdeci">std::multiset&lt; std::shared_ptr&lt; Timer &gt;, Timer::Comparator &gt; m_timers</div><div class="ttdoc">使用 multiset 保存定时器按过期时间排序</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00142">Timer.h:142</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_a03793c146802c34144f7eb6dbc7cef71"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#a03793c146802c34144f7eb6dbc7cef71">Gyanis::base::TimerManager::getNextTimer</a></div><div class="ttdeci">std::chrono::milliseconds getNextTimer()</div><div class="ttdoc">获取下一个定时器的剩余时间</div><div class="ttdef"><b>Definition</b> <a href="Timer_8cpp_source.html#l00109">Timer.cpp:109</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_a0a2ccb0e88edf5a2128b5f1b429a671e"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#a0a2ccb0e88edf5a2128b5f1b429a671e">Gyanis::base::TimerManager::cancel</a></div><div class="ttdeci">bool cancel(uint64_t id)</div><div class="ttdoc">取消一个定时器</div><div class="ttdef"><b>Definition</b> <a href="Timer_8cpp_source.html#l00048">Timer.cpp:48</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_a13fc09b620e8d828f566cb0811e92ffe"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#a13fc09b620e8d828f566cb0811e92ffe">Gyanis::base::TimerManager::addConditionTimer</a></div><div class="ttdeci">uint64_t addConditionTimer(uint64_t interval, std::function&lt; void()&gt; callback, std::weak_ptr&lt; void &gt; weak_cond, bool recurring=false)</div><div class="ttdoc">添加一个依赖条件的定时器</div><div class="ttdef"><b>Definition</b> <a href="Timer_8cpp_source.html#l00034">Timer.cpp:34</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_a2f3f40b0bd870566b38c554be361f909"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#a2f3f40b0bd870566b38c554be361f909">Gyanis::base::TimerManager::TimerManager</a></div><div class="ttdeci">TimerManager()</div><div class="ttdoc">构造函数</div><div class="ttdef"><b>Definition</b> <a href="Timer_8cpp_source.html#l00022">Timer.cpp:22</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_a45b02a3a1fb43084dc4a17cbe508a81f"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#a45b02a3a1fb43084dc4a17cbe508a81f">Gyanis::base::TimerManager::m_mutex</a></div><div class="ttdeci">std::shared_mutex m_mutex</div><div class="ttdoc">多线程环境中对定时器进行操作时的锁</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00139">Timer.h:139</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_a4a56217c95ec028e693418dafab3eb96"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#a4a56217c95ec028e693418dafab3eb96">Gyanis::base::TimerManager::onTimerInsertedAtFront</a></div><div class="ttdeci">virtual void onTimerInsertedAtFront()=0</div><div class="ttdoc">子类需要实现的虚函数，用于在定时器插入时执行特殊操作</div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_a5ee064b97fbd8a6508706b6196f1251e"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#a5ee064b97fbd8a6508706b6196f1251e">Gyanis::base::TimerManager::refresh</a></div><div class="ttdeci">bool refresh(uint64_t id)</div><div class="ttdoc">刷新定时器，使其重置过期时间</div><div class="ttdef"><b>Definition</b> <a href="Timer_8cpp_source.html#l00061">Timer.cpp:61</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_a63a8be723dd8c540e3344316724331bc"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#a63a8be723dd8c540e3344316724331bc">Gyanis::base::TimerManager::hasTimer</a></div><div class="ttdeci">bool hasTimer()</div><div class="ttdoc">判断是否有定时器</div><div class="ttdef"><b>Definition</b> <a href="Timer_8cpp_source.html#l00149">Timer.cpp:149</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_a6441fac2adba7cd1838b983dc407dd1e"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#a6441fac2adba7cd1838b983dc407dd1e">Gyanis::base::TimerManager::reset</a></div><div class="ttdeci">bool reset(uint64_t id, uint64_t interval, bool from_now)</div><div class="ttdoc">重置定时器的过期时间</div><div class="ttdef"><b>Definition</b> <a href="Timer_8cpp_source.html#l00080">Timer.cpp:80</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_a768b2b5531106c7fb9b43fd9b06bed29"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#a768b2b5531106c7fb9b43fd9b06bed29">Gyanis::base::TimerManager::addTimerInternal</a></div><div class="ttdeci">uint64_t addTimerInternal(const std::shared_ptr&lt; Timer &gt; &amp;timer)</div><div class="ttdoc">添加定时器的内部实现</div><div class="ttdef"><b>Definition</b> <a href="Timer_8cpp_source.html#l00199">Timer.cpp:199</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_a7ade1522bef5cadf2ebb82ac97406a37"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#a7ade1522bef5cadf2ebb82ac97406a37">Gyanis::base::TimerManager::ListExpiredCb</a></div><div class="ttdeci">void ListExpiredCb(std::vector&lt; std::function&lt; void()&gt; &gt; &amp;callbacks)</div><div class="ttdoc">列出所有已经过期的定时器的回调函数</div><div class="ttdef"><b>Definition</b> <a href="Timer_8cpp_source.html#l00120">Timer.cpp:120</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_a84ed43fbddc6cdf46a412ff40edda098"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#a84ed43fbddc6cdf46a412ff40edda098">Gyanis::base::TimerManager::cur_id</a></div><div class="ttdeci">std::atomic&lt; uint64_t &gt; cur_id</div><div class="ttdoc">当前定时器的唯一 ID</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00140">Timer.h:140</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_a91c6972de0c8cf575a0180d9151282c6"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#a91c6972de0c8cf575a0180d9151282c6">Gyanis::base::TimerManager::handleTimeRollback</a></div><div class="ttdeci">void handleTimeRollback()</div><div class="ttdoc">处理时间回滚的情况</div><div class="ttdef"><b>Definition</b> <a href="Timer_8cpp_source.html#l00155">Timer.cpp:155</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_a99b289975dc5a998037054fdd9eb59b5"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#a99b289975dc5a998037054fdd9eb59b5">Gyanis::base::TimerManager::m_timer_map</a></div><div class="ttdeci">std::unordered_map&lt; uint64_t, std::multiset&lt; std::shared_ptr&lt; Timer &gt; &gt;::iterator &gt; m_timer_map</div><div class="ttdoc">定时器 ID 映射</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00143">Timer.h:143</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_aac1b89462b0e47f3d1d47508350e76d2"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#aac1b89462b0e47f3d1d47508350e76d2">Gyanis::base::TimerManager::~TimerManager</a></div><div class="ttdeci">virtual ~TimerManager()</div><div class="ttdoc">析构函数</div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_ab2d2384ef64fc9577544766779d30d71"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#ab2d2384ef64fc9577544766779d30d71">Gyanis::base::TimerManager::m_last_check_time</a></div><div class="ttdeci">std::chrono::high_resolution_clock::time_point m_last_check_time</div><div class="ttdoc">上次检查的时间，用于时间回滚检测</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00144">Timer.h:144</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_abc154f244f9aa7185030213070be6fab"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#abc154f244f9aa7185030213070be6fab">Gyanis::base::TimerManager::m_tickled</a></div><div class="ttdeci">std::atomic&lt; bool &gt; m_tickled</div><div class="ttdoc">标志是否需要触发定时器操作</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00141">Timer.h:141</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_ae111e847cc7b48b70ab9d70f913148e1"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#ae111e847cc7b48b70ab9d70f913148e1">Gyanis::base::TimerManager::checkTimeRollback</a></div><div class="ttdeci">void checkTimeRollback()</div><div class="ttdoc">检查系统时间是否发生回滚</div><div class="ttdef"><b>Definition</b> <a href="Timer_8cpp_source.html#l00188">Timer.cpp:188</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_af7727acb34ed68e8b012d3ac3e5a08e9"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#af7727acb34ed68e8b012d3ac3e5a08e9">Gyanis::base::TimerManager::addTimer</a></div><div class="ttdeci">uint64_t addTimer(uint64_t interval, const std::function&lt; void()&gt; &amp;callback, bool recurring=false)</div><div class="ttdoc">添加一个定时器</div><div class="ttdef"><b>Definition</b> <a href="Timer_8cpp_source.html#l00028">Timer.cpp:28</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html"><div class="ttname"><a href="namespaceGyanis_1_1base.html">Gyanis::base</a></div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00023">Config.h:24</a></div></div>
+<div class="ttc" id="astructGyanis_1_1base_1_1Timer_1_1Comparator_html"><div class="ttname"><a href="structGyanis_1_1base_1_1Timer_1_1Comparator.html">Gyanis::base::Timer::Comparator</a></div><div class="ttdoc">比较器，用于排序定时器</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00042">Timer.h:43</a></div></div>
+<div class="ttc" id="astructGyanis_1_1base_1_1Timer_1_1Comparator_html_a0567f38856254eb7a8cffb00a096de3c"><div class="ttname"><a href="structGyanis_1_1base_1_1Timer_1_1Comparator.html#a0567f38856254eb7a8cffb00a096de3c">Gyanis::base::Timer::Comparator::operator()</a></div><div class="ttdeci">bool operator()(const std::shared_ptr&lt; Timer &gt; &amp;lhs, const std::shared_ptr&lt; Timer &gt; &amp;rhs) const</div><div class="ttdef"><b>Definition</b> <a href="Timer_8cpp_source.html#l00017">Timer.cpp:17</a></div></div>
+<div class="ttc" id="astructGyanis_1_1base_1_1Timer_html"><div class="ttname"><a href="structGyanis_1_1base_1_1Timer.html">Gyanis::base::Timer</a></div><div class="ttdoc">定时器结构体，表示一个定时器实例</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00021">Timer.h:22</a></div></div>
+<div class="ttc" id="astructGyanis_1_1base_1_1Timer_html_a2b02547e76808bab41279fd97e55b5d6"><div class="ttname"><a href="structGyanis_1_1base_1_1Timer.html#a2b02547e76808bab41279fd97e55b5d6">Gyanis::base::Timer::expired</a></div><div class="ttdeci">std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt; expired</div><div class="ttdoc">定时器的唯一标识符</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00024">Timer.h:24</a></div></div>
+<div class="ttc" id="astructGyanis_1_1base_1_1Timer_html_a3fa1cdb2fbe3504144015be48bd6e021"><div class="ttname"><a href="structGyanis_1_1base_1_1Timer.html#a3fa1cdb2fbe3504144015be48bd6e021">Gyanis::base::Timer::callback</a></div><div class="ttdeci">std::function&lt; void()&gt; callback</div><div class="ttdoc">定时器的间隔时间</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00026">Timer.h:26</a></div></div>
+<div class="ttc" id="astructGyanis_1_1base_1_1Timer_html_a53c578191119930c01d6d0181eea2c46"><div class="ttname"><a href="structGyanis_1_1base_1_1Timer.html#a53c578191119930c01d6d0181eea2c46">Gyanis::base::Timer::interval</a></div><div class="ttdeci">std::chrono::milliseconds interval</div><div class="ttdoc">定时器的过期时间点</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00025">Timer.h:25</a></div></div>
+<div class="ttc" id="astructGyanis_1_1base_1_1Timer_html_a7c8fd83008cf79e640c128628e3b2083"><div class="ttname"><a href="structGyanis_1_1base_1_1Timer.html#a7c8fd83008cf79e640c128628e3b2083">Gyanis::base::Timer::recurring</a></div><div class="ttdeci">bool recurring</div><div class="ttdoc">定时器触发时调用的回调函数</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00027">Timer.h:27</a></div></div>
+<div class="ttc" id="astructGyanis_1_1base_1_1Timer_html_ad3464054bd06970bb8f9c14dfae957a2"><div class="ttname"><a href="structGyanis_1_1base_1_1Timer.html#ad3464054bd06970bb8f9c14dfae957a2">Gyanis::base::Timer::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdef"><b>Definition</b> <a href="Timer_8h_source.html#l00023">Timer.h:23</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ab1c81409f0df724f17c9ef30afee877.html">base</a></li><li class="navelem"><a class="el" href="Timer_8h.html">Timer.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

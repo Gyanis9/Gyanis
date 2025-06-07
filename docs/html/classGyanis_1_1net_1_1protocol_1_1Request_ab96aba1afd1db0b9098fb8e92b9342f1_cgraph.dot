@@ -1,0 +1,11 @@
+digraph "Gyanis::net::protocol::Request::serializeToByteArray"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="Gyanis::net::protocol\l::Request::serializeToByteArray",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="将请求消息序列化到字节数组中"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::net::protocol\l::Message::getType",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1protocol_1_1Message.html#a3e44fa44bdd30556b0db1d532eccd2a6",tooltip="获取消息类型（REQUEST、RESPONSE、NOTIFY）"];
+}

@@ -1,0 +1,31 @@
+digraph "Gyanis::net::http::HttpResponseParser::HttpResponseParser"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="Gyanis::net::http::\lHttpResponseParser::\lHttpResponseParser",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="构造 HTTP 响应解析器"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="httpclient_parser_init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$httpclient__parser_8cpp.html#ab2a643d3e1406b7ae3e7921f3dd723fd",tooltip="初始化 HTTP 客户端解析器"];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Gyanis::net::http::\lon_response_chunk",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1net_1_1http.html#a21430497192687f00e9908757e5f6818",tooltip=" "];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Gyanis::net::http::\lon_response_header_done",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1net_1_1http.html#a72e32c2113e7fcdf01188006ebfc6805",tooltip=" "];
+  Node1 -> Node5 [id="edge4_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="Gyanis::net::http::\lon_response_http_field",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1net_1_1http.html#a6c7caf423f14251f430c8595e11c9878",tooltip=" "];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="Gyanis::net::http::\lHttpResponseParser::\lgetData",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1HttpResponseParser.html#afe3935712b064010dbfdf990609eab6f",tooltip="获取 HTTP 响应数据"];
+  Node1 -> Node7 [id="edge6_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="Gyanis::net::http::\lon_response_last_chunk",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1net_1_1http.html#a3dad4509932214922adf0cd1efa0d741",tooltip=" "];
+  Node1 -> Node8 [id="edge7_Node000001_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="Gyanis::net::http::\lon_response_reason",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1net_1_1http.html#a0651b55dc3b1abfea63c8ec4212d5543",tooltip=" "];
+  Node8 -> Node6 [id="edge8_Node000008_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node9 [id="edge9_Node000001_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="Gyanis::net::http::\lon_response_status",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1net_1_1http.html#ac46a9c85fe9b96cc6b4ba1dd3e5a62ba",tooltip=" "];
+  Node9 -> Node6 [id="edge10_Node000009_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node10 [id="edge11_Node000001_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="Gyanis::net::http::\lon_response_version",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1net_1_1http.html#aff982fb37accb730780aefe4efdf19e3",tooltip=" "];
+  Node10 -> Node11 [id="edge12_Node000010_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="Gyanis::net::http::\lHttpResponseParser::\lsetError",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1HttpResponseParser.html#af35ab69d423bd17e12808b2a61c820d2",tooltip="设置解析错误码"];
+}

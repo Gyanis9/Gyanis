@@ -1,0 +1,2442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: Gyanis::db::MySQLStmt类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGyanis_1_1db_1_1MySQLStmt.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classGyanis_1_1db_1_1MySQLStmt-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Gyanis::db::MySQLStmt类 参考<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="classGyanis_1_1db_1_1MySQL.html" title="MySQL 数据库操作类，继承自 IDB，并支持 shared_ptr">MySQL</a> 语句类，继承自 IStmt，并支持 shared_ptr  
+ <a href="classGyanis_1_1db_1_1MySQLStmt.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Mysql_8h_source.html">Mysql.h</a>&gt;</code></p>
+<div class="dynheader">
+类 Gyanis::db::MySQLStmt 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt__inherit__graph.png" border="0" usemap="#aGyanis_1_1db_1_1MySQLStmt_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+Gyanis::db::MySQLStmt 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt__coll__graph.png" border="0" usemap="#aGyanis_1_1db_1_1MySQLStmt_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aab9636452efc5efcd0b4181250777eac" id="r_aab9636452efc5efcd0b4181250777eac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#aab9636452efc5efcd0b4181250777eac">~MySQLStmt</a> () override</td></tr>
+<tr class="memdesc:aab9636452efc5efcd0b4181250777eac"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <br /></td></tr>
+<tr class="separator:aab9636452efc5efcd0b4181250777eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6585d72fb32e4f0cb62e1997f169e6f1" id="r_a6585d72fb32e4f0cb62e1997f169e6f1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a6585d72fb32e4f0cb62e1997f169e6f1">bind</a> (int index, const int8_t &amp;value)</td></tr>
+<tr class="memdesc:a6585d72fb32e4f0cb62e1997f169e6f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定整数值（8 位有符号整数）  <br /></td></tr>
+<tr class="separator:a6585d72fb32e4f0cb62e1997f169e6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af58ccf4cfa5add568f3174dc00d89ad1" id="r_af58ccf4cfa5add568f3174dc00d89ad1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#af58ccf4cfa5add568f3174dc00d89ad1">bind</a> (int index, const uint8_t &amp;value)</td></tr>
+<tr class="memdesc:af58ccf4cfa5add568f3174dc00d89ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定无符号整数值（8 位无符号整数）  <br /></td></tr>
+<tr class="separator:af58ccf4cfa5add568f3174dc00d89ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5be564956e28a7568a814cae4be70016" id="r_a5be564956e28a7568a814cae4be70016"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a5be564956e28a7568a814cae4be70016">bind</a> (int index, const int16_t &amp;value)</td></tr>
+<tr class="memdesc:a5be564956e28a7568a814cae4be70016"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定整数值（16 位有符号整数）  <br /></td></tr>
+<tr class="separator:a5be564956e28a7568a814cae4be70016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aada017df1e328e3606a599942c238084" id="r_aada017df1e328e3606a599942c238084"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#aada017df1e328e3606a599942c238084">bind</a> (int index, const uint16_t &amp;value)</td></tr>
+<tr class="memdesc:aada017df1e328e3606a599942c238084"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定无符号整数值（16 位无符号整数）  <br /></td></tr>
+<tr class="separator:aada017df1e328e3606a599942c238084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ee4432af5d77cc749c20c4b608ac425" id="r_a5ee4432af5d77cc749c20c4b608ac425"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a5ee4432af5d77cc749c20c4b608ac425">bind</a> (int index, const int32_t &amp;value)</td></tr>
+<tr class="memdesc:a5ee4432af5d77cc749c20c4b608ac425"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定整数值（32 位有符号整数）  <br /></td></tr>
+<tr class="separator:a5ee4432af5d77cc749c20c4b608ac425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8962521d56fe11dbfc130405a5d3586b" id="r_a8962521d56fe11dbfc130405a5d3586b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a8962521d56fe11dbfc130405a5d3586b">bind</a> (int index, const uint32_t &amp;value)</td></tr>
+<tr class="memdesc:a8962521d56fe11dbfc130405a5d3586b"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定无符号整数值（32 位无符号整数）  <br /></td></tr>
+<tr class="separator:a8962521d56fe11dbfc130405a5d3586b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac551eeef83acbd59a10500c06657765" id="r_aac551eeef83acbd59a10500c06657765"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#aac551eeef83acbd59a10500c06657765">bind</a> (int index, const int64_t &amp;value)</td></tr>
+<tr class="memdesc:aac551eeef83acbd59a10500c06657765"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定整数值（64 位有符号整数）  <br /></td></tr>
+<tr class="separator:aac551eeef83acbd59a10500c06657765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8961981e2e971eee35a2a30d865c075" id="r_ac8961981e2e971eee35a2a30d865c075"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#ac8961981e2e971eee35a2a30d865c075">bind</a> (int index, const uint64_t &amp;value)</td></tr>
+<tr class="memdesc:ac8961981e2e971eee35a2a30d865c075"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定无符号整数值（64 位无符号整数）  <br /></td></tr>
+<tr class="separator:ac8961981e2e971eee35a2a30d865c075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af409ea3c3201484199f2ad0e97c64530" id="r_af409ea3c3201484199f2ad0e97c64530"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#af409ea3c3201484199f2ad0e97c64530">bind</a> (int index, const float &amp;value)</td></tr>
+<tr class="memdesc:af409ea3c3201484199f2ad0e97c64530"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定浮点数值  <br /></td></tr>
+<tr class="separator:af409ea3c3201484199f2ad0e97c64530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58d88ca195e63874d3dadca1bb4fa5a0" id="r_a58d88ca195e63874d3dadca1bb4fa5a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a58d88ca195e63874d3dadca1bb4fa5a0">bind</a> (int index, const double &amp;value)</td></tr>
+<tr class="memdesc:a58d88ca195e63874d3dadca1bb4fa5a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定双精度浮点数值  <br /></td></tr>
+<tr class="separator:a58d88ca195e63874d3dadca1bb4fa5a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1f5c20c9b194956ba39de165ef8fca4" id="r_af1f5c20c9b194956ba39de165ef8fca4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#af1f5c20c9b194956ba39de165ef8fca4">bind</a> (int index, const std::string &amp;value)</td></tr>
+<tr class="memdesc:af1f5c20c9b194956ba39de165ef8fca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定字符串值  <br /></td></tr>
+<tr class="separator:af1f5c20c9b194956ba39de165ef8fca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a344093f946ba3fe4b8a255a2a4b4719f" id="r_a344093f946ba3fe4b8a255a2a4b4719f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a344093f946ba3fe4b8a255a2a4b4719f">bind</a> (int index, const char *value)</td></tr>
+<tr class="memdesc:a344093f946ba3fe4b8a255a2a4b4719f"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定字符串值（C 字符串版本）  <br /></td></tr>
+<tr class="separator:a344093f946ba3fe4b8a255a2a4b4719f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a405d0d3d14d5dcacb79a46b076eed09a" id="r_a405d0d3d14d5dcacb79a46b076eed09a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a405d0d3d14d5dcacb79a46b076eed09a">bind</a> (int index, const void *value, int len)</td></tr>
+<tr class="memdesc:a405d0d3d14d5dcacb79a46b076eed09a"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定二进制数据  <br /></td></tr>
+<tr class="separator:a405d0d3d14d5dcacb79a46b076eed09a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae946dd70e4f3f4e5cce995e4a556c83" id="r_aae946dd70e4f3f4e5cce995e4a556c83"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#aae946dd70e4f3f4e5cce995e4a556c83">bind</a> (int index)</td></tr>
+<tr class="memdesc:aae946dd70e4f3f4e5cce995e4a556c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定空值（NULL）  <br /></td></tr>
+<tr class="separator:aae946dd70e4f3f4e5cce995e4a556c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a269d23bcb2df07f6940c1abda87ce06f" id="r_a269d23bcb2df07f6940c1abda87ce06f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a269d23bcb2df07f6940c1abda87ce06f">bindInt8</a> (int index, const int8_t &amp;value) override</td></tr>
+<tr class="memdesc:a269d23bcb2df07f6940c1abda87ce06f"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定整数值（8 位有符号整数，重写版本）  <br /></td></tr>
+<tr class="separator:a269d23bcb2df07f6940c1abda87ce06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88bc5b00adadade9888d85e7e31fabce" id="r_a88bc5b00adadade9888d85e7e31fabce"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a88bc5b00adadade9888d85e7e31fabce">bindUint8</a> (int index, const uint8_t &amp;value) override</td></tr>
+<tr class="memdesc:a88bc5b00adadade9888d85e7e31fabce"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定无符号整数值（8 位无符号整数，重写版本）  <br /></td></tr>
+<tr class="separator:a88bc5b00adadade9888d85e7e31fabce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f315fe9308fb3aa72a576024a1f3d15" id="r_a9f315fe9308fb3aa72a576024a1f3d15"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a9f315fe9308fb3aa72a576024a1f3d15">bindInt16</a> (int index, const int16_t &amp;value) override</td></tr>
+<tr class="memdesc:a9f315fe9308fb3aa72a576024a1f3d15"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定整数值（16 位有符号整数，重写版本）  <br /></td></tr>
+<tr class="separator:a9f315fe9308fb3aa72a576024a1f3d15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57cdb85d8a2a058f276e59c9bc7b49ed" id="r_a57cdb85d8a2a058f276e59c9bc7b49ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a57cdb85d8a2a058f276e59c9bc7b49ed">bindUint16</a> (int index, const uint16_t &amp;value) override</td></tr>
+<tr class="memdesc:a57cdb85d8a2a058f276e59c9bc7b49ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定无符号整数值（16 位无符号整数，重写版本）  <br /></td></tr>
+<tr class="separator:a57cdb85d8a2a058f276e59c9bc7b49ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefe3d12548d73cba1ba081804fcca405" id="r_aefe3d12548d73cba1ba081804fcca405"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#aefe3d12548d73cba1ba081804fcca405">bindInt32</a> (int index, const int32_t &amp;value) override</td></tr>
+<tr class="memdesc:aefe3d12548d73cba1ba081804fcca405"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定整数值（32 位有符号整数，重写版本）  <br /></td></tr>
+<tr class="separator:aefe3d12548d73cba1ba081804fcca405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ddbea066aaaa2cdf1d3fd157ccecb23" id="r_a7ddbea066aaaa2cdf1d3fd157ccecb23"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a7ddbea066aaaa2cdf1d3fd157ccecb23">bindUint32</a> (int index, const uint32_t &amp;value) override</td></tr>
+<tr class="memdesc:a7ddbea066aaaa2cdf1d3fd157ccecb23"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定无符号整数值（32 位无符号整数，重写版本）  <br /></td></tr>
+<tr class="separator:a7ddbea066aaaa2cdf1d3fd157ccecb23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b78097f34977bfaa2ec7ef3d55ade0b" id="r_a4b78097f34977bfaa2ec7ef3d55ade0b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a4b78097f34977bfaa2ec7ef3d55ade0b">bindInt64</a> (int index, const int64_t &amp;value) override</td></tr>
+<tr class="memdesc:a4b78097f34977bfaa2ec7ef3d55ade0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定整数值（64 位有符号整数，重写版本）  <br /></td></tr>
+<tr class="separator:a4b78097f34977bfaa2ec7ef3d55ade0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af38892c3d766977b2ae49ccc2e25bb4d" id="r_af38892c3d766977b2ae49ccc2e25bb4d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#af38892c3d766977b2ae49ccc2e25bb4d">bindUint64</a> (int index, const uint64_t &amp;value) override</td></tr>
+<tr class="memdesc:af38892c3d766977b2ae49ccc2e25bb4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定无符号整数值（64 位无符号整数，重写版本）  <br /></td></tr>
+<tr class="separator:af38892c3d766977b2ae49ccc2e25bb4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c5ad36378324e31c67addceea232c19" id="r_a9c5ad36378324e31c67addceea232c19"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a9c5ad36378324e31c67addceea232c19">bindFloat</a> (int index, const float &amp;value) override</td></tr>
+<tr class="memdesc:a9c5ad36378324e31c67addceea232c19"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定浮点数值（重写版本）  <br /></td></tr>
+<tr class="separator:a9c5ad36378324e31c67addceea232c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29d873384bf105cabfe605075c23e9f3" id="r_a29d873384bf105cabfe605075c23e9f3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a29d873384bf105cabfe605075c23e9f3">bindDouble</a> (int index, const double &amp;value) override</td></tr>
+<tr class="memdesc:a29d873384bf105cabfe605075c23e9f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定双精度浮点数值（重写版本）  <br /></td></tr>
+<tr class="separator:a29d873384bf105cabfe605075c23e9f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e3e457c4715db8b165bba1236bfa53" id="r_a67e3e457c4715db8b165bba1236bfa53"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a67e3e457c4715db8b165bba1236bfa53">bindString</a> (int index, const char *value) override</td></tr>
+<tr class="memdesc:a67e3e457c4715db8b165bba1236bfa53"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定字符串值（重写版本）  <br /></td></tr>
+<tr class="separator:a67e3e457c4715db8b165bba1236bfa53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6edf33935840f2bb4246e27d13561bb1" id="r_a6edf33935840f2bb4246e27d13561bb1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a6edf33935840f2bb4246e27d13561bb1">bindString</a> (int index, const std::string &amp;value) override</td></tr>
+<tr class="memdesc:a6edf33935840f2bb4246e27d13561bb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定字符串值（重写版本）  <br /></td></tr>
+<tr class="separator:a6edf33935840f2bb4246e27d13561bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab768725a3d644bd870ce58633537e3c8" id="r_ab768725a3d644bd870ce58633537e3c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#ab768725a3d644bd870ce58633537e3c8">bindBlob</a> (int index, const void *value, int64_t size) override</td></tr>
+<tr class="memdesc:ab768725a3d644bd870ce58633537e3c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定二进制数据（重写版本）  <br /></td></tr>
+<tr class="separator:ab768725a3d644bd870ce58633537e3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34b9baebe85c6a99e721ab4b95832cd9" id="r_a34b9baebe85c6a99e721ab4b95832cd9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a34b9baebe85c6a99e721ab4b95832cd9">bindBlob</a> (int index, const std::string &amp;value) override</td></tr>
+<tr class="memdesc:a34b9baebe85c6a99e721ab4b95832cd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定二进制数据（重写版本）  <br /></td></tr>
+<tr class="separator:a34b9baebe85c6a99e721ab4b95832cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3d51aff30f4bc949b6fc7ccad7aee57" id="r_ad3d51aff30f4bc949b6fc7ccad7aee57"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#ad3d51aff30f4bc949b6fc7ccad7aee57">bindTime</a> (int index, const time_t &amp;value) override</td></tr>
+<tr class="memdesc:ad3d51aff30f4bc949b6fc7ccad7aee57"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定时间值（重写版本）  <br /></td></tr>
+<tr class="separator:ad3d51aff30f4bc949b6fc7ccad7aee57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab93b1c5c488d162c76902c78497286f8" id="r_ab93b1c5c488d162c76902c78497286f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#ab93b1c5c488d162c76902c78497286f8">bindNull</a> (int index) override</td></tr>
+<tr class="memdesc:ab93b1c5c488d162c76902c78497286f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定空值（NULL，重写版本）  <br /></td></tr>
+<tr class="separator:ab93b1c5c488d162c76902c78497286f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a830d6536a6e6fc978a2e7c739950e9e7" id="r_a830d6536a6e6fc978a2e7c739950e9e7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a830d6536a6e6fc978a2e7c739950e9e7">getErrno</a> () override</td></tr>
+<tr class="memdesc:a830d6536a6e6fc978a2e7c739950e9e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 SQL 错误码  <br /></td></tr>
+<tr class="separator:a830d6536a6e6fc978a2e7c739950e9e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a495c634fe9d26101bf7ef554caef3162" id="r_a495c634fe9d26101bf7ef554caef3162"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a495c634fe9d26101bf7ef554caef3162">getErrStr</a> () override</td></tr>
+<tr class="memdesc:a495c634fe9d26101bf7ef554caef3162"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 SQL 错误信息  <br /></td></tr>
+<tr class="separator:a495c634fe9d26101bf7ef554caef3162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40d93bcf10aab623c68e8f8eceaf7138" id="r_a40d93bcf10aab623c68e8f8eceaf7138"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a40d93bcf10aab623c68e8f8eceaf7138">execute</a> () override</td></tr>
+<tr class="memdesc:a40d93bcf10aab623c68e8f8eceaf7138"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行预处理语句  <br /></td></tr>
+<tr class="separator:a40d93bcf10aab623c68e8f8eceaf7138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74b953b936c2607b10376f2cfb8f3ec5" id="r_a74b953b936c2607b10376f2cfb8f3ec5"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a74b953b936c2607b10376f2cfb8f3ec5">getLastInsertId</a> () override</td></tr>
+<tr class="memdesc:a74b953b936c2607b10376f2cfb8f3ec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取上次插入记录的自增 ID  <br /></td></tr>
+<tr class="separator:a74b953b936c2607b10376f2cfb8f3ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35def40a5503952c1c76dd7b0d69a7e3" id="r_a35def40a5503952c1c76dd7b0d69a7e3"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1db_1_1ISQLData.html">ISQLData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a35def40a5503952c1c76dd7b0d69a7e3">query</a> () override</td></tr>
+<tr class="memdesc:a35def40a5503952c1c76dd7b0d69a7e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行查询操作  <br /></td></tr>
+<tr class="separator:a35def40a5503952c1c76dd7b0d69a7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab007f2c0f51c73c2a8e70e465eb4c9f0" id="r_ab007f2c0f51c73c2a8e70e465eb4c9f0"><td class="memItemLeft" align="right" valign="top">MYSQL_STMT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#ab007f2c0f51c73c2a8e70e465eb4c9f0">getRaw</a> () const</td></tr>
+<tr class="memdesc:ab007f2c0f51c73c2a8e70e465eb4c9f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取原始 <a class="el" href="classGyanis_1_1db_1_1MySQL.html" title="MySQL 数据库操作类，继承自 IDB，并支持 shared_ptr">MySQL</a> 语句指针  <br /></td></tr>
+<tr class="separator:ab007f2c0f51c73c2a8e70e465eb4c9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classGyanis_1_1db_1_1IStmt"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classGyanis_1_1db_1_1IStmt')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classGyanis_1_1db_1_1IStmt.html">Gyanis::db::IStmt</a></td></tr>
+<tr class="memitem:a488b659e3da53c10fd161f9b066efc09 inherit pub_methods_classGyanis_1_1db_1_1IStmt" id="r_a488b659e3da53c10fd161f9b066efc09"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1IStmt.html#a488b659e3da53c10fd161f9b066efc09">~IStmt</a> ()=default</td></tr>
+<tr class="separator:a488b659e3da53c10fd161f9b066efc09 inherit pub_methods_classGyanis_1_1db_1_1IStmt"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a2d223babbdee8a62600ac7455b9fc94f" id="r_a2d223babbdee8a62600ac7455b9fc94f"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html">MySQLStmt</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a2d223babbdee8a62600ac7455b9fc94f">Create</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1db_1_1MySQL.html">MySQL</a> &gt; &amp;db, const std::string &amp;stmt)</td></tr>
+<tr class="memdesc:a2d223babbdee8a62600ac7455b9fc94f"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建 <a class="el" href="classGyanis_1_1db_1_1MySQL.html" title="MySQL 数据库操作类，继承自 IDB，并支持 shared_ptr">MySQL</a> 语句对象  <br /></td></tr>
+<tr class="separator:a2d223babbdee8a62600ac7455b9fc94f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:aad0e89c864e68f7809205cffb8822d1c" id="r_aad0e89c864e68f7809205cffb8822d1c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#aad0e89c864e68f7809205cffb8822d1c">MySQLStmt</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1db_1_1MySQL.html">MySQL</a> &gt; &amp;db, MYSQL_STMT *stmt)</td></tr>
+<tr class="memdesc:aad0e89c864e68f7809205cffb8822d1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数，初始化 <a class="el" href="classGyanis_1_1db_1_1MySQL.html" title="MySQL 数据库操作类，继承自 IDB，并支持 shared_ptr">MySQL</a> 语句对象  <br /></td></tr>
+<tr class="separator:aad0e89c864e68f7809205cffb8822d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a1fc72461c9a91fa010c6c19bb234a7cd" id="r_a1fc72461c9a91fa010c6c19bb234a7cd"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1db_1_1MySQL.html">MySQL</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#a1fc72461c9a91fa010c6c19bb234a7cd">m_mysql</a></td></tr>
+<tr class="memdesc:a1fc72461c9a91fa010c6c19bb234a7cd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classGyanis_1_1db_1_1MySQL.html" title="MySQL 数据库操作类，继承自 IDB，并支持 shared_ptr">MySQL</a> 数据库对象的 shared_ptr  <br /></td></tr>
+<tr class="separator:a1fc72461c9a91fa010c6c19bb234a7cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac089f56610230aa76a8fa73bfc7c38f8" id="r_ac089f56610230aa76a8fa73bfc7c38f8"><td class="memItemLeft" align="right" valign="top">MYSQL_STMT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#ac089f56610230aa76a8fa73bfc7c38f8">m_stmt</a></td></tr>
+<tr class="memdesc:ac089f56610230aa76a8fa73bfc7c38f8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classGyanis_1_1db_1_1MySQL.html" title="MySQL 数据库操作类，继承自 IDB，并支持 shared_ptr">MySQL</a> 语句对象指针  <br /></td></tr>
+<tr class="separator:ac089f56610230aa76a8fa73bfc7c38f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf74f5b7c1256db00cf185cb0f952b11" id="r_aaf74f5b7c1256db00cf185cb0f952b11"><td class="memItemLeft" align="right" valign="top">std::vector&lt; MYSQL_BIND &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a></td></tr>
+<tr class="memdesc:aaf74f5b7c1256db00cf185cb0f952b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于绑定参数的结构体  <br /></td></tr>
+<tr class="separator:aaf74f5b7c1256db00cf185cb0f952b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><a class="el" href="classGyanis_1_1db_1_1MySQL.html" title="MySQL 数据库操作类，继承自 IDB，并支持 shared_ptr">MySQL</a> 语句类，继承自 IStmt，并支持 shared_ptr </p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8h_source.html">Mysql.h</a> 第 <a class="el" href="Mysql_8h_source.html#l00660">660</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aab9636452efc5efcd0b4181250777eac" name="aab9636452efc5efcd0b4181250777eac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab9636452efc5efcd0b4181250777eac">&#9670;&#160;</a></span>~MySQLStmt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gyanis::db::MySQLStmt::~MySQLStmt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>析构函数 </p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l00968">968</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  969</span>    {</div>
+<div class="line"><span class="lineno">  970</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#ac089f56610230aa76a8fa73bfc7c38f8">m_stmt</a>)</div>
+<div class="line"><span class="lineno">  971</span>        {</div>
+<div class="line"><span class="lineno">  972</span>            mysql_stmt_close(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#ac089f56610230aa76a8fa73bfc7c38f8">m_stmt</a>);</div>
+<div class="line"><span class="lineno">  973</span>        }</div>
+<div class="line"><span class="lineno">  974</span> </div>
+<div class="line"><span class="lineno">  975</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; i : <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>)</div>
+<div class="line"><span class="lineno">  976</span>        {</div>
+<div class="line"><span class="lineno">  977</span>            <span class="keywordflow">if</span> (i.buffer)</div>
+<div class="line"><span class="lineno">  978</span>            {</div>
+<div class="line"><span class="lineno">  979</span>                free(i.buffer);</div>
+<div class="line"><span class="lineno">  980</span>            }</div>
+<div class="line"><span class="lineno">  981</span>        }</div>
+<div class="line"><span class="lineno">  982</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1MySQLStmt_html_aaf74f5b7c1256db00cf185cb0f952b11"><div class="ttname"><a href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">Gyanis::db::MySQLStmt::m_binds</a></div><div class="ttdeci">std::vector&lt; MYSQL_BIND &gt; m_binds</div><div class="ttdoc">用于绑定参数的结构体</div><div class="ttdef"><b>Definition</b> <a href="Mysql_8h_source.html#l00926">Mysql.h:926</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1MySQLStmt_html_ac089f56610230aa76a8fa73bfc7c38f8"><div class="ttname"><a href="classGyanis_1_1db_1_1MySQLStmt.html#ac089f56610230aa76a8fa73bfc7c38f8">Gyanis::db::MySQLStmt::m_stmt</a></div><div class="ttdeci">MYSQL_STMT * m_stmt</div><div class="ttdoc">MySQL 语句对象指针</div><div class="ttdef"><b>Definition</b> <a href="Mysql_8h_source.html#l00925">Mysql.h:925</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aad0e89c864e68f7809205cffb8822d1c" name="aad0e89c864e68f7809205cffb8822d1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad0e89c864e68f7809205cffb8822d1c">&#9670;&#160;</a></span>MySQLStmt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gyanis::db::MySQLStmt::MySQLStmt </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1db_1_1MySQL.html">MySQL</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>db</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MYSQL_STMT *&#160;</td>
+          <td class="paramname"><em>stmt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数，初始化 <a class="el" href="classGyanis_1_1db_1_1MySQL.html" title="MySQL 数据库操作类，继承自 IDB，并支持 shared_ptr">MySQL</a> 语句对象 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">db</td><td><a class="el" href="classGyanis_1_1db_1_1MySQL.html" title="MySQL 数据库操作类，继承自 IDB，并支持 shared_ptr">MySQL</a> 数据库对象的 shared_ptr </td></tr>
+    <tr><td class="paramname">stmt</td><td><a class="el" href="classGyanis_1_1db_1_1MySQL.html" title="MySQL 数据库操作类，继承自 IDB，并支持 shared_ptr">MySQL</a> 语句指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01309">1309</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1310</span>        : <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#a1fc72461c9a91fa010c6c19bb234a7cd">m_mysql</a>(db)</div>
+<div class="line"><span class="lineno"> 1311</span>          , <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#ac089f56610230aa76a8fa73bfc7c38f8">m_stmt</a>(stmt)</div>
+<div class="line"><span class="lineno"> 1312</span>    {</div>
+<div class="line"><span class="lineno"> 1313</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1MySQLStmt_html_a1fc72461c9a91fa010c6c19bb234a7cd"><div class="ttname"><a href="classGyanis_1_1db_1_1MySQLStmt.html#a1fc72461c9a91fa010c6c19bb234a7cd">Gyanis::db::MySQLStmt::m_mysql</a></div><div class="ttdeci">std::shared_ptr&lt; MySQL &gt; m_mysql</div><div class="ttdoc">MySQL 数据库对象的 shared_ptr</div><div class="ttdef"><b>Definition</b> <a href="Mysql_8h_source.html#l00924">Mysql.h:924</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aae946dd70e4f3f4e5cce995e4a556c83" name="aae946dd70e4f3f4e5cce995e4a556c83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae946dd70e4f3f4e5cce995e4a556c83">&#9670;&#160;</a></span>bind() <span class="overload">[1/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bind </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绑定空值（NULL） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01049">1049</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1050</span>    {</div>
+<div class="line"><span class="lineno"> 1051</span>        index -= 1;</div>
+<div class="line"><span class="lineno"> 1052</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_type = MYSQL_TYPE_NULL;</div>
+<div class="line"><span class="lineno"> 1053</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1054</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a344093f946ba3fe4b8a255a2a4b4719f" name="a344093f946ba3fe4b8a255a2a4b4719f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a344093f946ba3fe4b8a255a2a4b4719f">&#9670;&#160;</a></span>bind() <span class="overload">[2/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bind </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绑定字符串值（C 字符串版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>C 字符串值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01039">1039</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1040</span>    {</div>
+<div class="line"><span class="lineno"> 1041</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1db_1_1MySQLStmt.html#a67e3e457c4715db8b165bba1236bfa53">bindString</a>(index, value);</div>
+<div class="line"><span class="lineno"> 1042</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1MySQLStmt_html_a67e3e457c4715db8b165bba1236bfa53"><div class="ttname"><a href="classGyanis_1_1db_1_1MySQLStmt.html#a67e3e457c4715db8b165bba1236bfa53">Gyanis::db::MySQLStmt::bindString</a></div><div class="ttdeci">int bindString(int index, const char *value) override</div><div class="ttdoc">绑定字符串值（重写版本）</div><div class="ttdef"><b>Definition</b> <a href="Mysql_8cpp_source.html#l01194">Mysql.cpp:1194</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_a344093f946ba3fe4b8a255a2a4b4719f_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_a344093f946ba3fe4b8a255a2a4b4719f_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a58d88ca195e63874d3dadca1bb4fa5a0" name="a58d88ca195e63874d3dadca1bb4fa5a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58d88ca195e63874d3dadca1bb4fa5a0">&#9670;&#160;</a></span>bind() <span class="overload">[3/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bind </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绑定双精度浮点数值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>双精度浮点数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01029">1029</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1030</span>    {</div>
+<div class="line"><span class="lineno"> 1031</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1db_1_1MySQLStmt.html#a29d873384bf105cabfe605075c23e9f3">bindDouble</a>(index, value);</div>
+<div class="line"><span class="lineno"> 1032</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1MySQLStmt_html_a29d873384bf105cabfe605075c23e9f3"><div class="ttname"><a href="classGyanis_1_1db_1_1MySQLStmt.html#a29d873384bf105cabfe605075c23e9f3">Gyanis::db::MySQLStmt::bindDouble</a></div><div class="ttdeci">int bindDouble(int index, const double &amp;value) override</div><div class="ttdoc">绑定双精度浮点数值（重写版本）</div><div class="ttdef"><b>Definition</b> <a href="Mysql_8cpp_source.html#l01181">Mysql.cpp:1181</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_a58d88ca195e63874d3dadca1bb4fa5a0_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_a58d88ca195e63874d3dadca1bb4fa5a0_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af409ea3c3201484199f2ad0e97c64530" name="af409ea3c3201484199f2ad0e97c64530"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af409ea3c3201484199f2ad0e97c64530">&#9670;&#160;</a></span>bind() <span class="overload">[4/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bind </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绑定浮点数值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>浮点数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01024">1024</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1025</span>    {</div>
+<div class="line"><span class="lineno"> 1026</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1db_1_1MySQLStmt.html#a9c5ad36378324e31c67addceea232c19">bindFloat</a>(index, value);</div>
+<div class="line"><span class="lineno"> 1027</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1MySQLStmt_html_a9c5ad36378324e31c67addceea232c19"><div class="ttname"><a href="classGyanis_1_1db_1_1MySQLStmt.html#a9c5ad36378324e31c67addceea232c19">Gyanis::db::MySQLStmt::bindFloat</a></div><div class="ttdeci">int bindFloat(int index, const float &amp;value) override</div><div class="ttdoc">绑定浮点数值（重写版本）</div><div class="ttdef"><b>Definition</b> <a href="Mysql_8cpp_source.html#l01168">Mysql.cpp:1168</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_af409ea3c3201484199f2ad0e97c64530_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_af409ea3c3201484199f2ad0e97c64530_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a5be564956e28a7568a814cae4be70016" name="a5be564956e28a7568a814cae4be70016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5be564956e28a7568a814cae4be70016">&#9670;&#160;</a></span>bind() <span class="overload">[5/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bind </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int16_t &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绑定整数值（16 位有符号整数） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>16 位有符号整数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l00994">994</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  995</span>    {</div>
+<div class="line"><span class="lineno">  996</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1db_1_1MySQLStmt.html#a9f315fe9308fb3aa72a576024a1f3d15">bindInt16</a>(index, value);</div>
+<div class="line"><span class="lineno">  997</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1MySQLStmt_html_a9f315fe9308fb3aa72a576024a1f3d15"><div class="ttname"><a href="classGyanis_1_1db_1_1MySQLStmt.html#a9f315fe9308fb3aa72a576024a1f3d15">Gyanis::db::MySQLStmt::bindInt16</a></div><div class="ttdeci">int bindInt16(int index, const int16_t &amp;value) override</div><div class="ttdoc">绑定整数值（16 位有符号整数，重写版本）</div><div class="ttdef"><b>Definition</b> <a href="Mysql_8cpp_source.html#l01084">Mysql.cpp:1084</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_a5be564956e28a7568a814cae4be70016_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_a5be564956e28a7568a814cae4be70016_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a5ee4432af5d77cc749c20c4b608ac425" name="a5ee4432af5d77cc749c20c4b608ac425"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ee4432af5d77cc749c20c4b608ac425">&#9670;&#160;</a></span>bind() <span class="overload">[6/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bind </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int32_t &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绑定整数值（32 位有符号整数） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>32 位有符号整数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01004">1004</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1005</span>    {</div>
+<div class="line"><span class="lineno"> 1006</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1db_1_1MySQLStmt.html#aefe3d12548d73cba1ba081804fcca405">bindInt32</a>(index, value);</div>
+<div class="line"><span class="lineno"> 1007</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1MySQLStmt_html_aefe3d12548d73cba1ba081804fcca405"><div class="ttname"><a href="classGyanis_1_1db_1_1MySQLStmt.html#aefe3d12548d73cba1ba081804fcca405">Gyanis::db::MySQLStmt::bindInt32</a></div><div class="ttdeci">int bindInt32(int index, const int32_t &amp;value) override</div><div class="ttdoc">绑定整数值（32 位有符号整数，重写版本）</div><div class="ttdef"><b>Definition</b> <a href="Mysql_8cpp_source.html#l01112">Mysql.cpp:1112</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_a5ee4432af5d77cc749c20c4b608ac425_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_a5ee4432af5d77cc749c20c4b608ac425_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aac551eeef83acbd59a10500c06657765" name="aac551eeef83acbd59a10500c06657765"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac551eeef83acbd59a10500c06657765">&#9670;&#160;</a></span>bind() <span class="overload">[7/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bind </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int64_t &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绑定整数值（64 位有符号整数） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>64 位有符号整数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01014">1014</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1015</span>    {</div>
+<div class="line"><span class="lineno"> 1016</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1db_1_1MySQLStmt.html#a4b78097f34977bfaa2ec7ef3d55ade0b">bindInt64</a>(index, value);</div>
+<div class="line"><span class="lineno"> 1017</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1MySQLStmt_html_a4b78097f34977bfaa2ec7ef3d55ade0b"><div class="ttname"><a href="classGyanis_1_1db_1_1MySQLStmt.html#a4b78097f34977bfaa2ec7ef3d55ade0b">Gyanis::db::MySQLStmt::bindInt64</a></div><div class="ttdeci">int bindInt64(int index, const int64_t &amp;value) override</div><div class="ttdoc">绑定整数值（64 位有符号整数，重写版本）</div><div class="ttdef"><b>Definition</b> <a href="Mysql_8cpp_source.html#l01140">Mysql.cpp:1140</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_aac551eeef83acbd59a10500c06657765_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_aac551eeef83acbd59a10500c06657765_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a6585d72fb32e4f0cb62e1997f169e6f1" name="a6585d72fb32e4f0cb62e1997f169e6f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6585d72fb32e4f0cb62e1997f169e6f1">&#9670;&#160;</a></span>bind() <span class="overload">[8/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bind </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int8_t &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绑定整数值（8 位有符号整数） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>8 位有符号整数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l00984">984</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  985</span>    {</div>
+<div class="line"><span class="lineno">  986</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1db_1_1MySQLStmt.html#a269d23bcb2df07f6940c1abda87ce06f">bindInt8</a>(index, value);</div>
+<div class="line"><span class="lineno">  987</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1MySQLStmt_html_a269d23bcb2df07f6940c1abda87ce06f"><div class="ttname"><a href="classGyanis_1_1db_1_1MySQLStmt.html#a269d23bcb2df07f6940c1abda87ce06f">Gyanis::db::MySQLStmt::bindInt8</a></div><div class="ttdeci">int bindInt8(int index, const int8_t &amp;value) override</div><div class="ttdoc">绑定整数值（8 位有符号整数，重写版本）</div><div class="ttdef"><b>Definition</b> <a href="Mysql_8cpp_source.html#l01056">Mysql.cpp:1056</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_a6585d72fb32e4f0cb62e1997f169e6f1_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_a6585d72fb32e4f0cb62e1997f169e6f1_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_a6585d72fb32e4f0cb62e1997f169e6f1_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_a6585d72fb32e4f0cb62e1997f169e6f1_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af1f5c20c9b194956ba39de165ef8fca4" name="af1f5c20c9b194956ba39de165ef8fca4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1f5c20c9b194956ba39de165ef8fca4">&#9670;&#160;</a></span>bind() <span class="overload">[9/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bind </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绑定字符串值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>字符串值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01034">1034</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1035</span>    {</div>
+<div class="line"><span class="lineno"> 1036</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1db_1_1MySQLStmt.html#a67e3e457c4715db8b165bba1236bfa53">bindString</a>(index, value);</div>
+<div class="line"><span class="lineno"> 1037</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_af1f5c20c9b194956ba39de165ef8fca4_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_af1f5c20c9b194956ba39de165ef8fca4_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aada017df1e328e3606a599942c238084" name="aada017df1e328e3606a599942c238084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aada017df1e328e3606a599942c238084">&#9670;&#160;</a></span>bind() <span class="overload">[10/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bind </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绑定无符号整数值（16 位无符号整数） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>16 位无符号整数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l00999">999</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1000</span>    {</div>
+<div class="line"><span class="lineno"> 1001</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1db_1_1MySQLStmt.html#a57cdb85d8a2a058f276e59c9bc7b49ed">bindUint16</a>(index, value);</div>
+<div class="line"><span class="lineno"> 1002</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1MySQLStmt_html_a57cdb85d8a2a058f276e59c9bc7b49ed"><div class="ttname"><a href="classGyanis_1_1db_1_1MySQLStmt.html#a57cdb85d8a2a058f276e59c9bc7b49ed">Gyanis::db::MySQLStmt::bindUint16</a></div><div class="ttdeci">int bindUint16(int index, const uint16_t &amp;value) override</div><div class="ttdoc">绑定无符号整数值（16 位无符号整数，重写版本）</div><div class="ttdef"><b>Definition</b> <a href="Mysql_8cpp_source.html#l01098">Mysql.cpp:1098</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_aada017df1e328e3606a599942c238084_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_aada017df1e328e3606a599942c238084_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a8962521d56fe11dbfc130405a5d3586b" name="a8962521d56fe11dbfc130405a5d3586b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8962521d56fe11dbfc130405a5d3586b">&#9670;&#160;</a></span>bind() <span class="overload">[11/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bind </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绑定无符号整数值（32 位无符号整数） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>32 位无符号整数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01009">1009</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1010</span>    {</div>
+<div class="line"><span class="lineno"> 1011</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1db_1_1MySQLStmt.html#a7ddbea066aaaa2cdf1d3fd157ccecb23">bindUint32</a>(index, value);</div>
+<div class="line"><span class="lineno"> 1012</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1MySQLStmt_html_a7ddbea066aaaa2cdf1d3fd157ccecb23"><div class="ttname"><a href="classGyanis_1_1db_1_1MySQLStmt.html#a7ddbea066aaaa2cdf1d3fd157ccecb23">Gyanis::db::MySQLStmt::bindUint32</a></div><div class="ttdeci">int bindUint32(int index, const uint32_t &amp;value) override</div><div class="ttdoc">绑定无符号整数值（32 位无符号整数，重写版本）</div><div class="ttdef"><b>Definition</b> <a href="Mysql_8cpp_source.html#l01126">Mysql.cpp:1126</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_a8962521d56fe11dbfc130405a5d3586b_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_a8962521d56fe11dbfc130405a5d3586b_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ac8961981e2e971eee35a2a30d865c075" name="ac8961981e2e971eee35a2a30d865c075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8961981e2e971eee35a2a30d865c075">&#9670;&#160;</a></span>bind() <span class="overload">[12/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bind </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint64_t &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绑定无符号整数值（64 位无符号整数） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>64 位无符号整数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01019">1019</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1020</span>    {</div>
+<div class="line"><span class="lineno"> 1021</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1db_1_1MySQLStmt.html#af38892c3d766977b2ae49ccc2e25bb4d">bindUint64</a>(index, value);</div>
+<div class="line"><span class="lineno"> 1022</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1MySQLStmt_html_af38892c3d766977b2ae49ccc2e25bb4d"><div class="ttname"><a href="classGyanis_1_1db_1_1MySQLStmt.html#af38892c3d766977b2ae49ccc2e25bb4d">Gyanis::db::MySQLStmt::bindUint64</a></div><div class="ttdeci">int bindUint64(int index, const uint64_t &amp;value) override</div><div class="ttdoc">绑定无符号整数值（64 位无符号整数，重写版本）</div><div class="ttdef"><b>Definition</b> <a href="Mysql_8cpp_source.html#l01154">Mysql.cpp:1154</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_ac8961981e2e971eee35a2a30d865c075_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_ac8961981e2e971eee35a2a30d865c075_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af58ccf4cfa5add568f3174dc00d89ad1" name="af58ccf4cfa5add568f3174dc00d89ad1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af58ccf4cfa5add568f3174dc00d89ad1">&#9670;&#160;</a></span>bind() <span class="overload">[13/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bind </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绑定无符号整数值（8 位无符号整数） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>8 位无符号整数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l00989">989</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  990</span>    {</div>
+<div class="line"><span class="lineno">  991</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1db_1_1MySQLStmt.html#a88bc5b00adadade9888d85e7e31fabce">bindUint8</a>(index, value);</div>
+<div class="line"><span class="lineno">  992</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1MySQLStmt_html_a88bc5b00adadade9888d85e7e31fabce"><div class="ttname"><a href="classGyanis_1_1db_1_1MySQLStmt.html#a88bc5b00adadade9888d85e7e31fabce">Gyanis::db::MySQLStmt::bindUint8</a></div><div class="ttdeci">int bindUint8(int index, const uint8_t &amp;value) override</div><div class="ttdoc">绑定无符号整数值（8 位无符号整数，重写版本）</div><div class="ttdef"><b>Definition</b> <a href="Mysql_8cpp_source.html#l01070">Mysql.cpp:1070</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_af58ccf4cfa5add568f3174dc00d89ad1_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_af58ccf4cfa5add568f3174dc00d89ad1_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a405d0d3d14d5dcacb79a46b076eed09a" name="a405d0d3d14d5dcacb79a46b076eed09a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a405d0d3d14d5dcacb79a46b076eed09a">&#9670;&#160;</a></span>bind() <span class="overload">[14/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bind </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>绑定二进制数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>数据指针 </td></tr>
+    <tr><td class="paramname">len</td><td>数据长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01044">1044</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1045</span>    {</div>
+<div class="line"><span class="lineno"> 1046</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1db_1_1MySQLStmt.html#ab768725a3d644bd870ce58633537e3c8">bindBlob</a>(index, value, len);</div>
+<div class="line"><span class="lineno"> 1047</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1MySQLStmt_html_ab768725a3d644bd870ce58633537e3c8"><div class="ttname"><a href="classGyanis_1_1db_1_1MySQLStmt.html#ab768725a3d644bd870ce58633537e3c8">Gyanis::db::MySQLStmt::bindBlob</a></div><div class="ttdeci">int bindBlob(int index, const void *value, int64_t size) override</div><div class="ttdoc">绑定二进制数据（重写版本）</div><div class="ttdef"><b>Definition</b> <a href="Mysql_8cpp_source.html#l01227">Mysql.cpp:1227</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_a405d0d3d14d5dcacb79a46b076eed09a_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_a405d0d3d14d5dcacb79a46b076eed09a_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a34b9baebe85c6a99e721ab4b95832cd9" name="a34b9baebe85c6a99e721ab4b95832cd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34b9baebe85c6a99e721ab4b95832cd9">&#9670;&#160;</a></span>bindBlob() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bindBlob </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绑定二进制数据（重写版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>字符串数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#af7925d599c194b7fbf7e01de5534987a">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01245">1245</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1246</span>    {</div>
+<div class="line"><span class="lineno"> 1247</span>        index -= 1;</div>
+<div class="line"><span class="lineno"> 1248</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_type = MYSQL_TYPE_BLOB;</div>
+<div class="line"><span class="lineno"> 1249</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 1250</span>        {</div>
+<div class="line"><span class="lineno"> 1251</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer = malloc(value.size());</div>
+<div class="line"><span class="lineno"> 1252</span>        }</div>
+<div class="line"><span class="lineno"> 1253</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_length &lt; value.size())</div>
+<div class="line"><span class="lineno"> 1254</span>        {</div>
+<div class="line"><span class="lineno"> 1255</span>            free(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer);</div>
+<div class="line"><span class="lineno"> 1256</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer = malloc(value.size());</div>
+<div class="line"><span class="lineno"> 1257</span>        }</div>
+<div class="line"><span class="lineno"> 1258</span>        memcpy(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer, value.c_str(), value.size());</div>
+<div class="line"><span class="lineno"> 1259</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_length = value.size();;</div>
+<div class="line"><span class="lineno"> 1260</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1261</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab768725a3d644bd870ce58633537e3c8" name="ab768725a3d644bd870ce58633537e3c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab768725a3d644bd870ce58633537e3c8">&#9670;&#160;</a></span>bindBlob() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bindBlob </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绑定二进制数据（重写版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>数据指针 </td></tr>
+    <tr><td class="paramname">size</td><td>数据大小 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#af73408485dd65ee38587b25d2e39a115">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01227">1227</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1228</span>    {</div>
+<div class="line"><span class="lineno"> 1229</span>        index -= 1;</div>
+<div class="line"><span class="lineno"> 1230</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_type = MYSQL_TYPE_BLOB;</div>
+<div class="line"><span class="lineno"> 1231</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 1232</span>        {</div>
+<div class="line"><span class="lineno"> 1233</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer = malloc(size);</div>
+<div class="line"><span class="lineno"> 1234</span>        }</div>
+<div class="line"><span class="lineno"> 1235</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_length &lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(size))</div>
+<div class="line"><span class="lineno"> 1236</span>        {</div>
+<div class="line"><span class="lineno"> 1237</span>            free(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer);</div>
+<div class="line"><span class="lineno"> 1238</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer = malloc(size);</div>
+<div class="line"><span class="lineno"> 1239</span>        }</div>
+<div class="line"><span class="lineno"> 1240</span>        memcpy(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer, value, size);</div>
+<div class="line"><span class="lineno"> 1241</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_length = size;;</div>
+<div class="line"><span class="lineno"> 1242</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1243</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_ab768725a3d644bd870ce58633537e3c8_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_ab768725a3d644bd870ce58633537e3c8_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a29d873384bf105cabfe605075c23e9f3" name="a29d873384bf105cabfe605075c23e9f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29d873384bf105cabfe605075c23e9f3">&#9670;&#160;</a></span>bindDouble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bindDouble </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绑定双精度浮点数值（重写版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>双精度浮点数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#a7f7f8f6a3f1b8d5fd77080facc117bbd">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01181">1181</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1182</span>    {</div>
+<div class="line"><span class="lineno"> 1183</span>        index -= 1;</div>
+<div class="line"><span class="lineno"> 1184</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_type = MYSQL_TYPE_DOUBLE;</div>
+<div class="line"><span class="lineno"> 1185</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 1186</span>        {</div>
+<div class="line"><span class="lineno"> 1187</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer = malloc(<span class="keyword">sizeof</span>(value));</div>
+<div class="line"><span class="lineno"> 1188</span>        }</div>
+<div class="line"><span class="lineno"> 1189</span>        memcpy(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer, &amp;value, <span class="keyword">sizeof</span>(value));;</div>
+<div class="line"><span class="lineno"> 1190</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_length = <span class="keyword">sizeof</span>(value);</div>
+<div class="line"><span class="lineno"> 1191</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1192</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_a29d873384bf105cabfe605075c23e9f3_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_a29d873384bf105cabfe605075c23e9f3_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9c5ad36378324e31c67addceea232c19" name="a9c5ad36378324e31c67addceea232c19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c5ad36378324e31c67addceea232c19">&#9670;&#160;</a></span>bindFloat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bindFloat </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绑定浮点数值（重写版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>浮点数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#a872f28c2c02999ca387ff97ddbd0374a">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01168">1168</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1169</span>    {</div>
+<div class="line"><span class="lineno"> 1170</span>        index -= 1;</div>
+<div class="line"><span class="lineno"> 1171</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_type = MYSQL_TYPE_FLOAT;</div>
+<div class="line"><span class="lineno"> 1172</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 1173</span>        {</div>
+<div class="line"><span class="lineno"> 1174</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer = malloc(<span class="keyword">sizeof</span>(value));</div>
+<div class="line"><span class="lineno"> 1175</span>        }</div>
+<div class="line"><span class="lineno"> 1176</span>        memcpy(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer, &amp;value, <span class="keyword">sizeof</span>(value));;</div>
+<div class="line"><span class="lineno"> 1177</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_length = <span class="keyword">sizeof</span>(value);</div>
+<div class="line"><span class="lineno"> 1178</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1179</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_a9c5ad36378324e31c67addceea232c19_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_a9c5ad36378324e31c67addceea232c19_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9f315fe9308fb3aa72a576024a1f3d15" name="a9f315fe9308fb3aa72a576024a1f3d15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f315fe9308fb3aa72a576024a1f3d15">&#9670;&#160;</a></span>bindInt16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bindInt16 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int16_t &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绑定整数值（16 位有符号整数，重写版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>16 位有符号整数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#a44c1636034f32917b0de4577c5050474">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01084">1084</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1085</span>    {</div>
+<div class="line"><span class="lineno"> 1086</span>        index -= 1;</div>
+<div class="line"><span class="lineno"> 1087</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_type = MYSQL_TYPE_SHORT;</div>
+<div class="line"><span class="lineno"> 1088</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 1089</span>        {</div>
+<div class="line"><span class="lineno"> 1090</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer = malloc(<span class="keyword">sizeof</span>(value));</div>
+<div class="line"><span class="lineno"> 1091</span>        }</div>
+<div class="line"><span class="lineno"> 1092</span>        memcpy(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer, &amp;value, <span class="keyword">sizeof</span>(value));;</div>
+<div class="line"><span class="lineno"> 1093</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].is_unsigned = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1094</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_length = <span class="keyword">sizeof</span>(value);</div>
+<div class="line"><span class="lineno"> 1095</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1096</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_a9f315fe9308fb3aa72a576024a1f3d15_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_a9f315fe9308fb3aa72a576024a1f3d15_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aefe3d12548d73cba1ba081804fcca405" name="aefe3d12548d73cba1ba081804fcca405"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefe3d12548d73cba1ba081804fcca405">&#9670;&#160;</a></span>bindInt32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bindInt32 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int32_t &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绑定整数值（32 位有符号整数，重写版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>32 位有符号整数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#a8fe0a3ed5cac295a40e5ce71789c7952">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01112">1112</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1113</span>    {</div>
+<div class="line"><span class="lineno"> 1114</span>        index -= 1;</div>
+<div class="line"><span class="lineno"> 1115</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_type = MYSQL_TYPE_LONG;</div>
+<div class="line"><span class="lineno"> 1116</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 1117</span>        {</div>
+<div class="line"><span class="lineno"> 1118</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer = malloc(<span class="keyword">sizeof</span>(value));</div>
+<div class="line"><span class="lineno"> 1119</span>        }</div>
+<div class="line"><span class="lineno"> 1120</span>        memcpy(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer, &amp;value, <span class="keyword">sizeof</span>(value));;</div>
+<div class="line"><span class="lineno"> 1121</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].is_unsigned = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1122</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_length = <span class="keyword">sizeof</span>(value);</div>
+<div class="line"><span class="lineno"> 1123</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1124</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_aefe3d12548d73cba1ba081804fcca405_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_aefe3d12548d73cba1ba081804fcca405_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a4b78097f34977bfaa2ec7ef3d55ade0b" name="a4b78097f34977bfaa2ec7ef3d55ade0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b78097f34977bfaa2ec7ef3d55ade0b">&#9670;&#160;</a></span>bindInt64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bindInt64 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int64_t &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绑定整数值（64 位有符号整数，重写版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>64 位有符号整数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#a3ca57bcfee27fbb953cd21871f37e36c">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01140">1140</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1141</span>    {</div>
+<div class="line"><span class="lineno"> 1142</span>        index -= 1;</div>
+<div class="line"><span class="lineno"> 1143</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_type = MYSQL_TYPE_LONGLONG;</div>
+<div class="line"><span class="lineno"> 1144</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 1145</span>        {</div>
+<div class="line"><span class="lineno"> 1146</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer = malloc(<span class="keyword">sizeof</span>(value));</div>
+<div class="line"><span class="lineno"> 1147</span>        }</div>
+<div class="line"><span class="lineno"> 1148</span>        memcpy(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer, &amp;value, <span class="keyword">sizeof</span>(value));;</div>
+<div class="line"><span class="lineno"> 1149</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].is_unsigned = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1150</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_length = <span class="keyword">sizeof</span>(value);</div>
+<div class="line"><span class="lineno"> 1151</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1152</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_a4b78097f34977bfaa2ec7ef3d55ade0b_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_a4b78097f34977bfaa2ec7ef3d55ade0b_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a269d23bcb2df07f6940c1abda87ce06f" name="a269d23bcb2df07f6940c1abda87ce06f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a269d23bcb2df07f6940c1abda87ce06f">&#9670;&#160;</a></span>bindInt8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bindInt8 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int8_t &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绑定整数值（8 位有符号整数，重写版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>8 位有符号整数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#a126cf40fbfb73b74ea07c0a950bdfc18">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01056">1056</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1057</span>    {</div>
+<div class="line"><span class="lineno"> 1058</span>        index -= 1;</div>
+<div class="line"><span class="lineno"> 1059</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_type = MYSQL_TYPE_TINY;</div>
+<div class="line"><span class="lineno"> 1060</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 1061</span>        {</div>
+<div class="line"><span class="lineno"> 1062</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer = malloc(<span class="keyword">sizeof</span>(value));</div>
+<div class="line"><span class="lineno"> 1063</span>        }</div>
+<div class="line"><span class="lineno"> 1064</span>        memcpy(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer, &amp;value, <span class="keyword">sizeof</span>(value));;</div>
+<div class="line"><span class="lineno"> 1065</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].is_unsigned = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1066</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_length = <span class="keyword">sizeof</span>(value);</div>
+<div class="line"><span class="lineno"> 1067</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1068</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_a269d23bcb2df07f6940c1abda87ce06f_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_a269d23bcb2df07f6940c1abda87ce06f_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ab93b1c5c488d162c76902c78497286f8" name="ab93b1c5c488d162c76902c78497286f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab93b1c5c488d162c76902c78497286f8">&#9670;&#160;</a></span>bindNull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bindNull </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绑定空值（NULL，重写版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#a0a615ce6f13951d32c838619dc754a9e">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01268">1268</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1269</span>    {</div>
+<div class="line"><span class="lineno"> 1270</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1db_1_1MySQLStmt.html#a6585d72fb32e4f0cb62e1997f169e6f1">bind</a>(index);</div>
+<div class="line"><span class="lineno"> 1271</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1MySQLStmt_html_a6585d72fb32e4f0cb62e1997f169e6f1"><div class="ttname"><a href="classGyanis_1_1db_1_1MySQLStmt.html#a6585d72fb32e4f0cb62e1997f169e6f1">Gyanis::db::MySQLStmt::bind</a></div><div class="ttdeci">int bind(int index, const int8_t &amp;value)</div><div class="ttdoc">绑定整数值（8 位有符号整数）</div><div class="ttdef"><b>Definition</b> <a href="Mysql_8cpp_source.html#l00984">Mysql.cpp:984</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_ab93b1c5c488d162c76902c78497286f8_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_ab93b1c5c488d162c76902c78497286f8_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a67e3e457c4715db8b165bba1236bfa53" name="a67e3e457c4715db8b165bba1236bfa53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e3e457c4715db8b165bba1236bfa53">&#9670;&#160;</a></span>bindString() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bindString </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绑定字符串值（重写版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>字符串值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#a28fc52e94ac1024db31bbecf9a99149b">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01194">1194</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1195</span>    {</div>
+<div class="line"><span class="lineno"> 1196</span>        index -= 1;</div>
+<div class="line"><span class="lineno"> 1197</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_type = MYSQL_TYPE_STRING;</div>
+<div class="line"><span class="lineno"> 1198</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 1199</span>        {</div>
+<div class="line"><span class="lineno"> 1200</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer = malloc(strlen(value));</div>
+<div class="line"><span class="lineno"> 1201</span>        }</div>
+<div class="line"><span class="lineno"> 1202</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_length &lt; strlen(value))</div>
+<div class="line"><span class="lineno"> 1203</span>        {</div>
+<div class="line"><span class="lineno"> 1204</span>            free(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer);</div>
+<div class="line"><span class="lineno"> 1205</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer = malloc(strlen(value));</div>
+<div class="line"><span class="lineno"> 1206</span>        }</div>
+<div class="line"><span class="lineno"> 1207</span>        memcpy(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer, value, strlen(value));</div>
+<div class="line"><span class="lineno"> 1208</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_length = strlen(value);;</div>
+<div class="line"><span class="lineno"> 1209</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1210</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_a67e3e457c4715db8b165bba1236bfa53_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_a67e3e457c4715db8b165bba1236bfa53_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a6edf33935840f2bb4246e27d13561bb1" name="a6edf33935840f2bb4246e27d13561bb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6edf33935840f2bb4246e27d13561bb1">&#9670;&#160;</a></span>bindString() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bindString </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绑定字符串值（重写版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>字符串值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#ac9f80daa85297823da75063e7209ab27">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01212">1212</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1213</span>    {</div>
+<div class="line"><span class="lineno"> 1214</span>        index -= 1;</div>
+<div class="line"><span class="lineno"> 1215</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_type = MYSQL_TYPE_STRING;</div>
+<div class="line"><span class="lineno"> 1216</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer == <span class="keyword">nullptr</span>) { <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer = malloc(value.size()); }</div>
+<div class="line"><span class="lineno"> 1217</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<span class="keywordtype">size_t</span>)<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_length &lt; (<span class="keywordtype">size_t</span>)value.size())</div>
+<div class="line"><span class="lineno"> 1218</span>        {</div>
+<div class="line"><span class="lineno"> 1219</span>            free(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer);</div>
+<div class="line"><span class="lineno"> 1220</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer = malloc(value.size());</div>
+<div class="line"><span class="lineno"> 1221</span>        }</div>
+<div class="line"><span class="lineno"> 1222</span>        memcpy(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer, value.c_str(), value.size());</div>
+<div class="line"><span class="lineno"> 1223</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_length = value.size();;</div>
+<div class="line"><span class="lineno"> 1224</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1225</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad3d51aff30f4bc949b6fc7ccad7aee57" name="ad3d51aff30f4bc949b6fc7ccad7aee57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3d51aff30f4bc949b6fc7ccad7aee57">&#9670;&#160;</a></span>bindTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bindTime </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const time_t &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绑定时间值（重写版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>时间值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#a0f3d7cc6b756c88510c6855ee1d353fb">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01263">1263</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1264</span>    {</div>
+<div class="line"><span class="lineno"> 1265</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1db_1_1MySQLStmt.html#a67e3e457c4715db8b165bba1236bfa53">bindString</a>(index, <a class="code hl_function" href="namespaceGyanis_1_1base.html#acb782dfcae17627e3aa67129f6b3a3f3">base::Time2Str</a>(value));</div>
+<div class="line"><span class="lineno"> 1266</span>    }</div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_acb782dfcae17627e3aa67129f6b3a3f3"><div class="ttname"><a href="namespaceGyanis_1_1base.html#acb782dfcae17627e3aa67129f6b3a3f3">Gyanis::base::Time2Str</a></div><div class="ttdeci">std::string Time2Str(time_t ts=time(nullptr), const std::string &amp;format=&quot;%Y-%m-%d %H:%M:%S&quot;)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00139">Utils.cpp:139</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_ad3d51aff30f4bc949b6fc7ccad7aee57_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_ad3d51aff30f4bc949b6fc7ccad7aee57_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a57cdb85d8a2a058f276e59c9bc7b49ed" name="a57cdb85d8a2a058f276e59c9bc7b49ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57cdb85d8a2a058f276e59c9bc7b49ed">&#9670;&#160;</a></span>bindUint16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bindUint16 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint16_t &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绑定无符号整数值（16 位无符号整数，重写版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>16 位无符号整数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#af3ece71feb9e19368f15247eb127640f">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01098">1098</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1099</span>    {</div>
+<div class="line"><span class="lineno"> 1100</span>        index -= 1;</div>
+<div class="line"><span class="lineno"> 1101</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_type = MYSQL_TYPE_SHORT;</div>
+<div class="line"><span class="lineno"> 1102</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 1103</span>        {</div>
+<div class="line"><span class="lineno"> 1104</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer = malloc(<span class="keyword">sizeof</span>(value));</div>
+<div class="line"><span class="lineno"> 1105</span>        }</div>
+<div class="line"><span class="lineno"> 1106</span>        memcpy(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer, &amp;value, <span class="keyword">sizeof</span>(value));;</div>
+<div class="line"><span class="lineno"> 1107</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].is_unsigned = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1108</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_length = <span class="keyword">sizeof</span>(value);</div>
+<div class="line"><span class="lineno"> 1109</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1110</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_a57cdb85d8a2a058f276e59c9bc7b49ed_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_a57cdb85d8a2a058f276e59c9bc7b49ed_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a7ddbea066aaaa2cdf1d3fd157ccecb23" name="a7ddbea066aaaa2cdf1d3fd157ccecb23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ddbea066aaaa2cdf1d3fd157ccecb23">&#9670;&#160;</a></span>bindUint32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bindUint32 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绑定无符号整数值（32 位无符号整数，重写版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>32 位无符号整数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#a1038fe70448c18dd96163a860b242672">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01126">1126</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1127</span>    {</div>
+<div class="line"><span class="lineno"> 1128</span>        index -= 1;</div>
+<div class="line"><span class="lineno"> 1129</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_type = MYSQL_TYPE_LONG;</div>
+<div class="line"><span class="lineno"> 1130</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 1131</span>        {</div>
+<div class="line"><span class="lineno"> 1132</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer = malloc(<span class="keyword">sizeof</span>(value));</div>
+<div class="line"><span class="lineno"> 1133</span>        }</div>
+<div class="line"><span class="lineno"> 1134</span>        memcpy(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer, &amp;value, <span class="keyword">sizeof</span>(value));;</div>
+<div class="line"><span class="lineno"> 1135</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].is_unsigned = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1136</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_length = <span class="keyword">sizeof</span>(value);</div>
+<div class="line"><span class="lineno"> 1137</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1138</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_a7ddbea066aaaa2cdf1d3fd157ccecb23_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_a7ddbea066aaaa2cdf1d3fd157ccecb23_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af38892c3d766977b2ae49ccc2e25bb4d" name="af38892c3d766977b2ae49ccc2e25bb4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af38892c3d766977b2ae49ccc2e25bb4d">&#9670;&#160;</a></span>bindUint64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bindUint64 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint64_t &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绑定无符号整数值（64 位无符号整数，重写版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>64 位无符号整数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#ad287be1a7c5dd45bfbb66af6b7af8944">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01154">1154</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1155</span>    {</div>
+<div class="line"><span class="lineno"> 1156</span>        index -= 1;</div>
+<div class="line"><span class="lineno"> 1157</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_type = MYSQL_TYPE_LONGLONG;</div>
+<div class="line"><span class="lineno"> 1158</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 1159</span>        {</div>
+<div class="line"><span class="lineno"> 1160</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer = malloc(<span class="keyword">sizeof</span>(value));</div>
+<div class="line"><span class="lineno"> 1161</span>        }</div>
+<div class="line"><span class="lineno"> 1162</span>        memcpy(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer, &amp;value, <span class="keyword">sizeof</span>(value));;</div>
+<div class="line"><span class="lineno"> 1163</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].is_unsigned = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1164</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_length = <span class="keyword">sizeof</span>(value);</div>
+<div class="line"><span class="lineno"> 1165</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1166</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_af38892c3d766977b2ae49ccc2e25bb4d_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_af38892c3d766977b2ae49ccc2e25bb4d_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a88bc5b00adadade9888d85e7e31fabce" name="a88bc5b00adadade9888d85e7e31fabce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88bc5b00adadade9888d85e7e31fabce">&#9670;&#160;</a></span>bindUint8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::bindUint8 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绑定无符号整数值（8 位无符号整数，重写版本） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>参数索引 </td></tr>
+    <tr><td class="paramname">value</td><td>8 位无符号整数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#ab85d085d9dfbd7a5def3866f6d485fd4">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01070">1070</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1071</span>    {</div>
+<div class="line"><span class="lineno"> 1072</span>        index -= 1;</div>
+<div class="line"><span class="lineno"> 1073</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_type = MYSQL_TYPE_TINY;</div>
+<div class="line"><span class="lineno"> 1074</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 1075</span>        {</div>
+<div class="line"><span class="lineno"> 1076</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer = malloc(<span class="keyword">sizeof</span>(value));</div>
+<div class="line"><span class="lineno"> 1077</span>        }</div>
+<div class="line"><span class="lineno"> 1078</span>        memcpy(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer, &amp;value, <span class="keyword">sizeof</span>(value));;</div>
+<div class="line"><span class="lineno"> 1079</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].is_unsigned = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1080</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[index].buffer_length = <span class="keyword">sizeof</span>(value);</div>
+<div class="line"><span class="lineno"> 1081</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1082</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_a88bc5b00adadade9888d85e7e31fabce_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_a88bc5b00adadade9888d85e7e31fabce_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a2d223babbdee8a62600ac7455b9fc94f" name="a2d223babbdee8a62600ac7455b9fc94f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d223babbdee8a62600ac7455b9fc94f">&#9670;&#160;</a></span>Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html">MySQLStmt</a> &gt; Gyanis::db::MySQLStmt::Create </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1db_1_1MySQL.html">MySQL</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>db</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>stmt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建 <a class="el" href="classGyanis_1_1db_1_1MySQL.html" title="MySQL 数据库操作类，继承自 IDB，并支持 shared_ptr">MySQL</a> 语句对象 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">db</td><td><a class="el" href="classGyanis_1_1db_1_1MySQL.html" title="MySQL 数据库操作类，继承自 IDB，并支持 shared_ptr">MySQL</a> 数据库对象的 shared_ptr </td></tr>
+    <tr><td class="paramname">stmt</td><td>SQL 语句 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l00945">945</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  946</span>    {</div>
+<div class="line"><span class="lineno">  947</span>        <span class="keyword">auto</span> st = mysql_stmt_init(db-&gt;getRaw().get());</div>
+<div class="line"><span class="lineno">  948</span>        <span class="keywordflow">if</span> (!st)</div>
+<div class="line"><span class="lineno">  949</span>        {</div>
+<div class="line"><span class="lineno">  950</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  951</span>        }</div>
+<div class="line"><span class="lineno">  952</span>        <span class="keywordflow">if</span> (mysql_stmt_prepare(st, stmt.c_str(), stmt.size()))</div>
+<div class="line"><span class="lineno">  953</span>        {</div>
+<div class="line"><span class="lineno">  954</span>            <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1db.html#a9a8f83b8159af8d6adba3a4b97c5932b">g_logger</a>) &lt;&lt; <span class="stringliteral">&quot;An error occurred while executing the statement. &quot;</span></div>
+<div class="line"><span class="lineno">  955</span>                                &lt;&lt; <span class="stringliteral">&quot;Statement: &quot;</span> &lt;&lt; stmt</div>
+<div class="line"><span class="lineno">  956</span>                                &lt;&lt; <span class="stringliteral">&quot;, Error Number: &quot;</span> &lt;&lt; mysql_stmt_errno(st)</div>
+<div class="line"><span class="lineno">  957</span>                                &lt;&lt; <span class="stringliteral">&quot;, Error Message: &quot;</span> &lt;&lt; mysql_stmt_error(st);</div>
+<div class="line"><span class="lineno">  958</span>            mysql_stmt_close(st);</div>
+<div class="line"><span class="lineno">  959</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  960</span>        }</div>
+<div class="line"><span class="lineno">  961</span>        <span class="keyword">const</span> <span class="keyword">auto</span> count = mysql_stmt_param_count(st);</div>
+<div class="line"><span class="lineno">  962</span>        std::shared_ptr&lt;MySQLStmt&gt; result(<span class="keyword">new</span> <a class="code hl_function" href="classGyanis_1_1db_1_1MySQLStmt.html#aad0e89c864e68f7809205cffb8822d1c">MySQLStmt</a>(db, st));</div>
+<div class="line"><span class="lineno">  963</span>        result-&gt;m_binds.resize(count);</div>
+<div class="line"><span class="lineno">  964</span>        memset(&amp;result-&gt;m_binds[0], 0, <span class="keyword">sizeof</span>(result-&gt;m_binds[0]) * count);</div>
+<div class="line"><span class="lineno">  965</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  966</span>    }</div>
+<div class="ttc" id="aLog_8h_html_a80a932ee56f777358b3d82e5fa3203c8"><div class="ttname"><a href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a></div><div class="ttdeci">#define LOG_ERROR(logger)</div><div class="ttdoc">输出 error 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00046">Log.h:46</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1MySQLStmt_html_aad0e89c864e68f7809205cffb8822d1c"><div class="ttname"><a href="classGyanis_1_1db_1_1MySQLStmt.html#aad0e89c864e68f7809205cffb8822d1c">Gyanis::db::MySQLStmt::MySQLStmt</a></div><div class="ttdeci">MySQLStmt(const std::shared_ptr&lt; MySQL &gt; &amp;db, MYSQL_STMT *stmt)</div><div class="ttdoc">构造函数，初始化 MySQL 语句对象</div><div class="ttdef"><b>Definition</b> <a href="Mysql_8cpp_source.html#l01309">Mysql.cpp:1309</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1db_html_a9a8f83b8159af8d6adba3a4b97c5932b"><div class="ttname"><a href="namespaceGyanis_1_1db.html#a9a8f83b8159af8d6adba3a4b97c5932b">Gyanis::db::g_logger</a></div><div class="ttdeci">static auto g_logger</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8cpp_source.html#l00009">FoxThread.cpp:9</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_a2d223babbdee8a62600ac7455b9fc94f_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_a2d223babbdee8a62600ac7455b9fc94f_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a40d93bcf10aab623c68e8f8eceaf7138" name="a40d93bcf10aab623c68e8f8eceaf7138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40d93bcf10aab623c68e8f8eceaf7138">&#9670;&#160;</a></span>execute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::execute </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>执行预处理语句 </p>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#a553225774c4e90470d37692b6da430b6">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01287">1287</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1288</span>    {</div>
+<div class="line"><span class="lineno"> 1289</span>        mysql_stmt_bind_param(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#ac089f56610230aa76a8fa73bfc7c38f8">m_stmt</a>, &amp;<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[0]);</div>
+<div class="line"><span class="lineno"> 1290</span>        <span class="keywordflow">return</span> mysql_stmt_execute(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#ac089f56610230aa76a8fa73bfc7c38f8">m_stmt</a>);</div>
+<div class="line"><span class="lineno"> 1291</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a830d6536a6e6fc978a2e7c739950e9e7" name="a830d6536a6e6fc978a2e7c739950e9e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a830d6536a6e6fc978a2e7c739950e9e7">&#9670;&#160;</a></span>getErrno()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::db::MySQLStmt::getErrno </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取 SQL 错误码 </p>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#aeab0c4f54f1e08f1e0e011ead7c53a44">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01273">1273</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1274</span>    {</div>
+<div class="line"><span class="lineno"> 1275</span>        <span class="keywordflow">return</span> mysql_stmt_errno(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#ac089f56610230aa76a8fa73bfc7c38f8">m_stmt</a>);</div>
+<div class="line"><span class="lineno"> 1276</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a495c634fe9d26101bf7ef554caef3162" name="a495c634fe9d26101bf7ef554caef3162"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a495c634fe9d26101bf7ef554caef3162">&#9670;&#160;</a></span>getErrStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::db::MySQLStmt::getErrStr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取 SQL 错误信息 </p>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#a6b78fc8800b72b0c652b9d45b7f02a03">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01278">1278</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1279</span>    {</div>
+<div class="line"><span class="lineno"> 1280</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keywordtype">char</span>* e = mysql_stmt_error(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#ac089f56610230aa76a8fa73bfc7c38f8">m_stmt</a>))</div>
+<div class="line"><span class="lineno"> 1281</span>        {</div>
+<div class="line"><span class="lineno"> 1282</span>            <span class="keywordflow">return</span> e;</div>
+<div class="line"><span class="lineno"> 1283</span>        }</div>
+<div class="line"><span class="lineno"> 1284</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno"> 1285</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a74b953b936c2607b10376f2cfb8f3ec5" name="a74b953b936c2607b10376f2cfb8f3ec5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74b953b936c2607b10376f2cfb8f3ec5">&#9670;&#160;</a></span>getLastInsertId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t Gyanis::db::MySQLStmt::getLastInsertId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取上次插入记录的自增 ID </p>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#ab9c83ef82e65ce33547fc87a399788bf">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01293">1293</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1294</span>    {</div>
+<div class="line"><span class="lineno"> 1295</span>        <span class="keywordflow">return</span> mysql_stmt_insert_id(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#ac089f56610230aa76a8fa73bfc7c38f8">m_stmt</a>);</div>
+<div class="line"><span class="lineno"> 1296</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab007f2c0f51c73c2a8e70e465eb4c9f0" name="ab007f2c0f51c73c2a8e70e465eb4c9f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab007f2c0f51c73c2a8e70e465eb4c9f0">&#9670;&#160;</a></span>getRaw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MYSQL_STMT * Gyanis::db::MySQLStmt::getRaw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取原始 <a class="el" href="classGyanis_1_1db_1_1MySQL.html" title="MySQL 数据库操作类，继承自 IDB，并支持 shared_ptr">MySQL</a> 语句指针 </p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01304">1304</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1305</span>    {</div>
+<div class="line"><span class="lineno"> 1306</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#ac089f56610230aa76a8fa73bfc7c38f8">m_stmt</a>;</div>
+<div class="line"><span class="lineno"> 1307</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a35def40a5503952c1c76dd7b0d69a7e3" name="a35def40a5503952c1c76dd7b0d69a7e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35def40a5503952c1c76dd7b0d69a7e3">&#9670;&#160;</a></span>query()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1db_1_1ISQLData.html">ISQLData</a> &gt; Gyanis::db::MySQLStmt::query </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>执行查询操作 </p>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IStmt.html#a576f1f541f1db7202c9f2f025bb40f09">Gyanis::db::IStmt</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a> 第 <a class="el" href="Mysql_8cpp_source.html#l01298">1298</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1299</span>    {</div>
+<div class="line"><span class="lineno"> 1300</span>        mysql_stmt_bind_param(<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#ac089f56610230aa76a8fa73bfc7c38f8">m_stmt</a>, &amp;<a class="code hl_variable" href="classGyanis_1_1db_1_1MySQLStmt.html#aaf74f5b7c1256db00cf185cb0f952b11">m_binds</a>[0]);</div>
+<div class="line"><span class="lineno"> 1301</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1db_1_1MySQLStmtRes.html#ae960953cd221d08ee4a961efbf38e9af">MySQLStmtRes::Create</a>(shared_from_this());</div>
+<div class="line"><span class="lineno"> 1302</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1MySQLStmtRes_html_ae960953cd221d08ee4a961efbf38e9af"><div class="ttname"><a href="classGyanis_1_1db_1_1MySQLStmtRes.html#ae960953cd221d08ee4a961efbf38e9af">Gyanis::db::MySQLStmtRes::Create</a></div><div class="ttdeci">static std::shared_ptr&lt; MySQLStmtRes &gt; Create(const std::shared_ptr&lt; MySQLStmt &gt; &amp;stmt)</div><div class="ttdoc">创建 MySQL 语句结果对象</div><div class="ttdef"><b>Definition</b> <a href="Mysql_8cpp_source.html#l00347">Mysql.cpp:347</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1MySQLStmt_a35def40a5503952c1c76dd7b0d69a7e3_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1MySQLStmt_a35def40a5503952c1c76dd7b0d69a7e3_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="aaf74f5b7c1256db00cf185cb0f952b11" name="aaf74f5b7c1256db00cf185cb0f952b11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf74f5b7c1256db00cf185cb0f952b11">&#9670;&#160;</a></span>m_binds</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;MYSQL_BIND&gt; Gyanis::db::MySQLStmt::m_binds</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>用于绑定参数的结构体 </p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8h_source.html">Mysql.h</a> 第 <a class="el" href="Mysql_8h_source.html#l00926">926</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a1fc72461c9a91fa010c6c19bb234a7cd" name="a1fc72461c9a91fa010c6c19bb234a7cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fc72461c9a91fa010c6c19bb234a7cd">&#9670;&#160;</a></span>m_mysql</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classGyanis_1_1db_1_1MySQL.html">MySQL</a>&gt; Gyanis::db::MySQLStmt::m_mysql</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classGyanis_1_1db_1_1MySQL.html" title="MySQL 数据库操作类，继承自 IDB，并支持 shared_ptr">MySQL</a> 数据库对象的 shared_ptr </p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8h_source.html">Mysql.h</a> 第 <a class="el" href="Mysql_8h_source.html#l00924">924</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac089f56610230aa76a8fa73bfc7c38f8" name="ac089f56610230aa76a8fa73bfc7c38f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac089f56610230aa76a8fa73bfc7c38f8">&#9670;&#160;</a></span>m_stmt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MYSQL_STMT* Gyanis::db::MySQLStmt::m_stmt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classGyanis_1_1db_1_1MySQL.html" title="MySQL 数据库操作类，继承自 IDB，并支持 shared_ptr">MySQL</a> 语句对象指针 </p>
+
+<p class="definition">在文件 <a class="el" href="Mysql_8h_source.html">Mysql.h</a> 第 <a class="el" href="Mysql_8h_source.html#l00925">925</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/db/<a class="el" href="Mysql_8h_source.html">Mysql.h</a></li>
+<li>src/db/<a class="el" href="Mysql_8cpp_source.html">Mysql.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGyanis.html">Gyanis</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1db.html">db</a></li><li class="navelem"><a class="el" href="classGyanis_1_1db_1_1MySQLStmt.html">MySQLStmt</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

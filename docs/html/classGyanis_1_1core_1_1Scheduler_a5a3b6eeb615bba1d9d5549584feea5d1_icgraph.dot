@@ -1,0 +1,33 @@
+digraph "Gyanis::core::Scheduler::schedule"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="Gyanis::core::Scheduler\l::schedule",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="调度一个协程或回调函数"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::core::IOManager\l::idle",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1IOManager.html#ab34f904bb6d8b2b8f83fe77acbe8c03e",tooltip="空闲时的操作"];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Gyanis::core::Scheduler::run",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1Scheduler.html#a1bee8d55f8231b4e6f66e9b1e80c60d4",tooltip="执行调度操作"];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Gyanis::core::Scheduler\l::start",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1Scheduler.html#a90050051920c30d6d83418504fdede64",tooltip="启动调度器"];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="Gyanis::core::IOManager\l::IOManager",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1IOManager.html#aae78b1e8381c7a5796be808001888217",tooltip="构造函数"];
+  Node1 -> Node6 [id="edge5_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="Gyanis::core::WorkerGroup\l::scheduler",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1WorkerGroup.html#aa5f64713142da98d07de36da5666a659",tooltip="调度任务，将传入的回调函数（任务）分配给指定的工作线程"];
+  Node6 -> Node7 [id="edge6_Node000006_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="Gyanis::core::WorkerGroup\l::Create",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1WorkerGroup.html#abeac8c8e67f7494cae2f46443aff9763",tooltip="创建并返回一个 WorkerGroup 的智能指针"];
+  Node1 -> Node8 [id="edge7_Node000001_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="sleep",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Hook_8cpp.html#a69c97039c9ec10a30e5edbdf365e3bbd",tooltip=" "];
+  Node8 -> Node9 [id="edge8_Node000008_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="Gyanis::core::real\l_daemon",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1core.html#a042ef807a18a79bf6d0ad9ddf695e625",tooltip=" "];
+  Node9 -> Node10 [id="edge9_Node000009_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="Gyanis::core::start\l_daemon",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1core.html#ada90e141eab7453720ee551e963effc0",tooltip=" "];
+  Node1 -> Node11 [id="edge10_Node000001_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="Gyanis::core::Scheduler\l::switchTo",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1Scheduler.html#ad40f33045821025a2b46f4db10b28fd5",tooltip="切换到指定线程执行任务"];
+  Node11 -> Node12 [id="edge11_Node000011_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="Gyanis::core::SchedulerSwitcher\l::SchedulerSwitcher",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1SchedulerSwitcher.html#a9d884e1edc5d9c5de736f85531818c66",tooltip="构造函数"];
+  Node11 -> Node13 [id="edge12_Node000011_Node000013",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="Gyanis::core::SchedulerSwitcher\l::~SchedulerSwitcher",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1SchedulerSwitcher.html#a53ad23cdd09d8325f2b44602f2938104",tooltip="析构函数"];
+}

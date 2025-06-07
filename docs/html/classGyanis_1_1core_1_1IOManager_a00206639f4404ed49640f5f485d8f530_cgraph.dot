@@ -1,0 +1,11 @@
+digraph "Gyanis::core::IOManager::GetThis"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="Gyanis::core::IOManager\l::GetThis",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="获取当前 IO 管理器实例"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::core::Scheduler\l::GetThis",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1Scheduler.html#ae66d0482d82d0c1573eda8ec3cb0c973",tooltip="获取当前调度器实例"];
+}

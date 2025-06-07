@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: include/net/rock/RockProtocol.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('RockProtocol_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">RockProtocol.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>该文件定义了 Rock 协议相关的类，包括请求、响应、通知消息类以及消息头和解码器  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="Protocol_8h_source.html">net/protocol/Protocol.h</a>&quot;</code><br />
+<code>#include &quot;google/protobuf/message.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+RockProtocol.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="RockProtocol_8h__incl.png" border="0" usemap="#ainclude_2net_2rock_2RockProtocol_8h" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="RockProtocol_8h__dep__incl.png" border="0" usemap="#ainclude_2net_2rock_2RockProtocol_8hdep" alt=""/></div>
+</div>
+</div>
+<p><a href="RockProtocol_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1rock_1_1RockBody.html">Gyanis::net::rock::RockBody</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classGyanis_1_1net_1_1rock_1_1RockBody.html" title="RockBody 类用于表示 Rock 协议中的消息体部分，提供消息体的设置、序列化和反序列化功能">RockBody</a> 类用于表示 Rock 协议中的消息体部分，提供消息体的设置、序列化和反序列化功能  <a href="classGyanis_1_1net_1_1rock_1_1RockBody.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1rock_1_1RockRequest.html">Gyanis::net::rock::RockRequest</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classGyanis_1_1net_1_1rock_1_1RockRequest.html" title="RockRequest 类表示 Rock 协议中的请求消息，继承自 Message 和 RockBody">RockRequest</a> 类表示 Rock 协议中的请求消息，继承自 <code>Message</code> 和 <code><a class="el" href="classGyanis_1_1net_1_1rock_1_1RockBody.html" title="RockBody 类用于表示 Rock 协议中的消息体部分，提供消息体的设置、序列化和反序列化功能">RockBody</a></code>  <a href="classGyanis_1_1net_1_1rock_1_1RockRequest.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1rock_1_1RockResponse.html">Gyanis::net::rock::RockResponse</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classGyanis_1_1net_1_1rock_1_1RockResponse.html" title="RockResponse 类表示 Rock 协议中的响应消息，继承自 Message 和 RockBody">RockResponse</a> 类表示 Rock 协议中的响应消息，继承自 <code>Message</code> 和 <code><a class="el" href="classGyanis_1_1net_1_1rock_1_1RockBody.html" title="RockBody 类用于表示 Rock 协议中的消息体部分，提供消息体的设置、序列化和反序列化功能">RockBody</a></code>  <a href="classGyanis_1_1net_1_1rock_1_1RockResponse.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1rock_1_1RockNotify.html">Gyanis::net::rock::RockNotify</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classGyanis_1_1net_1_1rock_1_1RockNotify.html" title="RockNotify 类表示 Rock 协议中的通知消息，继承自 Message 和 RockBody">RockNotify</a> 类表示 Rock 协议中的通知消息，继承自 <code>Message</code> 和 <code><a class="el" href="classGyanis_1_1net_1_1rock_1_1RockBody.html" title="RockBody 类用于表示 Rock 协议中的消息体部分，提供消息体的设置、序列化和反序列化功能">RockBody</a></code>  <a href="classGyanis_1_1net_1_1rock_1_1RockNotify.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1net_1_1rock_1_1RockMsgHeader.html">Gyanis::net::rock::RockMsgHeader</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rock 消息头结构，包含消息的基本信息，如魔数、版本、标志和消息长度 <br  />
+  <a href="structGyanis_1_1net_1_1rock_1_1RockMsgHeader.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1rock_1_1RockMessageDecoder.html">Gyanis::net::rock::RockMessageDecoder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classGyanis_1_1net_1_1rock_1_1RockMessageDecoder.html" title="RockMessageDecoder 类用于解析和序列化 Rock 协议的消息">RockMessageDecoder</a> 类用于解析和序列化 Rock 协议的消息  <a href="classGyanis_1_1net_1_1rock_1_1RockMessageDecoder.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespaceGyanis" id="r_namespaceGyanis"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis.html">Gyanis</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceGyanis_1_1net" id="r_namespaceGyanis_1_1net"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1net.html">Gyanis::net</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceGyanis_1_1net_1_1rock" id="r_namespaceGyanis_1_1net_1_1rock"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1net_1_1rock.html">Gyanis::net::rock</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>该文件定义了 Rock 协议相关的类，包括请求、响应、通知消息类以及消息头和解码器 </p>
+<dl class="section date"><dt>日期</dt><dd>2025-04-02 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="RockProtocol_8h_source.html">RockProtocol.h</a> 中定义.</p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_2fa1ed3146d6c2b96c5cfe4341985326.html">net</a></li><li class="navelem"><a class="el" href="dir_3b9b4b0e5595c796e43de1fd67d9a984.html">rock</a></li><li class="navelem"><a class="el" href="RockProtocol_8h.html">RockProtocol.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

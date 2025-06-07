@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: Gyanis::net::http::WSFrameHead结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structGyanis_1_1net_1_1http_1_1WSFrameHead.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="structGyanis_1_1net_1_1http_1_1WSFrameHead-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Gyanis::net::http::WSFrameHead结构体 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>WebSocket 数据帧头，定义了 WebSocket 帧的基本结构和操作码  
+ <a href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="WebSocketSession_8h_source.html">WebSocketSession.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a86bceaec2ebbb9dac66e27181faac149" id="r_a86bceaec2ebbb9dac66e27181faac149"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149">OPCODE</a> { <br />
+&#160;&#160;<a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149ac6b5c654b6f4e54ecec855fdb52ded11">CONTINUE</a> = 0
+, <a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149ae391e0ba403d73c2ad5b583f562566ac">TEXT_FRAME</a> = 1
+, <a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149af698a5967d35b35cb26d8c902c441dfc">BIN_FRAME</a> = 2
+, <a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149a312ce5b35841f606cc25c0d4b86e79c5">CLOSE</a> = 8
+, <br />
+&#160;&#160;<a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149a810ee09a49c4fb770a99341b677486c9">PING</a> = 0x9
+, <a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149a6f9189f266e19e56813e4d96b02ebcb5">PONG</a> = 0xA
+<br />
+ }</td></tr>
+<tr class="separator:a86bceaec2ebbb9dac66e27181faac149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ad48a7efbfa86a6f4827d70b0d9f1e0db" id="r_ad48a7efbfa86a6f4827d70b0d9f1e0db"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#ad48a7efbfa86a6f4827d70b0d9f1e0db">toString</a> () const</td></tr>
+<tr class="memdesc:ad48a7efbfa86a6f4827d70b0d9f1e0db"><td class="mdescLeft">&#160;</td><td class="mdescRight">将 <a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html" title="WebSocket 数据帧头，定义了 WebSocket 帧的基本结构和操作码">WSFrameHead</a> 转换为字符串，便于调试  <br /></td></tr>
+<tr class="separator:ad48a7efbfa86a6f4827d70b0d9f1e0db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:aaa479474da0eff554dcddde8e3b09ed6" id="r_aaa479474da0eff554dcddde8e3b09ed6"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#aaa479474da0eff554dcddde8e3b09ed6">opcode</a>: 4</td></tr>
+<tr class="memdesc:aaa479474da0eff554dcddde8e3b09ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">操作码（4 位）  <br /></td></tr>
+<tr class="separator:aaa479474da0eff554dcddde8e3b09ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a346a59fcb81c3dda5625a6ea66e071b4" id="r_a346a59fcb81c3dda5625a6ea66e071b4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a346a59fcb81c3dda5625a6ea66e071b4">rsv3</a>: 1</td></tr>
+<tr class="memdesc:a346a59fcb81c3dda5625a6ea66e071b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">保留位 3（用于扩展）  <br /></td></tr>
+<tr class="separator:a346a59fcb81c3dda5625a6ea66e071b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba22b5838d619fdf99760b89ff6ef19c" id="r_aba22b5838d619fdf99760b89ff6ef19c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#aba22b5838d619fdf99760b89ff6ef19c">rsv2</a>: 1</td></tr>
+<tr class="memdesc:aba22b5838d619fdf99760b89ff6ef19c"><td class="mdescLeft">&#160;</td><td class="mdescRight">保留位 2（用于扩展）  <br /></td></tr>
+<tr class="separator:aba22b5838d619fdf99760b89ff6ef19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad31cd61d56b91f8d3b26f8f279818c83" id="r_ad31cd61d56b91f8d3b26f8f279818c83"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#ad31cd61d56b91f8d3b26f8f279818c83">rsv1</a>: 1</td></tr>
+<tr class="memdesc:ad31cd61d56b91f8d3b26f8f279818c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">保留位 1（用于扩展）  <br /></td></tr>
+<tr class="separator:ad31cd61d56b91f8d3b26f8f279818c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9d65eac4856e21b5efa62affc3096fc" id="r_ae9d65eac4856e21b5efa62affc3096fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#ae9d65eac4856e21b5efa62affc3096fc">fin</a>: 1</td></tr>
+<tr class="memdesc:ae9d65eac4856e21b5efa62affc3096fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否为最后一帧（1 位）  <br /></td></tr>
+<tr class="separator:ae9d65eac4856e21b5efa62affc3096fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a70d45baa962eddc16cd25eabf414a7" id="r_a1a70d45baa962eddc16cd25eabf414a7"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a1a70d45baa962eddc16cd25eabf414a7">payload</a>: 7</td></tr>
+<tr class="memdesc:a1a70d45baa962eddc16cd25eabf414a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">负载数据长度（7 位）  <br /></td></tr>
+<tr class="separator:a1a70d45baa962eddc16cd25eabf414a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90f1e287766927dec68411b8c7d4812c" id="r_a90f1e287766927dec68411b8c7d4812c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a90f1e287766927dec68411b8c7d4812c">mask</a>: 1</td></tr>
+<tr class="memdesc:a90f1e287766927dec68411b8c7d4812c"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否应用掩码（1 位）  <br /></td></tr>
+<tr class="separator:a90f1e287766927dec68411b8c7d4812c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>WebSocket 数据帧头，定义了 WebSocket 帧的基本结构和操作码 </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8h_source.html">WebSocketSession.h</a> 第 <a class="el" href="WebSocketSession_8h_source.html#l00022">22</a> 行定义.</p>
+</div><h2 class="groupheader">成员枚举类型说明</h2>
+<a id="a86bceaec2ebbb9dac66e27181faac149" name="a86bceaec2ebbb9dac66e27181faac149"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86bceaec2ebbb9dac66e27181faac149">&#9670;&#160;</a></span>OPCODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149">Gyanis::net::http::WSFrameHead::OPCODE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a86bceaec2ebbb9dac66e27181faac149ac6b5c654b6f4e54ecec855fdb52ded11" name="a86bceaec2ebbb9dac66e27181faac149ac6b5c654b6f4e54ecec855fdb52ded11"></a>CONTINUE&#160;</td><td class="fielddoc"><p>数据分片帧 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a86bceaec2ebbb9dac66e27181faac149ae391e0ba403d73c2ad5b583f562566ac" name="a86bceaec2ebbb9dac66e27181faac149ae391e0ba403d73c2ad5b583f562566ac"></a>TEXT_FRAME&#160;</td><td class="fielddoc"><p>文本帧 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a86bceaec2ebbb9dac66e27181faac149af698a5967d35b35cb26d8c902c441dfc" name="a86bceaec2ebbb9dac66e27181faac149af698a5967d35b35cb26d8c902c441dfc"></a>BIN_FRAME&#160;</td><td class="fielddoc"><p>二进制帧 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a86bceaec2ebbb9dac66e27181faac149a312ce5b35841f606cc25c0d4b86e79c5" name="a86bceaec2ebbb9dac66e27181faac149a312ce5b35841f606cc25c0d4b86e79c5"></a>CLOSE&#160;</td><td class="fielddoc"><p>断开连接帧 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a86bceaec2ebbb9dac66e27181faac149a810ee09a49c4fb770a99341b677486c9" name="a86bceaec2ebbb9dac66e27181faac149a810ee09a49c4fb770a99341b677486c9"></a>PING&#160;</td><td class="fielddoc"><p>PING 帧 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a86bceaec2ebbb9dac66e27181faac149a6f9189f266e19e56813e4d96b02ebcb5" name="a86bceaec2ebbb9dac66e27181faac149a6f9189f266e19e56813e4d96b02ebcb5"></a>PONG&#160;</td><td class="fielddoc"><p>PONG 帧 </p>
+</td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8h_source.html">WebSocketSession.h</a> 第 <a class="el" href="WebSocketSession_8h_source.html#l00024">24</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>        {</div>
+<div class="line"><span class="lineno">   26</span>            <a class="code hl_enumvalue" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149ac6b5c654b6f4e54ecec855fdb52ded11">CONTINUE</a> = 0, </div>
+<div class="line"><span class="lineno">   27</span>            <a class="code hl_enumvalue" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149ae391e0ba403d73c2ad5b583f562566ac">TEXT_FRAME</a> = 1, </div>
+<div class="line"><span class="lineno">   28</span>            <a class="code hl_enumvalue" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149af698a5967d35b35cb26d8c902c441dfc">BIN_FRAME</a> = 2, </div>
+<div class="line"><span class="lineno">   29</span>            <a class="code hl_enumvalue" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149a312ce5b35841f606cc25c0d4b86e79c5">CLOSE</a> = 8, </div>
+<div class="line"><span class="lineno">   30</span>            <a class="code hl_enumvalue" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149a810ee09a49c4fb770a99341b677486c9">PING</a> = 0x9, </div>
+<div class="line"><span class="lineno">   31</span>            <a class="code hl_enumvalue" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149a6f9189f266e19e56813e4d96b02ebcb5">PONG</a> = 0xA </div>
+<div class="line"><span class="lineno">   32</span>        };</div>
+<div class="ttc" id="astructGyanis_1_1net_1_1http_1_1WSFrameHead_html_a86bceaec2ebbb9dac66e27181faac149a312ce5b35841f606cc25c0d4b86e79c5"><div class="ttname"><a href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149a312ce5b35841f606cc25c0d4b86e79c5">Gyanis::net::http::WSFrameHead::CLOSE</a></div><div class="ttdeci">@ CLOSE</div><div class="ttdoc">断开连接帧</div><div class="ttdef"><b>Definition</b> <a href="WebSocketSession_8h_source.html#l00029">WebSocketSession.h:29</a></div></div>
+<div class="ttc" id="astructGyanis_1_1net_1_1http_1_1WSFrameHead_html_a86bceaec2ebbb9dac66e27181faac149a6f9189f266e19e56813e4d96b02ebcb5"><div class="ttname"><a href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149a6f9189f266e19e56813e4d96b02ebcb5">Gyanis::net::http::WSFrameHead::PONG</a></div><div class="ttdeci">@ PONG</div><div class="ttdoc">PONG 帧</div><div class="ttdef"><b>Definition</b> <a href="WebSocketSession_8h_source.html#l00032">WebSocketSession.h:31</a></div></div>
+<div class="ttc" id="astructGyanis_1_1net_1_1http_1_1WSFrameHead_html_a86bceaec2ebbb9dac66e27181faac149a810ee09a49c4fb770a99341b677486c9"><div class="ttname"><a href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149a810ee09a49c4fb770a99341b677486c9">Gyanis::net::http::WSFrameHead::PING</a></div><div class="ttdeci">@ PING</div><div class="ttdoc">PING 帧</div><div class="ttdef"><b>Definition</b> <a href="WebSocketSession_8h_source.html#l00030">WebSocketSession.h:30</a></div></div>
+<div class="ttc" id="astructGyanis_1_1net_1_1http_1_1WSFrameHead_html_a86bceaec2ebbb9dac66e27181faac149ac6b5c654b6f4e54ecec855fdb52ded11"><div class="ttname"><a href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149ac6b5c654b6f4e54ecec855fdb52ded11">Gyanis::net::http::WSFrameHead::CONTINUE</a></div><div class="ttdeci">@ CONTINUE</div><div class="ttdoc">数据分片帧</div><div class="ttdef"><b>Definition</b> <a href="WebSocketSession_8h_source.html#l00026">WebSocketSession.h:26</a></div></div>
+<div class="ttc" id="astructGyanis_1_1net_1_1http_1_1WSFrameHead_html_a86bceaec2ebbb9dac66e27181faac149ae391e0ba403d73c2ad5b583f562566ac"><div class="ttname"><a href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149ae391e0ba403d73c2ad5b583f562566ac">Gyanis::net::http::WSFrameHead::TEXT_FRAME</a></div><div class="ttdeci">@ TEXT_FRAME</div><div class="ttdoc">文本帧</div><div class="ttdef"><b>Definition</b> <a href="WebSocketSession_8h_source.html#l00027">WebSocketSession.h:27</a></div></div>
+<div class="ttc" id="astructGyanis_1_1net_1_1http_1_1WSFrameHead_html_a86bceaec2ebbb9dac66e27181faac149af698a5967d35b35cb26d8c902c441dfc"><div class="ttname"><a href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149af698a5967d35b35cb26d8c902c441dfc">Gyanis::net::http::WSFrameHead::BIN_FRAME</a></div><div class="ttdeci">@ BIN_FRAME</div><div class="ttdoc">二进制帧</div><div class="ttdef"><b>Definition</b> <a href="WebSocketSession_8h_source.html#l00028">WebSocketSession.h:28</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ad48a7efbfa86a6f4827d70b0d9f1e0db" name="ad48a7efbfa86a6f4827d70b0d9f1e0db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad48a7efbfa86a6f4827d70b0d9f1e0db">&#9670;&#160;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::net::http::WSFrameHead::toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将 <a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html" title="WebSocket 数据帧头，定义了 WebSocket 帧的基本结构和操作码">WSFrameHead</a> 转换为字符串，便于调试 </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8cpp_source.html">WebSocketSession.cpp</a> 第 <a class="el" href="WebSocketSession_8cpp_source.html#l00013">13</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>    {</div>
+<div class="line"><span class="lineno">   15</span>        std::stringstream ss;</div>
+<div class="line"><span class="lineno">   16</span>        ss &lt;&lt; <span class="stringliteral">&quot;[WebSocket Frame Header Information: &quot;</span></div>
+<div class="line"><span class="lineno">   17</span>            &lt;&lt; <span class="stringliteral">&quot;FIN: &quot;</span> &lt;&lt; <a class="code hl_variable" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#ae9d65eac4856e21b5efa62affc3096fc">fin</a></div>
+<div class="line"><span class="lineno">   18</span>            &lt;&lt; <span class="stringliteral">&quot; | RSV1: &quot;</span> &lt;&lt; <a class="code hl_variable" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#ad31cd61d56b91f8d3b26f8f279818c83">rsv1</a></div>
+<div class="line"><span class="lineno">   19</span>            &lt;&lt; <span class="stringliteral">&quot; | RSV2: &quot;</span> &lt;&lt; <a class="code hl_variable" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#aba22b5838d619fdf99760b89ff6ef19c">rsv2</a></div>
+<div class="line"><span class="lineno">   20</span>            &lt;&lt; <span class="stringliteral">&quot; | RSV3: &quot;</span> &lt;&lt; <a class="code hl_variable" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a346a59fcb81c3dda5625a6ea66e071b4">rsv3</a></div>
+<div class="line"><span class="lineno">   21</span>            &lt;&lt; <span class="stringliteral">&quot; | Opcode: &quot;</span> &lt;&lt; <a class="code hl_variable" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#aaa479474da0eff554dcddde8e3b09ed6">opcode</a></div>
+<div class="line"><span class="lineno">   22</span>            &lt;&lt; <span class="stringliteral">&quot; | Mask: &quot;</span> &lt;&lt; <a class="code hl_variable" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a90f1e287766927dec68411b8c7d4812c">mask</a></div>
+<div class="line"><span class="lineno">   23</span>            &lt;&lt; <span class="stringliteral">&quot; | Payload length: &quot;</span> &lt;&lt; <a class="code hl_variable" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a1a70d45baa962eddc16cd25eabf414a7">payload</a></div>
+<div class="line"><span class="lineno">   24</span>            &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><span class="lineno">   25</span>        <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+<div class="ttc" id="astructGyanis_1_1net_1_1http_1_1WSFrameHead_html_a1a70d45baa962eddc16cd25eabf414a7"><div class="ttname"><a href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a1a70d45baa962eddc16cd25eabf414a7">Gyanis::net::http::WSFrameHead::payload</a></div><div class="ttdeci">uint32_t payload</div><div class="ttdoc">负载数据长度（7 位）</div><div class="ttdef"><b>Definition</b> <a href="WebSocketSession_8h_source.html#l00039">WebSocketSession.h:39</a></div></div>
+<div class="ttc" id="astructGyanis_1_1net_1_1http_1_1WSFrameHead_html_a346a59fcb81c3dda5625a6ea66e071b4"><div class="ttname"><a href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a346a59fcb81c3dda5625a6ea66e071b4">Gyanis::net::http::WSFrameHead::rsv3</a></div><div class="ttdeci">bool rsv3</div><div class="ttdoc">保留位 3（用于扩展）</div><div class="ttdef"><b>Definition</b> <a href="WebSocketSession_8h_source.html#l00035">WebSocketSession.h:35</a></div></div>
+<div class="ttc" id="astructGyanis_1_1net_1_1http_1_1WSFrameHead_html_a90f1e287766927dec68411b8c7d4812c"><div class="ttname"><a href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a90f1e287766927dec68411b8c7d4812c">Gyanis::net::http::WSFrameHead::mask</a></div><div class="ttdeci">bool mask</div><div class="ttdoc">是否应用掩码（1 位）</div><div class="ttdef"><b>Definition</b> <a href="WebSocketSession_8h_source.html#l00040">WebSocketSession.h:40</a></div></div>
+<div class="ttc" id="astructGyanis_1_1net_1_1http_1_1WSFrameHead_html_aaa479474da0eff554dcddde8e3b09ed6"><div class="ttname"><a href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#aaa479474da0eff554dcddde8e3b09ed6">Gyanis::net::http::WSFrameHead::opcode</a></div><div class="ttdeci">uint32_t opcode</div><div class="ttdoc">操作码（4 位）</div><div class="ttdef"><b>Definition</b> <a href="WebSocketSession_8h_source.html#l00034">WebSocketSession.h:34</a></div></div>
+<div class="ttc" id="astructGyanis_1_1net_1_1http_1_1WSFrameHead_html_aba22b5838d619fdf99760b89ff6ef19c"><div class="ttname"><a href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#aba22b5838d619fdf99760b89ff6ef19c">Gyanis::net::http::WSFrameHead::rsv2</a></div><div class="ttdeci">bool rsv2</div><div class="ttdoc">保留位 2（用于扩展）</div><div class="ttdef"><b>Definition</b> <a href="WebSocketSession_8h_source.html#l00036">WebSocketSession.h:36</a></div></div>
+<div class="ttc" id="astructGyanis_1_1net_1_1http_1_1WSFrameHead_html_ad31cd61d56b91f8d3b26f8f279818c83"><div class="ttname"><a href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#ad31cd61d56b91f8d3b26f8f279818c83">Gyanis::net::http::WSFrameHead::rsv1</a></div><div class="ttdeci">bool rsv1</div><div class="ttdoc">保留位 1（用于扩展）</div><div class="ttdef"><b>Definition</b> <a href="WebSocketSession_8h_source.html#l00037">WebSocketSession.h:37</a></div></div>
+<div class="ttc" id="astructGyanis_1_1net_1_1http_1_1WSFrameHead_html_ae9d65eac4856e21b5efa62affc3096fc"><div class="ttname"><a href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#ae9d65eac4856e21b5efa62affc3096fc">Gyanis::net::http::WSFrameHead::fin</a></div><div class="ttdeci">bool fin</div><div class="ttdoc">是否为最后一帧（1 位）</div><div class="ttdef"><b>Definition</b> <a href="WebSocketSession_8h_source.html#l00038">WebSocketSession.h:38</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="structGyanis_1_1net_1_1http_1_1WSFrameHead_ad48a7efbfa86a6f4827d70b0d9f1e0db_icgraph.png" border="0" usemap="#astructGyanis_1_1net_1_1http_1_1WSFrameHead_ad48a7efbfa86a6f4827d70b0d9f1e0db_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ae9d65eac4856e21b5efa62affc3096fc" name="ae9d65eac4856e21b5efa62affc3096fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9d65eac4856e21b5efa62affc3096fc">&#9670;&#160;</a></span>fin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::net::http::WSFrameHead::fin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>是否为最后一帧（1 位） </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8h_source.html">WebSocketSession.h</a> 第 <a class="el" href="WebSocketSession_8h_source.html#l00038">38</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a90f1e287766927dec68411b8c7d4812c" name="a90f1e287766927dec68411b8c7d4812c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90f1e287766927dec68411b8c7d4812c">&#9670;&#160;</a></span>mask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::net::http::WSFrameHead::mask</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>是否应用掩码（1 位） </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8h_source.html">WebSocketSession.h</a> 第 <a class="el" href="WebSocketSession_8h_source.html#l00040">40</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aaa479474da0eff554dcddde8e3b09ed6" name="aaa479474da0eff554dcddde8e3b09ed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa479474da0eff554dcddde8e3b09ed6">&#9670;&#160;</a></span>opcode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Gyanis::net::http::WSFrameHead::opcode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>操作码（4 位） </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8h_source.html">WebSocketSession.h</a> 第 <a class="el" href="WebSocketSession_8h_source.html#l00034">34</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a1a70d45baa962eddc16cd25eabf414a7" name="a1a70d45baa962eddc16cd25eabf414a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a70d45baa962eddc16cd25eabf414a7">&#9670;&#160;</a></span>payload</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Gyanis::net::http::WSFrameHead::payload</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>负载数据长度（7 位） </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8h_source.html">WebSocketSession.h</a> 第 <a class="el" href="WebSocketSession_8h_source.html#l00039">39</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad31cd61d56b91f8d3b26f8f279818c83" name="ad31cd61d56b91f8d3b26f8f279818c83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad31cd61d56b91f8d3b26f8f279818c83">&#9670;&#160;</a></span>rsv1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::net::http::WSFrameHead::rsv1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>保留位 1（用于扩展） </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8h_source.html">WebSocketSession.h</a> 第 <a class="el" href="WebSocketSession_8h_source.html#l00037">37</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aba22b5838d619fdf99760b89ff6ef19c" name="aba22b5838d619fdf99760b89ff6ef19c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba22b5838d619fdf99760b89ff6ef19c">&#9670;&#160;</a></span>rsv2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::net::http::WSFrameHead::rsv2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>保留位 2（用于扩展） </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8h_source.html">WebSocketSession.h</a> 第 <a class="el" href="WebSocketSession_8h_source.html#l00036">36</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a346a59fcb81c3dda5625a6ea66e071b4" name="a346a59fcb81c3dda5625a6ea66e071b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a346a59fcb81c3dda5625a6ea66e071b4">&#9670;&#160;</a></span>rsv3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::net::http::WSFrameHead::rsv3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>保留位 3（用于扩展） </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8h_source.html">WebSocketSession.h</a> 第 <a class="el" href="WebSocketSession_8h_source.html#l00035">35</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>include/net/http/<a class="el" href="WebSocketSession_8h_source.html">WebSocketSession.h</a></li>
+<li>src/net/http/<a class="el" href="WebSocketSession_8cpp_source.html">WebSocketSession.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGyanis.html">Gyanis</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1net.html">net</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1net_1_1http.html">http</a></li><li class="navelem"><a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html">WSFrameHead</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

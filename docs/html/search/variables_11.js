@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['read_0',['read',['../structGyanis_1_1core_1_1IOManager_1_1FdContext.html#ae54eb4f905b922a46c1d1813c11644ea',1,'Gyanis::core::IOManager::FdContext']]],
+  ['read_5ff_1',['read_f',['../Hook_8h.html#acf96a8abe9b6bea12e487302aa85b535',1,'Hook.h']]],
+  ['readv_5ff_2',['readv_f',['../Hook_8h.html#a112f4396291ee49da44a1e031dd51603',1,'Hook.h']]],
+  ['reason_5fphrase_3',['reason_phrase',['../structhttpclient__parser.html#ace88a032ee54e559c09034951be47f8e',1,'httpclient_parser']]],
+  ['recurring_4',['recurring',['../structGyanis_1_1base_1_1Timer.html#a7c8fd83008cf79e640c128628e3b2083',1,'Gyanis::base::Timer']]],
+  ['recv_5ff_5',['recv_f',['../Hook_8h.html#a288cb0fdb8677d2452fce75a7e2f2364',1,'Hook.h']]],
+  ['recvfrom_5ff_6',['recvfrom_f',['../Hook_8h.html#a567a076666812070b9dec5ed1a6f4989',1,'Hook.h']]],
+  ['recvmsg_5ff_7',['recvmsg_f',['../Hook_8h.html#a9a40ce88798df665aed14ed03efc95bc',1,'Hook.h']]],
+  ['request_5fmethod_8',['request_method',['../structhttp__parser.html#ad151ead9249a3761049ebd71de2a9a22',1,'http_parser']]],
+  ['request_5fpath_9',['request_path',['../structhttp__parser.html#a30164d72a224a3aec419bc8dd3bc4610',1,'http_parser']]],
+  ['request_5furi_10',['request_uri',['../structhttp__parser.html#a6d5771f4b22ca0b13c1e2358e9d9f943',1,'http_parser']]],
+  ['response_11',['response',['../structGyanis_1_1net_1_1http_1_1HttpResult.html#ae74fb8dd743ec4db96d0a52627f0267d',1,'Gyanis::net::http::HttpResult']]],
+  ['restart_5fcount_12',['restart_count',['../structGyanis_1_1core_1_1ProcessInfo.html#a0468ac16af5c60eccce9514bc85f24f0',1,'Gyanis::core::ProcessInfo']]],
+  ['result_13',['result',['../structGyanis_1_1net_1_1http_1_1HttpResult.html#aec0d4bd134faed35b368b86025ce3ee2',1,'Gyanis::net::http::HttpResult']]],
+  ['rsv1_14',['rsv1',['../structGyanis_1_1net_1_1http_1_1WSFrameHead.html#ad31cd61d56b91f8d3b26f8f279818c83',1,'Gyanis::net::http::WSFrameHead']]],
+  ['rsv2_15',['rsv2',['../structGyanis_1_1net_1_1http_1_1WSFrameHead.html#aba22b5838d619fdf99760b89ff6ef19c',1,'Gyanis::net::http::WSFrameHead']]],
+  ['rsv3_16',['rsv3',['../structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a346a59fcb81c3dda5625a6ea66e071b4',1,'Gyanis::net::http::WSFrameHead']]]
+];

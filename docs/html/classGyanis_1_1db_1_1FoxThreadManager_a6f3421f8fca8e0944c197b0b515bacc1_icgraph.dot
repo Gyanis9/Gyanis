@@ -1,0 +1,17 @@
+digraph "Gyanis::db::FoxThreadManager::get"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="Gyanis::db::FoxThreadManager::get",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="获取指定名称的线程实例"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::db::FoxThreadManager\l::batchDispatch",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1db_1_1FoxThreadManager.html#a00285284238f6abc8cfe94c440738600",tooltip="批量派发回调任务到指定名称的线程"];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Gyanis::db::FoxThreadManager\l::broadcast",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1db_1_1FoxThreadManager.html#a503a0c8c71058bd0f7a3a48cce39c6d3",tooltip="向指定名称的线程广播回调任务"];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Gyanis::db::FoxThreadManager\l::dispatch",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1db_1_1FoxThreadManager.html#ace1f7e67ead89050ec5bdf11846c5fb8",tooltip="派发回调任务到指定名称的线程"];
+  Node1 -> Node5 [id="edge4_Node000001_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="Gyanis::db::FoxThreadManager\l::dispatch",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1db_1_1FoxThreadManager.html#a2b28b8f7c779bc15ead53a9377a161e9",tooltip="根据任务 ID 派发回调任务到指定名称的线程"];
+}

@@ -1,0 +1,13 @@
+digraph "Gyanis::net::http::HttpResponse::dump"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="Gyanis::net::http::\lHttpResponse::dump",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="将 HTTP 响应的详细信息输出到流中"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::net::http::\loperator\<\<",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1net_1_1http.html#afebf6c8665ea4f88fa6ae1c87053fe5e",tooltip="将 HTTP 响应对象输出到流"];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Gyanis::net::http::\lHttpResponse::toString",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1HttpResponse.html#adf81e8b6a1606247738bc46a4ec08079",tooltip="将 HTTP 响应转换为字符串"];
+}

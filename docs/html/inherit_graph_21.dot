@@ -1,0 +1,9 @@
+digraph "类继承关系图"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="Gyanis::base::LexicalCast\l\< std::vector\< T \>, std\l::string \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1base_1_1LexicalCast_3_01std_1_1vector_3_01T_01_4_00_01std_1_1string_01_4.html",tooltip="类型转换模板类片特化 (std::vector<T> 转换成 YAML String)"];
+}

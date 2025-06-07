@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: src/net/http/HttpServer.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('HttpServer_8cpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">HttpServer.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="HttpServer_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="HttpServer_8h.html">net/http/HttpServer.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="Log_8h.html">base/Log.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="ConfigServlet_8h.html">net/http/servlets/ConfigServlet.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="StatusServlet_8h.html">net/http/servlets/StatusServlet.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceGyanis_1_1net_1_1http.html">Gyanis::net::http</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">    8</a></span>    <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a> = <a class="code hl_define" href="Log_8h.html#a30907c2011b31fbe54269ddc6052ebe3">LOG_NAME</a>(<span class="stringliteral">&quot;system&quot;</span>);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1HttpServer.html#a797b5ad9c3752d7610368ac2f778b158">   10</a></span>    <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpServer.html#a797b5ad9c3752d7610368ac2f778b158">HttpServer::HttpServer</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> keepAlive, <a class="code hl_class" href="classGyanis_1_1core_1_1IOManager.html">core::IOManager</a>* worker, <a class="code hl_class" href="classGyanis_1_1core_1_1IOManager.html">core::IOManager</a>* io_worker,</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>                           <a class="code hl_class" href="classGyanis_1_1core_1_1IOManager.html">core::IOManager</a>* accept_worker): TcpServer(worker, io_worker, accept_worker),</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                                                            m_isKeepAlive(keepAlive),</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                                                            m_dispatch(std::make_shared&lt;<a class="code hl_class" href="classGyanis_1_1net_1_1http_1_1ServletDispatch.html">ServletDispatch</a>&gt;())</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a3d5d5901fab2ccf82bc906f86085abff">m_type</a> = <span class="stringliteral">&quot;http&quot;</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpServer.html#a6b253c1b2b0ab3b858c0dd15838d4510">m_dispatch</a>-&gt;addServlet(<span class="stringliteral">&quot;/_/status&quot;</span>, std::make_shared&lt;StatusServlet&gt;());</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpServer.html#a6b253c1b2b0ab3b858c0dd15838d4510">m_dispatch</a>-&gt;addServlet(<span class="stringliteral">&quot;/_/config&quot;</span>, std::make_shared&lt;ConfigServlet&gt;());</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
+</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1HttpServer.html#a3e9958763cbc36dcbd331c9bfe439d59">   20</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpServer.html#a3e9958763cbc36dcbd331c9bfe439d59">HttpServer::setName</a>(<span class="keyword">const</span> std::string&amp; value)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        TcpServer::setName(value);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpServer.html#a6b253c1b2b0ab3b858c0dd15838d4510">m_dispatch</a>-&gt;setDefaultServlet(std::make_shared&lt;NotFoundServlet&gt;(value));</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1HttpServer.html#abb3939914aa3d7900112cbab632587c6">   26</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpServer.html#abb3939914aa3d7900112cbab632587c6">HttpServer::handleClient</a>(<span class="keyword">const</span> std::shared_ptr&lt;Socket&gt;&amp; client)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_define" href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            &lt;&lt; <span class="stringliteral">&quot;HttpServer::handleClient - Handling client connection. &quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            &lt;&lt; <span class="stringliteral">&quot;Client details: &quot;</span> &lt;&lt; client-&gt;toString();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">const</span> <span class="keyword">auto</span> session = std::make_shared&lt;HttpSession&gt;(client);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">do</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keyword">const</span> <span class="keyword">auto</span> request = session-&gt;recvRequest();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">if</span> (!request)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                <a class="code hl_define" href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                    &lt;&lt; <span class="stringliteral">&quot;Failed to receive HTTP request. &quot;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                    &lt;&lt; <span class="stringliteral">&quot;Error code: &quot;</span> &lt;&lt; errno</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                    &lt;&lt; <span class="stringliteral">&quot; | Error description: &quot;</span> &lt;&lt; strerror(errno)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                    &lt;&lt; <span class="stringliteral">&quot; | Keep-Alive status: &quot;</span> &lt;&lt; <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpServer.html#a2d1499fd31f8e9c778838471175b924c">m_isKeepAlive</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keyword">auto</span> response = std::make_shared&lt;HttpResponse&gt;(request-&gt;getVersion(), request-&gt;isClose() || !<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpServer.html#a2d1499fd31f8e9c778838471175b924c">m_isKeepAlive</a>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            response-&gt;setHeader(<span class="stringliteral">&quot;Server&quot;</span>, <span class="stringliteral">&quot;Gyanis&quot;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpServer.html#a6b253c1b2b0ab3b858c0dd15838d4510">m_dispatch</a>-&gt;handle(request, response, session);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            session-&gt;sendResponse(response);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpServer.html#a2d1499fd31f8e9c778838471175b924c">m_isKeepAlive</a> || request-&gt;isClose())</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        session-&gt;close();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+<div class="ttc" id="aConfigServlet_8h_html"><div class="ttname"><a href="ConfigServlet_8h.html">ConfigServlet.h</a></div><div class="ttdoc">配置管理 Servlet</div></div>
+<div class="ttc" id="aHttpServer_8h_html"><div class="ttname"><a href="HttpServer_8h.html">HttpServer.h</a></div><div class="ttdoc">HTTP 服务器封装</div></div>
+<div class="ttc" id="aLog_8h_html"><div class="ttname"><a href="Log_8h.html">Log.h</a></div><div class="ttdoc">日志模块封装</div></div>
+<div class="ttc" id="aLog_8h_html_a30907c2011b31fbe54269ddc6052ebe3"><div class="ttname"><a href="Log_8h.html#a30907c2011b31fbe54269ddc6052ebe3">LOG_NAME</a></div><div class="ttdeci">#define LOG_NAME(name)</div><div class="ttdoc">获取指定名称的日志器</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00094">Log.h:94</a></div></div>
+<div class="ttc" id="aLog_8h_html_aa689601a9413bd4f1c41974694746f4e"><div class="ttname"><a href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a></div><div class="ttdeci">#define LOG_DEBUG(logger)</div><div class="ttdoc">输出 debug 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00031">Log.h:31</a></div></div>
+<div class="ttc" id="aStatusServlet_8h_html"><div class="ttname"><a href="StatusServlet_8h.html">StatusServlet.h</a></div><div class="ttdoc">该文件定义了 StatusServlet 类，继承自 Servlet 类，用于处理 HTTP 请求中的状态相关操作</div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1IOManager_html"><div class="ttname"><a href="classGyanis_1_1core_1_1IOManager.html">Gyanis::core::IOManager</a></div><div class="ttdoc">IO事件类型枚举</div><div class="ttdef"><b>Definition</b> <a href="IOManager_8h_source.html#l00016">IOManager.h:17</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpServer_html_a2d1499fd31f8e9c778838471175b924c"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpServer.html#a2d1499fd31f8e9c778838471175b924c">Gyanis::net::http::HttpServer::m_isKeepAlive</a></div><div class="ttdeci">bool m_isKeepAlive</div><div class="ttdoc">是否启用 HTTP 长连接（默认为 false）</div><div class="ttdef"><b>Definition</b> <a href="HttpServer_8h_source.html#l00053">HttpServer.h:53</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpServer_html_a3e9958763cbc36dcbd331c9bfe439d59"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpServer.html#a3e9958763cbc36dcbd331c9bfe439d59">Gyanis::net::http::HttpServer::setName</a></div><div class="ttdeci">void setName(const std::string &amp;value) override</div><div class="ttdoc">设置服务器名称</div><div class="ttdef"><b>Definition</b> <a href="HttpServer_8cpp_source.html#l00020">HttpServer.cpp:20</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpServer_html_a6b253c1b2b0ab3b858c0dd15838d4510"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpServer.html#a6b253c1b2b0ab3b858c0dd15838d4510">Gyanis::net::http::HttpServer::m_dispatch</a></div><div class="ttdeci">std::shared_ptr&lt; ServletDispatch &gt; m_dispatch</div><div class="ttdoc">存储 HTTP 路由调度器，用于请求路由</div><div class="ttdef"><b>Definition</b> <a href="HttpServer_8h_source.html#l00054">HttpServer.h:54</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpServer_html_a797b5ad9c3752d7610368ac2f778b158"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpServer.html#a797b5ad9c3752d7610368ac2f778b158">Gyanis::net::http::HttpServer::HttpServer</a></div><div class="ttdeci">HttpServer(bool keepAlive=false, core::IOManager *worker=core::IOManager::GetThis(), core::IOManager *io_worker=core::IOManager::GetThis(), core::IOManager *accept_worker=core::IOManager::GetThis())</div><div class="ttdoc">构造 HTTP 服务器对象</div><div class="ttdef"><b>Definition</b> <a href="HttpServer_8cpp_source.html#l00010">HttpServer.cpp:10</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpServer_html_abb3939914aa3d7900112cbab632587c6"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpServer.html#abb3939914aa3d7900112cbab632587c6">Gyanis::net::http::HttpServer::handleClient</a></div><div class="ttdeci">void handleClient(const std::shared_ptr&lt; Socket &gt; &amp;client) override</div><div class="ttdoc">处理客户端连接</div><div class="ttdef"><b>Definition</b> <a href="HttpServer_8cpp_source.html#l00026">HttpServer.cpp:26</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1ServletDispatch_html"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1ServletDispatch.html">Gyanis::net::http::ServletDispatch</a></div><div class="ttdoc">Servlet 调度器</div><div class="ttdef"><b>Definition</b> <a href="Servlet_8h_source.html#l00159">Servlet.h:160</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1web_1_1TcpServer_html_a3d5d5901fab2ccf82bc906f86085abff"><div class="ttname"><a href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a3d5d5901fab2ccf82bc906f86085abff">Gyanis::net::web::TcpServer::m_type</a></div><div class="ttdeci">std::string m_type</div><div class="ttdoc">服务器类型（默认为 TCP）</div><div class="ttdef"><b>Definition</b> <a href="TcpServer_8h_source.html#l00137">TcpServer.h:137</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html">Gyanis::net::http</a></div><div class="ttdoc">示例 URI：foo://user@baidu.com:8042/over/there?name=ferret::nose 解析后的组成部分： _/ ______________/_________/ ...</div><div class="ttdef"><b>Definition</b> <a href="Http_8h_source.html#l00014">Http.h:15</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html_a9e698df600de971647f36fff7d1b70ab"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">Gyanis::net::http::g_logger</a></div><div class="ttdeci">static auto g_logger</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8cpp_source.html#l00009">HttpConnection.cpp:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c72b25b75abe208498b36a3e44a3726c.html">net</a></li><li class="navelem"><a class="el" href="dir_dd2d28fd72df0d33d2116010ecf4f11d.html">http</a></li><li class="navelem"><a class="el" href="HttpServer_8cpp.html">HttpServer.cpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

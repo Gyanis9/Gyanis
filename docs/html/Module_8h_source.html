@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: include/net/Module.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Module_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Module.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Module_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifndef MODULE_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define MODULE_H</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;shared_mutex&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="Singleton_8h.html">base/Singleton.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="Stream_8h.html">net/stream/Stream.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="Protocol_8h.html">net/protocol/Protocol.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceGyanis_1_1net.html">Gyanis::net</a></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1Module.html">   22</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyanis_1_1net_1_1Module.html">Module</a></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1Module.html#a0e2c86036aaced376558377401b017c6">   25</a></span>        <span class="keyword">enum</span> <a class="code hl_enumeration" href="classGyanis_1_1net_1_1Module.html#a0e2c86036aaced376558377401b017c6">Type</a></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1Module.html#a0e2c86036aaced376558377401b017c6a4786ecc14b15c52109a133eea552ca6b">   27</a></span>            <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1Module.html#a0e2c86036aaced376558377401b017c6a4786ecc14b15c52109a133eea552ca6b">MODULE</a> = 0, </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1Module.html#a0e2c86036aaced376558377401b017c6a176fff55345c9c4f590bc3cc8c32e657">   28</a></span>            <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1Module.html#a0e2c86036aaced376558377401b017c6a176fff55345c9c4f590bc3cc8c32e657">ROCK</a> = 1, </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        };</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">explicit</span> <a class="code hl_class" href="classGyanis_1_1net_1_1Module.html">Module</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> std::string&amp; version, std::string filename,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                        uint32_t type = <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1Module.html#a0e2c86036aaced376558377401b017c6a4786ecc14b15c52109a133eea552ca6b">MODULE</a>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1Module.html#aaae333fa83dfe3d769c4d3c8d63a7cc7">   41</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="classGyanis_1_1net_1_1Module.html#aaae333fa83dfe3d769c4d3c8d63a7cc7">~Module</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1Module.html#adc9e5d74021db89e5b903b4b2a9f612e">onBeforeArgsParse</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1Module.html#a3508437e81c94027fd7db5c163f164e2">onAfterArgsParse</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1net_1_1Module.html#a45463065ea3c4530f3257c86e80a5213">onLoad</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1net_1_1Module.html#a324128d1e9022e9b337fa156430a6d7d">onUnload</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1net_1_1Module.html#a9dd231bdd7ee1abca83d50fa9cd1e09b">onConnect</a>(<span class="keyword">const</span> std::shared_ptr&lt;stream::Stream&gt;&amp; stream);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1net_1_1Module.html#ab161e90d35775978e3a388f2ab575181">onDisconnect</a>(<span class="keyword">const</span> std::shared_ptr&lt;stream::Stream&gt;&amp; stream);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1net_1_1Module.html#a79c334fa773324aa5ef902e5aa82a7c1">onServerReady</a>();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1net_1_1Module.html#ac98798638b7ce2ce3229e8255ef0c73c">onServerUp</a>();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <a class="code hl_function" href="classGyanis_1_1net_1_1Module.html#a1d47c3bd6597042ed028c84aee68d78b">handleRequest</a>(<span class="keyword">const</span> std::shared_ptr&lt;protocol::Message&gt;&amp; request,</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                      <span class="keyword">const</span> std::shared_ptr&lt;protocol::Message&gt;&amp; response,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                      <span class="keyword">const</span> std::shared_ptr&lt;stream::Stream&gt;&amp; stream);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1net_1_1Module.html#ab4c1e7040effc078a1de680a9341f9e5">handleNotify</a>(<span class="keyword">const</span> std::shared_ptr&lt;protocol::Message&gt;&amp; notify,</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                                  <span class="keyword">const</span> std::shared_ptr&lt;stream::Stream&gt;&amp; stream);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keyword">virtual</span> std::string <a class="code hl_function" href="classGyanis_1_1net_1_1Module.html#a811525845b461570234ed95343330fa6">statusString</a>();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        [[nodiscard]] <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classGyanis_1_1net_1_1Module.html#a013ed4da0aa8244c052fabc1aaef8214">getName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        [[nodiscard]] <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classGyanis_1_1net_1_1Module.html#a9e88394687fc8314dfab6e201f8173dd">getVersion</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        [[nodiscard]] <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classGyanis_1_1net_1_1Module.html#abad905679c823499032d437aa2e57c56">getFilename</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        [[nodiscard]] <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classGyanis_1_1net_1_1Module.html#a240cf07eb8989a7a2b0ef98e7720e408">getId</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1Module.html#a61fe53b490f3408cdc9837017fc1ef58">setFilename</a>(<span class="keyword">const</span> std::string&amp; value);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        [[nodiscard]] uint32_t <a class="code hl_function" href="classGyanis_1_1net_1_1Module.html#ae4783c9a48545530e9c3635c6023dec2">getType</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1Module.html#ae5b6e7bb17490882cf3fd2092ccff522">registerService</a>(<span class="keyword">const</span> std::string&amp; server_type,</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                                    <span class="keyword">const</span> std::string&amp; domain, <span class="keyword">const</span> std::string&amp; service);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1Module.html#af489ccff6c8443f13d4f1a1727151874">  153</a></span>        std::string <a class="code hl_variable" href="classGyanis_1_1net_1_1Module.html#af489ccff6c8443f13d4f1a1727151874">m_name</a>; </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1Module.html#a3b54d6e83c6eb58dc50634ddcef6a60e">  154</a></span>        std::string <a class="code hl_variable" href="classGyanis_1_1net_1_1Module.html#a3b54d6e83c6eb58dc50634ddcef6a60e">m_version</a>; </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1Module.html#ae888b5c60f64071f76dc0e9262f68347">  155</a></span>        std::string <a class="code hl_variable" href="classGyanis_1_1net_1_1Module.html#ae888b5c60f64071f76dc0e9262f68347">m_filename</a>; </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1Module.html#aa29149d8ec1f59109f4f92df5b347813">  156</a></span>        std::string <a class="code hl_variable" href="classGyanis_1_1net_1_1Module.html#aa29149d8ec1f59109f4f92df5b347813">m_id</a>; </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1Module.html#a4a8d902aee17892b13705f5f5e7b2e26">  157</a></span>        uint32_t <a class="code hl_variable" href="classGyanis_1_1net_1_1Module.html#a4a8d902aee17892b13705f5f5e7b2e26">m_type</a>; </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    };</div>
+</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="foldopen" id="foldopen00163" data-start="{" data-end="};">
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1ModuleManager.html">  163</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyanis_1_1net_1_1ModuleManager.html">ModuleManager</a></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1ModuleManager.html#a6908d484a49d628c3972d7b80808a525">  169</a></span>        <a class="code hl_function" href="classGyanis_1_1net_1_1ModuleManager.html#a6908d484a49d628c3972d7b80808a525">ModuleManager</a>();</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1ModuleManager.html#a9116ec90940b6b0d7574f8fe1a7906d2">add</a>(<span class="keyword">const</span> std::shared_ptr&lt;Module&gt;&amp; value);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1ModuleManager.html#a0948816d291da6751bd82cd79e103576">del</a>(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1ModuleManager.html#a8f316d972d60971a8ff5674fb883d5cb">delAll</a>();</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1ModuleManager.html#a05264ce61e7890c1348f7ccb4f9dbe9e">init</a>();</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        std::shared_ptr&lt;Module&gt; <a class="code hl_function" href="classGyanis_1_1net_1_1ModuleManager.html#ada4c465c35b0db47c0fcdab5bcdd66c5">get</a>(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1ModuleManager.html#a67de7db4d29eeb12312f1eb71ccf76f4">onConnect</a>(<span class="keyword">const</span> std::shared_ptr&lt;stream::Stream&gt;&amp; stream);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1ModuleManager.html#a3411e33264071f65936fe3185bd3732c">onDisconnect</a>(<span class="keyword">const</span> std::shared_ptr&lt;stream::Stream&gt;&amp; stream);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1ModuleManager.html#a445094f169928bb655f5c3d85fecf91a">listAll</a>(std::vector&lt;std::shared_ptr&lt;Module&gt;&gt;&amp; ms);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1ModuleManager.html#a19d39cd793ffd8bc93a5eee2fa19238b">listByType</a>(uint32_t type, std::vector&lt;std::shared_ptr&lt;Module&gt;&gt;&amp; ms);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <span class="keywordtype">void</span> <span class="keywordflow">foreach</span>(uint32_t type, <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>(std::shared_ptr&lt;Module&gt;)&gt;&amp; cb);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1ModuleManager.html#a7b3eb2fe88970bd90448b16f8e40a321">initModule</a>(<span class="keyword">const</span> std::string&amp; path);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1ModuleManager.html#a59d006ac028cafb6b70141a0be05f117">  236</a></span>        std::shared_mutex <a class="code hl_variable" href="classGyanis_1_1net_1_1ModuleManager.html#a59d006ac028cafb6b70141a0be05f117">m_mutex</a>; </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1ModuleManager.html#a261f8c39f36b4a68606118aae526040c">  237</a></span>        std::unordered_map&lt;std::string, std::shared_ptr&lt;Module&gt;&gt; <a class="code hl_variable" href="classGyanis_1_1net_1_1ModuleManager.html#a261f8c39f36b4a68606118aae526040c">m_modules</a>; </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1ModuleManager.html#a41c08821e3214f7d99bb205baa694afa">  238</a></span>        std::unordered_map&lt;uint32_t, std::unordered_map&lt;std::string, std::shared_ptr&lt;Module&gt;&gt;&gt; <a class="code hl_variable" href="classGyanis_1_1net_1_1ModuleManager.html#a41c08821e3214f7d99bb205baa694afa">m_type2Modules</a>;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    };</div>
+</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="namespaceGyanis_1_1net.html#ab18891a2d4ae3f0cf28ae39f9983e107">  242</a></span>    <span class="keyword">using </span><a class="code hl_class" href="classSingleton.html">ModuleMgr</a> = <a class="code hl_class" href="classSingleton.html">Singleton&lt;ModuleManager&gt;</a>;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>}</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aProtocol_8h_html"><div class="ttname"><a href="Protocol_8h.html">Protocol.h</a></div><div class="ttdoc">协议模块封装</div></div>
+<div class="ttc" id="aSingleton_8h_html"><div class="ttname"><a href="Singleton_8h.html">Singleton.h</a></div><div class="ttdoc">单例模式模版封装</div></div>
+<div class="ttc" id="aStream_8h_html"><div class="ttname"><a href="Stream_8h.html">Stream.h</a></div><div class="ttdoc">流接口模块封装</div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1ModuleManager_html"><div class="ttname"><a href="classGyanis_1_1net_1_1ModuleManager.html">Gyanis::net::ModuleManager</a></div><div class="ttdoc">模块管理器类，负责管理系统中的所有模块，包括加载、卸载、连接、断开等操作</div><div class="ttdef"><b>Definition</b> <a href="Module_8h_source.html#l00163">Module.h:164</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1ModuleManager_html_a05264ce61e7890c1348f7ccb4f9dbe9e"><div class="ttname"><a href="classGyanis_1_1net_1_1ModuleManager.html#a05264ce61e7890c1348f7ccb4f9dbe9e">Gyanis::net::ModuleManager::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">初始化模块管理器，加载所有已注册的模块</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00166">Module.cpp:166</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1ModuleManager_html_a0948816d291da6751bd82cd79e103576"><div class="ttname"><a href="classGyanis_1_1net_1_1ModuleManager.html#a0948816d291da6751bd82cd79e103576">Gyanis::net::ModuleManager::del</a></div><div class="ttdeci">void del(const std::string &amp;name)</div><div class="ttdoc">根据名称删除模块</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00135">Module.cpp:135</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1ModuleManager_html_a19d39cd793ffd8bc93a5eee2fa19238b"><div class="ttname"><a href="classGyanis_1_1net_1_1ModuleManager.html#a19d39cd793ffd8bc93a5eee2fa19238b">Gyanis::net::ModuleManager::listByType</a></div><div class="ttdeci">void listByType(uint32_t type, std::vector&lt; std::shared_ptr&lt; Module &gt; &gt; &amp;ms)</div><div class="ttdoc">获取指定类型的模块列表</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00218">Module.cpp:218</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1ModuleManager_html_a261f8c39f36b4a68606118aae526040c"><div class="ttname"><a href="classGyanis_1_1net_1_1ModuleManager.html#a261f8c39f36b4a68606118aae526040c">Gyanis::net::ModuleManager::m_modules</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::shared_ptr&lt; Module &gt; &gt; m_modules</div><div class="ttdoc">模块名称与模块对象的映射</div><div class="ttdef"><b>Definition</b> <a href="Module_8h_source.html#l00237">Module.h:237</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1ModuleManager_html_a3411e33264071f65936fe3185bd3732c"><div class="ttname"><a href="classGyanis_1_1net_1_1ModuleManager.html#a3411e33264071f65936fe3185bd3732c">Gyanis::net::ModuleManager::onDisconnect</a></div><div class="ttdeci">void onDisconnect(const std::shared_ptr&lt; stream::Stream &gt; &amp;stream)</div><div class="ttdoc">处理模块的断开连接操作</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00198">Module.cpp:198</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1ModuleManager_html_a41c08821e3214f7d99bb205baa694afa"><div class="ttname"><a href="classGyanis_1_1net_1_1ModuleManager.html#a41c08821e3214f7d99bb205baa694afa">Gyanis::net::ModuleManager::m_type2Modules</a></div><div class="ttdeci">std::unordered_map&lt; uint32_t, std::unordered_map&lt; std::string, std::shared_ptr&lt; Module &gt; &gt; &gt; m_type2Modules</div><div class="ttdoc">模块类型与模块对象的映射</div><div class="ttdef"><b>Definition</b> <a href="Module_8h_source.html#l00238">Module.h:238</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1ModuleManager_html_a445094f169928bb655f5c3d85fecf91a"><div class="ttname"><a href="classGyanis_1_1net_1_1ModuleManager.html#a445094f169928bb655f5c3d85fecf91a">Gyanis::net::ModuleManager::listAll</a></div><div class="ttdeci">void listAll(std::vector&lt; std::shared_ptr&lt; Module &gt; &gt; &amp;ms)</div><div class="ttdoc">获取所有模块的列表</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00209">Module.cpp:209</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1ModuleManager_html_a59d006ac028cafb6b70141a0be05f117"><div class="ttname"><a href="classGyanis_1_1net_1_1ModuleManager.html#a59d006ac028cafb6b70141a0be05f117">Gyanis::net::ModuleManager::m_mutex</a></div><div class="ttdeci">std::shared_mutex m_mutex</div><div class="ttdoc">保护模块集合的互斥锁</div><div class="ttdef"><b>Definition</b> <a href="Module_8h_source.html#l00236">Module.h:236</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1ModuleManager_html_a67de7db4d29eeb12312f1eb71ccf76f4"><div class="ttname"><a href="classGyanis_1_1net_1_1ModuleManager.html#a67de7db4d29eeb12312f1eb71ccf76f4">Gyanis::net::ModuleManager::onConnect</a></div><div class="ttdeci">void onConnect(const std::shared_ptr&lt; stream::Stream &gt; &amp;stream)</div><div class="ttdoc">处理模块的连接操作</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00187">Module.cpp:187</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1ModuleManager_html_a6908d484a49d628c3972d7b80808a525"><div class="ttname"><a href="classGyanis_1_1net_1_1ModuleManager.html#a6908d484a49d628c3972d7b80808a525">Gyanis::net::ModuleManager::ModuleManager</a></div><div class="ttdeci">ModuleManager()</div><div class="ttdoc">构造函数，初始化模块管理器</div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1ModuleManager_html_a7b3eb2fe88970bd90448b16f8e40a321"><div class="ttname"><a href="classGyanis_1_1net_1_1ModuleManager.html#a7b3eb2fe88970bd90448b16f8e40a321">Gyanis::net::ModuleManager::initModule</a></div><div class="ttdeci">void initModule(const std::string &amp;path)</div><div class="ttdoc">初始化模块</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00242">Module.cpp:242</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1ModuleManager_html_a8f316d972d60971a8ff5674fb883d5cb"><div class="ttname"><a href="classGyanis_1_1net_1_1ModuleManager.html#a8f316d972d60971a8ff5674fb883d5cb">Gyanis::net::ModuleManager::delAll</a></div><div class="ttdeci">void delAll()</div><div class="ttdoc">删除所有模块</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00154">Module.cpp:154</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1ModuleManager_html_a9116ec90940b6b0d7574f8fe1a7906d2"><div class="ttname"><a href="classGyanis_1_1net_1_1ModuleManager.html#a9116ec90940b6b0d7574f8fe1a7906d2">Gyanis::net::ModuleManager::add</a></div><div class="ttdeci">void add(const std::shared_ptr&lt; Module &gt; &amp;value)</div><div class="ttdoc">向模块管理器中添加一个模块</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00127">Module.cpp:127</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1ModuleManager_html_ada4c465c35b0db47c0fcdab5bcdd66c5"><div class="ttname"><a href="classGyanis_1_1net_1_1ModuleManager.html#ada4c465c35b0db47c0fcdab5bcdd66c5">Gyanis::net::ModuleManager::get</a></div><div class="ttdeci">std::shared_ptr&lt; Module &gt; get(const std::string &amp;name)</div><div class="ttdoc">根据模块名称获取模块对象</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00180">Module.cpp:180</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html">Gyanis::net::Module</a></div><div class="ttdoc">模块类，用于表示一个可加载和卸载的模块</div><div class="ttdef"><b>Definition</b> <a href="Module_8h_source.html#l00022">Module.h:23</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_a013ed4da0aa8244c052fabc1aaef8214"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#a013ed4da0aa8244c052fabc1aaef8214">Gyanis::net::Module::getName</a></div><div class="ttdeci">const std::string &amp; getName() const</div><div class="ttdoc">获取模块的名称</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00090">Module.cpp:90</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_a0e2c86036aaced376558377401b017c6"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#a0e2c86036aaced376558377401b017c6">Gyanis::net::Module::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition</b> <a href="Module_8h_source.html#l00025">Module.h:26</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_a0e2c86036aaced376558377401b017c6a176fff55345c9c4f590bc3cc8c32e657"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#a0e2c86036aaced376558377401b017c6a176fff55345c9c4f590bc3cc8c32e657">Gyanis::net::Module::ROCK</a></div><div class="ttdeci">@ ROCK</div><div class="ttdoc">Rock 协议模块</div><div class="ttdef"><b>Definition</b> <a href="Module_8h_source.html#l00028">Module.h:28</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_a0e2c86036aaced376558377401b017c6a4786ecc14b15c52109a133eea552ca6b"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#a0e2c86036aaced376558377401b017c6a4786ecc14b15c52109a133eea552ca6b">Gyanis::net::Module::MODULE</a></div><div class="ttdeci">@ MODULE</div><div class="ttdoc">普通模块</div><div class="ttdef"><b>Definition</b> <a href="Module_8h_source.html#l00027">Module.h:27</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_a1d47c3bd6597042ed028c84aee68d78b"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#a1d47c3bd6597042ed028c84aee68d78b">Gyanis::net::Module::handleRequest</a></div><div class="ttdeci">virtual bool handleRequest(const std::shared_ptr&lt; protocol::Message &gt; &amp;request, const std::shared_ptr&lt; protocol::Message &gt; &amp;response, const std::shared_ptr&lt; stream::Stream &gt; &amp;stream)</div><div class="ttdoc">处理请求消息</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00057">Module.cpp:57</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_a240cf07eb8989a7a2b0ef98e7720e408"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#a240cf07eb8989a7a2b0ef98e7720e408">Gyanis::net::Module::getId</a></div><div class="ttdeci">const std::string &amp; getId() const</div><div class="ttdoc">获取模块的 ID</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00105">Module.cpp:105</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_a324128d1e9022e9b337fa156430a6d7d"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#a324128d1e9022e9b337fa156430a6d7d">Gyanis::net::Module::onUnload</a></div><div class="ttdeci">virtual bool onUnload()</div><div class="ttdoc">卸载模块，执行模块卸载的操作 通常用于模块卸载时的清理操作</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00031">Module.cpp:31</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_a3508437e81c94027fd7db5c163f164e2"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#a3508437e81c94027fd7db5c163f164e2">Gyanis::net::Module::onAfterArgsParse</a></div><div class="ttdeci">virtual void onAfterArgsParse(int argc, char **argv)</div><div class="ttdoc">模块初始化后的参数解析操作，用户可以在此方法中处理解析后的参数</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00022">Module.cpp:22</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_a3b54d6e83c6eb58dc50634ddcef6a60e"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#a3b54d6e83c6eb58dc50634ddcef6a60e">Gyanis::net::Module::m_version</a></div><div class="ttdeci">std::string m_version</div><div class="ttdoc">模块版本</div><div class="ttdef"><b>Definition</b> <a href="Module_8h_source.html#l00154">Module.h:154</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_a45463065ea3c4530f3257c86e80a5213"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#a45463065ea3c4530f3257c86e80a5213">Gyanis::net::Module::onLoad</a></div><div class="ttdeci">virtual bool onLoad()</div><div class="ttdoc">加载模块，执行模块加载的操作 通常用于模块初始化时的操作</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00026">Module.cpp:26</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_a4a8d902aee17892b13705f5f5e7b2e26"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#a4a8d902aee17892b13705f5f5e7b2e26">Gyanis::net::Module::m_type</a></div><div class="ttdeci">uint32_t m_type</div><div class="ttdoc">模块类型</div><div class="ttdef"><b>Definition</b> <a href="Module_8h_source.html#l00157">Module.h:157</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_a61fe53b490f3408cdc9837017fc1ef58"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#a61fe53b490f3408cdc9837017fc1ef58">Gyanis::net::Module::setFilename</a></div><div class="ttdeci">void setFilename(const std::string &amp;value)</div><div class="ttdoc">设置模块的文件名</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00110">Module.cpp:110</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_a79c334fa773324aa5ef902e5aa82a7c1"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#a79c334fa773324aa5ef902e5aa82a7c1">Gyanis::net::Module::onServerReady</a></div><div class="ttdeci">virtual bool onServerReady()</div><div class="ttdoc">服务器准备好时的回调函数</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00046">Module.cpp:46</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_a811525845b461570234ed95343330fa6"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#a811525845b461570234ed95343330fa6">Gyanis::net::Module::statusString</a></div><div class="ttdeci">virtual std::string statusString()</div><div class="ttdoc">获取模块的状态字符串</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00079">Module.cpp:79</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_a9dd231bdd7ee1abca83d50fa9cd1e09b"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#a9dd231bdd7ee1abca83d50fa9cd1e09b">Gyanis::net::Module::onConnect</a></div><div class="ttdeci">virtual bool onConnect(const std::shared_ptr&lt; stream::Stream &gt; &amp;stream)</div><div class="ttdoc">处理 WebSocket 连接的请求</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00036">Module.cpp:36</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_a9e88394687fc8314dfab6e201f8173dd"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#a9e88394687fc8314dfab6e201f8173dd">Gyanis::net::Module::getVersion</a></div><div class="ttdeci">const std::string &amp; getVersion() const</div><div class="ttdoc">获取模块的版本</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00095">Module.cpp:95</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_aa29149d8ec1f59109f4f92df5b347813"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#aa29149d8ec1f59109f4f92df5b347813">Gyanis::net::Module::m_id</a></div><div class="ttdeci">std::string m_id</div><div class="ttdoc">模块 ID</div><div class="ttdef"><b>Definition</b> <a href="Module_8h_source.html#l00156">Module.h:156</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_aaae333fa83dfe3d769c4d3c8d63a7cc7"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#aaae333fa83dfe3d769c4d3c8d63a7cc7">Gyanis::net::Module::~Module</a></div><div class="ttdeci">virtual ~Module()=default</div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_ab161e90d35775978e3a388f2ab575181"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#ab161e90d35775978e3a388f2ab575181">Gyanis::net::Module::onDisconnect</a></div><div class="ttdeci">virtual bool onDisconnect(const std::shared_ptr&lt; stream::Stream &gt; &amp;stream)</div><div class="ttdoc">处理 WebSocket 断开连接的请求</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00041">Module.cpp:41</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_ab4c1e7040effc078a1de680a9341f9e5"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#ab4c1e7040effc078a1de680a9341f9e5">Gyanis::net::Module::handleNotify</a></div><div class="ttdeci">virtual bool handleNotify(const std::shared_ptr&lt; protocol::Message &gt; &amp;notify, const std::shared_ptr&lt; stream::Stream &gt; &amp;stream)</div><div class="ttdoc">处理通知消息</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00069">Module.cpp:69</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_abad905679c823499032d437aa2e57c56"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#abad905679c823499032d437aa2e57c56">Gyanis::net::Module::getFilename</a></div><div class="ttdeci">const std::string &amp; getFilename() const</div><div class="ttdoc">获取模块的文件名</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00100">Module.cpp:100</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_ac98798638b7ce2ce3229e8255ef0c73c"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#ac98798638b7ce2ce3229e8255ef0c73c">Gyanis::net::Module::onServerUp</a></div><div class="ttdeci">virtual bool onServerUp()</div><div class="ttdoc">服务器启动时的回调函数</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00051">Module.cpp:51</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_adc9e5d74021db89e5b903b4b2a9f612e"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#adc9e5d74021db89e5b903b4b2a9f612e">Gyanis::net::Module::onBeforeArgsParse</a></div><div class="ttdeci">virtual void onBeforeArgsParse(int argc, char **argv)</div><div class="ttdoc">模块初始化前的参数解析操作，用户可以在此方法中解析命令行参数</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00018">Module.cpp:18</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_ae4783c9a48545530e9c3635c6023dec2"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#ae4783c9a48545530e9c3635c6023dec2">Gyanis::net::Module::getType</a></div><div class="ttdeci">uint32_t getType() const</div><div class="ttdoc">获取模块的类型</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00115">Module.cpp:115</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_ae5b6e7bb17490882cf3fd2092ccff522"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#ae5b6e7bb17490882cf3fd2092ccff522">Gyanis::net::Module::registerService</a></div><div class="ttdeci">static void registerService(const std::string &amp;server_type, const std::string &amp;domain, const std::string &amp;service)</div><div class="ttdoc">注册服务到指定的服务器类型、域名和服务名</div><div class="ttdef"><b>Definition</b> <a href="Module_8cpp_source.html#l00120">Module.cpp:120</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_ae888b5c60f64071f76dc0e9262f68347"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#ae888b5c60f64071f76dc0e9262f68347">Gyanis::net::Module::m_filename</a></div><div class="ttdeci">std::string m_filename</div><div class="ttdoc">模块文件名</div><div class="ttdef"><b>Definition</b> <a href="Module_8h_source.html#l00155">Module.h:155</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Module_html_af489ccff6c8443f13d4f1a1727151874"><div class="ttname"><a href="classGyanis_1_1net_1_1Module.html#af489ccff6c8443f13d4f1a1727151874">Gyanis::net::Module::m_name</a></div><div class="ttdeci">std::string m_name</div><div class="ttdoc">模块名称</div><div class="ttdef"><b>Definition</b> <a href="Module_8h_source.html#l00153">Module.h:153</a></div></div>
+<div class="ttc" id="aclassSingleton_html"><div class="ttname"><a href="classSingleton.html">Singleton</a></div><div class="ttdoc">单例模式封装类</div><div class="ttdef"><b>Definition</b> <a href="Singleton_8h_source.html#l00018">Singleton.h:19</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_html"><div class="ttname"><a href="namespaceGyanis_1_1net.html">Gyanis::net</a></div><div class="ttdef"><b>Definition</b> <a href="Address_8h_source.html#l00016">Address.h:17</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_2fa1ed3146d6c2b96c5cfe4341985326.html">net</a></li><li class="navelem"><a class="el" href="Module_8h.html">Module.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+digraph "Gyanis::base::LogLevel::ToString"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="Gyanis::base::LogLevel\l::ToString",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="将日志级别转换为字符串"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::base::LevelFormat\lItem::format",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1base_1_1LevelFormatItem.html#a73868944cdf91f150984d19d7e0cd481",tooltip="格式化日志到输出流"];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Gyanis::base::LexicalCast\l\< LogDefine, std::string\l \>::operator()",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1base_1_1LexicalCast_3_01LogDefine_00_01std_1_1string_01_4.html#ae0a3aaf931b54908958cfb3f76b20590",tooltip=" "];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Gyanis::base::Logger\l::toYamlString",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1base_1_1Logger.html#a87bfc95c23ed30057541ccb0fb710e5d",tooltip="将日志器的配置转为 YAML 字符串"];
+  Node1 -> Node5 [id="edge4_Node000001_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="Gyanis::base::StdoutLogAppender\l::toYamlString",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1base_1_1StdoutLogAppender.html#a6034f3d84c2e95a19164baa7d42afe70",tooltip="将日志输出目标的配置转为 YAML 字符串"];
+  Node1 -> Node6 [id="edge5_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="Gyanis::base::FileLogAppender\l::toYamlString",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1base_1_1FileLogAppender.html#a1b0b397b061d158fb777b6771b56a9d9",tooltip="将日志输出目标的配置转为 YAML 字符串"];
+}

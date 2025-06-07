@@ -1,0 +1,17 @@
+digraph "Gyanis::core::FiberSemaphore::wait"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="Gyanis::core::FiberSemaphore\l::wait",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="等待信号量"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::core::WorkerGroup\l::scheduler",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1WorkerGroup.html#aa5f64713142da98d07de36da5666a659",tooltip="调度任务，将传入的回调函数（任务）分配给指定的工作线程"];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Gyanis::core::WorkerGroup\l::Create",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1WorkerGroup.html#abeac8c8e67f7494cae2f46443aff9763",tooltip="创建并返回一个 WorkerGroup 的智能指针"];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Gyanis::core::WorkerGroup\l::waitAll",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1WorkerGroup.html#a060b97ab37f8b00b98e67546391c146e",tooltip="等待所有任务完成。"];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="Gyanis::core::WorkerGroup\l::~WorkerGroup",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1WorkerGroup.html#a331d76086c29b55b0346db88518fab5d",tooltip="析构函数，销毁 WorkerGroup 实例时进行清理"];
+}

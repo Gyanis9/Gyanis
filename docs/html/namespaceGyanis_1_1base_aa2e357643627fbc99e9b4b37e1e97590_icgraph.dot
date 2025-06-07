@@ -1,0 +1,53 @@
+digraph "Gyanis::base::byteswapOnLittleEndian"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="Gyanis::base::byteswapOn\lLittleEndian",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="只在小端机器上执行 byteswap, 在大端机器上什么都不做"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::net::IPv4Address\l::broadcastAddress",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1IPv4Address.html#ac8c165d18042d0d2a591bd8a9712035c",tooltip="获取该地址的广播地址"];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Gyanis::net::IPv4Address\l::Create",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1IPv4Address.html#a908ac1fae070cbe156c1f0e1944c6435",tooltip="使用点分十进制地址创建IPv4Address"];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Gyanis::net::IPv6Address\l::Create",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1IPv6Address.html#ae6d36c02e6e80b30c680e6440a75dec4",tooltip="通过IPv6地址字符串构造IPv6Address"];
+  Node1 -> Node5 [id="edge4_Node000001_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="Gyanis::net::IPv4Address\l::getPort",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1IPv4Address.html#aa1008200b947e091c7d9263fa749ae75",tooltip="返回端口号"];
+  Node1 -> Node6 [id="edge5_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="Gyanis::net::IPv6Address\l::getPort",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1IPv6Address.html#a4ae9ceec4cbfeb302e0f49ff53749709",tooltip="返回端口号"];
+  Node1 -> Node7 [id="edge6_Node000001_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="Gyanis::net::IPv4Address\l::insert",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1IPv4Address.html#abe80d23fe6eb23917672766412ccba92",tooltip="可读性输出地址"];
+  Node1 -> Node8 [id="edge7_Node000001_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="Gyanis::net::IPv6Address\l::insert",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1IPv6Address.html#a8b027ef14a17bcbd0a80c965a0660d2a",tooltip="可读性输出地址"];
+  Node1 -> Node9 [id="edge8_Node000001_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="Gyanis::net::IPv4Address\l::IPv4Address",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1IPv4Address.html#af5cd7edf86ef71291636b6cf6975cde3",tooltip="通过二进制地址构造IPv4Address"];
+  Node1 -> Node10 [id="edge9_Node000001_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="Gyanis::net::IPv6Address\l::IPv6Address",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1IPv6Address.html#a2f4431e58d0c112d73c3654ef4acb49b",tooltip="通过IPv6二进制地址构造IPv6Address"];
+  Node1 -> Node11 [id="edge10_Node000001_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="Gyanis::net::IPv4Address\l::networdAddress",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1IPv4Address.html#a166f812efdcffc3eaea57a4552abf079",tooltip="获取该地址的网段"];
+  Node1 -> Node12 [id="edge11_Node000001_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="Gyanis::net::rock::\lRockMessageDecoder::\lparseForm",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1rock_1_1RockMessageDecoder.html#adda07eb79e7afaad7d90b34c8a0d37bc",tooltip="从流中解析消息"];
+  Node1 -> Node13 [id="edge12_Node000001_Node000013",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="Gyanis::net::rock::\lRockMessageDecoder::\lserializeTo",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1rock_1_1RockMessageDecoder.html#a3c3238e9292dadd4d6a2b1d8d8490ea9",tooltip="将消息序列化到流中"];
+  Node1 -> Node14 [id="edge13_Node000001_Node000014",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="Gyanis::net::IPv4Address\l::setPort",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1IPv4Address.html#ac8335590fc256b088ad979b0f9be9512",tooltip="设置端口号"];
+  Node1 -> Node15 [id="edge14_Node000001_Node000015",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="Gyanis::net::IPv6Address\l::setPort",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1IPv6Address.html#a6dddcf27b707341bbf14f3c373b21456",tooltip="设置端口号"];
+  Node1 -> Node16 [id="edge15_Node000001_Node000016",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node16 [id="Node000016",label="Gyanis::net::http::\lWSRecvMessage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1net_1_1http.html#a49b24bd5aabf32918f7bc7c98e698c97",tooltip="WebSocket 消息最大大小配置变量"];
+  Node16 -> Node17 [id="edge16_Node000016_Node000017",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node17 [id="Node000017",label="Gyanis::net::http::\lWSConnection::recvMessage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1WSConnection.html#ab9323c77ad2e5486013b91f2783911bd",tooltip="接收 WebSocket 消息"];
+  Node16 -> Node18 [id="edge17_Node000016_Node000018",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node18 [id="Node000018",label="Gyanis::net::http::\lWSSession::recvMessage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1WSSession.html#a438872b08c8095c5af27b2f7b5084b53",tooltip="接收 WebSocket 消息"];
+  Node1 -> Node19 [id="edge18_Node000001_Node000019",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node19 [id="Node000019",label="Gyanis::net::http::\lWSSendMessage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1net_1_1http.html#ad7a0a14e59c8bdfb095836f68efcf5ee",tooltip="向流中发送 WebSocket 消息"];
+  Node19 -> Node20 [id="edge19_Node000019_Node000020",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node20 [id="Node000020",label="Gyanis::net::http::\lWSConnection::sendMessage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1WSConnection.html#a50cd56c9ae0db64eab2dd56b2edd5f54",tooltip="发送 WebSocket 消息"];
+  Node19 -> Node21 [id="edge20_Node000019_Node000021",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node21 [id="Node000021",label="Gyanis::net::http::\lWSSession::sendMessage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1WSSession.html#a4a8befb5f2f0e25f5d4ef541044da5b8",tooltip="发送 WebSocket 消息"];
+  Node19 -> Node22 [id="edge21_Node000019_Node000022",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node22 [id="Node000022",label="Gyanis::net::http::\lWSConnection::sendMessage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1WSConnection.html#addb009181a955dd240be014d29d179f3",tooltip="发送字符串形式的 WebSocket 消息"];
+  Node19 -> Node23 [id="edge22_Node000019_Node000023",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node23 [id="Node000023",label="Gyanis::net::http::\lWSSession::sendMessage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1WSSession.html#ae2db1c4fa5978b70fbc938db16a22c0f",tooltip="发送字符串形式的 WebSocket 消息"];
+}

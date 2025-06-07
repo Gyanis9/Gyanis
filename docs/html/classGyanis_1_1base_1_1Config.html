@@ -1,0 +1,661 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: Gyanis::base::Config类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGyanis_1_1base_1_1Config.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="classGyanis_1_1base_1_1Config-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Gyanis::base::Config类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html" title="配置参数模板子类, 保存对应类型的参数值">ConfigVar</a> 的管理类  
+ <a href="classGyanis_1_1base_1_1Config.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Config_8h_source.html">Config.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:aaac5d5509f3135d327d6daa085417fd7" id="r_aaac5d5509f3135d327d6daa085417fd7"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aaac5d5509f3135d327d6daa085417fd7"><td class="memTemplItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classGyanis_1_1base_1_1ConfigVar.html">ConfigVar</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1Config.html#aaac5d5509f3135d327d6daa085417fd7">LookUp</a> (const std::string &amp;name, const T &amp;default_value, const std::string &amp;description=&quot;&quot;)</td></tr>
+<tr class="memdesc:aaac5d5509f3135d327d6daa085417fd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取/创建对应参数名的配置参数  <br /></td></tr>
+<tr class="separator:aaac5d5509f3135d327d6daa085417fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac189ea995e1aadd56598f6623638a876" id="r_ac189ea995e1aadd56598f6623638a876"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac189ea995e1aadd56598f6623638a876"><td class="memTemplItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classGyanis_1_1base_1_1ConfigVar.html">ConfigVar</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1Config.html#ac189ea995e1aadd56598f6623638a876">LookUp</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:ac189ea995e1aadd56598f6623638a876"><td class="mdescLeft">&#160;</td><td class="mdescRight">查找配置参数  <br /></td></tr>
+<tr class="separator:ac189ea995e1aadd56598f6623638a876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af516e6e7ddf22a0e1075b275a7a96b30" id="r_af516e6e7ddf22a0e1075b275a7a96b30"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1Config.html#af516e6e7ddf22a0e1075b275a7a96b30">LoadFromYaml</a> (const YAML::Node &amp;root)</td></tr>
+<tr class="memdesc:af516e6e7ddf22a0e1075b275a7a96b30"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用 YAML::Node 初始化配置模块  <br /></td></tr>
+<tr class="separator:af516e6e7ddf22a0e1075b275a7a96b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a592c44c9813877f0a97fccc32b594081" id="r_a592c44c9813877f0a97fccc32b594081"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1Config.html#a592c44c9813877f0a97fccc32b594081">LoadFromConfigDir</a> (const std::string &amp;path, bool force=false)</td></tr>
+<tr class="memdesc:a592c44c9813877f0a97fccc32b594081"><td class="mdescLeft">&#160;</td><td class="mdescRight">加载配置目录中的所有配置文件  <br /></td></tr>
+<tr class="separator:a592c44c9813877f0a97fccc32b594081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84099fdb5eb24976a7e1e41a36d72875" id="r_a84099fdb5eb24976a7e1e41a36d72875"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classGyanis_1_1base_1_1ConfigVarBase.html">ConfigVarBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1Config.html#a84099fdb5eb24976a7e1e41a36d72875">LookUpBase</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a84099fdb5eb24976a7e1e41a36d72875"><td class="mdescLeft">&#160;</td><td class="mdescRight">查找配置参数，返回配置参数的基类  <br /></td></tr>
+<tr class="separator:a84099fdb5eb24976a7e1e41a36d72875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94e72d387bad81a0a3dc4eea24c2a4ab" id="r_a94e72d387bad81a0a3dc4eea24c2a4ab"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1Config.html#a94e72d387bad81a0a3dc4eea24c2a4ab">Visit</a> (const std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classGyanis_1_1base_1_1ConfigVarBase.html">ConfigVarBase</a> &gt;)&gt; &amp;visitor)</td></tr>
+<tr class="memdesc:a94e72d387bad81a0a3dc4eea24c2a4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">遍历配置模块中的所有配置项  <br /></td></tr>
+<tr class="separator:a94e72d387bad81a0a3dc4eea24c2a4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:ab4caff16f695e15b9568a4bccd25f8e5" id="r_ab4caff16f695e15b9568a4bccd25f8e5"><td class="memItemLeft" align="right" valign="top">static std::unordered_map&lt; std::string, std::shared_ptr&lt; <a class="el" href="classGyanis_1_1base_1_1ConfigVarBase.html">ConfigVarBase</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1Config.html#ab4caff16f695e15b9568a4bccd25f8e5">GetDatas</a> ()</td></tr>
+<tr class="memdesc:ab4caff16f695e15b9568a4bccd25f8e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回所有的配置项  <br /></td></tr>
+<tr class="separator:ab4caff16f695e15b9568a4bccd25f8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a726c8c5dae11835ce9b4aef0231eaf59" id="r_a726c8c5dae11835ce9b4aef0231eaf59"><td class="memItemLeft" align="right" valign="top">static std::shared_mutex &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1Config.html#a726c8c5dae11835ce9b4aef0231eaf59">GetMutex</a> ()</td></tr>
+<tr class="memdesc:a726c8c5dae11835ce9b4aef0231eaf59"><td class="mdescLeft">&#160;</td><td class="mdescRight">配置项的读写锁  <br /></td></tr>
+<tr class="separator:a726c8c5dae11835ce9b4aef0231eaf59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html" title="配置参数模板子类, 保存对应类型的参数值">ConfigVar</a> 的管理类 </p>
+
+<p class="definition">在文件 <a class="el" href="Config_8h_source.html">Config.h</a> 第 <a class="el" href="Config_8h_source.html#l00491">491</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="ab4caff16f695e15b9568a4bccd25f8e5" name="ab4caff16f695e15b9568a4bccd25f8e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4caff16f695e15b9568a4bccd25f8e5">&#9670;&#160;</a></span>GetDatas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt; std::string, std::shared_ptr&lt; <a class="el" href="classGyanis_1_1base_1_1ConfigVarBase.html">ConfigVarBase</a> &gt; &gt; &amp; Gyanis::base::Config::GetDatas </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回所有的配置项 </p>
+
+<p class="definition">在文件 <a class="el" href="Config_8cpp_source.html">Config.cpp</a> 第 <a class="el" href="Config_8cpp_source.html#l00179">179</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  180</span>    {</div>
+<div class="line"><span class="lineno">  181</span>        <span class="keyword">static</span> std::unordered_map&lt;std::string, std::shared_ptr&lt;ConfigVarBase&gt;&gt; s_datas;</div>
+<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">return</span> s_datas;</div>
+<div class="line"><span class="lineno">  183</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1Config_ab4caff16f695e15b9568a4bccd25f8e5_icgraph.png" border="0" usemap="#aclassGyanis_1_1base_1_1Config_ab4caff16f695e15b9568a4bccd25f8e5_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a726c8c5dae11835ce9b4aef0231eaf59" name="a726c8c5dae11835ce9b4aef0231eaf59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a726c8c5dae11835ce9b4aef0231eaf59">&#9670;&#160;</a></span>GetMutex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_mutex &amp; Gyanis::base::Config::GetMutex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>配置项的读写锁 </p>
+
+<p class="definition">在文件 <a class="el" href="Config_8cpp_source.html">Config.cpp</a> 第 <a class="el" href="Config_8cpp_source.html#l00185">185</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>    {</div>
+<div class="line"><span class="lineno">  187</span>        <span class="keyword">static</span> std::shared_mutex s_mutex;</div>
+<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">return</span> s_mutex;</div>
+<div class="line"><span class="lineno">  189</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1Config_a726c8c5dae11835ce9b4aef0231eaf59_icgraph.png" border="0" usemap="#aclassGyanis_1_1base_1_1Config_a726c8c5dae11835ce9b4aef0231eaf59_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a592c44c9813877f0a97fccc32b594081" name="a592c44c9813877f0a97fccc32b594081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a592c44c9813877f0a97fccc32b594081">&#9670;&#160;</a></span>LoadFromConfigDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::base::Config::LoadFromConfigDir </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>force</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>加载配置目录中的所有配置文件 </p>
+
+<p class="definition">在文件 <a class="el" href="Config_8cpp_source.html">Config.cpp</a> 第 <a class="el" href="Config_8cpp_source.html#l00075">75</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>    {</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   78</span>        {</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keyword">const</span> <span class="keyword">auto</span> dir_path = canonical(std::filesystem::path(path));</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">if</span> (!is_directory(dir_path))</div>
+<div class="line"><span class="lineno">   81</span>            {</div>
+<div class="line"><span class="lineno">   82</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1base.html#a777219a0bfce287d57e6b8cade7fd134">g_logger</a>)</div>
+<div class="line"><span class="lineno">   83</span>                    &lt;&lt; <span class="stringliteral">&quot;Config::LoadFromConfigDir - Invalid configuration directory provided. &quot;</span></div>
+<div class="line"><span class="lineno">   84</span>                    &lt;&lt; <span class="stringliteral">&quot;Directory path: &quot;</span> &lt;&lt; dir_path.string();</div>
+<div class="line"><span class="lineno">   85</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   86</span>            }</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>            std::vector&lt;FileMeta&gt; file_metas;</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; entry : std::filesystem::recursive_directory_iterator(</div>
+<div class="line"><span class="lineno">   90</span>                     dir_path,</div>
+<div class="line"><span class="lineno">   91</span>                     std::filesystem::directory_options::skip_permission_denied</div>
+<div class="line"><span class="lineno">   92</span>                 ))</div>
+<div class="line"><span class="lineno">   93</span>            {</div>
+<div class="line"><span class="lineno">   94</span>                <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   95</span>                {</div>
+<div class="line"><span class="lineno">   96</span>                    <span class="keywordflow">if</span> (entry.is_regular_file() &amp;&amp;</div>
+<div class="line"><span class="lineno">   97</span>                        entry.path().extension() == <span class="stringliteral">&quot;.yml&quot;</span>)</div>
+<div class="line"><span class="lineno">   98</span>                    {</div>
+<div class="line"><span class="lineno">   99</span>                        <span class="keyword">const</span> <span class="keyword">auto</span> ftime = entry.last_write_time().time_since_epoch().count();</div>
+<div class="line"><span class="lineno">  100</span>                        file_metas.push_back({</div>
+<div class="line"><span class="lineno">  101</span>                            entry.path().<span class="keywordtype">string</span>(),</div>
+<div class="line"><span class="lineno">  102</span>                            <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(ftime),</div>
+<div class="line"><span class="lineno">  103</span>                            entry.status().type()</div>
+<div class="line"><span class="lineno">  104</span>                        });</div>
+<div class="line"><span class="lineno">  105</span>                    }</div>
+<div class="line"><span class="lineno">  106</span>                }</div>
+<div class="line"><span class="lineno">  107</span>                <span class="keywordflow">catch</span> (std::filesystem::filesystem_error&amp; e)</div>
+<div class="line"><span class="lineno">  108</span>                {</div>
+<div class="line"><span class="lineno">  109</span>                    <a class="code hl_define" href="Log_8h.html#aba99aaf6c5a41efc2cdf6de1b5ab61c0">LOG_WARN</a>(<a class="code hl_variable" href="namespaceGyanis_1_1base.html#a777219a0bfce287d57e6b8cade7fd134">g_logger</a>)</div>
+<div class="line"><span class="lineno">  110</span>                        &lt;&lt; <span class="stringliteral">&quot;Config::LoadFromConfigDir - Skipping inaccessible file. &quot;</span></div>
+<div class="line"><span class="lineno">  111</span>                        &lt;&lt; <span class="stringliteral">&quot;File path: &quot;</span> &lt;&lt; e.path1().string();</div>
+<div class="line"><span class="lineno">  112</span>                }</div>
+<div class="line"><span class="lineno">  113</span>            }</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>            <span class="comment">// 并行处理文件</span></div>
+<div class="line"><span class="lineno">  116</span>            std::for_each(std::execution::par, file_metas.begin(), file_metas.end(),</div>
+<div class="line"><span class="lineno">  117</span>                          [&amp;](<span class="keyword">const</span> FileMeta&amp; meta)</div>
+<div class="line"><span class="lineno">  118</span>                          {</div>
+<div class="line"><span class="lineno">  119</span>                              {</div>
+<div class="line"><span class="lineno">  120</span>                                  std::shared_lock read_lock(s_rwmutex);</div>
+<div class="line"><span class="lineno">  121</span>                                  if (!force &amp;&amp; s_file2ModifyTime.count(meta.path) &amp;&amp;</div>
+<div class="line"><span class="lineno">  122</span>                                      s_file2ModifyTime.at(meta.path) == meta.mtime)</div>
+<div class="line"><span class="lineno">  123</span>                                  {</div>
+<div class="line"><span class="lineno">  124</span>                                      return;</div>
+<div class="line"><span class="lineno">  125</span>                                  }</div>
+<div class="line"><span class="lineno">  126</span>                              }</div>
+<div class="line"><span class="lineno">  127</span>                              <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  128</span>                              {</div>
+<div class="line"><span class="lineno">  129</span>                                  const YAML::Node root = YAML::LoadFile(meta.path);</div>
+<div class="line"><span class="lineno">  130</span>                                  std::unique_lock write_lock(s_rwmutex);</div>
+<div class="line"><span class="lineno">  131</span>                                  LoadFromYaml(root);</div>
+<div class="line"><span class="lineno">  132</span>                                  s_file2ModifyTime[meta.path] = meta.mtime;</div>
+<div class="line"><span class="lineno">  133</span>                                  LOG_INFO(g_logger)</div>
+<div class="line"><span class="lineno">  134</span>                                      &lt;&lt; <span class="stringliteral">&quot;Config::LoadFromConfigDir - Successfully loaded configuration file. &quot;</span></div>
+<div class="line"><span class="lineno">  135</span>                                      &lt;&lt; <span class="stringliteral">&quot;File path: &quot;</span> &lt;&lt; meta.path;</div>
+<div class="line"><span class="lineno">  136</span>                              }</div>
+<div class="line"><span class="lineno">  137</span>                              catch (<span class="keyword">const</span> YAML::Exception&amp; e)</div>
+<div class="line"><span class="lineno">  138</span>                              {</div>
+<div class="line"><span class="lineno">  139</span>                                  <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1base.html#a777219a0bfce287d57e6b8cade7fd134">g_logger</a>)</div>
+<div class="line"><span class="lineno">  140</span>                                      &lt;&lt; <span class="stringliteral">&quot;Config::LoadFromConfigDir - YAML Error encountered while processing configuration file. &quot;</span></div>
+<div class="line"><span class="lineno">  141</span>                                      &lt;&lt; <span class="stringliteral">&quot;File path: &quot;</span> &lt;&lt; meta.path</div>
+<div class="line"><span class="lineno">  142</span>                                      &lt;&lt; <span class="stringliteral">&quot; | Error details: &quot;</span> &lt;&lt; e.what();</div>
+<div class="line"><span class="lineno">  143</span>                              }</div>
+<div class="line"><span class="lineno">  144</span>                              <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e)</div>
+<div class="line"><span class="lineno">  145</span>                              {</div>
+<div class="line"><span class="lineno">  146</span>                                  <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1base.html#a777219a0bfce287d57e6b8cade7fd134">g_logger</a>)</div>
+<div class="line"><span class="lineno">  147</span>                                      &lt;&lt; <span class="stringliteral">&quot;Config::LoadFromConfigDir - Failed to load configuration file. &quot;</span></div>
+<div class="line"><span class="lineno">  148</span>                                      &lt;&lt; <span class="stringliteral">&quot;File path: &quot;</span> &lt;&lt; meta.path</div>
+<div class="line"><span class="lineno">  149</span>                                      &lt;&lt; <span class="stringliteral">&quot; | Error details: &quot;</span> &lt;&lt; e.what();</div>
+<div class="line"><span class="lineno">  150</span>                              }</div>
+<div class="line"><span class="lineno">  151</span>                          }</div>
+<div class="line"><span class="lineno">  152</span>            );</div>
+<div class="line"><span class="lineno">  153</span>        }</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::filesystem::filesystem_error&amp; e)</div>
+<div class="line"><span class="lineno">  155</span>        {</div>
+<div class="line"><span class="lineno">  156</span>            <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1base.html#a777219a0bfce287d57e6b8cade7fd134">g_logger</a>)</div>
+<div class="line"><span class="lineno">  157</span>                &lt;&lt; <span class="stringliteral">&quot;Path Error - &quot;</span> &lt;&lt; <span class="stringliteral">&quot;Error details: &quot;</span> &lt;&lt; e.what()</div>
+<div class="line"><span class="lineno">  158</span>                &lt;&lt; <span class="stringliteral">&quot; | Path: &quot;</span> &lt;&lt; path;</div>
+<div class="line"><span class="lineno">  159</span>        }</div>
+<div class="line"><span class="lineno">  160</span>    }</div>
+<div class="ttc" id="aLog_8h_html_a80a932ee56f777358b3d82e5fa3203c8"><div class="ttname"><a href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a></div><div class="ttdeci">#define LOG_ERROR(logger)</div><div class="ttdoc">输出 error 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00046">Log.h:46</a></div></div>
+<div class="ttc" id="aLog_8h_html_aba99aaf6c5a41efc2cdf6de1b5ab61c0"><div class="ttname"><a href="Log_8h.html#aba99aaf6c5a41efc2cdf6de1b5ab61c0">LOG_WARN</a></div><div class="ttdeci">#define LOG_WARN(logger)</div><div class="ttdoc">输出 warn 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00041">Log.h:41</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_a777219a0bfce287d57e6b8cade7fd134"><div class="ttname"><a href="namespaceGyanis_1_1base.html#a777219a0bfce287d57e6b8cade7fd134">Gyanis::base::g_logger</a></div><div class="ttdeci">static auto g_logger</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00010">Config.cpp:10</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1Config_a592c44c9813877f0a97fccc32b594081_icgraph.png" border="0" usemap="#aclassGyanis_1_1base_1_1Config_a592c44c9813877f0a97fccc32b594081_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af516e6e7ddf22a0e1075b275a7a96b30" name="af516e6e7ddf22a0e1075b275a7a96b30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af516e6e7ddf22a0e1075b275a7a96b30">&#9670;&#160;</a></span>LoadFromYaml()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::base::Config::LoadFromYaml </td>
+          <td>(</td>
+          <td class="paramtype">const YAML::Node &amp;&#160;</td>
+          <td class="paramname"><em>root</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>使用 YAML::Node 初始化配置模块 </p>
+<p>&lt; 如果是标量</p>
+
+<p class="definition">在文件 <a class="el" href="Config_8cpp_source.html">Config.cpp</a> 第 <a class="el" href="Config_8cpp_source.html#l00027">27</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>    {</div>
+<div class="line"><span class="lineno">   29</span>        std::list&lt;std::pair&lt;std::string, const YAML::Node&gt;&gt; all_nodes;</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_function" href="namespaceGyanis_1_1base.html#af1d55e7ddb7d1b09dbce7d1878ea7b05">ListAllMember</a>(<span class="stringliteral">&quot;&quot;</span>, root, all_nodes);</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [str, node] : all_nodes)</div>
+<div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            std::string key = str;</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">if</span> (key.empty())</div>
+<div class="line"><span class="lineno">   35</span>            {</div>
+<div class="line"><span class="lineno">   36</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   37</span>            }</div>
+<div class="line"><span class="lineno">   38</span>            std::transform(key.begin(), key.end(), key.begin(), ::tolower);</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> value = <a class="code hl_function" href="classGyanis_1_1base_1_1Config.html#a84099fdb5eb24976a7e1e41a36d72875">LookUpBase</a>(key))</div>
+<div class="line"><span class="lineno">   40</span>            {</div>
+<div class="line"><span class="lineno">   41</span>                <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   42</span>                {</div>
+<div class="line"><span class="lineno">   43</span>                    <span class="keywordflow">if</span> (node.IsScalar()) </div>
+<div class="line"><span class="lineno">   44</span>                    {</div>
+<div class="line"><span class="lineno">   45</span>                        value-&gt;fromString(node.Scalar());</div>
+<div class="line"><span class="lineno">   46</span>                    }</div>
+<div class="line"><span class="lineno">   47</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   48</span>                    {</div>
+<div class="line"><span class="lineno">   49</span>                        std::stringstream ss;</div>
+<div class="line"><span class="lineno">   50</span>                        ss &lt;&lt; node; <span class="comment">// 将整个节点序列转为字符串</span></div>
+<div class="line"><span class="lineno">   51</span>                        value-&gt;fromString(ss.str());</div>
+<div class="line"><span class="lineno">   52</span>                    }</div>
+<div class="line"><span class="lineno">   53</span>                }</div>
+<div class="line"><span class="lineno">   54</span>                <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e)</div>
+<div class="line"><span class="lineno">   55</span>                {</div>
+<div class="line"><span class="lineno">   56</span>                    <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1base.html#a777219a0bfce287d57e6b8cade7fd134">g_logger</a>) &lt;&lt; <span class="stringliteral">&quot;Config::LoadFromYaml - Failed to load value for key: &quot;</span></div>
+<div class="line"><span class="lineno">   57</span>                                           &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot; due to error: &quot;</span> &lt;&lt; e.what();</div>
+<div class="line"><span class="lineno">   58</span>                }</div>
+<div class="line"><span class="lineno">   59</span>            }</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Config_html_a84099fdb5eb24976a7e1e41a36d72875"><div class="ttname"><a href="classGyanis_1_1base_1_1Config.html#a84099fdb5eb24976a7e1e41a36d72875">Gyanis::base::Config::LookUpBase</a></div><div class="ttdeci">static std::shared_ptr&lt; ConfigVarBase &gt; LookUpBase(const std::string &amp;name)</div><div class="ttdoc">查找配置参数，返回配置参数的基类</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00162">Config.cpp:162</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_af1d55e7ddb7d1b09dbce7d1878ea7b05"><div class="ttname"><a href="namespaceGyanis_1_1base.html#af1d55e7ddb7d1b09dbce7d1878ea7b05">Gyanis::base::ListAllMember</a></div><div class="ttdeci">static void ListAllMember(const std::string &amp;prefix, const YAML::Node &amp;node, std::list&lt; std::pair&lt; std::string, const YAML::Node &gt; &gt; &amp;output)</div><div class="ttdoc">列出所有成员</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00191">Config.cpp:191</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1Config_af516e6e7ddf22a0e1075b275a7a96b30_cgraph.png" border="0" usemap="#aclassGyanis_1_1base_1_1Config_af516e6e7ddf22a0e1075b275a7a96b30_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ac189ea995e1aadd56598f6623638a876" name="ac189ea995e1aadd56598f6623638a876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac189ea995e1aadd56598f6623638a876">&#9670;&#160;</a></span>LookUp() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::shared_ptr&lt; <a class="el" href="classGyanis_1_1base_1_1ConfigVar.html">ConfigVar</a>&lt; T &gt; &gt; Gyanis::base::Config::LookUp </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>查找配置参数 </p>
+
+<p class="definition">在文件 <a class="el" href="Config_8h_source.html">Config.h</a> 第 <a class="el" href="Config_8h_source.html#l00537">537</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  538</span>        {</div>
+<div class="line"><span class="lineno">  539</span>            std::shared_lock lock(<a class="code hl_function" href="classGyanis_1_1base_1_1Config.html#a726c8c5dae11835ce9b4aef0231eaf59">GetMutex</a>());</div>
+<div class="line"><span class="lineno">  540</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> it = <a class="code hl_function" href="classGyanis_1_1base_1_1Config.html#ab4caff16f695e15b9568a4bccd25f8e5">GetDatas</a>().find(name); it != <a class="code hl_function" href="classGyanis_1_1base_1_1Config.html#ab4caff16f695e15b9568a4bccd25f8e5">GetDatas</a>().end())</div>
+<div class="line"><span class="lineno">  541</span>            {</div>
+<div class="line"><span class="lineno">  542</span>                <span class="keywordflow">return</span> std::dynamic_pointer_cast&lt;ConfigVar&lt;T&gt;&gt;(it-&gt;second);</div>
+<div class="line"><span class="lineno">  543</span>            }</div>
+<div class="line"><span class="lineno">  544</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  545</span>        }</div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Config_html_a726c8c5dae11835ce9b4aef0231eaf59"><div class="ttname"><a href="classGyanis_1_1base_1_1Config.html#a726c8c5dae11835ce9b4aef0231eaf59">Gyanis::base::Config::GetMutex</a></div><div class="ttdeci">static std::shared_mutex &amp; GetMutex()</div><div class="ttdoc">配置项的读写锁</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00185">Config.cpp:185</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Config_html_ab4caff16f695e15b9568a4bccd25f8e5"><div class="ttname"><a href="classGyanis_1_1base_1_1Config.html#ab4caff16f695e15b9568a4bccd25f8e5">Gyanis::base::Config::GetDatas</a></div><div class="ttdeci">static std::unordered_map&lt; std::string, std::shared_ptr&lt; ConfigVarBase &gt; &gt; &amp; GetDatas()</div><div class="ttdoc">返回所有的配置项</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00179">Config.cpp:179</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1Config_ac189ea995e1aadd56598f6623638a876_cgraph.png" border="0" usemap="#aclassGyanis_1_1base_1_1Config_ac189ea995e1aadd56598f6623638a876_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aaac5d5509f3135d327d6daa085417fd7" name="aaac5d5509f3135d327d6daa085417fd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaac5d5509f3135d327d6daa085417fd7">&#9670;&#160;</a></span>LookUp() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::shared_ptr&lt; <a class="el" href="classGyanis_1_1base_1_1ConfigVar.html">ConfigVar</a>&lt; T &gt; &gt; Gyanis::base::Config::LookUp </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>default_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>description</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取/创建对应参数名的配置参数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>配置项的名称 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">default_value</td><td>配置项的默认值 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">description</td><td>配置项的描述 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Config_8h_source.html">Config.h</a> 第 <a class="el" href="Config_8h_source.html#l00501">501</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  503</span>        {</div>
+<div class="line"><span class="lineno">  504</span>            std::unique_lock lock(<a class="code hl_function" href="classGyanis_1_1base_1_1Config.html#a726c8c5dae11835ce9b4aef0231eaf59">GetMutex</a>());</div>
+<div class="line"><span class="lineno">  505</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> it = <a class="code hl_function" href="classGyanis_1_1base_1_1Config.html#ab4caff16f695e15b9568a4bccd25f8e5">GetDatas</a>().find(name); it != <a class="code hl_function" href="classGyanis_1_1base_1_1Config.html#ab4caff16f695e15b9568a4bccd25f8e5">GetDatas</a>().end())</div>
+<div class="line"><span class="lineno">  506</span>            {</div>
+<div class="line"><span class="lineno">  507</span>                <span class="keyword">auto</span> temp = std::dynamic_pointer_cast&lt;ConfigVar&lt;T&gt;&gt;(it-&gt;second);</div>
+<div class="line"><span class="lineno">  508</span>                <span class="keywordflow">if</span> (temp != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">  509</span>                {</div>
+<div class="line"><span class="lineno">  510</span>                    <a class="code hl_define" href="Log_8h.html#abf8dce5b90852304a0897b44b9dfd038">LOG_INFO</a>(<a class="code hl_define" href="Log_8h.html#acac80b4704e84229dd7656618273b1c3">LOG_ROOT</a>()) &lt;&lt; <span class="stringliteral">&quot;Config::LookUp - Successfully located configuration entry.&quot;</span></div>
+<div class="line"><span class="lineno">  511</span>                                         &lt;&lt; <span class="stringliteral">&quot; Name: &quot;</span> &lt;&lt; name</div>
+<div class="line"><span class="lineno">  512</span>                                         &lt;&lt; <span class="stringliteral">&quot; | Status: Exists&quot;</span>;</div>
+<div class="line"><span class="lineno">  513</span>                    <span class="keywordflow">return</span> temp;</div>
+<div class="line"><span class="lineno">  514</span>                }</div>
+<div class="line"><span class="lineno">  515</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_define" href="Log_8h.html#acac80b4704e84229dd7656618273b1c3">LOG_ROOT</a>())</div>
+<div class="line"><span class="lineno">  516</span>                    &lt;&lt; <span class="stringliteral">&quot;Config::LookUp - Configuration lookup failed for name: &quot;</span> &lt;&lt; name</div>
+<div class="line"><span class="lineno">  517</span>                    &lt;&lt; <span class="stringliteral">&quot; | Expected type: &quot;</span> &lt;&lt; TypeToName&lt;T&gt;()</div>
+<div class="line"><span class="lineno">  518</span>                    &lt;&lt; <span class="stringliteral">&quot; | Actual type: &quot;</span> &lt;&lt; it-&gt;second-&gt;getTypeName()</div>
+<div class="line"><span class="lineno">  519</span>                    &lt;&lt; <span class="stringliteral">&quot; | Value: &quot;</span> &lt;&lt; it-&gt;second-&gt;toString();</div>
+<div class="line"><span class="lineno">  520</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  521</span>            }</div>
+<div class="line"><span class="lineno">  522</span>            <span class="keywordflow">if</span> (name.find_first_not_of(<span class="stringliteral">&quot;abcdefghijklmnopqrstuvwxyz._012345678&quot;</span>) != std::string::npos)</div>
+<div class="line"><span class="lineno">  523</span>            {</div>
+<div class="line"><span class="lineno">  524</span>                <a class="code hl_define" href="Log_8h.html#a983ab72109ed1168518f25e064114bdf">LOG_FATAL</a>(<a class="code hl_define" href="Log_8h.html#acac80b4704e84229dd7656618273b1c3">LOG_ROOT</a>()) &lt;&lt; <span class="stringliteral">&quot;Config::LookUp - Configuration lookup for name: &quot;</span> &lt;&lt; name</div>
+<div class="line"><span class="lineno">  525</span>                                     &lt;&lt; <span class="stringliteral">&quot; | Status: Invalid&quot;</span>;</div>
+<div class="line"><span class="lineno">  526</span>                <span class="keywordflow">throw</span> std::invalid_argument(name);</div>
+<div class="line"><span class="lineno">  527</span>            }</div>
+<div class="line"><span class="lineno">  528</span>            std::shared_ptr&lt;ConfigVar&lt;T&gt;&gt; value = std::make_shared&lt;ConfigVar&lt;T&gt;&gt;(name, default_value, description);</div>
+<div class="line"><span class="lineno">  529</span>            <a class="code hl_function" href="classGyanis_1_1base_1_1Config.html#ab4caff16f695e15b9568a4bccd25f8e5">GetDatas</a>()[name] = value;</div>
+<div class="line"><span class="lineno">  530</span>            <span class="keywordflow">return</span> value;</div>
+<div class="line"><span class="lineno">  531</span>        }</div>
+<div class="ttc" id="aLog_8h_html_a983ab72109ed1168518f25e064114bdf"><div class="ttname"><a href="Log_8h.html#a983ab72109ed1168518f25e064114bdf">LOG_FATAL</a></div><div class="ttdeci">#define LOG_FATAL(logger)</div><div class="ttdoc">输出 fatal 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00051">Log.h:51</a></div></div>
+<div class="ttc" id="aLog_8h_html_abf8dce5b90852304a0897b44b9dfd038"><div class="ttname"><a href="Log_8h.html#abf8dce5b90852304a0897b44b9dfd038">LOG_INFO</a></div><div class="ttdeci">#define LOG_INFO(logger)</div><div class="ttdoc">输出 info 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00036">Log.h:36</a></div></div>
+<div class="ttc" id="aLog_8h_html_acac80b4704e84229dd7656618273b1c3"><div class="ttname"><a href="Log_8h.html#acac80b4704e84229dd7656618273b1c3">LOG_ROOT</a></div><div class="ttdeci">#define LOG_ROOT()</div><div class="ttdoc">获取根日志器</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00089">Log.h:89</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1Config_aaac5d5509f3135d327d6daa085417fd7_cgraph.png" border="0" usemap="#aclassGyanis_1_1base_1_1Config_aaac5d5509f3135d327d6daa085417fd7_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a84099fdb5eb24976a7e1e41a36d72875" name="a84099fdb5eb24976a7e1e41a36d72875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84099fdb5eb24976a7e1e41a36d72875">&#9670;&#160;</a></span>LookUpBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1base_1_1ConfigVarBase.html">ConfigVarBase</a> &gt; Gyanis::base::Config::LookUpBase </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>查找配置参数，返回配置参数的基类 </p>
+
+<p class="definition">在文件 <a class="el" href="Config_8cpp_source.html">Config.cpp</a> 第 <a class="el" href="Config_8cpp_source.html#l00162">162</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  163</span>    {</div>
+<div class="line"><span class="lineno">  164</span>        std::shared_lock lock(<a class="code hl_function" href="classGyanis_1_1base_1_1Config.html#a726c8c5dae11835ce9b4aef0231eaf59">GetMutex</a>());</div>
+<div class="line"><span class="lineno">  165</span>        <span class="keyword">const</span> <span class="keyword">auto</span> it = <a class="code hl_function" href="classGyanis_1_1base_1_1Config.html#ab4caff16f695e15b9568a4bccd25f8e5">GetDatas</a>().find(name);</div>
+<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">return</span> it != <a class="code hl_function" href="classGyanis_1_1base_1_1Config.html#ab4caff16f695e15b9568a4bccd25f8e5">GetDatas</a>().end() ? it-&gt;second : <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  167</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1Config_a84099fdb5eb24976a7e1e41a36d72875_icgraph.png" border="0" usemap="#aclassGyanis_1_1base_1_1Config_a84099fdb5eb24976a7e1e41a36d72875_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a94e72d387bad81a0a3dc4eea24c2a4ab" name="a94e72d387bad81a0a3dc4eea24c2a4ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94e72d387bad81a0a3dc4eea24c2a4ab">&#9670;&#160;</a></span>Visit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::base::Config::Visit </td>
+          <td>(</td>
+          <td class="paramtype">const std::function&lt; void(std::shared_ptr&lt; <a class="el" href="classGyanis_1_1base_1_1ConfigVarBase.html">ConfigVarBase</a> &gt;)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>visitor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>遍历配置模块中的所有配置项 </p>
+
+<p class="definition">在文件 <a class="el" href="Config_8cpp_source.html">Config.cpp</a> 第 <a class="el" href="Config_8cpp_source.html#l00169">169</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  170</span>    {</div>
+<div class="line"><span class="lineno">  171</span>        std::shared_lock lock(<a class="code hl_function" href="classGyanis_1_1base_1_1Config.html#a726c8c5dae11835ce9b4aef0231eaf59">GetMutex</a>());</div>
+<div class="line"><span class="lineno">  172</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; datas = <a class="code hl_function" href="classGyanis_1_1base_1_1Config.html#ab4caff16f695e15b9568a4bccd25f8e5">GetDatas</a>();</div>
+<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [str, sConVarBase] : datas)</div>
+<div class="line"><span class="lineno">  174</span>        {</div>
+<div class="line"><span class="lineno">  175</span>            visitor(sConVarBase);</div>
+<div class="line"><span class="lineno">  176</span>        }</div>
+<div class="line"><span class="lineno">  177</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1Config_a94e72d387bad81a0a3dc4eea24c2a4ab_icgraph.png" border="0" usemap="#aclassGyanis_1_1base_1_1Config_a94e72d387bad81a0a3dc4eea24c2a4ab_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/base/<a class="el" href="Config_8h_source.html">Config.h</a></li>
+<li>src/base/<a class="el" href="Config_8cpp_source.html">Config.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGyanis.html">Gyanis</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1base.html">base</a></li><li class="navelem"><a class="el" href="classGyanis_1_1base_1_1Config.html">Config</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+digraph "src/net/http/servlets"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_dd2d28fd72df0d33d2116010ecf4f11d {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="http", fontname="Microsoft YaHei",fontsize=10 style="filled,dashed", URL="dir_dd2d28fd72df0d33d2116010ecf4f11d.html",tooltip=""]
+  dir_a87d5245ba6e97e0571b164d3a2d12f0 [label="servlets", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_a87d5245ba6e97e0571b164d3a2d12f0.html",tooltip=""];
+  }
+  dir_d44c64559bbebec7f509842c48db8b23 [label="include", fillcolor="#edf0f7", color="red", style="filled", URL="dir_d44c64559bbebec7f509842c48db8b23.html",tooltip=""];
+  dir_a87d5245ba6e97e0571b164d3a2d12f0->dir_d44c64559bbebec7f509842c48db8b23 [headlabel="14", labeldistance=1.5 headhref="dir_000016_000008.html" href="dir_000016_000008.html" color="steelblue1" fontcolor="steelblue1"];
+}

@@ -1,0 +1,982 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: Gyanis::db::ISQLData类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGyanis_1_1db_1_1ISQLData.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classGyanis_1_1db_1_1ISQLData-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Gyanis::db::ISQLData类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>用于从 SQL 查询结果集中获取数据的接口  
+ <a href="classGyanis_1_1db_1_1ISQLData.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Db_8h_source.html">Db.h</a>&gt;</code></p>
+<div class="dynheader">
+类 Gyanis::db::ISQLData 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1ISQLData__inherit__graph.png" border="0" usemap="#aGyanis_1_1db_1_1ISQLData_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aea1803a5d65bec449df543460ae2a2e9" id="r_aea1803a5d65bec449df543460ae2a2e9"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#aea1803a5d65bec449df543460ae2a2e9">~ISQLData</a> ()=default</td></tr>
+<tr class="separator:aea1803a5d65bec449df543460ae2a2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cf04389b88e8ed8d0ffb915118c6ec0" id="r_a9cf04389b88e8ed8d0ffb915118c6ec0"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#a9cf04389b88e8ed8d0ffb915118c6ec0">getError</a> () const =0</td></tr>
+<tr class="memdesc:a9cf04389b88e8ed8d0ffb915118c6ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 SQL 操作的错误码  <br /></td></tr>
+<tr class="separator:a9cf04389b88e8ed8d0ffb915118c6ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55b41038109b757bc3f8bf2756ef8e9e" id="r_a55b41038109b757bc3f8bf2756ef8e9e"><td class="memItemLeft" align="right" valign="top">virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#a55b41038109b757bc3f8bf2756ef8e9e">getErrStr</a> () const =0</td></tr>
+<tr class="memdesc:a55b41038109b757bc3f8bf2756ef8e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 SQL 操作失败的错误信息  <br /></td></tr>
+<tr class="separator:a55b41038109b757bc3f8bf2756ef8e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9128f165660973cd731895497f6c92b2" id="r_a9128f165660973cd731895497f6c92b2"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#a9128f165660973cd731895497f6c92b2">getDataCount</a> ()=0</td></tr>
+<tr class="memdesc:a9128f165660973cd731895497f6c92b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取数据集中的行数  <br /></td></tr>
+<tr class="separator:a9128f165660973cd731895497f6c92b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91852487e129ea99b3c401351b48d2be" id="r_a91852487e129ea99b3c401351b48d2be"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#a91852487e129ea99b3c401351b48d2be">getColumnCount</a> ()=0</td></tr>
+<tr class="memdesc:a91852487e129ea99b3c401351b48d2be"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取数据集中列的数量  <br /></td></tr>
+<tr class="separator:a91852487e129ea99b3c401351b48d2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a350869d1e51ca2f8f3b23990ee3adcd4" id="r_a350869d1e51ca2f8f3b23990ee3adcd4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#a350869d1e51ca2f8f3b23990ee3adcd4">getColumnBytes</a> (int index)=0</td></tr>
+<tr class="memdesc:a350869d1e51ca2f8f3b23990ee3adcd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定列的字节大小  <br /></td></tr>
+<tr class="separator:a350869d1e51ca2f8f3b23990ee3adcd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a651819e225a2a2f3f69556edf6146e8c" id="r_a651819e225a2a2f3f69556edf6146e8c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#a651819e225a2a2f3f69556edf6146e8c">getColumnType</a> (int index)=0</td></tr>
+<tr class="memdesc:a651819e225a2a2f3f69556edf6146e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定列的数据类型  <br /></td></tr>
+<tr class="separator:a651819e225a2a2f3f69556edf6146e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eaa09b6a21611b64a9ef88c0aeb7910" id="r_a9eaa09b6a21611b64a9ef88c0aeb7910"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#a9eaa09b6a21611b64a9ef88c0aeb7910">getColumnName</a> (int index)=0</td></tr>
+<tr class="memdesc:a9eaa09b6a21611b64a9ef88c0aeb7910"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定列的列名  <br /></td></tr>
+<tr class="separator:a9eaa09b6a21611b64a9ef88c0aeb7910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae260ac7ab3f871f255862b8c13c81f16" id="r_ae260ac7ab3f871f255862b8c13c81f16"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#ae260ac7ab3f871f255862b8c13c81f16">isNull</a> (int index)=0</td></tr>
+<tr class="memdesc:ae260ac7ab3f871f255862b8c13c81f16"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查指定列的值是否为 NULL  <br /></td></tr>
+<tr class="separator:ae260ac7ab3f871f255862b8c13c81f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a527751c9fc667b66afabd817549ba4a8" id="r_a527751c9fc667b66afabd817549ba4a8"><td class="memItemLeft" align="right" valign="top">virtual int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#a527751c9fc667b66afabd817549ba4a8">getInt8</a> (int index)=0</td></tr>
+<tr class="memdesc:a527751c9fc667b66afabd817549ba4a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定列的 int8 值  <br /></td></tr>
+<tr class="separator:a527751c9fc667b66afabd817549ba4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dc5ee5df3a6266ea2475dc8070051ee" id="r_a6dc5ee5df3a6266ea2475dc8070051ee"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#a6dc5ee5df3a6266ea2475dc8070051ee">getUint8</a> (int index)=0</td></tr>
+<tr class="memdesc:a6dc5ee5df3a6266ea2475dc8070051ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定列的 uint8 值  <br /></td></tr>
+<tr class="separator:a6dc5ee5df3a6266ea2475dc8070051ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2508e7b84fb29a2b639a9941beebc32a" id="r_a2508e7b84fb29a2b639a9941beebc32a"><td class="memItemLeft" align="right" valign="top">virtual int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#a2508e7b84fb29a2b639a9941beebc32a">getInt16</a> (int index)=0</td></tr>
+<tr class="memdesc:a2508e7b84fb29a2b639a9941beebc32a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定列的 int16 值  <br /></td></tr>
+<tr class="separator:a2508e7b84fb29a2b639a9941beebc32a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16cd2fd259ac4c6dd1a241ccbc5f5f6d" id="r_a16cd2fd259ac4c6dd1a241ccbc5f5f6d"><td class="memItemLeft" align="right" valign="top">virtual uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#a16cd2fd259ac4c6dd1a241ccbc5f5f6d">getUint16</a> (int index)=0</td></tr>
+<tr class="memdesc:a16cd2fd259ac4c6dd1a241ccbc5f5f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定列的 uint16 值  <br /></td></tr>
+<tr class="separator:a16cd2fd259ac4c6dd1a241ccbc5f5f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae87ccb395c54d0e84ab2e4acb1fb10fd" id="r_ae87ccb395c54d0e84ab2e4acb1fb10fd"><td class="memItemLeft" align="right" valign="top">virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#ae87ccb395c54d0e84ab2e4acb1fb10fd">getInt32</a> (int index)=0</td></tr>
+<tr class="memdesc:ae87ccb395c54d0e84ab2e4acb1fb10fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定列的 int32 值  <br /></td></tr>
+<tr class="separator:ae87ccb395c54d0e84ab2e4acb1fb10fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa0459084703a9d7d752c6061ac2bb9" id="r_aefa0459084703a9d7d752c6061ac2bb9"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#aefa0459084703a9d7d752c6061ac2bb9">getUint32</a> (int index)=0</td></tr>
+<tr class="memdesc:aefa0459084703a9d7d752c6061ac2bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定列的 uint32 值  <br /></td></tr>
+<tr class="separator:aefa0459084703a9d7d752c6061ac2bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4145fac9e1bccc1e700bd494e2ac7543" id="r_a4145fac9e1bccc1e700bd494e2ac7543"><td class="memItemLeft" align="right" valign="top">virtual int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#a4145fac9e1bccc1e700bd494e2ac7543">getInt64</a> (int index)=0</td></tr>
+<tr class="memdesc:a4145fac9e1bccc1e700bd494e2ac7543"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定列的 int64 值  <br /></td></tr>
+<tr class="separator:a4145fac9e1bccc1e700bd494e2ac7543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb842dae6a64dced0c0e10a53b85b6d6" id="r_acb842dae6a64dced0c0e10a53b85b6d6"><td class="memItemLeft" align="right" valign="top">virtual uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#acb842dae6a64dced0c0e10a53b85b6d6">getUint64</a> (int index)=0</td></tr>
+<tr class="memdesc:acb842dae6a64dced0c0e10a53b85b6d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定列的 uint64 值  <br /></td></tr>
+<tr class="separator:acb842dae6a64dced0c0e10a53b85b6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f083877273ab2b8d934c6e3e1bbe40c" id="r_a9f083877273ab2b8d934c6e3e1bbe40c"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#a9f083877273ab2b8d934c6e3e1bbe40c">getFloat</a> (int index)=0</td></tr>
+<tr class="memdesc:a9f083877273ab2b8d934c6e3e1bbe40c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定列的 float 值  <br /></td></tr>
+<tr class="separator:a9f083877273ab2b8d934c6e3e1bbe40c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1427d90f8a61c202171cd81d564714f" id="r_af1427d90f8a61c202171cd81d564714f"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#af1427d90f8a61c202171cd81d564714f">getDouble</a> (int index)=0</td></tr>
+<tr class="memdesc:af1427d90f8a61c202171cd81d564714f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定列的 double 值  <br /></td></tr>
+<tr class="separator:af1427d90f8a61c202171cd81d564714f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa971c68c18522b4679c61d3849109de6" id="r_aa971c68c18522b4679c61d3849109de6"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#aa971c68c18522b4679c61d3849109de6">getString</a> (int index)=0</td></tr>
+<tr class="memdesc:aa971c68c18522b4679c61d3849109de6"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定列的字符串值  <br /></td></tr>
+<tr class="separator:aa971c68c18522b4679c61d3849109de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac02fb4d842bcf0cdc93c25ee44da5833" id="r_ac02fb4d842bcf0cdc93c25ee44da5833"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#ac02fb4d842bcf0cdc93c25ee44da5833">getBlob</a> (int index)=0</td></tr>
+<tr class="memdesc:ac02fb4d842bcf0cdc93c25ee44da5833"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定列的 blob 值  <br /></td></tr>
+<tr class="separator:ac02fb4d842bcf0cdc93c25ee44da5833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1941a82d2e7740f9bd5bd16d06fe143d" id="r_a1941a82d2e7740f9bd5bd16d06fe143d"><td class="memItemLeft" align="right" valign="top">virtual time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#a1941a82d2e7740f9bd5bd16d06fe143d">getTime</a> (int index)=0</td></tr>
+<tr class="memdesc:a1941a82d2e7740f9bd5bd16d06fe143d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定列的时间戳（time_t）  <br /></td></tr>
+<tr class="separator:a1941a82d2e7740f9bd5bd16d06fe143d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13d7c204e87237b5a5df3d5bb494c6d4" id="r_a13d7c204e87237b5a5df3d5bb494c6d4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html#a13d7c204e87237b5a5df3d5bb494c6d4">next</a> ()=0</td></tr>
+<tr class="memdesc:a13d7c204e87237b5a5df3d5bb494c6d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">移动到结果集中的下一行  <br /></td></tr>
+<tr class="separator:a13d7c204e87237b5a5df3d5bb494c6d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>用于从 SQL 查询结果集中获取数据的接口 </p>
+
+<p class="definition">在文件 <a class="el" href="Db_8h_source.html">Db.h</a> 第 <a class="el" href="Db_8h_source.html#l00019">19</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aea1803a5d65bec449df543460ae2a2e9" name="aea1803a5d65bec449df543460ae2a2e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea1803a5d65bec449df543460ae2a2e9">&#9670;&#160;</a></span>~ISQLData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Gyanis::db::ISQLData::~ISQLData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ac02fb4d842bcf0cdc93c25ee44da5833" name="ac02fb4d842bcf0cdc93c25ee44da5833"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac02fb4d842bcf0cdc93c25ee44da5833">&#9670;&#160;</a></span>getBlob()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string Gyanis::db::ISQLData::getBlob </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定列的 blob 值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>列的索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#a9b269e261b527a80ff9f5baf56e8f180">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#a70bb95e05296c26658082d1c717ba42e">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a350869d1e51ca2f8f3b23990ee3adcd4" name="a350869d1e51ca2f8f3b23990ee3adcd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a350869d1e51ca2f8f3b23990ee3adcd4">&#9670;&#160;</a></span>getColumnBytes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Gyanis::db::ISQLData::getColumnBytes </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定列的字节大小 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>列的索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#af92cded999f770d2d42aab4de385e14c">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#ad18b5efaed2f855d020cced557ce1239">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a91852487e129ea99b3c401351b48d2be" name="a91852487e129ea99b3c401351b48d2be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91852487e129ea99b3c401351b48d2be">&#9670;&#160;</a></span>getColumnCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Gyanis::db::ISQLData::getColumnCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取数据集中列的数量 </p>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#a7d0e016fa5a215ed2977774baf995df9">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#a0b8e6589094ca3a51c67b159c0aff5e3">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a9eaa09b6a21611b64a9ef88c0aeb7910" name="a9eaa09b6a21611b64a9ef88c0aeb7910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eaa09b6a21611b64a9ef88c0aeb7910">&#9670;&#160;</a></span>getColumnName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string Gyanis::db::ISQLData::getColumnName </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定列的列名 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>列的索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#a6ca997072150dbf93790bc5b0719e02f">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#a8e17766b7c8abedabf7c7abfa85c4cf2">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a651819e225a2a2f3f69556edf6146e8c" name="a651819e225a2a2f3f69556edf6146e8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a651819e225a2a2f3f69556edf6146e8c">&#9670;&#160;</a></span>getColumnType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Gyanis::db::ISQLData::getColumnType </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定列的数据类型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>列的索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#a1d2ed4255127d2d307f5e23aff0ef051">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#a5dbd83cdfecef41fa4ad5ea0870cfc8c">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a9128f165660973cd731895497f6c92b2" name="a9128f165660973cd731895497f6c92b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9128f165660973cd731895497f6c92b2">&#9670;&#160;</a></span>getDataCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Gyanis::db::ISQLData::getDataCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取数据集中的行数 </p>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#afca1353e153b82892dbbc5a280e9ba11">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#a11de0e4b787bbb73fea8868d78abebfa">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="af1427d90f8a61c202171cd81d564714f" name="af1427d90f8a61c202171cd81d564714f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1427d90f8a61c202171cd81d564714f">&#9670;&#160;</a></span>getDouble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double Gyanis::db::ISQLData::getDouble </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定列的 double 值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>列的索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#a8c8d678aee24d0f89bf4a9cec97e46b6">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#a357cd669e08e6166587d30e74dd3389c">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a9cf04389b88e8ed8d0ffb915118c6ec0" name="a9cf04389b88e8ed8d0ffb915118c6ec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cf04389b88e8ed8d0ffb915118c6ec0">&#9670;&#160;</a></span>getError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Gyanis::db::ISQLData::getError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取 SQL 操作的错误码 </p>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#a58e92261f66cb510a7fbbf3d85915b6a">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#abae5b647514725a9d9cee359a00263d3">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a55b41038109b757bc3f8bf2756ef8e9e" name="a55b41038109b757bc3f8bf2756ef8e9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55b41038109b757bc3f8bf2756ef8e9e">&#9670;&#160;</a></span>getErrStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const std::string &amp; Gyanis::db::ISQLData::getErrStr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取 SQL 操作失败的错误信息 </p>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#ac693738b027accdde3daf6d9649d06c8">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#a1da775daa009692bcab24e8edd70f5ea">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a9f083877273ab2b8d934c6e3e1bbe40c" name="a9f083877273ab2b8d934c6e3e1bbe40c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f083877273ab2b8d934c6e3e1bbe40c">&#9670;&#160;</a></span>getFloat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float Gyanis::db::ISQLData::getFloat </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定列的 float 值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>列的索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#acd0187c07bd97c2f69e95468939b8925">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#a18fff1c6ef2f1b9dbf606a3fc6e84ff0">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a2508e7b84fb29a2b639a9941beebc32a" name="a2508e7b84fb29a2b639a9941beebc32a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2508e7b84fb29a2b639a9941beebc32a">&#9670;&#160;</a></span>getInt16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int16_t Gyanis::db::ISQLData::getInt16 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定列的 int16 值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>列的索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#af1c6c0332e3566b2a1c59d7e4fffe166">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#a4ec5b9596ed65bfed460d8da988940b7">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="ae87ccb395c54d0e84ab2e4acb1fb10fd" name="ae87ccb395c54d0e84ab2e4acb1fb10fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae87ccb395c54d0e84ab2e4acb1fb10fd">&#9670;&#160;</a></span>getInt32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int32_t Gyanis::db::ISQLData::getInt32 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定列的 int32 值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>列的索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#a5549f640f1e2ca3e0df01a333ced022d">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#a48ad762f04f777f577466bb8d707be2f">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a4145fac9e1bccc1e700bd494e2ac7543" name="a4145fac9e1bccc1e700bd494e2ac7543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4145fac9e1bccc1e700bd494e2ac7543">&#9670;&#160;</a></span>getInt64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int64_t Gyanis::db::ISQLData::getInt64 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定列的 int64 值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>列的索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#a27a81dffd22086bb935b93cf378e1c88">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#a6e6a3314e315c3634f07657e6ee1fd89">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a527751c9fc667b66afabd817549ba4a8" name="a527751c9fc667b66afabd817549ba4a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a527751c9fc667b66afabd817549ba4a8">&#9670;&#160;</a></span>getInt8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int8_t Gyanis::db::ISQLData::getInt8 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定列的 int8 值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>列的索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#ae852c97a13e3cf698dedc5d6e9086bde">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#ad490d28164087c127ac7d8d3979cc1df">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="aa971c68c18522b4679c61d3849109de6" name="aa971c68c18522b4679c61d3849109de6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa971c68c18522b4679c61d3849109de6">&#9670;&#160;</a></span>getString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string Gyanis::db::ISQLData::getString </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定列的字符串值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>列的索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#adb7668394e7e1c721a5674e335eed915">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#a9be1ca8e9e88f87ee587f1ad767037c5">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a1941a82d2e7740f9bd5bd16d06fe143d" name="a1941a82d2e7740f9bd5bd16d06fe143d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1941a82d2e7740f9bd5bd16d06fe143d">&#9670;&#160;</a></span>getTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual time_t Gyanis::db::ISQLData::getTime </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定列的时间戳（time_t） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>列的索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#a0e91d24f1376e600da47d7642bff16a0">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#a432e5ae307057e85964029a0a8e06b50">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a16cd2fd259ac4c6dd1a241ccbc5f5f6d" name="a16cd2fd259ac4c6dd1a241ccbc5f5f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16cd2fd259ac4c6dd1a241ccbc5f5f6d">&#9670;&#160;</a></span>getUint16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint16_t Gyanis::db::ISQLData::getUint16 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定列的 uint16 值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>列的索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#a58e40bb06d02e65303698a8509278996">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#a0e831a1b801eb8fad5ce02425dc0df1a">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="aefa0459084703a9d7d752c6061ac2bb9" name="aefa0459084703a9d7d752c6061ac2bb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefa0459084703a9d7d752c6061ac2bb9">&#9670;&#160;</a></span>getUint32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint32_t Gyanis::db::ISQLData::getUint32 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定列的 uint32 值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>列的索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#a38ae3a2b5c5156c0ad783bd106ac2377">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#ab048ab1bf5b30fca527bc74f868db5b3">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="acb842dae6a64dced0c0e10a53b85b6d6" name="acb842dae6a64dced0c0e10a53b85b6d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb842dae6a64dced0c0e10a53b85b6d6">&#9670;&#160;</a></span>getUint64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint64_t Gyanis::db::ISQLData::getUint64 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定列的 uint64 值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>列的索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#a3d1c5b36ca3ea8d9f7ef2d55f8637de8">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#a4ab4e4bdedd38305f2cfa0d618c38c87">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a6dc5ee5df3a6266ea2475dc8070051ee" name="a6dc5ee5df3a6266ea2475dc8070051ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dc5ee5df3a6266ea2475dc8070051ee">&#9670;&#160;</a></span>getUint8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint8_t Gyanis::db::ISQLData::getUint8 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定列的 uint8 值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>列的索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#a956a7b08162fa59808f0c58eff914f3a">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#a9a74ef9a70f34af4a7dc261cffea3cf1">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="ae260ac7ab3f871f255862b8c13c81f16" name="ae260ac7ab3f871f255862b8c13c81f16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae260ac7ab3f871f255862b8c13c81f16">&#9670;&#160;</a></span>isNull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Gyanis::db::ISQLData::isNull </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查指定列的值是否为 NULL </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>列的索引 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#a499a807633408f702695b734cb8c0077">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#a1c90677407c6548af4dc296eba3f464c">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a13d7c204e87237b5a5df3d5bb494c6d4" name="a13d7c204e87237b5a5df3d5bb494c6d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13d7c204e87237b5a5df3d5bb494c6d4">&#9670;&#160;</a></span>next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Gyanis::db::ISQLData::next </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>移动到结果集中的下一行 </p>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1MySQLRes.html#a3b5019b73d36ec555037946d15c25f54">Gyanis::db::MySQLRes</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1MySQLStmtRes.html#a63bab41ce864e6218b2f4ee5489c0a93">Gyanis::db::MySQLStmtRes</a> 内被实现.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/db/<a class="el" href="Db_8h_source.html">Db.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGyanis.html">Gyanis</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1db.html">db</a></li><li class="navelem"><a class="el" href="classGyanis_1_1db_1_1ISQLData.html">ISQLData</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

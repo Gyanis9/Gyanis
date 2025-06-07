@@ -1,0 +1,19 @@
+digraph "Gyanis::net::stream::ByteArray::writeInt32"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="Gyanis::net::stream\l::ByteArray::writeInt32",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="写入 32 位有符号整数（不使用符号）"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::net::stream\l::EncodeZigzag",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1net_1_1stream.html#ad2c4c8be407cdc6550a8130237d876a6",tooltip="Zigzag 编码"];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Gyanis::net::stream\l::ByteArray::writeUint32",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1stream_1_1ByteArray.html#a0e2389decb7f809d506d04e2102c648c",tooltip="写入 32 位无符号整数（不使用符号）"];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Gyanis::net::stream\l::ByteArray::write",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1stream_1_1ByteArray.html#a7abd351496cb8b698b955b8c00ffa9ee",tooltip="写入原始字节数据"];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="Gyanis::net::stream\l::ByteArray::addCapacity",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1stream_1_1ByteArray.html#a685d6ecfa403b7b2d64026e0cd244392",tooltip="增加字节数组容量"];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="Gyanis::net::stream\l::ByteArray::getCapacity",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1stream_1_1ByteArray.html#a7544af829ba0a5a0517df8380d8890c3",tooltip="获取剩余的容量"];
+}

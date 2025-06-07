@@ -1,0 +1,11 @@
+digraph "Gyanis::core::IOManager::delEvent"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="Gyanis::core::IOManager\l::delEvent",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="删除 IO 事件"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::core::IOManager\l::FdContext::resetContext",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structGyanis_1_1core_1_1IOManager_1_1FdContext.html#aa2954fc5acb00808362a5f5339274b40",tooltip="重置事件上下文"];
+}

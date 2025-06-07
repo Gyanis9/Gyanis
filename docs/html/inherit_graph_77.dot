@@ -1,0 +1,9 @@
+digraph "类继承关系图"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="Gyanis::net::rock::\lRockMsgHeader",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structGyanis_1_1net_1_1rock_1_1RockMsgHeader.html",tooltip="Rock 消息头结构，包含消息的基本信息，如魔数、版本、标志和消息长度"];
+}

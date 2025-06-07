@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: include/base/Utils.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Utils_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Utils.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Utils_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef UTILS_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define UTILS_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;cxxabi.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;filesystem&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;yaml-cpp/yaml.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;boost/lexical_cast.hpp&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceGyanis_1_1base.html">Gyanis::base</a></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="namespaceGyanis_1_1base.html#a87318d2728344a2ad924f3ca93856603">   23</a></span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="namespaceGyanis_1_1base.html#a87318d2728344a2ad924f3ca93856603">TypeToName</a>()</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* s_name = abi::__cxa_demangle(<span class="keyword">typeid</span>(T).name(), <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">return</span> s_name;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="namespaceGyanis_1_1base.html#af8c9fd2c16b89911fff920119eaba1b9">demangle</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    pid_t <a class="code hl_function" href="namespaceGyanis_1_1base.html#aa80cc0a553c8b24f4d7be5dd98f9451d">GetThreadID</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceGyanis_1_1base.html#a865abe397c7fae971d71dbc260275e38">captureBacktrace</a>(std::vector&lt;std::string&gt;&amp; backtrace_output, <span class="keywordtype">int</span> max_depth, <span class="keywordtype">int</span> skip_frames);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    std::string <a class="code hl_function" href="namespaceGyanis_1_1base.html#a998d9edcc360032ff06262fc42e9144d">backtraceToString</a>(<span class="keywordtype">int</span> max_depth, <span class="keywordtype">int</span> skip_frames, <span class="keyword">const</span> std::string&amp; prefix);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> ValueType, <span class="keyword">class</span> MapType, <span class="keyword">class</span> KeyType&gt;</div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="namespaceGyanis_1_1base.html#aaebcb2a6bec6c2ec9709f0b9fccc3fda">   59</a></span>    ValueType <a class="code hl_function" href="namespaceGyanis_1_1base.html#aaebcb2a6bec6c2ec9709f0b9fccc3fda">GetParamValue</a>(<span class="keyword">const</span> MapType&amp; param_map, <span class="keyword">const</span> KeyType&amp; key, <span class="keyword">const</span> ValueType&amp; default_value = ValueType())</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="comment">// 查找键值对是否存在</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">auto</span> iterator = param_map.find(key);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="comment">// 如果找不到指定的键，返回默认值</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">if</span> (iterator == param_map.end())</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">return</span> default_value;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="comment">// 使用 boost::lexical_cast 将找到的值转换为期望的类型</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="keywordflow">return</span> boost::lexical_cast&lt;ValueType&gt;(iterator-&gt;second);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">catch</span> (...)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="comment">// 捕获所有异常，若转换失败则返回默认值</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="comment">// 转换失败时返回默认值</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">return</span> default_value;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="namespaceGyanis_1_1base.html#ab4a30d9d7047dc9c32b3d29cda626cb6">   85</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceGyanis_1_1base.html#ab4a30d9d7047dc9c32b3d29cda626cb6">nop</a>(T*)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00093" data-start="{" data-end="}">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="namespaceGyanis_1_1base.html#ad808df100d964130b4c53e2985de352d">   93</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceGyanis_1_1base.html#ad808df100d964130b4c53e2985de352d">delete_array</a>(T* ptr)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keyword">delete</span>[] ptr;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="namespaceGyanis_1_1base.html#abb8cc64e63cb95624288f9c9d265035d">hex_digit_to_value</a>(<span class="keywordtype">char</span> c);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    std::string <a class="code hl_function" href="namespaceGyanis_1_1base.html#a4b62a6e107d818c869c1620744b6d099">UrlDecode</a>(<span class="keyword">const</span> std::string&amp; str, <span class="keywordtype">bool</span> space_as_plus = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    std::string <a class="code hl_function" href="namespaceGyanis_1_1base.html#a27270bc5e2442eb9e6675fc74914379b">Trim</a>(<span class="keyword">const</span> std::string&amp; str, <span class="keyword">const</span> std::string&amp; delimit = <span class="stringliteral">&quot; \t\r\n&quot;</span>);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    std::string <a class="code hl_function" href="namespaceGyanis_1_1base.html#acb782dfcae17627e3aa67129f6b3a3f3">Time2Str</a>(time_t ts = time(<span class="keyword">nullptr</span>), <span class="keyword">const</span> std::string&amp; format = <span class="stringliteral">&quot;%Y-%m-%d %H:%M:%S&quot;</span>);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    time_t <a class="code hl_function" href="namespaceGyanis_1_1base.html#abeb5e59baa254f29e5c668f2443797c8">Str2Time</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str, <span class="keyword">const</span> <span class="keywordtype">char</span>* format = <span class="stringliteral">&quot;%Y-%m-%d %H:%M:%S&quot;</span>);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceGyanis_1_1base.html#a0e8771006d03b97124e2772d20b50907">YamlToJson</a>(<span class="keyword">const</span> YAML::Node&amp; ynode, nlohmann::json&amp; jnode);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceGyanis_1_1base.html#a8a9c919ba848c9e7a7ae4e9c89356300">JsonToYaml</a>(<span class="keyword">const</span> nlohmann::json&amp; jnode, YAML::Node&amp; ynode);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    std::string <a class="code hl_function" href="namespaceGyanis_1_1base.html#a174e031226f82a2a6a8bdd7722a8f559">GetHostName</a>();</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    std::string <a class="code hl_function" href="namespaceGyanis_1_1base.html#a0b05875ba240f584b7c9b32c1d743149">GetIPv4</a>();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="foldopen" id="foldopen00132" data-start="{" data-end="};">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1StringUtil.html">  132</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyanis_1_1base_1_1StringUtil.html">StringUtil</a></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="classGyanis_1_1base_1_1StringUtil.html#a59293578770984a7e72268412bba4fa7">Format</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fmt, ...);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="classGyanis_1_1base_1_1StringUtil.html#aee6fb467c33c004bb364dac307c5b0ff">Formatv</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fmt, va_list ap);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="classGyanis_1_1base_1_1StringUtil.html#a2ef4c0081c90d1600034b3eaccce79dd">UrlEncode</a>(<span class="keyword">const</span> std::string&amp; str, <span class="keywordtype">bool</span> space_as_plus = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="classGyanis_1_1base_1_1StringUtil.html#aca3f0e3a5c037cb443ba33e377bdaab9">UrlDecode</a>(<span class="keyword">const</span> std::string&amp; str, <span class="keywordtype">bool</span> space_as_plus = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="classGyanis_1_1base_1_1StringUtil.html#a74b71ef66d63fb4c5d0113b6da3e0e5f">Trim</a>(<span class="keyword">const</span> std::string&amp; str, <span class="keyword">const</span> std::string&amp; delimit = <span class="stringliteral">&quot; \t\r\n&quot;</span>);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="classGyanis_1_1base_1_1StringUtil.html#a07ba10a547bc1586f1ae998b14864beb">TrimLeft</a>(<span class="keyword">const</span> std::string&amp; str, <span class="keyword">const</span> std::string&amp; delimit = <span class="stringliteral">&quot; \t\r\n&quot;</span>);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="classGyanis_1_1base_1_1StringUtil.html#a59fdc3696004147140a1bccf63c06cc3">TrimRight</a>(<span class="keyword">const</span> std::string&amp; str, <span class="keyword">const</span> std::string&amp; delimit = <span class="stringliteral">&quot; \t\r\n&quot;</span>);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="classGyanis_1_1base_1_1StringUtil.html#a23fbe24ebd89b37b9bdf90655275e02a">WStringToString</a>(<span class="keyword">const</span> std::wstring&amp; ws);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="keyword">static</span> std::wstring <a class="code hl_function" href="classGyanis_1_1base_1_1StringUtil.html#a9a7d418f17c80e00230a1859641d5fea">StringToWString</a>(<span class="keyword">const</span> std::string&amp; s);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    };</div>
+</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="foldopen" id="foldopen00197" data-start="{" data-end="};">
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1TypeUtil.html">  197</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyanis_1_1base_1_1TypeUtil.html">TypeUtil</a></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    {</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="keyword">static</span> int8_t <a class="code hl_function" href="classGyanis_1_1base_1_1TypeUtil.html#a3547d7fee9429fd7555014720bacd3cd">ToChar</a>(<span class="keyword">const</span> std::string&amp; str);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <span class="keyword">static</span> int64_t <a class="code hl_function" href="classGyanis_1_1base_1_1TypeUtil.html#a7e07e93686813ab2032fcf169987e2ee">Atoi</a>(<span class="keyword">const</span> std::string&amp; str);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classGyanis_1_1base_1_1TypeUtil.html#a76d7228869b4908eb4e03b3f55850dc4">Atof</a>(<span class="keyword">const</span> std::string&amp; str);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <span class="keyword">static</span> int8_t <a class="code hl_function" href="classGyanis_1_1base_1_1TypeUtil.html#a3547d7fee9429fd7555014720bacd3cd">ToChar</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str);</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <span class="keyword">static</span> int64_t <a class="code hl_function" href="classGyanis_1_1base_1_1TypeUtil.html#a7e07e93686813ab2032fcf169987e2ee">Atoi</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classGyanis_1_1base_1_1TypeUtil.html#a76d7228869b4908eb4e03b3f55850dc4">Atof</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    };</div>
+</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="foldopen" id="foldopen00240" data-start="{" data-end="};">
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1FSUtil.html">  240</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyanis_1_1base_1_1FSUtil.html">FSUtil</a></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    {</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1base_1_1FSUtil.html#ac4bc8167b07a40a1c10ebff370604919">ListAllFile</a>(std::vector&lt;std::string&gt;&amp; files, <span class="keyword">const</span> std::string&amp; path, <span class="keyword">const</span> std::string&amp; subfix);</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1base_1_1FSUtil.html#ae035d7cfaa03083803e00d571e83b041">Mkdir</a>(<span class="keyword">const</span> std::string&amp; dirname);</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1base_1_1FSUtil.html#a4ec5f713dd87e424347aa53dff0aae13">IsRunningPidfile</a>(<span class="keyword">const</span> std::string&amp; pidfile);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1base_1_1FSUtil.html#ab8c36d0afe2a3a9f4eead74e4d168ffb">Rm</a>(<span class="keyword">const</span> std::string&amp; path);</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1base_1_1FSUtil.html#a3056e6bdca5b622f3cecf0e477af177f">Mv</a>(<span class="keyword">const</span> std::string&amp; from, <span class="keyword">const</span> std::string&amp; to);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1base_1_1FSUtil.html#a3460ac9d1214fcdbba5e02170a041fc8">Realpath</a>(<span class="keyword">const</span> std::string&amp; path, std::string&amp; rpath);</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1base_1_1FSUtil.html#a28bc6967a1a018e891d0c08235e39470">Symlink</a>(<span class="keyword">const</span> std::string&amp; from, <span class="keyword">const</span> std::string&amp; to);</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1base_1_1FSUtil.html#adc3d37dc3628bbb92e49630ce3b32a29">Unlink</a>(<span class="keyword">const</span> std::string&amp; filename, <span class="keywordtype">bool</span> exist = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="classGyanis_1_1base_1_1FSUtil.html#ad724104e64f34df20d6990104753af3e">Dirname</a>(<span class="keyword">const</span> std::string&amp; filename);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="classGyanis_1_1base_1_1FSUtil.html#adb086038838a720db20c5f886cb4b60c">Basename</a>(<span class="keyword">const</span> std::string&amp; filename);</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1base_1_1FSUtil.html#a07550607b47b02015cf8bee63143b2aa">OpenForRead</a>(std::ifstream&amp; ifs, <span class="keyword">const</span> std::string&amp; filename, std::ios_base::openmode mode);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1base_1_1FSUtil.html#ab3964c2e3ec0178a85539c993ac54568">OpenForWrite</a>(std::ofstream&amp; ofs, <span class="keyword">const</span> std::string&amp; filename, std::ios_base::openmode mode);</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    };</div>
+</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
+<div class="foldopen" id="foldopen00330" data-start="{" data-end="};">
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1Atomic.html">  330</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyanis_1_1base_1_1Atomic.html">Atomic</a></div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    {</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> S = T&gt;</div>
+<div class="foldopen" id="foldopen00334" data-start="{" data-end="}">
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1Atomic.html#af3d3c86cdb4ae7bf29b8d6155db0a822">  334</a></span>        <span class="keyword">static</span> T <a class="code hl_function" href="classGyanis_1_1base_1_1Atomic.html#af3d3c86cdb4ae7bf29b8d6155db0a822">addFetch</a>(<span class="keyword">volatile</span> T&amp; t, S v = 1)</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>        {</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>            <span class="keywordflow">return</span> __sync_add_and_fetch(&amp;t, (T)v);</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>        }</div>
+</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> S = T&gt;</div>
+<div class="foldopen" id="foldopen00340" data-start="{" data-end="}">
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1Atomic.html#ad3526a307ea4ace2c2c9ba6cccbf195f">  340</a></span>        <span class="keyword">static</span> T <a class="code hl_function" href="classGyanis_1_1base_1_1Atomic.html#ad3526a307ea4ace2c2c9ba6cccbf195f">subFetch</a>(<span class="keyword">volatile</span> T&amp; t, S v = 1)</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>        {</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            <span class="keywordflow">return</span> __sync_sub_and_fetch(&amp;t, (T)v);</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        }</div>
+</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> S&gt;</div>
+<div class="foldopen" id="foldopen00346" data-start="{" data-end="}">
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1Atomic.html#aabaf68d5dc7ec047d6952abcaf97dbea">  346</a></span>        <span class="keyword">static</span> T <a class="code hl_function" href="classGyanis_1_1base_1_1Atomic.html#aabaf68d5dc7ec047d6952abcaf97dbea">orFetch</a>(<span class="keyword">volatile</span> T&amp; t, S v)</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        {</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>            <span class="keywordflow">return</span> __sync_or_and_fetch(&amp;t, (T)v);</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        }</div>
+</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> S&gt;</div>
+<div class="foldopen" id="foldopen00352" data-start="{" data-end="}">
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1Atomic.html#aa9101acefaccceaa29c27f508ab395c7">  352</a></span>        <span class="keyword">static</span> T <a class="code hl_function" href="classGyanis_1_1base_1_1Atomic.html#aa9101acefaccceaa29c27f508ab395c7">andFetch</a>(<span class="keyword">volatile</span> T&amp; t, S v)</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>        {</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>            <span class="keywordflow">return</span> __sync_and_and_fetch(&amp;t, (T)v);</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        }</div>
+</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> S&gt;</div>
+<div class="foldopen" id="foldopen00358" data-start="{" data-end="}">
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1Atomic.html#a99807d082da7c5715a31c42a9dede00c">  358</a></span>        <span class="keyword">static</span> T <a class="code hl_function" href="classGyanis_1_1base_1_1Atomic.html#a99807d082da7c5715a31c42a9dede00c">xorFetch</a>(<span class="keyword">volatile</span> T&amp; t, S v)</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        {</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>            <span class="keywordflow">return</span> __sync_xor_and_fetch(&amp;t, (T)v);</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        }</div>
+</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> S&gt;</div>
+<div class="foldopen" id="foldopen00364" data-start="{" data-end="}">
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1Atomic.html#ae8afabdc2a4a85553c98910a695bd74d">  364</a></span>        <span class="keyword">static</span> T <a class="code hl_function" href="classGyanis_1_1base_1_1Atomic.html#ae8afabdc2a4a85553c98910a695bd74d">nandFetch</a>(<span class="keyword">volatile</span> T&amp; t, S v)</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>        {</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>            <span class="keywordflow">return</span> __sync_nand_and_fetch(&amp;t, (T)v);</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        }</div>
+</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span> </div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> S&gt;</div>
+<div class="foldopen" id="foldopen00370" data-start="{" data-end="}">
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1Atomic.html#a5842a7c872930516f3eddbb17b9f2765">  370</a></span>        <span class="keyword">static</span> T <a class="code hl_function" href="classGyanis_1_1base_1_1Atomic.html#a5842a7c872930516f3eddbb17b9f2765">fetchAdd</a>(<span class="keyword">volatile</span> T&amp; t, S v = 1)</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>        {</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>            <span class="keywordflow">return</span> __sync_fetch_and_add(&amp;t, (T)v);</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>        }</div>
+</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span> </div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> S&gt;</div>
+<div class="foldopen" id="foldopen00376" data-start="{" data-end="}">
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1Atomic.html#a9c6b260569e6465d79ee9dc6d2bf32da">  376</a></span>        <span class="keyword">static</span> T <a class="code hl_function" href="classGyanis_1_1base_1_1Atomic.html#a9c6b260569e6465d79ee9dc6d2bf32da">fetchSub</a>(<span class="keyword">volatile</span> T&amp; t, S v = 1)</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>        {</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>            <span class="keywordflow">return</span> __sync_fetch_and_sub(&amp;t, (T)v);</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>        }</div>
+</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span> </div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> S&gt;</div>
+<div class="foldopen" id="foldopen00382" data-start="{" data-end="}">
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1Atomic.html#a655c579f45d0bcd05b04fdb011b1dac7">  382</a></span>        <span class="keyword">static</span> T <a class="code hl_function" href="classGyanis_1_1base_1_1Atomic.html#a655c579f45d0bcd05b04fdb011b1dac7">fetchOr</a>(<span class="keyword">volatile</span> T&amp; t, S v)</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>        {</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>            <span class="keywordflow">return</span> __sync_fetch_and_or(&amp;t, (T)v);</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>        }</div>
+</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span> </div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> S&gt;</div>
+<div class="foldopen" id="foldopen00388" data-start="{" data-end="}">
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1Atomic.html#a1c073a6a86a12117aed1af37a3d8d12c">  388</a></span>        <span class="keyword">static</span> T <a class="code hl_function" href="classGyanis_1_1base_1_1Atomic.html#a1c073a6a86a12117aed1af37a3d8d12c">fetchAnd</a>(<span class="keyword">volatile</span> T&amp; t, S v)</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>        {</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>            <span class="keywordflow">return</span> __sync_fetch_and_and(&amp;t, (T)v);</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>        }</div>
+</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span> </div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> S&gt;</div>
+<div class="foldopen" id="foldopen00394" data-start="{" data-end="}">
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1Atomic.html#a1f137486956d9ababcea6f5c9dffd32a">  394</a></span>        <span class="keyword">static</span> T <a class="code hl_function" href="classGyanis_1_1base_1_1Atomic.html#a1f137486956d9ababcea6f5c9dffd32a">fetchXor</a>(<span class="keyword">volatile</span> T&amp; t, S v)</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>        {</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>            <span class="keywordflow">return</span> __sync_fetch_and_xor(&amp;t, (T)v);</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>        }</div>
+</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span> </div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> S&gt;</div>
+<div class="foldopen" id="foldopen00400" data-start="{" data-end="}">
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1Atomic.html#a9351d3386776d5d71e0cd9ceb59de638">  400</a></span>        <span class="keyword">static</span> T <a class="code hl_function" href="classGyanis_1_1base_1_1Atomic.html#a9351d3386776d5d71e0cd9ceb59de638">fetchNand</a>(<span class="keyword">volatile</span> T&amp; t, S v)</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>        {</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>            <span class="keywordflow">return</span> __sync_fetch_and_nand(&amp;t, (T)v);</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>        }</div>
+</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span> </div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> S&gt;</div>
+<div class="foldopen" id="foldopen00406" data-start="{" data-end="}">
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1Atomic.html#a9b9d89aaa1dd848e93e33b6fc5bed224">  406</a></span>        <span class="keyword">static</span> T <a class="code hl_function" href="classGyanis_1_1base_1_1Atomic.html#a9b9d89aaa1dd848e93e33b6fc5bed224">compareAndSwap</a>(<span class="keyword">volatile</span> T&amp; t, S old_val, S new_val)</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>        {</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>            <span class="keywordflow">return</span> __sync_val_compare_and_swap(&amp;t, (T)old_val, (T)new_val);</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>        }</div>
+</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span> </div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T, <span class="keyword">class</span> S&gt;</div>
+<div class="foldopen" id="foldopen00412" data-start="{" data-end="}">
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno"><a class="line" href="classGyanis_1_1base_1_1Atomic.html#a184c580a3dc27bf379c8b9f303f56c15">  412</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1base_1_1Atomic.html#a184c580a3dc27bf379c8b9f303f56c15">compareAndSwapBool</a>(<span class="keyword">volatile</span> T&amp; t, S old_val, S new_val)</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>        {</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>            <span class="keywordflow">return</span> __sync_bool_compare_and_swap(&amp;t, (T)old_val, (T)new_val);</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>        }</div>
+</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>    };</div>
+</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>}</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span> </div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Atomic_html"><div class="ttname"><a href="classGyanis_1_1base_1_1Atomic.html">Gyanis::base::Atomic</a></div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00330">Utils.h:331</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Atomic_html_a184c580a3dc27bf379c8b9f303f56c15"><div class="ttname"><a href="classGyanis_1_1base_1_1Atomic.html#a184c580a3dc27bf379c8b9f303f56c15">Gyanis::base::Atomic::compareAndSwapBool</a></div><div class="ttdeci">static bool compareAndSwapBool(volatile T &amp;t, S old_val, S new_val)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00412">Utils.h:412</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Atomic_html_a1c073a6a86a12117aed1af37a3d8d12c"><div class="ttname"><a href="classGyanis_1_1base_1_1Atomic.html#a1c073a6a86a12117aed1af37a3d8d12c">Gyanis::base::Atomic::fetchAnd</a></div><div class="ttdeci">static T fetchAnd(volatile T &amp;t, S v)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00388">Utils.h:388</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Atomic_html_a1f137486956d9ababcea6f5c9dffd32a"><div class="ttname"><a href="classGyanis_1_1base_1_1Atomic.html#a1f137486956d9ababcea6f5c9dffd32a">Gyanis::base::Atomic::fetchXor</a></div><div class="ttdeci">static T fetchXor(volatile T &amp;t, S v)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00394">Utils.h:394</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Atomic_html_a5842a7c872930516f3eddbb17b9f2765"><div class="ttname"><a href="classGyanis_1_1base_1_1Atomic.html#a5842a7c872930516f3eddbb17b9f2765">Gyanis::base::Atomic::fetchAdd</a></div><div class="ttdeci">static T fetchAdd(volatile T &amp;t, S v=1)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00370">Utils.h:370</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Atomic_html_a655c579f45d0bcd05b04fdb011b1dac7"><div class="ttname"><a href="classGyanis_1_1base_1_1Atomic.html#a655c579f45d0bcd05b04fdb011b1dac7">Gyanis::base::Atomic::fetchOr</a></div><div class="ttdeci">static T fetchOr(volatile T &amp;t, S v)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00382">Utils.h:382</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Atomic_html_a9351d3386776d5d71e0cd9ceb59de638"><div class="ttname"><a href="classGyanis_1_1base_1_1Atomic.html#a9351d3386776d5d71e0cd9ceb59de638">Gyanis::base::Atomic::fetchNand</a></div><div class="ttdeci">static T fetchNand(volatile T &amp;t, S v)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00400">Utils.h:400</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Atomic_html_a99807d082da7c5715a31c42a9dede00c"><div class="ttname"><a href="classGyanis_1_1base_1_1Atomic.html#a99807d082da7c5715a31c42a9dede00c">Gyanis::base::Atomic::xorFetch</a></div><div class="ttdeci">static T xorFetch(volatile T &amp;t, S v)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00358">Utils.h:358</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Atomic_html_a9b9d89aaa1dd848e93e33b6fc5bed224"><div class="ttname"><a href="classGyanis_1_1base_1_1Atomic.html#a9b9d89aaa1dd848e93e33b6fc5bed224">Gyanis::base::Atomic::compareAndSwap</a></div><div class="ttdeci">static T compareAndSwap(volatile T &amp;t, S old_val, S new_val)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00406">Utils.h:406</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Atomic_html_a9c6b260569e6465d79ee9dc6d2bf32da"><div class="ttname"><a href="classGyanis_1_1base_1_1Atomic.html#a9c6b260569e6465d79ee9dc6d2bf32da">Gyanis::base::Atomic::fetchSub</a></div><div class="ttdeci">static T fetchSub(volatile T &amp;t, S v=1)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00376">Utils.h:376</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Atomic_html_aa9101acefaccceaa29c27f508ab395c7"><div class="ttname"><a href="classGyanis_1_1base_1_1Atomic.html#aa9101acefaccceaa29c27f508ab395c7">Gyanis::base::Atomic::andFetch</a></div><div class="ttdeci">static T andFetch(volatile T &amp;t, S v)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00352">Utils.h:352</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Atomic_html_aabaf68d5dc7ec047d6952abcaf97dbea"><div class="ttname"><a href="classGyanis_1_1base_1_1Atomic.html#aabaf68d5dc7ec047d6952abcaf97dbea">Gyanis::base::Atomic::orFetch</a></div><div class="ttdeci">static T orFetch(volatile T &amp;t, S v)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00346">Utils.h:346</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Atomic_html_ad3526a307ea4ace2c2c9ba6cccbf195f"><div class="ttname"><a href="classGyanis_1_1base_1_1Atomic.html#ad3526a307ea4ace2c2c9ba6cccbf195f">Gyanis::base::Atomic::subFetch</a></div><div class="ttdeci">static T subFetch(volatile T &amp;t, S v=1)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00340">Utils.h:340</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Atomic_html_ae8afabdc2a4a85553c98910a695bd74d"><div class="ttname"><a href="classGyanis_1_1base_1_1Atomic.html#ae8afabdc2a4a85553c98910a695bd74d">Gyanis::base::Atomic::nandFetch</a></div><div class="ttdeci">static T nandFetch(volatile T &amp;t, S v)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00364">Utils.h:364</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Atomic_html_af3d3c86cdb4ae7bf29b8d6155db0a822"><div class="ttname"><a href="classGyanis_1_1base_1_1Atomic.html#af3d3c86cdb4ae7bf29b8d6155db0a822">Gyanis::base::Atomic::addFetch</a></div><div class="ttdeci">static T addFetch(volatile T &amp;t, S v=1)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00334">Utils.h:334</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1FSUtil_html"><div class="ttname"><a href="classGyanis_1_1base_1_1FSUtil.html">Gyanis::base::FSUtil</a></div><div class="ttdoc">提供一些常用的文件系统操作工具函数。</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00240">Utils.h:241</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1FSUtil_html_a07550607b47b02015cf8bee63143b2aa"><div class="ttname"><a href="classGyanis_1_1base_1_1FSUtil.html#a07550607b47b02015cf8bee63143b2aa">Gyanis::base::FSUtil::OpenForRead</a></div><div class="ttdeci">static bool OpenForRead(std::ifstream &amp;ifs, const std::string &amp;filename, std::ios_base::openmode mode)</div><div class="ttdoc">打开文件进行读取</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00820">Utils.cpp:820</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1FSUtil_html_a28bc6967a1a018e891d0c08235e39470"><div class="ttname"><a href="classGyanis_1_1base_1_1FSUtil.html#a28bc6967a1a018e891d0c08235e39470">Gyanis::base::FSUtil::Symlink</a></div><div class="ttdeci">static bool Symlink(const std::string &amp;from, const std::string &amp;to)</div><div class="ttdoc">创建符号链接。</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00778">Utils.cpp:778</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1FSUtil_html_a3056e6bdca5b622f3cecf0e477af177f"><div class="ttname"><a href="classGyanis_1_1base_1_1FSUtil.html#a3056e6bdca5b622f3cecf0e477af177f">Gyanis::base::FSUtil::Mv</a></div><div class="ttdeci">static bool Mv(const std::string &amp;from, const std::string &amp;to)</div><div class="ttdoc">移动或重命名文件或目录</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00738">Utils.cpp:738</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1FSUtil_html_a3460ac9d1214fcdbba5e02170a041fc8"><div class="ttname"><a href="classGyanis_1_1base_1_1FSUtil.html#a3460ac9d1214fcdbba5e02170a041fc8">Gyanis::base::FSUtil::Realpath</a></div><div class="ttdeci">static bool Realpath(const std::string &amp;path, std::string &amp;rpath)</div><div class="ttdoc">获取符号链接的真实路径</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00756">Utils.cpp:756</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1FSUtil_html_a4ec5f713dd87e424347aa53dff0aae13"><div class="ttname"><a href="classGyanis_1_1base_1_1FSUtil.html#a4ec5f713dd87e424347aa53dff0aae13">Gyanis::base::FSUtil::IsRunningPidfile</a></div><div class="ttdeci">static bool IsRunningPidfile(const std::string &amp;pidfile)</div><div class="ttdoc">检查一个进程是否在运行（根据 PID 文件）</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00642">Utils.cpp:642</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1FSUtil_html_ab3964c2e3ec0178a85539c993ac54568"><div class="ttname"><a href="classGyanis_1_1base_1_1FSUtil.html#ab3964c2e3ec0178a85539c993ac54568">Gyanis::base::FSUtil::OpenForWrite</a></div><div class="ttdeci">static bool OpenForWrite(std::ofstream &amp;ofs, const std::string &amp;filename, std::ios_base::openmode mode)</div><div class="ttdoc">打开文件进行写入</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00826">Utils.cpp:826</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1FSUtil_html_ab8c36d0afe2a3a9f4eead74e4d168ffb"><div class="ttname"><a href="classGyanis_1_1base_1_1FSUtil.html#ab8c36d0afe2a3a9f4eead74e4d168ffb">Gyanis::base::FSUtil::Rm</a></div><div class="ttdeci">static bool Rm(const std::string &amp;path)</div><div class="ttdoc">删除指定路径的文件或目录</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00704">Utils.cpp:704</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1FSUtil_html_ac4bc8167b07a40a1c10ebff370604919"><div class="ttname"><a href="classGyanis_1_1base_1_1FSUtil.html#ac4bc8167b07a40a1c10ebff370604919">Gyanis::base::FSUtil::ListAllFile</a></div><div class="ttdeci">static void ListAllFile(std::vector&lt; std::string &gt; &amp;files, const std::string &amp;path, const std::string &amp;subfix)</div><div class="ttdoc">列出指定路径下所有符合条件的文件</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00586">Utils.cpp:586</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1FSUtil_html_ad724104e64f34df20d6990104753af3e"><div class="ttname"><a href="classGyanis_1_1base_1_1FSUtil.html#ad724104e64f34df20d6990104753af3e">Gyanis::base::FSUtil::Dirname</a></div><div class="ttdeci">static std::string Dirname(const std::string &amp;filename)</div><div class="ttdoc">获取文件路径的目录部分</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00799">Utils.cpp:799</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1FSUtil_html_adb086038838a720db20c5f886cb4b60c"><div class="ttname"><a href="classGyanis_1_1base_1_1FSUtil.html#adb086038838a720db20c5f886cb4b60c">Gyanis::base::FSUtil::Basename</a></div><div class="ttdeci">static std::string Basename(const std::string &amp;filename)</div><div class="ttdoc">获取文件路径的文件名部分</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00814">Utils.cpp:814</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1FSUtil_html_adc3d37dc3628bbb92e49630ce3b32a29"><div class="ttname"><a href="classGyanis_1_1base_1_1FSUtil.html#adc3d37dc3628bbb92e49630ce3b32a29">Gyanis::base::FSUtil::Unlink</a></div><div class="ttdeci">static bool Unlink(const std::string &amp;filename, bool exist=false)</div><div class="ttdoc">删除符号链接或文件</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00684">Utils.cpp:684</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1FSUtil_html_ae035d7cfaa03083803e00d571e83b041"><div class="ttname"><a href="classGyanis_1_1base_1_1FSUtil.html#ae035d7cfaa03083803e00d571e83b041">Gyanis::base::FSUtil::Mkdir</a></div><div class="ttdeci">static bool Mkdir(const std::string &amp;dirname)</div><div class="ttdoc">创建一个新的目录。</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00621">Utils.cpp:621</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1StringUtil_html"><div class="ttname"><a href="classGyanis_1_1base_1_1StringUtil.html">Gyanis::base::StringUtil</a></div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00132">Utils.h:133</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1StringUtil_html_a07ba10a547bc1586f1ae998b14864beb"><div class="ttname"><a href="classGyanis_1_1base_1_1StringUtil.html#a07ba10a547bc1586f1ae998b14864beb">Gyanis::base::StringUtil::TrimLeft</a></div><div class="ttdeci">static std::string TrimLeft(const std::string &amp;str, const std::string &amp;delimit=&quot; \t\r\n&quot;)</div><div class="ttdoc">去掉字符串左边的指定字符（默认为空格、制表符、回车、换行）</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00433">Utils.cpp:433</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1StringUtil_html_a23fbe24ebd89b37b9bdf90655275e02a"><div class="ttname"><a href="classGyanis_1_1base_1_1StringUtil.html#a23fbe24ebd89b37b9bdf90655275e02a">Gyanis::base::StringUtil::WStringToString</a></div><div class="ttdeci">static std::string WStringToString(const std::wstring &amp;ws)</div><div class="ttdoc">将 std::wstring 转换为 std::string</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00445">Utils.cpp:445</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1StringUtil_html_a2ef4c0081c90d1600034b3eaccce79dd"><div class="ttname"><a href="classGyanis_1_1base_1_1StringUtil.html#a2ef4c0081c90d1600034b3eaccce79dd">Gyanis::base::StringUtil::UrlEncode</a></div><div class="ttdeci">static std::string UrlEncode(const std::string &amp;str, bool space_as_plus=true)</div><div class="ttdoc">URL 编码</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00369">Utils.cpp:369</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1StringUtil_html_a59293578770984a7e72268412bba4fa7"><div class="ttname"><a href="classGyanis_1_1base_1_1StringUtil.html#a59293578770984a7e72268412bba4fa7">Gyanis::base::StringUtil::Format</a></div><div class="ttdeci">static std::string Format(const char *fmt,...)</div><div class="ttdoc">格式化字符串，类似 printf 的功能</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00265">Utils.cpp:265</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1StringUtil_html_a59fdc3696004147140a1bccf63c06cc3"><div class="ttname"><a href="classGyanis_1_1base_1_1StringUtil.html#a59fdc3696004147140a1bccf63c06cc3">Gyanis::base::StringUtil::TrimRight</a></div><div class="ttdeci">static std::string TrimRight(const std::string &amp;str, const std::string &amp;delimit=&quot; \t\r\n&quot;)</div><div class="ttdoc">去掉字符串右边的指定字符（默认为空格、制表符、回车、换行）</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00439">Utils.cpp:439</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1StringUtil_html_a74b71ef66d63fb4c5d0113b6da3e0e5f"><div class="ttname"><a href="classGyanis_1_1base_1_1StringUtil.html#a74b71ef66d63fb4c5d0113b6da3e0e5f">Gyanis::base::StringUtil::Trim</a></div><div class="ttdeci">static std::string Trim(const std::string &amp;str, const std::string &amp;delimit=&quot; \t\r\n&quot;)</div><div class="ttdoc">去掉字符串两边的指定字符（默认为空格、制表符、回车、换行）</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00422">Utils.cpp:422</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1StringUtil_html_a9a7d418f17c80e00230a1859641d5fea"><div class="ttname"><a href="classGyanis_1_1base_1_1StringUtil.html#a9a7d418f17c80e00230a1859641d5fea">Gyanis::base::StringUtil::StringToWString</a></div><div class="ttdeci">static std::wstring StringToWString(const std::string &amp;s)</div><div class="ttdoc">将 std::string 转换为 std::wstring</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00451">Utils.cpp:451</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1StringUtil_html_aca3f0e3a5c037cb443ba33e377bdaab9"><div class="ttname"><a href="classGyanis_1_1base_1_1StringUtil.html#aca3f0e3a5c037cb443ba33e377bdaab9">Gyanis::base::StringUtil::UrlDecode</a></div><div class="ttdeci">static std::string UrlDecode(const std::string &amp;str, bool space_as_plus=true)</div><div class="ttdoc">URL 解码</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00393">Utils.cpp:393</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1StringUtil_html_aee6fb467c33c004bb364dac307c5b0ff"><div class="ttname"><a href="classGyanis_1_1base_1_1StringUtil.html#aee6fb467c33c004bb364dac307c5b0ff">Gyanis::base::StringUtil::Formatv</a></div><div class="ttdeci">static std::string Formatv(const char *fmt, va_list ap)</div><div class="ttdoc">格式化字符串，接收 va_list 参数</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00347">Utils.cpp:347</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TypeUtil_html"><div class="ttname"><a href="classGyanis_1_1base_1_1TypeUtil.html">Gyanis::base::TypeUtil</a></div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00197">Utils.h:198</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TypeUtil_html_a3547d7fee9429fd7555014720bacd3cd"><div class="ttname"><a href="classGyanis_1_1base_1_1TypeUtil.html#a3547d7fee9429fd7555014720bacd3cd">Gyanis::base::TypeUtil::ToChar</a></div><div class="ttdeci">static int8_t ToChar(const std::string &amp;str)</div><div class="ttdoc">将字符串的第一个字符转换为 int8_t 类型</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00457">Utils.cpp:457</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TypeUtil_html_a76d7228869b4908eb4e03b3f55850dc4"><div class="ttname"><a href="classGyanis_1_1base_1_1TypeUtil.html#a76d7228869b4908eb4e03b3f55850dc4">Gyanis::base::TypeUtil::Atof</a></div><div class="ttdeci">static double Atof(const std::string &amp;str)</div><div class="ttdoc">将字符串转换为 double 类型</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00498">Utils.cpp:498</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TypeUtil_html_a7e07e93686813ab2032fcf169987e2ee"><div class="ttname"><a href="classGyanis_1_1base_1_1TypeUtil.html#a7e07e93686813ab2032fcf169987e2ee">Gyanis::base::TypeUtil::Atoi</a></div><div class="ttdeci">static int64_t Atoi(const std::string &amp;str)</div><div class="ttdoc">将字符串转换为 int64_t 类型</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00463">Utils.cpp:463</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html"><div class="ttname"><a href="namespaceGyanis_1_1base.html">Gyanis::base</a></div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00023">Config.h:24</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_a0b05875ba240f584b7c9b32c1d743149"><div class="ttname"><a href="namespaceGyanis_1_1base.html#a0b05875ba240f584b7c9b32c1d743149">Gyanis::base::GetIPv4</a></div><div class="ttdeci">std::string GetIPv4()</div><div class="ttdoc">获取本地计算机的 IPv4 地址</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00341">Utils.cpp:341</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_a0e8771006d03b97124e2772d20b50907"><div class="ttname"><a href="namespaceGyanis_1_1base.html#a0e8771006d03b97124e2772d20b50907">Gyanis::base::YamlToJson</a></div><div class="ttdeci">bool YamlToJson(const YAML::Node &amp;ynode, nlohmann::json &amp;jnode)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00169">Utils.cpp:169</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_a174e031226f82a2a6a8bdd7722a8f559"><div class="ttname"><a href="namespaceGyanis_1_1base.html#a174e031226f82a2a6a8bdd7722a8f559">Gyanis::base::GetHostName</a></div><div class="ttdeci">std::string GetHostName()</div><div class="ttdoc">获取当前主机的主机名（Hostname）</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00274">Utils.cpp:274</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_a27270bc5e2442eb9e6675fc74914379b"><div class="ttname"><a href="namespaceGyanis_1_1base.html#a27270bc5e2442eb9e6675fc74914379b">Gyanis::base::Trim</a></div><div class="ttdeci">std::string Trim(const std::string &amp;str, const std::string &amp;delimit=&quot; \t\r\n&quot;)</div><div class="ttdoc">字符串修剪</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00128">Utils.cpp:128</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_a4b62a6e107d818c869c1620744b6d099"><div class="ttname"><a href="namespaceGyanis_1_1base.html#a4b62a6e107d818c869c1620744b6d099">Gyanis::base::UrlDecode</a></div><div class="ttdeci">std::string UrlDecode(const std::string &amp;str, bool space_as_plus=true)</div><div class="ttdoc">URL解码</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00098">Utils.cpp:98</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_a865abe397c7fae971d71dbc260275e38"><div class="ttname"><a href="namespaceGyanis_1_1base.html#a865abe397c7fae971d71dbc260275e38">Gyanis::base::captureBacktrace</a></div><div class="ttdeci">void captureBacktrace(std::vector&lt; std::string &gt; &amp;backtrace_output, int max_depth, int skip_frames)</div><div class="ttdoc">获取当前的调用栈</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00048">Utils.cpp:48</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_a87318d2728344a2ad924f3ca93856603"><div class="ttname"><a href="namespaceGyanis_1_1base.html#a87318d2728344a2ad924f3ca93856603">Gyanis::base::TypeToName</a></div><div class="ttdeci">const char * TypeToName()</div><div class="ttdoc">获取类型的可读名称</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00023">Utils.h:23</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_a8a9c919ba848c9e7a7ae4e9c89356300"><div class="ttname"><a href="namespaceGyanis_1_1base.html#a8a9c919ba848c9e7a7ae4e9c89356300">Gyanis::base::JsonToYaml</a></div><div class="ttdeci">bool JsonToYaml(const nlohmann::json &amp;jnode, YAML::Node &amp;ynode)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00218">Utils.cpp:218</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_a998d9edcc360032ff06262fc42e9144d"><div class="ttname"><a href="namespaceGyanis_1_1base.html#a998d9edcc360032ff06262fc42e9144d">Gyanis::base::backtraceToString</a></div><div class="ttdeci">std::string backtraceToString(int max_depth, int skip_frames, const std::string &amp;prefix)</div><div class="ttdoc">获取当前栈信息的字符串</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00072">Utils.cpp:72</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_aa80cc0a553c8b24f4d7be5dd98f9451d"><div class="ttname"><a href="namespaceGyanis_1_1base.html#aa80cc0a553c8b24f4d7be5dd98f9451d">Gyanis::base::GetThreadID</a></div><div class="ttdeci">pid_t GetThreadID()</div><div class="ttdoc">获取当前线程的ID</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00018">Utils.cpp:18</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_aaebcb2a6bec6c2ec9709f0b9fccc3fda"><div class="ttname"><a href="namespaceGyanis_1_1base.html#aaebcb2a6bec6c2ec9709f0b9fccc3fda">Gyanis::base::GetParamValue</a></div><div class="ttdeci">ValueType GetParamValue(const MapType &amp;param_map, const KeyType &amp;key, const ValueType &amp;default_value=ValueType())</div><div class="ttdoc">从映射中获取指定键的值，并尝试将其转换为指定的类型</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00059">Utils.h:59</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_ab4a30d9d7047dc9c32b3d29cda626cb6"><div class="ttname"><a href="namespaceGyanis_1_1base.html#ab4a30d9d7047dc9c32b3d29cda626cb6">Gyanis::base::nop</a></div><div class="ttdeci">void nop(T *)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00085">Utils.h:85</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_abb8cc64e63cb95624288f9c9d265035d"><div class="ttname"><a href="namespaceGyanis_1_1base.html#abb8cc64e63cb95624288f9c9d265035d">Gyanis::base::hex_digit_to_value</a></div><div class="ttdeci">int hex_digit_to_value(char c)</div><div class="ttdoc">将单个十六进制字符转换为对应的数值</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00087">Utils.cpp:87</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_abeb5e59baa254f29e5c668f2443797c8"><div class="ttname"><a href="namespaceGyanis_1_1base.html#abeb5e59baa254f29e5c668f2443797c8">Gyanis::base::Str2Time</a></div><div class="ttdeci">time_t Str2Time(const char *str, const char *format=&quot;%Y-%m-%d %H:%M:%S&quot;)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00146">Utils.cpp:146</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_acb782dfcae17627e3aa67129f6b3a3f3"><div class="ttname"><a href="namespaceGyanis_1_1base.html#acb782dfcae17627e3aa67129f6b3a3f3">Gyanis::base::Time2Str</a></div><div class="ttdeci">std::string Time2Str(time_t ts=time(nullptr), const std::string &amp;format=&quot;%Y-%m-%d %H:%M:%S&quot;)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00139">Utils.cpp:139</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_ad808df100d964130b4c53e2985de352d"><div class="ttname"><a href="namespaceGyanis_1_1base.html#ad808df100d964130b4c53e2985de352d">Gyanis::base::delete_array</a></div><div class="ttdeci">void delete_array(T *ptr)</div><div class="ttdoc">删除动态分配的数组</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00093">Utils.h:93</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_af8c9fd2c16b89911fff920119eaba1b9"><div class="ttname"><a href="namespaceGyanis_1_1base.html#af8c9fd2c16b89911fff920119eaba1b9">Gyanis::base::demangle</a></div><div class="ttdeci">static std::string demangle(const char *str)</div><div class="ttdoc">将 C++ 类型名从 mangled 格式转换为可读格式</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00023">Utils.cpp:23</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ab1c81409f0df724f17c9ef30afee877.html">base</a></li><li class="navelem"><a class="el" href="Utils_8h.html">Utils.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,1353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: Gyanis::net::http::HttpConnectionPool类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Gyanis::net::http::HttpConnectionPool类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>HTTP 连接池类  
+ <a href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="HttpConnection_8h_source.html">HttpConnection.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ad845e0413a1963cdf8771906bcba3831" id="r_ad845e0413a1963cdf8771906bcba3831"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#ad845e0413a1963cdf8771906bcba3831">HttpConnectionPool</a> (std::string host, std::string vhost, uint32_t port, bool is_https, uint32_t max_size, uint32_t max_alive_time, uint32_t max_request)</td></tr>
+<tr class="memdesc:ad845e0413a1963cdf8771906bcba3831"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造 HTTP 连接池对象  <br /></td></tr>
+<tr class="separator:ad845e0413a1963cdf8771906bcba3831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38fc0401dfdb3ab683c5708a634361bb" id="r_a38fc0401dfdb3ab683c5708a634361bb"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnection.html">HttpConnection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a38fc0401dfdb3ab683c5708a634361bb">getConnection</a> ()</td></tr>
+<tr class="memdesc:a38fc0401dfdb3ab683c5708a634361bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取一个连接  <br /></td></tr>
+<tr class="separator:a38fc0401dfdb3ab683c5708a634361bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62da522b4713edaf28e7d9b1a13fa782" id="r_a62da522b4713edaf28e7d9b1a13fa782"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structGyanis_1_1net_1_1http_1_1HttpResult.html">HttpResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a62da522b4713edaf28e7d9b1a13fa782">doGet</a> (const std::string &amp;url, uint64_t timeout_ms, const std::unordered_map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
+<tr class="memdesc:a62da522b4713edaf28e7d9b1a13fa782"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行 GET 请求  <br /></td></tr>
+<tr class="separator:a62da522b4713edaf28e7d9b1a13fa782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54531b77f459b1caa8e11b712b7070ac" id="r_a54531b77f459b1caa8e11b712b7070ac"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structGyanis_1_1net_1_1http_1_1HttpResult.html">HttpResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a54531b77f459b1caa8e11b712b7070ac">doGet</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1Uri.html">Uri</a> &gt; &amp;uri, uint64_t timeout_ms, const std::unordered_map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
+<tr class="memdesc:a54531b77f459b1caa8e11b712b7070ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行 GET 请求  <br /></td></tr>
+<tr class="separator:a54531b77f459b1caa8e11b712b7070ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a707fb2c6ae9fe731dbc7e26fcf763149" id="r_a707fb2c6ae9fe731dbc7e26fcf763149"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structGyanis_1_1net_1_1http_1_1HttpResult.html">HttpResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a707fb2c6ae9fe731dbc7e26fcf763149">doPost</a> (const std::string &amp;url, uint64_t timeout_ms, const std::unordered_map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
+<tr class="memdesc:a707fb2c6ae9fe731dbc7e26fcf763149"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行 POST 请求  <br /></td></tr>
+<tr class="separator:a707fb2c6ae9fe731dbc7e26fcf763149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8887a02fca1988ff57df01ecbf469b5" id="r_ac8887a02fca1988ff57df01ecbf469b5"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structGyanis_1_1net_1_1http_1_1HttpResult.html">HttpResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#ac8887a02fca1988ff57df01ecbf469b5">doPost</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1Uri.html">Uri</a> &gt; &amp;uri, uint64_t timeout_ms, const std::unordered_map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
+<tr class="memdesc:ac8887a02fca1988ff57df01ecbf469b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行 POST 请求  <br /></td></tr>
+<tr class="separator:ac8887a02fca1988ff57df01ecbf469b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a655370f44d6ed1f4c4a3c692141e18b8" id="r_a655370f44d6ed1f4c4a3c692141e18b8"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structGyanis_1_1net_1_1http_1_1HttpResult.html">HttpResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a655370f44d6ed1f4c4a3c692141e18b8">doRequest</a> (<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57">HttpMethod</a> method, const std::string &amp;url, uint64_t timeout_ms, const std::unordered_map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
+<tr class="memdesc:a655370f44d6ed1f4c4a3c692141e18b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行 HTTP 请求  <br /></td></tr>
+<tr class="separator:a655370f44d6ed1f4c4a3c692141e18b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae799ddd9c29ef83cddfd099ed273f179" id="r_ae799ddd9c29ef83cddfd099ed273f179"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structGyanis_1_1net_1_1http_1_1HttpResult.html">HttpResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#ae799ddd9c29ef83cddfd099ed273f179">doRequest</a> (<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57">HttpMethod</a> method, const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1Uri.html">Uri</a> &gt; &amp;uri, uint64_t timeout_ms, const std::unordered_map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</td></tr>
+<tr class="memdesc:ae799ddd9c29ef83cddfd099ed273f179"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行 HTTP 请求  <br /></td></tr>
+<tr class="separator:ae799ddd9c29ef83cddfd099ed273f179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c4fd770f88c34fde971d4e9688fb5f9" id="r_a6c4fd770f88c34fde971d4e9688fb5f9"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structGyanis_1_1net_1_1http_1_1HttpResult.html">HttpResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a6c4fd770f88c34fde971d4e9688fb5f9">doRequest</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html">HttpRequest</a> &gt; &amp;request, uint64_t timeout_ms)</td></tr>
+<tr class="memdesc:a6c4fd770f88c34fde971d4e9688fb5f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行 HTTP 请求  <br /></td></tr>
+<tr class="separator:a6c4fd770f88c34fde971d4e9688fb5f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a3a6502ad456c8e3f936fb54b4e381190" id="r_a3a6502ad456c8e3f936fb54b4e381190"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html">HttpConnectionPool</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a3a6502ad456c8e3f936fb54b4e381190">Create</a> (const std::string &amp;uri, const std::string &amp;vhost, uint32_t max_size, uint32_t max_alive_time, uint32_t max_request)</td></tr>
+<tr class="memdesc:a3a6502ad456c8e3f936fb54b4e381190"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建 HTTP 连接池  <br /></td></tr>
+<tr class="separator:a3a6502ad456c8e3f936fb54b4e381190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a099a738e5d5ada642bc1475798fe15c9" id="r_a099a738e5d5ada642bc1475798fe15c9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a099a738e5d5ada642bc1475798fe15c9">ReleasePtr</a> (<a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnection.html">HttpConnection</a> *ptr, <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html">HttpConnectionPool</a> *pool)</td></tr>
+<tr class="memdesc:a099a738e5d5ada642bc1475798fe15c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放连接  <br /></td></tr>
+<tr class="separator:a099a738e5d5ada642bc1475798fe15c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a4a126515770aad1052ebe9fa70d4fb5b" id="r_a4a126515770aad1052ebe9fa70d4fb5b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a4a126515770aad1052ebe9fa70d4fb5b">m_host</a></td></tr>
+<tr class="memdesc:a4a126515770aad1052ebe9fa70d4fb5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务器主机名  <br /></td></tr>
+<tr class="separator:a4a126515770aad1052ebe9fa70d4fb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8555483dc5e48672b4d99851581aaf6" id="r_ac8555483dc5e48672b4d99851581aaf6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#ac8555483dc5e48672b4d99851581aaf6">m_vhost</a></td></tr>
+<tr class="memdesc:ac8555483dc5e48672b4d99851581aaf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚拟主机名  <br /></td></tr>
+<tr class="separator:ac8555483dc5e48672b4d99851581aaf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b86e443b88b269fb31b92343d143084" id="r_a5b86e443b88b269fb31b92343d143084"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a5b86e443b88b269fb31b92343d143084">m_port</a></td></tr>
+<tr class="memdesc:a5b86e443b88b269fb31b92343d143084"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务器端口号  <br /></td></tr>
+<tr class="separator:a5b86e443b88b269fb31b92343d143084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaa2a69a7f08664a236322872169bcff" id="r_afaa2a69a7f08664a236322872169bcff"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#afaa2a69a7f08664a236322872169bcff">m_maxSize</a></td></tr>
+<tr class="memdesc:afaa2a69a7f08664a236322872169bcff"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大连接池大小  <br /></td></tr>
+<tr class="separator:afaa2a69a7f08664a236322872169bcff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9826a1239f036f21a8f800fb21bf80fd" id="r_a9826a1239f036f21a8f800fb21bf80fd"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a9826a1239f036f21a8f800fb21bf80fd">m_maxAliveTime</a></td></tr>
+<tr class="memdesc:a9826a1239f036f21a8f800fb21bf80fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接池连接的最大生存时间  <br /></td></tr>
+<tr class="separator:a9826a1239f036f21a8f800fb21bf80fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d36c5bfe337e2220f3bfeb13e380dbd" id="r_a2d36c5bfe337e2220f3bfeb13e380dbd"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a2d36c5bfe337e2220f3bfeb13e380dbd">m_maxRequest</a></td></tr>
+<tr class="memdesc:a2d36c5bfe337e2220f3bfeb13e380dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">每个连接的最大请求数  <br /></td></tr>
+<tr class="separator:a2d36c5bfe337e2220f3bfeb13e380dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a533d32fd719e0291d0f3460deb250343" id="r_a533d32fd719e0291d0f3460deb250343"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a533d32fd719e0291d0f3460deb250343">m_isHttps</a></td></tr>
+<tr class="memdesc:a533d32fd719e0291d0f3460deb250343"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否使用 HTTPS 连接  <br /></td></tr>
+<tr class="separator:a533d32fd719e0291d0f3460deb250343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefffb0c4c672dfea9784d89398a41966" id="r_aefffb0c4c672dfea9784d89398a41966"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#aefffb0c4c672dfea9784d89398a41966">m_mutex</a></td></tr>
+<tr class="memdesc:aefffb0c4c672dfea9784d89398a41966"><td class="mdescLeft">&#160;</td><td class="mdescRight">保护连接池线程安全的互斥锁  <br /></td></tr>
+<tr class="separator:aefffb0c4c672dfea9784d89398a41966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a476a5ffeb861fee0540334021497b0c5" id="r_a476a5ffeb861fee0540334021497b0c5"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnection.html">HttpConnection</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a476a5ffeb861fee0540334021497b0c5">m_connections</a></td></tr>
+<tr class="memdesc:a476a5ffeb861fee0540334021497b0c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">存储连接池中的所有连接  <br /></td></tr>
+<tr class="separator:a476a5ffeb861fee0540334021497b0c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a823227f53acb6fe50708ae3895df1dd1" id="r_a823227f53acb6fe50708ae3895df1dd1"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; int32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a823227f53acb6fe50708ae3895df1dd1">m_total</a> {0}</td></tr>
+<tr class="memdesc:a823227f53acb6fe50708ae3895df1dd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前总连接数  <br /></td></tr>
+<tr class="separator:a823227f53acb6fe50708ae3895df1dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>HTTP 连接池类 </p>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8h_source.html">HttpConnection.h</a> 第 <a class="el" href="HttpConnection_8h_source.html#l00182">182</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ad845e0413a1963cdf8771906bcba3831" name="ad845e0413a1963cdf8771906bcba3831"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad845e0413a1963cdf8771906bcba3831">&#9670;&#160;</a></span>HttpConnectionPool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gyanis::net::http::HttpConnectionPool::HttpConnectionPool </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>host</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>vhost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_https</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>max_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>max_alive_time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>max_request</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造 HTTP 连接池对象 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">host</td><td>服务器主机 </td></tr>
+    <tr><td class="paramname">vhost</td><td>虚拟主机 </td></tr>
+    <tr><td class="paramname">port</td><td>端口号 </td></tr>
+    <tr><td class="paramname">is_https</td><td>是否是 HTTPS 连接 </td></tr>
+    <tr><td class="paramname">max_size</td><td>最大连接池大小 </td></tr>
+    <tr><td class="paramname">max_alive_time</td><td>最大连接存活时间 </td></tr>
+    <tr><td class="paramname">max_request</td><td>每个连接的最大请求次数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8cpp_source.html">HttpConnection.cpp</a> 第 <a class="el" href="HttpConnection_8cpp_source.html#l00341">341</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  343</span>                                                                       : <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a4a126515770aad1052ebe9fa70d4fb5b">m_host</a>(std::move(host))</div>
+<div class="line"><span class="lineno">  344</span>                                                                         , <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#ac8555483dc5e48672b4d99851581aaf6">m_vhost</a>(std::move(vhost))</div>
+<div class="line"><span class="lineno">  345</span>                                                                         , <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a5b86e443b88b269fb31b92343d143084">m_port</a>(port ? port : (is_https ? 443 : 80))</div>
+<div class="line"><span class="lineno">  346</span>                                                                         , <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#afaa2a69a7f08664a236322872169bcff">m_maxSize</a>(max_size)</div>
+<div class="line"><span class="lineno">  347</span>                                                                         , <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a9826a1239f036f21a8f800fb21bf80fd">m_maxAliveTime</a>(max_alive_time)</div>
+<div class="line"><span class="lineno">  348</span>                                                                         , <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a2d36c5bfe337e2220f3bfeb13e380dbd">m_maxRequest</a>(max_request)</div>
+<div class="line"><span class="lineno">  349</span>                                                                         , <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a533d32fd719e0291d0f3460deb250343">m_isHttps</a>(is_https)</div>
+<div class="line"><span class="lineno">  350</span>    {</div>
+<div class="line"><span class="lineno">  351</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_html_a2d36c5bfe337e2220f3bfeb13e380dbd"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a2d36c5bfe337e2220f3bfeb13e380dbd">Gyanis::net::http::HttpConnectionPool::m_maxRequest</a></div><div class="ttdeci">uint32_t m_maxRequest</div><div class="ttdoc">每个连接的最大请求数</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8h_source.html#l00325">HttpConnection.h:325</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_html_a4a126515770aad1052ebe9fa70d4fb5b"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a4a126515770aad1052ebe9fa70d4fb5b">Gyanis::net::http::HttpConnectionPool::m_host</a></div><div class="ttdeci">std::string m_host</div><div class="ttdoc">服务器主机名</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8h_source.html#l00320">HttpConnection.h:320</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_html_a533d32fd719e0291d0f3460deb250343"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a533d32fd719e0291d0f3460deb250343">Gyanis::net::http::HttpConnectionPool::m_isHttps</a></div><div class="ttdeci">bool m_isHttps</div><div class="ttdoc">是否使用 HTTPS 连接</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8h_source.html#l00326">HttpConnection.h:326</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_html_a5b86e443b88b269fb31b92343d143084"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a5b86e443b88b269fb31b92343d143084">Gyanis::net::http::HttpConnectionPool::m_port</a></div><div class="ttdeci">uint32_t m_port</div><div class="ttdoc">服务器端口号</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8h_source.html#l00322">HttpConnection.h:322</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_html_a9826a1239f036f21a8f800fb21bf80fd"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a9826a1239f036f21a8f800fb21bf80fd">Gyanis::net::http::HttpConnectionPool::m_maxAliveTime</a></div><div class="ttdeci">uint32_t m_maxAliveTime</div><div class="ttdoc">连接池连接的最大生存时间</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8h_source.html#l00324">HttpConnection.h:324</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_html_ac8555483dc5e48672b4d99851581aaf6"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#ac8555483dc5e48672b4d99851581aaf6">Gyanis::net::http::HttpConnectionPool::m_vhost</a></div><div class="ttdeci">std::string m_vhost</div><div class="ttdoc">虚拟主机名</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8h_source.html#l00321">HttpConnection.h:321</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_html_afaa2a69a7f08664a236322872169bcff"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#afaa2a69a7f08664a236322872169bcff">Gyanis::net::http::HttpConnectionPool::m_maxSize</a></div><div class="ttdeci">uint32_t m_maxSize</div><div class="ttdoc">最大连接池大小</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8h_source.html#l00323">HttpConnection.h:323</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a3a6502ad456c8e3f936fb54b4e381190" name="a3a6502ad456c8e3f936fb54b4e381190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a6502ad456c8e3f936fb54b4e381190">&#9670;&#160;</a></span>Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html">HttpConnectionPool</a> &gt; Gyanis::net::http::HttpConnectionPool::Create </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>uri</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>vhost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>max_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>max_alive_time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>max_request</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建 HTTP 连接池 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uri</td><td>请求的 URI </td></tr>
+    <tr><td class="paramname">vhost</td><td>虚拟主机名 </td></tr>
+    <tr><td class="paramname">max_size</td><td>最大连接池大小 </td></tr>
+    <tr><td class="paramname">max_alive_time</td><td>连接池中连接的最大生存时间 </td></tr>
+    <tr><td class="paramname">max_request</td><td>每个连接最大请求数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>std::shared_ptr&lt;HttpConnectionPool&gt; 返回新创建的连接池实例 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8cpp_source.html">HttpConnection.cpp</a> 第 <a class="el" href="HttpConnection_8cpp_source.html#l00569">569</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  572</span>    {</div>
+<div class="line"><span class="lineno">  573</span>        <span class="keyword">const</span> <span class="keyword">auto</span> turi = <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#a1ce42ac3e38071ebb38d4797de8f4956">Uri::Create</a>(uri);</div>
+<div class="line"><span class="lineno">  574</span>        <span class="keywordflow">if</span> (!turi)</div>
+<div class="line"><span class="lineno">  575</span>        {</div>
+<div class="line"><span class="lineno">  576</span>            <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>)</div>
+<div class="line"><span class="lineno">  577</span>            &lt;&lt; <span class="stringliteral">&quot;URI creation failed. &quot;</span></div>
+<div class="line"><span class="lineno">  578</span>            &lt;&lt; <span class="stringliteral">&quot;An error occurred while creating the URI.&quot;</span>;</div>
+<div class="line"><span class="lineno">  579</span>        }</div>
+<div class="line"><span class="lineno">  580</span>        <span class="keywordflow">return</span> std::make_shared&lt;HttpConnectionPool&gt;(turi-&gt;getHost()</div>
+<div class="line"><span class="lineno">  581</span>                                                    , vhost, turi-&gt;getPort(), turi-&gt;getScheme() == <span class="stringliteral">&quot;https&quot;</span></div>
+<div class="line"><span class="lineno">  582</span>                                                    , max_size, max_alive_time, max_request);</div>
+<div class="line"><span class="lineno">  583</span>    }</div>
+<div class="ttc" id="aLog_8h_html_a80a932ee56f777358b3d82e5fa3203c8"><div class="ttname"><a href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a></div><div class="ttdeci">#define LOG_ERROR(logger)</div><div class="ttdoc">输出 error 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00046">Log.h:46</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_a1ce42ac3e38071ebb38d4797de8f4956"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#a1ce42ac3e38071ebb38d4797de8f4956">Gyanis::net::http::Uri::Create</a></div><div class="ttdeci">static std::shared_ptr&lt; Uri &gt; Create(const std::string &amp;uri)</div><div class="ttdoc">创建 URI 对象</div><div class="ttdef"><b>Definition</b> <a href="Uri_8cpp_source.html#l00019">Uri.cpp:19</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html_a9e698df600de971647f36fff7d1b70ab"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">Gyanis::net::http::g_logger</a></div><div class="ttdeci">static auto g_logger</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8cpp_source.html#l00009">HttpConnection.cpp:9</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpConnectionPool_a3a6502ad456c8e3f936fb54b4e381190_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_a3a6502ad456c8e3f936fb54b4e381190_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a54531b77f459b1caa8e11b712b7070ac" name="a54531b77f459b1caa8e11b712b7070ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54531b77f459b1caa8e11b712b7070ac">&#9670;&#160;</a></span>doGet() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="structGyanis_1_1net_1_1http_1_1HttpResult.html">HttpResult</a> &gt; Gyanis::net::http::HttpConnectionPool::doGet </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1Uri.html">Uri</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>uri</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>headers</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>body</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>执行 GET 请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uri</td><td>请求的 URI 对象 </td></tr>
+    <tr><td class="paramname">timeout_ms</td><td>请求超时时间（毫秒） </td></tr>
+    <tr><td class="paramname">headers</td><td>可选的 HTTP 请求头 </td></tr>
+    <tr><td class="paramname">body</td><td>请求体内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8cpp_source.html">HttpConnection.cpp</a> 第 <a class="el" href="HttpConnection_8cpp_source.html#l00420">420</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  423</span>    {</div>
+<div class="line"><span class="lineno">  424</span>        std::stringstream ss;</div>
+<div class="line"><span class="lineno">  425</span>        ss &lt;&lt; uri-&gt;getPath()</div>
+<div class="line"><span class="lineno">  426</span>            &lt;&lt; (uri-&gt;getQuery().empty() ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;?&quot;</span>)</div>
+<div class="line"><span class="lineno">  427</span>            &lt;&lt; uri-&gt;getQuery()</div>
+<div class="line"><span class="lineno">  428</span>            &lt;&lt; (uri-&gt;getFragment().empty() ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;#&quot;</span>)</div>
+<div class="line"><span class="lineno">  429</span>            &lt;&lt; uri-&gt;getFragment();</div>
+<div class="line"><span class="lineno">  430</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a62da522b4713edaf28e7d9b1a13fa782">doGet</a>(ss.str(), timeout_ms, headers, body);</div>
+<div class="line"><span class="lineno">  431</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_html_a62da522b4713edaf28e7d9b1a13fa782"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a62da522b4713edaf28e7d9b1a13fa782">Gyanis::net::http::HttpConnectionPool::doGet</a></div><div class="ttdeci">std::shared_ptr&lt; HttpResult &gt; doGet(const std::string &amp;url, uint64_t timeout_ms, const std::unordered_map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</div><div class="ttdoc">执行 GET 请求</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8cpp_source.html#l00413">HttpConnection.cpp:413</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpConnectionPool_a54531b77f459b1caa8e11b712b7070ac_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_a54531b77f459b1caa8e11b712b7070ac_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a62da522b4713edaf28e7d9b1a13fa782" name="a62da522b4713edaf28e7d9b1a13fa782"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62da522b4713edaf28e7d9b1a13fa782">&#9670;&#160;</a></span>doGet() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="structGyanis_1_1net_1_1http_1_1HttpResult.html">HttpResult</a> &gt; Gyanis::net::http::HttpConnectionPool::doGet </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>headers</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>body</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>执行 GET 请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>请求的 URL </td></tr>
+    <tr><td class="paramname">timeout_ms</td><td>请求超时时间（毫秒） </td></tr>
+    <tr><td class="paramname">headers</td><td>可选的 HTTP 请求头 </td></tr>
+    <tr><td class="paramname">body</td><td>请求体内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8cpp_source.html">HttpConnection.cpp</a> 第 <a class="el" href="HttpConnection_8cpp_source.html#l00413">413</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  416</span>    {</div>
+<div class="line"><span class="lineno">  417</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a655370f44d6ed1f4c4a3c692141e18b8">doRequest</a>(<a class="code hl_enumvalue" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a7528035a93ee69cedb1dbddb2f0bfcc8">HttpMethod::GET</a>, url, timeout_ms, headers, body);</div>
+<div class="line"><span class="lineno">  418</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_html_a655370f44d6ed1f4c4a3c692141e18b8"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a655370f44d6ed1f4c4a3c692141e18b8">Gyanis::net::http::HttpConnectionPool::doRequest</a></div><div class="ttdeci">std::shared_ptr&lt; HttpResult &gt; doRequest(HttpMethod method, const std::string &amp;url, uint64_t timeout_ms, const std::unordered_map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</div><div class="ttdoc">执行 HTTP 请求</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8cpp_source.html#l00453">HttpConnection.cpp:453</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html_ac838f95183819f91457f9370778dfb57a7528035a93ee69cedb1dbddb2f0bfcc8"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a7528035a93ee69cedb1dbddb2f0bfcc8">Gyanis::net::http::HttpMethod::GET</a></div><div class="ttdeci">@ GET</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpConnectionPool_a62da522b4713edaf28e7d9b1a13fa782_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_a62da522b4713edaf28e7d9b1a13fa782_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpConnectionPool_a62da522b4713edaf28e7d9b1a13fa782_icgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_a62da522b4713edaf28e7d9b1a13fa782_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ac8887a02fca1988ff57df01ecbf469b5" name="ac8887a02fca1988ff57df01ecbf469b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8887a02fca1988ff57df01ecbf469b5">&#9670;&#160;</a></span>doPost() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="structGyanis_1_1net_1_1http_1_1HttpResult.html">HttpResult</a> &gt; Gyanis::net::http::HttpConnectionPool::doPost </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1Uri.html">Uri</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>uri</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>headers</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>body</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>执行 POST 请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uri</td><td>请求的 URI 对象 </td></tr>
+    <tr><td class="paramname">timeout_ms</td><td>请求超时时间（毫秒） </td></tr>
+    <tr><td class="paramname">headers</td><td>可选的 HTTP 请求头 </td></tr>
+    <tr><td class="paramname">body</td><td>请求体内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8cpp_source.html">HttpConnection.cpp</a> 第 <a class="el" href="HttpConnection_8cpp_source.html#l00440">440</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  443</span>    {</div>
+<div class="line"><span class="lineno">  444</span>        std::stringstream ss;</div>
+<div class="line"><span class="lineno">  445</span>        ss &lt;&lt; uri-&gt;getPath()</div>
+<div class="line"><span class="lineno">  446</span>            &lt;&lt; (uri-&gt;getQuery().empty() ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;?&quot;</span>)</div>
+<div class="line"><span class="lineno">  447</span>            &lt;&lt; uri-&gt;getQuery()</div>
+<div class="line"><span class="lineno">  448</span>            &lt;&lt; (uri-&gt;getFragment().empty() ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;#&quot;</span>)</div>
+<div class="line"><span class="lineno">  449</span>            &lt;&lt; uri-&gt;getFragment();</div>
+<div class="line"><span class="lineno">  450</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a707fb2c6ae9fe731dbc7e26fcf763149">doPost</a>(ss.str(), timeout_ms, headers, body);</div>
+<div class="line"><span class="lineno">  451</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_html_a707fb2c6ae9fe731dbc7e26fcf763149"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a707fb2c6ae9fe731dbc7e26fcf763149">Gyanis::net::http::HttpConnectionPool::doPost</a></div><div class="ttdeci">std::shared_ptr&lt; HttpResult &gt; doPost(const std::string &amp;url, uint64_t timeout_ms, const std::unordered_map&lt; std::string, std::string &gt; &amp;headers={}, const std::string &amp;body=&quot;&quot;)</div><div class="ttdoc">执行 POST 请求</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8cpp_source.html#l00433">HttpConnection.cpp:433</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpConnectionPool_ac8887a02fca1988ff57df01ecbf469b5_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_ac8887a02fca1988ff57df01ecbf469b5_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a707fb2c6ae9fe731dbc7e26fcf763149" name="a707fb2c6ae9fe731dbc7e26fcf763149"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a707fb2c6ae9fe731dbc7e26fcf763149">&#9670;&#160;</a></span>doPost() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="structGyanis_1_1net_1_1http_1_1HttpResult.html">HttpResult</a> &gt; Gyanis::net::http::HttpConnectionPool::doPost </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>headers</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>body</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>执行 POST 请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>请求的 URL </td></tr>
+    <tr><td class="paramname">timeout_ms</td><td>请求超时时间（毫秒） </td></tr>
+    <tr><td class="paramname">headers</td><td>可选的 HTTP 请求头 </td></tr>
+    <tr><td class="paramname">body</td><td>请求体内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8cpp_source.html">HttpConnection.cpp</a> 第 <a class="el" href="HttpConnection_8cpp_source.html#l00433">433</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  436</span>    {</div>
+<div class="line"><span class="lineno">  437</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a655370f44d6ed1f4c4a3c692141e18b8">doRequest</a>(<a class="code hl_enumvalue" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57aa02439ec229d8be0e74b0c1602392310">HttpMethod::POST</a>, url, timeout_ms, headers, body);</div>
+<div class="line"><span class="lineno">  438</span>    }</div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html_ac838f95183819f91457f9370778dfb57aa02439ec229d8be0e74b0c1602392310"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57aa02439ec229d8be0e74b0c1602392310">Gyanis::net::http::HttpMethod::POST</a></div><div class="ttdeci">@ POST</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpConnectionPool_a707fb2c6ae9fe731dbc7e26fcf763149_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_a707fb2c6ae9fe731dbc7e26fcf763149_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpConnectionPool_a707fb2c6ae9fe731dbc7e26fcf763149_icgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_a707fb2c6ae9fe731dbc7e26fcf763149_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a6c4fd770f88c34fde971d4e9688fb5f9" name="a6c4fd770f88c34fde971d4e9688fb5f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c4fd770f88c34fde971d4e9688fb5f9">&#9670;&#160;</a></span>doRequest() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="structGyanis_1_1net_1_1http_1_1HttpResult.html">HttpResult</a> &gt; Gyanis::net::http::HttpConnectionPool::doRequest </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html">HttpRequest</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>执行 HTTP 请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>要发送的 HTTP 请求对象 </td></tr>
+    <tr><td class="paramname">timeout_ms</td><td>请求超时时间（毫秒） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>std::shared_ptr&lt;HttpResult&gt; 返回 HTTP 请求结果 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8cpp_source.html">HttpConnection.cpp</a> 第 <a class="el" href="HttpConnection_8cpp_source.html#l00512">512</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  514</span>    {</div>
+<div class="line"><span class="lineno">  515</span>        <span class="keyword">const</span> <span class="keyword">auto</span> conn = <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a38fc0401dfdb3ab683c5708a634361bb">getConnection</a>();</div>
+<div class="line"><span class="lineno">  516</span>        <span class="keywordflow">if</span> (!conn)</div>
+<div class="line"><span class="lineno">  517</span>        {</div>
+<div class="line"><span class="lineno">  518</span>            <span class="keywordflow">return</span> std::make_shared&lt;HttpResult&gt;(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_enumvalue" href="structGyanis_1_1net_1_1http_1_1HttpResult.html#ae2add17fbd7ee63728f42f6e4edc8340a3c96e045074fe542e6b8a5dea8331102">HttpResult::Error::POOL_GET_CONNECTION</a>)</div>
+<div class="line"><span class="lineno">  519</span>                                                , <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;pool host:&quot;</span> + <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a4a126515770aad1052ebe9fa70d4fb5b">m_host</a> + <span class="stringliteral">&quot; port:&quot;</span> + std::to_string(<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a5b86e443b88b269fb31b92343d143084">m_port</a>));</div>
+<div class="line"><span class="lineno">  520</span>        }</div>
+<div class="line"><span class="lineno">  521</span>        <span class="keyword">const</span> <span class="keyword">auto</span> sock = conn-&gt;getSocket();</div>
+<div class="line"><span class="lineno">  522</span>        <span class="keywordflow">if</span> (!sock)</div>
+<div class="line"><span class="lineno">  523</span>        {</div>
+<div class="line"><span class="lineno">  524</span>            <span class="keywordflow">return</span> std::make_shared&lt;HttpResult&gt;(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_enumvalue" href="structGyanis_1_1net_1_1http_1_1HttpResult.html#ae2add17fbd7ee63728f42f6e4edc8340a61454a702ca29f60f09ea881dbdad142">HttpResult::Error::POOL_INVALID_CONNECTION</a>)</div>
+<div class="line"><span class="lineno">  525</span>                                                , <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;pool host:&quot;</span> + <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a4a126515770aad1052ebe9fa70d4fb5b">m_host</a> + <span class="stringliteral">&quot; port:&quot;</span> + std::to_string(<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a5b86e443b88b269fb31b92343d143084">m_port</a>));</div>
+<div class="line"><span class="lineno">  526</span>        }</div>
+<div class="line"><span class="lineno">  527</span>        sock-&gt;setRecvTimeout(timeout_ms);</div>
+<div class="line"><span class="lineno">  528</span>        <span class="keyword">const</span> <span class="keyword">auto</span> rt = conn-&gt;sendRequest(request);</div>
+<div class="line"><span class="lineno">  529</span>        <span class="keywordflow">if</span> (rt == 0)</div>
+<div class="line"><span class="lineno">  530</span>        {</div>
+<div class="line"><span class="lineno">  531</span>            <span class="keywordflow">return</span> std::make_shared&lt;HttpResult&gt;(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_enumvalue" href="structGyanis_1_1net_1_1http_1_1HttpResult.html#ae2add17fbd7ee63728f42f6e4edc8340a4eb3ef838bd587136925ddfa42206a51">HttpResult::Error::SEND_CLOSE_BY_PEER</a>)</div>
+<div class="line"><span class="lineno">  532</span>                                                , <span class="keyword">nullptr</span>,</div>
+<div class="line"><span class="lineno">  533</span>                                                <span class="stringliteral">&quot;send request closed by peer: &quot;</span> + sock-&gt;getRemoteAddress()-&gt;toString());</div>
+<div class="line"><span class="lineno">  534</span>        }</div>
+<div class="line"><span class="lineno">  535</span>        <span class="keywordflow">if</span> (rt &lt; 0)</div>
+<div class="line"><span class="lineno">  536</span>        {</div>
+<div class="line"><span class="lineno">  537</span>            <span class="keywordflow">return</span> std::make_shared&lt;HttpResult&gt;(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_enumvalue" href="structGyanis_1_1net_1_1http_1_1HttpResult.html#ae2add17fbd7ee63728f42f6e4edc8340aa20970543da334c5772bb5de140fb47f">HttpResult::Error::SEND_SOCKET_ERROR</a>)</div>
+<div class="line"><span class="lineno">  538</span>                                                , <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;send request socket error errno=&quot;</span> + std::to_string(errno)</div>
+<div class="line"><span class="lineno">  539</span>                                                + <span class="stringliteral">&quot; errStr=&quot;</span> + std::string(strerror(errno)));</div>
+<div class="line"><span class="lineno">  540</span>        }</div>
+<div class="line"><span class="lineno">  541</span>        <span class="keyword">auto</span> rsp = conn-&gt;recvResponse();</div>
+<div class="line"><span class="lineno">  542</span>        <span class="keywordflow">if</span> (!rsp)</div>
+<div class="line"><span class="lineno">  543</span>        {</div>
+<div class="line"><span class="lineno">  544</span>            <span class="keywordflow">return</span> std::make_shared&lt;HttpResult&gt;(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_enumvalue" href="structGyanis_1_1net_1_1http_1_1HttpResult.html#ae2add17fbd7ee63728f42f6e4edc8340a070a0fb40f6c308ab544b227660aadff">HttpResult::Error::TIMEOUT</a>)</div>
+<div class="line"><span class="lineno">  545</span>                                                , <span class="keyword">nullptr</span>,</div>
+<div class="line"><span class="lineno">  546</span>                                                <span class="stringliteral">&quot;recv response timeout: &quot;</span> + sock-&gt;getRemoteAddress()-&gt;toString()</div>
+<div class="line"><span class="lineno">  547</span>                                                + <span class="stringliteral">&quot; timeout_ms:&quot;</span> + std::to_string(timeout_ms));</div>
+<div class="line"><span class="lineno">  548</span>        }</div>
+<div class="line"><span class="lineno">  549</span>        <span class="keywordflow">return</span> std::make_shared&lt;HttpResult&gt;(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_enumvalue" href="structGyanis_1_1net_1_1http_1_1HttpResult.html#ae2add17fbd7ee63728f42f6e4edc8340ae0aa021e21dddbd6d8cecec71e9cf564">HttpResult::Error::OK</a>), rsp, <span class="stringliteral">&quot;ok&quot;</span>);</div>
+<div class="line"><span class="lineno">  550</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_html_a38fc0401dfdb3ab683c5708a634361bb"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a38fc0401dfdb3ab683c5708a634361bb">Gyanis::net::http::HttpConnectionPool::getConnection</a></div><div class="ttdeci">std::shared_ptr&lt; HttpConnection &gt; getConnection()</div><div class="ttdoc">获取一个连接</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8cpp_source.html#l00353">HttpConnection.cpp:353</a></div></div>
+<div class="ttc" id="astructGyanis_1_1net_1_1http_1_1HttpResult_html_ae2add17fbd7ee63728f42f6e4edc8340a070a0fb40f6c308ab544b227660aadff"><div class="ttname"><a href="structGyanis_1_1net_1_1http_1_1HttpResult.html#ae2add17fbd7ee63728f42f6e4edc8340a070a0fb40f6c308ab544b227660aadff">Gyanis::net::http::HttpResult::Error::TIMEOUT</a></div><div class="ttdeci">@ TIMEOUT</div><div class="ttdoc">超时</div></div>
+<div class="ttc" id="astructGyanis_1_1net_1_1http_1_1HttpResult_html_ae2add17fbd7ee63728f42f6e4edc8340a3c96e045074fe542e6b8a5dea8331102"><div class="ttname"><a href="structGyanis_1_1net_1_1http_1_1HttpResult.html#ae2add17fbd7ee63728f42f6e4edc8340a3c96e045074fe542e6b8a5dea8331102">Gyanis::net::http::HttpResult::Error::POOL_GET_CONNECTION</a></div><div class="ttdeci">@ POOL_GET_CONNECTION</div><div class="ttdoc">从连接池中取连接失败</div></div>
+<div class="ttc" id="astructGyanis_1_1net_1_1http_1_1HttpResult_html_ae2add17fbd7ee63728f42f6e4edc8340a4eb3ef838bd587136925ddfa42206a51"><div class="ttname"><a href="structGyanis_1_1net_1_1http_1_1HttpResult.html#ae2add17fbd7ee63728f42f6e4edc8340a4eb3ef838bd587136925ddfa42206a51">Gyanis::net::http::HttpResult::Error::SEND_CLOSE_BY_PEER</a></div><div class="ttdeci">@ SEND_CLOSE_BY_PEER</div><div class="ttdoc">连接被对端关闭</div></div>
+<div class="ttc" id="astructGyanis_1_1net_1_1http_1_1HttpResult_html_ae2add17fbd7ee63728f42f6e4edc8340a61454a702ca29f60f09ea881dbdad142"><div class="ttname"><a href="structGyanis_1_1net_1_1http_1_1HttpResult.html#ae2add17fbd7ee63728f42f6e4edc8340a61454a702ca29f60f09ea881dbdad142">Gyanis::net::http::HttpResult::Error::POOL_INVALID_CONNECTION</a></div><div class="ttdeci">@ POOL_INVALID_CONNECTION</div><div class="ttdoc">无效的连接</div></div>
+<div class="ttc" id="astructGyanis_1_1net_1_1http_1_1HttpResult_html_ae2add17fbd7ee63728f42f6e4edc8340aa20970543da334c5772bb5de140fb47f"><div class="ttname"><a href="structGyanis_1_1net_1_1http_1_1HttpResult.html#ae2add17fbd7ee63728f42f6e4edc8340aa20970543da334c5772bb5de140fb47f">Gyanis::net::http::HttpResult::Error::SEND_SOCKET_ERROR</a></div><div class="ttdeci">@ SEND_SOCKET_ERROR</div><div class="ttdoc">发送请求产生 Socket 错误</div></div>
+<div class="ttc" id="astructGyanis_1_1net_1_1http_1_1HttpResult_html_ae2add17fbd7ee63728f42f6e4edc8340ae0aa021e21dddbd6d8cecec71e9cf564"><div class="ttname"><a href="structGyanis_1_1net_1_1http_1_1HttpResult.html#ae2add17fbd7ee63728f42f6e4edc8340ae0aa021e21dddbd6d8cecec71e9cf564">Gyanis::net::http::HttpResult::Error::OK</a></div><div class="ttdeci">@ OK</div><div class="ttdoc">正常</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpConnectionPool_a6c4fd770f88c34fde971d4e9688fb5f9_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_a6c4fd770f88c34fde971d4e9688fb5f9_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae799ddd9c29ef83cddfd099ed273f179" name="ae799ddd9c29ef83cddfd099ed273f179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae799ddd9c29ef83cddfd099ed273f179">&#9670;&#160;</a></span>doRequest() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="structGyanis_1_1net_1_1http_1_1HttpResult.html">HttpResult</a> &gt; Gyanis::net::http::HttpConnectionPool::doRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57">HttpMethod</a>&#160;</td>
+          <td class="paramname"><em>method</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1Uri.html">Uri</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>uri</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>headers</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>body</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>执行 HTTP 请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">method</td><td>请求方法（GET、POST 等） </td></tr>
+    <tr><td class="paramname">uri</td><td>请求的 URI 对象 </td></tr>
+    <tr><td class="paramname">timeout_ms</td><td>请求超时时间（毫秒） </td></tr>
+    <tr><td class="paramname">headers</td><td>可选的 HTTP 请求头 </td></tr>
+    <tr><td class="paramname">body</td><td>请求体内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8cpp_source.html">HttpConnection.cpp</a> 第 <a class="el" href="HttpConnection_8cpp_source.html#l00497">497</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  502</span>    {</div>
+<div class="line"><span class="lineno">  503</span>        std::stringstream ss;</div>
+<div class="line"><span class="lineno">  504</span>        ss &lt;&lt; uri-&gt;getPath()</div>
+<div class="line"><span class="lineno">  505</span>            &lt;&lt; (uri-&gt;getQuery().empty() ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;?&quot;</span>)</div>
+<div class="line"><span class="lineno">  506</span>            &lt;&lt; uri-&gt;getQuery()</div>
+<div class="line"><span class="lineno">  507</span>            &lt;&lt; (uri-&gt;getFragment().empty() ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;#&quot;</span>)</div>
+<div class="line"><span class="lineno">  508</span>            &lt;&lt; uri-&gt;getFragment();</div>
+<div class="line"><span class="lineno">  509</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a655370f44d6ed1f4c4a3c692141e18b8">doRequest</a>(method, ss.str(), timeout_ms, headers, body);</div>
+<div class="line"><span class="lineno">  510</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpConnectionPool_ae799ddd9c29ef83cddfd099ed273f179_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_ae799ddd9c29ef83cddfd099ed273f179_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a655370f44d6ed1f4c4a3c692141e18b8" name="a655370f44d6ed1f4c4a3c692141e18b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a655370f44d6ed1f4c4a3c692141e18b8">&#9670;&#160;</a></span>doRequest() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="structGyanis_1_1net_1_1http_1_1HttpResult.html">HttpResult</a> &gt; Gyanis::net::http::HttpConnectionPool::doRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57">HttpMethod</a>&#160;</td>
+          <td class="paramname"><em>method</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>headers</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>body</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>执行 HTTP 请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">method</td><td>请求方法（GET、POST 等） </td></tr>
+    <tr><td class="paramname">url</td><td>请求的 URL </td></tr>
+    <tr><td class="paramname">timeout_ms</td><td>请求超时时间（毫秒） </td></tr>
+    <tr><td class="paramname">headers</td><td>可选的 HTTP 请求头 </td></tr>
+    <tr><td class="paramname">body</td><td>请求体内容 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8cpp_source.html">HttpConnection.cpp</a> 第 <a class="el" href="HttpConnection_8cpp_source.html#l00453">453</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  458</span>    {</div>
+<div class="line"><span class="lineno">  459</span>        <span class="keyword">const</span> <span class="keyword">auto</span> req = std::make_shared&lt;HttpRequest&gt;();</div>
+<div class="line"><span class="lineno">  460</span>        req-&gt;setPath(url);</div>
+<div class="line"><span class="lineno">  461</span>        req-&gt;setMethod(method);</div>
+<div class="line"><span class="lineno">  462</span>        req-&gt;setClose(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  463</span>        <span class="keywordtype">bool</span> has_host = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  464</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [fst, snd] : headers)</div>
+<div class="line"><span class="lineno">  465</span>        {</div>
+<div class="line"><span class="lineno">  466</span>            <span class="keywordflow">if</span> (strcasecmp(fst.c_str(), <span class="stringliteral">&quot;Connection&quot;</span>) == 0)</div>
+<div class="line"><span class="lineno">  467</span>            {</div>
+<div class="line"><span class="lineno">  468</span>                <span class="keywordflow">if</span> (strcasecmp(snd.c_str(), <span class="stringliteral">&quot;Keep-Alive&quot;</span>) == 0)</div>
+<div class="line"><span class="lineno">  469</span>                {</div>
+<div class="line"><span class="lineno">  470</span>                    req-&gt;setClose(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  471</span>                }</div>
+<div class="line"><span class="lineno">  472</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  473</span>            }</div>
+<div class="line"><span class="lineno">  474</span> </div>
+<div class="line"><span class="lineno">  475</span>            <span class="keywordflow">if</span> (!has_host &amp;&amp; strcasecmp(fst.c_str(), <span class="stringliteral">&quot;Host&quot;</span>) == 0)</div>
+<div class="line"><span class="lineno">  476</span>            {</div>
+<div class="line"><span class="lineno">  477</span>                has_host = !snd.empty();</div>
+<div class="line"><span class="lineno">  478</span>            }</div>
+<div class="line"><span class="lineno">  479</span> </div>
+<div class="line"><span class="lineno">  480</span>            req-&gt;setHeader(fst, snd);</div>
+<div class="line"><span class="lineno">  481</span>        }</div>
+<div class="line"><span class="lineno">  482</span>        <span class="keywordflow">if</span> (!has_host)</div>
+<div class="line"><span class="lineno">  483</span>        {</div>
+<div class="line"><span class="lineno">  484</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#ac8555483dc5e48672b4d99851581aaf6">m_vhost</a>.empty())</div>
+<div class="line"><span class="lineno">  485</span>            {</div>
+<div class="line"><span class="lineno">  486</span>                req-&gt;setHeader(<span class="stringliteral">&quot;Host&quot;</span>, <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a4a126515770aad1052ebe9fa70d4fb5b">m_host</a>);</div>
+<div class="line"><span class="lineno">  487</span>            }</div>
+<div class="line"><span class="lineno">  488</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  489</span>            {</div>
+<div class="line"><span class="lineno">  490</span>                req-&gt;setHeader(<span class="stringliteral">&quot;Host&quot;</span>, <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#ac8555483dc5e48672b4d99851581aaf6">m_vhost</a>);</div>
+<div class="line"><span class="lineno">  491</span>            }</div>
+<div class="line"><span class="lineno">  492</span>        }</div>
+<div class="line"><span class="lineno">  493</span>        req-&gt;setBody(body);</div>
+<div class="line"><span class="lineno">  494</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a655370f44d6ed1f4c4a3c692141e18b8">doRequest</a>(req, timeout_ms);</div>
+<div class="line"><span class="lineno">  495</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpConnectionPool_a655370f44d6ed1f4c4a3c692141e18b8_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_a655370f44d6ed1f4c4a3c692141e18b8_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpConnectionPool_a655370f44d6ed1f4c4a3c692141e18b8_icgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_a655370f44d6ed1f4c4a3c692141e18b8_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a38fc0401dfdb3ab683c5708a634361bb" name="a38fc0401dfdb3ab683c5708a634361bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38fc0401dfdb3ab683c5708a634361bb">&#9670;&#160;</a></span>getConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnection.html">HttpConnection</a> &gt; Gyanis::net::http::HttpConnectionPool::getConnection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取一个连接 </p>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8cpp_source.html">HttpConnection.cpp</a> 第 <a class="el" href="HttpConnection_8cpp_source.html#l00353">353</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  354</span>    {</div>
+<div class="line"><span class="lineno">  355</span>        <span class="keyword">const</span> uint64_t now_ms = std::chrono::high_resolution_clock::now().time_since_epoch().count();</div>
+<div class="line"><span class="lineno">  356</span>        std::vector&lt;HttpConnection*&gt; invalid_conns;</div>
+<div class="line"><span class="lineno">  357</span>        HttpConnection* ptr = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  358</span>        std::unique_lock lock(<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#aefffb0c4c672dfea9784d89398a41966">m_mutex</a>);</div>
+<div class="line"><span class="lineno">  359</span>        <span class="keywordflow">while</span> (!<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a476a5ffeb861fee0540334021497b0c5">m_connections</a>.empty())</div>
+<div class="line"><span class="lineno">  360</span>        {</div>
+<div class="line"><span class="lineno">  361</span>            <span class="keyword">auto</span> conn = *<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a476a5ffeb861fee0540334021497b0c5">m_connections</a>.begin();</div>
+<div class="line"><span class="lineno">  362</span>            <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a476a5ffeb861fee0540334021497b0c5">m_connections</a>.pop_front();</div>
+<div class="line"><span class="lineno">  363</span>            <span class="keywordflow">if</span> (!conn-&gt;isConnected())</div>
+<div class="line"><span class="lineno">  364</span>            {</div>
+<div class="line"><span class="lineno">  365</span>                invalid_conns.push_back(conn);</div>
+<div class="line"><span class="lineno">  366</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  367</span>            }</div>
+<div class="line"><span class="lineno">  368</span>            <span class="keywordflow">if</span> (conn-&gt;m_createTime + <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a9826a1239f036f21a8f800fb21bf80fd">m_maxAliveTime</a> &gt; now_ms)</div>
+<div class="line"><span class="lineno">  369</span>            {</div>
+<div class="line"><span class="lineno">  370</span>                invalid_conns.push_back(conn);</div>
+<div class="line"><span class="lineno">  371</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  372</span>            }</div>
+<div class="line"><span class="lineno">  373</span>            ptr = conn;</div>
+<div class="line"><span class="lineno">  374</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  375</span>        }</div>
+<div class="line"><span class="lineno">  376</span>        lock.unlock();</div>
+<div class="line"><span class="lineno">  377</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> i : invalid_conns)</div>
+<div class="line"><span class="lineno">  378</span>        {</div>
+<div class="line"><span class="lineno">  379</span>            <span class="keyword">delete</span> i;</div>
+<div class="line"><span class="lineno">  380</span>        }</div>
+<div class="line"><span class="lineno">  381</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a823227f53acb6fe50708ae3895df1dd1">m_total</a> -= invalid_conns.size();</div>
+<div class="line"><span class="lineno">  382</span> </div>
+<div class="line"><span class="lineno">  383</span>        <span class="keywordflow">if</span> (!ptr)</div>
+<div class="line"><span class="lineno">  384</span>        {</div>
+<div class="line"><span class="lineno">  385</span>            <span class="keyword">const</span> <span class="keyword">auto</span> address = <a class="code hl_function" href="classGyanis_1_1net_1_1Address.html#a70f317af77b86e5a2557442f3fb21e77">Address::LookupAnyIPAddress</a>(<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a4a126515770aad1052ebe9fa70d4fb5b">m_host</a>);</div>
+<div class="line"><span class="lineno">  386</span>            <span class="keywordflow">if</span> (!address)</div>
+<div class="line"><span class="lineno">  387</span>            {</div>
+<div class="line"><span class="lineno">  388</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>) &lt;&lt; <span class="stringliteral">&quot;get address failed:&quot;</span> &lt;&lt; <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a4a126515770aad1052ebe9fa70d4fb5b">m_host</a>;</div>
+<div class="line"><span class="lineno">  389</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  390</span>            }</div>
+<div class="line"><span class="lineno">  391</span>            address-&gt;setPort(<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a5b86e443b88b269fb31b92343d143084">m_port</a>);</div>
+<div class="line"><span class="lineno">  392</span>            <span class="keyword">const</span> <span class="keyword">auto</span> sock = <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a533d32fd719e0291d0f3460deb250343">m_isHttps</a> ? <a class="code hl_function" href="classGyanis_1_1net_1_1SSLSocket.html#a4e66e4499dd0672d93d0322f6651e6a6">SSLSocket::CreateTCP</a>(address) : Socket::CreateTCP(address);</div>
+<div class="line"><span class="lineno">  393</span>            <span class="comment">// const auto sock = Socket::CreateTCP(address);</span></div>
+<div class="line"><span class="lineno">  394</span>            <span class="keywordflow">if</span> (!sock)</div>
+<div class="line"><span class="lineno">  395</span>            {</div>
+<div class="line"><span class="lineno">  396</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>) &lt;&lt; <span class="stringliteral">&quot;create socket fail&quot;</span>;</div>
+<div class="line"><span class="lineno">  397</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  398</span>            }</div>
+<div class="line"><span class="lineno">  399</span>            <span class="keywordflow">if</span> (!sock-&gt;connect(address, std::chrono::milliseconds::max().count()))</div>
+<div class="line"><span class="lineno">  400</span>            {</div>
+<div class="line"><span class="lineno">  401</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>) &lt;&lt; <span class="stringliteral">&quot;sock connect fail&quot;</span>;</div>
+<div class="line"><span class="lineno">  402</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  403</span>            }</div>
+<div class="line"><span class="lineno">  404</span> </div>
+<div class="line"><span class="lineno">  405</span>            ptr = <span class="keyword">new</span> HttpConnection(sock);</div>
+<div class="line"><span class="lineno">  406</span>            ++<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a823227f53acb6fe50708ae3895df1dd1">m_total</a>;</div>
+<div class="line"><span class="lineno">  407</span>        }</div>
+<div class="line"><span class="lineno">  408</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><span class="lineno">  409</span>            ptr, [<span class="keyword">this</span>](<span class="keyword">auto</span>&amp;&amp; PH1) { <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a099a738e5d5ada642bc1475798fe15c9">HttpConnectionPool::ReleasePtr</a>(std::forward&lt;<span class="keyword">decltype</span>(PH1)&gt;(PH1), <span class="keyword">this</span>); }</div>
+<div class="line"><span class="lineno">  410</span>        };</div>
+<div class="line"><span class="lineno">  411</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Address_html_a70f317af77b86e5a2557442f3fb21e77"><div class="ttname"><a href="classGyanis_1_1net_1_1Address.html#a70f317af77b86e5a2557442f3fb21e77">Gyanis::net::Address::LookupAnyIPAddress</a></div><div class="ttdeci">static std::shared_ptr&lt; IPAddress &gt; LookupAnyIPAddress(const std::string &amp;host, int family=AF_INET, int type=0, int protocol=0)</div><div class="ttdoc">通过host地址返回对应条件的任意IPAddress</div><div class="ttdef"><b>Definition</b> <a href="Address_8cpp_source.html#l00135">Address.cpp:135</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1SSLSocket_html_a4e66e4499dd0672d93d0322f6651e6a6"><div class="ttname"><a href="classGyanis_1_1net_1_1SSLSocket.html#a4e66e4499dd0672d93d0322f6651e6a6">Gyanis::net::SSLSocket::CreateTCP</a></div><div class="ttdeci">static std::shared_ptr&lt; SSLSocket &gt; CreateTCP(const std::shared_ptr&lt; Address &gt; &amp;address)</div><div class="ttdoc">创建一个 TCP SSL 套接字并绑定到指定地址</div><div class="ttdef"><b>Definition</b> <a href="Socket_8cpp_source.html#l00624">Socket.cpp:624</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_html_a099a738e5d5ada642bc1475798fe15c9"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a099a738e5d5ada642bc1475798fe15c9">Gyanis::net::http::HttpConnectionPool::ReleasePtr</a></div><div class="ttdeci">static void ReleasePtr(HttpConnection *ptr, HttpConnectionPool *pool)</div><div class="ttdoc">释放连接</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8cpp_source.html#l00552">HttpConnection.cpp:552</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_html_a476a5ffeb861fee0540334021497b0c5"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a476a5ffeb861fee0540334021497b0c5">Gyanis::net::http::HttpConnectionPool::m_connections</a></div><div class="ttdeci">std::list&lt; HttpConnection * &gt; m_connections</div><div class="ttdoc">存储连接池中的所有连接</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8h_source.html#l00328">HttpConnection.h:328</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_html_a823227f53acb6fe50708ae3895df1dd1"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#a823227f53acb6fe50708ae3895df1dd1">Gyanis::net::http::HttpConnectionPool::m_total</a></div><div class="ttdeci">std::atomic&lt; int32_t &gt; m_total</div><div class="ttdoc">当前总连接数</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8h_source.html#l00329">HttpConnection.h:329</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_html_aefffb0c4c672dfea9784d89398a41966"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html#aefffb0c4c672dfea9784d89398a41966">Gyanis::net::http::HttpConnectionPool::m_mutex</a></div><div class="ttdeci">std::mutex m_mutex</div><div class="ttdoc">保护连接池线程安全的互斥锁</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8h_source.html#l00327">HttpConnection.h:327</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpConnectionPool_a38fc0401dfdb3ab683c5708a634361bb_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_a38fc0401dfdb3ab683c5708a634361bb_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpConnectionPool_a38fc0401dfdb3ab683c5708a634361bb_icgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_a38fc0401dfdb3ab683c5708a634361bb_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a099a738e5d5ada642bc1475798fe15c9" name="a099a738e5d5ada642bc1475798fe15c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a099a738e5d5ada642bc1475798fe15c9">&#9670;&#160;</a></span>ReleasePtr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpConnectionPool::ReleasePtr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnection.html">HttpConnection</a> *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html">HttpConnectionPool</a> *&#160;</td>
+          <td class="paramname"><em>pool</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>释放连接 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>HTTP 连接对象 </td></tr>
+    <tr><td class="paramname">pool</td><td>连接池对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8cpp_source.html">HttpConnection.cpp</a> 第 <a class="el" href="HttpConnection_8cpp_source.html#l00552">552</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  553</span>    {</div>
+<div class="line"><span class="lineno">  554</span>        ++ptr-&gt;m_request;</div>
+<div class="line"><span class="lineno">  555</span>        <span class="keywordflow">if</span> (!ptr-&gt;isConnected()</div>
+<div class="line"><span class="lineno">  556</span>            || ptr-&gt;m_createTime + pool-&gt;m_maxAliveTime &gt;= <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(</div>
+<div class="line"><span class="lineno">  557</span>                std::chrono::high_resolution_clock::to_time_t(</div>
+<div class="line"><span class="lineno">  558</span>                    std::chrono::high_resolution_clock::now()))</div>
+<div class="line"><span class="lineno">  559</span>            || ptr-&gt;m_request &gt;= pool-&gt;m_maxRequest)</div>
+<div class="line"><span class="lineno">  560</span>        {</div>
+<div class="line"><span class="lineno">  561</span>            <span class="keyword">delete</span> ptr;</div>
+<div class="line"><span class="lineno">  562</span>            --pool-&gt;m_total;</div>
+<div class="line"><span class="lineno">  563</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  564</span>        }</div>
+<div class="line"><span class="lineno">  565</span>        std::scoped_lock lock(pool-&gt;m_mutex);</div>
+<div class="line"><span class="lineno">  566</span>        pool-&gt;m_connections.push_back(ptr);</div>
+<div class="line"><span class="lineno">  567</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpConnectionPool_a099a738e5d5ada642bc1475798fe15c9_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_a099a738e5d5ada642bc1475798fe15c9_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpConnectionPool_a099a738e5d5ada642bc1475798fe15c9_icgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpConnectionPool_a099a738e5d5ada642bc1475798fe15c9_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a476a5ffeb861fee0540334021497b0c5" name="a476a5ffeb861fee0540334021497b0c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a476a5ffeb861fee0540334021497b0c5">&#9670;&#160;</a></span>m_connections</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::list&lt;<a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnection.html">HttpConnection</a>*&gt; Gyanis::net::http::HttpConnectionPool::m_connections</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>存储连接池中的所有连接 </p>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8h_source.html">HttpConnection.h</a> 第 <a class="el" href="HttpConnection_8h_source.html#l00328">328</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a4a126515770aad1052ebe9fa70d4fb5b" name="a4a126515770aad1052ebe9fa70d4fb5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a126515770aad1052ebe9fa70d4fb5b">&#9670;&#160;</a></span>m_host</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::net::http::HttpConnectionPool::m_host</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>服务器主机名 </p>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8h_source.html">HttpConnection.h</a> 第 <a class="el" href="HttpConnection_8h_source.html#l00320">320</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a533d32fd719e0291d0f3460deb250343" name="a533d32fd719e0291d0f3460deb250343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a533d32fd719e0291d0f3460deb250343">&#9670;&#160;</a></span>m_isHttps</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::net::http::HttpConnectionPool::m_isHttps</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否使用 HTTPS 连接 </p>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8h_source.html">HttpConnection.h</a> 第 <a class="el" href="HttpConnection_8h_source.html#l00326">326</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a9826a1239f036f21a8f800fb21bf80fd" name="a9826a1239f036f21a8f800fb21bf80fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9826a1239f036f21a8f800fb21bf80fd">&#9670;&#160;</a></span>m_maxAliveTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Gyanis::net::http::HttpConnectionPool::m_maxAliveTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>连接池连接的最大生存时间 </p>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8h_source.html">HttpConnection.h</a> 第 <a class="el" href="HttpConnection_8h_source.html#l00324">324</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a2d36c5bfe337e2220f3bfeb13e380dbd" name="a2d36c5bfe337e2220f3bfeb13e380dbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d36c5bfe337e2220f3bfeb13e380dbd">&#9670;&#160;</a></span>m_maxRequest</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Gyanis::net::http::HttpConnectionPool::m_maxRequest</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>每个连接的最大请求数 </p>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8h_source.html">HttpConnection.h</a> 第 <a class="el" href="HttpConnection_8h_source.html#l00325">325</a> 行定义.</p>
+
+</div>
+</div>
+<a id="afaa2a69a7f08664a236322872169bcff" name="afaa2a69a7f08664a236322872169bcff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaa2a69a7f08664a236322872169bcff">&#9670;&#160;</a></span>m_maxSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Gyanis::net::http::HttpConnectionPool::m_maxSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最大连接池大小 </p>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8h_source.html">HttpConnection.h</a> 第 <a class="el" href="HttpConnection_8h_source.html#l00323">323</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aefffb0c4c672dfea9784d89398a41966" name="aefffb0c4c672dfea9784d89398a41966"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefffb0c4c672dfea9784d89398a41966">&#9670;&#160;</a></span>m_mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex Gyanis::net::http::HttpConnectionPool::m_mutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>保护连接池线程安全的互斥锁 </p>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8h_source.html">HttpConnection.h</a> 第 <a class="el" href="HttpConnection_8h_source.html#l00327">327</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5b86e443b88b269fb31b92343d143084" name="a5b86e443b88b269fb31b92343d143084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b86e443b88b269fb31b92343d143084">&#9670;&#160;</a></span>m_port</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Gyanis::net::http::HttpConnectionPool::m_port</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>服务器端口号 </p>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8h_source.html">HttpConnection.h</a> 第 <a class="el" href="HttpConnection_8h_source.html#l00322">322</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a823227f53acb6fe50708ae3895df1dd1" name="a823227f53acb6fe50708ae3895df1dd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a823227f53acb6fe50708ae3895df1dd1">&#9670;&#160;</a></span>m_total</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;int32_t&gt; Gyanis::net::http::HttpConnectionPool::m_total {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前总连接数 </p>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8h_source.html">HttpConnection.h</a> 第 <a class="el" href="HttpConnection_8h_source.html#l00329">329</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  329</span>{0}; </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac8555483dc5e48672b4d99851581aaf6" name="ac8555483dc5e48672b4d99851581aaf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8555483dc5e48672b4d99851581aaf6">&#9670;&#160;</a></span>m_vhost</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::net::http::HttpConnectionPool::m_vhost</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>虚拟主机名 </p>
+
+<p class="definition">在文件 <a class="el" href="HttpConnection_8h_source.html">HttpConnection.h</a> 第 <a class="el" href="HttpConnection_8h_source.html#l00321">321</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/net/http/<a class="el" href="HttpConnection_8h_source.html">HttpConnection.h</a></li>
+<li>src/net/http/<a class="el" href="HttpConnection_8cpp_source.html">HttpConnection.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGyanis.html">Gyanis</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1net.html">net</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1net_1_1http.html">http</a></li><li class="navelem"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpConnectionPool.html">HttpConnectionPool</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+digraph "Gyanis::net::stream::ByteArray::writeUint64"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="Gyanis::net::stream\l::ByteArray::writeUint64",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="写入 64 位无符号整数（不使用符号）"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::net::stream\l::ByteArray::writeInt64",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1stream_1_1ByteArray.html#ae414252a49b02ef5d6ddb3021edcce7e",tooltip="写入 64 位有符号整数（不使用符号）"];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Gyanis::net::stream\l::ByteArray::writeStringVint",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1stream_1_1ByteArray.html#a9a8145d916bd78bd417bc03f682d8e27",tooltip="写入变长编码字符串"];
+}

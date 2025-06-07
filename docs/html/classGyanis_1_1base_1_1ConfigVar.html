@@ -1,0 +1,759 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: Gyanis::base::ConfigVar&lt; T, FromStr, ToStr &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGyanis_1_1base_1_1ConfigVar.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classGyanis_1_1base_1_1ConfigVar-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Gyanis::base::ConfigVar&lt; T, FromStr, ToStr &gt; 模板类 参考<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>配置参数模板子类, 保存对应类型的参数值  
+ <a href="classGyanis_1_1base_1_1ConfigVar.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Config_8h_source.html">Config.h</a>&gt;</code></p>
+<div class="dynheader">
+类 Gyanis::base::ConfigVar&lt; T, FromStr, ToStr &gt; 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1ConfigVar__inherit__graph.png" border="0" usemap="#aGyanis_1_1base_1_1ConfigVar_3_01T_00_01FromStr_00_01ToStr_01_4_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+Gyanis::base::ConfigVar&lt; T, FromStr, ToStr &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1ConfigVar__coll__graph.png" border="0" usemap="#aGyanis_1_1base_1_1ConfigVar_3_01T_00_01FromStr_00_01ToStr_01_4_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a2dbe97e90a7ee7dfcd18ae4472110ca3" id="r_a2dbe97e90a7ee7dfcd18ae4472110ca3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html#a2dbe97e90a7ee7dfcd18ae4472110ca3">CallBackMap</a> = std::unordered_map&lt; uint64_t, std::function&lt; void(const T &amp;old_value, const T &amp;new_value)&gt; &gt;</td></tr>
+<tr class="separator:a2dbe97e90a7ee7dfcd18ae4472110ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a6a7730e0afc1d6d50f2c71062463f212" id="r_a6a7730e0afc1d6d50f2c71062463f212"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html#a6a7730e0afc1d6d50f2c71062463f212">ConfigVar</a> (const std::string &amp;name, T default_value, const std::string &amp;description)</td></tr>
+<tr class="memdesc:a6a7730e0afc1d6d50f2c71062463f212"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过参数名, 参数值, 描述构造 <a class="el" href="classGyanis_1_1base_1_1ConfigVar.html" title="配置参数模板子类, 保存对应类型的参数值">ConfigVar</a>  <br /></td></tr>
+<tr class="separator:a6a7730e0afc1d6d50f2c71062463f212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c2d809826a9430dccd255645756006f" id="r_a9c2d809826a9430dccd255645756006f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html#a9c2d809826a9430dccd255645756006f">toString</a> () const override</td></tr>
+<tr class="memdesc:a9c2d809826a9430dccd255645756006f"><td class="mdescLeft">&#160;</td><td class="mdescRight">将参数值转换成 YAML 字符串  <br /></td></tr>
+<tr class="separator:a9c2d809826a9430dccd255645756006f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e5d7b7bb3c89787b93a04a35051b158" id="r_a7e5d7b7bb3c89787b93a04a35051b158"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html#a7e5d7b7bb3c89787b93a04a35051b158">fromString</a> (const std::string &amp;value) override</td></tr>
+<tr class="memdesc:a7e5d7b7bb3c89787b93a04a35051b158"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 YAML 字符串转换为参数的值  <br /></td></tr>
+<tr class="separator:a7e5d7b7bb3c89787b93a04a35051b158"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accc5846a64355cc234122e8986b7f78f" id="r_accc5846a64355cc234122e8986b7f78f"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html#accc5846a64355cc234122e8986b7f78f">getValue</a> () const</td></tr>
+<tr class="memdesc:accc5846a64355cc234122e8986b7f78f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前配置参数的值  <br /></td></tr>
+<tr class="separator:accc5846a64355cc234122e8986b7f78f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefc28ae05491126044699f0478f6795d" id="r_aefc28ae05491126044699f0478f6795d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html#aefc28ae05491126044699f0478f6795d">setValue</a> (const T &amp;value)</td></tr>
+<tr class="memdesc:aefc28ae05491126044699f0478f6795d"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置当前配置参数的值  <br /></td></tr>
+<tr class="separator:aefc28ae05491126044699f0478f6795d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948c9636a71a5085974b86a2e12117fe" id="r_a948c9636a71a5085974b86a2e12117fe"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html#a948c9636a71a5085974b86a2e12117fe">getTypeName</a> () const override</td></tr>
+<tr class="memdesc:a948c9636a71a5085974b86a2e12117fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回配置项值的类型名称  <br /></td></tr>
+<tr class="separator:a948c9636a71a5085974b86a2e12117fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aa84eae67dab56abb38f9b1055c0b55" id="r_a1aa84eae67dab56abb38f9b1055c0b55"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html#a1aa84eae67dab56abb38f9b1055c0b55">addListener</a> (std::function&lt; void(const T &amp;old_value, const T &amp;new_value)&gt; callback)</td></tr>
+<tr class="memdesc:a1aa84eae67dab56abb38f9b1055c0b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加变化回调函数  <br /></td></tr>
+<tr class="separator:a1aa84eae67dab56abb38f9b1055c0b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a7e55c69f5482a427d5ed4f97ab3ce7" id="r_a4a7e55c69f5482a427d5ed4f97ab3ce7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html#a4a7e55c69f5482a427d5ed4f97ab3ce7">delListener</a> (uint64_t id)</td></tr>
+<tr class="memdesc:a4a7e55c69f5482a427d5ed4f97ab3ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除回调函数  <br /></td></tr>
+<tr class="separator:a4a7e55c69f5482a427d5ed4f97ab3ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ad8e9fa81fa014845f2f002a70a1760" id="r_a8ad8e9fa81fa014845f2f002a70a1760"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(const T &amp;old_value, const T &amp;new_value)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html#a8ad8e9fa81fa014845f2f002a70a1760">getListener</a> (uint64_t id)</td></tr>
+<tr class="memdesc:a8ad8e9fa81fa014845f2f002a70a1760"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取回调函数  <br /></td></tr>
+<tr class="separator:a8ad8e9fa81fa014845f2f002a70a1760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed553a476e242726e5d13b736cf03879" id="r_aed553a476e242726e5d13b736cf03879"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html#aed553a476e242726e5d13b736cf03879">clearListeners</a> ()</td></tr>
+<tr class="memdesc:aed553a476e242726e5d13b736cf03879"><td class="mdescLeft">&#160;</td><td class="mdescRight">清理所有的回调函数  <br /></td></tr>
+<tr class="separator:aed553a476e242726e5d13b736cf03879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classGyanis_1_1base_1_1ConfigVarBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classGyanis_1_1base_1_1ConfigVarBase')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classGyanis_1_1base_1_1ConfigVarBase.html">Gyanis::base::ConfigVarBase</a></td></tr>
+<tr class="memitem:a04111465afb9b58e7278556a0d181098 inherit pub_methods_classGyanis_1_1base_1_1ConfigVarBase" id="r_a04111465afb9b58e7278556a0d181098"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVarBase.html#a04111465afb9b58e7278556a0d181098">ConfigVarBase</a> (std::string name, std::string description)</td></tr>
+<tr class="memdesc:a04111465afb9b58e7278556a0d181098 inherit pub_methods_classGyanis_1_1base_1_1ConfigVarBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <br /></td></tr>
+<tr class="separator:a04111465afb9b58e7278556a0d181098 inherit pub_methods_classGyanis_1_1base_1_1ConfigVarBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a185a5d5b410c0891dd183a5d820b3ff2 inherit pub_methods_classGyanis_1_1base_1_1ConfigVarBase" id="r_a185a5d5b410c0891dd183a5d820b3ff2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVarBase.html#a185a5d5b410c0891dd183a5d820b3ff2">~ConfigVarBase</a> ()=default</td></tr>
+<tr class="memdesc:a185a5d5b410c0891dd183a5d820b3ff2 inherit pub_methods_classGyanis_1_1base_1_1ConfigVarBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <br /></td></tr>
+<tr class="separator:a185a5d5b410c0891dd183a5d820b3ff2 inherit pub_methods_classGyanis_1_1base_1_1ConfigVarBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5da066d3b3476ee302ac22e8d8ea46e8 inherit pub_methods_classGyanis_1_1base_1_1ConfigVarBase" id="r_a5da066d3b3476ee302ac22e8d8ea46e8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVarBase.html#a5da066d3b3476ee302ac22e8d8ea46e8">getName</a> () const</td></tr>
+<tr class="memdesc:a5da066d3b3476ee302ac22e8d8ea46e8 inherit pub_methods_classGyanis_1_1base_1_1ConfigVarBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回配置参数名称  <br /></td></tr>
+<tr class="separator:a5da066d3b3476ee302ac22e8d8ea46e8 inherit pub_methods_classGyanis_1_1base_1_1ConfigVarBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d91ec6ea003d4f30e3d9430a82f30d8 inherit pub_methods_classGyanis_1_1base_1_1ConfigVarBase" id="r_a5d91ec6ea003d4f30e3d9430a82f30d8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVarBase.html#a5d91ec6ea003d4f30e3d9430a82f30d8">getDescription</a> () const</td></tr>
+<tr class="memdesc:a5d91ec6ea003d4f30e3d9430a82f30d8 inherit pub_methods_classGyanis_1_1base_1_1ConfigVarBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回配置参数的描述  <br /></td></tr>
+<tr class="separator:a5d91ec6ea003d4f30e3d9430a82f30d8 inherit pub_methods_classGyanis_1_1base_1_1ConfigVarBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a57f72fd999b56b77447787b2d1a7941f" id="r_a57f72fd999b56b77447787b2d1a7941f"><td class="memItemLeft" align="right" valign="top">std::shared_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html#a57f72fd999b56b77447787b2d1a7941f">m_mutex</a></td></tr>
+<tr class="memdesc:a57f72fd999b56b77447787b2d1a7941f"><td class="mdescLeft">&#160;</td><td class="mdescRight">共享互斥锁，确保线程安全  <br /></td></tr>
+<tr class="separator:a57f72fd999b56b77447787b2d1a7941f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ff291ea0c81098c212c6405f1281c92" id="r_a4ff291ea0c81098c212c6405f1281c92"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html#a4ff291ea0c81098c212c6405f1281c92">m_value</a></td></tr>
+<tr class="memdesc:a4ff291ea0c81098c212c6405f1281c92"><td class="mdescLeft">&#160;</td><td class="mdescRight">存储配置项的值  <br /></td></tr>
+<tr class="separator:a4ff291ea0c81098c212c6405f1281c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f25872af56df29bb9de6a4da45f0562" id="r_a9f25872af56df29bb9de6a4da45f0562"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html#a2dbe97e90a7ee7dfcd18ae4472110ca3">CallBackMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html#a9f25872af56df29bb9de6a4da45f0562">m_callbacks</a></td></tr>
+<tr class="memdesc:a9f25872af56df29bb9de6a4da45f0562"><td class="mdescLeft">&#160;</td><td class="mdescRight">回调函数列表  <br /></td></tr>
+<tr class="separator:a9f25872af56df29bb9de6a4da45f0562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_attribs_classGyanis_1_1base_1_1ConfigVarBase"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classGyanis_1_1base_1_1ConfigVarBase')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classGyanis_1_1base_1_1ConfigVarBase.html">Gyanis::base::ConfigVarBase</a></td></tr>
+<tr class="memitem:a475a640f1c7859e1912c0db81c126e5c inherit pro_attribs_classGyanis_1_1base_1_1ConfigVarBase" id="r_a475a640f1c7859e1912c0db81c126e5c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVarBase.html#a475a640f1c7859e1912c0db81c126e5c">m_name</a></td></tr>
+<tr class="memdesc:a475a640f1c7859e1912c0db81c126e5c inherit pro_attribs_classGyanis_1_1base_1_1ConfigVarBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">配置参数的名称  <br /></td></tr>
+<tr class="separator:a475a640f1c7859e1912c0db81c126e5c inherit pro_attribs_classGyanis_1_1base_1_1ConfigVarBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d0a013030ee7687685bc0c8170b2594 inherit pro_attribs_classGyanis_1_1base_1_1ConfigVarBase" id="r_a8d0a013030ee7687685bc0c8170b2594"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1ConfigVarBase.html#a8d0a013030ee7687685bc0c8170b2594">m_description</a></td></tr>
+<tr class="memdesc:a8d0a013030ee7687685bc0c8170b2594 inherit pro_attribs_classGyanis_1_1base_1_1ConfigVarBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">配置参数的描述  <br /></td></tr>
+<tr class="separator:a8d0a013030ee7687685bc0c8170b2594 inherit pro_attribs_classGyanis_1_1base_1_1ConfigVarBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T, typename FromStr = LexicalCast&lt;std::string, T&gt;, typename ToStr = LexicalCast&lt;T, std::string&gt;&gt;<br />
+class Gyanis::base::ConfigVar&lt; T, FromStr, ToStr &gt;</div><p>配置参数模板子类, 保存对应类型的参数值 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>配置项的值类型 </td></tr>
+    <tr><td class="paramname">FromStr</td><td>从 <code>std::string</code> 转换为 <code>T</code> 类型的仿函数，默认为 <code><a class="el" href="classGyanis_1_1base_1_1LexicalCast.html" title="类型转换模板类 (F 源类型, T 目标类型)">LexicalCast</a>&lt;std::string, T&gt;</code> </td></tr>
+    <tr><td class="paramname">ToStr</td><td>从 <code>T</code> 类型转换为 <code>std::string</code> 的仿函数，默认为 <code><a class="el" href="classGyanis_1_1base_1_1LexicalCast.html" title="类型转换模板类 (F 源类型, T 目标类型)">LexicalCast</a>&lt;T, std::string&gt;</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Config_8h_source.html">Config.h</a> 第 <a class="el" href="Config_8h_source.html#l00354">354</a> 行定义.</p>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="a2dbe97e90a7ee7dfcd18ae4472110ca3" name="a2dbe97e90a7ee7dfcd18ae4472110ca3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dbe97e90a7ee7dfcd18ae4472110ca3">&#9670;&#160;</a></span>CallBackMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename FromStr  = LexicalCast&lt;std::string, T&gt;, typename ToStr  = LexicalCast&lt;T, std::string&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classGyanis_1_1base_1_1ConfigVar.html">Gyanis::base::ConfigVar</a>&lt; T, FromStr, ToStr &gt;::CallBackMap =  std::unordered_map&lt;uint64_t, std::function&lt;void(const T&amp; old_value, const T&amp; new_value)&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Config_8h_source.html">Config.h</a> 第 <a class="el" href="Config_8h_source.html#l00357">357</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a6a7730e0afc1d6d50f2c71062463f212" name="a6a7730e0afc1d6d50f2c71062463f212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a7730e0afc1d6d50f2c71062463f212">&#9670;&#160;</a></span>ConfigVar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename FromStr  = LexicalCast&lt;std::string, T&gt;, typename ToStr  = LexicalCast&lt;T, std::string&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html">Gyanis::base::ConfigVar</a>&lt; T, FromStr, ToStr &gt;::ConfigVar </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>default_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>通过参数名, 参数值, 描述构造 <a class="el" href="classGyanis_1_1base_1_1ConfigVar.html" title="配置参数模板子类, 保存对应类型的参数值">ConfigVar</a> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>配置项的名称，名称有效字符为 [0-9a-z_.] </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">default_value</td><td>配置项的默认值 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">description</td><td>配置项的描述 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Config_8h_source.html">Config.h</a> 第 <a class="el" href="Config_8h_source.html#l00364">364</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  364</span>                                                                                                :</div>
+<div class="line"><span class="lineno">  365</span>            <a class="code hl_function" href="classGyanis_1_1base_1_1ConfigVarBase.html#a04111465afb9b58e7278556a0d181098">ConfigVarBase</a>(name, description), <a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a4ff291ea0c81098c212c6405f1281c92">m_value</a>(std::move(default_value))</div>
+<div class="line"><span class="lineno">  366</span>        {</div>
+<div class="line"><span class="lineno">  367</span>        }</div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1ConfigVarBase_html_a04111465afb9b58e7278556a0d181098"><div class="ttname"><a href="classGyanis_1_1base_1_1ConfigVarBase.html#a04111465afb9b58e7278556a0d181098">Gyanis::base::ConfigVarBase::ConfigVarBase</a></div><div class="ttdeci">ConfigVarBase(std::string name, std::string description)</div><div class="ttdoc">构造函数</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00012">Config.cpp:12</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1ConfigVar_html_a4ff291ea0c81098c212c6405f1281c92"><div class="ttname"><a href="classGyanis_1_1base_1_1ConfigVar.html#a4ff291ea0c81098c212c6405f1281c92">Gyanis::base::ConfigVar::m_value</a></div><div class="ttdeci">T m_value</div><div class="ttdoc">存储配置项的值</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00484">Config.h:484</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a1aa84eae67dab56abb38f9b1055c0b55" name="a1aa84eae67dab56abb38f9b1055c0b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aa84eae67dab56abb38f9b1055c0b55">&#9670;&#160;</a></span>addListener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename FromStr  = LexicalCast&lt;std::string, T&gt;, typename ToStr  = LexicalCast&lt;T, std::string&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t <a class="el" href="classGyanis_1_1base_1_1ConfigVar.html">Gyanis::base::ConfigVar</a>&lt; T, FromStr, ToStr &gt;::addListener </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(const T &amp;old_value, const T &amp;new_value)&gt;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>添加变化回调函数 </p>
+
+<p class="definition">在文件 <a class="el" href="Config_8h_source.html">Config.h</a> 第 <a class="el" href="Config_8h_source.html#l00445">445</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  446</span>        {</div>
+<div class="line"><span class="lineno">  447</span>            <span class="keyword">static</span> uint64_t s_counter(0);</div>
+<div class="line"><span class="lineno">  448</span>            std::unique_lock lock(<a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a57f72fd999b56b77447787b2d1a7941f">m_mutex</a>);</div>
+<div class="line"><span class="lineno">  449</span>            ++s_counter;</div>
+<div class="line"><span class="lineno">  450</span>            <a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a9f25872af56df29bb9de6a4da45f0562">m_callbacks</a>[s_counter] = std::move(callback);</div>
+<div class="line"><span class="lineno">  451</span>            <span class="keywordflow">return</span> s_counter;</div>
+<div class="line"><span class="lineno">  452</span>        }</div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1ConfigVar_html_a57f72fd999b56b77447787b2d1a7941f"><div class="ttname"><a href="classGyanis_1_1base_1_1ConfigVar.html#a57f72fd999b56b77447787b2d1a7941f">Gyanis::base::ConfigVar::m_mutex</a></div><div class="ttdeci">std::shared_mutex m_mutex</div><div class="ttdoc">共享互斥锁，确保线程安全</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00483">Config.h:483</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1ConfigVar_html_a9f25872af56df29bb9de6a4da45f0562"><div class="ttname"><a href="classGyanis_1_1base_1_1ConfigVar.html#a9f25872af56df29bb9de6a4da45f0562">Gyanis::base::ConfigVar::m_callbacks</a></div><div class="ttdeci">CallBackMap m_callbacks</div><div class="ttdoc">回调函数列表</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00485">Config.h:485</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aed553a476e242726e5d13b736cf03879" name="aed553a476e242726e5d13b736cf03879"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed553a476e242726e5d13b736cf03879">&#9670;&#160;</a></span>clearListeners()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename FromStr  = LexicalCast&lt;std::string, T&gt;, typename ToStr  = LexicalCast&lt;T, std::string&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classGyanis_1_1base_1_1ConfigVar.html">Gyanis::base::ConfigVar</a>&lt; T, FromStr, ToStr &gt;::clearListeners </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>清理所有的回调函数 </p>
+
+<p class="definition">在文件 <a class="el" href="Config_8h_source.html">Config.h</a> 第 <a class="el" href="Config_8h_source.html#l00476">476</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  477</span>        {</div>
+<div class="line"><span class="lineno">  478</span>            std::unique_lock lock(<a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a57f72fd999b56b77447787b2d1a7941f">m_mutex</a>);</div>
+<div class="line"><span class="lineno">  479</span>            <a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a9f25872af56df29bb9de6a4da45f0562">m_callbacks</a>.clear();</div>
+<div class="line"><span class="lineno">  480</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4a7e55c69f5482a427d5ed4f97ab3ce7" name="a4a7e55c69f5482a427d5ed4f97ab3ce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a7e55c69f5482a427d5ed4f97ab3ce7">&#9670;&#160;</a></span>delListener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename FromStr  = LexicalCast&lt;std::string, T&gt;, typename ToStr  = LexicalCast&lt;T, std::string&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classGyanis_1_1base_1_1ConfigVar.html">Gyanis::base::ConfigVar</a>&lt; T, FromStr, ToStr &gt;::delListener </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>删除回调函数 </p>
+
+<p class="definition">在文件 <a class="el" href="Config_8h_source.html">Config.h</a> 第 <a class="el" href="Config_8h_source.html#l00457">457</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  458</span>        {</div>
+<div class="line"><span class="lineno">  459</span>            std::unique_lock lock(<a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a57f72fd999b56b77447787b2d1a7941f">m_mutex</a>);</div>
+<div class="line"><span class="lineno">  460</span>            <a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a9f25872af56df29bb9de6a4da45f0562">m_callbacks</a>.erase(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  461</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7e5d7b7bb3c89787b93a04a35051b158" name="a7e5d7b7bb3c89787b93a04a35051b158"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e5d7b7bb3c89787b93a04a35051b158">&#9670;&#160;</a></span>fromString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename FromStr  = LexicalCast&lt;std::string, T&gt;, typename ToStr  = LexicalCast&lt;T, std::string&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classGyanis_1_1base_1_1ConfigVar.html">Gyanis::base::ConfigVar</a>&lt; T, FromStr, ToStr &gt;::fromString </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从 YAML 字符串转换为参数的值 </p>
+
+<p>实现了 <a class="el" href="classGyanis_1_1base_1_1ConfigVarBase.html#aec96d45a4d46e747d706b0261497c395">Gyanis::base::ConfigVarBase</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Config_8h_source.html">Config.h</a> 第 <a class="el" href="Config_8h_source.html#l00392">392</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  393</span>        {</div>
+<div class="line"><span class="lineno">  394</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  395</span>            {</div>
+<div class="line"><span class="lineno">  396</span>                <a class="code hl_function" href="classGyanis_1_1base_1_1ConfigVar.html#aefc28ae05491126044699f0478f6795d">setValue</a>(FromStr()(value));</div>
+<div class="line"><span class="lineno">  397</span>            }</div>
+<div class="line"><span class="lineno">  398</span>            <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e)</div>
+<div class="line"><span class="lineno">  399</span>            {</div>
+<div class="line"><span class="lineno">  400</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_define" href="Log_8h.html#acac80b4704e84229dd7656618273b1c3">LOG_ROOT</a>())</div>
+<div class="line"><span class="lineno">  401</span>                    &lt;&lt; <span class="stringliteral">&quot;ConfigVar::toString() - Exception thrown: &quot;</span> &lt;&lt; e.what()</div>
+<div class="line"><span class="lineno">  402</span>                    &lt;&lt; <span class="stringliteral">&quot; | Type conversion: &quot;</span> &lt;&lt; TypeToName&lt;T&gt;()</div>
+<div class="line"><span class="lineno">  403</span>                    &lt;&lt; <span class="stringliteral">&quot; to String | Variable Name: &quot;</span> &lt;&lt; <a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVarBase.html#a475a640f1c7859e1912c0db81c126e5c">m_name</a>;</div>
+<div class="line"><span class="lineno">  404</span>            }</div>
+<div class="line"><span class="lineno">  405</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  406</span>        }</div>
+<div class="ttc" id="aLog_8h_html_a80a932ee56f777358b3d82e5fa3203c8"><div class="ttname"><a href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a></div><div class="ttdeci">#define LOG_ERROR(logger)</div><div class="ttdoc">输出 error 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00046">Log.h:46</a></div></div>
+<div class="ttc" id="aLog_8h_html_acac80b4704e84229dd7656618273b1c3"><div class="ttname"><a href="Log_8h.html#acac80b4704e84229dd7656618273b1c3">LOG_ROOT</a></div><div class="ttdeci">#define LOG_ROOT()</div><div class="ttdoc">获取根日志器</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00089">Log.h:89</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1ConfigVarBase_html_a475a640f1c7859e1912c0db81c126e5c"><div class="ttname"><a href="classGyanis_1_1base_1_1ConfigVarBase.html#a475a640f1c7859e1912c0db81c126e5c">Gyanis::base::ConfigVarBase::m_name</a></div><div class="ttdeci">std::string m_name</div><div class="ttdoc">配置参数的名称</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00071">Config.h:71</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1ConfigVar_html_aefc28ae05491126044699f0478f6795d"><div class="ttname"><a href="classGyanis_1_1base_1_1ConfigVar.html#aefc28ae05491126044699f0478f6795d">Gyanis::base::ConfigVar::setValue</a></div><div class="ttdeci">void setValue(const T &amp;value)</div><div class="ttdoc">设置当前配置参数的值</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00420">Config.h:420</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1ConfigVar_a7e5d7b7bb3c89787b93a04a35051b158_cgraph.png" border="0" usemap="#aclassGyanis_1_1base_1_1ConfigVar_a7e5d7b7bb3c89787b93a04a35051b158_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a8ad8e9fa81fa014845f2f002a70a1760" name="a8ad8e9fa81fa014845f2f002a70a1760"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ad8e9fa81fa014845f2f002a70a1760">&#9670;&#160;</a></span>getListener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename FromStr  = LexicalCast&lt;std::string, T&gt;, typename ToStr  = LexicalCast&lt;T, std::string&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt; void(const T &amp;old_value, const T &amp;new_value)&gt; <a class="el" href="classGyanis_1_1base_1_1ConfigVar.html">Gyanis::base::ConfigVar</a>&lt; T, FromStr, ToStr &gt;::getListener </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取回调函数 </p>
+
+<p class="definition">在文件 <a class="el" href="Config_8h_source.html">Config.h</a> 第 <a class="el" href="Config_8h_source.html#l00466">466</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  467</span>        {</div>
+<div class="line"><span class="lineno">  468</span>            std::shared_lock lock(<a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a57f72fd999b56b77447787b2d1a7941f">m_mutex</a>);</div>
+<div class="line"><span class="lineno">  469</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a9f25872af56df29bb9de6a4da45f0562">m_callbacks</a>.find(<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  470</span>            <span class="keywordflow">return</span> it == <a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a9f25872af56df29bb9de6a4da45f0562">m_callbacks</a>.end() ? nullptr : it-&gt;second;</div>
+<div class="line"><span class="lineno">  471</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a948c9636a71a5085974b86a2e12117fe" name="a948c9636a71a5085974b86a2e12117fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948c9636a71a5085974b86a2e12117fe">&#9670;&#160;</a></span>getTypeName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename FromStr  = LexicalCast&lt;std::string, T&gt;, typename ToStr  = LexicalCast&lt;T, std::string&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="classGyanis_1_1base_1_1ConfigVar.html">Gyanis::base::ConfigVar</a>&lt; T, FromStr, ToStr &gt;::getTypeName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回配置项值的类型名称 </p>
+
+<p>实现了 <a class="el" href="classGyanis_1_1base_1_1ConfigVarBase.html#a13badfceab42fc5891973adad03239c6">Gyanis::base::ConfigVarBase</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Config_8h_source.html">Config.h</a> 第 <a class="el" href="Config_8h_source.html#l00440">440</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  440</span>{ <span class="keywordflow">return</span> TypeToName&lt;T&gt;(); }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="accc5846a64355cc234122e8986b7f78f" name="accc5846a64355cc234122e8986b7f78f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accc5846a64355cc234122e8986b7f78f">&#9670;&#160;</a></span>getValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename FromStr  = LexicalCast&lt;std::string, T&gt;, typename ToStr  = LexicalCast&lt;T, std::string&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; <a class="el" href="classGyanis_1_1base_1_1ConfigVar.html">Gyanis::base::ConfigVar</a>&lt; T, FromStr, ToStr &gt;::getValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前配置参数的值 </p>
+
+<p class="definition">在文件 <a class="el" href="Config_8h_source.html">Config.h</a> 第 <a class="el" href="Config_8h_source.html#l00411">411</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  412</span>        {</div>
+<div class="line"><span class="lineno">  413</span>            std::shared_lock lock(<a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a57f72fd999b56b77447787b2d1a7941f">m_mutex</a>);</div>
+<div class="line"><span class="lineno">  414</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a4ff291ea0c81098c212c6405f1281c92">m_value</a>;</div>
+<div class="line"><span class="lineno">  415</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aefc28ae05491126044699f0478f6795d" name="aefc28ae05491126044699f0478f6795d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefc28ae05491126044699f0478f6795d">&#9670;&#160;</a></span>setValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename FromStr  = LexicalCast&lt;std::string, T&gt;, typename ToStr  = LexicalCast&lt;T, std::string&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classGyanis_1_1base_1_1ConfigVar.html">Gyanis::base::ConfigVar</a>&lt; T, FromStr, ToStr &gt;::setValue </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置当前配置参数的值 </p>
+
+<p class="definition">在文件 <a class="el" href="Config_8h_source.html">Config.h</a> 第 <a class="el" href="Config_8h_source.html#l00420">420</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  421</span>        {</div>
+<div class="line"><span class="lineno">  422</span>            {</div>
+<div class="line"><span class="lineno">  423</span>                std::shared_lock lock(<a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a57f72fd999b56b77447787b2d1a7941f">m_mutex</a>);</div>
+<div class="line"><span class="lineno">  424</span>                <span class="keywordflow">if</span> (value == <a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a4ff291ea0c81098c212c6405f1281c92">m_value</a>)</div>
+<div class="line"><span class="lineno">  425</span>                {</div>
+<div class="line"><span class="lineno">  426</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  427</span>                }</div>
+<div class="line"><span class="lineno">  428</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; i : <a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a9f25872af56df29bb9de6a4da45f0562">m_callbacks</a>)</div>
+<div class="line"><span class="lineno">  429</span>                {</div>
+<div class="line"><span class="lineno">  430</span>                    i.second(<a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a4ff291ea0c81098c212c6405f1281c92">m_value</a>, value);</div>
+<div class="line"><span class="lineno">  431</span>                }</div>
+<div class="line"><span class="lineno">  432</span>            }</div>
+<div class="line"><span class="lineno">  433</span>            std::unique_lock lock(<a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a57f72fd999b56b77447787b2d1a7941f">m_mutex</a>);</div>
+<div class="line"><span class="lineno">  434</span>            <a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a4ff291ea0c81098c212c6405f1281c92">m_value</a> = value;</div>
+<div class="line"><span class="lineno">  435</span>        }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1ConfigVar_aefc28ae05491126044699f0478f6795d_icgraph.png" border="0" usemap="#aclassGyanis_1_1base_1_1ConfigVar_aefc28ae05491126044699f0478f6795d_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9c2d809826a9430dccd255645756006f" name="a9c2d809826a9430dccd255645756006f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c2d809826a9430dccd255645756006f">&#9670;&#160;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename FromStr  = LexicalCast&lt;std::string, T&gt;, typename ToStr  = LexicalCast&lt;T, std::string&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="classGyanis_1_1base_1_1ConfigVar.html">Gyanis::base::ConfigVar</a>&lt; T, FromStr, ToStr &gt;::toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将参数值转换成 YAML 字符串 </p>
+
+<p>实现了 <a class="el" href="classGyanis_1_1base_1_1ConfigVarBase.html#af156c79575e1e23518924e02e2742a9b">Gyanis::base::ConfigVarBase</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Config_8h_source.html">Config.h</a> 第 <a class="el" href="Config_8h_source.html#l00372">372</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  373</span>        {</div>
+<div class="line"><span class="lineno">  374</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  375</span>            {</div>
+<div class="line"><span class="lineno">  376</span>                std::shared_lock lock(<a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a57f72fd999b56b77447787b2d1a7941f">m_mutex</a>);</div>
+<div class="line"><span class="lineno">  377</span>                <span class="keywordflow">return</span> ToStr()(<a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVar.html#a4ff291ea0c81098c212c6405f1281c92">m_value</a>);</div>
+<div class="line"><span class="lineno">  378</span>            }</div>
+<div class="line"><span class="lineno">  379</span>            <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e)</div>
+<div class="line"><span class="lineno">  380</span>            {</div>
+<div class="line"><span class="lineno">  381</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_define" href="Log_8h.html#acac80b4704e84229dd7656618273b1c3">LOG_ROOT</a>())</div>
+<div class="line"><span class="lineno">  382</span>                    &lt;&lt; <span class="stringliteral">&quot;ConfigVar::toString() - Exception occurred: &quot;</span> &lt;&lt; e.what()</div>
+<div class="line"><span class="lineno">  383</span>                    &lt;&lt; <span class="stringliteral">&quot; | Type Conversion: &quot;</span> &lt;&lt; TypeToName&lt;T&gt;()</div>
+<div class="line"><span class="lineno">  384</span>                    &lt;&lt; <span class="stringliteral">&quot; to String | Variable Name: &quot;</span> &lt;&lt; <a class="code hl_variable" href="classGyanis_1_1base_1_1ConfigVarBase.html#a475a640f1c7859e1912c0db81c126e5c">m_name</a>;</div>
+<div class="line"><span class="lineno">  385</span>            }</div>
+<div class="line"><span class="lineno">  386</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  387</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a9f25872af56df29bb9de6a4da45f0562" name="a9f25872af56df29bb9de6a4da45f0562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f25872af56df29bb9de6a4da45f0562">&#9670;&#160;</a></span>m_callbacks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename FromStr  = LexicalCast&lt;std::string, T&gt;, typename ToStr  = LexicalCast&lt;T, std::string&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html#a2dbe97e90a7ee7dfcd18ae4472110ca3">CallBackMap</a> <a class="el" href="classGyanis_1_1base_1_1ConfigVar.html">Gyanis::base::ConfigVar</a>&lt; T, FromStr, ToStr &gt;::m_callbacks</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>回调函数列表 </p>
+
+<p class="definition">在文件 <a class="el" href="Config_8h_source.html">Config.h</a> 第 <a class="el" href="Config_8h_source.html#l00485">485</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a57f72fd999b56b77447787b2d1a7941f" name="a57f72fd999b56b77447787b2d1a7941f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57f72fd999b56b77447787b2d1a7941f">&#9670;&#160;</a></span>m_mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename FromStr  = LexicalCast&lt;std::string, T&gt;, typename ToStr  = LexicalCast&lt;T, std::string&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_mutex <a class="el" href="classGyanis_1_1base_1_1ConfigVar.html">Gyanis::base::ConfigVar</a>&lt; T, FromStr, ToStr &gt;::m_mutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>共享互斥锁，确保线程安全 </p>
+
+<p class="definition">在文件 <a class="el" href="Config_8h_source.html">Config.h</a> 第 <a class="el" href="Config_8h_source.html#l00483">483</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a4ff291ea0c81098c212c6405f1281c92" name="a4ff291ea0c81098c212c6405f1281c92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ff291ea0c81098c212c6405f1281c92">&#9670;&#160;</a></span>m_value</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename FromStr  = LexicalCast&lt;std::string, T&gt;, typename ToStr  = LexicalCast&lt;T, std::string&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classGyanis_1_1base_1_1ConfigVar.html">Gyanis::base::ConfigVar</a>&lt; T, FromStr, ToStr &gt;::m_value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>存储配置项的值 </p>
+
+<p class="definition">在文件 <a class="el" href="Config_8h_source.html">Config.h</a> 第 <a class="el" href="Config_8h_source.html#l00484">484</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/base/<a class="el" href="Config_8h_source.html">Config.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGyanis.html">Gyanis</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1base.html">base</a></li><li class="navelem"><a class="el" href="classGyanis_1_1base_1_1ConfigVar.html">ConfigVar</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

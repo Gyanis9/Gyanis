@@ -1,0 +1,13 @@
+digraph "Gyanis::core::WorkerGroup::doWork"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="Gyanis::core::WorkerGroup\l::doWork",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="执行工作任务的内部函数"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::core::WorkerGroup\l::scheduler",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1WorkerGroup.html#aa5f64713142da98d07de36da5666a659",tooltip="调度任务，将传入的回调函数（任务）分配给指定的工作线程"];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Gyanis::core::WorkerGroup\l::Create",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1WorkerGroup.html#abeac8c8e67f7494cae2f46443aff9763",tooltip="创建并返回一个 WorkerGroup 的智能指针"];
+}

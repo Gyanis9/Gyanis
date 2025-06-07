@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: Gyanis::net::http::WSServlet类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGyanis_1_1net_1_1http_1_1WSServlet.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classGyanis_1_1net_1_1http_1_1WSServlet-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Gyanis::net::http::WSServlet类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>WebSocket <a class="el" href="classGyanis_1_1net_1_1http_1_1Servlet.html" title="Servlet 基类">Servlet</a> 基类，用于处理 WebSocket 连接的握手、消息收发和关闭  
+ <a href="classGyanis_1_1net_1_1http_1_1WSServlet.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="WebSocketServlet_8h_source.html">WebSocketServlet.h</a>&gt;</code></p>
+<div class="dynheader">
+类 Gyanis::net::http::WSServlet 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1WSServlet__inherit__graph.png" border="0" usemap="#aGyanis_1_1net_1_1http_1_1WSServlet_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+Gyanis::net::http::WSServlet 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1WSServlet__coll__graph.png" border="0" usemap="#aGyanis_1_1net_1_1http_1_1WSServlet_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a61c0098c36eba4537b91dc6094b7dcf7" id="r_a61c0098c36eba4537b91dc6094b7dcf7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSServlet.html#a61c0098c36eba4537b91dc6094b7dcf7">WSServlet</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a61c0098c36eba4537b91dc6094b7dcf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数，初始化 WebSocket <a class="el" href="classGyanis_1_1net_1_1http_1_1Servlet.html" title="Servlet 基类">Servlet</a>  <br /></td></tr>
+<tr class="separator:a61c0098c36eba4537b91dc6094b7dcf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74c290ac7ce91b287464210edd511d81" id="r_a74c290ac7ce91b287464210edd511d81"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSServlet.html#a74c290ac7ce91b287464210edd511d81">~WSServlet</a> () override=default</td></tr>
+<tr class="memdesc:a74c290ac7ce91b287464210edd511d81"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数，销毁 WebSocket <a class="el" href="classGyanis_1_1net_1_1http_1_1Servlet.html" title="Servlet 基类">Servlet</a> 对象  <br /></td></tr>
+<tr class="separator:a74c290ac7ce91b287464210edd511d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83cd1dcd166dc31c9631e46cec9b8a8a" id="r_a83cd1dcd166dc31c9631e46cec9b8a8a"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSServlet.html#a83cd1dcd166dc31c9631e46cec9b8a8a">handle</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html">HttpRequest</a> &gt; &amp;request, const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpResponse.html">HttpResponse</a> &gt; &amp;response, const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpSession.html">HttpSession</a> &gt; &amp;session) override</td></tr>
+<tr class="memdesc:a83cd1dcd166dc31c9631e46cec9b8a8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理 WebSocket 请求，通常用于 WebSocket 握手  <br /></td></tr>
+<tr class="separator:a83cd1dcd166dc31c9631e46cec9b8a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af06ac8455f84729d00a9e728daa168ce" id="r_af06ac8455f84729d00a9e728daa168ce"><td class="memItemLeft" align="right" valign="top">virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSServlet.html#af06ac8455f84729d00a9e728daa168ce">onConnect</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html">HttpRequest</a> &gt; &amp;header, const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1WSSession.html">WSSession</a> &gt; &amp;session)=0</td></tr>
+<tr class="memdesc:af06ac8455f84729d00a9e728daa168ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">WebSocket 连接时的回调接口，具体操作由派生类实现  <br /></td></tr>
+<tr class="separator:af06ac8455f84729d00a9e728daa168ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae558a42056b0605f2fe09746194f9fb3" id="r_ae558a42056b0605f2fe09746194f9fb3"><td class="memItemLeft" align="right" valign="top">virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSServlet.html#ae558a42056b0605f2fe09746194f9fb3">onClose</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html">HttpRequest</a> &gt; &amp;header, const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1WSSession.html">WSSession</a> &gt; &amp;session)=0</td></tr>
+<tr class="memdesc:ae558a42056b0605f2fe09746194f9fb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">WebSocket 关闭时的回调接口，具体操作由派生类实现  <br /></td></tr>
+<tr class="separator:ae558a42056b0605f2fe09746194f9fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adec4559aa92a19cb2248e6695a1c8fe5" id="r_adec4559aa92a19cb2248e6695a1c8fe5"><td class="memItemLeft" align="right" valign="top">virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSServlet.html#adec4559aa92a19cb2248e6695a1c8fe5">handle</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html">HttpRequest</a> &gt; &amp;header, const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1WSFrameMessage.html">WSFrameMessage</a> &gt; &amp;msg, const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1WSSession.html">WSSession</a> &gt; &amp;session)=0</td></tr>
+<tr class="memdesc:adec4559aa92a19cb2248e6695a1c8fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理 WebSocket 消息的回调接口，具体操作由派生类实现  <br /></td></tr>
+<tr class="separator:adec4559aa92a19cb2248e6695a1c8fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classGyanis_1_1net_1_1http_1_1Servlet"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classGyanis_1_1net_1_1http_1_1Servlet')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classGyanis_1_1net_1_1http_1_1Servlet.html">Gyanis::net::http::Servlet</a></td></tr>
+<tr class="memitem:a91f459f3e7a3f611a1e60b0ed6d0db56 inherit pub_methods_classGyanis_1_1net_1_1http_1_1Servlet" id="r_a91f459f3e7a3f611a1e60b0ed6d0db56"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1Servlet.html#a91f459f3e7a3f611a1e60b0ed6d0db56">Servlet</a> (std::string name)</td></tr>
+<tr class="memdesc:a91f459f3e7a3f611a1e60b0ed6d0db56 inherit pub_methods_classGyanis_1_1net_1_1http_1_1Servlet"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造 <a class="el" href="classGyanis_1_1net_1_1http_1_1Servlet.html" title="Servlet 基类">Servlet</a> 对象  <br /></td></tr>
+<tr class="separator:a91f459f3e7a3f611a1e60b0ed6d0db56 inherit pub_methods_classGyanis_1_1net_1_1http_1_1Servlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa59692e88c6aba38eed9f0ede71b355c inherit pub_methods_classGyanis_1_1net_1_1http_1_1Servlet" id="r_aa59692e88c6aba38eed9f0ede71b355c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1Servlet.html#aa59692e88c6aba38eed9f0ede71b355c">~Servlet</a> ()=default</td></tr>
+<tr class="memdesc:aa59692e88c6aba38eed9f0ede71b355c inherit pub_methods_classGyanis_1_1net_1_1http_1_1Servlet"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构 <a class="el" href="classGyanis_1_1net_1_1http_1_1Servlet.html" title="Servlet 基类">Servlet</a> 对象  <br /></td></tr>
+<tr class="separator:aa59692e88c6aba38eed9f0ede71b355c inherit pub_methods_classGyanis_1_1net_1_1http_1_1Servlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed23f2d858a33be0939de416af696786 inherit pub_methods_classGyanis_1_1net_1_1http_1_1Servlet" id="r_aed23f2d858a33be0939de416af696786"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1Servlet.html#aed23f2d858a33be0939de416af696786">getName</a> () const</td></tr>
+<tr class="memdesc:aed23f2d858a33be0939de416af696786 inherit pub_methods_classGyanis_1_1net_1_1http_1_1Servlet"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回Servlet名称  <br /></td></tr>
+<tr class="separator:aed23f2d858a33be0939de416af696786 inherit pub_methods_classGyanis_1_1net_1_1http_1_1Servlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_attribs_classGyanis_1_1net_1_1http_1_1Servlet"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classGyanis_1_1net_1_1http_1_1Servlet')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classGyanis_1_1net_1_1http_1_1Servlet.html">Gyanis::net::http::Servlet</a></td></tr>
+<tr class="memitem:a0aae673b51ea4d805bcc88b69b360c75 inherit pro_attribs_classGyanis_1_1net_1_1http_1_1Servlet" id="r_a0aae673b51ea4d805bcc88b69b360c75"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1Servlet.html#a0aae673b51ea4d805bcc88b69b360c75">m_name</a></td></tr>
+<tr class="memdesc:a0aae673b51ea4d805bcc88b69b360c75 inherit pro_attribs_classGyanis_1_1net_1_1http_1_1Servlet"><td class="mdescLeft">&#160;</td><td class="mdescRight">名称  <br /></td></tr>
+<tr class="separator:a0aae673b51ea4d805bcc88b69b360c75 inherit pro_attribs_classGyanis_1_1net_1_1http_1_1Servlet"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>WebSocket <a class="el" href="classGyanis_1_1net_1_1http_1_1Servlet.html" title="Servlet 基类">Servlet</a> 基类，用于处理 WebSocket 连接的握手、消息收发和关闭 </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketServlet_8h_source.html">WebSocketServlet.h</a> 第 <a class="el" href="WebSocketServlet_8h_source.html#l00019">19</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a61c0098c36eba4537b91dc6094b7dcf7" name="a61c0098c36eba4537b91dc6094b7dcf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c0098c36eba4537b91dc6094b7dcf7">&#9670;&#160;</a></span>WSServlet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gyanis::net::http::WSServlet::WSServlet </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数，初始化 WebSocket <a class="el" href="classGyanis_1_1net_1_1http_1_1Servlet.html" title="Servlet 基类">Servlet</a> </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketServlet_8h_source.html">WebSocketServlet.h</a> 第 <a class="el" href="WebSocketServlet_8h_source.html#l00025">25</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>            : <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Servlet.html#a91f459f3e7a3f611a1e60b0ed6d0db56">Servlet</a>(name)</div>
+<div class="line"><span class="lineno">   27</span>        {</div>
+<div class="line"><span class="lineno">   28</span>        }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Servlet_html_a91f459f3e7a3f611a1e60b0ed6d0db56"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Servlet.html#a91f459f3e7a3f611a1e60b0ed6d0db56">Gyanis::net::http::Servlet::Servlet</a></div><div class="ttdeci">Servlet(std::string name)</div><div class="ttdoc">构造 Servlet 对象</div><div class="ttdef"><b>Definition</b> <a href="Servlet_8cpp_source.html#l00009">Servlet.cpp:9</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a74c290ac7ce91b287464210edd511d81" name="a74c290ac7ce91b287464210edd511d81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74c290ac7ce91b287464210edd511d81">&#9670;&#160;</a></span>~WSServlet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gyanis::net::http::WSServlet::~WSServlet </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>析构函数，销毁 WebSocket <a class="el" href="classGyanis_1_1net_1_1http_1_1Servlet.html" title="Servlet 基类">Servlet</a> 对象 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="adec4559aa92a19cb2248e6695a1c8fe5" name="adec4559aa92a19cb2248e6695a1c8fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adec4559aa92a19cb2248e6695a1c8fe5">&#9670;&#160;</a></span>handle() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int32_t Gyanis::net::http::WSServlet::handle </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html">HttpRequest</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>header</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1WSFrameMessage.html">WSFrameMessage</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1WSSession.html">WSSession</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>session</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>处理 WebSocket 消息的回调接口，具体操作由派生类实现 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">header</td><td>HTTP 请求头信息 </td></tr>
+    <tr><td class="paramname">msg</td><td>WebSocket 帧消息对象 </td></tr>
+    <tr><td class="paramname">session</td><td>当前的 WebSocket 会话对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回消息处理的状态 </dd></dl>
+
+<p>在 <a class="el" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#acda9fc4ef57ef906066a40b23dec3328">Gyanis::net::http::FunctionWSServlet</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a83cd1dcd166dc31c9631e46cec9b8a8a" name="a83cd1dcd166dc31c9631e46cec9b8a8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83cd1dcd166dc31c9631e46cec9b8a8a">&#9670;&#160;</a></span>handle() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t Gyanis::net::http::WSServlet::handle </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html">HttpRequest</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpResponse.html">HttpResponse</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>response</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpSession.html">HttpSession</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>session</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>处理 WebSocket 请求，通常用于 WebSocket 握手 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>HTTP 请求对象 </td></tr>
+    <tr><td class="paramname">response</td><td>HTTP 响应对象 </td></tr>
+    <tr><td class="paramname">session</td><td>当前的 HTTP 会话对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回处理状态，0 表示成功，其他值表示错误 </dd></dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1net_1_1http_1_1Servlet.html#a5b782934b8e16720df4144749d599cf9">Gyanis::net::http::Servlet</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketServlet_8h_source.html">WebSocketServlet.h</a> 第 <a class="el" href="WebSocketServlet_8h_source.html#l00042">42</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>        {</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae558a42056b0605f2fe09746194f9fb3" name="ae558a42056b0605f2fe09746194f9fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae558a42056b0605f2fe09746194f9fb3">&#9670;&#160;</a></span>onClose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int32_t Gyanis::net::http::WSServlet::onClose </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html">HttpRequest</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>header</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1WSSession.html">WSSession</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>session</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>WebSocket 关闭时的回调接口，具体操作由派生类实现 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">header</td><td>HTTP 请求头信息 </td></tr>
+    <tr><td class="paramname">session</td><td>当前的 WebSocket 会话对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回关闭处理的状态 </dd></dl>
+
+<p>在 <a class="el" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a9aac343a49f52cd985ebc1782ec96f8c">Gyanis::net::http::FunctionWSServlet</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="af06ac8455f84729d00a9e728daa168ce" name="af06ac8455f84729d00a9e728daa168ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af06ac8455f84729d00a9e728daa168ce">&#9670;&#160;</a></span>onConnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int32_t Gyanis::net::http::WSServlet::onConnect </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html">HttpRequest</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>header</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1WSSession.html">WSSession</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>session</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>WebSocket 连接时的回调接口，具体操作由派生类实现 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">header</td><td>HTTP 请求头信息 </td></tr>
+    <tr><td class="paramname">session</td><td>当前的 WebSocket 会话对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回连接处理的状态 </dd></dl>
+
+<p>在 <a class="el" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a5b3b56f8f300cfa75ddf05e9c321433c">Gyanis::net::http::FunctionWSServlet</a> 内被实现.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/net/http/<a class="el" href="WebSocketServlet_8h_source.html">WebSocketServlet.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGyanis.html">Gyanis</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1net.html">net</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1net_1_1http.html">http</a></li><li class="navelem"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSServlet.html">WSServlet</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

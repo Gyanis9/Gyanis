@@ -1,0 +1,15 @@
+digraph "Gyanis::net::Address::GetInterfaceAddresses"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="Gyanis::net::Address\l::GetInterfaceAddresses",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="获取指定网卡的地址和子网掩码位数"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::net::Address\l::GetInterfaceAddresses",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1Address.html#a0f2719bc5fb5b34954231aafb5e14343",tooltip="返回本机所有网卡的<网卡名, 地址, 子网掩码位数>"];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Gyanis::net::CountBytes",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1net.html#ad11d5343e1343b2fffa68ebd1f718d6c",tooltip="计算一个整数（无符号类型 T）中 1 的位数"];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Gyanis::net::Address\l::Create",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1Address.html#a66d51d78f038921ef3f98a4594fbaf1f",tooltip="通过sockaddr指针创建Address"];
+}

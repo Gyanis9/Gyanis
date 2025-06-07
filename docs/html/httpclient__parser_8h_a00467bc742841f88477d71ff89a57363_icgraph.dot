@@ -1,0 +1,15 @@
+digraph "httpclient_parser_has_error"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="httpclient_parser_has\l_error",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="检查 HTTP 客户端解析器是否出现错误"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::net::http::\lHttpResponseParser::\lhasError",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1HttpResponseParser.html#abe3c53a8f27a6388d1d7dd6e9e7a6d8e",tooltip="检查解析是否出现错误"];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="httpclient_parser_finish",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$httpclient__parser_8cpp.html#ad80e85fd65f22c5928977acf065b975e",tooltip="完成 HTTP 客户端解析"];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Gyanis::net::http::\lHttpResponseParser::\lisFinished",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1HttpResponseParser.html#a9f88356495f98e55e7384d3554990bb2",tooltip="检查解析是否完成"];
+}

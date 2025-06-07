@@ -1,0 +1,43 @@
+digraph "Gyanis::net::stream::Stream::writeFixSize"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="Gyanis::net::stream\l::Stream::writeFixSize",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="向流中写入固定大小的数据"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::net::http::\lHttpConnection::sendRequest",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1HttpConnection.html#aa51af397555cf12397d80730d33a4e44",tooltip="发送 HTTP 请求"];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Gyanis::net::http::\lHttpSession::sendResponse",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1HttpSession.html#a4e17a212eb37cb58b403f8dde8a27622",tooltip="发送 HTTP 响应"];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Gyanis::net::http::\lWSSession::handleShake",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1WSSession.html#a1f18a0f0e706c0f4d26287731191b7c8",tooltip="处理 WebSocket 握手请求"];
+  Node1 -> Node5 [id="edge4_Node000001_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="Gyanis::net::http::\lWSPing",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1net_1_1http.html#a6832af9fd19ac1c8f718af81d13ca4d4",tooltip="向流中发送 PING 帧"];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="Gyanis::net::http::\lWSConnection::ping",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1WSConnection.html#a24d9158478873de606f02561159e5ebd",tooltip="发送 PING 帧，用于检测 WebSocket 连接是否存活"];
+  Node5 -> Node7 [id="edge6_Node000005_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="Gyanis::net::http::\lWSSession::ping",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1WSSession.html#a53d98180ef94c319ff9f3548ecaea176",tooltip="发送 PING 帧，用于检测连接"];
+  Node1 -> Node8 [id="edge7_Node000001_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="Gyanis::net::http::\lWSPong",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1net_1_1http.html#ad8b7d2b678089ef65163de359f2c400a",tooltip="向流中发送 PONG 帧"];
+  Node8 -> Node9 [id="edge8_Node000008_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="Gyanis::net::http::\lWSConnection::pong",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1WSConnection.html#ace9da55283204fb1132627f5b34973fa",tooltip="发送 PONG 帧，回应 WebSocket 服务器的 PING 帧"];
+  Node8 -> Node10 [id="edge9_Node000008_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="Gyanis::net::http::\lWSSession::pong",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1WSSession.html#a2bee2f2ad89770d041a299f77181a01e",tooltip="发送 PONG 帧，回应 PING 帧"];
+  Node8 -> Node11 [id="edge10_Node000008_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="Gyanis::net::http::\lWSRecvMessage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1net_1_1http.html#a49b24bd5aabf32918f7bc7c98e698c97",tooltip="WebSocket 消息最大大小配置变量"];
+  Node11 -> Node12 [id="edge11_Node000011_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="Gyanis::net::http::\lWSConnection::recvMessage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1WSConnection.html#ab9323c77ad2e5486013b91f2783911bd",tooltip="接收 WebSocket 消息"];
+  Node11 -> Node13 [id="edge12_Node000011_Node000013",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="Gyanis::net::http::\lWSSession::recvMessage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1WSSession.html#a438872b08c8095c5af27b2f7b5084b53",tooltip="接收 WebSocket 消息"];
+  Node1 -> Node14 [id="edge13_Node000001_Node000014",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="Gyanis::net::http::\lWSSendMessage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1net_1_1http.html#ad7a0a14e59c8bdfb095836f68efcf5ee",tooltip="向流中发送 WebSocket 消息"];
+  Node14 -> Node15 [id="edge14_Node000014_Node000015",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="Gyanis::net::http::\lWSConnection::sendMessage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1WSConnection.html#a50cd56c9ae0db64eab2dd56b2edd5f54",tooltip="发送 WebSocket 消息"];
+  Node14 -> Node16 [id="edge15_Node000014_Node000016",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node16 [id="Node000016",label="Gyanis::net::http::\lWSSession::sendMessage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1WSSession.html#a4a8befb5f2f0e25f5d4ef541044da5b8",tooltip="发送 WebSocket 消息"];
+  Node14 -> Node17 [id="edge16_Node000014_Node000017",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node17 [id="Node000017",label="Gyanis::net::http::\lWSConnection::sendMessage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1WSConnection.html#addb009181a955dd240be014d29d179f3",tooltip="发送字符串形式的 WebSocket 消息"];
+  Node14 -> Node18 [id="edge17_Node000014_Node000018",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node18 [id="Node000018",label="Gyanis::net::http::\lWSSession::sendMessage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1WSSession.html#ae2db1c4fa5978b70fbc938db16a22c0f",tooltip="发送字符串形式的 WebSocket 消息"];
+}

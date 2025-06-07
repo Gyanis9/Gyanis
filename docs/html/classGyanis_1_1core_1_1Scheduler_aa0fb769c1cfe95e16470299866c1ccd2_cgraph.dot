@@ -1,0 +1,17 @@
+digraph "Gyanis::core::Scheduler::idle"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="Gyanis::core::Scheduler\l::idle",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="空闲时的操作"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::core::Scheduler\l::stopping",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1Scheduler.html#aa9748c38b2476dc71027bf31f1870888",tooltip="判断是否停止调度器"];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Gyanis::core::Fiber\l::Yield",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1Fiber.html#a662e27df3d4da3b7704db7327eaf07e0",tooltip="挂起当前协程并切换到其他协程"];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Gyanis::core::Fiber\l::GetThis",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1Fiber.html#aecf9535459ef9e66bf472f56326c7401",tooltip="获取当前协程实例"];
+  Node3 -> Node5 [id="edge4_Node000003_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="Gyanis::core::Fiber\l::yield",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1Fiber.html#aad0f3323207781209779db14fb233589",tooltip="挂起当前协程"];
+}

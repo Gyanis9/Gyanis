@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: Gyanis::net::protocol::Message类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGyanis_1_1net_1_1protocol_1_1Message.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classGyanis_1_1net_1_1protocol_1_1Message-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Gyanis::net::protocol::Message类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>消息基类，定义了消息的基本接口  
+ <a href="classGyanis_1_1net_1_1protocol_1_1Message.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Protocol_8h_source.html">Protocol.h</a>&gt;</code></p>
+<div class="dynheader">
+类 Gyanis::net::protocol::Message 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1protocol_1_1Message__inherit__graph.png" border="0" usemap="#aGyanis_1_1net_1_1protocol_1_1Message_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:ad6f9e6573261b9655ac0b396d05292d8" id="r_ad6f9e6573261b9655ac0b396d05292d8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1protocol_1_1Message.html#ad6f9e6573261b9655ac0b396d05292d8">MessageType</a> { <a class="el" href="classGyanis_1_1net_1_1protocol_1_1Message.html#ad6f9e6573261b9655ac0b396d05292d8a4afe521492bd248cc20af9bdc96e3955">REQUEST</a> = 1
+, <a class="el" href="classGyanis_1_1net_1_1protocol_1_1Message.html#ad6f9e6573261b9655ac0b396d05292d8a2354c2bef401fff1df816b0a03afd556">RESPONSE</a> = 2
+, <a class="el" href="classGyanis_1_1net_1_1protocol_1_1Message.html#ad6f9e6573261b9655ac0b396d05292d8aa80f184b7812e8e1e8be9e33644dd4c3">NOTIFY</a> = 3
+ }</td></tr>
+<tr class="separator:ad6f9e6573261b9655ac0b396d05292d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:adf73602df92f40b4f50c065231c79813" id="r_adf73602df92f40b4f50c065231c79813"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1protocol_1_1Message.html#adf73602df92f40b4f50c065231c79813">~Message</a> ()=default</td></tr>
+<tr class="separator:adf73602df92f40b4f50c065231c79813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1edf3ff48b737960803d85ea4fdee331" id="r_a1edf3ff48b737960803d85ea4fdee331"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html">stream::ByteArray</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1protocol_1_1Message.html#a1edf3ff48b737960803d85ea4fdee331">toByteArray</a> ()</td></tr>
+<tr class="memdesc:a1edf3ff48b737960803d85ea4fdee331"><td class="mdescLeft">&#160;</td><td class="mdescRight">将消息转换为字节数组  <br /></td></tr>
+<tr class="separator:a1edf3ff48b737960803d85ea4fdee331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a921ba2dbf666ea030c8c92d5b773356c" id="r_a921ba2dbf666ea030c8c92d5b773356c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1protocol_1_1Message.html#a921ba2dbf666ea030c8c92d5b773356c">serializeToByteArray</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html">stream::ByteArray</a> &gt; &amp;byteArray)=0</td></tr>
+<tr class="memdesc:a921ba2dbf666ea030c8c92d5b773356c"><td class="mdescLeft">&#160;</td><td class="mdescRight">将消息序列化到字节数组中  <br /></td></tr>
+<tr class="separator:a921ba2dbf666ea030c8c92d5b773356c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8a1c9d0d2708f01f60b08c481f2b995" id="r_ae8a1c9d0d2708f01f60b08c481f2b995"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1protocol_1_1Message.html#ae8a1c9d0d2708f01f60b08c481f2b995">parseFromByteArray</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html">stream::ByteArray</a> &gt; &amp;bytearray)=0</td></tr>
+<tr class="memdesc:ae8a1c9d0d2708f01f60b08c481f2b995"><td class="mdescLeft">&#160;</td><td class="mdescRight">从字节数组中解析消息  <br /></td></tr>
+<tr class="separator:ae8a1c9d0d2708f01f60b08c481f2b995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae844b993abecce592bd480d693a6d00e" id="r_ae844b993abecce592bd480d693a6d00e"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1protocol_1_1Message.html#ae844b993abecce592bd480d693a6d00e">toString</a> () const =0</td></tr>
+<tr class="memdesc:ae844b993abecce592bd480d693a6d00e"><td class="mdescLeft">&#160;</td><td class="mdescRight">将消息转换为字符串  <br /></td></tr>
+<tr class="separator:ae844b993abecce592bd480d693a6d00e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a266962c51bc6a573c1fd9f9388b5c284" id="r_a266962c51bc6a573c1fd9f9388b5c284"><td class="memItemLeft" align="right" valign="top">virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1protocol_1_1Message.html#a266962c51bc6a573c1fd9f9388b5c284">getName</a> () const =0</td></tr>
+<tr class="memdesc:a266962c51bc6a573c1fd9f9388b5c284"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取消息名称  <br /></td></tr>
+<tr class="separator:a266962c51bc6a573c1fd9f9388b5c284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e44fa44bdd30556b0db1d532eccd2a6" id="r_a3e44fa44bdd30556b0db1d532eccd2a6"><td class="memItemLeft" align="right" valign="top">virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1protocol_1_1Message.html#a3e44fa44bdd30556b0db1d532eccd2a6">getType</a> () const =0</td></tr>
+<tr class="memdesc:a3e44fa44bdd30556b0db1d532eccd2a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取消息类型（REQUEST、RESPONSE、NOTIFY）  <br /></td></tr>
+<tr class="separator:a3e44fa44bdd30556b0db1d532eccd2a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>消息基类，定义了消息的基本接口 </p>
+
+<p class="definition">在文件 <a class="el" href="Protocol_8h_source.html">Protocol.h</a> 第 <a class="el" href="Protocol_8h_source.html#l00020">20</a> 行定义.</p>
+</div><h2 class="groupheader">成员枚举类型说明</h2>
+<a id="ad6f9e6573261b9655ac0b396d05292d8" name="ad6f9e6573261b9655ac0b396d05292d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6f9e6573261b9655ac0b396d05292d8">&#9670;&#160;</a></span>MessageType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classGyanis_1_1net_1_1protocol_1_1Message.html#ad6f9e6573261b9655ac0b396d05292d8">Gyanis::net::protocol::Message::MessageType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ad6f9e6573261b9655ac0b396d05292d8a4afe521492bd248cc20af9bdc96e3955" name="ad6f9e6573261b9655ac0b396d05292d8a4afe521492bd248cc20af9bdc96e3955"></a>REQUEST&#160;</td><td class="fielddoc"><p>请求类型 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad6f9e6573261b9655ac0b396d05292d8a2354c2bef401fff1df816b0a03afd556" name="ad6f9e6573261b9655ac0b396d05292d8a2354c2bef401fff1df816b0a03afd556"></a>RESPONSE&#160;</td><td class="fielddoc"><p>响应类型 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad6f9e6573261b9655ac0b396d05292d8aa80f184b7812e8e1e8be9e33644dd4c3" name="ad6f9e6573261b9655ac0b396d05292d8aa80f184b7812e8e1e8be9e33644dd4c3"></a>NOTIFY&#160;</td><td class="fielddoc"><p>通知类型 </p>
+</td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="Protocol_8h_source.html">Protocol.h</a> 第 <a class="el" href="Protocol_8h_source.html#l00023">23</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>        {</div>
+<div class="line"><span class="lineno">   25</span>            <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1protocol_1_1Message.html#ad6f9e6573261b9655ac0b396d05292d8a4afe521492bd248cc20af9bdc96e3955">REQUEST</a> = 1, </div>
+<div class="line"><span class="lineno">   26</span>            <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1protocol_1_1Message.html#ad6f9e6573261b9655ac0b396d05292d8a2354c2bef401fff1df816b0a03afd556">RESPONSE</a> = 2, </div>
+<div class="line"><span class="lineno">   27</span>            <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1protocol_1_1Message.html#ad6f9e6573261b9655ac0b396d05292d8aa80f184b7812e8e1e8be9e33644dd4c3">NOTIFY</a> = 3 </div>
+<div class="line"><span class="lineno">   28</span>        };</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1protocol_1_1Message_html_ad6f9e6573261b9655ac0b396d05292d8a2354c2bef401fff1df816b0a03afd556"><div class="ttname"><a href="classGyanis_1_1net_1_1protocol_1_1Message.html#ad6f9e6573261b9655ac0b396d05292d8a2354c2bef401fff1df816b0a03afd556">Gyanis::net::protocol::Message::RESPONSE</a></div><div class="ttdeci">@ RESPONSE</div><div class="ttdoc">响应类型</div><div class="ttdef"><b>Definition</b> <a href="Protocol_8h_source.html#l00026">Protocol.h:26</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1protocol_1_1Message_html_ad6f9e6573261b9655ac0b396d05292d8a4afe521492bd248cc20af9bdc96e3955"><div class="ttname"><a href="classGyanis_1_1net_1_1protocol_1_1Message.html#ad6f9e6573261b9655ac0b396d05292d8a4afe521492bd248cc20af9bdc96e3955">Gyanis::net::protocol::Message::REQUEST</a></div><div class="ttdeci">@ REQUEST</div><div class="ttdoc">请求类型</div><div class="ttdef"><b>Definition</b> <a href="Protocol_8h_source.html#l00025">Protocol.h:25</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1protocol_1_1Message_html_ad6f9e6573261b9655ac0b396d05292d8aa80f184b7812e8e1e8be9e33644dd4c3"><div class="ttname"><a href="classGyanis_1_1net_1_1protocol_1_1Message.html#ad6f9e6573261b9655ac0b396d05292d8aa80f184b7812e8e1e8be9e33644dd4c3">Gyanis::net::protocol::Message::NOTIFY</a></div><div class="ttdeci">@ NOTIFY</div><div class="ttdoc">通知类型</div><div class="ttdef"><b>Definition</b> <a href="Protocol_8h_source.html#l00028">Protocol.h:27</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="adf73602df92f40b4f50c065231c79813" name="adf73602df92f40b4f50c065231c79813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf73602df92f40b4f50c065231c79813">&#9670;&#160;</a></span>~Message()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Gyanis::net::protocol::Message::~Message </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a266962c51bc6a573c1fd9f9388b5c284" name="a266962c51bc6a573c1fd9f9388b5c284"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a266962c51bc6a573c1fd9f9388b5c284">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const std::string &amp; Gyanis::net::protocol::Message::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取消息名称 </p>
+
+<p>在 <a class="el" href="classGyanis_1_1net_1_1rock_1_1RockRequest.html#a80644f4ea615253e4010fbc8c8339afd">Gyanis::net::rock::RockRequest</a>, <a class="el" href="classGyanis_1_1net_1_1rock_1_1RockResponse.html#a889807cffdc30f991bc26c925459bdf8">Gyanis::net::rock::RockResponse</a> , 以及 <a class="el" href="classGyanis_1_1net_1_1rock_1_1RockNotify.html#aa0308333377cdbece07bea54411d799c">Gyanis::net::rock::RockNotify</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a3e44fa44bdd30556b0db1d532eccd2a6" name="a3e44fa44bdd30556b0db1d532eccd2a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e44fa44bdd30556b0db1d532eccd2a6">&#9670;&#160;</a></span>getType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int32_t Gyanis::net::protocol::Message::getType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取消息类型（REQUEST、RESPONSE、NOTIFY） </p>
+
+<p>在 <a class="el" href="classGyanis_1_1net_1_1rock_1_1RockRequest.html#ad21077bcca7350f727f4248e980e2d72">Gyanis::net::rock::RockRequest</a>, <a class="el" href="classGyanis_1_1net_1_1rock_1_1RockResponse.html#a1f5299ba2147094ff4caae8d1e6ade4c">Gyanis::net::rock::RockResponse</a> , 以及 <a class="el" href="classGyanis_1_1net_1_1rock_1_1RockNotify.html#a93fb2b08151d7890f9bfb6b274198728">Gyanis::net::rock::RockNotify</a> 内被实现.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1protocol_1_1Message_a3e44fa44bdd30556b0db1d532eccd2a6_icgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1protocol_1_1Message_a3e44fa44bdd30556b0db1d532eccd2a6_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae8a1c9d0d2708f01f60b08c481f2b995" name="ae8a1c9d0d2708f01f60b08c481f2b995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8a1c9d0d2708f01f60b08c481f2b995">&#9670;&#160;</a></span>parseFromByteArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Gyanis::net::protocol::Message::parseFromByteArray </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html">stream::ByteArray</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bytearray</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从字节数组中解析消息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bytearray</td><td>包含消息数据的字节数组 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回解析是否成功 </dd></dl>
+
+<p>在 <a class="el" href="classGyanis_1_1net_1_1protocol_1_1Request.html#ad4c8ba9c4d9c92800538e10ac733009c">Gyanis::net::protocol::Request</a>, <a class="el" href="classGyanis_1_1net_1_1protocol_1_1Response.html#ad394d58c389a35106da508ec33fabf12">Gyanis::net::protocol::Response</a>, <a class="el" href="classGyanis_1_1net_1_1protocol_1_1Notify.html#acb7b712ffb34417c79cf2ff4473f58de">Gyanis::net::protocol::Notify</a>, <a class="el" href="classGyanis_1_1net_1_1rock_1_1RockRequest.html#a63d00a88e255aa72ea85609611bf9c58">Gyanis::net::rock::RockRequest</a>, <a class="el" href="classGyanis_1_1net_1_1rock_1_1RockResponse.html#a7b75fcdd8811143328f245450acf7fda">Gyanis::net::rock::RockResponse</a> , 以及 <a class="el" href="classGyanis_1_1net_1_1rock_1_1RockNotify.html#a4415d370dc3ee673c02d2d26162e1131">Gyanis::net::rock::RockNotify</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a921ba2dbf666ea030c8c92d5b773356c" name="a921ba2dbf666ea030c8c92d5b773356c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a921ba2dbf666ea030c8c92d5b773356c">&#9670;&#160;</a></span>serializeToByteArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Gyanis::net::protocol::Message::serializeToByteArray </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html">stream::ByteArray</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>byteArray</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将消息序列化到字节数组中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">byteArray</td><td>用于保存序列化数据的字节数组 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回序列化是否成功 </dd></dl>
+
+<p>在 <a class="el" href="classGyanis_1_1net_1_1protocol_1_1Request.html#ab96aba1afd1db0b9098fb8e92b9342f1">Gyanis::net::protocol::Request</a>, <a class="el" href="classGyanis_1_1net_1_1protocol_1_1Response.html#af007e9bcfae793f4ae17d12a0f2627d9">Gyanis::net::protocol::Response</a>, <a class="el" href="classGyanis_1_1net_1_1protocol_1_1Notify.html#a782241c4727e0702dec1bafebfe6ff2f">Gyanis::net::protocol::Notify</a>, <a class="el" href="classGyanis_1_1net_1_1rock_1_1RockRequest.html#afd873ee3ceb716dbd23f93a1c9aceec2">Gyanis::net::rock::RockRequest</a>, <a class="el" href="classGyanis_1_1net_1_1rock_1_1RockResponse.html#a56a7d33b9fa28e96a6b6f0c60e3ce2da">Gyanis::net::rock::RockResponse</a> , 以及 <a class="el" href="classGyanis_1_1net_1_1rock_1_1RockNotify.html#a564fbc53f04de76378d916af4764640e">Gyanis::net::rock::RockNotify</a> 内被实现.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1protocol_1_1Message_a921ba2dbf666ea030c8c92d5b773356c_icgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1protocol_1_1Message_a921ba2dbf666ea030c8c92d5b773356c_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a1edf3ff48b737960803d85ea4fdee331" name="a1edf3ff48b737960803d85ea4fdee331"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1edf3ff48b737960803d85ea4fdee331">&#9670;&#160;</a></span>toByteArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html">stream::ByteArray</a> &gt; Gyanis::net::protocol::Message::toByteArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将消息转换为字节数组 </p>
+
+<p class="definition">在文件 <a class="el" href="Protocol_8cpp_source.html">Protocol.cpp</a> 第 <a class="el" href="Protocol_8cpp_source.html#l00006">6</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>    {</div>
+<div class="line"><span class="lineno">    8</span>        <span class="keywordflow">if</span> (<span class="keyword">auto</span> bytearray = std::make_shared&lt;stream::ByteArray&gt;(); <a class="code hl_function" href="classGyanis_1_1net_1_1protocol_1_1Message.html#a921ba2dbf666ea030c8c92d5b773356c">serializeToByteArray</a>(bytearray))</div>
+<div class="line"><span class="lineno">    9</span>        {</div>
+<div class="line"><span class="lineno">   10</span>            <span class="keywordflow">return</span> bytearray;</div>
+<div class="line"><span class="lineno">   11</span>        }</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   13</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1protocol_1_1Message_html_a921ba2dbf666ea030c8c92d5b773356c"><div class="ttname"><a href="classGyanis_1_1net_1_1protocol_1_1Message.html#a921ba2dbf666ea030c8c92d5b773356c">Gyanis::net::protocol::Message::serializeToByteArray</a></div><div class="ttdeci">virtual bool serializeToByteArray(const std::shared_ptr&lt; stream::ByteArray &gt; &amp;byteArray)=0</div><div class="ttdoc">将消息序列化到字节数组中</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1protocol_1_1Message_a1edf3ff48b737960803d85ea4fdee331_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1protocol_1_1Message_a1edf3ff48b737960803d85ea4fdee331_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae844b993abecce592bd480d693a6d00e" name="ae844b993abecce592bd480d693a6d00e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae844b993abecce592bd480d693a6d00e">&#9670;&#160;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string Gyanis::net::protocol::Message::toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将消息转换为字符串 </p>
+
+<p>在 <a class="el" href="classGyanis_1_1net_1_1rock_1_1RockRequest.html#a0f6feebc97584a62e7b11bc9681c705b">Gyanis::net::rock::RockRequest</a>, <a class="el" href="classGyanis_1_1net_1_1rock_1_1RockResponse.html#a81518e348f132f289ca31a19c217cf49">Gyanis::net::rock::RockResponse</a> , 以及 <a class="el" href="classGyanis_1_1net_1_1rock_1_1RockNotify.html#a3dc1c10d7c2880a189f94064a0cf588a">Gyanis::net::rock::RockNotify</a> 内被实现.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/net/protocol/<a class="el" href="Protocol_8h_source.html">Protocol.h</a></li>
+<li>src/net/protocol/<a class="el" href="Protocol_8cpp_source.html">Protocol.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGyanis.html">Gyanis</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1net.html">net</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1net_1_1protocol.html">protocol</a></li><li class="navelem"><a class="el" href="classGyanis_1_1net_1_1protocol_1_1Message.html">Message</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

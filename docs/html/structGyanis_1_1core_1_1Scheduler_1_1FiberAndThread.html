@@ -1,0 +1,414 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: Gyanis::core::Scheduler::FiberAndThread结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Gyanis::core::Scheduler::FiberAndThread结构体 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>内部结构，表示一个协程与线程的组合  
+ <a href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a2a11fd9d25b53ee1b61fa11896a8be1c" id="r_a2a11fd9d25b53ee1b61fa11896a8be1c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a2a11fd9d25b53ee1b61fa11896a8be1c">FiberAndThread</a> (std::shared_ptr&lt; <a class="el" href="classGyanis_1_1core_1_1Fiber.html">Fiber</a> &gt; <a class="el" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a5f6eac285dadd16ff60a3cee6e2ea76c">fiber</a>, int thr)</td></tr>
+<tr class="memdesc:a2a11fd9d25b53ee1b61fa11896a8be1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数：初始化协程和线程信息  <br /></td></tr>
+<tr class="separator:a2a11fd9d25b53ee1b61fa11896a8be1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eb1d791f27c73315c07a4bc7217934b" id="r_a4eb1d791f27c73315c07a4bc7217934b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a4eb1d791f27c73315c07a4bc7217934b">FiberAndThread</a> (std::shared_ptr&lt; <a class="el" href="classGyanis_1_1core_1_1Fiber.html">Fiber</a> &gt; *f, int thr)</td></tr>
+<tr class="memdesc:a4eb1d791f27c73315c07a4bc7217934b"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数：初始化协程指针和线程信息  <br /></td></tr>
+<tr class="separator:a4eb1d791f27c73315c07a4bc7217934b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22d56fbb4ad70b2daae02d874ca4f0be" id="r_a22d56fbb4ad70b2daae02d874ca4f0be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a22d56fbb4ad70b2daae02d874ca4f0be">FiberAndThread</a> (std::function&lt; void()&gt; <a class="el" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a5f6eac285dadd16ff60a3cee6e2ea76c">fiber</a>, int thr)</td></tr>
+<tr class="memdesc:a22d56fbb4ad70b2daae02d874ca4f0be"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数：初始化回调函数和线程信息  <br /></td></tr>
+<tr class="separator:a22d56fbb4ad70b2daae02d874ca4f0be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac03410b2fd8082bd9e1da62a32f926c8" id="r_ac03410b2fd8082bd9e1da62a32f926c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#ac03410b2fd8082bd9e1da62a32f926c8">FiberAndThread</a> (std::function&lt; void()&gt; *<a class="el" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a5f6eac285dadd16ff60a3cee6e2ea76c">fiber</a>, int thr)</td></tr>
+<tr class="memdesc:ac03410b2fd8082bd9e1da62a32f926c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数：初始化回调函数指针和线程信息  <br /></td></tr>
+<tr class="separator:ac03410b2fd8082bd9e1da62a32f926c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4427aab51dda32d0ce1b19197c32813" id="r_af4427aab51dda32d0ce1b19197c32813"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#af4427aab51dda32d0ce1b19197c32813">FiberAndThread</a> ()</td></tr>
+<tr class="memdesc:af4427aab51dda32d0ce1b19197c32813"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认构造函数：设置线程为 -1  <br /></td></tr>
+<tr class="separator:af4427aab51dda32d0ce1b19197c32813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac09b8154c11009892311c8a9e3418b40" id="r_ac09b8154c11009892311c8a9e3418b40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#ac09b8154c11009892311c8a9e3418b40">reset</a> ()</td></tr>
+<tr class="memdesc:ac09b8154c11009892311c8a9e3418b40"><td class="mdescLeft">&#160;</td><td class="mdescRight">重置函数：清空协程、回调和线程信息  <br /></td></tr>
+<tr class="separator:ac09b8154c11009892311c8a9e3418b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a5f6eac285dadd16ff60a3cee6e2ea76c" id="r_a5f6eac285dadd16ff60a3cee6e2ea76c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1core_1_1Fiber.html">Fiber</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a5f6eac285dadd16ff60a3cee6e2ea76c">fiber</a> = nullptr</td></tr>
+<tr class="memdesc:a5f6eac285dadd16ff60a3cee6e2ea76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">协程实例  <br /></td></tr>
+<tr class="separator:a5f6eac285dadd16ff60a3cee6e2ea76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2361fa71bd165182538cb2f02a8a896" id="r_ae2361fa71bd165182538cb2f02a8a896"><td class="memItemLeft" align="right" valign="top">std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#ae2361fa71bd165182538cb2f02a8a896">cb</a> = nullptr</td></tr>
+<tr class="memdesc:ae2361fa71bd165182538cb2f02a8a896"><td class="mdescLeft">&#160;</td><td class="mdescRight">回调函数  <br /></td></tr>
+<tr class="separator:ae2361fa71bd165182538cb2f02a8a896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a875695b2d87bf78b1961e8132e55d98a" id="r_a875695b2d87bf78b1961e8132e55d98a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a875695b2d87bf78b1961e8132e55d98a">thread</a></td></tr>
+<tr class="memdesc:a875695b2d87bf78b1961e8132e55d98a"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定的线程  <br /></td></tr>
+<tr class="separator:a875695b2d87bf78b1961e8132e55d98a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>内部结构，表示一个协程与线程的组合 </p>
+
+<p class="definition">在文件 <a class="el" href="Scheduler_8h_source.html">Scheduler.h</a> 第 <a class="el" href="Scheduler_8h_source.html#l00174">174</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a2a11fd9d25b53ee1b61fa11896a8be1c" name="a2a11fd9d25b53ee1b61fa11896a8be1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a11fd9d25b53ee1b61fa11896a8be1c">&#9670;&#160;</a></span>FiberAndThread() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gyanis::core::Scheduler::FiberAndThread::FiberAndThread </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1core_1_1Fiber.html">Fiber</a> &gt;&#160;</td>
+          <td class="paramname"><em>fiber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>thr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造函数：初始化协程和线程信息 </p>
+
+<p class="definition">在文件 <a class="el" href="Scheduler_8cpp_source.html">Scheduler.cpp</a> 第 <a class="el" href="Scheduler_8cpp_source.html#l00215">215</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  215</span>                                                                                    : <a class="code hl_variable" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a5f6eac285dadd16ff60a3cee6e2ea76c">fiber</a>(std::move(<a class="code hl_variable" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a5f6eac285dadd16ff60a3cee6e2ea76c">fiber</a>)),</div>
+<div class="line"><span class="lineno">  216</span>        <a class="code hl_variable" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a875695b2d87bf78b1961e8132e55d98a">thread</a>(thr)</div>
+<div class="line"><span class="lineno">  217</span>    {</div>
+<div class="line"><span class="lineno">  218</span>    }</div>
+<div class="ttc" id="astructGyanis_1_1core_1_1Scheduler_1_1FiberAndThread_html_a5f6eac285dadd16ff60a3cee6e2ea76c"><div class="ttname"><a href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a5f6eac285dadd16ff60a3cee6e2ea76c">Gyanis::core::Scheduler::FiberAndThread::fiber</a></div><div class="ttdeci">std::shared_ptr&lt; Fiber &gt; fiber</div><div class="ttdoc">协程实例</div><div class="ttdef"><b>Definition</b> <a href="Scheduler_8h_source.html#l00176">Scheduler.h:176</a></div></div>
+<div class="ttc" id="astructGyanis_1_1core_1_1Scheduler_1_1FiberAndThread_html_a875695b2d87bf78b1961e8132e55d98a"><div class="ttname"><a href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a875695b2d87bf78b1961e8132e55d98a">Gyanis::core::Scheduler::FiberAndThread::thread</a></div><div class="ttdeci">int thread</div><div class="ttdoc">指定的线程</div><div class="ttdef"><b>Definition</b> <a href="Scheduler_8h_source.html#l00178">Scheduler.h:178</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4eb1d791f27c73315c07a4bc7217934b" name="a4eb1d791f27c73315c07a4bc7217934b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eb1d791f27c73315c07a4bc7217934b">&#9670;&#160;</a></span>FiberAndThread() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gyanis::core::Scheduler::FiberAndThread::FiberAndThread </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1core_1_1Fiber.html">Fiber</a> &gt; *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>thr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造函数：初始化协程指针和线程信息 </p>
+
+<p class="definition">在文件 <a class="el" href="Scheduler_8cpp_source.html">Scheduler.cpp</a> 第 <a class="el" href="Scheduler_8cpp_source.html#l00220">220</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  220</span>                                                                                 : <a class="code hl_variable" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a875695b2d87bf78b1961e8132e55d98a">thread</a>(thr)</div>
+<div class="line"><span class="lineno">  221</span>    {</div>
+<div class="line"><span class="lineno">  222</span>        <a class="code hl_variable" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a5f6eac285dadd16ff60a3cee6e2ea76c">fiber</a>.swap(*f);</div>
+<div class="line"><span class="lineno">  223</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a22d56fbb4ad70b2daae02d874ca4f0be" name="a22d56fbb4ad70b2daae02d874ca4f0be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22d56fbb4ad70b2daae02d874ca4f0be">&#9670;&#160;</a></span>FiberAndThread() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gyanis::core::Scheduler::FiberAndThread::FiberAndThread </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
+          <td class="paramname"><em>fiber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>thr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造函数：初始化回调函数和线程信息 </p>
+
+<p class="definition">在文件 <a class="el" href="Scheduler_8cpp_source.html">Scheduler.cpp</a> 第 <a class="el" href="Scheduler_8cpp_source.html#l00225">225</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  225</span>                                                                                   : <a class="code hl_variable" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#ae2361fa71bd165182538cb2f02a8a896">cb</a>(std::move(<a class="code hl_variable" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a5f6eac285dadd16ff60a3cee6e2ea76c">fiber</a>)),</div>
+<div class="line"><span class="lineno">  226</span>        <a class="code hl_variable" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a875695b2d87bf78b1961e8132e55d98a">thread</a>(thr)</div>
+<div class="line"><span class="lineno">  227</span>    {</div>
+<div class="line"><span class="lineno">  228</span>    }</div>
+<div class="ttc" id="astructGyanis_1_1core_1_1Scheduler_1_1FiberAndThread_html_ae2361fa71bd165182538cb2f02a8a896"><div class="ttname"><a href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#ae2361fa71bd165182538cb2f02a8a896">Gyanis::core::Scheduler::FiberAndThread::cb</a></div><div class="ttdeci">std::function&lt; void()&gt; cb</div><div class="ttdoc">回调函数</div><div class="ttdef"><b>Definition</b> <a href="Scheduler_8h_source.html#l00177">Scheduler.h:177</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac03410b2fd8082bd9e1da62a32f926c8" name="ac03410b2fd8082bd9e1da62a32f926c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac03410b2fd8082bd9e1da62a32f926c8">&#9670;&#160;</a></span>FiberAndThread() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gyanis::core::Scheduler::FiberAndThread::FiberAndThread </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt; *&#160;</td>
+          <td class="paramname"><em>fiber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>thr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造函数：初始化回调函数指针和线程信息 </p>
+
+<p class="definition">在文件 <a class="el" href="Scheduler_8cpp_source.html">Scheduler.cpp</a> 第 <a class="el" href="Scheduler_8cpp_source.html#l00230">230</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  230</span>                                                                                    : <a class="code hl_variable" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a875695b2d87bf78b1961e8132e55d98a">thread</a>(thr)</div>
+<div class="line"><span class="lineno">  231</span>    {</div>
+<div class="line"><span class="lineno">  232</span>        <a class="code hl_variable" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#ae2361fa71bd165182538cb2f02a8a896">cb</a>.swap(*<a class="code hl_variable" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a5f6eac285dadd16ff60a3cee6e2ea76c">fiber</a>);</div>
+<div class="line"><span class="lineno">  233</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af4427aab51dda32d0ce1b19197c32813" name="af4427aab51dda32d0ce1b19197c32813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4427aab51dda32d0ce1b19197c32813">&#9670;&#160;</a></span>FiberAndThread() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gyanis::core::Scheduler::FiberAndThread::FiberAndThread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>默认构造函数：设置线程为 -1 </p>
+
+<p class="definition">在文件 <a class="el" href="Scheduler_8cpp_source.html">Scheduler.cpp</a> 第 <a class="el" href="Scheduler_8cpp_source.html#l00235">235</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  235</span>                                           : <a class="code hl_variable" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a875695b2d87bf78b1961e8132e55d98a">thread</a>(-1)</div>
+<div class="line"><span class="lineno">  236</span>    {</div>
+<div class="line"><span class="lineno">  237</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ac09b8154c11009892311c8a9e3418b40" name="ac09b8154c11009892311c8a9e3418b40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac09b8154c11009892311c8a9e3418b40">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::core::Scheduler::FiberAndThread::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>重置函数：清空协程、回调和线程信息 </p>
+
+<p class="definition">在文件 <a class="el" href="Scheduler_8cpp_source.html">Scheduler.cpp</a> 第 <a class="el" href="Scheduler_8cpp_source.html#l00239">239</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  240</span>    {</div>
+<div class="line"><span class="lineno">  241</span>        <a class="code hl_variable" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a5f6eac285dadd16ff60a3cee6e2ea76c">fiber</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  242</span>        <a class="code hl_variable" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#ae2361fa71bd165182538cb2f02a8a896">cb</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  243</span>        <a class="code hl_variable" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html#a875695b2d87bf78b1961e8132e55d98a">thread</a> = -1;</div>
+<div class="line"><span class="lineno">  244</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread_ac09b8154c11009892311c8a9e3418b40_icgraph.png" border="0" usemap="#astructGyanis_1_1core_1_1Scheduler_1_1FiberAndThread_ac09b8154c11009892311c8a9e3418b40_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ae2361fa71bd165182538cb2f02a8a896" name="ae2361fa71bd165182538cb2f02a8a896"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2361fa71bd165182538cb2f02a8a896">&#9670;&#160;</a></span>cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;void()&gt; Gyanis::core::Scheduler::FiberAndThread::cb = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>回调函数 </p>
+
+<p class="definition">在文件 <a class="el" href="Scheduler_8h_source.html">Scheduler.h</a> 第 <a class="el" href="Scheduler_8h_source.html#l00177">177</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5f6eac285dadd16ff60a3cee6e2ea76c" name="a5f6eac285dadd16ff60a3cee6e2ea76c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f6eac285dadd16ff60a3cee6e2ea76c">&#9670;&#160;</a></span>fiber</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classGyanis_1_1core_1_1Fiber.html">Fiber</a>&gt; Gyanis::core::Scheduler::FiberAndThread::fiber = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>协程实例 </p>
+
+<p class="definition">在文件 <a class="el" href="Scheduler_8h_source.html">Scheduler.h</a> 第 <a class="el" href="Scheduler_8h_source.html#l00176">176</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a875695b2d87bf78b1961e8132e55d98a" name="a875695b2d87bf78b1961e8132e55d98a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a875695b2d87bf78b1961e8132e55d98a">&#9670;&#160;</a></span>thread</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gyanis::core::Scheduler::FiberAndThread::thread</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定的线程 </p>
+
+<p class="definition">在文件 <a class="el" href="Scheduler_8h_source.html">Scheduler.h</a> 第 <a class="el" href="Scheduler_8h_source.html#l00178">178</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>include/core/<a class="el" href="Scheduler_8h_source.html">Scheduler.h</a></li>
+<li>src/core/<a class="el" href="Scheduler_8cpp_source.html">Scheduler.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGyanis.html">Gyanis</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1core.html">core</a></li><li class="navelem"><a class="el" href="classGyanis_1_1core_1_1Scheduler.html">Scheduler</a></li><li class="navelem"><a class="el" href="structGyanis_1_1core_1_1Scheduler_1_1FiberAndThread.html">FiberAndThread</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

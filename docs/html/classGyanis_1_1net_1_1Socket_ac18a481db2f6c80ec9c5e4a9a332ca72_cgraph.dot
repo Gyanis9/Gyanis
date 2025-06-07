@@ -1,0 +1,12 @@
+digraph "Gyanis::net::Socket::listen"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="Gyanis::net::Socket\l::listen",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="监听连接请求"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::net::Socket\l::isValid",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1Socket.html#a2d77c42c0aa7960b96881ff6acb9f613",tooltip="判断套接字是否有效"];
+  Node1 -> Node1 [id="edge2_Node000001_Node000001",color="steelblue1",style="solid",tooltip=" "];
+}

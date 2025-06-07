@@ -1,0 +1,12 @@
+digraph "Gyanis::core::IOManager"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [id="Node000001",label="Gyanis::core::IOManager",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="IO事件类型枚举"];
+  Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::core::Scheduler",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1Scheduler.html",tooltip="协程调度器类"];
+  Node3 -> Node1 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Gyanis::base::TimerManager",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classGyanis_1_1base_1_1TimerManager.html",tooltip="定时器管理器，用于管理多个定时器的添加、删除和执行"];
+}

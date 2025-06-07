@@ -1,0 +1,536 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: src/net/Application.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Application_8cpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Application.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Application_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;csignal&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="Application_8h.html">net/Application.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="Env_8h.html">core/Env.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="Daemon_8h.html">core/Daemon.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="Worker_8h.html">core/Worker.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="HttpServer_8h.html">net/http/HttpServer.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="WebSocketServer_8h.html">net/http/WebSocketServer.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="Module_8h.html">net/Module.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceGyanis_1_1net.html">Gyanis::net</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">   14</a></span>    <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a> = <a class="code hl_define" href="Log_8h.html#a30907c2011b31fbe54269ddc6052ebe3">LOG_NAME</a>(<span class="stringliteral">&quot;system&quot;</span>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="namespaceGyanis_1_1net.html#aba07488c2cda1d5b5bfdc1015bc2643d">   16</a></span>    <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_variable" href="namespaceGyanis_1_1net.html#aba07488c2cda1d5b5bfdc1015bc2643d">g_server_work_path</a> =</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_function" href="classGyanis_1_1base_1_1Config.html#aaac5d5509f3135d327d6daa085417fd7">base::Config::LookUp</a>(<span class="stringliteral">&quot;server.work_path&quot;</span>, std::string(<span class="stringliteral">&quot;work&quot;</span>), <span class="stringliteral">&quot;Server Working Directory Path&quot;</span>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="namespaceGyanis_1_1net.html#a1944a37de12dd1bd6817f58a672c35e3">   19</a></span>    <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_variable" href="namespaceGyanis_1_1net.html#a1944a37de12dd1bd6817f58a672c35e3">g_server_pid_file</a> =</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <a class="code hl_function" href="classGyanis_1_1base_1_1Config.html#aaac5d5509f3135d327d6daa085417fd7">base::Config::LookUp</a>(<span class="stringliteral">&quot;server.pid_file&quot;</span>, std::string(<span class="stringliteral">&quot;base.pid&quot;</span>), <span class="stringliteral">&quot;Server Process ID (PID) File&quot;</span>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="namespaceGyanis_1_1net.html#a47d664ead4f8fed7d9b6885a03536385">   22</a></span>    <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_variable" href="namespaceGyanis_1_1net.html#a47d664ead4f8fed7d9b6885a03536385">g_servers_conf</a></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        = <a class="code hl_function" href="classGyanis_1_1base_1_1Config.html#aaac5d5509f3135d327d6daa085417fd7">base::Config::LookUp</a>(<span class="stringliteral">&quot;servers&quot;</span>, std::vector&lt;base::TcpServerConf&gt;(), <span class="stringliteral">&quot;HTTP Server Configuration&quot;</span>);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_class" href="classGyanis_1_1net_1_1Application.html">Application</a>* <a class="code hl_variable" href="classGyanis_1_1net_1_1Application.html#a0f3f9cdc1cb0c9c2859e6868a66e5b60">Application::s_instance</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1Application.html#aba7a24f750b062086882084a590b50cb">   27</a></span>    <a class="code hl_function" href="classGyanis_1_1net_1_1Application.html#aba7a24f750b062086882084a590b50cb">Application::Application</a>()</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1Application.html#a0f3f9cdc1cb0c9c2859e6868a66e5b60">s_instance</a> = <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1Application.html#aa1ecb2b12510792e4dc48b9c61774aa3">   32</a></span>    <a class="code hl_class" href="classGyanis_1_1net_1_1Application.html">Application</a>* <a class="code hl_function" href="classGyanis_1_1net_1_1Application.html#aa1ecb2b12510792e4dc48b9c61774aa3">Application::GetInstance</a>()</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1Application.html#a0f3f9cdc1cb0c9c2859e6868a66e5b60">s_instance</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1Application.html#ab5b7aade06afd0a89341900d173e43f3">   37</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1net_1_1Application.html#ab5b7aade06afd0a89341900d173e43f3">Application::init</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1Application.html#a858e1474858e240860237db30360d772">m_argc</a> = argc;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1Application.html#a560b8a6b15310e370c9fec6a1e879cc1">m_argv</a> = argv;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">core::EnvMgr::GetInstance</a>()-&gt;addHelp(<span class="stringliteral">&quot;s&quot;</span>, <span class="stringliteral">&quot;Start from the terminal&quot;</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">core::EnvMgr::GetInstance</a>()-&gt;addHelp(<span class="stringliteral">&quot;d&quot;</span>, <span class="stringliteral">&quot;Run as a daemon process&quot;</span>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">core::EnvMgr::GetInstance</a>()-&gt;addHelp(<span class="stringliteral">&quot;c&quot;</span>, <span class="stringliteral">&quot;Default configuration path: config&quot;</span>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">core::EnvMgr::GetInstance</a>()-&gt;addHelp(<span class="stringliteral">&quot;p&quot;</span>, <span class="stringliteral">&quot;Display help information&quot;</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">bool</span> is_print_help = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">core::EnvMgr::GetInstance</a>()-&gt;<a class="code hl_function" href="classGyanis_1_1net_1_1Application.html#ab5b7aade06afd0a89341900d173e43f3">init</a>(argc, argv))</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            is_print_help = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">core::EnvMgr::GetInstance</a>()-&gt;has(<span class="stringliteral">&quot;p&quot;</span>))</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            is_print_help = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">const</span> std::string config_path = <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">core::EnvMgr::GetInstance</a>()-&gt;getConfigPath();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <a class="code hl_define" href="Log_8h.html#abf8dce5b90852304a0897b44b9dfd038">LOG_INFO</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a>)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            &lt;&lt; <span class="stringliteral">&quot;Application::init - Loading configuration from path: &quot;</span> &lt;&lt; config_path</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            &lt;&lt; <span class="stringliteral">&quot; | Status: Normal&quot;</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_function" href="classGyanis_1_1base_1_1Config.html#a592c44c9813877f0a97fccc32b594081">base::Config::LoadFromConfigDir</a>(config_path);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">ModuleMgr::GetInstance</a>()-&gt;init();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        std::vector&lt;std::shared_ptr&lt;Module&gt;&gt; modules;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">ModuleMgr::GetInstance</a>()-&gt;listAll(modules);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; i : modules)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            i-&gt;onBeforeArgsParse(argc, argv);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">if</span> (is_print_help)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">core::EnvMgr::GetInstance</a>()-&gt;printHelp();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; i : modules)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            i-&gt;onAfterArgsParse(argc, argv);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        modules.clear();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordtype">int</span> run_type = 0;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">core::EnvMgr::GetInstance</a>()-&gt;has(<span class="stringliteral">&quot;s&quot;</span>))</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            run_type = 1;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">core::EnvMgr::GetInstance</a>()-&gt;has(<span class="stringliteral">&quot;d&quot;</span>))</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            run_type = 2;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">if</span> (run_type == 0)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">core::EnvMgr::GetInstance</a>()-&gt;printHelp();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> std::string pidfile = <a class="code hl_variable" href="namespaceGyanis_1_1net.html#aba07488c2cda1d5b5bfdc1015bc2643d">g_server_work_path</a>-&gt;getValue() + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_variable" href="namespaceGyanis_1_1net.html#a1944a37de12dd1bd6817f58a672c35e3">g_server_pid_file</a>-&gt;getValue();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <a class="code hl_function" href="classGyanis_1_1base_1_1FSUtil.html#a4ec5f713dd87e424347aa53dff0aae13">base::FSUtil::IsRunningPidfile</a>(pidfile))</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <a class="code hl_define" href="Log_8h.html#a983ab72109ed1168518f25e064114bdf">LOG_FATAL</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a>)</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                &lt;&lt; <span class="stringliteral">&quot;Application::init - Server is currently running. &quot;</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                &lt;&lt; <span class="stringliteral">&quot;Process ID file: &quot;</span> &lt;&lt; pidfile;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="classGyanis_1_1base_1_1FSUtil.html#ae035d7cfaa03083803e00d571e83b041">base::FSUtil::Mkdir</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aba07488c2cda1d5b5bfdc1015bc2643d">g_server_work_path</a>-&gt;getValue()))</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <a class="code hl_define" href="Log_8h.html#a983ab72109ed1168518f25e064114bdf">LOG_FATAL</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a>)</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                &lt;&lt; <span class="stringliteral">&quot;Application::init - Failed to create working directory at path: [&quot;</span> &lt;&lt; <a class="code hl_variable" href="namespaceGyanis_1_1net.html#aba07488c2cda1d5b5bfdc1015bc2643d">g_server_work_path</a>-&gt;getValue()</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                &lt;&lt; <span class="stringliteral">&quot;] | Error code: &quot;</span> &lt;&lt; errno</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                &lt;&lt; <span class="stringliteral">&quot; | Error description: &quot;</span> &lt;&lt; strerror(errno);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
+</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="foldopen" id="foldopen00121" data-start="{" data-end="}">
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1Application.html#a6adda5fcc32478aee9d40b3bb606638d">  121</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1net_1_1Application.html#a6adda5fcc32478aee9d40b3bb606638d">Application::run</a>()</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> is_daemon = <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">core::EnvMgr::GetInstance</a>()-&gt;has(<span class="stringliteral">&quot;d&quot;</span>);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceGyanis_1_1core.html#a6acf66653635ec9df0dcfe4d793756a9">core::start_daemon</a>(<a class="code hl_variable" href="classGyanis_1_1net_1_1Application.html#a858e1474858e240860237db30360d772">m_argc</a>, <a class="code hl_variable" href="classGyanis_1_1net_1_1Application.html#a560b8a6b15310e370c9fec6a1e879cc1">m_argv</a>,</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                                  [<span class="keyword">this</span>](<span class="keyword">const</span> <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) { <span class="keywordflow">return</span> this-&gt;<a class="code hl_function" href="classGyanis_1_1net_1_1Application.html#a1c23f0d6fe403a9a0666c59c7cd3a155">main</a>(argc, argv); },</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                                  is_daemon);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    }</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="foldopen" id="foldopen00130" data-start="{" data-end="}">
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1Application.html#ad66c663f06268ed611025e98b8597a91">  130</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1net_1_1Application.html#ad66c663f06268ed611025e98b8597a91">Application::getServer</a>(<span class="keyword">const</span> std::string&amp; type, std::vector&lt;std::shared_ptr&lt;web::TcpServer&gt;&gt;&amp; servers)</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keyword">const</span> <span class="keyword">auto</span> it = <a class="code hl_variable" href="classGyanis_1_1net_1_1Application.html#aa24b9f2486079ef2dd061468dccb8c85">m_servers</a>.find(type);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordflow">if</span> (it == <a class="code hl_variable" href="classGyanis_1_1net_1_1Application.html#aa24b9f2486079ef2dd061468dccb8c85">m_servers</a>.end())</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        servers = it-&gt;second;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
+</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordtype">void</span></div>
+<div class="foldopen" id="foldopen00142" data-start="{" data-end="}">
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1Application.html#abbca54a5950282f2465bddbaca6b4414">  142</a></span>    <a class="code hl_function" href="classGyanis_1_1net_1_1Application.html#abbca54a5950282f2465bddbaca6b4414">Application::listAllServer</a>(</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        std::unordered_map&lt;std::string, std::vector&lt;std::shared_ptr&lt;web::TcpServer&gt;&gt;&gt;&amp; servers)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        servers = <a class="code hl_variable" href="classGyanis_1_1net_1_1Application.html#aa24b9f2486079ef2dd061468dccb8c85">m_servers</a>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    }</div>
+</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="foldopen" id="foldopen00148" data-start="{" data-end="}">
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1Application.html#a1c23f0d6fe403a9a0666c59c7cd3a155">  148</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classGyanis_1_1net_1_1Application.html#a1c23f0d6fe403a9a0666c59c7cd3a155">Application::main</a>(<span class="keywordtype">int</span>, <span class="keywordtype">char</span>**)</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            signal(SIGPIPE, SIG_IGN);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            <a class="code hl_define" href="Log_8h.html#abf8dce5b90852304a0897b44b9dfd038">LOG_INFO</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a>) &lt;&lt; <span class="stringliteral">&quot;The main process is starting.&quot;</span>;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            <span class="keyword">const</span> std::string conf_path = <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">core::EnvMgr::GetInstance</a>()-&gt;getConfigPath();</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <a class="code hl_function" href="classGyanis_1_1base_1_1Config.html#a592c44c9813877f0a97fccc32b594081">base::Config::LoadFromConfigDir</a>(conf_path, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                <span class="keyword">const</span> std::string pidfile = <a class="code hl_variable" href="namespaceGyanis_1_1net.html#aba07488c2cda1d5b5bfdc1015bc2643d">g_server_work_path</a>-&gt;getValue() + <span class="stringliteral">&quot;/&quot;</span> + <a class="code hl_variable" href="namespaceGyanis_1_1net.html#a1944a37de12dd1bd6817f58a672c35e3">g_server_pid_file</a>-&gt;getValue();</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                std::ofstream ofs(pidfile);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                <span class="keywordflow">if</span> (!ofs)</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                    <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a>)</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                        &lt;&lt; <span class="stringliteral">&quot;Application::main - Failed to open PID file: &quot;</span> &lt;&lt; pidfile;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                ofs &lt;&lt; getpid();</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            <a class="code hl_variable" href="classGyanis_1_1net_1_1Application.html#a0d56a774ba816bbf833d4be9b8fa8309">m_mainIOManager</a> = std::make_shared&lt;core::IOManager&gt;(1, <span class="stringliteral">&quot;main&quot;</span>);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            <a class="code hl_variable" href="classGyanis_1_1net_1_1Application.html#a0d56a774ba816bbf833d4be9b8fa8309">m_mainIOManager</a>-&gt;schedule([&amp;] { <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1net_1_1Application.html#ae0cb5a1ff0be0ceaa0f4e79553606f93">run_fiber</a>(); });</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            <a class="code hl_variable" href="classGyanis_1_1net_1_1Application.html#a0d56a774ba816bbf833d4be9b8fa8309">m_mainIOManager</a>-&gt;addTimer(2000, []()</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            }, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            <a class="code hl_variable" href="classGyanis_1_1net_1_1Application.html#a0d56a774ba816bbf833d4be9b8fa8309">m_mainIOManager</a>-&gt;stop();</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        }</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keywordflow">catch</span> (std::exception&amp; e)</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a>) &lt;&lt; <span class="stringliteral">&quot;Application::main - failed. &quot;</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                &lt;&lt; <span class="stringliteral">&quot;Error details: &quot;</span> &lt;&lt; e.what();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        }</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    }</div>
+</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="foldopen" id="foldopen00184" data-start="{" data-end="}">
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1Application.html#ae0cb5a1ff0be0ceaa0f4e79553606f93">  184</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classGyanis_1_1net_1_1Application.html#ae0cb5a1ff0be0ceaa0f4e79553606f93">Application::run_fiber</a>()</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    {</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        std::vector&lt;std::shared_ptr&lt;Module&gt;&gt; modules;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">ModuleMgr::GetInstance</a>()-&gt;listAll(modules);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        <span class="keywordtype">bool</span> has_error = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; i : modules)</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            <span class="keywordflow">if</span> (!i-&gt;onLoad())</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            {</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a>)</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                    &lt;&lt; <span class="stringliteral">&quot;Application::run_fiber - Module information: &quot;</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                    &lt;&lt; <span class="stringliteral">&quot;Name: &quot;</span> &lt;&lt; i-&gt;getName()</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                    &lt;&lt; <span class="stringliteral">&quot; | Version: &quot;</span> &lt;&lt; i-&gt;getVersion()</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                    &lt;&lt; <span class="stringliteral">&quot; | Filename: &quot;</span> &lt;&lt; i-&gt;getFilename();</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                has_error = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            }</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        }</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordflow">if</span> (has_error)</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        {</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            _exit(0);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        }</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">core::WorkerMgr::GetInstance</a>()-&gt;<a class="code hl_function" href="classGyanis_1_1net_1_1Application.html#ab5b7aade06afd0a89341900d173e43f3">init</a>())</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        {</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a>)</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                &lt;&lt; <span class="stringliteral">&quot;Application::run_fiber - Worker manager initialization failed. &quot;</span>;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        };</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <span class="keyword">auto</span> http_confs = <a class="code hl_variable" href="namespaceGyanis_1_1net.html#a47d664ead4f8fed7d9b6885a03536385">g_servers_conf</a>-&gt;getValue();</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        std::vector&lt;std::shared_ptr&lt;web::TcpServer&gt;&gt; servers;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; value : http_confs)</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        {</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>            <a class="code hl_define" href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a>) &lt;&lt; std::endl &lt;&lt; base::LexicalCast&lt;base::TcpServerConf, std::string&gt;()(value);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            std::vector&lt;std::shared_ptr&lt;Address&gt;&gt; address;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; host : value.address)</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            {</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                <span class="keyword">const</span> <span class="keywordtype">size_t</span> pos = host.find(<span class="stringliteral">&quot;:&quot;</span>);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                <span class="keywordflow">if</span> (pos == std::string::npos)</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                {</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                    address.push_back(std::make_shared&lt;UnixAddress&gt;(host));</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                }</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                <span class="keyword">const</span> <span class="keyword">auto</span> port = std::strtol(host.substr(pos + 1).c_str(), <span class="keyword">nullptr</span>, 10);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                <span class="keywordflow">if</span> (port == 0 &amp;&amp; host.substr(pos + 1) != <span class="stringliteral">&quot;0&quot;</span>)</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                {</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                    <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a>) &lt;&lt; <span class="stringliteral">&quot;Application::run_fiber - Invalid port number. &quot;</span>;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                }</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                <span class="keywordflow">if</span> (<span class="keyword">auto</span> addr = <a class="code hl_function" href="classGyanis_1_1net_1_1IPAddress.html#a846aeb3649d35bc4214d2ddd284b690a">IPAddress::Create</a>(host.substr(0, pos).c_str(), port))</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                {</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                    address.push_back(addr);</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                }</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                <span class="keywordflow">if</span> (std::vector&lt;std::pair&lt;std::shared_ptr&lt;Address&gt;, uint32_t&gt;&gt; result;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                    <a class="code hl_function" href="classGyanis_1_1net_1_1Address.html#a0f2719bc5fb5b34954231aafb5e14343">Address::GetInterfaceAddresses</a>(result, host.substr(0, pos)))</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                {</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [fst, snd] : result)</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                    {</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                        <span class="keyword">auto</span> ipaddr = std::dynamic_pointer_cast&lt;IPAddress&gt;(fst);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                        <span class="keywordflow">if</span> (ipaddr)</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                        {</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                            <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keywordtype">long</span> port1 = std::strtol(host.substr(pos + 1).c_str(), <span class="keyword">nullptr</span>, 10); port1 &gt; 0 &amp;&amp;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                                port1 &lt;= std::numeric_limits&lt;int32_t&gt;::max())</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                            {</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                                ipaddr-&gt;setPort(<span class="keyword">static_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(port1)); <span class="comment">// 设置端口号</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                            }</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                            {</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a>) &lt;&lt; <span class="stringliteral">&quot;Application::run_fiber - Invalid port number. &quot;</span>;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                            }</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                        }</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                        address.push_back(ipaddr);</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                    }</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                }</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                <span class="keywordflow">if</span> (<span class="keyword">auto</span> aaddr = <a class="code hl_function" href="classGyanis_1_1net_1_1Address.html#a89340afcd322f4abc832616a49f2ea02">Address::LookupAny</a>(host))</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                {</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                    address.push_back(aaddr);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                }</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a>) &lt;&lt; <span class="stringliteral">&quot;Application::run_fiber - Invalid address provided. &quot;</span> &lt;&lt; <span class="stringliteral">&quot;Address: &quot;</span> &lt;&lt; host;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                _exit(0);</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>            }</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            <span class="keyword">auto</span> accept_worker = <a class="code hl_function" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">core::IOManager::GetThis</a>();</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>            <span class="keyword">auto</span> io_worker = <a class="code hl_function" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">core::IOManager::GetThis</a>();</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            <span class="keyword">auto</span> process_worker = <a class="code hl_function" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">core::IOManager::GetThis</a>();</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            <span class="keywordflow">if</span> (!value.accept_worker.empty())</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            {</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                accept_worker = <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">core::WorkerMgr::GetInstance</a>()-&gt;getAsIOManager(value.accept_worker).get();</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                <span class="keywordflow">if</span> (!accept_worker)</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                {</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                    <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a>) &lt;&lt; <span class="stringliteral">&quot;Application::run_fiber - accept_worker: &quot;</span> &lt;&lt; value.accept_worker</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                    &lt;&lt; <span class="stringliteral">&quot; does not exist.&quot;</span>;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                    _exit(0);</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                }</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            }</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            <span class="keywordflow">if</span> (!value.io_worker.empty())</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            {</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                io_worker = <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">core::WorkerMgr::GetInstance</a>()-&gt;getAsIOManager(value.io_worker).get();</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                <span class="keywordflow">if</span> (!io_worker)</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                    <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a>)</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                        &lt;&lt; <span class="stringliteral">&quot;Application::run_fiber - io_worker: &quot;</span> &lt;&lt; value.io_worker</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                        &lt;&lt; <span class="stringliteral">&quot; does not exist.&quot;</span>;</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                    _exit(0);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                }</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>            }</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            <span class="keywordflow">if</span> (!value.process_worker.empty())</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>            {</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                process_worker = <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">core::WorkerMgr::GetInstance</a>()-&gt;getAsIOManager(value.process_worker).get();</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                <span class="keywordflow">if</span> (!process_worker)</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                {</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                    <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a>) &lt;&lt; <span class="stringliteral">&quot;Application::run_fiber - process_worker: &quot;</span> &lt;&lt; value.process_worker &lt;&lt;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> <span class="stringliteral">&quot; not exists&quot;</span>;</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                    _exit(0);</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                }</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>            }</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>            std::shared_ptr&lt;web::TcpServer&gt; server;</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>            <span class="keywordflow">if</span> (value.type == <span class="stringliteral">&quot;http&quot;</span>)</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>            {</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                server = std::make_shared&lt;http::HttpServer&gt;(value.keepalive,</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                                                            process_worker, io_worker, accept_worker);</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>            }</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (value.type == <span class="stringliteral">&quot;ws&quot;</span>)</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>            {</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                server = std::make_shared&lt;http::WSServer&gt;(process_worker, io_worker, accept_worker);</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>            }</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            {</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a>)</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                    &lt;&lt; <span class="stringliteral">&quot;Application::run_fiber - Invalid server type: &quot;</span> &lt;&lt; value.type</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                    &lt;&lt; <span class="stringliteral">&quot; | Server configuration details: &quot;</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                    &lt;&lt; <a class="code hl_class" href="classGyanis_1_1base_1_1LexicalCast.html">base::LexicalCast&lt;base::TcpServerConf, std::string&gt;</a>()(value);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                _exit(0);</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>            }</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            <span class="keywordflow">if</span> (!value.name.empty())</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>            {</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                server-&gt;setName(value.name);</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>            }</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>            <span class="keywordflow">if</span> (std::vector&lt;std::shared_ptr&lt;Address&gt;&gt; fails; !server-&gt;bind(address, fails, value.ssl))</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>            {</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; x : fails)</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                {</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                    <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a>)</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                        &lt;&lt; <span class="stringliteral">&quot;Application::run_fiber - Failed to bind address: &quot;</span></div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                        &lt;&lt; x-&gt;toString();</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>                }</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                _exit(0);</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>            }</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>            <span class="keywordflow">if</span> (value.ssl)</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            {</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                <span class="keywordflow">if</span> (!server-&gt;loadCertificates(value.cert_file, value.key_file))</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                {</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                    <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a>)</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>                        &lt;&lt; <span class="stringliteral">&quot;Application::run_fiber - Failed to load certificates. &quot;</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                        &lt;&lt; <span class="stringliteral">&quot;Certificate file: &quot;</span> &lt;&lt; value.cert_file</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                        &lt;&lt; <span class="stringliteral">&quot; | Key file: &quot;</span> &lt;&lt; value.key_file;</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                }</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>            }</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>            server-&gt;setConf(value);</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>            <a class="code hl_variable" href="classGyanis_1_1net_1_1Application.html#aa24b9f2486079ef2dd061468dccb8c85">m_servers</a>[value.type].push_back(server);</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>            servers.push_back(server);</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        }</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; i : modules)</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>        {</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>            i-&gt;onServerReady();</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>        }</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; i : servers)</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        {</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>            i-&gt;start();</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        }</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; i : modules)</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        {</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>            i-&gt;onServerUp();</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>        }</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    }</div>
+</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>}</div>
+<div class="ttc" id="aApplication_8h_html"><div class="ttname"><a href="Application_8h.html">Application.h</a></div><div class="ttdoc">管理应用程序模块封装</div></div>
+<div class="ttc" id="aDaemon_8h_html"><div class="ttname"><a href="Daemon_8h.html">Daemon.h</a></div><div class="ttdoc">守护进程管理功能模块封装</div></div>
+<div class="ttc" id="aEnv_8h_html"><div class="ttname"><a href="Env_8h.html">Env.h</a></div><div class="ttdoc">环境变量和命令行参数模块封装</div></div>
+<div class="ttc" id="aHttpServer_8h_html"><div class="ttname"><a href="HttpServer_8h.html">HttpServer.h</a></div><div class="ttdoc">HTTP 服务器封装</div></div>
+<div class="ttc" id="aLog_8h_html_a30907c2011b31fbe54269ddc6052ebe3"><div class="ttname"><a href="Log_8h.html#a30907c2011b31fbe54269ddc6052ebe3">LOG_NAME</a></div><div class="ttdeci">#define LOG_NAME(name)</div><div class="ttdoc">获取指定名称的日志器</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00094">Log.h:94</a></div></div>
+<div class="ttc" id="aLog_8h_html_a80a932ee56f777358b3d82e5fa3203c8"><div class="ttname"><a href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a></div><div class="ttdeci">#define LOG_ERROR(logger)</div><div class="ttdoc">输出 error 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00046">Log.h:46</a></div></div>
+<div class="ttc" id="aLog_8h_html_a983ab72109ed1168518f25e064114bdf"><div class="ttname"><a href="Log_8h.html#a983ab72109ed1168518f25e064114bdf">LOG_FATAL</a></div><div class="ttdeci">#define LOG_FATAL(logger)</div><div class="ttdoc">输出 fatal 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00051">Log.h:51</a></div></div>
+<div class="ttc" id="aLog_8h_html_aa689601a9413bd4f1c41974694746f4e"><div class="ttname"><a href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a></div><div class="ttdeci">#define LOG_DEBUG(logger)</div><div class="ttdoc">输出 debug 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00031">Log.h:31</a></div></div>
+<div class="ttc" id="aLog_8h_html_abf8dce5b90852304a0897b44b9dfd038"><div class="ttname"><a href="Log_8h.html#abf8dce5b90852304a0897b44b9dfd038">LOG_INFO</a></div><div class="ttdeci">#define LOG_INFO(logger)</div><div class="ttdoc">输出 info 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00036">Log.h:36</a></div></div>
+<div class="ttc" id="aModule_8h_html"><div class="ttname"><a href="Module_8h.html">Module.h</a></div><div class="ttdoc">模块管理模块封装</div></div>
+<div class="ttc" id="aWebSocketServer_8h_html"><div class="ttname"><a href="WebSocketServer_8h.html">WebSocketServer.h</a></div><div class="ttdoc">WSServer模块封装</div></div>
+<div class="ttc" id="aWorker_8h_html"><div class="ttname"><a href="Worker_8h.html">Worker.h</a></div><div class="ttdoc">工作任务模块封装</div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Config_html_a592c44c9813877f0a97fccc32b594081"><div class="ttname"><a href="classGyanis_1_1base_1_1Config.html#a592c44c9813877f0a97fccc32b594081">Gyanis::base::Config::LoadFromConfigDir</a></div><div class="ttdeci">static void LoadFromConfigDir(const std::string &amp;path, bool force=false)</div><div class="ttdoc">加载配置目录中的所有配置文件</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00075">Config.cpp:75</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Config_html_aaac5d5509f3135d327d6daa085417fd7"><div class="ttname"><a href="classGyanis_1_1base_1_1Config.html#aaac5d5509f3135d327d6daa085417fd7">Gyanis::base::Config::LookUp</a></div><div class="ttdeci">static std::shared_ptr&lt; ConfigVar&lt; T &gt; &gt; LookUp(const std::string &amp;name, const T &amp;default_value, const std::string &amp;description=&quot;&quot;)</div><div class="ttdoc">获取/创建对应参数名的配置参数</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00501">Config.h:501</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1FSUtil_html_a4ec5f713dd87e424347aa53dff0aae13"><div class="ttname"><a href="classGyanis_1_1base_1_1FSUtil.html#a4ec5f713dd87e424347aa53dff0aae13">Gyanis::base::FSUtil::IsRunningPidfile</a></div><div class="ttdeci">static bool IsRunningPidfile(const std::string &amp;pidfile)</div><div class="ttdoc">检查一个进程是否在运行（根据 PID 文件）</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00642">Utils.cpp:642</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1FSUtil_html_ae035d7cfaa03083803e00d571e83b041"><div class="ttname"><a href="classGyanis_1_1base_1_1FSUtil.html#ae035d7cfaa03083803e00d571e83b041">Gyanis::base::FSUtil::Mkdir</a></div><div class="ttdeci">static bool Mkdir(const std::string &amp;dirname)</div><div class="ttdoc">创建一个新的目录。</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00621">Utils.cpp:621</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1LexicalCast_html"><div class="ttname"><a href="classGyanis_1_1base_1_1LexicalCast.html">Gyanis::base::LexicalCast</a></div><div class="ttdoc">类型转换模板类 (F 源类型, T 目标类型)</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00082">Config.h:83</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1IOManager_html_a00206639f4404ed49640f5f485d8f530"><div class="ttname"><a href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">Gyanis::core::IOManager::GetThis</a></div><div class="ttdeci">static IOManager * GetThis()</div><div class="ttdoc">获取当前 IO 管理器实例</div><div class="ttdef"><b>Definition</b> <a href="IOManager_8cpp_source.html#l00445">IOManager.cpp:445</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Address_html_a0f2719bc5fb5b34954231aafb5e14343"><div class="ttname"><a href="classGyanis_1_1net_1_1Address.html#a0f2719bc5fb5b34954231aafb5e14343">Gyanis::net::Address::GetInterfaceAddresses</a></div><div class="ttdeci">static bool GetInterfaceAddresses(std::multimap&lt; std::string, std::pair&lt; std::shared_ptr&lt; Address &gt;, uint32_t &gt; &gt; &amp;result, int family=AF_INET)</div><div class="ttdoc">返回本机所有网卡的&lt;网卡名, 地址, 子网掩码位数&gt;</div><div class="ttdef"><b>Definition</b> <a href="Address_8cpp_source.html#l00151">Address.cpp:151</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Address_html_a89340afcd322f4abc832616a49f2ea02"><div class="ttname"><a href="classGyanis_1_1net_1_1Address.html#a89340afcd322f4abc832616a49f2ea02">Gyanis::net::Address::LookupAny</a></div><div class="ttdeci">static std::shared_ptr&lt; Address &gt; LookupAny(const std::string &amp;host, int family=AF_INET, int type=0, int protocol=0)</div><div class="ttdoc">通过host地址返回对应条件的任意Address</div><div class="ttdef"><b>Definition</b> <a href="Address_8cpp_source.html#l00125">Address.cpp:125</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Application_html"><div class="ttname"><a href="classGyanis_1_1net_1_1Application.html">Gyanis::net::Application</a></div><div class="ttdoc">应用程序类，负责应用程序的初始化、运行、服务器管理等操作</div><div class="ttdef"><b>Definition</b> <a href="Application_8h_source.html#l00021">Application.h:22</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Application_html_a0d56a774ba816bbf833d4be9b8fa8309"><div class="ttname"><a href="classGyanis_1_1net_1_1Application.html#a0d56a774ba816bbf833d4be9b8fa8309">Gyanis::net::Application::m_mainIOManager</a></div><div class="ttdeci">std::shared_ptr&lt; core::IOManager &gt; m_mainIOManager</div><div class="ttdoc">应用程序的主 IO 管理器</div><div class="ttdef"><b>Definition</b> <a href="Application_8h_source.html#l00077">Application.h:77</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Application_html_a0f3f9cdc1cb0c9c2859e6868a66e5b60"><div class="ttname"><a href="classGyanis_1_1net_1_1Application.html#a0f3f9cdc1cb0c9c2859e6868a66e5b60">Gyanis::net::Application::s_instance</a></div><div class="ttdeci">static Application * s_instance</div><div class="ttdoc">Application 的单例实例</div><div class="ttdef"><b>Definition</b> <a href="Application_8h_source.html#l00078">Application.h:78</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Application_html_a1c23f0d6fe403a9a0666c59c7cd3a155"><div class="ttname"><a href="classGyanis_1_1net_1_1Application.html#a1c23f0d6fe403a9a0666c59c7cd3a155">Gyanis::net::Application::main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdoc">应用程序的主函数，解析命令行参数并执行初始化任务</div><div class="ttdef"><b>Definition</b> <a href="Application_8cpp_source.html#l00148">Application.cpp:148</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Application_html_a560b8a6b15310e370c9fec6a1e879cc1"><div class="ttname"><a href="classGyanis_1_1net_1_1Application.html#a560b8a6b15310e370c9fec6a1e879cc1">Gyanis::net::Application::m_argv</a></div><div class="ttdeci">char ** m_argv</div><div class="ttdoc">命令行参数数组</div><div class="ttdef"><b>Definition</b> <a href="Application_8h_source.html#l00075">Application.h:75</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Application_html_a6adda5fcc32478aee9d40b3bb606638d"><div class="ttname"><a href="classGyanis_1_1net_1_1Application.html#a6adda5fcc32478aee9d40b3bb606638d">Gyanis::net::Application::run</a></div><div class="ttdeci">bool run()</div><div class="ttdoc">运行应用程序，启动应用的主循环</div><div class="ttdef"><b>Definition</b> <a href="Application_8cpp_source.html#l00121">Application.cpp:121</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Application_html_a858e1474858e240860237db30360d772"><div class="ttname"><a href="classGyanis_1_1net_1_1Application.html#a858e1474858e240860237db30360d772">Gyanis::net::Application::m_argc</a></div><div class="ttdeci">int m_argc</div><div class="ttdoc">命令行参数的个数</div><div class="ttdef"><b>Definition</b> <a href="Application_8h_source.html#l00074">Application.h:74</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Application_html_aa1ecb2b12510792e4dc48b9c61774aa3"><div class="ttname"><a href="classGyanis_1_1net_1_1Application.html#aa1ecb2b12510792e4dc48b9c61774aa3">Gyanis::net::Application::GetInstance</a></div><div class="ttdeci">static Application * GetInstance()</div><div class="ttdoc">获取 Application 类的单例实例</div><div class="ttdef"><b>Definition</b> <a href="Application_8cpp_source.html#l00032">Application.cpp:32</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Application_html_aa24b9f2486079ef2dd061468dccb8c85"><div class="ttname"><a href="classGyanis_1_1net_1_1Application.html#aa24b9f2486079ef2dd061468dccb8c85">Gyanis::net::Application::m_servers</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::vector&lt; std::shared_ptr&lt; web::TcpServer &gt; &gt; &gt; m_servers</div><div class="ttdoc">服务器类型与服务器对象的映射</div><div class="ttdef"><b>Definition</b> <a href="Application_8h_source.html#l00076">Application.h:76</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Application_html_ab5b7aade06afd0a89341900d173e43f3"><div class="ttname"><a href="classGyanis_1_1net_1_1Application.html#ab5b7aade06afd0a89341900d173e43f3">Gyanis::net::Application::init</a></div><div class="ttdeci">bool init(int argc, char **argv)</div><div class="ttdoc">初始化应用程序，解析命令行参数并进行必要的初始化操作</div><div class="ttdef"><b>Definition</b> <a href="Application_8cpp_source.html#l00037">Application.cpp:37</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Application_html_aba7a24f750b062086882084a590b50cb"><div class="ttname"><a href="classGyanis_1_1net_1_1Application.html#aba7a24f750b062086882084a590b50cb">Gyanis::net::Application::Application</a></div><div class="ttdeci">Application()</div><div class="ttdoc">构造函数，初始化 Application 对象</div><div class="ttdef"><b>Definition</b> <a href="Application_8cpp_source.html#l00027">Application.cpp:27</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Application_html_abbca54a5950282f2465bddbaca6b4414"><div class="ttname"><a href="classGyanis_1_1net_1_1Application.html#abbca54a5950282f2465bddbaca6b4414">Gyanis::net::Application::listAllServer</a></div><div class="ttdeci">void listAllServer(std::unordered_map&lt; std::string, std::vector&lt; std::shared_ptr&lt; web::TcpServer &gt; &gt; &gt; &amp;servers) const</div><div class="ttdoc">获取所有的服务器并以类型为键组织成一个字典</div><div class="ttdef"><b>Definition</b> <a href="Application_8cpp_source.html#l00142">Application.cpp:142</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Application_html_ad66c663f06268ed611025e98b8597a91"><div class="ttname"><a href="classGyanis_1_1net_1_1Application.html#ad66c663f06268ed611025e98b8597a91">Gyanis::net::Application::getServer</a></div><div class="ttdeci">bool getServer(const std::string &amp;type, std::vector&lt; std::shared_ptr&lt; web::TcpServer &gt; &gt; &amp;servers)</div><div class="ttdoc">根据服务器类型获取对应的服务器列表</div><div class="ttdef"><b>Definition</b> <a href="Application_8cpp_source.html#l00130">Application.cpp:130</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1Application_html_ae0cb5a1ff0be0ceaa0f4e79553606f93"><div class="ttname"><a href="classGyanis_1_1net_1_1Application.html#ae0cb5a1ff0be0ceaa0f4e79553606f93">Gyanis::net::Application::run_fiber</a></div><div class="ttdeci">int run_fiber()</div><div class="ttdoc">启动协程来运行应用程序</div><div class="ttdef"><b>Definition</b> <a href="Application_8cpp_source.html#l00184">Application.cpp:184</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1IPAddress_html_a846aeb3649d35bc4214d2ddd284b690a"><div class="ttname"><a href="classGyanis_1_1net_1_1IPAddress.html#a846aeb3649d35bc4214d2ddd284b690a">Gyanis::net::IPAddress::Create</a></div><div class="ttdeci">static std::shared_ptr&lt; IPAddress &gt; Create(const char *address, uint16_t port=0)</div><div class="ttdoc">通过域名、IP、服务器名创建IPAddress</div><div class="ttdef"><b>Definition</b> <a href="Address_8cpp_source.html#l00281">Address.cpp:281</a></div></div>
+<div class="ttc" id="aclassSingleton_html_a7b90075f8e4471743fd3596be874e5d1"><div class="ttname"><a href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">Singleton::GetInstance</a></div><div class="ttdeci">static T * GetInstance()</div><div class="ttdoc">获取单例实例的裸指针</div><div class="ttdef"><b>Definition</b> <a href="Singleton_8h_source.html#l00024">Singleton.h:24</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1core_html_a6acf66653635ec9df0dcfe4d793756a9"><div class="ttname"><a href="namespaceGyanis_1_1core.html#a6acf66653635ec9df0dcfe4d793756a9">Gyanis::core::start_daemon</a></div><div class="ttdeci">int start_daemon(int argc, char **argv, const std::function&lt; int(int argc, char **argv)&gt; &amp;main_cb, bool is_daemon)</div><div class="ttdoc">启动守护进程</div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_html"><div class="ttname"><a href="namespaceGyanis_1_1net.html">Gyanis::net</a></div><div class="ttdef"><b>Definition</b> <a href="Address_8h_source.html#l00016">Address.h:17</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_html_a1944a37de12dd1bd6817f58a672c35e3"><div class="ttname"><a href="namespaceGyanis_1_1net.html#a1944a37de12dd1bd6817f58a672c35e3">Gyanis::net::g_server_pid_file</a></div><div class="ttdeci">static auto g_server_pid_file</div><div class="ttdef"><b>Definition</b> <a href="Application_8cpp_source.html#l00019">Application.cpp:19</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_html_a47d664ead4f8fed7d9b6885a03536385"><div class="ttname"><a href="namespaceGyanis_1_1net.html#a47d664ead4f8fed7d9b6885a03536385">Gyanis::net::g_servers_conf</a></div><div class="ttdeci">static auto g_servers_conf</div><div class="ttdef"><b>Definition</b> <a href="Application_8cpp_source.html#l00022">Application.cpp:23</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_html_aba07488c2cda1d5b5bfdc1015bc2643d"><div class="ttname"><a href="namespaceGyanis_1_1net.html#aba07488c2cda1d5b5bfdc1015bc2643d">Gyanis::net::g_server_work_path</a></div><div class="ttdeci">static auto g_server_work_path</div><div class="ttdef"><b>Definition</b> <a href="Application_8cpp_source.html#l00016">Application.cpp:16</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_html_aca537c66753087eb059d9c858122ede9"><div class="ttname"><a href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">Gyanis::net::g_logger</a></div><div class="ttdeci">static auto g_logger</div><div class="ttdef"><b>Definition</b> <a href="Address_8cpp_source.html#l00013">Address.cpp:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c72b25b75abe208498b36a3e44a3726c.html">net</a></li><li class="navelem"><a class="el" href="Application_8cpp.html">Application.cpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

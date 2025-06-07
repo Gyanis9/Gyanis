@@ -1,0 +1,2580 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: Gyanis::net::http::HttpRequest类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGyanis_1_1net_1_1http_1_1HttpRequest.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classGyanis_1_1net_1_1http_1_1HttpRequest-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Gyanis::net::http::HttpRequest类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>HTTP 请求类  
+ <a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Http_8h_source.html">Http.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a25069df603e39a22b82cdda2c27e03d4" id="r_a25069df603e39a22b82cdda2c27e03d4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">MapType</a> = std::unordered_map&lt; std::string, std::string &gt;</td></tr>
+<tr class="separator:a25069df603e39a22b82cdda2c27e03d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a98355b8f3662ba5ea671578578c4b0b6" id="r_a98355b8f3662ba5ea671578578c4b0b6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a98355b8f3662ba5ea671578578c4b0b6">HttpRequest</a> (uint8_t version=0x11, bool <a class="el" href="Hook_8cpp.html#aafbcde67669a1b96577e735ddebd8634">close</a>=true)</td></tr>
+<tr class="memdesc:a98355b8f3662ba5ea671578578c4b0b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <br /></td></tr>
+<tr class="separator:a98355b8f3662ba5ea671578578c4b0b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a720e54fd051869a1558d0639d94f639e" id="r_a720e54fd051869a1558d0639d94f639e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpResponse.html">HttpResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a720e54fd051869a1558d0639d94f639e">createResponse</a> () const</td></tr>
+<tr class="memdesc:a720e54fd051869a1558d0639d94f639e"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建一个新的 <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html" title="HTTP 请求类">HttpRequest</a> 对象  <br /></td></tr>
+<tr class="separator:a720e54fd051869a1558d0639d94f639e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c65a4c204941c44b136d6de3cd4d1a8" id="r_a9c65a4c204941c44b136d6de3cd4d1a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57">HttpMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a9c65a4c204941c44b136d6de3cd4d1a8">getMethod</a> () const</td></tr>
+<tr class="memdesc:a9c65a4c204941c44b136d6de3cd4d1a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取请求方法  <br /></td></tr>
+<tr class="separator:a9c65a4c204941c44b136d6de3cd4d1a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a135a31fe3f56f805ef0ced601fca737e" id="r_a135a31fe3f56f805ef0ced601fca737e"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a135a31fe3f56f805ef0ced601fca737e">getVersion</a> () const</td></tr>
+<tr class="memdesc:a135a31fe3f56f805ef0ced601fca737e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 HTTP 协议版本  <br /></td></tr>
+<tr class="separator:a135a31fe3f56f805ef0ced601fca737e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5961fd41c561f8897548ab3c7336938" id="r_ab5961fd41c561f8897548ab3c7336938"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ab5961fd41c561f8897548ab3c7336938">getPath</a> () const</td></tr>
+<tr class="memdesc:ab5961fd41c561f8897548ab3c7336938"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取请求路径  <br /></td></tr>
+<tr class="separator:ab5961fd41c561f8897548ab3c7336938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a683d19f52df338bfe4df9ef1abfdffc9" id="r_a683d19f52df338bfe4df9ef1abfdffc9"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a683d19f52df338bfe4df9ef1abfdffc9">getQuery</a> () const</td></tr>
+<tr class="memdesc:a683d19f52df338bfe4df9ef1abfdffc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取查询参数  <br /></td></tr>
+<tr class="separator:a683d19f52df338bfe4df9ef1abfdffc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab2d8f562e76229627b0789dc5f4ed36" id="r_aab2d8f562e76229627b0789dc5f4ed36"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aab2d8f562e76229627b0789dc5f4ed36">getBody</a> () const</td></tr>
+<tr class="memdesc:aab2d8f562e76229627b0789dc5f4ed36"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取请求体内容  <br /></td></tr>
+<tr class="separator:aab2d8f562e76229627b0789dc5f4ed36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae55a85bfb80b97cc2a514cb3befd66eb" id="r_ae55a85bfb80b97cc2a514cb3befd66eb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">MapType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae55a85bfb80b97cc2a514cb3befd66eb">getHeaders</a> () const</td></tr>
+<tr class="memdesc:ae55a85bfb80b97cc2a514cb3befd66eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取请求头  <br /></td></tr>
+<tr class="separator:ae55a85bfb80b97cc2a514cb3befd66eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6fae83ddc20ed1db26ec1b20036223b" id="r_ad6fae83ddc20ed1db26ec1b20036223b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">MapType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ad6fae83ddc20ed1db26ec1b20036223b">getParams</a> () const</td></tr>
+<tr class="memdesc:ad6fae83ddc20ed1db26ec1b20036223b"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取请求参数  <br /></td></tr>
+<tr class="separator:ad6fae83ddc20ed1db26ec1b20036223b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a742c8ff8c86dd990a8271b59e57deb7f" id="r_a742c8ff8c86dd990a8271b59e57deb7f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">MapType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a742c8ff8c86dd990a8271b59e57deb7f">getCookies</a> () const</td></tr>
+<tr class="memdesc:a742c8ff8c86dd990a8271b59e57deb7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取请求的 cookies  <br /></td></tr>
+<tr class="separator:a742c8ff8c86dd990a8271b59e57deb7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfec2ce6e492b36c1177b450a4addd23" id="r_adfec2ce6e492b36c1177b450a4addd23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#adfec2ce6e492b36c1177b450a4addd23">setMethod</a> (const <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57">HttpMethod</a> &amp;method)</td></tr>
+<tr class="memdesc:adfec2ce6e492b36c1177b450a4addd23"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置 HTTP 请求方法  <br /></td></tr>
+<tr class="separator:adfec2ce6e492b36c1177b450a4addd23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76a5d14a5226c586621d93d617a75a47" id="r_a76a5d14a5226c586621d93d617a75a47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a76a5d14a5226c586621d93d617a75a47">setVersion</a> (uint8_t version)</td></tr>
+<tr class="memdesc:a76a5d14a5226c586621d93d617a75a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置 HTTP 协议版本  <br /></td></tr>
+<tr class="separator:a76a5d14a5226c586621d93d617a75a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16724e8f26efd59239d65023233881d5" id="r_a16724e8f26efd59239d65023233881d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a16724e8f26efd59239d65023233881d5">setPath</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:a16724e8f26efd59239d65023233881d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置请求路径  <br /></td></tr>
+<tr class="separator:a16724e8f26efd59239d65023233881d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2306e6d42b87fb8846a880a6c5adbc0e" id="r_a2306e6d42b87fb8846a880a6c5adbc0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a2306e6d42b87fb8846a880a6c5adbc0e">setQuery</a> (const std::string &amp;query)</td></tr>
+<tr class="memdesc:a2306e6d42b87fb8846a880a6c5adbc0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置查询字符串  <br /></td></tr>
+<tr class="separator:a2306e6d42b87fb8846a880a6c5adbc0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fd802c13b5c33e1175a38d945139742" id="r_a9fd802c13b5c33e1175a38d945139742"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a9fd802c13b5c33e1175a38d945139742">setFragment</a> (const std::string &amp;fragment)</td></tr>
+<tr class="memdesc:a9fd802c13b5c33e1175a38d945139742"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置 URL 片段  <br /></td></tr>
+<tr class="separator:a9fd802c13b5c33e1175a38d945139742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86759e1b4589b48380a49a54d3df1e91" id="r_a86759e1b4589b48380a49a54d3df1e91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a86759e1b4589b48380a49a54d3df1e91">setBody</a> (const std::string &amp;body)</td></tr>
+<tr class="memdesc:a86759e1b4589b48380a49a54d3df1e91"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置请求体内容  <br /></td></tr>
+<tr class="separator:a86759e1b4589b48380a49a54d3df1e91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b25559ae0a4a3cb6fb3047c57aff2c" id="r_a16b25559ae0a4a3cb6fb3047c57aff2c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a16b25559ae0a4a3cb6fb3047c57aff2c">isClose</a> () const</td></tr>
+<tr class="memdesc:a16b25559ae0a4a3cb6fb3047c57aff2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取连接关闭标志  <br /></td></tr>
+<tr class="separator:a16b25559ae0a4a3cb6fb3047c57aff2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a479048e3aefff1179a27996bce7ddb71" id="r_a479048e3aefff1179a27996bce7ddb71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a479048e3aefff1179a27996bce7ddb71">setClose</a> (bool <a class="el" href="Hook_8cpp.html#aafbcde67669a1b96577e735ddebd8634">close</a>)</td></tr>
+<tr class="memdesc:a479048e3aefff1179a27996bce7ddb71"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置连接关闭标志  <br /></td></tr>
+<tr class="separator:a479048e3aefff1179a27996bce7ddb71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7c02aa539458d95dc81ce85e9db5615" id="r_ac7c02aa539458d95dc81ce85e9db5615"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ac7c02aa539458d95dc81ce85e9db5615">isWebSocket</a> () const</td></tr>
+<tr class="memdesc:ac7c02aa539458d95dc81ce85e9db5615"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 WebSocket 是否开启  <br /></td></tr>
+<tr class="separator:ac7c02aa539458d95dc81ce85e9db5615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a00aabc8c261a16c29c6c52630fafbd" id="r_a5a00aabc8c261a16c29c6c52630fafbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a5a00aabc8c261a16c29c6c52630fafbd">setWebSocket</a> (bool websocket)</td></tr>
+<tr class="memdesc:a5a00aabc8c261a16c29c6c52630fafbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置 WebSocket 标志  <br /></td></tr>
+<tr class="separator:a5a00aabc8c261a16c29c6c52630fafbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d7826d48d6d561eaa69172a21ee90a5" id="r_a1d7826d48d6d561eaa69172a21ee90a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a1d7826d48d6d561eaa69172a21ee90a5">setHeaders</a> (const <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">MapType</a> &amp;headers)</td></tr>
+<tr class="memdesc:a1d7826d48d6d561eaa69172a21ee90a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置请求头部  <br /></td></tr>
+<tr class="separator:a1d7826d48d6d561eaa69172a21ee90a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d503f04b0d5ee4be11f8162a79f2740" id="r_a6d503f04b0d5ee4be11f8162a79f2740"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a6d503f04b0d5ee4be11f8162a79f2740">setParams</a> (const <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">MapType</a> &amp;params)</td></tr>
+<tr class="memdesc:a6d503f04b0d5ee4be11f8162a79f2740"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置请求参数  <br /></td></tr>
+<tr class="separator:a6d503f04b0d5ee4be11f8162a79f2740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84e1226055d4a700c0f28a34eb65385f" id="r_a84e1226055d4a700c0f28a34eb65385f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a84e1226055d4a700c0f28a34eb65385f">setCookies</a> (const <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">MapType</a> &amp;cookies)</td></tr>
+<tr class="memdesc:a84e1226055d4a700c0f28a34eb65385f"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置请求 cookies  <br /></td></tr>
+<tr class="separator:a84e1226055d4a700c0f28a34eb65385f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09e8a9a8d7283ee9c67efcd6806591b8" id="r_a09e8a9a8d7283ee9c67efcd6806591b8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a09e8a9a8d7283ee9c67efcd6806591b8">getHeader</a> (const std::string &amp;key, const std::string &amp;def=&quot;&quot;) const</td></tr>
+<tr class="memdesc:a09e8a9a8d7283ee9c67efcd6806591b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取请求头部字段的值  <br /></td></tr>
+<tr class="separator:a09e8a9a8d7283ee9c67efcd6806591b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abde09abdada91489aa59d5b473c62d08" id="r_abde09abdada91489aa59d5b473c62d08"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#abde09abdada91489aa59d5b473c62d08">getParam</a> (const std::string &amp;key, const std::string &amp;def=&quot;&quot;)</td></tr>
+<tr class="memdesc:abde09abdada91489aa59d5b473c62d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取请求参数的值  <br /></td></tr>
+<tr class="separator:abde09abdada91489aa59d5b473c62d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe7bcbbd3a01184777a8f1aae8cc5d0f" id="r_abe7bcbbd3a01184777a8f1aae8cc5d0f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#abe7bcbbd3a01184777a8f1aae8cc5d0f">getCookie</a> (const std::string &amp;key, const std::string &amp;def=&quot;&quot;)</td></tr>
+<tr class="memdesc:abe7bcbbd3a01184777a8f1aae8cc5d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取请求 cookies 的值  <br /></td></tr>
+<tr class="separator:abe7bcbbd3a01184777a8f1aae8cc5d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7c721ced5e52b681a1041df1a3a01cb" id="r_ad7c721ced5e52b681a1041df1a3a01cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ad7c721ced5e52b681a1041df1a3a01cb">setHeader</a> (const std::string &amp;key, const std::string &amp;value)</td></tr>
+<tr class="memdesc:ad7c721ced5e52b681a1041df1a3a01cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置请求头部字段的值  <br /></td></tr>
+<tr class="separator:ad7c721ced5e52b681a1041df1a3a01cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af130eea40308f31e09eafb78a8704587" id="r_af130eea40308f31e09eafb78a8704587"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af130eea40308f31e09eafb78a8704587">setParam</a> (const std::string &amp;key, const std::string &amp;value)</td></tr>
+<tr class="memdesc:af130eea40308f31e09eafb78a8704587"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置请求参数的值  <br /></td></tr>
+<tr class="separator:af130eea40308f31e09eafb78a8704587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60c192367b84e3784a1218f0fd89f82" id="r_ad60c192367b84e3784a1218f0fd89f82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ad60c192367b84e3784a1218f0fd89f82">setCookie</a> (const std::string &amp;key, const std::string &amp;value)</td></tr>
+<tr class="memdesc:ad60c192367b84e3784a1218f0fd89f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置请求 cookies 的值  <br /></td></tr>
+<tr class="separator:ad60c192367b84e3784a1218f0fd89f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee36caf988c4a26cb82e0305f69f7d1f" id="r_aee36caf988c4a26cb82e0305f69f7d1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aee36caf988c4a26cb82e0305f69f7d1f">deleteHeader</a> (const std::string &amp;key)</td></tr>
+<tr class="memdesc:aee36caf988c4a26cb82e0305f69f7d1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除请求头部字段  <br /></td></tr>
+<tr class="separator:aee36caf988c4a26cb82e0305f69f7d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b0866c375912937667977749566176f" id="r_a8b0866c375912937667977749566176f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a8b0866c375912937667977749566176f">deleteParam</a> (const std::string &amp;key)</td></tr>
+<tr class="memdesc:a8b0866c375912937667977749566176f"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除请求参数  <br /></td></tr>
+<tr class="separator:a8b0866c375912937667977749566176f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa079eeeee78b9ac9eafeab07005584b9" id="r_aa079eeeee78b9ac9eafeab07005584b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aa079eeeee78b9ac9eafeab07005584b9">deleteCookie</a> (const std::string &amp;key)</td></tr>
+<tr class="memdesc:aa079eeeee78b9ac9eafeab07005584b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除请求 cookies  <br /></td></tr>
+<tr class="separator:aa079eeeee78b9ac9eafeab07005584b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8b68ee6a8a39298c37bfa41f6e5c5cc" id="r_aa8b68ee6a8a39298c37bfa41f6e5c5cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aa8b68ee6a8a39298c37bfa41f6e5c5cc">hasHeader</a> (const std::string &amp;key, std::string *value=nullptr)</td></tr>
+<tr class="memdesc:aa8b68ee6a8a39298c37bfa41f6e5c5cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查请求头部是否包含指定字段  <br /></td></tr>
+<tr class="separator:aa8b68ee6a8a39298c37bfa41f6e5c5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a169a8fb397d140615c6ae22ef57522" id="r_a5a169a8fb397d140615c6ae22ef57522"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a5a169a8fb397d140615c6ae22ef57522">hasParam</a> (const std::string &amp;key, std::string *value=nullptr)</td></tr>
+<tr class="memdesc:a5a169a8fb397d140615c6ae22ef57522"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查请求参数是否包含指定字段  <br /></td></tr>
+<tr class="separator:a5a169a8fb397d140615c6ae22ef57522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0109e14cb70272ec3021802e7ea032e4" id="r_a0109e14cb70272ec3021802e7ea032e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a0109e14cb70272ec3021802e7ea032e4">hasCookie</a> (const std::string &amp;key, std::string *value=nullptr)</td></tr>
+<tr class="memdesc:a0109e14cb70272ec3021802e7ea032e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查请求 cookies 是否包含指定字段  <br /></td></tr>
+<tr class="separator:a0109e14cb70272ec3021802e7ea032e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10cbb214ed869f070bb36b32f2dc118c" id="r_a10cbb214ed869f070bb36b32f2dc118c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a10cbb214ed869f070bb36b32f2dc118c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a10cbb214ed869f070bb36b32f2dc118c">checkGetHeaderAs</a> (const std::string &amp;key, std::string &amp;value, const T &amp;defaultValue=T())</td></tr>
+<tr class="memdesc:a10cbb214ed869f070bb36b32f2dc118c"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查并获取请求头字段的值，转换为指定类型  <br /></td></tr>
+<tr class="separator:a10cbb214ed869f070bb36b32f2dc118c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11029a827c99b38c9a423e91025f05cb" id="r_a11029a827c99b38c9a423e91025f05cb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a11029a827c99b38c9a423e91025f05cb"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a11029a827c99b38c9a423e91025f05cb">getHeaderAs</a> (const std::string &amp;key, const T &amp;defaultValue=T())</td></tr>
+<tr class="memdesc:a11029a827c99b38c9a423e91025f05cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取请求头字段的值，转换为指定类型  <br /></td></tr>
+<tr class="separator:a11029a827c99b38c9a423e91025f05cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1624c11e6a48dd3fc4b2f996f20d6194" id="r_a1624c11e6a48dd3fc4b2f996f20d6194"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a1624c11e6a48dd3fc4b2f996f20d6194"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a1624c11e6a48dd3fc4b2f996f20d6194">checkParamAs</a> (const std::string &amp;key, T &amp;value, const T &amp;def=T())</td></tr>
+<tr class="memdesc:a1624c11e6a48dd3fc4b2f996f20d6194"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查并获取查询参数的值，转换为指定类型  <br /></td></tr>
+<tr class="separator:a1624c11e6a48dd3fc4b2f996f20d6194"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e623184664a5d98bcb22a6756e33520" id="r_a9e623184664a5d98bcb22a6756e33520"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9e623184664a5d98bcb22a6756e33520"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a9e623184664a5d98bcb22a6756e33520">getParamAs</a> (const std::string &amp;key, const T &amp;def=T())</td></tr>
+<tr class="memdesc:a9e623184664a5d98bcb22a6756e33520"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取查询参数的值，转换为指定类型  <br /></td></tr>
+<tr class="separator:a9e623184664a5d98bcb22a6756e33520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a04cd41b238d720c07259c1e2a5ef37" id="r_a7a04cd41b238d720c07259c1e2a5ef37"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7a04cd41b238d720c07259c1e2a5ef37"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a7a04cd41b238d720c07259c1e2a5ef37">checkGetCookieAs</a> (const std::string &amp;key, T &amp;value, const T &amp;def=T())</td></tr>
+<tr class="memdesc:a7a04cd41b238d720c07259c1e2a5ef37"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查并获取 Cookie 的值，转换为指定类型  <br /></td></tr>
+<tr class="separator:a7a04cd41b238d720c07259c1e2a5ef37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae04060ae2f29cff10715f4252117dcf4" id="r_ae04060ae2f29cff10715f4252117dcf4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ae04060ae2f29cff10715f4252117dcf4"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae04060ae2f29cff10715f4252117dcf4">getCookieAs</a> (const std::string &amp;key, const T &amp;def=T())</td></tr>
+<tr class="memdesc:ae04060ae2f29cff10715f4252117dcf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 Cookie 的值，转换为指定类型  <br /></td></tr>
+<tr class="separator:ae04060ae2f29cff10715f4252117dcf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7164701b411f4941dbc0e69b5b1bbd6b" id="r_a7164701b411f4941dbc0e69b5b1bbd6b"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a7164701b411f4941dbc0e69b5b1bbd6b">dump</a> (std::ostream &amp;os) const</td></tr>
+<tr class="memdesc:a7164701b411f4941dbc0e69b5b1bbd6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">将 HTTP 请求的详细信息输出到流中  <br /></td></tr>
+<tr class="separator:a7164701b411f4941dbc0e69b5b1bbd6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af24729785cb9c86751a5d282b089ead5" id="r_af24729785cb9c86751a5d282b089ead5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af24729785cb9c86751a5d282b089ead5">toString</a> () const</td></tr>
+<tr class="memdesc:af24729785cb9c86751a5d282b089ead5"><td class="mdescLeft">&#160;</td><td class="mdescRight">将 HTTP 请求转换为字符串  <br /></td></tr>
+<tr class="separator:af24729785cb9c86751a5d282b089ead5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d82ee307d9e937722099e289d25592d" id="r_a9d82ee307d9e937722099e289d25592d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a9d82ee307d9e937722099e289d25592d">init</a> ()</td></tr>
+<tr class="memdesc:a9d82ee307d9e937722099e289d25592d"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化 HTTP 请求  <br /></td></tr>
+<tr class="separator:a9d82ee307d9e937722099e289d25592d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a645647fd1f099ce7e12180e482cc2e4a" id="r_a645647fd1f099ce7e12180e482cc2e4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a645647fd1f099ce7e12180e482cc2e4a">initParam</a> ()</td></tr>
+<tr class="memdesc:a645647fd1f099ce7e12180e482cc2e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化 HTTP 请求参数  <br /></td></tr>
+<tr class="separator:a645647fd1f099ce7e12180e482cc2e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa67fcd0acf9572604f4372c107cee632" id="r_aa67fcd0acf9572604f4372c107cee632"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aa67fcd0acf9572604f4372c107cee632">initQueryParam</a> ()</td></tr>
+<tr class="memdesc:aa67fcd0acf9572604f4372c107cee632"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化查询参数  <br /></td></tr>
+<tr class="separator:aa67fcd0acf9572604f4372c107cee632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5085ba8b16c1eeac4be17b76de14403" id="r_ad5085ba8b16c1eeac4be17b76de14403"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ad5085ba8b16c1eeac4be17b76de14403">initBodyParam</a> ()</td></tr>
+<tr class="memdesc:ad5085ba8b16c1eeac4be17b76de14403"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化请求体参数  <br /></td></tr>
+<tr class="separator:ad5085ba8b16c1eeac4be17b76de14403"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a036bf182ca5a9f3b19a6b6e7242b5d7a" id="r_a036bf182ca5a9f3b19a6b6e7242b5d7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a036bf182ca5a9f3b19a6b6e7242b5d7a">initCookies</a> ()</td></tr>
+<tr class="memdesc:a036bf182ca5a9f3b19a6b6e7242b5d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化 cookies  <br /></td></tr>
+<tr class="separator:a036bf182ca5a9f3b19a6b6e7242b5d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:af31f576fad53f4771619a72ed75fc2a8" id="r_af31f576fad53f4771619a72ed75fc2a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57">HttpMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af31f576fad53f4771619a72ed75fc2a8">m_method</a></td></tr>
+<tr class="memdesc:af31f576fad53f4771619a72ed75fc2a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP 请求方法，例如 GET、POST 等  <br /></td></tr>
+<tr class="separator:af31f576fad53f4771619a72ed75fc2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a462a65069e31d7c90397af6b29fe9d2b" id="r_a462a65069e31d7c90397af6b29fe9d2b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a462a65069e31d7c90397af6b29fe9d2b">m_version</a></td></tr>
+<tr class="memdesc:a462a65069e31d7c90397af6b29fe9d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP 协议版本，通常为 0x11 表示 HTTP/1.1  <br /></td></tr>
+<tr class="separator:a462a65069e31d7c90397af6b29fe9d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5297a41486f578cb6d2f26ca6c74a2ec" id="r_a5297a41486f578cb6d2f26ca6c74a2ec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a5297a41486f578cb6d2f26ca6c74a2ec">m_close</a></td></tr>
+<tr class="memdesc:a5297a41486f578cb6d2f26ca6c74a2ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否在响应后关闭连接  <br /></td></tr>
+<tr class="separator:a5297a41486f578cb6d2f26ca6c74a2ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1794df2b074fadb4c320f415dd94393" id="r_ae1794df2b074fadb4c320f415dd94393"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae1794df2b074fadb4c320f415dd94393">m_websocket</a></td></tr>
+<tr class="memdesc:ae1794df2b074fadb4c320f415dd94393"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否启用 WebSocket 协议  <br /></td></tr>
+<tr class="separator:ae1794df2b074fadb4c320f415dd94393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b6bf1547470cb2461782800ed40745c" id="r_a9b6bf1547470cb2461782800ed40745c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a9b6bf1547470cb2461782800ed40745c">m_parserParamFlag</a></td></tr>
+<tr class="memdesc:a9b6bf1547470cb2461782800ed40745c"><td class="mdescLeft">&#160;</td><td class="mdescRight">标记 HTTP 请求是否解析了查询参数、请求体参数和 cookies  <br /></td></tr>
+<tr class="separator:a9b6bf1547470cb2461782800ed40745c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a255a4705b0d715c7c46c91e8c2e110e7" id="r_a255a4705b0d715c7c46c91e8c2e110e7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a255a4705b0d715c7c46c91e8c2e110e7">m_path</a></td></tr>
+<tr class="memdesc:a255a4705b0d715c7c46c91e8c2e110e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">请求的路径部分，例如 <code>/index.html</code>  <br /></td></tr>
+<tr class="separator:a255a4705b0d715c7c46c91e8c2e110e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95859d5cf45a3fbcb73ad7cfb72e7f85" id="r_a95859d5cf45a3fbcb73ad7cfb72e7f85"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a95859d5cf45a3fbcb73ad7cfb72e7f85">m_query</a></td></tr>
+<tr class="memdesc:a95859d5cf45a3fbcb73ad7cfb72e7f85"><td class="mdescLeft">&#160;</td><td class="mdescRight">URL 查询字符串部分，例如 <code>?key1=value1&amp;key2=value2</code>  <br /></td></tr>
+<tr class="separator:a95859d5cf45a3fbcb73ad7cfb72e7f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac050faafa56f9634ec7f30b16a9acb94" id="r_ac050faafa56f9634ec7f30b16a9acb94"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ac050faafa56f9634ec7f30b16a9acb94">m_fragment</a></td></tr>
+<tr class="memdesc:ac050faafa56f9634ec7f30b16a9acb94"><td class="mdescLeft">&#160;</td><td class="mdescRight">URL 片段部分，例如 <code>#section1</code>  <br /></td></tr>
+<tr class="separator:ac050faafa56f9634ec7f30b16a9acb94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae26eac0d3781740283387f0e634aecfe" id="r_ae26eac0d3781740283387f0e634aecfe"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae26eac0d3781740283387f0e634aecfe">m_body</a></td></tr>
+<tr class="memdesc:ae26eac0d3781740283387f0e634aecfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">请求体内容，通常用于 POST 或 PUT 请求  <br /></td></tr>
+<tr class="separator:ae26eac0d3781740283387f0e634aecfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab678b63ce0188a395f8989dcab2e020f" id="r_ab678b63ce0188a395f8989dcab2e020f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">MapType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ab678b63ce0188a395f8989dcab2e020f">m_headers</a></td></tr>
+<tr class="memdesc:ab678b63ce0188a395f8989dcab2e020f"><td class="mdescLeft">&#160;</td><td class="mdescRight">请求头部，包含 HTTP 请求的头部信息  <br /></td></tr>
+<tr class="separator:ab678b63ce0188a395f8989dcab2e020f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6c53a09e7fd4b93090cd74868adffae" id="r_af6c53a09e7fd4b93090cd74868adffae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">MapType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af6c53a09e7fd4b93090cd74868adffae">m_params</a></td></tr>
+<tr class="memdesc:af6c53a09e7fd4b93090cd74868adffae"><td class="mdescLeft">&#160;</td><td class="mdescRight">请求参数，通常由 URL 查询字符串或请求体中的键值对组成  <br /></td></tr>
+<tr class="separator:af6c53a09e7fd4b93090cd74868adffae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaacec07956b166807720e6c0309049d9" id="r_aaacec07956b166807720e6c0309049d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">MapType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aaacec07956b166807720e6c0309049d9">m_cookies</a></td></tr>
+<tr class="memdesc:aaacec07956b166807720e6c0309049d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">请求 cookies，包含所有通过 Cookie 传递的数据  <br /></td></tr>
+<tr class="separator:aaacec07956b166807720e6c0309049d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>HTTP 请求类 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00138">138</a> 行定义.</p>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="a25069df603e39a22b82cdda2c27e03d4" name="a25069df603e39a22b82cdda2c27e03d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25069df603e39a22b82cdda2c27e03d4">&#9670;&#160;</a></span>MapType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">Gyanis::net::http::HttpRequest::MapType</a> =  std::unordered_map&lt;std::string, std::string&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00141">141</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a98355b8f3662ba5ea671578578c4b0b6" name="a98355b8f3662ba5ea671578578c4b0b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98355b8f3662ba5ea671578578c4b0b6">&#9670;&#160;</a></span>HttpRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gyanis::net::http::HttpRequest::HttpRequest </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>version</em> = <code>0x11</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>close</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">version</td><td>HTTP 协议版本，默认值为 0x11 </td></tr>
+    <tr><td class="paramname">close</td><td>是否关闭连接，默认为 true </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00175">175</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  175</span>                                                                   : <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af31f576fad53f4771619a72ed75fc2a8">m_method</a>(<a class="code hl_enumvalue" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a7528035a93ee69cedb1dbddb2f0bfcc8">HttpMethod::GET</a>),</div>
+<div class="line"><span class="lineno">  176</span>                                                                       <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a462a65069e31d7c90397af6b29fe9d2b">m_version</a>(version),</div>
+<div class="line"><span class="lineno">  177</span>                                                                       <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a5297a41486f578cb6d2f26ca6c74a2ec">m_close</a>(<a class="code hl_function" href="Hook_8cpp.html#aafbcde67669a1b96577e735ddebd8634">close</a>),</div>
+<div class="line"><span class="lineno">  178</span>                                                                       <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae1794df2b074fadb4c320f415dd94393">m_websocket</a>(<span class="keyword">false</span>),</div>
+<div class="line"><span class="lineno">  179</span>                                                                       <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a9b6bf1547470cb2461782800ed40745c">m_parserParamFlag</a>(0),</div>
+<div class="line"><span class="lineno">  180</span>                                                                       <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a255a4705b0d715c7c46c91e8c2e110e7">m_path</a>(<span class="stringliteral">&quot;/&quot;</span>)</div>
+<div class="line"><span class="lineno">  181</span>    {</div>
+<div class="line"><span class="lineno">  182</span>    }</div>
+<div class="ttc" id="aHook_8cpp_html_aafbcde67669a1b96577e735ddebd8634"><div class="ttname"><a href="Hook_8cpp.html#aafbcde67669a1b96577e735ddebd8634">close</a></div><div class="ttdeci">int close(int fd)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00410">Hook.cpp:410</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpRequest_html_a255a4705b0d715c7c46c91e8c2e110e7"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a255a4705b0d715c7c46c91e8c2e110e7">Gyanis::net::http::HttpRequest::m_path</a></div><div class="ttdeci">std::string m_path</div><div class="ttdoc">请求的路径部分，例如 /index.html</div><div class="ttdef"><b>Definition</b> <a href="Http_8h_source.html#l00459">Http.h:459</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpRequest_html_a462a65069e31d7c90397af6b29fe9d2b"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a462a65069e31d7c90397af6b29fe9d2b">Gyanis::net::http::HttpRequest::m_version</a></div><div class="ttdeci">uint8_t m_version</div><div class="ttdoc">HTTP 协议版本，通常为 0x11 表示 HTTP/1.1</div><div class="ttdef"><b>Definition</b> <a href="Http_8h_source.html#l00455">Http.h:455</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpRequest_html_a5297a41486f578cb6d2f26ca6c74a2ec"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a5297a41486f578cb6d2f26ca6c74a2ec">Gyanis::net::http::HttpRequest::m_close</a></div><div class="ttdeci">bool m_close</div><div class="ttdoc">是否在响应后关闭连接</div><div class="ttdef"><b>Definition</b> <a href="Http_8h_source.html#l00456">Http.h:456</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpRequest_html_a9b6bf1547470cb2461782800ed40745c"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a9b6bf1547470cb2461782800ed40745c">Gyanis::net::http::HttpRequest::m_parserParamFlag</a></div><div class="ttdeci">uint8_t m_parserParamFlag</div><div class="ttdoc">标记 HTTP 请求是否解析了查询参数、请求体参数和 cookies</div><div class="ttdef"><b>Definition</b> <a href="Http_8h_source.html#l00458">Http.h:458</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpRequest_html_ae1794df2b074fadb4c320f415dd94393"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae1794df2b074fadb4c320f415dd94393">Gyanis::net::http::HttpRequest::m_websocket</a></div><div class="ttdeci">bool m_websocket</div><div class="ttdoc">是否启用 WebSocket 协议</div><div class="ttdef"><b>Definition</b> <a href="Http_8h_source.html#l00457">Http.h:457</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpRequest_html_af31f576fad53f4771619a72ed75fc2a8"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af31f576fad53f4771619a72ed75fc2a8">Gyanis::net::http::HttpRequest::m_method</a></div><div class="ttdeci">HttpMethod m_method</div><div class="ttdoc">HTTP 请求方法，例如 GET、POST 等</div><div class="ttdef"><b>Definition</b> <a href="Http_8h_source.html#l00454">Http.h:454</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html_ac838f95183819f91457f9370778dfb57a7528035a93ee69cedb1dbddb2f0bfcc8"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a7528035a93ee69cedb1dbddb2f0bfcc8">Gyanis::net::http::HttpMethod::GET</a></div><div class="ttdeci">@ GET</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a7a04cd41b238d720c07259c1e2a5ef37" name="a7a04cd41b238d720c07259c1e2a5ef37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a04cd41b238d720c07259c1e2a5ef37">&#9670;&#160;</a></span>checkGetCookieAs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::net::http::HttpRequest::checkGetCookieAs </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>def</em> = <code>T()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查并获取 Cookie 的值，转换为指定类型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>cookie 的键名 </td></tr>
+    <tr><td class="paramname">value</td><td>cookie 的值，转换为指定类型 </td></tr>
+    <tr><td class="paramname">def</td><td>默认值，默认为 T()，如果字段不存在则返回默认值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00398">398</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  399</span>        {</div>
+<div class="line"><span class="lineno">  400</span>            <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a036bf182ca5a9f3b19a6b6e7242b5d7a">initCookies</a>();</div>
+<div class="line"><span class="lineno">  401</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceGyanis_1_1net_1_1http.html#acd35be0798e1de1bb60cec1ebc18d810">checkGetAs</a>(<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aaacec07956b166807720e6c0309049d9">m_cookies</a>, key, value, def);</div>
+<div class="line"><span class="lineno">  402</span>        }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpRequest_html_a036bf182ca5a9f3b19a6b6e7242b5d7a"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a036bf182ca5a9f3b19a6b6e7242b5d7a">Gyanis::net::http::HttpRequest::initCookies</a></div><div class="ttdeci">void initCookies()</div><div class="ttdoc">初始化 cookies</div><div class="ttdef"><b>Definition</b> <a href="Http_8cpp_source.html#l00545">Http.cpp:545</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpRequest_html_aaacec07956b166807720e6c0309049d9"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aaacec07956b166807720e6c0309049d9">Gyanis::net::http::HttpRequest::m_cookies</a></div><div class="ttdeci">MapType m_cookies</div><div class="ttdoc">请求 cookies，包含所有通过 Cookie 传递的数据</div><div class="ttdef"><b>Definition</b> <a href="Http_8h_source.html#l00465">Http.h:465</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html_acd35be0798e1de1bb60cec1ebc18d810"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html#acd35be0798e1de1bb60cec1ebc18d810">Gyanis::net::http::checkGetAs</a></div><div class="ttdeci">bool checkGetAs(const MapType &amp;map, const std::string &amp;key, const T &amp;value, const T &amp;defaultValue=T())</div><div class="ttdoc">从 Map 中获取指定键的值并进行类型转换</div><div class="ttdef"><b>Definition</b> <a href="Http_8h_source.html#l00088">Http.h:88</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_a7a04cd41b238d720c07259c1e2a5ef37_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_a7a04cd41b238d720c07259c1e2a5ef37_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a10cbb214ed869f070bb36b32f2dc118c" name="a10cbb214ed869f070bb36b32f2dc118c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10cbb214ed869f070bb36b32f2dc118c">&#9670;&#160;</a></span>checkGetHeaderAs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::net::http::HttpRequest::checkGetHeaderAs </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>defaultValue</em> = <code>T()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查并获取请求头字段的值，转换为指定类型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>请求头字段的键名 </td></tr>
+    <tr><td class="paramname">value</td><td>请求头字段的值，转换为指定类型 </td></tr>
+    <tr><td class="paramname">defaultValue</td><td>默认值，默认为 T() </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00348">348</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  349</span>        {</div>
+<div class="line"><span class="lineno">  350</span>            <span class="keywordflow">return</span> checkGetAs&lt;MapType&gt;(<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ab678b63ce0188a395f8989dcab2e020f">m_headers</a>, key, value, defaultValue);</div>
+<div class="line"><span class="lineno">  351</span>        }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpRequest_html_ab678b63ce0188a395f8989dcab2e020f"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ab678b63ce0188a395f8989dcab2e020f">Gyanis::net::http::HttpRequest::m_headers</a></div><div class="ttdeci">MapType m_headers</div><div class="ttdoc">请求头部，包含 HTTP 请求的头部信息</div><div class="ttdef"><b>Definition</b> <a href="Http_8h_source.html#l00463">Http.h:463</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1624c11e6a48dd3fc4b2f996f20d6194" name="a1624c11e6a48dd3fc4b2f996f20d6194"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1624c11e6a48dd3fc4b2f996f20d6194">&#9670;&#160;</a></span>checkParamAs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::net::http::HttpRequest::checkParamAs </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>def</em> = <code>T()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查并获取查询参数的值，转换为指定类型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>查询参数的键名 </td></tr>
+    <tr><td class="paramname">value</td><td>查询参数的值，转换为指定类型 </td></tr>
+    <tr><td class="paramname">def</td><td>默认值，默认为 T()，如果字段不存在则返回默认值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00371">371</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  372</span>        {</div>
+<div class="line"><span class="lineno">  373</span>            <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aa67fcd0acf9572604f4372c107cee632">initQueryParam</a>();</div>
+<div class="line"><span class="lineno">  374</span>            <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ad5085ba8b16c1eeac4be17b76de14403">initBodyParam</a>();</div>
+<div class="line"><span class="lineno">  375</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceGyanis_1_1net_1_1http.html#acd35be0798e1de1bb60cec1ebc18d810">checkGetAs</a>(<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af6c53a09e7fd4b93090cd74868adffae">m_params</a>, key, value, def);</div>
+<div class="line"><span class="lineno">  376</span>        }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpRequest_html_aa67fcd0acf9572604f4372c107cee632"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aa67fcd0acf9572604f4372c107cee632">Gyanis::net::http::HttpRequest::initQueryParam</a></div><div class="ttdeci">void initQueryParam()</div><div class="ttdoc">初始化查询参数</div><div class="ttdef"><b>Definition</b> <a href="Http_8cpp_source.html#l00459">Http.cpp:459</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpRequest_html_ad5085ba8b16c1eeac4be17b76de14403"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ad5085ba8b16c1eeac4be17b76de14403">Gyanis::net::http::HttpRequest::initBodyParam</a></div><div class="ttdeci">void initBodyParam()</div><div class="ttdoc">初始化请求体参数</div><div class="ttdef"><b>Definition</b> <a href="Http_8cpp_source.html#l00498">Http.cpp:498</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpRequest_html_af6c53a09e7fd4b93090cd74868adffae"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af6c53a09e7fd4b93090cd74868adffae">Gyanis::net::http::HttpRequest::m_params</a></div><div class="ttdeci">MapType m_params</div><div class="ttdoc">请求参数，通常由 URL 查询字符串或请求体中的键值对组成</div><div class="ttdef"><b>Definition</b> <a href="Http_8h_source.html#l00464">Http.h:464</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_a1624c11e6a48dd3fc4b2f996f20d6194_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_a1624c11e6a48dd3fc4b2f996f20d6194_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a720e54fd051869a1558d0639d94f639e" name="a720e54fd051869a1558d0639d94f639e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a720e54fd051869a1558d0639d94f639e">&#9670;&#160;</a></span>createResponse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpResponse.html">HttpResponse</a> &gt; Gyanis::net::http::HttpRequest::createResponse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建一个新的 <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html" title="HTTP 请求类">HttpRequest</a> 对象 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00184">184</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  185</span>    {</div>
+<div class="line"><span class="lineno">  186</span>        <span class="keyword">auto</span> result = std::make_shared&lt;HttpResponse&gt;(<a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a135a31fe3f56f805ef0ced601fca737e">getVersion</a>(), <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a16b25559ae0a4a3cb6fb3047c57aff2c">isClose</a>());</div>
+<div class="line"><span class="lineno">  187</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  188</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpRequest_html_a135a31fe3f56f805ef0ced601fca737e"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a135a31fe3f56f805ef0ced601fca737e">Gyanis::net::http::HttpRequest::getVersion</a></div><div class="ttdeci">uint8_t getVersion() const</div><div class="ttdoc">获取 HTTP 协议版本</div><div class="ttdef"><b>Definition</b> <a href="Http_8cpp_source.html#l00195">Http.cpp:195</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpRequest_html_a16b25559ae0a4a3cb6fb3047c57aff2c"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a16b25559ae0a4a3cb6fb3047c57aff2c">Gyanis::net::http::HttpRequest::isClose</a></div><div class="ttdeci">bool isClose() const</div><div class="ttdoc">获取连接关闭标志</div><div class="ttdef"><b>Definition</b> <a href="Http_8cpp_source.html#l00260">Http.cpp:260</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_a720e54fd051869a1558d0639d94f639e_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_a720e54fd051869a1558d0639d94f639e_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aa079eeeee78b9ac9eafeab07005584b9" name="aa079eeeee78b9ac9eafeab07005584b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa079eeeee78b9ac9eafeab07005584b9">&#9670;&#160;</a></span>deleteCookie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::deleteCookie </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除请求 cookies </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>cookie 的键名 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00341">341</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  342</span>    {</div>
+<div class="line"><span class="lineno">  343</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aaacec07956b166807720e6c0309049d9">m_cookies</a>.erase(key);</div>
+<div class="line"><span class="lineno">  344</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aee36caf988c4a26cb82e0305f69f7d1f" name="aee36caf988c4a26cb82e0305f69f7d1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee36caf988c4a26cb82e0305f69f7d1f">&#9670;&#160;</a></span>deleteHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::deleteHeader </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除请求头部字段 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>请求头字段的键名 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00331">331</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  332</span>    {</div>
+<div class="line"><span class="lineno">  333</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ab678b63ce0188a395f8989dcab2e020f">m_headers</a>.erase(key);</div>
+<div class="line"><span class="lineno">  334</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8b0866c375912937667977749566176f" name="a8b0866c375912937667977749566176f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b0866c375912937667977749566176f">&#9670;&#160;</a></span>deleteParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::deleteParam </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除请求参数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>查询参数的键名 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00336">336</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  337</span>    {</div>
+<div class="line"><span class="lineno">  338</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af6c53a09e7fd4b93090cd74868adffae">m_params</a>.erase(key);</div>
+<div class="line"><span class="lineno">  339</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7164701b411f4941dbc0e69b5b1bbd6b" name="a7164701b411f4941dbc0e69b5b1bbd6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7164701b411f4941dbc0e69b5b1bbd6b">&#9670;&#160;</a></span>dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; Gyanis::net::http::HttpRequest::dump </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将 HTTP 请求的详细信息输出到流中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>输出流 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>std::ostream&amp; 返回输出流 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00391">391</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  392</span>    {</div>
+<div class="line"><span class="lineno">  393</span>        os &lt;&lt; <a class="code hl_function" href="namespaceGyanis_1_1net_1_1http.html#ae298029aed3a77d7600e339ea071db6b">HttpMethodToString</a>(<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af31f576fad53f4771619a72ed75fc2a8">m_method</a>) &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line"><span class="lineno">  394</span>            &lt;&lt; <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a255a4705b0d715c7c46c91e8c2e110e7">m_path</a></div>
+<div class="line"><span class="lineno">  395</span>            &lt;&lt; (<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a95859d5cf45a3fbcb73ad7cfb72e7f85">m_query</a>.empty() ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;?&quot;</span>)</div>
+<div class="line"><span class="lineno">  396</span>            &lt;&lt; <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a95859d5cf45a3fbcb73ad7cfb72e7f85">m_query</a></div>
+<div class="line"><span class="lineno">  397</span>            &lt;&lt; (<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ac050faafa56f9634ec7f30b16a9acb94">m_fragment</a>.empty() ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;#&quot;</span>)</div>
+<div class="line"><span class="lineno">  398</span>            &lt;&lt; <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ac050faafa56f9634ec7f30b16a9acb94">m_fragment</a></div>
+<div class="line"><span class="lineno">  399</span>            &lt;&lt; <span class="stringliteral">&quot; HTTP/&quot;</span></div>
+<div class="line"><span class="lineno">  400</span>            &lt;&lt; <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a462a65069e31d7c90397af6b29fe9d2b">m_version</a> &gt;&gt; 4)</div>
+<div class="line"><span class="lineno">  401</span>            &lt;&lt; <span class="stringliteral">&quot;.&quot;</span></div>
+<div class="line"><span class="lineno">  402</span>            &lt;&lt; <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a462a65069e31d7c90397af6b29fe9d2b">m_version</a> &amp; 0x0F)</div>
+<div class="line"><span class="lineno">  403</span>            &lt;&lt; <span class="stringliteral">&quot;\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  404</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae1794df2b074fadb4c320f415dd94393">m_websocket</a>)</div>
+<div class="line"><span class="lineno">  405</span>        {</div>
+<div class="line"><span class="lineno">  406</span>            os &lt;&lt; <span class="stringliteral">&quot;Connection: &quot;</span> &lt;&lt; (<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a5297a41486f578cb6d2f26ca6c74a2ec">m_close</a> ? <span class="stringliteral">&quot;Close&quot;</span> : <span class="stringliteral">&quot;Keep-Alive&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  407</span>        }</div>
+<div class="line"><span class="lineno">  408</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [fst, snd] : <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ab678b63ce0188a395f8989dcab2e020f">m_headers</a>)</div>
+<div class="line"><span class="lineno">  409</span>        {</div>
+<div class="line"><span class="lineno">  410</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae1794df2b074fadb4c320f415dd94393">m_websocket</a> &amp;&amp; strcasecmp(fst.c_str(), <span class="stringliteral">&quot;Connection&quot;</span>) == 0)</div>
+<div class="line"><span class="lineno">  411</span>            {</div>
+<div class="line"><span class="lineno">  412</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  413</span>            }</div>
+<div class="line"><span class="lineno">  414</span>            os &lt;&lt; fst &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; snd &lt;&lt; <span class="stringliteral">&quot;\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  415</span>        }</div>
+<div class="line"><span class="lineno">  416</span> </div>
+<div class="line"><span class="lineno">  417</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae26eac0d3781740283387f0e634aecfe">m_body</a>.empty())</div>
+<div class="line"><span class="lineno">  418</span>        {</div>
+<div class="line"><span class="lineno">  419</span>            os &lt;&lt; <span class="stringliteral">&quot;Content-Length: &quot;</span> &lt;&lt; <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae26eac0d3781740283387f0e634aecfe">m_body</a>.size() &lt;&lt; <span class="stringliteral">&quot;\r\n\r\n&quot;</span></div>
+<div class="line"><span class="lineno">  420</span>                &lt;&lt; <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae26eac0d3781740283387f0e634aecfe">m_body</a>;</div>
+<div class="line"><span class="lineno">  421</span>        }</div>
+<div class="line"><span class="lineno">  422</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  423</span>        {</div>
+<div class="line"><span class="lineno">  424</span>            os &lt;&lt; <span class="stringliteral">&quot;\r\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  425</span>        }</div>
+<div class="line"><span class="lineno">  426</span>        <span class="keywordflow">return</span> os;</div>
+<div class="line"><span class="lineno">  427</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpRequest_html_a95859d5cf45a3fbcb73ad7cfb72e7f85"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a95859d5cf45a3fbcb73ad7cfb72e7f85">Gyanis::net::http::HttpRequest::m_query</a></div><div class="ttdeci">std::string m_query</div><div class="ttdoc">URL 查询字符串部分，例如 ?key1=value1&amp;key2=value2</div><div class="ttdef"><b>Definition</b> <a href="Http_8h_source.html#l00460">Http.h:460</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpRequest_html_ac050faafa56f9634ec7f30b16a9acb94"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ac050faafa56f9634ec7f30b16a9acb94">Gyanis::net::http::HttpRequest::m_fragment</a></div><div class="ttdeci">std::string m_fragment</div><div class="ttdoc">URL 片段部分，例如 #section1</div><div class="ttdef"><b>Definition</b> <a href="Http_8h_source.html#l00461">Http.h:461</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpRequest_html_ae26eac0d3781740283387f0e634aecfe"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae26eac0d3781740283387f0e634aecfe">Gyanis::net::http::HttpRequest::m_body</a></div><div class="ttdeci">std::string m_body</div><div class="ttdoc">请求体内容，通常用于 POST 或 PUT 请求</div><div class="ttdef"><b>Definition</b> <a href="Http_8h_source.html#l00462">Http.h:462</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html_ae298029aed3a77d7600e339ea071db6b"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html#ae298029aed3a77d7600e339ea071db6b">Gyanis::net::http::HttpMethodToString</a></div><div class="ttdeci">const char * HttpMethodToString(const HttpMethod &amp;method)</div><div class="ttdoc">将 HTTP 方法枚举转换为字符串</div><div class="ttdef"><b>Definition</b> <a href="Http_8cpp_source.html#l00091">Http.cpp:91</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_a7164701b411f4941dbc0e69b5b1bbd6b_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_a7164701b411f4941dbc0e69b5b1bbd6b_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_a7164701b411f4941dbc0e69b5b1bbd6b_icgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_a7164701b411f4941dbc0e69b5b1bbd6b_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aab2d8f562e76229627b0789dc5f4ed36" name="aab2d8f562e76229627b0789dc5f4ed36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab2d8f562e76229627b0789dc5f4ed36">&#9670;&#160;</a></span>getBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; Gyanis::net::http::HttpRequest::getBody </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取请求体内容 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00210">210</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  211</span>    {</div>
+<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae26eac0d3781740283387f0e634aecfe">m_body</a>;</div>
+<div class="line"><span class="lineno">  213</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abe7bcbbd3a01184777a8f1aae8cc5d0f" name="abe7bcbbd3a01184777a8f1aae8cc5d0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe7bcbbd3a01184777a8f1aae8cc5d0f">&#9670;&#160;</a></span>getCookie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::net::http::HttpRequest::getCookie </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>def</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取请求 cookies 的值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>cookie 的键名 </td></tr>
+    <tr><td class="paramname">def</td><td>默认值，默认为空字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00309">309</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  310</span>    {</div>
+<div class="line"><span class="lineno">  311</span>        <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a036bf182ca5a9f3b19a6b6e7242b5d7a">initCookies</a>();</div>
+<div class="line"><span class="lineno">  312</span>        <span class="keyword">const</span> <span class="keyword">auto</span> it = <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aaacec07956b166807720e6c0309049d9">m_cookies</a>.find(key);</div>
+<div class="line"><span class="lineno">  313</span>        <span class="keywordflow">return</span> it != <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aaacec07956b166807720e6c0309049d9">m_cookies</a>.end() ? it-&gt;second : def;</div>
+<div class="line"><span class="lineno">  314</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_abe7bcbbd3a01184777a8f1aae8cc5d0f_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_abe7bcbbd3a01184777a8f1aae8cc5d0f_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae04060ae2f29cff10715f4252117dcf4" name="ae04060ae2f29cff10715f4252117dcf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae04060ae2f29cff10715f4252117dcf4">&#9670;&#160;</a></span>getCookieAs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T Gyanis::net::http::HttpRequest::getCookieAs </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>def</em> = <code>T()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取 Cookie 的值，转换为指定类型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>cookie 的键名 </td></tr>
+    <tr><td class="paramname">def</td><td>默认值，默认为 T()，如果字段不存在则返回默认值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00410">410</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  411</span>        {</div>
+<div class="line"><span class="lineno">  412</span>            <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a036bf182ca5a9f3b19a6b6e7242b5d7a">initCookies</a>();</div>
+<div class="line"><span class="lineno">  413</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceGyanis_1_1net_1_1http.html#a5a2f0ab2cb6f0ff142437cd97fa36157">getAs</a>(<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aaacec07956b166807720e6c0309049d9">m_cookies</a>, key, def);</div>
+<div class="line"><span class="lineno">  414</span>        }</div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html_a5a2f0ab2cb6f0ff142437cd97fa36157"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html#a5a2f0ab2cb6f0ff142437cd97fa36157">Gyanis::net::http::getAs</a></div><div class="ttdeci">T getAs(const MapType &amp;map, const std::string &amp;key, const T &amp;defaultValue=T())</div><div class="ttdoc">从 Map 中获取指定键的值并进行类型转换</div><div class="ttdef"><b>Definition</b> <a href="Http_8h_source.html#l00116">Http.h:116</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_ae04060ae2f29cff10715f4252117dcf4_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_ae04060ae2f29cff10715f4252117dcf4_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a742c8ff8c86dd990a8271b59e57deb7f" name="a742c8ff8c86dd990a8271b59e57deb7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a742c8ff8c86dd990a8271b59e57deb7f">&#9670;&#160;</a></span>getCookies()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">HttpRequest::MapType</a> &amp; Gyanis::net::http::HttpRequest::getCookies </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取请求的 cookies </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00225">225</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  226</span>    {</div>
+<div class="line"><span class="lineno">  227</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aaacec07956b166807720e6c0309049d9">m_cookies</a>;</div>
+<div class="line"><span class="lineno">  228</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a09e8a9a8d7283ee9c67efcd6806591b8" name="a09e8a9a8d7283ee9c67efcd6806591b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09e8a9a8d7283ee9c67efcd6806591b8">&#9670;&#160;</a></span>getHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::net::http::HttpRequest::getHeader </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>def</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取请求头部字段的值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>请求头字段的键名 </td></tr>
+    <tr><td class="paramname">def</td><td>默认值，默认为空字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00295">295</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  296</span>    {</div>
+<div class="line"><span class="lineno">  297</span>        <span class="keyword">const</span> <span class="keyword">auto</span> it = <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ab678b63ce0188a395f8989dcab2e020f">m_headers</a>.find(key);</div>
+<div class="line"><span class="lineno">  298</span>        <span class="keywordflow">return</span> it != <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ab678b63ce0188a395f8989dcab2e020f">m_headers</a>.end() ? it-&gt;second : def;</div>
+<div class="line"><span class="lineno">  299</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_a09e8a9a8d7283ee9c67efcd6806591b8_icgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_a09e8a9a8d7283ee9c67efcd6806591b8_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a11029a827c99b38c9a423e91025f05cb" name="a11029a827c99b38c9a423e91025f05cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11029a827c99b38c9a423e91025f05cb">&#9670;&#160;</a></span>getHeaderAs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T Gyanis::net::http::HttpRequest::getHeaderAs </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>defaultValue</em> = <code>T()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取请求头字段的值，转换为指定类型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>请求头字段的键名 </td></tr>
+    <tr><td class="paramname">defaultValue</td><td>默认值，默认为 T() </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00359">359</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  360</span>        {</div>
+<div class="line"><span class="lineno">  361</span>            <span class="keywordflow">return</span> getAs&lt;MapType&gt;(<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ab678b63ce0188a395f8989dcab2e020f">m_headers</a>, key, defaultValue);</div>
+<div class="line"><span class="lineno">  362</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae55a85bfb80b97cc2a514cb3befd66eb" name="ae55a85bfb80b97cc2a514cb3befd66eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae55a85bfb80b97cc2a514cb3befd66eb">&#9670;&#160;</a></span>getHeaders()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">HttpRequest::MapType</a> &amp; Gyanis::net::http::HttpRequest::getHeaders </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取请求头 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00215">215</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  216</span>    {</div>
+<div class="line"><span class="lineno">  217</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ab678b63ce0188a395f8989dcab2e020f">m_headers</a>;</div>
+<div class="line"><span class="lineno">  218</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9c65a4c204941c44b136d6de3cd4d1a8" name="a9c65a4c204941c44b136d6de3cd4d1a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c65a4c204941c44b136d6de3cd4d1a8">&#9670;&#160;</a></span>getMethod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57">HttpMethod</a> Gyanis::net::http::HttpRequest::getMethod </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取请求方法 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00190">190</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  191</span>    {</div>
+<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af31f576fad53f4771619a72ed75fc2a8">m_method</a>;</div>
+<div class="line"><span class="lineno">  193</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abde09abdada91489aa59d5b473c62d08" name="abde09abdada91489aa59d5b473c62d08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abde09abdada91489aa59d5b473c62d08">&#9670;&#160;</a></span>getParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::net::http::HttpRequest::getParam </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>def</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取请求参数的值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>查询参数的键名 </td></tr>
+    <tr><td class="paramname">def</td><td>默认值，默认为空字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00301">301</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  302</span>    {</div>
+<div class="line"><span class="lineno">  303</span>        <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aa67fcd0acf9572604f4372c107cee632">initQueryParam</a>();</div>
+<div class="line"><span class="lineno">  304</span>        <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ad5085ba8b16c1eeac4be17b76de14403">initBodyParam</a>();</div>
+<div class="line"><span class="lineno">  305</span>        <span class="keyword">const</span> <span class="keyword">auto</span> it = <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ab678b63ce0188a395f8989dcab2e020f">m_headers</a>.find(key);</div>
+<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">return</span> it != <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ab678b63ce0188a395f8989dcab2e020f">m_headers</a>.end() ? it-&gt;second : def;</div>
+<div class="line"><span class="lineno">  307</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_abde09abdada91489aa59d5b473c62d08_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_abde09abdada91489aa59d5b473c62d08_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9e623184664a5d98bcb22a6756e33520" name="a9e623184664a5d98bcb22a6756e33520"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e623184664a5d98bcb22a6756e33520">&#9670;&#160;</a></span>getParamAs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T Gyanis::net::http::HttpRequest::getParamAs </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>def</em> = <code>T()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取查询参数的值，转换为指定类型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>查询参数的键名 </td></tr>
+    <tr><td class="paramname">def</td><td>默认值，默认为 T()，如果字段不存在则返回默认值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00384">384</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  385</span>        {</div>
+<div class="line"><span class="lineno">  386</span>            <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aa67fcd0acf9572604f4372c107cee632">initQueryParam</a>();</div>
+<div class="line"><span class="lineno">  387</span>            <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ad5085ba8b16c1eeac4be17b76de14403">initBodyParam</a>();</div>
+<div class="line"><span class="lineno">  388</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceGyanis_1_1net_1_1http.html#a5a2f0ab2cb6f0ff142437cd97fa36157">getAs</a>(<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af6c53a09e7fd4b93090cd74868adffae">m_params</a>, key, def);</div>
+<div class="line"><span class="lineno">  389</span>        }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_a9e623184664a5d98bcb22a6756e33520_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_a9e623184664a5d98bcb22a6756e33520_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ad6fae83ddc20ed1db26ec1b20036223b" name="ad6fae83ddc20ed1db26ec1b20036223b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6fae83ddc20ed1db26ec1b20036223b">&#9670;&#160;</a></span>getParams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">HttpRequest::MapType</a> &amp; Gyanis::net::http::HttpRequest::getParams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取请求参数 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00220">220</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  221</span>    {</div>
+<div class="line"><span class="lineno">  222</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af6c53a09e7fd4b93090cd74868adffae">m_params</a>;</div>
+<div class="line"><span class="lineno">  223</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab5961fd41c561f8897548ab3c7336938" name="ab5961fd41c561f8897548ab3c7336938"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5961fd41c561f8897548ab3c7336938">&#9670;&#160;</a></span>getPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; Gyanis::net::http::HttpRequest::getPath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取请求路径 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00200">200</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  201</span>    {</div>
+<div class="line"><span class="lineno">  202</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a255a4705b0d715c7c46c91e8c2e110e7">m_path</a>;</div>
+<div class="line"><span class="lineno">  203</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a683d19f52df338bfe4df9ef1abfdffc9" name="a683d19f52df338bfe4df9ef1abfdffc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a683d19f52df338bfe4df9ef1abfdffc9">&#9670;&#160;</a></span>getQuery()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; Gyanis::net::http::HttpRequest::getQuery </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取查询参数 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00205">205</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  206</span>    {</div>
+<div class="line"><span class="lineno">  207</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a95859d5cf45a3fbcb73ad7cfb72e7f85">m_query</a>;</div>
+<div class="line"><span class="lineno">  208</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a135a31fe3f56f805ef0ced601fca737e" name="a135a31fe3f56f805ef0ced601fca737e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a135a31fe3f56f805ef0ced601fca737e">&#9670;&#160;</a></span>getVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Gyanis::net::http::HttpRequest::getVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取 HTTP 协议版本 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00195">195</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  196</span>    {</div>
+<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a462a65069e31d7c90397af6b29fe9d2b">m_version</a>;</div>
+<div class="line"><span class="lineno">  198</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_a135a31fe3f56f805ef0ced601fca737e_icgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_a135a31fe3f56f805ef0ced601fca737e_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a0109e14cb70272ec3021802e7ea032e4" name="a0109e14cb70272ec3021802e7ea032e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0109e14cb70272ec3021802e7ea032e4">&#9670;&#160;</a></span>hasCookie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::net::http::HttpRequest::hasCookie </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>value</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查请求 cookies 是否包含指定字段 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>cookie 的键名 </td></tr>
+    <tr><td class="paramname">value</td><td>可选参数，如果 cookie 存在，则返回字段的值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00376">376</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  377</span>    {</div>
+<div class="line"><span class="lineno">  378</span>        <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a036bf182ca5a9f3b19a6b6e7242b5d7a">initCookies</a>();</div>
+<div class="line"><span class="lineno">  379</span>        <span class="keyword">const</span> <span class="keyword">auto</span> it = <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aaacec07956b166807720e6c0309049d9">m_cookies</a>.find(key);</div>
+<div class="line"><span class="lineno">  380</span>        <span class="keywordflow">if</span> (it == <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aaacec07956b166807720e6c0309049d9">m_cookies</a>.end())</div>
+<div class="line"><span class="lineno">  381</span>        {</div>
+<div class="line"><span class="lineno">  382</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  383</span>        }</div>
+<div class="line"><span class="lineno">  384</span>        <span class="keywordflow">if</span> (value)</div>
+<div class="line"><span class="lineno">  385</span>        {</div>
+<div class="line"><span class="lineno">  386</span>            *value = it-&gt;second;</div>
+<div class="line"><span class="lineno">  387</span>        }</div>
+<div class="line"><span class="lineno">  388</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  389</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_a0109e14cb70272ec3021802e7ea032e4_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_a0109e14cb70272ec3021802e7ea032e4_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aa8b68ee6a8a39298c37bfa41f6e5c5cc" name="aa8b68ee6a8a39298c37bfa41f6e5c5cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8b68ee6a8a39298c37bfa41f6e5c5cc">&#9670;&#160;</a></span>hasHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::net::http::HttpRequest::hasHeader </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>value</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查请求头部是否包含指定字段 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>请求头字段的键名 </td></tr>
+    <tr><td class="paramname">value</td><td>可选参数，如果字段存在，则返回字段的值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00346">346</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  347</span>    {</div>
+<div class="line"><span class="lineno">  348</span>        <span class="keyword">const</span> <span class="keyword">auto</span> it = <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ab678b63ce0188a395f8989dcab2e020f">m_headers</a>.find(key);</div>
+<div class="line"><span class="lineno">  349</span>        <span class="keywordflow">if</span> (it == <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ab678b63ce0188a395f8989dcab2e020f">m_headers</a>.end())</div>
+<div class="line"><span class="lineno">  350</span>        {</div>
+<div class="line"><span class="lineno">  351</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  352</span>        }</div>
+<div class="line"><span class="lineno">  353</span>        <span class="keywordflow">if</span> (value)</div>
+<div class="line"><span class="lineno">  354</span>        {</div>
+<div class="line"><span class="lineno">  355</span>            *value = it-&gt;second;</div>
+<div class="line"><span class="lineno">  356</span>        }</div>
+<div class="line"><span class="lineno">  357</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  358</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5a169a8fb397d140615c6ae22ef57522" name="a5a169a8fb397d140615c6ae22ef57522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a169a8fb397d140615c6ae22ef57522">&#9670;&#160;</a></span>hasParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::net::http::HttpRequest::hasParam </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>value</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查请求参数是否包含指定字段 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>查询参数的键名 </td></tr>
+    <tr><td class="paramname">value</td><td>可选参数，如果参数存在，则返回字段的值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00360">360</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  361</span>    {</div>
+<div class="line"><span class="lineno">  362</span>        <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aa67fcd0acf9572604f4372c107cee632">initQueryParam</a>();</div>
+<div class="line"><span class="lineno">  363</span>        <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ad5085ba8b16c1eeac4be17b76de14403">initBodyParam</a>();</div>
+<div class="line"><span class="lineno">  364</span>        <span class="keyword">const</span> <span class="keyword">auto</span> it = <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af6c53a09e7fd4b93090cd74868adffae">m_params</a>.find(key);</div>
+<div class="line"><span class="lineno">  365</span>        <span class="keywordflow">if</span> (it == <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af6c53a09e7fd4b93090cd74868adffae">m_params</a>.end())</div>
+<div class="line"><span class="lineno">  366</span>        {</div>
+<div class="line"><span class="lineno">  367</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  368</span>        }</div>
+<div class="line"><span class="lineno">  369</span>        <span class="keywordflow">if</span> (value)</div>
+<div class="line"><span class="lineno">  370</span>        {</div>
+<div class="line"><span class="lineno">  371</span>            *value = it-&gt;second;</div>
+<div class="line"><span class="lineno">  372</span>        }</div>
+<div class="line"><span class="lineno">  373</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  374</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_a5a169a8fb397d140615c6ae22ef57522_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_a5a169a8fb397d140615c6ae22ef57522_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9d82ee307d9e937722099e289d25592d" name="a9d82ee307d9e937722099e289d25592d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d82ee307d9e937722099e289d25592d">&#9670;&#160;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化 HTTP 请求 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00436">436</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  437</span>    {</div>
+<div class="line"><span class="lineno">  438</span>        <span class="keyword">const</span> std::string conn = <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a09e8a9a8d7283ee9c67efcd6806591b8">getHeader</a>(<span class="stringliteral">&quot;Connection&quot;</span>);</div>
+<div class="line"><span class="lineno">  439</span>        <span class="keywordflow">if</span> (!conn.empty())</div>
+<div class="line"><span class="lineno">  440</span>        {</div>
+<div class="line"><span class="lineno">  441</span>            <span class="keywordflow">if</span> (strcasecmp(conn.c_str(), <span class="stringliteral">&quot;Keep-Alive&quot;</span>) == 0)</div>
+<div class="line"><span class="lineno">  442</span>            {</div>
+<div class="line"><span class="lineno">  443</span>                <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a5297a41486f578cb6d2f26ca6c74a2ec">m_close</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  444</span>            }</div>
+<div class="line"><span class="lineno">  445</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  446</span>            {</div>
+<div class="line"><span class="lineno">  447</span>                <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a5297a41486f578cb6d2f26ca6c74a2ec">m_close</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  448</span>            }</div>
+<div class="line"><span class="lineno">  449</span>        }</div>
+<div class="line"><span class="lineno">  450</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpRequest_html_a09e8a9a8d7283ee9c67efcd6806591b8"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a09e8a9a8d7283ee9c67efcd6806591b8">Gyanis::net::http::HttpRequest::getHeader</a></div><div class="ttdeci">std::string getHeader(const std::string &amp;key, const std::string &amp;def=&quot;&quot;) const</div><div class="ttdoc">获取请求头部字段的值</div><div class="ttdef"><b>Definition</b> <a href="Http_8cpp_source.html#l00295">Http.cpp:295</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_a9d82ee307d9e937722099e289d25592d_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_a9d82ee307d9e937722099e289d25592d_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ad5085ba8b16c1eeac4be17b76de14403" name="ad5085ba8b16c1eeac4be17b76de14403"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5085ba8b16c1eeac4be17b76de14403">&#9670;&#160;</a></span>initBodyParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::initBodyParam </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化请求体参数 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00498">498</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  499</span>    {</div>
+<div class="line"><span class="lineno">  500</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a9b6bf1547470cb2461782800ed40745c">m_parserParamFlag</a> &amp; 0x2)</div>
+<div class="line"><span class="lineno">  501</span>        {</div>
+<div class="line"><span class="lineno">  502</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  503</span>        }</div>
+<div class="line"><span class="lineno">  504</span> </div>
+<div class="line"><span class="lineno">  505</span>        <span class="keyword">const</span> std::string content_type = <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a09e8a9a8d7283ee9c67efcd6806591b8">getHeader</a>(<span class="stringliteral">&quot;Content-Type&quot;</span>);</div>
+<div class="line"><span class="lineno">  506</span>        <span class="keywordflow">if</span> (strcasestr(content_type.c_str(), <span class="stringliteral">&quot;application/x-www-form-urlencoded&quot;</span>) == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">  507</span>        {</div>
+<div class="line"><span class="lineno">  508</span>            <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a9b6bf1547470cb2461782800ed40745c">m_parserParamFlag</a> |= 0x2;</div>
+<div class="line"><span class="lineno">  509</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  510</span>        }</div>
+<div class="line"><span class="lineno">  511</span> </div>
+<div class="line"><span class="lineno">  512</span>        <span class="keywordtype">size_t</span> pos = 0;</div>
+<div class="line"><span class="lineno">  513</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> body_len = <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae26eac0d3781740283387f0e634aecfe">m_body</a>.length();</div>
+<div class="line"><span class="lineno">  514</span> </div>
+<div class="line"><span class="lineno">  515</span>        <span class="keywordflow">while</span> (pos &lt; body_len)</div>
+<div class="line"><span class="lineno">  516</span>        {</div>
+<div class="line"><span class="lineno">  517</span>            <span class="comment">// 查找 &#39;=&#39; 和 &#39;&amp;&#39; 的位置</span></div>
+<div class="line"><span class="lineno">  518</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> key_start = pos;</div>
+<div class="line"><span class="lineno">  519</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> equal_pos = <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae26eac0d3781740283387f0e634aecfe">m_body</a>.find(<span class="charliteral">&#39;=&#39;</span>, key_start);</div>
+<div class="line"><span class="lineno">  520</span>            <span class="keywordflow">if</span> (equal_pos == std::string::npos) { <span class="keywordflow">break</span>; }</div>
+<div class="line"><span class="lineno">  521</span> </div>
+<div class="line"><span class="lineno">  522</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> key_end = equal_pos;</div>
+<div class="line"><span class="lineno">  523</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> value_start = equal_pos + 1;</div>
+<div class="line"><span class="lineno">  524</span>            <span class="keywordtype">size_t</span> amp_pos = <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae26eac0d3781740283387f0e634aecfe">m_body</a>.find(<span class="charliteral">&#39;&amp;&#39;</span>, value_start);</div>
+<div class="line"><span class="lineno">  525</span> </div>
+<div class="line"><span class="lineno">  526</span>            <span class="comment">// 如果没有找到 &#39;&amp;&#39;，将值取到 body 末尾</span></div>
+<div class="line"><span class="lineno">  527</span>            <span class="keywordflow">if</span> (amp_pos == std::string::npos)</div>
+<div class="line"><span class="lineno">  528</span>            {</div>
+<div class="line"><span class="lineno">  529</span>                amp_pos = body_len;</div>
+<div class="line"><span class="lineno">  530</span>            }</div>
+<div class="line"><span class="lineno">  531</span> </div>
+<div class="line"><span class="lineno">  532</span>            <span class="comment">// 提取并解码 key 和 value</span></div>
+<div class="line"><span class="lineno">  533</span>            std::string key = <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae26eac0d3781740283387f0e634aecfe">m_body</a>.substr(key_start, key_end - key_start);</div>
+<div class="line"><span class="lineno">  534</span>            std::string value = <a class="code hl_function" href="namespaceGyanis_1_1base.html#a4b62a6e107d818c869c1620744b6d099">base::UrlDecode</a>(<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae26eac0d3781740283387f0e634aecfe">m_body</a>.substr(value_start, amp_pos - value_start));</div>
+<div class="line"><span class="lineno">  535</span>            <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af6c53a09e7fd4b93090cd74868adffae">m_params</a>.insert(std::make_pair(key, value));</div>
+<div class="line"><span class="lineno">  536</span> </div>
+<div class="line"><span class="lineno">  537</span>            <span class="comment">// 更新 pos</span></div>
+<div class="line"><span class="lineno">  538</span>            pos = amp_pos + 1; <span class="comment">// 跳过 &#39;&amp;&#39; 或直到 body 末尾</span></div>
+<div class="line"><span class="lineno">  539</span>        }</div>
+<div class="line"><span class="lineno">  540</span> </div>
+<div class="line"><span class="lineno">  541</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a9b6bf1547470cb2461782800ed40745c">m_parserParamFlag</a> |= 0x2; <span class="comment">// 设置标志，表示已解析 body 参数</span></div>
+<div class="line"><span class="lineno">  542</span>    }</div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_a4b62a6e107d818c869c1620744b6d099"><div class="ttname"><a href="namespaceGyanis_1_1base.html#a4b62a6e107d818c869c1620744b6d099">Gyanis::base::UrlDecode</a></div><div class="ttdeci">std::string UrlDecode(const std::string &amp;str, bool space_as_plus=true)</div><div class="ttdoc">URL解码</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00098">Utils.cpp:98</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_ad5085ba8b16c1eeac4be17b76de14403_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_ad5085ba8b16c1eeac4be17b76de14403_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_ad5085ba8b16c1eeac4be17b76de14403_icgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_ad5085ba8b16c1eeac4be17b76de14403_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a036bf182ca5a9f3b19a6b6e7242b5d7a" name="a036bf182ca5a9f3b19a6b6e7242b5d7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a036bf182ca5a9f3b19a6b6e7242b5d7a">&#9670;&#160;</a></span>initCookies()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::initCookies </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化 cookies </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00545">545</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  546</span>    {</div>
+<div class="line"><span class="lineno">  547</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a9b6bf1547470cb2461782800ed40745c">m_parserParamFlag</a> &amp; 0x4)</div>
+<div class="line"><span class="lineno">  548</span>        {</div>
+<div class="line"><span class="lineno">  549</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  550</span>        }</div>
+<div class="line"><span class="lineno">  551</span> </div>
+<div class="line"><span class="lineno">  552</span>        std::string cookie = <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a09e8a9a8d7283ee9c67efcd6806591b8">getHeader</a>(<span class="stringliteral">&quot;Cookie&quot;</span>);</div>
+<div class="line"><span class="lineno">  553</span>        <span class="keywordflow">if</span> (cookie.empty())</div>
+<div class="line"><span class="lineno">  554</span>        {</div>
+<div class="line"><span class="lineno">  555</span>            <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a9b6bf1547470cb2461782800ed40745c">m_parserParamFlag</a> |= 0x4;</div>
+<div class="line"><span class="lineno">  556</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  557</span>        }</div>
+<div class="line"><span class="lineno">  558</span> </div>
+<div class="line"><span class="lineno">  559</span>        <span class="keywordtype">size_t</span> pos = 0;</div>
+<div class="line"><span class="lineno">  560</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> cookie_len = cookie.length();</div>
+<div class="line"><span class="lineno">  561</span> </div>
+<div class="line"><span class="lineno">  562</span>        <span class="keywordflow">while</span> (pos &lt; cookie_len)</div>
+<div class="line"><span class="lineno">  563</span>        {</div>
+<div class="line"><span class="lineno">  564</span>            <span class="comment">// 查找 &#39;=&#39; 和 &#39;;&#39; 的位置</span></div>
+<div class="line"><span class="lineno">  565</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> key_start = pos;</div>
+<div class="line"><span class="lineno">  566</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> equal_pos = cookie.find(<span class="charliteral">&#39;=&#39;</span>, key_start);</div>
+<div class="line"><span class="lineno">  567</span>            <span class="keywordflow">if</span> (equal_pos == std::string::npos) { <span class="keywordflow">break</span>; }</div>
+<div class="line"><span class="lineno">  568</span> </div>
+<div class="line"><span class="lineno">  569</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> key_end = equal_pos;</div>
+<div class="line"><span class="lineno">  570</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> value_start = equal_pos + 1;</div>
+<div class="line"><span class="lineno">  571</span>            <span class="keywordtype">size_t</span> semicolon_pos = cookie.find(<span class="charliteral">&#39;;&#39;</span>, value_start);</div>
+<div class="line"><span class="lineno">  572</span> </div>
+<div class="line"><span class="lineno">  573</span>            <span class="comment">// 如果没有找到 &#39;;&#39;，则将值取到 cookie 字符串末尾</span></div>
+<div class="line"><span class="lineno">  574</span>            <span class="keywordflow">if</span> (semicolon_pos == std::string::npos)</div>
+<div class="line"><span class="lineno">  575</span>            {</div>
+<div class="line"><span class="lineno">  576</span>                semicolon_pos = cookie_len;</div>
+<div class="line"><span class="lineno">  577</span>            }</div>
+<div class="line"><span class="lineno">  578</span> </div>
+<div class="line"><span class="lineno">  579</span>            <span class="comment">// 提取并解码 key 和 value</span></div>
+<div class="line"><span class="lineno">  580</span>            std::string key = <a class="code hl_function" href="namespaceGyanis_1_1base.html#a27270bc5e2442eb9e6675fc74914379b">base::Trim</a>(cookie.substr(key_start, key_end - key_start));</div>
+<div class="line"><span class="lineno">  581</span>            std::string value = <a class="code hl_function" href="namespaceGyanis_1_1base.html#a4b62a6e107d818c869c1620744b6d099">base::UrlDecode</a>(cookie.substr(value_start, semicolon_pos - value_start));</div>
+<div class="line"><span class="lineno">  582</span>            <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aaacec07956b166807720e6c0309049d9">m_cookies</a>.insert(std::make_pair(key, value));</div>
+<div class="line"><span class="lineno">  583</span> </div>
+<div class="line"><span class="lineno">  584</span>            <span class="comment">// 更新 pos</span></div>
+<div class="line"><span class="lineno">  585</span>            pos = semicolon_pos + 1; <span class="comment">// 跳过 &#39;;&#39; 或直到 cookie 字符串的末尾</span></div>
+<div class="line"><span class="lineno">  586</span>        }</div>
+<div class="line"><span class="lineno">  587</span> </div>
+<div class="line"><span class="lineno">  588</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a9b6bf1547470cb2461782800ed40745c">m_parserParamFlag</a> |= 0x4; <span class="comment">// 设置标志，表示已解析 cookies</span></div>
+<div class="line"><span class="lineno">  589</span>    }</div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_a27270bc5e2442eb9e6675fc74914379b"><div class="ttname"><a href="namespaceGyanis_1_1base.html#a27270bc5e2442eb9e6675fc74914379b">Gyanis::base::Trim</a></div><div class="ttdeci">std::string Trim(const std::string &amp;str, const std::string &amp;delimit=&quot; \t\r\n&quot;)</div><div class="ttdoc">字符串修剪</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00128">Utils.cpp:128</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_a036bf182ca5a9f3b19a6b6e7242b5d7a_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_a036bf182ca5a9f3b19a6b6e7242b5d7a_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_a036bf182ca5a9f3b19a6b6e7242b5d7a_icgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_a036bf182ca5a9f3b19a6b6e7242b5d7a_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a645647fd1f099ce7e12180e482cc2e4a" name="a645647fd1f099ce7e12180e482cc2e4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a645647fd1f099ce7e12180e482cc2e4a">&#9670;&#160;</a></span>initParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::initParam </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化 HTTP 请求参数 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00452">452</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  453</span>    {</div>
+<div class="line"><span class="lineno">  454</span>        <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aa67fcd0acf9572604f4372c107cee632">initQueryParam</a>();</div>
+<div class="line"><span class="lineno">  455</span>        <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ad5085ba8b16c1eeac4be17b76de14403">initBodyParam</a>();</div>
+<div class="line"><span class="lineno">  456</span>        <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a036bf182ca5a9f3b19a6b6e7242b5d7a">initCookies</a>();</div>
+<div class="line"><span class="lineno">  457</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_a645647fd1f099ce7e12180e482cc2e4a_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_a645647fd1f099ce7e12180e482cc2e4a_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aa67fcd0acf9572604f4372c107cee632" name="aa67fcd0acf9572604f4372c107cee632"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa67fcd0acf9572604f4372c107cee632">&#9670;&#160;</a></span>initQueryParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::initQueryParam </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化查询参数 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00459">459</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  460</span>    {</div>
+<div class="line"><span class="lineno">  461</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a9b6bf1547470cb2461782800ed40745c">m_parserParamFlag</a> &amp; 0x1)</div>
+<div class="line"><span class="lineno">  462</span>        {</div>
+<div class="line"><span class="lineno">  463</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  464</span>        }</div>
+<div class="line"><span class="lineno">  465</span> </div>
+<div class="line"><span class="lineno">  466</span>        <span class="keywordtype">size_t</span> pos = 0;</div>
+<div class="line"><span class="lineno">  467</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> query_len = <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a95859d5cf45a3fbcb73ad7cfb72e7f85">m_query</a>.length();</div>
+<div class="line"><span class="lineno">  468</span> </div>
+<div class="line"><span class="lineno">  469</span>        <span class="keywordflow">while</span> (pos &lt; query_len)</div>
+<div class="line"><span class="lineno">  470</span>        {</div>
+<div class="line"><span class="lineno">  471</span>            <span class="comment">// 查找键值对的 &#39;=&#39; 和 &#39;&amp;&#39; 分隔符</span></div>
+<div class="line"><span class="lineno">  472</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> key_start = pos;</div>
+<div class="line"><span class="lineno">  473</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> equal_pos = <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a95859d5cf45a3fbcb73ad7cfb72e7f85">m_query</a>.find(<span class="charliteral">&#39;=&#39;</span>, key_start);</div>
+<div class="line"><span class="lineno">  474</span>            <span class="keywordflow">if</span> (equal_pos == std::string::npos) { <span class="keywordflow">break</span>; }</div>
+<div class="line"><span class="lineno">  475</span> </div>
+<div class="line"><span class="lineno">  476</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> key_end = equal_pos;</div>
+<div class="line"><span class="lineno">  477</span>            <span class="keyword">const</span> <span class="keywordtype">size_t</span> value_start = equal_pos + 1;</div>
+<div class="line"><span class="lineno">  478</span>            <span class="keywordtype">size_t</span> amp_pos = <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a95859d5cf45a3fbcb73ad7cfb72e7f85">m_query</a>.find(<span class="charliteral">&#39;&amp;&#39;</span>, value_start);</div>
+<div class="line"><span class="lineno">  479</span> </div>
+<div class="line"><span class="lineno">  480</span>            <span class="keywordflow">if</span> (amp_pos == std::string::npos)</div>
+<div class="line"><span class="lineno">  481</span>            {</div>
+<div class="line"><span class="lineno">  482</span>                amp_pos = query_len;</div>
+<div class="line"><span class="lineno">  483</span>            }</div>
+<div class="line"><span class="lineno">  484</span> </div>
+<div class="line"><span class="lineno">  485</span>            std::string key = <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a95859d5cf45a3fbcb73ad7cfb72e7f85">m_query</a>.substr(key_start, key_end - key_start);</div>
+<div class="line"><span class="lineno">  486</span>            std::string value = <a class="code hl_function" href="namespaceGyanis_1_1base.html#a4b62a6e107d818c869c1620744b6d099">base::UrlDecode</a>(<a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a95859d5cf45a3fbcb73ad7cfb72e7f85">m_query</a>.substr(value_start, amp_pos - value_start));</div>
+<div class="line"><span class="lineno">  487</span>            <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af6c53a09e7fd4b93090cd74868adffae">m_params</a>.insert(std::make_pair(key, value));</div>
+<div class="line"><span class="lineno">  488</span> </div>
+<div class="line"><span class="lineno">  489</span>            <span class="comment">// 更新 pos</span></div>
+<div class="line"><span class="lineno">  490</span>            pos = amp_pos + 1; <span class="comment">// 跳过 &#39;&amp;&#39; 或到查询字符串结尾</span></div>
+<div class="line"><span class="lineno">  491</span>        }</div>
+<div class="line"><span class="lineno">  492</span> </div>
+<div class="line"><span class="lineno">  493</span>        <span class="comment">// 设置标志，表示已解析参数</span></div>
+<div class="line"><span class="lineno">  494</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a9b6bf1547470cb2461782800ed40745c">m_parserParamFlag</a> |= 0x1;</div>
+<div class="line"><span class="lineno">  495</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_aa67fcd0acf9572604f4372c107cee632_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_aa67fcd0acf9572604f4372c107cee632_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_aa67fcd0acf9572604f4372c107cee632_icgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_aa67fcd0acf9572604f4372c107cee632_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a16b25559ae0a4a3cb6fb3047c57aff2c" name="a16b25559ae0a4a3cb6fb3047c57aff2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16b25559ae0a4a3cb6fb3047c57aff2c">&#9670;&#160;</a></span>isClose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::net::http::HttpRequest::isClose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取连接关闭标志 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00260">260</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  261</span>    {</div>
+<div class="line"><span class="lineno">  262</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a5297a41486f578cb6d2f26ca6c74a2ec">m_close</a>;</div>
+<div class="line"><span class="lineno">  263</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_a16b25559ae0a4a3cb6fb3047c57aff2c_icgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_a16b25559ae0a4a3cb6fb3047c57aff2c_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ac7c02aa539458d95dc81ce85e9db5615" name="ac7c02aa539458d95dc81ce85e9db5615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7c02aa539458d95dc81ce85e9db5615">&#9670;&#160;</a></span>isWebSocket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::net::http::HttpRequest::isWebSocket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取 WebSocket 是否开启 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00270">270</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  271</span>    {</div>
+<div class="line"><span class="lineno">  272</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae1794df2b074fadb4c320f415dd94393">m_websocket</a>;</div>
+<div class="line"><span class="lineno">  273</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a86759e1b4589b48380a49a54d3df1e91" name="a86759e1b4589b48380a49a54d3df1e91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86759e1b4589b48380a49a54d3df1e91">&#9670;&#160;</a></span>setBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::setBody </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>body</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置请求体内容 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00255">255</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  256</span>    {</div>
+<div class="line"><span class="lineno">  257</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae26eac0d3781740283387f0e634aecfe">m_body</a> = body;</div>
+<div class="line"><span class="lineno">  258</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a479048e3aefff1179a27996bce7ddb71" name="a479048e3aefff1179a27996bce7ddb71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a479048e3aefff1179a27996bce7ddb71">&#9670;&#160;</a></span>setClose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::setClose </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>close</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置连接关闭标志 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00265">265</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  266</span>    {</div>
+<div class="line"><span class="lineno">  267</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a5297a41486f578cb6d2f26ca6c74a2ec">m_close</a> = <a class="code hl_function" href="Hook_8cpp.html#aafbcde67669a1b96577e735ddebd8634">close</a>;</div>
+<div class="line"><span class="lineno">  268</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_a479048e3aefff1179a27996bce7ddb71_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_a479048e3aefff1179a27996bce7ddb71_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ad60c192367b84e3784a1218f0fd89f82" name="ad60c192367b84e3784a1218f0fd89f82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad60c192367b84e3784a1218f0fd89f82">&#9670;&#160;</a></span>setCookie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::setCookie </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置请求 cookies 的值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>cookie 的键名 </td></tr>
+    <tr><td class="paramname">value</td><td>cookie 的值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00326">326</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  327</span>    {</div>
+<div class="line"><span class="lineno">  328</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aaacec07956b166807720e6c0309049d9">m_cookies</a>[key] = value;</div>
+<div class="line"><span class="lineno">  329</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a84e1226055d4a700c0f28a34eb65385f" name="a84e1226055d4a700c0f28a34eb65385f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84e1226055d4a700c0f28a34eb65385f">&#9670;&#160;</a></span>setCookies()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::setCookies </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">MapType</a> &amp;&#160;</td>
+          <td class="paramname"><em>cookies</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置请求 cookies </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00290">290</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  291</span>    {</div>
+<div class="line"><span class="lineno">  292</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#aaacec07956b166807720e6c0309049d9">m_cookies</a> = cookies;</div>
+<div class="line"><span class="lineno">  293</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9fd802c13b5c33e1175a38d945139742" name="a9fd802c13b5c33e1175a38d945139742"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fd802c13b5c33e1175a38d945139742">&#9670;&#160;</a></span>setFragment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::setFragment </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fragment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置 URL 片段 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00250">250</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  251</span>    {</div>
+<div class="line"><span class="lineno">  252</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ac050faafa56f9634ec7f30b16a9acb94">m_fragment</a> = fragment;</div>
+<div class="line"><span class="lineno">  253</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad7c721ced5e52b681a1041df1a3a01cb" name="ad7c721ced5e52b681a1041df1a3a01cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7c721ced5e52b681a1041df1a3a01cb">&#9670;&#160;</a></span>setHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::setHeader </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置请求头部字段的值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>请求头字段的键名 </td></tr>
+    <tr><td class="paramname">value</td><td>请求头字段的值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00316">316</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  317</span>    {</div>
+<div class="line"><span class="lineno">  318</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ab678b63ce0188a395f8989dcab2e020f">m_headers</a>[key] = value;</div>
+<div class="line"><span class="lineno">  319</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1d7826d48d6d561eaa69172a21ee90a5" name="a1d7826d48d6d561eaa69172a21ee90a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d7826d48d6d561eaa69172a21ee90a5">&#9670;&#160;</a></span>setHeaders()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::setHeaders </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">MapType</a> &amp;&#160;</td>
+          <td class="paramname"><em>headers</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置请求头部 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00280">280</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  281</span>    {</div>
+<div class="line"><span class="lineno">  282</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ab678b63ce0188a395f8989dcab2e020f">m_headers</a> = headers;</div>
+<div class="line"><span class="lineno">  283</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adfec2ce6e492b36c1177b450a4addd23" name="adfec2ce6e492b36c1177b450a4addd23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfec2ce6e492b36c1177b450a4addd23">&#9670;&#160;</a></span>setMethod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::setMethod </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57">HttpMethod</a> &amp;&#160;</td>
+          <td class="paramname"><em>method</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置 HTTP 请求方法 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00230">230</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  231</span>    {</div>
+<div class="line"><span class="lineno">  232</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af31f576fad53f4771619a72ed75fc2a8">m_method</a> = method;</div>
+<div class="line"><span class="lineno">  233</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af130eea40308f31e09eafb78a8704587" name="af130eea40308f31e09eafb78a8704587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af130eea40308f31e09eafb78a8704587">&#9670;&#160;</a></span>setParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::setParam </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置请求参数的值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>查询参数的键名 </td></tr>
+    <tr><td class="paramname">value</td><td>查询参数的值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00321">321</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  322</span>    {</div>
+<div class="line"><span class="lineno">  323</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af6c53a09e7fd4b93090cd74868adffae">m_params</a>[key] = value;</div>
+<div class="line"><span class="lineno">  324</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6d503f04b0d5ee4be11f8162a79f2740" name="a6d503f04b0d5ee4be11f8162a79f2740"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d503f04b0d5ee4be11f8162a79f2740">&#9670;&#160;</a></span>setParams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::setParams </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">MapType</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置请求参数 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00285">285</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  286</span>    {</div>
+<div class="line"><span class="lineno">  287</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#af6c53a09e7fd4b93090cd74868adffae">m_params</a> = params;</div>
+<div class="line"><span class="lineno">  288</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a16724e8f26efd59239d65023233881d5" name="a16724e8f26efd59239d65023233881d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16724e8f26efd59239d65023233881d5">&#9670;&#160;</a></span>setPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::setPath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置请求路径 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00240">240</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  241</span>    {</div>
+<div class="line"><span class="lineno">  242</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a255a4705b0d715c7c46c91e8c2e110e7">m_path</a> = path;</div>
+<div class="line"><span class="lineno">  243</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2306e6d42b87fb8846a880a6c5adbc0e" name="a2306e6d42b87fb8846a880a6c5adbc0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2306e6d42b87fb8846a880a6c5adbc0e">&#9670;&#160;</a></span>setQuery()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::setQuery </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>query</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置查询字符串 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00245">245</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  246</span>    {</div>
+<div class="line"><span class="lineno">  247</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a95859d5cf45a3fbcb73ad7cfb72e7f85">m_query</a> = query;</div>
+<div class="line"><span class="lineno">  248</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a76a5d14a5226c586621d93d617a75a47" name="a76a5d14a5226c586621d93d617a75a47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76a5d14a5226c586621d93d617a75a47">&#9670;&#160;</a></span>setVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::setVersion </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>version</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置 HTTP 协议版本 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00235">235</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  236</span>    {</div>
+<div class="line"><span class="lineno">  237</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a462a65069e31d7c90397af6b29fe9d2b">m_version</a> = version;</div>
+<div class="line"><span class="lineno">  238</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5a00aabc8c261a16c29c6c52630fafbd" name="a5a00aabc8c261a16c29c6c52630fafbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a00aabc8c261a16c29c6c52630fafbd">&#9670;&#160;</a></span>setWebSocket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::HttpRequest::setWebSocket </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>websocket</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置 WebSocket 标志 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00275">275</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  276</span>    {</div>
+<div class="line"><span class="lineno">  277</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae1794df2b074fadb4c320f415dd94393">m_websocket</a> = websocket;</div>
+<div class="line"><span class="lineno">  278</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af24729785cb9c86751a5d282b089ead5" name="af24729785cb9c86751a5d282b089ead5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af24729785cb9c86751a5d282b089ead5">&#9670;&#160;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::net::http::HttpRequest::toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将 HTTP 请求转换为字符串 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8cpp_source.html">Http.cpp</a> 第 <a class="el" href="Http_8cpp_source.html#l00429">429</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  430</span>    {</div>
+<div class="line"><span class="lineno">  431</span>        std::stringstream ss;</div>
+<div class="line"><span class="lineno">  432</span>        <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a7164701b411f4941dbc0e69b5b1bbd6b">dump</a>(ss);</div>
+<div class="line"><span class="lineno">  433</span>        <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><span class="lineno">  434</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpRequest_html_a7164701b411f4941dbc0e69b5b1bbd6b"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a7164701b411f4941dbc0e69b5b1bbd6b">Gyanis::net::http::HttpRequest::dump</a></div><div class="ttdeci">std::ostream &amp; dump(std::ostream &amp;os) const</div><div class="ttdoc">将 HTTP 请求的详细信息输出到流中</div><div class="ttdef"><b>Definition</b> <a href="Http_8cpp_source.html#l00391">Http.cpp:391</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1HttpRequest_af24729785cb9c86751a5d282b089ead5_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1HttpRequest_af24729785cb9c86751a5d282b089ead5_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ae26eac0d3781740283387f0e634aecfe" name="ae26eac0d3781740283387f0e634aecfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae26eac0d3781740283387f0e634aecfe">&#9670;&#160;</a></span>m_body</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::net::http::HttpRequest::m_body</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>请求体内容，通常用于 POST 或 PUT 请求 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00462">462</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5297a41486f578cb6d2f26ca6c74a2ec" name="a5297a41486f578cb6d2f26ca6c74a2ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5297a41486f578cb6d2f26ca6c74a2ec">&#9670;&#160;</a></span>m_close</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::net::http::HttpRequest::m_close</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否在响应后关闭连接 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00456">456</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aaacec07956b166807720e6c0309049d9" name="aaacec07956b166807720e6c0309049d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaacec07956b166807720e6c0309049d9">&#9670;&#160;</a></span>m_cookies</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">MapType</a> Gyanis::net::http::HttpRequest::m_cookies</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>请求 cookies，包含所有通过 Cookie 传递的数据 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00465">465</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac050faafa56f9634ec7f30b16a9acb94" name="ac050faafa56f9634ec7f30b16a9acb94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac050faafa56f9634ec7f30b16a9acb94">&#9670;&#160;</a></span>m_fragment</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::net::http::HttpRequest::m_fragment</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>URL 片段部分，例如 <code>#section1</code> </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00461">461</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ab678b63ce0188a395f8989dcab2e020f" name="ab678b63ce0188a395f8989dcab2e020f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab678b63ce0188a395f8989dcab2e020f">&#9670;&#160;</a></span>m_headers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">MapType</a> Gyanis::net::http::HttpRequest::m_headers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>请求头部，包含 HTTP 请求的头部信息 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00463">463</a> 行定义.</p>
+
+</div>
+</div>
+<a id="af31f576fad53f4771619a72ed75fc2a8" name="af31f576fad53f4771619a72ed75fc2a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af31f576fad53f4771619a72ed75fc2a8">&#9670;&#160;</a></span>m_method</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57">HttpMethod</a> Gyanis::net::http::HttpRequest::m_method</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTTP 请求方法，例如 GET、POST 等 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00454">454</a> 行定义.</p>
+
+</div>
+</div>
+<a id="af6c53a09e7fd4b93090cd74868adffae" name="af6c53a09e7fd4b93090cd74868adffae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c53a09e7fd4b93090cd74868adffae">&#9670;&#160;</a></span>m_params</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#a25069df603e39a22b82cdda2c27e03d4">MapType</a> Gyanis::net::http::HttpRequest::m_params</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>请求参数，通常由 URL 查询字符串或请求体中的键值对组成 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00464">464</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a9b6bf1547470cb2461782800ed40745c" name="a9b6bf1547470cb2461782800ed40745c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b6bf1547470cb2461782800ed40745c">&#9670;&#160;</a></span>m_parserParamFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Gyanis::net::http::HttpRequest::m_parserParamFlag</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>标记 HTTP 请求是否解析了查询参数、请求体参数和 cookies </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00458">458</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a255a4705b0d715c7c46c91e8c2e110e7" name="a255a4705b0d715c7c46c91e8c2e110e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a255a4705b0d715c7c46c91e8c2e110e7">&#9670;&#160;</a></span>m_path</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::net::http::HttpRequest::m_path</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>请求的路径部分，例如 <code>/index.html</code> </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00459">459</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a95859d5cf45a3fbcb73ad7cfb72e7f85" name="a95859d5cf45a3fbcb73ad7cfb72e7f85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95859d5cf45a3fbcb73ad7cfb72e7f85">&#9670;&#160;</a></span>m_query</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::net::http::HttpRequest::m_query</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>URL 查询字符串部分，例如 <code>?key1=value1&amp;key2=value2</code> </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00460">460</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a462a65069e31d7c90397af6b29fe9d2b" name="a462a65069e31d7c90397af6b29fe9d2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a462a65069e31d7c90397af6b29fe9d2b">&#9670;&#160;</a></span>m_version</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Gyanis::net::http::HttpRequest::m_version</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HTTP 协议版本，通常为 0x11 表示 HTTP/1.1 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00455">455</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ae1794df2b074fadb4c320f415dd94393" name="ae1794df2b074fadb4c320f415dd94393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1794df2b074fadb4c320f415dd94393">&#9670;&#160;</a></span>m_websocket</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::net::http::HttpRequest::m_websocket</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否启用 WebSocket 协议 </p>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 第 <a class="el" href="Http_8h_source.html#l00457">457</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/net/http/<a class="el" href="Http_8h_source.html">Http.h</a></li>
+<li>src/net/http/<a class="el" href="Http_8cpp_source.html">Http.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGyanis.html">Gyanis</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1net.html">net</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1net_1_1http.html">http</a></li><li class="navelem"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html">HttpRequest</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

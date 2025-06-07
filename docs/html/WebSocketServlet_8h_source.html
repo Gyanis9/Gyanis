@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: include/net/http/WebSocketServlet.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('WebSocketServlet_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">WebSocketServlet.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="WebSocketServlet_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifndef WEBSOCKETSERVLET_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define WEBSOCKETSERVLET_H</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="Servlet_8h.html">net/http/servlets/Servlet.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="WebSocketSession_8h.html">net/http/WebSocketSession.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceGyanis_1_1net_1_1http.html">Gyanis::net::http</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1WSServlet.html">   19</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyanis_1_1net_1_1http_1_1WSServlet.html">WSServlet</a> : <span class="keyword">public</span> <a class="code hl_class" href="classGyanis_1_1net_1_1http_1_1Servlet.html">Servlet</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1WSServlet.html#a61c0098c36eba4537b91dc6094b7dcf7">   25</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1WSServlet.html#a61c0098c36eba4537b91dc6094b7dcf7">WSServlet</a>(<span class="keyword">const</span> std::string&amp; name)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            : <a class="code hl_class" href="classGyanis_1_1net_1_1http_1_1Servlet.html">Servlet</a>(name)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        }</div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1WSServlet.html#a74c290ac7ce91b287464210edd511d81">   33</a></span>        <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1WSServlet.html#a74c290ac7ce91b287464210edd511d81">~WSServlet</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1WSServlet.html#a83cd1dcd166dc31c9631e46cec9b8a8a">   42</a></span>        int32_t <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1WSServlet.html#a83cd1dcd166dc31c9631e46cec9b8a8a">handle</a>(<span class="keyword">const</span> std::shared_ptr&lt;HttpRequest&gt;&amp; request, <span class="keyword">const</span> std::shared_ptr&lt;HttpResponse&gt;&amp; response,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                       <span class="keyword">const</span> std::shared_ptr&lt;HttpSession&gt;&amp; session)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">virtual</span> int32_t</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1WSServlet.html#af06ac8455f84729d00a9e728daa168ce">   55</a></span>        <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1WSServlet.html#af06ac8455f84729d00a9e728daa168ce">onConnect</a>(<span class="keyword">const</span> std::shared_ptr&lt;HttpRequest&gt;&amp; header, <span class="keyword">const</span> std::shared_ptr&lt;WSSession&gt;&amp; session) = 0;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">virtual</span> int32_t</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1WSServlet.html#ae558a42056b0605f2fe09746194f9fb3">   64</a></span>        <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1WSServlet.html#ae558a42056b0605f2fe09746194f9fb3">onClose</a>(<span class="keyword">const</span> std::shared_ptr&lt;HttpRequest&gt;&amp; header, <span class="keyword">const</span> std::shared_ptr&lt;WSSession&gt;&amp; session) = 0;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1WSServlet.html#adec4559aa92a19cb2248e6695a1c8fe5">   73</a></span>        <span class="keyword">virtual</span> int32_t <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1WSServlet.html#adec4559aa92a19cb2248e6695a1c8fe5">handle</a>(<span class="keyword">const</span> std::shared_ptr&lt;HttpRequest&gt;&amp; header, <span class="keyword">const</span> std::shared_ptr&lt;WSFrameMessage&gt;&amp; msg,</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                               <span class="keyword">const</span> std::shared_ptr&lt;WSSession&gt;&amp; session) = 0;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    };</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="};">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html">   82</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html">FunctionWSServlet</a> : <span class="keyword">public</span> <a class="code hl_class" href="classGyanis_1_1net_1_1http_1_1WSServlet.html">WSServlet</a></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a77d940f119ed3376960edc32b566a8af">   85</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a77d940f119ed3376960edc32b566a8af">on_connect_cb</a> = std::function&lt;int32_t(<span class="keyword">const</span> std::shared_ptr&lt;HttpRequest&gt;&amp; header,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                                                    <span class="keyword">const</span> std::shared_ptr&lt;WSSession&gt;&amp; session)&gt;;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a6d1d9e4d039ba3d041d19a4e8f4789cf">   88</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a6d1d9e4d039ba3d041d19a4e8f4789cf">on_close_cb</a> = std::function&lt;int32_t(<span class="keyword">const</span> std::shared_ptr&lt;HttpRequest&gt;&amp; header,</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                                                  <span class="keyword">const</span> std::shared_ptr&lt;WSSession&gt;&amp; session)&gt;;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a3056df900c9a5eae37fed5de8ccc90aa">   91</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a3056df900c9a5eae37fed5de8ccc90aa">callback</a> = std::function&lt;int32_t(<span class="keyword">const</span> std::shared_ptr&lt;HttpRequest&gt;&amp; header,</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                                               <span class="keyword">const</span> std::shared_ptr&lt;WSFrameMessage&gt;&amp; msg,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                                               <span class="keyword">const</span> std::shared_ptr&lt;WSSession&gt;&amp; session)&gt;;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keyword">explicit</span> <a class="code hl_class" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html">FunctionWSServlet</a>(<a class="code hl_typedef" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a3056df900c9a5eae37fed5de8ccc90aa">callback</a> cb, <a class="code hl_typedef" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a77d940f119ed3376960edc32b566a8af">on_connect_cb</a> connect_cb = <span class="keyword">nullptr</span>, <a class="code hl_typedef" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a6d1d9e4d039ba3d041d19a4e8f4789cf">on_close_cb</a> close_cb = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        int32_t</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a5b3b56f8f300cfa75ddf05e9c321433c">onConnect</a>(<span class="keyword">const</span> std::shared_ptr&lt;HttpRequest&gt;&amp; header, <span class="keyword">const</span> std::shared_ptr&lt;WSSession&gt;&amp; session) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        int32_t <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a9aac343a49f52cd985ebc1782ec96f8c">onClose</a>(<span class="keyword">const</span> std::shared_ptr&lt;HttpRequest&gt;&amp; header, <span class="keyword">const</span> std::shared_ptr&lt;WSSession&gt;&amp; session) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        int32_t <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#acda9fc4ef57ef906066a40b23dec3328">handle</a>(<span class="keyword">const</span> std::shared_ptr&lt;HttpRequest&gt;&amp; header, <span class="keyword">const</span> std::shared_ptr&lt;WSFrameMessage&gt;&amp; msg,</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                       <span class="keyword">const</span> std::shared_ptr&lt;WSSession&gt;&amp; session) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#aeb9918f520f17e9b819eb82dac660e09">  131</a></span>        <a class="code hl_typedef" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a3056df900c9a5eae37fed5de8ccc90aa">callback</a> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#aeb9918f520f17e9b819eb82dac660e09">m_callback</a>; </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a894b1430d834a406516292589b4b9218">  132</a></span>        <a class="code hl_typedef" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a77d940f119ed3376960edc32b566a8af">on_connect_cb</a> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a894b1430d834a406516292589b4b9218">m_onConnect</a>; </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#aa79bcd1d033b5529379916896e0835dc">  133</a></span>        <a class="code hl_typedef" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a6d1d9e4d039ba3d041d19a4e8f4789cf">on_close_cb</a> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#aa79bcd1d033b5529379916896e0835dc">m_onClose</a>; </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    };</div>
+</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="foldopen" id="foldopen00141" data-start="{" data-end="};">
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1WSServletDispatch.html">  141</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyanis_1_1net_1_1http_1_1WSServletDispatch.html">WSServletDispatch</a> : <span class="keyword">public</span> <a class="code hl_class" href="classGyanis_1_1net_1_1http_1_1ServletDispatch.html">ServletDispatch</a></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1WSServletDispatch.html#a3538db9a36e812ac16bb764f62274d88">WSServletDispatch</a>();</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1WSServletDispatch.html#a5fe884b21da6c7b79b4e746e92261a3d">addServletSelf</a>(<span class="keyword">const</span> std::string&amp; uri, <span class="keyword">const</span> <a class="code hl_typedef" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a3056df900c9a5eae37fed5de8ccc90aa">FunctionWSServlet::callback</a>&amp; cb,</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                            <span class="keyword">const</span> <a class="code hl_typedef" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a77d940f119ed3376960edc32b566a8af">FunctionWSServlet::on_connect_cb</a>&amp; connect_cb = <span class="keyword">nullptr</span>,</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                            <span class="keyword">const</span> <a class="code hl_typedef" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a6d1d9e4d039ba3d041d19a4e8f4789cf">FunctionWSServlet::on_close_cb</a>&amp; close_cb = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1WSServletDispatch.html#a550f19b1a6d61adc16ada82b54f5af4c">addGlobServletSelf</a>(<span class="keyword">const</span> std::string&amp; uri, <span class="keyword">const</span> <a class="code hl_typedef" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a3056df900c9a5eae37fed5de8ccc90aa">FunctionWSServlet::callback</a>&amp; cb,</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                                <span class="keyword">const</span> <a class="code hl_typedef" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a77d940f119ed3376960edc32b566a8af">FunctionWSServlet::on_connect_cb</a>&amp; connect_cb = <span class="keyword">nullptr</span>,</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                                <span class="keyword">const</span> <a class="code hl_typedef" href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a6d1d9e4d039ba3d041d19a4e8f4789cf">FunctionWSServlet::on_close_cb</a>&amp; close_cb = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        std::shared_ptr&lt;WSServlet&gt; <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1WSServletDispatch.html#ab76cb1d9d1dcefb3f299c27800a6ff7b">getWSServlet</a>(<span class="keyword">const</span> std::string&amp; uri) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    };</div>
+</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>}</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aServlet_8h_html"><div class="ttname"><a href="Servlet_8h.html">Servlet.h</a></div><div class="ttdoc">Servlet模块封装</div></div>
+<div class="ttc" id="aWebSocketSession_8h_html"><div class="ttname"><a href="WebSocketSession_8h.html">WebSocketSession.h</a></div><div class="ttdoc">WebSocket会话模块封装</div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1FunctionWSServlet_html"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html">Gyanis::net::http::FunctionWSServlet</a></div><div class="ttdoc">WebSocket Servlet 的函数实现类，通过回调函数处理 WebSocket 连接、关闭和消息 该类允许用户自定义处理 WebSocket 连接、关闭以及消息接收的逻辑</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServlet_8h_source.html#l00082">WebSocketServlet.h:83</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1FunctionWSServlet_html_a3056df900c9a5eae37fed5de8ccc90aa"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a3056df900c9a5eae37fed5de8ccc90aa">Gyanis::net::http::FunctionWSServlet::callback</a></div><div class="ttdeci">std::function&lt; int32_t(const std::shared_ptr&lt; HttpRequest &gt; &amp;header, const std::shared_ptr&lt; WSFrameMessage &gt; &amp;msg, const std::shared_ptr&lt; WSSession &gt; &amp;session)&gt; callback</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServlet_8h_source.html#l00091">WebSocketServlet.h:93</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1FunctionWSServlet_html_a5b3b56f8f300cfa75ddf05e9c321433c"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a5b3b56f8f300cfa75ddf05e9c321433c">Gyanis::net::http::FunctionWSServlet::onConnect</a></div><div class="ttdeci">int32_t onConnect(const std::shared_ptr&lt; HttpRequest &gt; &amp;header, const std::shared_ptr&lt; WSSession &gt; &amp;session) override</div><div class="ttdoc">处理 WebSocket 连接请求</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServlet_8cpp_source.html#l00014">WebSocketServlet.cpp:14</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1FunctionWSServlet_html_a6d1d9e4d039ba3d041d19a4e8f4789cf"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a6d1d9e4d039ba3d041d19a4e8f4789cf">Gyanis::net::http::FunctionWSServlet::on_close_cb</a></div><div class="ttdeci">std::function&lt; int32_t(const std::shared_ptr&lt; HttpRequest &gt; &amp;header, const std::shared_ptr&lt; WSSession &gt; &amp;session)&gt; on_close_cb</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServlet_8h_source.html#l00088">WebSocketServlet.h:89</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1FunctionWSServlet_html_a77d940f119ed3376960edc32b566a8af"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a77d940f119ed3376960edc32b566a8af">Gyanis::net::http::FunctionWSServlet::on_connect_cb</a></div><div class="ttdeci">std::function&lt; int32_t(const std::shared_ptr&lt; HttpRequest &gt; &amp;header, const std::shared_ptr&lt; WSSession &gt; &amp;session)&gt; on_connect_cb</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServlet_8h_source.html#l00085">WebSocketServlet.h:86</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1FunctionWSServlet_html_a894b1430d834a406516292589b4b9218"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a894b1430d834a406516292589b4b9218">Gyanis::net::http::FunctionWSServlet::m_onConnect</a></div><div class="ttdeci">on_connect_cb m_onConnect</div><div class="ttdoc">处理 WebSocket 连接的回调函数</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServlet_8h_source.html#l00132">WebSocketServlet.h:132</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1FunctionWSServlet_html_a9aac343a49f52cd985ebc1782ec96f8c"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#a9aac343a49f52cd985ebc1782ec96f8c">Gyanis::net::http::FunctionWSServlet::onClose</a></div><div class="ttdeci">int32_t onClose(const std::shared_ptr&lt; HttpRequest &gt; &amp;header, const std::shared_ptr&lt; WSSession &gt; &amp;session) override</div><div class="ttdoc">处理 WebSocket 关闭请求</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServlet_8cpp_source.html#l00024">WebSocketServlet.cpp:24</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1FunctionWSServlet_html_aa79bcd1d033b5529379916896e0835dc"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#aa79bcd1d033b5529379916896e0835dc">Gyanis::net::http::FunctionWSServlet::m_onClose</a></div><div class="ttdeci">on_close_cb m_onClose</div><div class="ttdoc">处理 WebSocket 关闭的回调函数</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServlet_8h_source.html#l00133">WebSocketServlet.h:133</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1FunctionWSServlet_html_acda9fc4ef57ef906066a40b23dec3328"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#acda9fc4ef57ef906066a40b23dec3328">Gyanis::net::http::FunctionWSServlet::handle</a></div><div class="ttdeci">int32_t handle(const std::shared_ptr&lt; HttpRequest &gt; &amp;header, const std::shared_ptr&lt; WSFrameMessage &gt; &amp;msg, const std::shared_ptr&lt; WSSession &gt; &amp;session) override</div><div class="ttdoc">处理 WebSocket 消息</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServlet_8cpp_source.html#l00034">WebSocketServlet.cpp:34</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1FunctionWSServlet_html_aeb9918f520f17e9b819eb82dac660e09"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html#aeb9918f520f17e9b819eb82dac660e09">Gyanis::net::http::FunctionWSServlet::m_callback</a></div><div class="ttdeci">callback m_callback</div><div class="ttdoc">处理 WebSocket 消息的回调函数</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServlet_8h_source.html#l00131">WebSocketServlet.h:131</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1ServletDispatch_html"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1ServletDispatch.html">Gyanis::net::http::ServletDispatch</a></div><div class="ttdoc">Servlet 调度器</div><div class="ttdef"><b>Definition</b> <a href="Servlet_8h_source.html#l00159">Servlet.h:160</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Servlet_html"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Servlet.html">Gyanis::net::http::Servlet</a></div><div class="ttdoc">Servlet 基类</div><div class="ttdef"><b>Definition</b> <a href="Servlet_8h_source.html#l00021">Servlet.h:22</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1WSServletDispatch_html"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1WSServletDispatch.html">Gyanis::net::http::WSServletDispatch</a></div><div class="ttdoc">WebSocket Servlet 分发器类，用于管理和调度多个 WebSocket Servlet 它允许将请求分发到适当的 FunctionWSServlet 实例</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServlet_8h_source.html#l00141">WebSocketServlet.h:142</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1WSServletDispatch_html_a3538db9a36e812ac16bb764f62274d88"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1WSServletDispatch.html#a3538db9a36e812ac16bb764f62274d88">Gyanis::net::http::WSServletDispatch::WSServletDispatch</a></div><div class="ttdeci">WSServletDispatch()</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServlet_8cpp_source.html#l00044">WebSocketServlet.cpp:44</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1WSServletDispatch_html_a550f19b1a6d61adc16ada82b54f5af4c"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1WSServletDispatch.html#a550f19b1a6d61adc16ada82b54f5af4c">Gyanis::net::http::WSServletDispatch::addGlobServletSelf</a></div><div class="ttdeci">void addGlobServletSelf(const std::string &amp;uri, const FunctionWSServlet::callback &amp;cb, const FunctionWSServlet::on_connect_cb &amp;connect_cb=nullptr, const FunctionWSServlet::on_close_cb &amp;close_cb=nullptr)</div><div class="ttdoc">添加一个通配符 WebSocket Servlet 到分发器</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServlet_8cpp_source.html#l00056">WebSocketServlet.cpp:56</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1WSServletDispatch_html_a5fe884b21da6c7b79b4e746e92261a3d"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1WSServletDispatch.html#a5fe884b21da6c7b79b4e746e92261a3d">Gyanis::net::http::WSServletDispatch::addServletSelf</a></div><div class="ttdeci">void addServletSelf(const std::string &amp;uri, const FunctionWSServlet::callback &amp;cb, const FunctionWSServlet::on_connect_cb &amp;connect_cb=nullptr, const FunctionWSServlet::on_close_cb &amp;close_cb=nullptr)</div><div class="ttdoc">添加一个 WebSocket Servlet 到分发器</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServlet_8cpp_source.html#l00049">WebSocketServlet.cpp:49</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1WSServletDispatch_html_ab76cb1d9d1dcefb3f299c27800a6ff7b"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1WSServletDispatch.html#ab76cb1d9d1dcefb3f299c27800a6ff7b">Gyanis::net::http::WSServletDispatch::getWSServlet</a></div><div class="ttdeci">std::shared_ptr&lt; WSServlet &gt; getWSServlet(const std::string &amp;uri) const</div><div class="ttdoc">根据 URI 获取相应的 WebSocket Servlet</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServlet_8cpp_source.html#l00063">WebSocketServlet.cpp:63</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1WSServlet_html"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1WSServlet.html">Gyanis::net::http::WSServlet</a></div><div class="ttdoc">WebSocket Servlet 基类，用于处理 WebSocket 连接的握手、消息收发和关闭</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServlet_8h_source.html#l00019">WebSocketServlet.h:20</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1WSServlet_html_a61c0098c36eba4537b91dc6094b7dcf7"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1WSServlet.html#a61c0098c36eba4537b91dc6094b7dcf7">Gyanis::net::http::WSServlet::WSServlet</a></div><div class="ttdeci">WSServlet(const std::string &amp;name)</div><div class="ttdoc">构造函数，初始化 WebSocket Servlet</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServlet_8h_source.html#l00025">WebSocketServlet.h:25</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1WSServlet_html_a74c290ac7ce91b287464210edd511d81"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1WSServlet.html#a74c290ac7ce91b287464210edd511d81">Gyanis::net::http::WSServlet::~WSServlet</a></div><div class="ttdeci">~WSServlet() override=default</div><div class="ttdoc">析构函数，销毁 WebSocket Servlet 对象</div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1WSServlet_html_a83cd1dcd166dc31c9631e46cec9b8a8a"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1WSServlet.html#a83cd1dcd166dc31c9631e46cec9b8a8a">Gyanis::net::http::WSServlet::handle</a></div><div class="ttdeci">int32_t handle(const std::shared_ptr&lt; HttpRequest &gt; &amp;request, const std::shared_ptr&lt; HttpResponse &gt; &amp;response, const std::shared_ptr&lt; HttpSession &gt; &amp;session) override</div><div class="ttdoc">处理 WebSocket 请求，通常用于 WebSocket 握手</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServlet_8h_source.html#l00042">WebSocketServlet.h:42</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1WSServlet_html_adec4559aa92a19cb2248e6695a1c8fe5"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1WSServlet.html#adec4559aa92a19cb2248e6695a1c8fe5">Gyanis::net::http::WSServlet::handle</a></div><div class="ttdeci">virtual int32_t handle(const std::shared_ptr&lt; HttpRequest &gt; &amp;header, const std::shared_ptr&lt; WSFrameMessage &gt; &amp;msg, const std::shared_ptr&lt; WSSession &gt; &amp;session)=0</div><div class="ttdoc">处理 WebSocket 消息的回调接口，具体操作由派生类实现</div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1WSServlet_html_ae558a42056b0605f2fe09746194f9fb3"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1WSServlet.html#ae558a42056b0605f2fe09746194f9fb3">Gyanis::net::http::WSServlet::onClose</a></div><div class="ttdeci">virtual int32_t onClose(const std::shared_ptr&lt; HttpRequest &gt; &amp;header, const std::shared_ptr&lt; WSSession &gt; &amp;session)=0</div><div class="ttdoc">WebSocket 关闭时的回调接口，具体操作由派生类实现</div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1WSServlet_html_af06ac8455f84729d00a9e728daa168ce"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1WSServlet.html#af06ac8455f84729d00a9e728daa168ce">Gyanis::net::http::WSServlet::onConnect</a></div><div class="ttdeci">virtual int32_t onConnect(const std::shared_ptr&lt; HttpRequest &gt; &amp;header, const std::shared_ptr&lt; WSSession &gt; &amp;session)=0</div><div class="ttdoc">WebSocket 连接时的回调接口，具体操作由派生类实现</div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html">Gyanis::net::http</a></div><div class="ttdoc">示例 URI：foo://user@baidu.com:8042/over/there?name=ferret::nose 解析后的组成部分： _/ ______________/_________/ ...</div><div class="ttdef"><b>Definition</b> <a href="Http_8h_source.html#l00014">Http.h:15</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_2fa1ed3146d6c2b96c5cfe4341985326.html">net</a></li><li class="navelem"><a class="el" href="dir_7dceb8d0fc1433f0ba9a48a61d388f8d.html">http</a></li><li class="navelem"><a class="el" href="WebSocketServlet_8h.html">WebSocketServlet.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

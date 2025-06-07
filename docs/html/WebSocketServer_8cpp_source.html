@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: src/net/http/WebSocketServer.cpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('WebSocketServer_8cpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">WebSocketServer.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="WebSocketServer_8cpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="WebSocketServer_8h.html">net/http/WebSocketServer.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceGyanis_1_1net_1_1http.html">Gyanis::net::http</a></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">    5</a></span>    <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a> = <a class="code hl_define" href="Log_8h.html#a30907c2011b31fbe54269ddc6052ebe3">LOG_NAME</a>(<span class="stringliteral">&quot;system&quot;</span>);</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1WSServer.html#a41a9e9483677b3f76d40a136a231ca67">    7</a></span>    <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1WSServer.html#a41a9e9483677b3f76d40a136a231ca67">WSServer::WSServer</a>(<a class="code hl_class" href="classGyanis_1_1core_1_1IOManager.html">core::IOManager</a>* worker, <a class="code hl_class" href="classGyanis_1_1core_1_1IOManager.html">core::IOManager</a>* io_worker, <a class="code hl_class" href="classGyanis_1_1core_1_1IOManager.html">core::IOManager</a>* accept_worker) : TcpServer(</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        worker, io_worker, accept_worker)</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1WSServer.html#ab8511d07b9dc5d3d357d6c68279d241a">m_dispatch</a> = std::make_shared&lt;WSServletDispatch&gt;();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a3d5d5901fab2ccf82bc906f86085abff">m_type</a> = <span class="stringliteral">&quot;ws&quot;</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    }</div>
+</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1WSServer.html#a8e1c416706b109714af7c40c5126f7f7">   14</a></span>    std::shared_ptr&lt;WSServletDispatch&gt; <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1WSServer.html#a8e1c416706b109714af7c40c5126f7f7">WSServer::getWSServletDispatch</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1WSServer.html#ab8511d07b9dc5d3d357d6c68279d241a">m_dispatch</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
+</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1WSServer.html#a2a67ea303f06b4f464f385a5c8a0d6e6">   19</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1WSServer.html#a2a67ea303f06b4f464f385a5c8a0d6e6">WSServer::setWSServletDispatch</a>(<span class="keyword">const</span> std::shared_ptr&lt;WSServletDispatch&gt;&amp; value)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1WSServer.html#ab8511d07b9dc5d3d357d6c68279d241a">m_dispatch</a> = value;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    }</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1WSServer.html#a9b4a629d2a5da392a70e598a28aaed08">   24</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1WSServer.html#a9b4a629d2a5da392a70e598a28aaed08">WSServer::handleClient</a>(<span class="keyword">const</span> std::shared_ptr&lt;Socket&gt;&amp; client)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_define" href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            &lt;&lt; <span class="stringliteral">&quot;Handling client connection. &quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            &lt;&lt; <span class="stringliteral">&quot;Client details: &quot;</span> &lt;&lt; client-&gt;toString();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">const</span> <span class="keyword">auto</span> session = std::make_shared&lt;WSSession&gt;(client);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">do</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keyword">const</span> <span class="keyword">auto</span> header = session-&gt;handleShake();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">if</span> (!header)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <a class="code hl_define" href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                    &lt;&lt; <span class="stringliteral">&quot;WSServer::handleClient() failed to handle handshake. &quot;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                    &lt;&lt; <span class="stringliteral">&quot;An error occurred while processing the WebSocket handshake.&quot;</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keyword">const</span> <span class="keyword">auto</span> servlet = <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1WSServer.html#ab8511d07b9dc5d3d357d6c68279d241a">m_dispatch</a>-&gt;getWSServlet(header-&gt;getPath());</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">if</span> (!servlet)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <a class="code hl_define" href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                    &lt;&lt; <span class="stringliteral">&quot;No matching WSServlet found. &quot;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                    &lt;&lt; <span class="stringliteral">&quot;The requested servlet could not be matched to a valid handler.&quot;</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordtype">int</span> result = servlet-&gt;onConnect(header, session);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">if</span> (result)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <a class="code hl_define" href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                    &lt;&lt; <span class="stringliteral">&quot;onConnect() returned. &quot;</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                    &lt;&lt; <span class="stringliteral">&quot;Return value: &quot;</span> &lt;&lt; result;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                <span class="keyword">auto</span> msg = session-&gt;recvMessage();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                <span class="keywordflow">if</span> (!msg)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                result = servlet-&gt;handle(header, msg, session);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                <span class="keywordflow">if</span> (result)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    <a class="code hl_define" href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                        &lt;&lt; <span class="stringliteral">&quot;Handle method returned. &quot;</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                        &lt;&lt; <span class="stringliteral">&quot;Result: &quot;</span> &lt;&lt; result;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            servlet-&gt;onClose(header, session);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">while</span> (<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        session-&gt;close();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
+</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
+<div class="ttc" id="aLog_8h_html_a30907c2011b31fbe54269ddc6052ebe3"><div class="ttname"><a href="Log_8h.html#a30907c2011b31fbe54269ddc6052ebe3">LOG_NAME</a></div><div class="ttdeci">#define LOG_NAME(name)</div><div class="ttdoc">获取指定名称的日志器</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00094">Log.h:94</a></div></div>
+<div class="ttc" id="aLog_8h_html_aa689601a9413bd4f1c41974694746f4e"><div class="ttname"><a href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a></div><div class="ttdeci">#define LOG_DEBUG(logger)</div><div class="ttdoc">输出 debug 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00031">Log.h:31</a></div></div>
+<div class="ttc" id="aWebSocketServer_8h_html"><div class="ttname"><a href="WebSocketServer_8h.html">WebSocketServer.h</a></div><div class="ttdoc">WSServer模块封装</div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1IOManager_html"><div class="ttname"><a href="classGyanis_1_1core_1_1IOManager.html">Gyanis::core::IOManager</a></div><div class="ttdoc">IO事件类型枚举</div><div class="ttdef"><b>Definition</b> <a href="IOManager_8h_source.html#l00016">IOManager.h:17</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1WSServer_html_a2a67ea303f06b4f464f385a5c8a0d6e6"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1WSServer.html#a2a67ea303f06b4f464f385a5c8a0d6e6">Gyanis::net::http::WSServer::setWSServletDispatch</a></div><div class="ttdeci">void setWSServletDispatch(const std::shared_ptr&lt; WSServletDispatch &gt; &amp;value)</div><div class="ttdoc">设置 WebSocket 服务调度器</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServer_8cpp_source.html#l00019">WebSocketServer.cpp:19</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1WSServer_html_a41a9e9483677b3f76d40a136a231ca67"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1WSServer.html#a41a9e9483677b3f76d40a136a231ca67">Gyanis::net::http::WSServer::WSServer</a></div><div class="ttdeci">WSServer(core::IOManager *worker=core::IOManager::GetThis(), core::IOManager *io_worker=core::IOManager::GetThis(), core::IOManager *accept_worker=core::IOManager::GetThis())</div><div class="ttdoc">构造函数，初始化 WebSocket 服务器</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServer_8cpp_source.html#l00007">WebSocketServer.cpp:7</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1WSServer_html_a8e1c416706b109714af7c40c5126f7f7"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1WSServer.html#a8e1c416706b109714af7c40c5126f7f7">Gyanis::net::http::WSServer::getWSServletDispatch</a></div><div class="ttdeci">std::shared_ptr&lt; WSServletDispatch &gt; getWSServletDispatch() const</div><div class="ttdoc">获取 WebSocket 服务调度器</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServer_8cpp_source.html#l00014">WebSocketServer.cpp:14</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1WSServer_html_a9b4a629d2a5da392a70e598a28aaed08"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1WSServer.html#a9b4a629d2a5da392a70e598a28aaed08">Gyanis::net::http::WSServer::handleClient</a></div><div class="ttdeci">void handleClient(const std::shared_ptr&lt; Socket &gt; &amp;client) override</div><div class="ttdoc">处理 WebSocket 客户端连接</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServer_8cpp_source.html#l00024">WebSocketServer.cpp:24</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1WSServer_html_ab8511d07b9dc5d3d357d6c68279d241a"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1WSServer.html#ab8511d07b9dc5d3d357d6c68279d241a">Gyanis::net::http::WSServer::m_dispatch</a></div><div class="ttdeci">std::shared_ptr&lt; WSServletDispatch &gt; m_dispatch</div><div class="ttdoc">WebSocket 服务调度器，用于管理 WebSocket 服务和请求</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServer_8h_source.html#l00050">WebSocketServer.h:50</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1web_1_1TcpServer_html_a3d5d5901fab2ccf82bc906f86085abff"><div class="ttname"><a href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a3d5d5901fab2ccf82bc906f86085abff">Gyanis::net::web::TcpServer::m_type</a></div><div class="ttdeci">std::string m_type</div><div class="ttdoc">服务器类型（默认为 TCP）</div><div class="ttdef"><b>Definition</b> <a href="TcpServer_8h_source.html#l00137">TcpServer.h:137</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html">Gyanis::net::http</a></div><div class="ttdoc">示例 URI：foo://user@baidu.com:8042/over/there?name=ferret::nose 解析后的组成部分： _/ ______________/_________/ ...</div><div class="ttdef"><b>Definition</b> <a href="Http_8h_source.html#l00014">Http.h:15</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html_a9e698df600de971647f36fff7d1b70ab"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">Gyanis::net::http::g_logger</a></div><div class="ttdeci">static auto g_logger</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8cpp_source.html#l00009">HttpConnection.cpp:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c72b25b75abe208498b36a3e44a3726c.html">net</a></li><li class="navelem"><a class="el" href="dir_dd2d28fd72df0d33d2116010ecf4f11d.html">http</a></li><li class="navelem"><a class="el" href="WebSocketServer_8cpp.html">WebSocketServer.cpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

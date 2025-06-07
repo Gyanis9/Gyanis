@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: Gyanis::db::IFoxThread类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGyanis_1_1db_1_1IFoxThread.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classGyanis_1_1db_1_1IFoxThread-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Gyanis::db::IFoxThread类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>线程接口类，用于定义线程管理和任务调度的基本操作  
+ <a href="classGyanis_1_1db_1_1IFoxThread.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="FoxThread_8h_source.html">FoxThread.h</a>&gt;</code></p>
+<div class="dynheader">
+类 Gyanis::db::IFoxThread 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1IFoxThread__inherit__graph.png" border="0" usemap="#aGyanis_1_1db_1_1IFoxThread_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a3f2777395f1d2ba11b4383ac9ea52ce4" id="r_a3f2777395f1d2ba11b4383ac9ea52ce4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a3f2777395f1d2ba11b4383ac9ea52ce4">callback</a> = std::function&lt; void()&gt;</td></tr>
+<tr class="memdesc:a3f2777395f1d2ba11b4383ac9ea52ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义回调类型，表示不带参数且不返回值的函数  <br /></td></tr>
+<tr class="separator:a3f2777395f1d2ba11b4383ac9ea52ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a285bc55cb1e5ed5280903f3f953e1757" id="r_a285bc55cb1e5ed5280903f3f953e1757"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a285bc55cb1e5ed5280903f3f953e1757">~IFoxThread</a> ()=default</td></tr>
+<tr class="memdesc:a285bc55cb1e5ed5280903f3f953e1757"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚拟析构函数  <br /></td></tr>
+<tr class="separator:a285bc55cb1e5ed5280903f3f953e1757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0942dfb5143014c23a35650aaad39f1" id="r_aa0942dfb5143014c23a35650aaad39f1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#aa0942dfb5143014c23a35650aaad39f1">dispatch</a> (const <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a3f2777395f1d2ba11b4383ac9ea52ce4">callback</a> &amp;cb)=0</td></tr>
+<tr class="memdesc:aa0942dfb5143014c23a35650aaad39f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">派发一个回调任务到线程  <br /></td></tr>
+<tr class="separator:aa0942dfb5143014c23a35650aaad39f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a059467fa1f0470a7ac583e656d30fa" id="r_a0a059467fa1f0470a7ac583e656d30fa"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a0a059467fa1f0470a7ac583e656d30fa">dispatch</a> (uint32_t id, const <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a3f2777395f1d2ba11b4383ac9ea52ce4">callback</a> &amp;cb)=0</td></tr>
+<tr class="memdesc:a0a059467fa1f0470a7ac583e656d30fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据任务 ID 派发一个回调任务到线程  <br /></td></tr>
+<tr class="separator:a0a059467fa1f0470a7ac583e656d30fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa96ed1fd2912c99cc31e29bf8f8c7ccf" id="r_aa96ed1fd2912c99cc31e29bf8f8c7ccf"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#aa96ed1fd2912c99cc31e29bf8f8c7ccf">batchDispatch</a> (const std::vector&lt; <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a3f2777395f1d2ba11b4383ac9ea52ce4">callback</a> &gt; &amp;cbs)=0</td></tr>
+<tr class="memdesc:aa96ed1fd2912c99cc31e29bf8f8c7ccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">批量派发回调任务到线程  <br /></td></tr>
+<tr class="separator:aa96ed1fd2912c99cc31e29bf8f8c7ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed6dabd139a0d753c5e3e49731fd99f" id="r_a7ed6dabd139a0d753c5e3e49731fd99f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a7ed6dabd139a0d753c5e3e49731fd99f">broadcast</a> (const <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a3f2777395f1d2ba11b4383ac9ea52ce4">callback</a> &amp;cb)=0</td></tr>
+<tr class="memdesc:a7ed6dabd139a0d753c5e3e49731fd99f"><td class="mdescLeft">&#160;</td><td class="mdescRight">向所有线程广播一个回调任务  <br /></td></tr>
+<tr class="separator:a7ed6dabd139a0d753c5e3e49731fd99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e54e24150393ba08331750cabf22fea" id="r_a3e54e24150393ba08331750cabf22fea"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a3e54e24150393ba08331750cabf22fea">start</a> ()=0</td></tr>
+<tr class="memdesc:a3e54e24150393ba08331750cabf22fea"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动线程  <br /></td></tr>
+<tr class="separator:a3e54e24150393ba08331750cabf22fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f6ca00a2ac41c2c3ff80e10e91a72c4" id="r_a4f6ca00a2ac41c2c3ff80e10e91a72c4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a4f6ca00a2ac41c2c3ff80e10e91a72c4">stop</a> ()=0</td></tr>
+<tr class="memdesc:a4f6ca00a2ac41c2c3ff80e10e91a72c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止线程  <br /></td></tr>
+<tr class="separator:a4f6ca00a2ac41c2c3ff80e10e91a72c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0f91d6e1ce70d2f301fbc84f8ec5e39" id="r_ae0f91d6e1ce70d2f301fbc84f8ec5e39"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#ae0f91d6e1ce70d2f301fbc84f8ec5e39">join</a> ()=0</td></tr>
+<tr class="memdesc:ae0f91d6e1ce70d2f301fbc84f8ec5e39"><td class="mdescLeft">&#160;</td><td class="mdescRight">等待线程完成任务  <br /></td></tr>
+<tr class="separator:ae0f91d6e1ce70d2f301fbc84f8ec5e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9de894ff571da0c9d8c0be3973299616" id="r_a9de894ff571da0c9d8c0be3973299616"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a9de894ff571da0c9d8c0be3973299616">dump</a> (std::ostream &amp;os)=0</td></tr>
+<tr class="memdesc:a9de894ff571da0c9d8c0be3973299616"><td class="mdescLeft">&#160;</td><td class="mdescRight">打印线程信息  <br /></td></tr>
+<tr class="separator:a9de894ff571da0c9d8c0be3973299616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f9823a72b57f26f20861a18acd20a46" id="r_a9f9823a72b57f26f20861a18acd20a46"><td class="memItemLeft" align="right" valign="top">virtual uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a9f9823a72b57f26f20861a18acd20a46">getTotal</a> ()=0</td></tr>
+<tr class="memdesc:a9f9823a72b57f26f20861a18acd20a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取线程的总任务数  <br /></td></tr>
+<tr class="separator:a9f9823a72b57f26f20861a18acd20a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>线程接口类，用于定义线程管理和任务调度的基本操作 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8h_source.html">FoxThread.h</a> 第 <a class="el" href="FoxThread_8h_source.html#l00028">28</a> 行定义.</p>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="a3f2777395f1d2ba11b4383ac9ea52ce4" name="a3f2777395f1d2ba11b4383ac9ea52ce4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f2777395f1d2ba11b4383ac9ea52ce4">&#9670;&#160;</a></span>callback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a3f2777395f1d2ba11b4383ac9ea52ce4">Gyanis::db::IFoxThread::callback</a> =  std::function&lt;void ()&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定义回调类型，表示不带参数且不返回值的函数 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8h_source.html">FoxThread.h</a> 第 <a class="el" href="FoxThread_8h_source.html#l00031">31</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a285bc55cb1e5ed5280903f3f953e1757" name="a285bc55cb1e5ed5280903f3f953e1757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a285bc55cb1e5ed5280903f3f953e1757">&#9670;&#160;</a></span>~IFoxThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Gyanis::db::IFoxThread::~IFoxThread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>虚拟析构函数 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aa96ed1fd2912c99cc31e29bf8f8c7ccf" name="aa96ed1fd2912c99cc31e29bf8f8c7ccf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa96ed1fd2912c99cc31e29bf8f8c7ccf">&#9670;&#160;</a></span>batchDispatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Gyanis::db::IFoxThread::batchDispatch </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a3f2777395f1d2ba11b4383ac9ea52ce4">callback</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cbs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>批量派发回调任务到线程 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cbs</td><td>回调函数列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a0ae7aa2f35b33c92f70fe3f2e83cc79a">Gyanis::db::FoxThread</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1FoxThreadPool.html#ab4ea2bef36e2b8a38a759aa9534689d0">Gyanis::db::FoxThreadPool</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a7ed6dabd139a0d753c5e3e49731fd99f" name="a7ed6dabd139a0d753c5e3e49731fd99f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed6dabd139a0d753c5e3e49731fd99f">&#9670;&#160;</a></span>broadcast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Gyanis::db::IFoxThread::broadcast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a3f2777395f1d2ba11b4383ac9ea52ce4">callback</a> &amp;&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>向所有线程广播一个回调任务 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#ad337b4048962036e8fde60445f9e224e">Gyanis::db::FoxThread</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1FoxThreadPool.html#a6052c36c11c9a677360cceaaab957a22">Gyanis::db::FoxThreadPool</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="aa0942dfb5143014c23a35650aaad39f1" name="aa0942dfb5143014c23a35650aaad39f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0942dfb5143014c23a35650aaad39f1">&#9670;&#160;</a></span>dispatch() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Gyanis::db::IFoxThread::dispatch </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a3f2777395f1d2ba11b4383ac9ea52ce4">callback</a> &amp;&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>派发一个回调任务到线程 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a5fdac2dd01aeb23be9ee7a7c4af90f3d">Gyanis::db::FoxThread</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1FoxThreadPool.html#adaf9e9dc8ddb3d891ff511edfecd18d4">Gyanis::db::FoxThreadPool</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a0a059467fa1f0470a7ac583e656d30fa" name="a0a059467fa1f0470a7ac583e656d30fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a059467fa1f0470a7ac583e656d30fa">&#9670;&#160;</a></span>dispatch() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Gyanis::db::IFoxThread::dispatch </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a3f2777395f1d2ba11b4383ac9ea52ce4">callback</a> &amp;&#160;</td>
+          <td class="paramname"><em>cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>根据任务 ID 派发一个回调任务到线程 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>任务 ID </td></tr>
+    <tr><td class="paramname">cb</td><td>回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a30196e171f44beefb09d1835ba36b9bf">Gyanis::db::FoxThread</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1FoxThreadPool.html#ab77bb738161413dd89da85a283809de1">Gyanis::db::FoxThreadPool</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a9de894ff571da0c9d8c0be3973299616" name="a9de894ff571da0c9d8c0be3973299616"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9de894ff571da0c9d8c0be3973299616">&#9670;&#160;</a></span>dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Gyanis::db::IFoxThread::dump </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>打印线程信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>输出流 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#ae850352e87dd123b063f6123c3b2eaa5">Gyanis::db::FoxThread</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1FoxThreadPool.html#acf9f3f66ab52d7cb7d872c7e921033df">Gyanis::db::FoxThreadPool</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a9f9823a72b57f26f20861a18acd20a46" name="a9f9823a72b57f26f20861a18acd20a46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f9823a72b57f26f20861a18acd20a46">&#9670;&#160;</a></span>getTotal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint64_t Gyanis::db::IFoxThread::getTotal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取线程的总任务数 </p>
+<dl class="section return"><dt>返回</dt><dd>任务总数 </dd></dl>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a1937831f79f79472eeee5aaafcf2bbca">Gyanis::db::FoxThread</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1FoxThreadPool.html#afd9cb3d8775bb74738a2cb8b98f99da5">Gyanis::db::FoxThreadPool</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="ae0f91d6e1ce70d2f301fbc84f8ec5e39" name="ae0f91d6e1ce70d2f301fbc84f8ec5e39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0f91d6e1ce70d2f301fbc84f8ec5e39">&#9670;&#160;</a></span>join()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Gyanis::db::IFoxThread::join </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>等待线程完成任务 </p>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#ab8b0580f49fe97f6de6232e8cc8375d6">Gyanis::db::FoxThread</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1FoxThreadPool.html#a3467f254969b4774df483c03d2dd0c05">Gyanis::db::FoxThreadPool</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a3e54e24150393ba08331750cabf22fea" name="a3e54e24150393ba08331750cabf22fea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e54e24150393ba08331750cabf22fea">&#9670;&#160;</a></span>start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Gyanis::db::IFoxThread::start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动线程 </p>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a6bff3aff85f5cc94a346de99fb66b2c6">Gyanis::db::FoxThread</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1FoxThreadPool.html#afb2e4dbc64fb442840104a70bf505bab">Gyanis::db::FoxThreadPool</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a4f6ca00a2ac41c2c3ff80e10e91a72c4" name="a4f6ca00a2ac41c2c3ff80e10e91a72c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f6ca00a2ac41c2c3ff80e10e91a72c4">&#9670;&#160;</a></span>stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Gyanis::db::IFoxThread::stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>停止线程 </p>
+
+<p>在 <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a40da331bdd54091a32ba76a1e82ba4de">Gyanis::db::FoxThread</a> , 以及 <a class="el" href="classGyanis_1_1db_1_1FoxThreadPool.html#ab79672f9d7f64b7a0f07cb9efb42a280">Gyanis::db::FoxThreadPool</a> 内被实现.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/db/<a class="el" href="FoxThread_8h_source.html">FoxThread.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGyanis.html">Gyanis</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1db.html">db</a></li><li class="navelem"><a class="el" href="classGyanis_1_1db_1_1IFoxThread.html">IFoxThread</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+digraph "include/net/http/http11_common.h"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [id="Node000001",label="include/net/http/http11\l_common.h",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="该文件定义了 HTTP/1.1 协议中常见的回调函数类型和相关定义"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="include/net/http/http11\l_parser.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http11__parser_8h.html",tooltip="HTTP/1.1 协议解析器"];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="include/net/http/HttpParser.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$HttpParser_8h.html",tooltip="HTTP协议解析封装"];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="include/net/http/HttpConnection.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$HttpConnection_8h.html",tooltip="HTTP 连接和连接池管理"];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="include/net/http/WebSocket\lConnection.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$WebSocketConnection_8h.html",tooltip="WebSocket连接模块封装"];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="src/net/http/WebSocketConnection.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$WebSocketConnection_8cpp.html",tooltip=" "];
+  Node4 -> Node7 [id="edge6_Node000004_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="src/net/http/HttpConnection.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$HttpConnection_8cpp.html",tooltip=" "];
+  Node3 -> Node8 [id="edge7_Node000003_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="src/net/http/HttpParser.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$HttpParser_8cpp.html",tooltip=" "];
+  Node3 -> Node9 [id="edge8_Node000003_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="src/net/http/HttpSession.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$HttpSession_8cpp.html",tooltip=" "];
+  Node2 -> Node10 [id="edge9_Node000002_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="src/net/http/http11\l_parser.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$http11__parser_8cpp.html",tooltip=" "];
+  Node1 -> Node11 [id="edge10_Node000001_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="include/net/http/httpclient\l_parser.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$httpclient__parser_8h.html",tooltip="HTTP 客户端解析器模块封装"];
+  Node11 -> Node3 [id="edge11_Node000011_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node11 -> Node12 [id="edge12_Node000011_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="src/net/http/httpclient\l_parser.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$httpclient__parser_8cpp.html",tooltip=" "];
+}

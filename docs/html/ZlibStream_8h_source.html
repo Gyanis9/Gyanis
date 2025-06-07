@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: include/net/stream/ZlibStream.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('ZlibStream_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ZlibStream.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ZlibStream_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef ZLIBSTREAM_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define ZLIBSTREAM_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="Stream_8h.html">net/stream/Stream.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;zlib.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;sys/uio.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="ByteArray_8h.html">ByteArray.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceGyanis_1_1net_1_1stream.html">Gyanis::net::stream</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html">   18</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html">ZlibStream</a> final : <span class="keyword">public</span> <a class="code hl_class" href="classGyanis_1_1net_1_1stream_1_1Stream.html">Stream</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a26d1fcae927b2245a085a5a0a0a432ad">   21</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a26d1fcae927b2245a085a5a0a0a432ad">ptr</a> = std::shared_ptr&lt;ZlibStream&gt;;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a5a5df8e8e26edacfbb4fa7a5ffe73d9f">   26</a></span>        <span class="keyword">enum</span> <a class="code hl_enumeration" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a5a5df8e8e26edacfbb4fa7a5ffe73d9f">Type</a></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a5a5df8e8e26edacfbb4fa7a5ffe73d9fa6aa2551400289ecb3acc0adb6b3e06cb">   28</a></span>            <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a5a5df8e8e26edacfbb4fa7a5ffe73d9fa6aa2551400289ecb3acc0adb6b3e06cb">ZLIB</a>, </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a5a5df8e8e26edacfbb4fa7a5ffe73d9facb97861a47f45b3a3e0bd368bceb21de">   29</a></span>            <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a5a5df8e8e26edacfbb4fa7a5ffe73d9facb97861a47f45b3a3e0bd368bceb21de">DEFLATE</a>, </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a5a5df8e8e26edacfbb4fa7a5ffe73d9fa46f29fe6e7c176e02ba44104d9384812">GZIP</a> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a5a5df8e8e26edacfbb4fa7a5ffe73d9fa46f29fe6e7c176e02ba44104d9384812">   31</a></span>        };</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700e">   36</a></span>        <span class="keyword">enum</span> <a class="code hl_enumeration" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700e">Strategy</a></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700ea5e8ba0c6b17872bc0814bb08c0f1ad3a">   38</a></span>            <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700ea5e8ba0c6b17872bc0814bb08c0f1ad3a">DEFAULT</a> = Z_DEFAULT_STRATEGY, </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700ea22e0c9f0e78ed808bd55864831efdac0">   39</a></span>            <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700ea22e0c9f0e78ed808bd55864831efdac0">FILTERED</a> = Z_FILTERED, </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700eadf6a3410247cc6625fc195b4f6182eb5">   40</a></span>            <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700eadf6a3410247cc6625fc195b4f6182eb5">HUFFMAN</a> = Z_HUFFMAN_ONLY, </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700eaf18dd32b59aa7038d3564ae295abc5ec">   41</a></span>            <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700eaf18dd32b59aa7038d3564ae295abc5ec">FIXED</a> = Z_FIXED, </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700ea6c1a205bfa77c0c363e8d4954562ece1">RLE</a> = Z_RLE </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700ea6c1a205bfa77c0c363e8d4954562ece1">   43</a></span>        };</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="};">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aef1c06cd93e23191bdd3ab9060a681cb">   48</a></span>        <span class="keyword">enum</span> <a class="code hl_enumeration" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aef1c06cd93e23191bdd3ab9060a681cb">CompressLevel</a></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aef1c06cd93e23191bdd3ab9060a681cba8d571d66f9fb0e8346a17b03577dc165">   50</a></span>            <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aef1c06cd93e23191bdd3ab9060a681cba8d571d66f9fb0e8346a17b03577dc165">NO_COMPRESSION</a> = Z_NO_COMPRESSION, </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aef1c06cd93e23191bdd3ab9060a681cbab557442d19c34117e5e9b8f0b93ea78a">   51</a></span>            <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aef1c06cd93e23191bdd3ab9060a681cbab557442d19c34117e5e9b8f0b93ea78a">BEST_SPEED</a> = Z_BEST_SPEED, </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aef1c06cd93e23191bdd3ab9060a681cbac43bf56c610571e80a6a41a3e8b5708d">   52</a></span>            <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aef1c06cd93e23191bdd3ab9060a681cbac43bf56c610571e80a6a41a3e8b5708d">BEST_COMPRESSION</a> = Z_BEST_COMPRESSION, </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aef1c06cd93e23191bdd3ab9060a681cba5393853cc84a572ca263cc1fef73fa25">DEFAULT_COMPRESSION</a> = Z_DEFAULT_COMPRESSION </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aef1c06cd93e23191bdd3ab9060a681cba5393853cc84a572ca263cc1fef73fa25">   54</a></span>        };</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">static</span> std::shared_ptr&lt;ZlibStream&gt; <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a7686750be87d7258375aaf885c738611">CreateGzip</a>(<span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a2275dd06e2d904804506112d527e87b6">encode</a>, uint32_t buff_size = 4096);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">static</span> std::shared_ptr&lt;ZlibStream&gt; <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a064a683224f417976dc3119b836541c9">CreateZlib</a>(<span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a2275dd06e2d904804506112d527e87b6">encode</a>, uint32_t buff_size = 4096);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keyword">static</span> std::shared_ptr&lt;ZlibStream&gt; <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#adc67d4771d4122923d4620590ef0f83b">CreateDeflate</a>(<span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a2275dd06e2d904804506112d527e87b6">encode</a>, uint32_t buff_size = 4096);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keyword">static</span> std::shared_ptr&lt;ZlibStream&gt; <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a1e5f7d98050690b5e7ded3222d6d0883">Create</a>(<span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a2275dd06e2d904804506112d527e87b6">encode</a>, uint32_t buff_size = 4096,</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                                                  <a class="code hl_enumeration" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a5a5df8e8e26edacfbb4fa7a5ffe73d9f">Type</a> type = <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a5a5df8e8e26edacfbb4fa7a5ffe73d9facb97861a47f45b3a3e0bd368bceb21de">DEFLATE</a>, <span class="keywordtype">int</span> level = <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aef1c06cd93e23191bdd3ab9060a681cba5393853cc84a572ca263cc1fef73fa25">DEFAULT_COMPRESSION</a>,</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                                                  <span class="keywordtype">int</span> window_bits = 15</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                                                  , <span class="keywordtype">int</span> memlevel = 8, <a class="code hl_enumeration" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700e">Strategy</a> strategy = <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700ea5e8ba0c6b17872bc0814bb08c0f1ad3a">DEFAULT</a>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keyword">explicit</span> <a class="code hl_class" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html">ZlibStream</a>(<span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a2275dd06e2d904804506112d527e87b6">encode</a>, uint32_t buff_size = 4096);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#ac5d319590d010ba383e1e0a4ff494c40">~ZlibStream</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordtype">long</span> <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a0e22f32214f9c03866f29a0ae6ae836d">read</a>(<span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordtype">long</span> <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a0e22f32214f9c03866f29a0ae6ae836d">read</a>(<span class="keyword">const</span> std::shared_ptr&lt;ByteArray&gt;&amp; bytearray, <span class="keywordtype">size_t</span> length) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordtype">long</span> <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a7110b53bad62036a32db23e3a3b4d925">write</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordtype">long</span> <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a7110b53bad62036a32db23e3a3b4d925">write</a>(<span class="keyword">const</span> std::shared_ptr&lt;ByteArray&gt;&amp; bytearray, <span class="keywordtype">size_t</span> length) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a6b30b1b0716fbc2de79e9c7536f2c79a">close</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a7644854ea229720473c00ded0c2ee6e2">flush</a>();</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#af6ccc1fe48493ede9263d58c9860e994">isFree</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a8896ea95422444bd3662230437f6a657">setFree</a>(<span class="keywordtype">bool</span> value);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aeb1d106a995b67e4de0aa9766f987a43">isEncode</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a0e51e42afc024d0a4932a07f24ed7165">setEndcode</a>(<span class="keywordtype">bool</span> value);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        std::vector&lt;iovec&gt;&amp; <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#ab6bfced6ec318f1f75e9754c844a80be">getBuffers</a>();</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        [[nodiscard]] std::string <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a7b9f65125de66d4dfffc457644212cef">getResult</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        std::shared_ptr&lt;ByteArray&gt; <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aa258919a027ba134c5845d921c6998a1">getByteArray</a>();</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#afbe324ca8c84638f17b198f083c35cc9">init</a>(<a class="code hl_enumeration" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a5a5df8e8e26edacfbb4fa7a5ffe73d9f">Type</a> type = <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a5a5df8e8e26edacfbb4fa7a5ffe73d9facb97861a47f45b3a3e0bd368bceb21de">DEFLATE</a>, <span class="keywordtype">int</span> level = <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aef1c06cd93e23191bdd3ab9060a681cba5393853cc84a572ca263cc1fef73fa25">DEFAULT_COMPRESSION</a></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                 , <span class="keywordtype">int</span> window_bits = 15, <span class="keywordtype">int</span> memlevel = 8, <a class="code hl_enumeration" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700e">Strategy</a> strategy = <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700ea5e8ba0c6b17872bc0814bb08c0f1ad3a">DEFAULT</a>);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a2275dd06e2d904804506112d527e87b6">encode</a>(<span class="keyword">const</span> iovec* value, <span class="keyword">const</span> uint64_t&amp; size, <span class="keywordtype">bool</span> finish);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#ab94133299e273aae253c37da75bad9c7">decode</a>(<span class="keyword">const</span> iovec* value, <span class="keyword">const</span> uint64_t&amp; size, <span class="keywordtype">bool</span> finish);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a892627d86d33b1067233298843ecf2e7">  212</a></span>        z_stream <a class="code hl_variable" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a892627d86d33b1067233298843ecf2e7">m_zstream</a>{}; </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#ac1fa930257a830be9030be4c03b9f771">  213</a></span>        uint32_t <a class="code hl_variable" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#ac1fa930257a830be9030be4c03b9f771">m_buffSize</a>; </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#ad41202619f4f4d80aedce518e83bf368">  214</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#ad41202619f4f4d80aedce518e83bf368">m_encode</a>; </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a41b0d92430993cc296c9d65d12dbbcb5">  215</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a41b0d92430993cc296c9d65d12dbbcb5">m_free</a>; </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a28a9719fc619183697b948fa092d9f6a">  216</a></span>        std::vector&lt;iovec&gt; <a class="code hl_variable" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a28a9719fc619183697b948fa092d9f6a">m_buffs</a>; </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    };</div>
+</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>}</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aByteArray_8h_html"><div class="ttname"><a href="ByteArray_8h.html">ByteArray.h</a></div><div class="ttdoc">二进制数组(序列化/反序列化)</div></div>
+<div class="ttc" id="aStream_8h_html"><div class="ttname"><a href="Stream_8h.html">Stream.h</a></div><div class="ttdoc">流接口模块封装</div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1Stream_html"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1Stream.html">Gyanis::net::stream::Stream</a></div><div class="ttdoc">流接口类</div><div class="ttdef"><b>Definition</b> <a href="Stream_8h_source.html#l00015">Stream.h:16</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html">Gyanis::net::stream::ZlibStream</a></div><div class="ttdoc">ZlibStream 类实现了流式的压缩和解压操作，支持 Gzip、Zlib 和 Deflate 格式</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00018">ZlibStream.h:19</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a064a683224f417976dc3119b836541c9"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a064a683224f417976dc3119b836541c9">Gyanis::net::stream::ZlibStream::CreateZlib</a></div><div class="ttdeci">static std::shared_ptr&lt; ZlibStream &gt; CreateZlib(bool encode, uint32_t buff_size=4096)</div><div class="ttdoc">创建一个 Zlib 压缩流对象</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00015">ZlibStream.cpp:15</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a0e22f32214f9c03866f29a0ae6ae836d"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a0e22f32214f9c03866f29a0ae6ae836d">Gyanis::net::stream::ZlibStream::read</a></div><div class="ttdeci">long read(void *buffer, size_t length) override</div><div class="ttdoc">从流中读取指定长度的数据</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00062">ZlibStream.cpp:62</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a0e51e42afc024d0a4932a07f24ed7165"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a0e51e42afc024d0a4932a07f24ed7165">Gyanis::net::stream::ZlibStream::setEndcode</a></div><div class="ttdeci">void setEndcode(bool value)</div><div class="ttdoc">设置压缩模式</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00130">ZlibStream.cpp:130</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a1e5f7d98050690b5e7ded3222d6d0883"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a1e5f7d98050690b5e7ded3222d6d0883">Gyanis::net::stream::ZlibStream::Create</a></div><div class="ttdeci">static std::shared_ptr&lt; ZlibStream &gt; Create(bool encode, uint32_t buff_size=4096, Type type=DEFLATE, int level=DEFAULT_COMPRESSION, int window_bits=15, int memlevel=8, Strategy strategy=DEFAULT)</div><div class="ttdoc">创建一个指定类型的压缩流对象</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00025">ZlibStream.cpp:25</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a2275dd06e2d904804506112d527e87b6"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a2275dd06e2d904804506112d527e87b6">Gyanis::net::stream::ZlibStream::encode</a></div><div class="ttdeci">int encode(const iovec *value, const uint64_t &amp;size, bool finish)</div><div class="ttdoc">编码（压缩）数据</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00194">ZlibStream.cpp:194</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a26d1fcae927b2245a085a5a0a0a432ad"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a26d1fcae927b2245a085a5a0a0a432ad">Gyanis::net::stream::ZlibStream::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; ZlibStream &gt; ptr</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00021">ZlibStream.h:21</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a28a9719fc619183697b948fa092d9f6a"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a28a9719fc619183697b948fa092d9f6a">Gyanis::net::stream::ZlibStream::m_buffs</a></div><div class="ttdeci">std::vector&lt; iovec &gt; m_buffs</div><div class="ttdoc">数据块缓冲区</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00216">ZlibStream.h:216</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a41b0d92430993cc296c9d65d12dbbcb5"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a41b0d92430993cc296c9d65d12dbbcb5">Gyanis::net::stream::ZlibStream::m_free</a></div><div class="ttdeci">bool m_free</div><div class="ttdoc">是否为空闲状态</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00215">ZlibStream.h:215</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a5a5df8e8e26edacfbb4fa7a5ffe73d9f"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a5a5df8e8e26edacfbb4fa7a5ffe73d9f">Gyanis::net::stream::ZlibStream::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">枚举类型，定义了支持的压缩格式</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00026">ZlibStream.h:27</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a5a5df8e8e26edacfbb4fa7a5ffe73d9fa46f29fe6e7c176e02ba44104d9384812"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a5a5df8e8e26edacfbb4fa7a5ffe73d9fa46f29fe6e7c176e02ba44104d9384812">Gyanis::net::stream::ZlibStream::GZIP</a></div><div class="ttdeci">@ GZIP</div><div class="ttdoc">Gzip 压缩格式</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00031">ZlibStream.h:30</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a5a5df8e8e26edacfbb4fa7a5ffe73d9fa6aa2551400289ecb3acc0adb6b3e06cb"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a5a5df8e8e26edacfbb4fa7a5ffe73d9fa6aa2551400289ecb3acc0adb6b3e06cb">Gyanis::net::stream::ZlibStream::ZLIB</a></div><div class="ttdeci">@ ZLIB</div><div class="ttdoc">Zlib 压缩格式</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00028">ZlibStream.h:28</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a5a5df8e8e26edacfbb4fa7a5ffe73d9facb97861a47f45b3a3e0bd368bceb21de"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a5a5df8e8e26edacfbb4fa7a5ffe73d9facb97861a47f45b3a3e0bd368bceb21de">Gyanis::net::stream::ZlibStream::DEFLATE</a></div><div class="ttdeci">@ DEFLATE</div><div class="ttdoc">Deflate 压缩格式</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00029">ZlibStream.h:29</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a6b30b1b0716fbc2de79e9c7536f2c79a"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a6b30b1b0716fbc2de79e9c7536f2c79a">Gyanis::net::stream::ZlibStream::close</a></div><div class="ttdeci">void close() override</div><div class="ttdoc">关闭当前流并释放相关资源</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00097">ZlibStream.cpp:97</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a7110b53bad62036a32db23e3a3b4d925"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a7110b53bad62036a32db23e3a3b4d925">Gyanis::net::stream::ZlibStream::write</a></div><div class="ttdeci">long write(const void *buffer, size_t length) override</div><div class="ttdoc">将数据写入流中。</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00074">ZlibStream.cpp:74</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a7644854ea229720473c00ded0c2ee6e2"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a7644854ea229720473c00ded0c2ee6e2">Gyanis::net::stream::ZlibStream::flush</a></div><div class="ttdeci">int flush()</div><div class="ttdoc">刷新压缩流，确保所有数据被处理</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00102">ZlibStream.cpp:102</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a7686750be87d7258375aaf885c738611"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a7686750be87d7258375aaf885c738611">Gyanis::net::stream::ZlibStream::CreateGzip</a></div><div class="ttdeci">static std::shared_ptr&lt; ZlibStream &gt; CreateGzip(bool encode, uint32_t buff_size=4096)</div><div class="ttdoc">创建一个 Gzip 压缩流对象</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00010">ZlibStream.cpp:10</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a7b9f65125de66d4dfffc457644212cef"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a7b9f65125de66d4dfffc457644212cef">Gyanis::net::stream::ZlibStream::getResult</a></div><div class="ttdeci">std::string getResult() const</div><div class="ttdoc">获取压缩或解压后的结果数据</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00140">ZlibStream.cpp:140</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a8896ea95422444bd3662230437f6a657"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a8896ea95422444bd3662230437f6a657">Gyanis::net::stream::ZlibStream::setFree</a></div><div class="ttdeci">void setFree(bool value)</div><div class="ttdoc">设置流的空闲状态</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00120">ZlibStream.cpp:120</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a892627d86d33b1067233298843ecf2e7"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a892627d86d33b1067233298843ecf2e7">Gyanis::net::stream::ZlibStream::m_zstream</a></div><div class="ttdeci">z_stream m_zstream</div><div class="ttdoc">zlib 流对象</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00212">ZlibStream.h:212</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a958f3cf58638df9f4991361d97da700e"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700e">Gyanis::net::stream::ZlibStream::Strategy</a></div><div class="ttdeci">Strategy</div><div class="ttdoc">枚举类型，定义了压缩策略</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00036">ZlibStream.h:37</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a958f3cf58638df9f4991361d97da700ea22e0c9f0e78ed808bd55864831efdac0"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700ea22e0c9f0e78ed808bd55864831efdac0">Gyanis::net::stream::ZlibStream::FILTERED</a></div><div class="ttdeci">@ FILTERED</div><div class="ttdoc">过滤的压缩策略</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00039">ZlibStream.h:39</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a958f3cf58638df9f4991361d97da700ea5e8ba0c6b17872bc0814bb08c0f1ad3a"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700ea5e8ba0c6b17872bc0814bb08c0f1ad3a">Gyanis::net::stream::ZlibStream::DEFAULT</a></div><div class="ttdeci">@ DEFAULT</div><div class="ttdoc">默认压缩策略</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00038">ZlibStream.h:38</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a958f3cf58638df9f4991361d97da700ea6c1a205bfa77c0c363e8d4954562ece1"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700ea6c1a205bfa77c0c363e8d4954562ece1">Gyanis::net::stream::ZlibStream::RLE</a></div><div class="ttdeci">@ RLE</div><div class="ttdoc">行程长度编码</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00043">ZlibStream.h:42</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a958f3cf58638df9f4991361d97da700eadf6a3410247cc6625fc195b4f6182eb5"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700eadf6a3410247cc6625fc195b4f6182eb5">Gyanis::net::stream::ZlibStream::HUFFMAN</a></div><div class="ttdeci">@ HUFFMAN</div><div class="ttdoc">仅使用霍夫曼编码</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00040">ZlibStream.h:40</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a958f3cf58638df9f4991361d97da700eaf18dd32b59aa7038d3564ae295abc5ec"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a958f3cf58638df9f4991361d97da700eaf18dd32b59aa7038d3564ae295abc5ec">Gyanis::net::stream::ZlibStream::FIXED</a></div><div class="ttdeci">@ FIXED</div><div class="ttdoc">固定的压缩策略</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00041">ZlibStream.h:41</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_aa258919a027ba134c5845d921c6998a1"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aa258919a027ba134c5845d921c6998a1">Gyanis::net::stream::ZlibStream::getByteArray</a></div><div class="ttdeci">std::shared_ptr&lt; ByteArray &gt; getByteArray()</div><div class="ttdoc">获取当前 ByteArray 对象</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00150">ZlibStream.cpp:150</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_ab6bfced6ec318f1f75e9754c844a80be"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#ab6bfced6ec318f1f75e9754c844a80be">Gyanis::net::stream::ZlibStream::getBuffers</a></div><div class="ttdeci">std::vector&lt; iovec &gt; &amp; getBuffers()</div><div class="ttdoc">获取缓冲区中的数据块</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00135">ZlibStream.cpp:135</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_ab94133299e273aae253c37da75bad9c7"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#ab94133299e273aae253c37da75bad9c7">Gyanis::net::stream::ZlibStream::decode</a></div><div class="ttdeci">int decode(const iovec *value, const uint64_t &amp;size, bool finish)</div><div class="ttdoc">解码（解压）数据</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00240">ZlibStream.cpp:240</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_ac1fa930257a830be9030be4c03b9f771"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#ac1fa930257a830be9030be4c03b9f771">Gyanis::net::stream::ZlibStream::m_buffSize</a></div><div class="ttdeci">uint32_t m_buffSize</div><div class="ttdoc">缓冲区大小</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00213">ZlibStream.h:213</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_ac5d319590d010ba383e1e0a4ff494c40"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#ac5d319590d010ba383e1e0a4ff494c40">Gyanis::net::stream::ZlibStream::~ZlibStream</a></div><div class="ttdeci">~ZlibStream() override</div><div class="ttdoc">析构函数，关闭 ZlibStream 对象。</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00042">ZlibStream.cpp:42</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_ad41202619f4f4d80aedce518e83bf368"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#ad41202619f4f4d80aedce518e83bf368">Gyanis::net::stream::ZlibStream::m_encode</a></div><div class="ttdeci">bool m_encode</div><div class="ttdoc">是否为编码（压缩）模式</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00214">ZlibStream.h:214</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_adc67d4771d4122923d4620590ef0f83b"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#adc67d4771d4122923d4620590ef0f83b">Gyanis::net::stream::ZlibStream::CreateDeflate</a></div><div class="ttdeci">static std::shared_ptr&lt; ZlibStream &gt; CreateDeflate(bool encode, uint32_t buff_size=4096)</div><div class="ttdoc">创建一个 Deflate 压缩流对象</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00020">ZlibStream.cpp:20</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_aeb1d106a995b67e4de0aa9766f987a43"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aeb1d106a995b67e4de0aa9766f987a43">Gyanis::net::stream::ZlibStream::isEncode</a></div><div class="ttdeci">bool isEncode() const</div><div class="ttdoc">获取是否为压缩模式</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00125">ZlibStream.cpp:125</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_aef1c06cd93e23191bdd3ab9060a681cb"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aef1c06cd93e23191bdd3ab9060a681cb">Gyanis::net::stream::ZlibStream::CompressLevel</a></div><div class="ttdeci">CompressLevel</div><div class="ttdoc">枚举类型，定义了压缩级别</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00048">ZlibStream.h:49</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_aef1c06cd93e23191bdd3ab9060a681cba5393853cc84a572ca263cc1fef73fa25"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aef1c06cd93e23191bdd3ab9060a681cba5393853cc84a572ca263cc1fef73fa25">Gyanis::net::stream::ZlibStream::DEFAULT_COMPRESSION</a></div><div class="ttdeci">@ DEFAULT_COMPRESSION</div><div class="ttdoc">默认压缩级别</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00054">ZlibStream.h:53</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_aef1c06cd93e23191bdd3ab9060a681cba8d571d66f9fb0e8346a17b03577dc165"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aef1c06cd93e23191bdd3ab9060a681cba8d571d66f9fb0e8346a17b03577dc165">Gyanis::net::stream::ZlibStream::NO_COMPRESSION</a></div><div class="ttdeci">@ NO_COMPRESSION</div><div class="ttdoc">不压缩</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00050">ZlibStream.h:50</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_aef1c06cd93e23191bdd3ab9060a681cbab557442d19c34117e5e9b8f0b93ea78a"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aef1c06cd93e23191bdd3ab9060a681cbab557442d19c34117e5e9b8f0b93ea78a">Gyanis::net::stream::ZlibStream::BEST_SPEED</a></div><div class="ttdeci">@ BEST_SPEED</div><div class="ttdoc">最快压缩速度</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00051">ZlibStream.h:51</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_aef1c06cd93e23191bdd3ab9060a681cbac43bf56c610571e80a6a41a3e8b5708d"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#aef1c06cd93e23191bdd3ab9060a681cbac43bf56c610571e80a6a41a3e8b5708d">Gyanis::net::stream::ZlibStream::BEST_COMPRESSION</a></div><div class="ttdeci">@ BEST_COMPRESSION</div><div class="ttdoc">最佳压缩效果</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8h_source.html#l00052">ZlibStream.h:52</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_af6ccc1fe48493ede9263d58c9860e994"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#af6ccc1fe48493ede9263d58c9860e994">Gyanis::net::stream::ZlibStream::isFree</a></div><div class="ttdeci">bool isFree() const</div><div class="ttdoc">获取是否处于空闲状态</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00115">ZlibStream.cpp:115</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_afbe324ca8c84638f17b198f083c35cc9"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#afbe324ca8c84638f17b198f083c35cc9">Gyanis::net::stream::ZlibStream::init</a></div><div class="ttdeci">int init(Type type=DEFLATE, int level=DEFAULT_COMPRESSION, int window_bits=15, int memlevel=8, Strategy strategy=DEFAULT)</div><div class="ttdoc">初始化压缩流对象</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00161">ZlibStream.cpp:161</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1stream_html"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1stream.html">Gyanis::net::stream</a></div><div class="ttdef"><b>Definition</b> <a href="ByteArray_8h_source.html#l00014">ByteArray.h:15</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_2fa1ed3146d6c2b96c5cfe4341985326.html">net</a></li><li class="navelem"><a class="el" href="dir_aac95f076efd652558a149c2b795734d.html">stream</a></li><li class="navelem"><a class="el" href="ZlibStream_8h.html">ZlibStream.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

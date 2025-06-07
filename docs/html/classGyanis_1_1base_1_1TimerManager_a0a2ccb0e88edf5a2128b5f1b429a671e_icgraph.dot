@@ -1,0 +1,49 @@
+digraph "Gyanis::base::TimerManager::cancel"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="Gyanis::base::TimerManager\l::cancel",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="取消一个定时器"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="do_io",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Hook_8cpp.html#a54f397edba31e0013f8b0cb510c5311e",tooltip="执行 IO 操作的通用函数，支持钩取"];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="accept",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Hook_8cpp.html#a9656e13df74b50d7af5798542c678dbd",tooltip=" "];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="read",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Hook_8cpp.html#af32a16ad2dd9e48482f8f790db7dbbd2",tooltip=" "];
+  Node2 -> Node5 [id="edge4_Node000002_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="readv",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Hook_8cpp.html#a5da56354f209063569fd2139d078b4cc",tooltip=" "];
+  Node2 -> Node6 [id="edge5_Node000002_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="recv",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Hook_8cpp.html#a49c565342c0f29cec5461ec22c3b1b3d",tooltip=" "];
+  Node6 -> Node7 [id="edge6_Node000006_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="Gyanis::db::FoxThread\l::read_cb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1db_1_1FoxThread.html#ad271786523ef00d03c9873bba19cbac2",tooltip="事件回调函数，用于处理事件"];
+  Node7 -> Node8 [id="edge7_Node000007_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="Gyanis::db::FoxThread\l::FoxThread",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1db_1_1FoxThread.html#af43ceb0ec1ca21f38a6ebd648afe272f",tooltip="构造函数，初始化线程"];
+  Node2 -> Node9 [id="edge8_Node000002_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="recvfrom",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Hook_8cpp.html#af349f83f970edca39786829704899327",tooltip=" "];
+  Node2 -> Node10 [id="edge9_Node000002_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="recvmsg",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Hook_8cpp.html#aed70d2ce8d3411341530d14ae6572e26",tooltip=" "];
+  Node2 -> Node11 [id="edge10_Node000002_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="send",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Hook_8cpp.html#a9da4ddaf95f37c1457e545a65ee1a506",tooltip=" "];
+  Node11 -> Node12 [id="edge11_Node000011_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="Gyanis::db::FoxThread\l::batchDispatch",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1db_1_1FoxThread.html#a0ae7aa2f35b33c92f70fe3f2e83cc79a",tooltip="批量派发回调任务到线程"];
+  Node11 -> Node13 [id="edge12_Node000011_Node000013",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="Gyanis::db::FoxThread\l::dispatch",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1db_1_1FoxThread.html#a5fdac2dd01aeb23be9ee7a7c4af90f3d",tooltip="派发回调任务到线程"];
+  Node13 -> Node14 [id="edge13_Node000013_Node000014",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="Gyanis::db::FoxThread\l::broadcast",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1db_1_1FoxThread.html#ad337b4048962036e8fde60445f9e224e",tooltip="向所有线程广播回调任务"];
+  Node13 -> Node15 [id="edge14_Node000013_Node000015",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="Gyanis::db::FoxThread\l::dispatch",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1db_1_1FoxThread.html#a30196e171f44beefb09d1835ba36b9bf",tooltip="根据任务 ID 派发回调任务到线程"];
+  Node11 -> Node16 [id="edge15_Node000011_Node000016",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node16 [id="Node000016",label="Gyanis::db::FoxThread\l::stop",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1db_1_1FoxThread.html#a40da331bdd54091a32ba76a1e82ba4de",tooltip="停止线程"];
+  Node16 -> Node17 [id="edge16_Node000016_Node000017",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node17 [id="Node000017",label="Gyanis::db::FoxThread\l::~FoxThread",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1db_1_1FoxThread.html#a4139aa39d871173ceede1499381c4783",tooltip="析构函数，释放线程资源"];
+  Node2 -> Node18 [id="edge17_Node000002_Node000018",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node18 [id="Node000018",label="sendmsg",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Hook_8cpp.html#a111a319409c86e7eee7708c03d8c3724",tooltip=" "];
+  Node2 -> Node19 [id="edge18_Node000002_Node000019",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node19 [id="Node000019",label="sendto",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Hook_8cpp.html#a71618f206e322dac502ff5a415d1bee2",tooltip=" "];
+  Node2 -> Node20 [id="edge19_Node000002_Node000020",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node20 [id="Node000020",label="write",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Hook_8cpp.html#abb39b21888372e95ad3e5c59b166f5c8",tooltip=" "];
+  Node2 -> Node21 [id="edge20_Node000002_Node000021",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node21 [id="Node000021",label="writev",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Hook_8cpp.html#a25a77f2e043f64c6ce9b478e7490847c",tooltip=" "];
+}

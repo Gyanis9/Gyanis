@@ -1,0 +1,492 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: Gyanis::base::FileLogAppender类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGyanis_1_1base_1_1FileLogAppender.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classGyanis_1_1base_1_1FileLogAppender-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Gyanis::base::FileLogAppender类 参考<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>输出到文件的 Appender  
+ <a href="classGyanis_1_1base_1_1FileLogAppender.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Log_8h_source.html">Log.h</a>&gt;</code></p>
+<div class="dynheader">
+类 Gyanis::base::FileLogAppender 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1FileLogAppender__inherit__graph.png" border="0" usemap="#aGyanis_1_1base_1_1FileLogAppender_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+Gyanis::base::FileLogAppender 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1FileLogAppender__coll__graph.png" border="0" usemap="#aGyanis_1_1base_1_1FileLogAppender_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a1e5bf1c18a3035887ff6fe76d87cefbd" id="r_a1e5bf1c18a3035887ff6fe76d87cefbd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1FileLogAppender.html#a1e5bf1c18a3035887ff6fe76d87cefbd">FileLogAppender</a> (std::string filename)</td></tr>
+<tr class="separator:a1e5bf1c18a3035887ff6fe76d87cefbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66c82ee7f817460f0434f6d660fe6cde" id="r_a66c82ee7f817460f0434f6d660fe6cde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1FileLogAppender.html#a66c82ee7f817460f0434f6d660fe6cde">log</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1base_1_1Logger.html">Logger</a> &gt; &amp;logger, <a class="el" href="classGyanis_1_1base_1_1LogLevel.html#ab0b56a285f03f901bb39f5ce2a337f7d">LogLevel::Level</a> level, const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1base_1_1LogEvent.html">LogEvent</a> &gt; &amp;event) override</td></tr>
+<tr class="memdesc:a66c82ee7f817460f0434f6d660fe6cde"><td class="mdescLeft">&#160;</td><td class="mdescRight">写入日志  <br /></td></tr>
+<tr class="separator:a66c82ee7f817460f0434f6d660fe6cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b0b397b061d158fb777b6771b56a9d9" id="r_a1b0b397b061d158fb777b6771b56a9d9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1FileLogAppender.html#a1b0b397b061d158fb777b6771b56a9d9">toYamlString</a> () override</td></tr>
+<tr class="memdesc:a1b0b397b061d158fb777b6771b56a9d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">将日志输出目标的配置转为 YAML 字符串  <br /></td></tr>
+<tr class="separator:a1b0b397b061d158fb777b6771b56a9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3709e4a27127166d3023484e794690a0" id="r_a3709e4a27127166d3023484e794690a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1FileLogAppender.html#a3709e4a27127166d3023484e794690a0">reopen</a> ()</td></tr>
+<tr class="memdesc:a3709e4a27127166d3023484e794690a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">重新打开日志文件  <br /></td></tr>
+<tr class="separator:a3709e4a27127166d3023484e794690a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classGyanis_1_1base_1_1LogAppender"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classGyanis_1_1base_1_1LogAppender')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classGyanis_1_1base_1_1LogAppender.html">Gyanis::base::LogAppender</a></td></tr>
+<tr class="memitem:a38d7201449ad34c1eb2572c09cf46117 inherit pub_methods_classGyanis_1_1base_1_1LogAppender" id="r_a38d7201449ad34c1eb2572c09cf46117"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1LogAppender.html#a38d7201449ad34c1eb2572c09cf46117">~LogAppender</a> ()=default</td></tr>
+<tr class="memdesc:a38d7201449ad34c1eb2572c09cf46117 inherit pub_methods_classGyanis_1_1base_1_1LogAppender"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <br /></td></tr>
+<tr class="separator:a38d7201449ad34c1eb2572c09cf46117 inherit pub_methods_classGyanis_1_1base_1_1LogAppender"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62ccc32c0d630c249c8c7fb2869aaeec inherit pub_methods_classGyanis_1_1base_1_1LogAppender" id="r_a62ccc32c0d630c249c8c7fb2869aaeec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1LogAppender.html#a62ccc32c0d630c249c8c7fb2869aaeec">setFormatter</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1base_1_1LogFormatter.html">LogFormatter</a> &gt; &amp;value)</td></tr>
+<tr class="memdesc:a62ccc32c0d630c249c8c7fb2869aaeec inherit pub_methods_classGyanis_1_1base_1_1LogAppender"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置日志格式器  <br /></td></tr>
+<tr class="separator:a62ccc32c0d630c249c8c7fb2869aaeec inherit pub_methods_classGyanis_1_1base_1_1LogAppender"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebd7702a134da9a1b69d080e21f8ca2d inherit pub_methods_classGyanis_1_1base_1_1LogAppender" id="r_aebd7702a134da9a1b69d080e21f8ca2d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1base_1_1LogFormatter.html">LogFormatter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1LogAppender.html#aebd7702a134da9a1b69d080e21f8ca2d">getFormatter</a> ()</td></tr>
+<tr class="memdesc:aebd7702a134da9a1b69d080e21f8ca2d inherit pub_methods_classGyanis_1_1base_1_1LogAppender"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取日志格式器  <br /></td></tr>
+<tr class="separator:aebd7702a134da9a1b69d080e21f8ca2d inherit pub_methods_classGyanis_1_1base_1_1LogAppender"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89a27f625b734e622dfe5bac4e71fdd inherit pub_methods_classGyanis_1_1base_1_1LogAppender" id="r_ac89a27f625b734e622dfe5bac4e71fdd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGyanis_1_1base_1_1LogLevel.html#ab0b56a285f03f901bb39f5ce2a337f7d">LogLevel::Level</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1LogAppender.html#ac89a27f625b734e622dfe5bac4e71fdd">getLevel</a> () const</td></tr>
+<tr class="memdesc:ac89a27f625b734e622dfe5bac4e71fdd inherit pub_methods_classGyanis_1_1base_1_1LogAppender"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取日志级别  <br /></td></tr>
+<tr class="separator:ac89a27f625b734e622dfe5bac4e71fdd inherit pub_methods_classGyanis_1_1base_1_1LogAppender"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09637b4880bf3a61d5dec84fc723ca7b inherit pub_methods_classGyanis_1_1base_1_1LogAppender" id="r_a09637b4880bf3a61d5dec84fc723ca7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1LogAppender.html#a09637b4880bf3a61d5dec84fc723ca7b">setLevel</a> (<a class="el" href="classGyanis_1_1base_1_1LogLevel.html#ab0b56a285f03f901bb39f5ce2a337f7d">LogLevel::Level</a> value)</td></tr>
+<tr class="memdesc:a09637b4880bf3a61d5dec84fc723ca7b inherit pub_methods_classGyanis_1_1base_1_1LogAppender"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置日志级别  <br /></td></tr>
+<tr class="separator:a09637b4880bf3a61d5dec84fc723ca7b inherit pub_methods_classGyanis_1_1base_1_1LogAppender"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a06f2871a8b072429158f976d2d645e3b" id="r_a06f2871a8b072429158f976d2d645e3b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1FileLogAppender.html#a06f2871a8b072429158f976d2d645e3b">m_filename</a></td></tr>
+<tr class="memdesc:a06f2871a8b072429158f976d2d645e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件路径  <br /></td></tr>
+<tr class="separator:a06f2871a8b072429158f976d2d645e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5df6a0008c4ec682e1393cbe14631337" id="r_a5df6a0008c4ec682e1393cbe14631337"><td class="memItemLeft" align="right" valign="top">std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1FileLogAppender.html#a5df6a0008c4ec682e1393cbe14631337">m_filestream</a></td></tr>
+<tr class="memdesc:a5df6a0008c4ec682e1393cbe14631337"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件流  <br /></td></tr>
+<tr class="separator:a5df6a0008c4ec682e1393cbe14631337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a220eac7c0e7b80ae33f828e28e1cc78d" id="r_a220eac7c0e7b80ae33f828e28e1cc78d"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1FileLogAppender.html#a220eac7c0e7b80ae33f828e28e1cc78d">m_lastTime</a> = 0</td></tr>
+<tr class="memdesc:a220eac7c0e7b80ae33f828e28e1cc78d"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; 上次重新打开时间  <br /></td></tr>
+<tr class="separator:a220eac7c0e7b80ae33f828e28e1cc78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_types_classGyanis_1_1base_1_1LogAppender"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classGyanis_1_1base_1_1LogAppender')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classGyanis_1_1base_1_1LogAppender.html">Gyanis::base::LogAppender</a></td></tr>
+<tr class="memitem:a1daeba2a632d2c9d1cffaf87c5d8d1ce inherit pub_types_classGyanis_1_1base_1_1LogAppender" id="r_a1daeba2a632d2c9d1cffaf87c5d8d1ce"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1LogAppender.html#a1daeba2a632d2c9d1cffaf87c5d8d1ce">MutexType</a> = <a class="el" href="classGyanis_1_1base_1_1Spinlock.html">Spinlock</a></td></tr>
+<tr class="separator:a1daeba2a632d2c9d1cffaf87c5d8d1ce inherit pub_types_classGyanis_1_1base_1_1LogAppender"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classGyanis_1_1base_1_1LogAppender"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classGyanis_1_1base_1_1LogAppender')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classGyanis_1_1base_1_1LogAppender.html">Gyanis::base::LogAppender</a></td></tr>
+<tr class="memitem:acba617ee9c738986c59b153f6838bbb5 inherit pro_attribs_classGyanis_1_1base_1_1LogAppender" id="r_acba617ee9c738986c59b153f6838bbb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGyanis_1_1base_1_1LogLevel.html#ab0b56a285f03f901bb39f5ce2a337f7d">LogLevel::Level</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1LogAppender.html#acba617ee9c738986c59b153f6838bbb5">m_level</a> = <a class="el" href="classGyanis_1_1base_1_1LogLevel.html#ab0b56a285f03f901bb39f5ce2a337f7da5f164cf8bc864a398d45755cb3ed2663">LogLevel::INFO</a></td></tr>
+<tr class="separator:acba617ee9c738986c59b153f6838bbb5 inherit pro_attribs_classGyanis_1_1base_1_1LogAppender"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbd76ecc8ea1563fdb00d4ad4e144f4d inherit pro_attribs_classGyanis_1_1base_1_1LogAppender" id="r_abbd76ecc8ea1563fdb00d4ad4e144f4d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1LogAppender.html#abbd76ecc8ea1563fdb00d4ad4e144f4d">m_hasFormatter</a> = false</td></tr>
+<tr class="memdesc:abbd76ecc8ea1563fdb00d4ad4e144f4d inherit pro_attribs_classGyanis_1_1base_1_1LogAppender"><td class="mdescLeft">&#160;</td><td class="mdescRight">日志级别  <br /></td></tr>
+<tr class="separator:abbd76ecc8ea1563fdb00d4ad4e144f4d inherit pro_attribs_classGyanis_1_1base_1_1LogAppender"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afea5fb16b9a29811c90bc515a0e5e558 inherit pro_attribs_classGyanis_1_1base_1_1LogAppender" id="r_afea5fb16b9a29811c90bc515a0e5e558"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGyanis_1_1base_1_1LogAppender.html#a1daeba2a632d2c9d1cffaf87c5d8d1ce">MutexType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1LogAppender.html#afea5fb16b9a29811c90bc515a0e5e558">m_mutex</a></td></tr>
+<tr class="memdesc:afea5fb16b9a29811c90bc515a0e5e558 inherit pro_attribs_classGyanis_1_1base_1_1LogAppender"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否有自己的日志格式器  <br /></td></tr>
+<tr class="separator:afea5fb16b9a29811c90bc515a0e5e558 inherit pro_attribs_classGyanis_1_1base_1_1LogAppender"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6b6f03af798795e04a74f98b392fa06 inherit pro_attribs_classGyanis_1_1base_1_1LogAppender" id="r_af6b6f03af798795e04a74f98b392fa06"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1base_1_1LogFormatter.html">LogFormatter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1LogAppender.html#af6b6f03af798795e04a74f98b392fa06">m_formatter</a></td></tr>
+<tr class="memdesc:af6b6f03af798795e04a74f98b392fa06 inherit pro_attribs_classGyanis_1_1base_1_1LogAppender"><td class="mdescLeft">&#160;</td><td class="mdescRight">日志格式器  <br /></td></tr>
+<tr class="separator:af6b6f03af798795e04a74f98b392fa06 inherit pro_attribs_classGyanis_1_1base_1_1LogAppender"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>输出到文件的 Appender </p>
+
+<p class="definition">在文件 <a class="el" href="Log_8h_source.html">Log.h</a> 第 <a class="el" href="Log_8h_source.html#l00509">509</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a1e5bf1c18a3035887ff6fe76d87cefbd" name="a1e5bf1c18a3035887ff6fe76d87cefbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e5bf1c18a3035887ff6fe76d87cefbd">&#9670;&#160;</a></span>FileLogAppender()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gyanis::base::FileLogAppender::FileLogAppender </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Log_8cpp_source.html">Log.cpp</a> 第 <a class="el" href="Log_8cpp_source.html#l00704">704</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  705</span>        : <a class="code hl_variable" href="classGyanis_1_1base_1_1FileLogAppender.html#a06f2871a8b072429158f976d2d645e3b">m_filename</a>(std::move(filename))</div>
+<div class="line"><span class="lineno">  706</span>    {</div>
+<div class="line"><span class="lineno">  707</span>        <a class="code hl_function" href="classGyanis_1_1base_1_1FileLogAppender.html#a3709e4a27127166d3023484e794690a0">reopen</a>();</div>
+<div class="line"><span class="lineno">  708</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1FileLogAppender_html_a06f2871a8b072429158f976d2d645e3b"><div class="ttname"><a href="classGyanis_1_1base_1_1FileLogAppender.html#a06f2871a8b072429158f976d2d645e3b">Gyanis::base::FileLogAppender::m_filename</a></div><div class="ttdeci">std::string m_filename</div><div class="ttdoc">文件路径</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00522">Log.h:522</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1FileLogAppender_html_a3709e4a27127166d3023484e794690a0"><div class="ttname"><a href="classGyanis_1_1base_1_1FileLogAppender.html#a3709e4a27127166d3023484e794690a0">Gyanis::base::FileLogAppender::reopen</a></div><div class="ttdeci">bool reopen()</div><div class="ttdoc">重新打开日志文件</div><div class="ttdef"><b>Definition</b> <a href="Log_8cpp_source.html#l00747">Log.cpp:747</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1FileLogAppender_a1e5bf1c18a3035887ff6fe76d87cefbd_cgraph.png" border="0" usemap="#aclassGyanis_1_1base_1_1FileLogAppender_a1e5bf1c18a3035887ff6fe76d87cefbd_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a66c82ee7f817460f0434f6d660fe6cde" name="a66c82ee7f817460f0434f6d660fe6cde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66c82ee7f817460f0434f6d660fe6cde">&#9670;&#160;</a></span>log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::base::FileLogAppender::log </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1base_1_1Logger.html">Logger</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>logger</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classGyanis_1_1base_1_1LogLevel.html#ab0b56a285f03f901bb39f5ce2a337f7d">LogLevel::Level</a>&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1base_1_1LogEvent.html">LogEvent</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>event</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>写入日志 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">logger</td><td>日志器 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>日志级别 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td>日志事件 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1base_1_1LogAppender.html#a4d605ef2a622b40b33412229a9d60719">Gyanis::base::LogAppender</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Log_8cpp_source.html">Log.cpp</a> 第 <a class="el" href="Log_8cpp_source.html#l00710">710</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  712</span>    {</div>
+<div class="line"><span class="lineno">  713</span>        <span class="keywordflow">if</span> (level &gt;= <a class="code hl_variable" href="classGyanis_1_1base_1_1LogAppender.html#acba617ee9c738986c59b153f6838bbb5">m_level</a>)</div>
+<div class="line"><span class="lineno">  714</span>        {</div>
+<div class="line"><span class="lineno">  715</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> uint64_t now = event-&gt;getTime(); now &gt;= (<a class="code hl_variable" href="classGyanis_1_1base_1_1FileLogAppender.html#a220eac7c0e7b80ae33f828e28e1cc78d">m_lastTime</a> + 3))</div>
+<div class="line"><span class="lineno">  716</span>            {</div>
+<div class="line"><span class="lineno">  717</span>                <a class="code hl_function" href="classGyanis_1_1base_1_1FileLogAppender.html#a3709e4a27127166d3023484e794690a0">reopen</a>();</div>
+<div class="line"><span class="lineno">  718</span>                <a class="code hl_variable" href="classGyanis_1_1base_1_1FileLogAppender.html#a220eac7c0e7b80ae33f828e28e1cc78d">m_lastTime</a> = now;</div>
+<div class="line"><span class="lineno">  719</span>            }</div>
+<div class="line"><span class="lineno">  720</span>            std::scoped_lock lock(<a class="code hl_variable" href="classGyanis_1_1base_1_1LogAppender.html#afea5fb16b9a29811c90bc515a0e5e558">m_mutex</a>);</div>
+<div class="line"><span class="lineno">  721</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classGyanis_1_1base_1_1LogAppender.html#af6b6f03af798795e04a74f98b392fa06">m_formatter</a>-&gt;format(<a class="code hl_variable" href="classGyanis_1_1base_1_1FileLogAppender.html#a5df6a0008c4ec682e1393cbe14631337">m_filestream</a>, logger, level, event))</div>
+<div class="line"><span class="lineno">  722</span>            {</div>
+<div class="line"><span class="lineno">  723</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;error&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  724</span>            }</div>
+<div class="line"><span class="lineno">  725</span>        }</div>
+<div class="line"><span class="lineno">  726</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1FileLogAppender_html_a220eac7c0e7b80ae33f828e28e1cc78d"><div class="ttname"><a href="classGyanis_1_1base_1_1FileLogAppender.html#a220eac7c0e7b80ae33f828e28e1cc78d">Gyanis::base::FileLogAppender::m_lastTime</a></div><div class="ttdeci">uint64_t m_lastTime</div><div class="ttdoc">&lt; 上次重新打开时间</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00524">Log.h:524</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1FileLogAppender_html_a5df6a0008c4ec682e1393cbe14631337"><div class="ttname"><a href="classGyanis_1_1base_1_1FileLogAppender.html#a5df6a0008c4ec682e1393cbe14631337">Gyanis::base::FileLogAppender::m_filestream</a></div><div class="ttdeci">std::ofstream m_filestream</div><div class="ttdoc">文件流</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00523">Log.h:523</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1LogAppender_html_acba617ee9c738986c59b153f6838bbb5"><div class="ttname"><a href="classGyanis_1_1base_1_1LogAppender.html#acba617ee9c738986c59b153f6838bbb5">Gyanis::base::LogAppender::m_level</a></div><div class="ttdeci">LogLevel::Level m_level</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00380">Log.h:380</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1LogAppender_html_af6b6f03af798795e04a74f98b392fa06"><div class="ttname"><a href="classGyanis_1_1base_1_1LogAppender.html#af6b6f03af798795e04a74f98b392fa06">Gyanis::base::LogAppender::m_formatter</a></div><div class="ttdeci">std::shared_ptr&lt; LogFormatter &gt; m_formatter</div><div class="ttdoc">日志格式器</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00383">Log.h:383</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1LogAppender_html_afea5fb16b9a29811c90bc515a0e5e558"><div class="ttname"><a href="classGyanis_1_1base_1_1LogAppender.html#afea5fb16b9a29811c90bc515a0e5e558">Gyanis::base::LogAppender::m_mutex</a></div><div class="ttdeci">MutexType m_mutex</div><div class="ttdoc">是否有自己的日志格式器</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00382">Log.h:382</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1FileLogAppender_a66c82ee7f817460f0434f6d660fe6cde_cgraph.png" border="0" usemap="#aclassGyanis_1_1base_1_1FileLogAppender_a66c82ee7f817460f0434f6d660fe6cde_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a3709e4a27127166d3023484e794690a0" name="a3709e4a27127166d3023484e794690a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3709e4a27127166d3023484e794690a0">&#9670;&#160;</a></span>reopen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::base::FileLogAppender::reopen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>重新打开日志文件 </p>
+
+<p class="definition">在文件 <a class="el" href="Log_8cpp_source.html">Log.cpp</a> 第 <a class="el" href="Log_8cpp_source.html#l00747">747</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  748</span>    {</div>
+<div class="line"><span class="lineno">  749</span>        std::scoped_lock lock(<a class="code hl_variable" href="classGyanis_1_1base_1_1LogAppender.html#afea5fb16b9a29811c90bc515a0e5e558">m_mutex</a>);</div>
+<div class="line"><span class="lineno">  750</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1base_1_1FileLogAppender.html#a5df6a0008c4ec682e1393cbe14631337">m_filestream</a>)</div>
+<div class="line"><span class="lineno">  751</span>        {</div>
+<div class="line"><span class="lineno">  752</span>            <a class="code hl_variable" href="classGyanis_1_1base_1_1FileLogAppender.html#a5df6a0008c4ec682e1393cbe14631337">m_filestream</a>.close();</div>
+<div class="line"><span class="lineno">  753</span>        }</div>
+<div class="line"><span class="lineno">  754</span> </div>
+<div class="line"><span class="lineno">  755</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> std::string dir = <a class="code hl_variable" href="classGyanis_1_1base_1_1FileLogAppender.html#a06f2871a8b072429158f976d2d645e3b">m_filename</a>.substr(0, <a class="code hl_variable" href="classGyanis_1_1base_1_1FileLogAppender.html#a06f2871a8b072429158f976d2d645e3b">m_filename</a>.find_last_of(<span class="stringliteral">&quot;/\\&quot;</span>)); !std::filesystem::exists(</div>
+<div class="line"><span class="lineno">  756</span>            dir))</div>
+<div class="line"><span class="lineno">  757</span>        {</div>
+<div class="line"><span class="lineno">  758</span>            std::filesystem::create_directories(dir);</div>
+<div class="line"><span class="lineno">  759</span>        }</div>
+<div class="line"><span class="lineno">  760</span>        <a class="code hl_variable" href="classGyanis_1_1base_1_1FileLogAppender.html#a5df6a0008c4ec682e1393cbe14631337">m_filestream</a>.open(<a class="code hl_variable" href="classGyanis_1_1base_1_1FileLogAppender.html#a06f2871a8b072429158f976d2d645e3b">m_filename</a>, std::ios::app);</div>
+<div class="line"><span class="lineno">  761</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1base_1_1FileLogAppender.html#a5df6a0008c4ec682e1393cbe14631337">m_filestream</a>.is_open();</div>
+<div class="line"><span class="lineno">  762</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1FileLogAppender_a3709e4a27127166d3023484e794690a0_icgraph.png" border="0" usemap="#aclassGyanis_1_1base_1_1FileLogAppender_a3709e4a27127166d3023484e794690a0_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a1b0b397b061d158fb777b6771b56a9d9" name="a1b0b397b061d158fb777b6771b56a9d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b0b397b061d158fb777b6771b56a9d9">&#9670;&#160;</a></span>toYamlString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::base::FileLogAppender::toYamlString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将日志输出目标的配置转为 YAML 字符串 </p>
+
+<p>实现了 <a class="el" href="classGyanis_1_1base_1_1LogAppender.html#a91fbb155eff4f810220c0031067e7045">Gyanis::base::LogAppender</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Log_8cpp_source.html">Log.cpp</a> 第 <a class="el" href="Log_8cpp_source.html#l00728">728</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  729</span>    {</div>
+<div class="line"><span class="lineno">  730</span>        std::scoped_lock lock(<a class="code hl_variable" href="classGyanis_1_1base_1_1LogAppender.html#afea5fb16b9a29811c90bc515a0e5e558">m_mutex</a>);</div>
+<div class="line"><span class="lineno">  731</span>        YAML::Node node;</div>
+<div class="line"><span class="lineno">  732</span>        node[<span class="stringliteral">&quot;type&quot;</span>] = <span class="stringliteral">&quot;FileLogAppender&quot;</span>;</div>
+<div class="line"><span class="lineno">  733</span>        node[<span class="stringliteral">&quot;file&quot;</span>] = <a class="code hl_variable" href="classGyanis_1_1base_1_1FileLogAppender.html#a06f2871a8b072429158f976d2d645e3b">m_filename</a>;</div>
+<div class="line"><span class="lineno">  734</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1base_1_1LogAppender.html#acba617ee9c738986c59b153f6838bbb5">m_level</a> != <a class="code hl_enumvalue" href="classGyanis_1_1base_1_1LogLevel.html#ab0b56a285f03f901bb39f5ce2a337f7da8143b6bb9b0caab59ad8253114a9fcaa">LogLevel::UNKNOW</a>)</div>
+<div class="line"><span class="lineno">  735</span>        {</div>
+<div class="line"><span class="lineno">  736</span>            node[<span class="stringliteral">&quot;level&quot;</span>] = <a class="code hl_function" href="classGyanis_1_1base_1_1LogLevel.html#aa563dc2f2fd15aa32186aeac2075d80b">LogLevel::ToString</a>(<a class="code hl_variable" href="classGyanis_1_1base_1_1LogAppender.html#acba617ee9c738986c59b153f6838bbb5">m_level</a>);</div>
+<div class="line"><span class="lineno">  737</span>        }</div>
+<div class="line"><span class="lineno">  738</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1base_1_1LogAppender.html#abbd76ecc8ea1563fdb00d4ad4e144f4d">m_hasFormatter</a> &amp;&amp; <a class="code hl_variable" href="classGyanis_1_1base_1_1LogAppender.html#af6b6f03af798795e04a74f98b392fa06">m_formatter</a>)</div>
+<div class="line"><span class="lineno">  739</span>        {</div>
+<div class="line"><span class="lineno">  740</span>            node[<span class="stringliteral">&quot;formatter&quot;</span>] = <a class="code hl_variable" href="classGyanis_1_1base_1_1LogAppender.html#af6b6f03af798795e04a74f98b392fa06">m_formatter</a>-&gt;getPattern();</div>
+<div class="line"><span class="lineno">  741</span>        }</div>
+<div class="line"><span class="lineno">  742</span>        std::stringstream ss;</div>
+<div class="line"><span class="lineno">  743</span>        ss &lt;&lt; node;</div>
+<div class="line"><span class="lineno">  744</span>        <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><span class="lineno">  745</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1LogAppender_html_abbd76ecc8ea1563fdb00d4ad4e144f4d"><div class="ttname"><a href="classGyanis_1_1base_1_1LogAppender.html#abbd76ecc8ea1563fdb00d4ad4e144f4d">Gyanis::base::LogAppender::m_hasFormatter</a></div><div class="ttdeci">bool m_hasFormatter</div><div class="ttdoc">日志级别</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00381">Log.h:381</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1LogLevel_html_aa563dc2f2fd15aa32186aeac2075d80b"><div class="ttname"><a href="classGyanis_1_1base_1_1LogLevel.html#aa563dc2f2fd15aa32186aeac2075d80b">Gyanis::base::LogLevel::ToString</a></div><div class="ttdeci">static const char * ToString(Level level)</div><div class="ttdoc">将日志级别转换为字符串</div><div class="ttdef"><b>Definition</b> <a href="Log_8cpp_source.html#l00012">Log.cpp:12</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1LogLevel_html_ab0b56a285f03f901bb39f5ce2a337f7da8143b6bb9b0caab59ad8253114a9fcaa"><div class="ttname"><a href="classGyanis_1_1base_1_1LogLevel.html#ab0b56a285f03f901bb39f5ce2a337f7da8143b6bb9b0caab59ad8253114a9fcaa">Gyanis::base::LogLevel::UNKNOW</a></div><div class="ttdeci">@ UNKNOW</div><div class="ttdoc">未知级别</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00113">Log.h:113</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1FileLogAppender_a1b0b397b061d158fb777b6771b56a9d9_cgraph.png" border="0" usemap="#aclassGyanis_1_1base_1_1FileLogAppender_a1b0b397b061d158fb777b6771b56a9d9_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a06f2871a8b072429158f976d2d645e3b" name="a06f2871a8b072429158f976d2d645e3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06f2871a8b072429158f976d2d645e3b">&#9670;&#160;</a></span>m_filename</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::base::FileLogAppender::m_filename</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文件路径 </p>
+
+<p class="definition">在文件 <a class="el" href="Log_8h_source.html">Log.h</a> 第 <a class="el" href="Log_8h_source.html#l00522">522</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5df6a0008c4ec682e1393cbe14631337" name="a5df6a0008c4ec682e1393cbe14631337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5df6a0008c4ec682e1393cbe14631337">&#9670;&#160;</a></span>m_filestream</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ofstream Gyanis::base::FileLogAppender::m_filestream</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文件流 </p>
+
+<p class="definition">在文件 <a class="el" href="Log_8h_source.html">Log.h</a> 第 <a class="el" href="Log_8h_source.html#l00523">523</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a220eac7c0e7b80ae33f828e28e1cc78d" name="a220eac7c0e7b80ae33f828e28e1cc78d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a220eac7c0e7b80ae33f828e28e1cc78d">&#9670;&#160;</a></span>m_lastTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t Gyanis::base::FileLogAppender::m_lastTime = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>&lt; 上次重新打开时间 </p>
+
+<p class="definition">在文件 <a class="el" href="Log_8h_source.html">Log.h</a> 第 <a class="el" href="Log_8h_source.html#l00524">524</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/base/<a class="el" href="Log_8h_source.html">Log.h</a></li>
+<li>src/base/<a class="el" href="Log_8cpp_source.html">Log.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGyanis.html">Gyanis</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1base.html">base</a></li><li class="navelem"><a class="el" href="classGyanis_1_1base_1_1FileLogAppender.html">FileLogAppender</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

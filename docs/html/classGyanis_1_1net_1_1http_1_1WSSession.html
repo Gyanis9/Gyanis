@@ -1,0 +1,654 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: Gyanis::net::http::WSSession类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGyanis_1_1net_1_1http_1_1WSSession.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="classGyanis_1_1net_1_1http_1_1WSSession-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Gyanis::net::http::WSSession类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>WebSocket 会话类，继承自 <code><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpSession.html" title="HTTP 会话类">HttpSession</a></code>，处理 WebSocket 协议的握手、消息接收与发送等操作  
+ <a href="classGyanis_1_1net_1_1http_1_1WSSession.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="WebSocketSession_8h_source.html">WebSocketSession.h</a>&gt;</code></p>
+<div class="dynheader">
+类 Gyanis::net::http::WSSession 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1WSSession__inherit__graph.png" border="0" usemap="#aGyanis_1_1net_1_1http_1_1WSSession_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+Gyanis::net::http::WSSession 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1WSSession__coll__graph.png" border="0" usemap="#aGyanis_1_1net_1_1http_1_1WSSession_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a77840eb58fc0c3ece724c364dc95d72d" id="r_a77840eb58fc0c3ece724c364dc95d72d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSSession.html#a77840eb58fc0c3ece724c364dc95d72d">WSSession</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Socket.html">Socket</a> &gt; &amp;sock, bool owner=true)</td></tr>
+<tr class="memdesc:a77840eb58fc0c3ece724c364dc95d72d"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数，初始化 WebSocket 会话  <br /></td></tr>
+<tr class="separator:a77840eb58fc0c3ece724c364dc95d72d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f18a0f0e706c0f4d26287731191b7c8" id="r_a1f18a0f0e706c0f4d26287731191b7c8"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html">HttpRequest</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSSession.html#a1f18a0f0e706c0f4d26287731191b7c8">handleShake</a> ()</td></tr>
+<tr class="memdesc:a1f18a0f0e706c0f4d26287731191b7c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理 WebSocket 握手请求  <br /></td></tr>
+<tr class="separator:a1f18a0f0e706c0f4d26287731191b7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a438872b08c8095c5af27b2f7b5084b53" id="r_a438872b08c8095c5af27b2f7b5084b53"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1WSFrameMessage.html">WSFrameMessage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSSession.html#a438872b08c8095c5af27b2f7b5084b53">recvMessage</a> ()</td></tr>
+<tr class="memdesc:a438872b08c8095c5af27b2f7b5084b53"><td class="mdescLeft">&#160;</td><td class="mdescRight">接收 WebSocket 消息  <br /></td></tr>
+<tr class="separator:a438872b08c8095c5af27b2f7b5084b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a8befb5f2f0e25f5d4ef541044da5b8" id="r_a4a8befb5f2f0e25f5d4ef541044da5b8"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSSession.html#a4a8befb5f2f0e25f5d4ef541044da5b8">sendMessage</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1WSFrameMessage.html">WSFrameMessage</a> &gt; &amp;msg, bool fin=true)</td></tr>
+<tr class="memdesc:a4a8befb5f2f0e25f5d4ef541044da5b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送 WebSocket 消息  <br /></td></tr>
+<tr class="separator:a4a8befb5f2f0e25f5d4ef541044da5b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2db1c4fa5978b70fbc938db16a22c0f" id="r_ae2db1c4fa5978b70fbc938db16a22c0f"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSSession.html#ae2db1c4fa5978b70fbc938db16a22c0f">sendMessage</a> (const std::string &amp;msg, int32_t opcode=<a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149ae391e0ba403d73c2ad5b583f562566ac">WSFrameHead::TEXT_FRAME</a>, bool fin=true)</td></tr>
+<tr class="memdesc:ae2db1c4fa5978b70fbc938db16a22c0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送字符串形式的 WebSocket 消息  <br /></td></tr>
+<tr class="separator:ae2db1c4fa5978b70fbc938db16a22c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53d98180ef94c319ff9f3548ecaea176" id="r_a53d98180ef94c319ff9f3548ecaea176"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSSession.html#a53d98180ef94c319ff9f3548ecaea176">ping</a> ()</td></tr>
+<tr class="memdesc:a53d98180ef94c319ff9f3548ecaea176"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送 PING 帧，用于检测连接  <br /></td></tr>
+<tr class="separator:a53d98180ef94c319ff9f3548ecaea176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bee2f2ad89770d041a299f77181a01e" id="r_a2bee2f2ad89770d041a299f77181a01e"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSSession.html#a2bee2f2ad89770d041a299f77181a01e">pong</a> ()</td></tr>
+<tr class="memdesc:a2bee2f2ad89770d041a299f77181a01e"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送 PONG 帧，回应 PING 帧  <br /></td></tr>
+<tr class="separator:a2bee2f2ad89770d041a299f77181a01e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classGyanis_1_1net_1_1http_1_1HttpSession"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classGyanis_1_1net_1_1http_1_1HttpSession')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpSession.html">Gyanis::net::http::HttpSession</a></td></tr>
+<tr class="memitem:a151ed69cfc175b1322c91946c825c8bf inherit pub_methods_classGyanis_1_1net_1_1http_1_1HttpSession" id="r_a151ed69cfc175b1322c91946c825c8bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpSession.html#a151ed69cfc175b1322c91946c825c8bf">HttpSession</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Socket.html">Socket</a> &gt; &amp;<a class="el" href="Hook_8cpp.html#af4e0711877c45a41168ac677b0670ccd">socket</a>, bool owner=true)</td></tr>
+<tr class="memdesc:a151ed69cfc175b1322c91946c825c8bf inherit pub_methods_classGyanis_1_1net_1_1http_1_1HttpSession"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造 HTTP 会话对  <br /></td></tr>
+<tr class="separator:a151ed69cfc175b1322c91946c825c8bf inherit pub_methods_classGyanis_1_1net_1_1http_1_1HttpSession"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb29f2b45c6fe87cfef9cbc645b0c5fc inherit pub_methods_classGyanis_1_1net_1_1http_1_1HttpSession" id="r_adb29f2b45c6fe87cfef9cbc645b0c5fc"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html">HttpRequest</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpSession.html#adb29f2b45c6fe87cfef9cbc645b0c5fc">recvRequest</a> ()</td></tr>
+<tr class="memdesc:adb29f2b45c6fe87cfef9cbc645b0c5fc inherit pub_methods_classGyanis_1_1net_1_1http_1_1HttpSession"><td class="mdescLeft">&#160;</td><td class="mdescRight">接收 HTTP 请求  <br /></td></tr>
+<tr class="separator:adb29f2b45c6fe87cfef9cbc645b0c5fc inherit pub_methods_classGyanis_1_1net_1_1http_1_1HttpSession"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e17a212eb37cb58b403f8dde8a27622 inherit pub_methods_classGyanis_1_1net_1_1http_1_1HttpSession" id="r_a4e17a212eb37cb58b403f8dde8a27622"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpSession.html#a4e17a212eb37cb58b403f8dde8a27622">sendResponse</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpResponse.html">HttpResponse</a> &gt; &amp;response)</td></tr>
+<tr class="memdesc:a4e17a212eb37cb58b403f8dde8a27622 inherit pub_methods_classGyanis_1_1net_1_1http_1_1HttpSession"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送 HTTP 响应  <br /></td></tr>
+<tr class="separator:a4e17a212eb37cb58b403f8dde8a27622 inherit pub_methods_classGyanis_1_1net_1_1http_1_1HttpSession"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html">Gyanis::net::stream::SocketStream</a></td></tr>
+<tr class="memitem:a6a25a7e4d252083531881441f08ef04c inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream" id="r_a6a25a7e4d252083531881441f08ef04c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#a6a25a7e4d252083531881441f08ef04c">SocketStream</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Socket.html">Socket</a> &gt; &amp;<a class="el" href="Hook_8cpp.html#af4e0711877c45a41168ac677b0670ccd">socket</a>, bool owner=true)</td></tr>
+<tr class="memdesc:a6a25a7e4d252083531881441f08ef04c inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <br /></td></tr>
+<tr class="separator:a6a25a7e4d252083531881441f08ef04c inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c2388352b456052a340904f95b03f10 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream" id="r_a7c2388352b456052a340904f95b03f10"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#a7c2388352b456052a340904f95b03f10">~SocketStream</a> () override</td></tr>
+<tr class="memdesc:a7c2388352b456052a340904f95b03f10 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <br /></td></tr>
+<tr class="separator:a7c2388352b456052a340904f95b03f10 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0ea3e080fa20a42638d05dd2e17934b inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream" id="r_ab0ea3e080fa20a42638d05dd2e17934b"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#ab0ea3e080fa20a42638d05dd2e17934b">read</a> (void *buffer, size_t length) override</td></tr>
+<tr class="memdesc:ab0ea3e080fa20a42638d05dd2e17934b inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">从套接字流中读取数据  <br /></td></tr>
+<tr class="separator:ab0ea3e080fa20a42638d05dd2e17934b inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6047f7322af9470c0a7aa2298051b98f inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream" id="r_a6047f7322af9470c0a7aa2298051b98f"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#a6047f7322af9470c0a7aa2298051b98f">read</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html">ByteArray</a> &gt; &amp;buffer, size_t length) override</td></tr>
+<tr class="memdesc:a6047f7322af9470c0a7aa2298051b98f inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">从套接字流中读取数据到 <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html" title="二进制数据数组类">ByteArray</a>  <br /></td></tr>
+<tr class="separator:a6047f7322af9470c0a7aa2298051b98f inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63e711e50a0b19ab9678813c374427ad inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream" id="r_a63e711e50a0b19ab9678813c374427ad"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#a63e711e50a0b19ab9678813c374427ad">write</a> (const void *buffer, size_t length) override</td></tr>
+<tr class="memdesc:a63e711e50a0b19ab9678813c374427ad inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">向套接字流中写入数据  <br /></td></tr>
+<tr class="separator:a63e711e50a0b19ab9678813c374427ad inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0faecce34e2b9cc391e21435b14d106 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream" id="r_ab0faecce34e2b9cc391e21435b14d106"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#ab0faecce34e2b9cc391e21435b14d106">write</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html">ByteArray</a> &gt; &amp;buffer, size_t length) override</td></tr>
+<tr class="memdesc:ab0faecce34e2b9cc391e21435b14d106 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">向套接字流中写入数据来自 <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html" title="二进制数据数组类">ByteArray</a>  <br /></td></tr>
+<tr class="separator:ab0faecce34e2b9cc391e21435b14d106 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0067b43785bf4fcfb11f5699aae2a267 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream" id="r_a0067b43785bf4fcfb11f5699aae2a267"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#a0067b43785bf4fcfb11f5699aae2a267">close</a> () override</td></tr>
+<tr class="memdesc:a0067b43785bf4fcfb11f5699aae2a267 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭套接字流  <br /></td></tr>
+<tr class="separator:a0067b43785bf4fcfb11f5699aae2a267 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4ce03cdbf0b993eb32096a910fdb051 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream" id="r_ab4ce03cdbf0b993eb32096a910fdb051"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Socket.html">Socket</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#ab4ce03cdbf0b993eb32096a910fdb051">getSocket</a> () const</td></tr>
+<tr class="memdesc:ab4ce03cdbf0b993eb32096a910fdb051 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取底层套接字  <br /></td></tr>
+<tr class="separator:ab4ce03cdbf0b993eb32096a910fdb051 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0462fe53f428564fbcf27996be13796b inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream" id="r_a0462fe53f428564fbcf27996be13796b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#a0462fe53f428564fbcf27996be13796b">isConnected</a> () const</td></tr>
+<tr class="memdesc:a0462fe53f428564fbcf27996be13796b inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断套接字是否已连接  <br /></td></tr>
+<tr class="separator:a0462fe53f428564fbcf27996be13796b inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79f7237bac7923990394a8f4f72e071e inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream" id="r_a79f7237bac7923990394a8f4f72e071e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Address.html">Address</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#a79f7237bac7923990394a8f4f72e071e">getRemoteAddress</a> () const</td></tr>
+<tr class="memdesc:a79f7237bac7923990394a8f4f72e071e inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取远程地址  <br /></td></tr>
+<tr class="separator:a79f7237bac7923990394a8f4f72e071e inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af690e78a8a1b85f83520261ad6a20332 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream" id="r_af690e78a8a1b85f83520261ad6a20332"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Address.html">Address</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#af690e78a8a1b85f83520261ad6a20332">getLocalAddress</a> () const</td></tr>
+<tr class="memdesc:af690e78a8a1b85f83520261ad6a20332 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取本地地址  <br /></td></tr>
+<tr class="separator:af690e78a8a1b85f83520261ad6a20332 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4706357d130352a196ee08c840bf0740 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream" id="r_a4706357d130352a196ee08c840bf0740"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#a4706357d130352a196ee08c840bf0740">getRemoteAddressString</a> () const</td></tr>
+<tr class="memdesc:a4706357d130352a196ee08c840bf0740 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取远程地址的字符串表示  <br /></td></tr>
+<tr class="separator:a4706357d130352a196ee08c840bf0740 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41bcbdca2ec5ecfb3ceb1c836b056420 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream" id="r_a41bcbdca2ec5ecfb3ceb1c836b056420"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#a41bcbdca2ec5ecfb3ceb1c836b056420">getLocalAddressString</a> () const</td></tr>
+<tr class="memdesc:a41bcbdca2ec5ecfb3ceb1c836b056420 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取本地地址的字符串表示  <br /></td></tr>
+<tr class="separator:a41bcbdca2ec5ecfb3ceb1c836b056420 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classGyanis_1_1net_1_1stream_1_1Stream"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classGyanis_1_1net_1_1stream_1_1Stream')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html">Gyanis::net::stream::Stream</a></td></tr>
+<tr class="memitem:a2ebee442ebc409dfa047840728193f2b inherit pub_methods_classGyanis_1_1net_1_1stream_1_1Stream" id="r_a2ebee442ebc409dfa047840728193f2b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html#a2ebee442ebc409dfa047840728193f2b">~Stream</a> ()=default</td></tr>
+<tr class="memdesc:a2ebee442ebc409dfa047840728193f2b inherit pub_methods_classGyanis_1_1net_1_1stream_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <br /></td></tr>
+<tr class="separator:a2ebee442ebc409dfa047840728193f2b inherit pub_methods_classGyanis_1_1net_1_1stream_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10aae9283f1a40ad1600e85beb058c26 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1Stream" id="r_a10aae9283f1a40ad1600e85beb058c26"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html#a10aae9283f1a40ad1600e85beb058c26">readFixSize</a> (void *buffer, size_t length)</td></tr>
+<tr class="memdesc:a10aae9283f1a40ad1600e85beb058c26 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">从流中读取固定大小的数据  <br /></td></tr>
+<tr class="separator:a10aae9283f1a40ad1600e85beb058c26 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7cca0e0f5169ed06f433ca3a0338db7 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1Stream" id="r_af7cca0e0f5169ed06f433ca3a0338db7"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html#af7cca0e0f5169ed06f433ca3a0338db7">readFixSize</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html">ByteArray</a> &gt; &amp;buffer, size_t length)</td></tr>
+<tr class="memdesc:af7cca0e0f5169ed06f433ca3a0338db7 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">从流中读取固定大小的数据到 <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html" title="二进制数据数组类">ByteArray</a>  <br /></td></tr>
+<tr class="separator:af7cca0e0f5169ed06f433ca3a0338db7 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b8c448a949fbd16f50befc025bd9ff2 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1Stream" id="r_a0b8c448a949fbd16f50befc025bd9ff2"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html#a0b8c448a949fbd16f50befc025bd9ff2">writeFixSize</a> (const void *buffer, size_t length)</td></tr>
+<tr class="memdesc:a0b8c448a949fbd16f50befc025bd9ff2 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">向流中写入固定大小的数据  <br /></td></tr>
+<tr class="separator:a0b8c448a949fbd16f50befc025bd9ff2 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac90dc78a3fe394bdb568e759f0f3d010 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1Stream" id="r_ac90dc78a3fe394bdb568e759f0f3d010"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html#ac90dc78a3fe394bdb568e759f0f3d010">writeFixSize</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html">ByteArray</a> &gt; &amp;buffer, size_t length)</td></tr>
+<tr class="memdesc:ac90dc78a3fe394bdb568e759f0f3d010 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1Stream"><td class="mdescLeft">&#160;</td><td class="mdescRight">向流中写入固定大小的数据来自 <a class="el" href="classGyanis_1_1net_1_1stream_1_1ByteArray.html" title="二进制数据数组类">ByteArray</a>  <br /></td></tr>
+<tr class="separator:ac90dc78a3fe394bdb568e759f0f3d010 inherit pub_methods_classGyanis_1_1net_1_1stream_1_1Stream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a4a81d673689e998c4940e3d993c31d05" id="r_a4a81d673689e998c4940e3d993c31d05"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSSession.html#a4a81d673689e998c4940e3d993c31d05">handleServerShake</a> ()</td></tr>
+<tr class="memdesc:a4a81d673689e998c4940e3d993c31d05"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理服务器端的 WebSocket 握手  <br /></td></tr>
+<tr class="separator:a4a81d673689e998c4940e3d993c31d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff3274e5816bdb04a5145daeedbe05b2" id="r_aff3274e5816bdb04a5145daeedbe05b2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSSession.html#aff3274e5816bdb04a5145daeedbe05b2">handleClientShake</a> ()</td></tr>
+<tr class="memdesc:aff3274e5816bdb04a5145daeedbe05b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理客户端的 WebSocket 握手  <br /></td></tr>
+<tr class="separator:aff3274e5816bdb04a5145daeedbe05b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_attribs_classGyanis_1_1net_1_1stream_1_1SocketStream"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classGyanis_1_1net_1_1stream_1_1SocketStream')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html">Gyanis::net::stream::SocketStream</a></td></tr>
+<tr class="memitem:a04bd87d86b32d5f7560a2f789aaaadb7 inherit pro_attribs_classGyanis_1_1net_1_1stream_1_1SocketStream" id="r_a04bd87d86b32d5f7560a2f789aaaadb7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Socket.html">Socket</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#a04bd87d86b32d5f7560a2f789aaaadb7">m_socket</a> = nullptr</td></tr>
+<tr class="memdesc:a04bd87d86b32d5f7560a2f789aaaadb7 inherit pro_attribs_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">底层套接字对象  <br /></td></tr>
+<tr class="separator:a04bd87d86b32d5f7560a2f789aaaadb7 inherit pro_attribs_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc215ad8017223809af0fa6e5f83b01b inherit pro_attribs_classGyanis_1_1net_1_1stream_1_1SocketStream" id="r_adc215ad8017223809af0fa6e5f83b01b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1stream_1_1SocketStream.html#adc215ad8017223809af0fa6e5f83b01b">m_owner</a></td></tr>
+<tr class="memdesc:adc215ad8017223809af0fa6e5f83b01b inherit pro_attribs_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否拥有套接字的所有权，决定是否在析构时关闭套接字  <br /></td></tr>
+<tr class="separator:adc215ad8017223809af0fa6e5f83b01b inherit pro_attribs_classGyanis_1_1net_1_1stream_1_1SocketStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>WebSocket 会话类，继承自 <code><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpSession.html" title="HTTP 会话类">HttpSession</a></code>，处理 WebSocket 协议的握手、消息接收与发送等操作 </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8h_source.html">WebSocketSession.h</a> 第 <a class="el" href="WebSocketSession_8h_source.html#l00096">96</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a77840eb58fc0c3ece724c364dc95d72d" name="a77840eb58fc0c3ece724c364dc95d72d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77840eb58fc0c3ece724c364dc95d72d">&#9670;&#160;</a></span>WSSession()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gyanis::net::http::WSSession::WSSession </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Socket.html">Socket</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>owner</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数，初始化 WebSocket 会话 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sock</td><td>WebSocket 连接的套接字 </td></tr>
+    <tr><td class="paramname">owner</td><td>是否拥有该套接字，默认为 true </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8cpp_source.html">WebSocketSession.cpp</a> 第 <a class="el" href="WebSocketSession_8cpp_source.html#l00057">57</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>                                                                            : <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpSession.html#a151ed69cfc175b1322c91946c825c8bf">HttpSession</a>(sock, owner)</div>
+<div class="line"><span class="lineno">   58</span>    {</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpSession_html_a151ed69cfc175b1322c91946c825c8bf"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpSession.html#a151ed69cfc175b1322c91946c825c8bf">Gyanis::net::http::HttpSession::HttpSession</a></div><div class="ttdeci">HttpSession(const std::shared_ptr&lt; Socket &gt; &amp;socket, bool owner=true)</div><div class="ttdoc">构造 HTTP 会话对</div><div class="ttdef"><b>Definition</b> <a href="HttpSession_8cpp_source.html#l00006">HttpSession.cpp:6</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aff3274e5816bdb04a5145daeedbe05b2" name="aff3274e5816bdb04a5145daeedbe05b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff3274e5816bdb04a5145daeedbe05b2">&#9670;&#160;</a></span>handleClientShake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::net::http::WSSession::handleClientShake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>处理客户端的 WebSocket 握手 </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8cpp_source.html">WebSocketSession.cpp</a> 第 <a class="el" href="WebSocketSession_8cpp_source.html#l00159">159</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  160</span>    {</div>
+<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  162</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4a81d673689e998c4940e3d993c31d05" name="a4a81d673689e998c4940e3d993c31d05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a81d673689e998c4940e3d993c31d05">&#9670;&#160;</a></span>handleServerShake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::net::http::WSSession::handleServerShake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>处理服务器端的 WebSocket 握手 </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8cpp_source.html">WebSocketSession.cpp</a> 第 <a class="el" href="WebSocketSession_8cpp_source.html#l00154">154</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  155</span>    {</div>
+<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  157</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1f18a0f0e706c0f4d26287731191b7c8" name="a1f18a0f0e706c0f4d26287731191b7c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f18a0f0e706c0f4d26287731191b7c8">&#9670;&#160;</a></span>handleShake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html">HttpRequest</a> &gt; Gyanis::net::http::WSSession::handleShake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>处理 WebSocket 握手请求 </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8cpp_source.html">WebSocketSession.cpp</a> 第 <a class="el" href="WebSocketSession_8cpp_source.html#l00061">61</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        std::shared_ptr&lt;HttpRequest&gt; request = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">   65</span>        {</div>
+<div class="line"><span class="lineno">   66</span>            request = <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpSession.html#adb29f2b45c6fe87cfef9cbc645b0c5fc">recvRequest</a>();</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">if</span> (!request)</div>
+<div class="line"><span class="lineno">   68</span>            {</div>
+<div class="line"><span class="lineno">   69</span>                <a class="code hl_define" href="Log_8h.html#abf8dce5b90852304a0897b44b9dfd038">LOG_INFO</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>)</div>
+<div class="line"><span class="lineno">   70</span>                    &lt;&lt; <span class="stringliteral">&quot;Invalid HTTP request received. &quot;</span></div>
+<div class="line"><span class="lineno">   71</span>                    &lt;&lt; <span class="stringliteral">&quot;Please verify the request format and try again.&quot;</span>;</div>
+<div class="line"><span class="lineno">   72</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   73</span>            }</div>
+<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">if</span> (strcasecmp(request-&gt;getHeader(<span class="stringliteral">&quot;Upgrade&quot;</span>).c_str(), <span class="stringliteral">&quot;websocket&quot;</span>) != 0)</div>
+<div class="line"><span class="lineno">   75</span>            {</div>
+<div class="line"><span class="lineno">   76</span>                <a class="code hl_define" href="Log_8h.html#abf8dce5b90852304a0897b44b9dfd038">LOG_INFO</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>)</div>
+<div class="line"><span class="lineno">   77</span>                    &lt;&lt; <span class="stringliteral">&quot;HTTP header &#39;Upgrade&#39; is not set to &#39;websocket. &quot;</span></div>
+<div class="line"><span class="lineno">   78</span>                    &lt;&lt; <span class="stringliteral">&quot;The connection upgrade request is invalid.&quot;</span>;</div>
+<div class="line"><span class="lineno">   79</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   80</span>            }</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">if</span> (strcasecmp(request-&gt;getHeader(<span class="stringliteral">&quot;Connection&quot;</span>).c_str(), <span class="stringliteral">&quot;Upgrade&quot;</span>) != 0)</div>
+<div class="line"><span class="lineno">   82</span>            {</div>
+<div class="line"><span class="lineno">   83</span>                <a class="code hl_define" href="Log_8h.html#abf8dce5b90852304a0897b44b9dfd038">LOG_INFO</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>)</div>
+<div class="line"><span class="lineno">   84</span>                &lt;&lt; <span class="stringliteral">&quot;HTTP header &#39;Connection&#39; is not set to &#39;Upgrade&#39;. &quot;</span></div>
+<div class="line"><span class="lineno">   85</span>                &lt;&lt; <span class="stringliteral">&quot;The connection header is invalid for a WebSocket handshake.&quot;</span>;</div>
+<div class="line"><span class="lineno">   86</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   87</span>            }</div>
+<div class="line"><span class="lineno">   88</span>            <span class="keywordflow">if</span> (request-&gt;getHeaderAs&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;Sec-WebSocket-Version&quot;</span>) != 13)</div>
+<div class="line"><span class="lineno">   89</span>            {</div>
+<div class="line"><span class="lineno">   90</span>                <a class="code hl_define" href="Log_8h.html#abf8dce5b90852304a0897b44b9dfd038">LOG_INFO</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>)</div>
+<div class="line"><span class="lineno">   91</span>                    &lt;&lt; <span class="stringliteral">&quot;HTTP header &#39;Sec-WebSocket-Version&#39; is not set to &#39;13&#39;. &quot;</span></div>
+<div class="line"><span class="lineno">   92</span>                    &lt;&lt; <span class="stringliteral">&quot;The WebSocket version is invalid for the handshake.&quot;</span>;</div>
+<div class="line"><span class="lineno">   93</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   94</span>            }</div>
+<div class="line"><span class="lineno">   95</span>            <span class="keyword">const</span> std::string key = request-&gt;getHeader(<span class="stringliteral">&quot;Sec-WebSocket-Key&quot;</span>);</div>
+<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">if</span> (key.empty())</div>
+<div class="line"><span class="lineno">   97</span>            {</div>
+<div class="line"><span class="lineno">   98</span>                <a class="code hl_define" href="Log_8h.html#abf8dce5b90852304a0897b44b9dfd038">LOG_INFO</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>)</div>
+<div class="line"><span class="lineno">   99</span>                    &lt;&lt; <span class="stringliteral">&quot;HTTP header &#39;Sec-WebSocket-Key&#39; is missing or null. &quot;</span></div>
+<div class="line"><span class="lineno">  100</span>                    &lt;&lt; <span class="stringliteral">&quot;The WebSocket key is required for a valid handshake.&quot;</span>;</div>
+<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  102</span>            }</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>            std::string value = key + <span class="stringliteral">&quot;258EAFA5-E914-47DA-95CA-C5AB0DC85B11&quot;</span>;</div>
+<div class="line"><span class="lineno">  105</span>            value = <a class="code hl_function" href="namespaceGyanis_1_1base.html#a455fa878a56422cb96cc849dca93e2e6">base::base64encode</a>(<a class="code hl_function" href="namespaceGyanis_1_1base.html#a744144670ca73fccedd5d68945b03796">base::sha1sum</a>(value));</div>
+<div class="line"><span class="lineno">  106</span>            request-&gt;setWebSocket(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>            <span class="keyword">const</span> <span class="keyword">auto</span> response = request-&gt;createResponse();</div>
+<div class="line"><span class="lineno">  109</span>            response-&gt;setStatus(<a class="code hl_enumvalue" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5af65c2e25f74e831cf2af44707695f440">HttpStatus::SWITCHING_PROTOCOLS</a>);</div>
+<div class="line"><span class="lineno">  110</span>            response-&gt;setWebsocket(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  111</span>            response-&gt;setReason(<span class="stringliteral">&quot;Web Socket Protocol Handshake&quot;</span>);</div>
+<div class="line"><span class="lineno">  112</span>            response-&gt;setHeader(<span class="stringliteral">&quot;Upgrade&quot;</span>, <span class="stringliteral">&quot;websocket&quot;</span>);</div>
+<div class="line"><span class="lineno">  113</span>            response-&gt;setHeader(<span class="stringliteral">&quot;Connection&quot;</span>, <span class="stringliteral">&quot;Upgrade&quot;</span>);</div>
+<div class="line"><span class="lineno">  114</span>            response-&gt;setHeader(<span class="stringliteral">&quot;Sec-WebSocket-Accept&quot;</span>, value);</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>            <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1HttpSession.html#a4e17a212eb37cb58b403f8dde8a27622">sendResponse</a>(response);</div>
+<div class="line"><span class="lineno">  117</span>            <a class="code hl_define" href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>) &lt;&lt; *request;</div>
+<div class="line"><span class="lineno">  118</span>            <a class="code hl_define" href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>) &lt;&lt; *response;</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">return</span> request;</div>
+<div class="line"><span class="lineno">  120</span>        }</div>
+<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">while</span> (<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">if</span> (request)</div>
+<div class="line"><span class="lineno">  123</span>        {</div>
+<div class="line"><span class="lineno">  124</span>            <a class="code hl_define" href="Log_8h.html#abf8dce5b90852304a0897b44b9dfd038">LOG_INFO</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>) &lt;&lt; *request;</div>
+<div class="line"><span class="lineno">  125</span>        }</div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  127</span>    }</div>
+<div class="ttc" id="aLog_8h_html_aa689601a9413bd4f1c41974694746f4e"><div class="ttname"><a href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a></div><div class="ttdeci">#define LOG_DEBUG(logger)</div><div class="ttdoc">输出 debug 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00031">Log.h:31</a></div></div>
+<div class="ttc" id="aLog_8h_html_abf8dce5b90852304a0897b44b9dfd038"><div class="ttname"><a href="Log_8h.html#abf8dce5b90852304a0897b44b9dfd038">LOG_INFO</a></div><div class="ttdeci">#define LOG_INFO(logger)</div><div class="ttdoc">输出 info 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00036">Log.h:36</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpSession_html_a4e17a212eb37cb58b403f8dde8a27622"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpSession.html#a4e17a212eb37cb58b403f8dde8a27622">Gyanis::net::http::HttpSession::sendResponse</a></div><div class="ttdeci">long sendResponse(const std::shared_ptr&lt; HttpResponse &gt; &amp;response)</div><div class="ttdoc">发送 HTTP 响应</div><div class="ttdef"><b>Definition</b> <a href="HttpSession_8cpp_source.html#l00089">HttpSession.cpp:89</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1HttpSession_html_adb29f2b45c6fe87cfef9cbc645b0c5fc"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1HttpSession.html#adb29f2b45c6fe87cfef9cbc645b0c5fc">Gyanis::net::http::HttpSession::recvRequest</a></div><div class="ttdeci">std::shared_ptr&lt; HttpRequest &gt; recvRequest()</div><div class="ttdoc">接收 HTTP 请求</div><div class="ttdef"><b>Definition</b> <a href="HttpSession_8cpp_source.html#l00010">HttpSession.cpp:10</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_a455fa878a56422cb96cc849dca93e2e6"><div class="ttname"><a href="namespaceGyanis_1_1base.html#a455fa878a56422cb96cc849dca93e2e6">Gyanis::base::base64encode</a></div><div class="ttdeci">std::string base64encode(const std::string &amp;data)</div><div class="ttdoc">Base64 编码</div><div class="ttdef"><b>Definition</b> <a href="HashUtils_8cpp_source.html#l00231">HashUtils.cpp:231</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_a744144670ca73fccedd5d68945b03796"><div class="ttname"><a href="namespaceGyanis_1_1base.html#a744144670ca73fccedd5d68945b03796">Gyanis::base::sha1sum</a></div><div class="ttdeci">std::string sha1sum(const std::string &amp;data)</div><div class="ttdoc">SHA1 校验和计算</div><div class="ttdef"><b>Definition</b> <a href="HashUtils_8cpp_source.html#l00337">HashUtils.cpp:337</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html_a9e698df600de971647f36fff7d1b70ab"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">Gyanis::net::http::g_logger</a></div><div class="ttdeci">static auto g_logger</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8cpp_source.html#l00009">HttpConnection.cpp:9</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html_ab4899242d3f57596ebbf6af49fc6f3d5af65c2e25f74e831cf2af44707695f440"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5af65c2e25f74e831cf2af44707695f440">Gyanis::net::http::HttpStatus::SWITCHING_PROTOCOLS</a></div><div class="ttdeci">@ SWITCHING_PROTOCOLS</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1WSSession_a1f18a0f0e706c0f4d26287731191b7c8_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1WSSession_a1f18a0f0e706c0f4d26287731191b7c8_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a53d98180ef94c319ff9f3548ecaea176" name="a53d98180ef94c319ff9f3548ecaea176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53d98180ef94c319ff9f3548ecaea176">&#9670;&#160;</a></span>ping()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t Gyanis::net::http::WSSession::ping </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送 PING 帧，用于检测连接 </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8cpp_source.html">WebSocketSession.cpp</a> 第 <a class="el" href="WebSocketSession_8cpp_source.html#l00144">144</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>    {</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceGyanis_1_1net_1_1http.html#a6832af9fd19ac1c8f718af81d13ca4d4">WSPing</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html_a6832af9fd19ac1c8f718af81d13ca4d4"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html#a6832af9fd19ac1c8f718af81d13ca4d4">Gyanis::net::http::WSPing</a></div><div class="ttdeci">int32_t WSPing(stream::Stream *stream)</div><div class="ttdoc">向流中发送 PING 帧</div><div class="ttdef"><b>Definition</b> <a href="WebSocketSession_8cpp_source.html#l00352">WebSocketSession.cpp:352</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1WSSession_a53d98180ef94c319ff9f3548ecaea176_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1WSSession_a53d98180ef94c319ff9f3548ecaea176_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a2bee2f2ad89770d041a299f77181a01e" name="a2bee2f2ad89770d041a299f77181a01e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bee2f2ad89770d041a299f77181a01e">&#9670;&#160;</a></span>pong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t Gyanis::net::http::WSSession::pong </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送 PONG 帧，回应 PING 帧 </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8cpp_source.html">WebSocketSession.cpp</a> 第 <a class="el" href="WebSocketSession_8cpp_source.html#l00149">149</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  150</span>    {</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceGyanis_1_1net_1_1http.html#ad8b7d2b678089ef65163de359f2c400a">WSPong</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  152</span>    }</div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html_ad8b7d2b678089ef65163de359f2c400a"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html#ad8b7d2b678089ef65163de359f2c400a">Gyanis::net::http::WSPong</a></div><div class="ttdeci">int32_t WSPong(stream::Stream *stream)</div><div class="ttdoc">向流中发送 PONG 帧</div><div class="ttdef"><b>Definition</b> <a href="WebSocketSession_8cpp_source.html#l00365">WebSocketSession.cpp:365</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1WSSession_a2bee2f2ad89770d041a299f77181a01e_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1WSSession_a2bee2f2ad89770d041a299f77181a01e_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a438872b08c8095c5af27b2f7b5084b53" name="a438872b08c8095c5af27b2f7b5084b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a438872b08c8095c5af27b2f7b5084b53">&#9670;&#160;</a></span>recvMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1WSFrameMessage.html">WSFrameMessage</a> &gt; Gyanis::net::http::WSSession::recvMessage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>接收 WebSocket 消息 </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8cpp_source.html">WebSocketSession.cpp</a> 第 <a class="el" href="WebSocketSession_8cpp_source.html#l00129">129</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  130</span>    {</div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceGyanis_1_1net_1_1http.html#a49b24bd5aabf32918f7bc7c98e698c97">WSRecvMessage</a>(<span class="keyword">this</span>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  132</span>    }</div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html_a49b24bd5aabf32918f7bc7c98e698c97"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html#a49b24bd5aabf32918f7bc7c98e698c97">Gyanis::net::http::WSRecvMessage</a></div><div class="ttdeci">std::shared_ptr&lt; WSFrameMessage &gt; WSRecvMessage(stream::Stream *stream, bool client)</div><div class="ttdoc">WebSocket 消息最大大小配置变量</div><div class="ttdef"><b>Definition</b> <a href="WebSocketSession_8cpp_source.html#l00164">WebSocketSession.cpp:164</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1WSSession_a438872b08c8095c5af27b2f7b5084b53_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1WSSession_a438872b08c8095c5af27b2f7b5084b53_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a4a8befb5f2f0e25f5d4ef541044da5b8" name="a4a8befb5f2f0e25f5d4ef541044da5b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a8befb5f2f0e25f5d4ef541044da5b8">&#9670;&#160;</a></span>sendMessage() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t Gyanis::net::http::WSSession::sendMessage </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1WSFrameMessage.html">WSFrameMessage</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fin</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送 WebSocket 消息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>WebSocket 消息对象 </td></tr>
+    <tr><td class="paramname">fin</td><td>是否为最后一帧，默认为 true </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回发送操作的状态码 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8cpp_source.html">WebSocketSession.cpp</a> 第 <a class="el" href="WebSocketSession_8cpp_source.html#l00134">134</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>    {</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceGyanis_1_1net_1_1http.html#ad7a0a14e59c8bdfb095836f68efcf5ee">WSSendMessage</a>(<span class="keyword">this</span>, msg, <span class="keyword">false</span>, fin);</div>
+<div class="line"><span class="lineno">  137</span>    }</div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html_ad7a0a14e59c8bdfb095836f68efcf5ee"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html#ad7a0a14e59c8bdfb095836f68efcf5ee">Gyanis::net::http::WSSendMessage</a></div><div class="ttdeci">int32_t WSSendMessage(stream::Stream *stream, const std::shared_ptr&lt; WSFrameMessage &gt; &amp;msg, bool client, bool fin)</div><div class="ttdoc">向流中发送 WebSocket 消息</div><div class="ttdef"><b>Definition</b> <a href="WebSocketSession_8cpp_source.html#l00281">WebSocketSession.cpp:281</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1WSSession_a4a8befb5f2f0e25f5d4ef541044da5b8_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1WSSession_a4a8befb5f2f0e25f5d4ef541044da5b8_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae2db1c4fa5978b70fbc938db16a22c0f" name="ae2db1c4fa5978b70fbc938db16a22c0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2db1c4fa5978b70fbc938db16a22c0f">&#9670;&#160;</a></span>sendMessage() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t Gyanis::net::http::WSSession::sendMessage </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>opcode</em> = <code><a class="el" href="structGyanis_1_1net_1_1http_1_1WSFrameHead.html#a86bceaec2ebbb9dac66e27181faac149ae391e0ba403d73c2ad5b583f562566ac">WSFrameHead::TEXT_FRAME</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fin</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送字符串形式的 WebSocket 消息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>消息内容字符串 </td></tr>
+    <tr><td class="paramname">opcode</td><td>操作码，默认为文本帧（<code>TEXT_FRAME</code>） </td></tr>
+    <tr><td class="paramname">fin</td><td>是否为最后一帧，默认为 true </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回发送操作的状态码 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="WebSocketSession_8cpp_source.html">WebSocketSession.cpp</a> 第 <a class="el" href="WebSocketSession_8cpp_source.html#l00139">139</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>    {</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceGyanis_1_1net_1_1http.html#ad7a0a14e59c8bdfb095836f68efcf5ee">WSSendMessage</a>(<span class="keyword">this</span>, std::make_shared&lt;WSFrameMessage&gt;(opcode, msg), <span class="keyword">false</span>, fin);</div>
+<div class="line"><span class="lineno">  142</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1WSSession_ae2db1c4fa5978b70fbc938db16a22c0f_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1http_1_1WSSession_ae2db1c4fa5978b70fbc938db16a22c0f_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/net/http/<a class="el" href="WebSocketSession_8h_source.html">WebSocketSession.h</a></li>
+<li>src/net/http/<a class="el" href="WebSocketSession_8cpp_source.html">WebSocketSession.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGyanis.html">Gyanis</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1net.html">net</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1net_1_1http.html">http</a></li><li class="navelem"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSSession.html">WSSession</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

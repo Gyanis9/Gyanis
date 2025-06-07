@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: include/core/FdManager.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('FdManager_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">FdManager.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="FdManager_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef FDMANAGER_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define FDMANAGER_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;shared_mutex&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="Singleton_8h.html">base/Singleton.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceGyanis_1_1core.html">Gyanis::core</a></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classGyanis_1_1core_1_1FdContext.html">   19</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyanis_1_1core_1_1FdContext.html">FdContext</a> : <span class="keyword">public</span> std::enable_shared_from_this&lt;FdContext&gt;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">explicit</span> <a class="code hl_class" href="classGyanis_1_1core_1_1FdContext.html">FdContext</a>(<span class="keywordtype">int</span> fd);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classGyanis_1_1core_1_1FdContext.html#abe15b07a9c8c5a3d3e816c72de124194">   31</a></span>        <a class="code hl_function" href="classGyanis_1_1core_1_1FdContext.html#abe15b07a9c8c5a3d3e816c72de124194">~FdContext</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1core_1_1FdContext.html#ac8e46c86adcb28008a8cc7530548f9bd">isInit</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1core_1_1FdContext.html#a60aa14274b192ac15acef6ec96834456">isSocket</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1core_1_1FdContext.html#a4517f8d63aeedce994ccc9abd44a882c">isClose</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1core_1_1FdContext.html#a4dbf4e501934fc3707cc5926201b27a2">setUserNonblock</a>(<span class="keywordtype">bool</span> value);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1core_1_1FdContext.html#a2f81be89cfa50e30de002da29a637f2d">getUserNonblock</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1core_1_1FdContext.html#a095d9fda19057ce6afd438a753b24887">setSysNonblock</a>(<span class="keywordtype">bool</span> value);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1core_1_1FdContext.html#a7c88e88c1c6d16e34ef68b396edbe478">getSysNonblock</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1core_1_1FdContext.html#acec8764a6a16efac6a56148f4cec65e6">setTimeout</a>(<span class="keywordtype">int</span> type, uint64_t value);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        std::chrono::milliseconds <a class="code hl_function" href="classGyanis_1_1core_1_1FdContext.html#a87b966a2ff6e9eef3099e9c2ddea48b9">getTimeout</a>(<span class="keywordtype">int</span> type) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        std::string <a class="code hl_function" href="classGyanis_1_1core_1_1FdContext.html#a4c594f4bb49614d4189f8662a9584ead">toString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1core_1_1FdContext.html#a91c6e1ba0fa20c24b183cfe7984a49b6">init</a>();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classGyanis_1_1core_1_1FdContext.html#afe9a55eff04bbc4349ce17de57983891">   93</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="classGyanis_1_1core_1_1FdContext.html#afe9a55eff04bbc4349ce17de57983891">m_isInit</a> : 1; </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classGyanis_1_1core_1_1FdContext.html#adc3248423755ab4663f135cb9aeb7839">   94</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="classGyanis_1_1core_1_1FdContext.html#adc3248423755ab4663f135cb9aeb7839">m_isSocket</a> : 1; </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classGyanis_1_1core_1_1FdContext.html#afdb89709337d82c5fc14c446fa7f0967">   95</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="classGyanis_1_1core_1_1FdContext.html#afdb89709337d82c5fc14c446fa7f0967">m_sysNonblock</a> : 1; </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classGyanis_1_1core_1_1FdContext.html#a46c35d02b348abb5b8d93184eefbffb7">   96</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="classGyanis_1_1core_1_1FdContext.html#a46c35d02b348abb5b8d93184eefbffb7">m_userNonblock</a> : 1; </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classGyanis_1_1core_1_1FdContext.html#aaa33e19fa3285c3c5b76f870122deaeb">   97</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="classGyanis_1_1core_1_1FdContext.html#aaa33e19fa3285c3c5b76f870122deaeb">m_isClosed</a> : 1; </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classGyanis_1_1core_1_1FdContext.html#af9f7fd65fec1cb5917d6a53723ec62ac">   98</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="classGyanis_1_1core_1_1FdContext.html#af9f7fd65fec1cb5917d6a53723ec62ac">m_fd</a>; </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classGyanis_1_1core_1_1FdContext.html#a2761ac518c67ab2074d1206c4e5b3cb1">   99</a></span>        std::chrono::milliseconds <a class="code hl_variable" href="classGyanis_1_1core_1_1FdContext.html#a2761ac518c67ab2074d1206c4e5b3cb1">m_recvTimeout</a>; </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classGyanis_1_1core_1_1FdContext.html#a3a85a27a13147e8b3a80361474ae9210">  100</a></span>        std::chrono::milliseconds <a class="code hl_variable" href="classGyanis_1_1core_1_1FdContext.html#a3a85a27a13147e8b3a80361474ae9210">m_sendTimeout</a>; </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    };</div>
+</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="};">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classGyanis_1_1core_1_1FdManager.html">  106</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyanis_1_1core_1_1FdManager.html">FdManager</a></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <a class="code hl_function" href="classGyanis_1_1core_1_1FdManager.html#a02aff89fadd740e9187538c9059a343c">FdManager</a>();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classGyanis_1_1core_1_1FdManager.html#a63bf880bbd840472abbe3ca163a979b5">  117</a></span>        <a class="code hl_function" href="classGyanis_1_1core_1_1FdManager.html#a63bf880bbd840472abbe3ca163a979b5">~FdManager</a>();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        std::shared_ptr&lt;FdContext&gt; <a class="code hl_function" href="classGyanis_1_1core_1_1FdManager.html#a914241fb64cd63baa4b53bf6317d4538">get</a>(<span class="keywordtype">int</span> fd, <span class="keywordtype">bool</span> auto_create = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1core_1_1FdManager.html#a211faa09e149f4725d66aee395d5b264">del</a>(<span class="keywordtype">int</span> fd);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classGyanis_1_1core_1_1FdManager.html#a698515a994af5dffed6b458128e6de6f">  133</a></span>        std::shared_mutex <a class="code hl_variable" href="classGyanis_1_1core_1_1FdManager.html#a698515a994af5dffed6b458128e6de6f">m_mutex</a>; </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classGyanis_1_1core_1_1FdManager.html#ab52ee20882b073c293972b4bc59ea941">  134</a></span>        std::vector&lt;std::shared_ptr&lt;FdContext&gt;&gt; <a class="code hl_variable" href="classGyanis_1_1core_1_1FdManager.html#ab52ee20882b073c293972b4bc59ea941">m_datas</a>; </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    };</div>
+</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="namespaceGyanis_1_1core.html#a99ef3fe469a00b3cb94b93aefd06d59f">  140</a></span>    <span class="keyword">using </span><a class="code hl_class" href="classSingleton.html">FdMgr</a> = <a class="code hl_class" href="classSingleton.html">Singleton&lt;FdManager&gt;</a>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>}</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aSingleton_8h_html"><div class="ttname"><a href="Singleton_8h.html">Singleton.h</a></div><div class="ttdoc">单例模式模版封装</div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html">Gyanis::core::FdContext</a></div><div class="ttdoc">文件描述符上下文类</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8h_source.html#l00019">FdManager.h:20</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_a095d9fda19057ce6afd438a753b24887"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#a095d9fda19057ce6afd438a753b24887">Gyanis::core::FdContext::setSysNonblock</a></div><div class="ttdeci">void setSysNonblock(bool value)</div><div class="ttdoc">设置系统层的非阻塞模式</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8cpp_source.html#l00053">FdManager.cpp:53</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_a2761ac518c67ab2074d1206c4e5b3cb1"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#a2761ac518c67ab2074d1206c4e5b3cb1">Gyanis::core::FdContext::m_recvTimeout</a></div><div class="ttdeci">std::chrono::milliseconds m_recvTimeout</div><div class="ttdoc">接收超时</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8h_source.html#l00099">FdManager.h:99</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_a2f81be89cfa50e30de002da29a637f2d"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#a2f81be89cfa50e30de002da29a637f2d">Gyanis::core::FdContext::getUserNonblock</a></div><div class="ttdeci">bool getUserNonblock() const</div><div class="ttdoc">获取用户层的非阻塞模式设置</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8cpp_source.html#l00048">FdManager.cpp:48</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_a3a85a27a13147e8b3a80361474ae9210"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#a3a85a27a13147e8b3a80361474ae9210">Gyanis::core::FdContext::m_sendTimeout</a></div><div class="ttdeci">std::chrono::milliseconds m_sendTimeout</div><div class="ttdoc">发送超时</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8h_source.html#l00100">FdManager.h:100</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_a4517f8d63aeedce994ccc9abd44a882c"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#a4517f8d63aeedce994ccc9abd44a882c">Gyanis::core::FdContext::isClose</a></div><div class="ttdeci">bool isClose() const</div><div class="ttdoc">检查文件描述符是否已关闭</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8cpp_source.html#l00038">FdManager.cpp:38</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_a46c35d02b348abb5b8d93184eefbffb7"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#a46c35d02b348abb5b8d93184eefbffb7">Gyanis::core::FdContext::m_userNonblock</a></div><div class="ttdeci">bool m_userNonblock</div><div class="ttdoc">是否为用户非阻塞</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8h_source.html#l00096">FdManager.h:96</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_a4c594f4bb49614d4189f8662a9584ead"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#a4c594f4bb49614d4189f8662a9584ead">Gyanis::core::FdContext::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdoc">获取文件描述符的信息</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8cpp_source.html#l00084">FdManager.cpp:84</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_a4dbf4e501934fc3707cc5926201b27a2"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#a4dbf4e501934fc3707cc5926201b27a2">Gyanis::core::FdContext::setUserNonblock</a></div><div class="ttdeci">void setUserNonblock(bool value)</div><div class="ttdoc">设置用户层的非阻塞模式</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8cpp_source.html#l00043">FdManager.cpp:43</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_a60aa14274b192ac15acef6ec96834456"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#a60aa14274b192ac15acef6ec96834456">Gyanis::core::FdContext::isSocket</a></div><div class="ttdeci">bool isSocket() const</div><div class="ttdoc">检查文件描述符是否为 Socket 类型</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8cpp_source.html#l00033">FdManager.cpp:33</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_a7c88e88c1c6d16e34ef68b396edbe478"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#a7c88e88c1c6d16e34ef68b396edbe478">Gyanis::core::FdContext::getSysNonblock</a></div><div class="ttdeci">bool getSysNonblock() const</div><div class="ttdoc">获取系统层的非阻塞模式设置</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8cpp_source.html#l00058">FdManager.cpp:58</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_a87b966a2ff6e9eef3099e9c2ddea48b9"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#a87b966a2ff6e9eef3099e9c2ddea48b9">Gyanis::core::FdContext::getTimeout</a></div><div class="ttdeci">std::chrono::milliseconds getTimeout(int type) const</div><div class="ttdoc">获取文件描述符的超时值</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8cpp_source.html#l00075">FdManager.cpp:75</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_a91c6e1ba0fa20c24b183cfe7984a49b6"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#a91c6e1ba0fa20c24b183cfe7984a49b6">Gyanis::core::FdContext::init</a></div><div class="ttdeci">bool init()</div><div class="ttdoc">初始化文件描述符上下文</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8cpp_source.html#l00098">FdManager.cpp:98</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_aaa33e19fa3285c3c5b76f870122deaeb"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#aaa33e19fa3285c3c5b76f870122deaeb">Gyanis::core::FdContext::m_isClosed</a></div><div class="ttdeci">bool m_isClosed</div><div class="ttdoc">是否关闭</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8h_source.html#l00097">FdManager.h:97</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_abe15b07a9c8c5a3d3e816c72de124194"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#abe15b07a9c8c5a3d3e816c72de124194">Gyanis::core::FdContext::~FdContext</a></div><div class="ttdeci">~FdContext()</div><div class="ttdoc">析构函数</div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_ac8e46c86adcb28008a8cc7530548f9bd"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#ac8e46c86adcb28008a8cc7530548f9bd">Gyanis::core::FdContext::isInit</a></div><div class="ttdeci">bool isInit() const</div><div class="ttdoc">检查文件描述符是否已初始化</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8cpp_source.html#l00028">FdManager.cpp:28</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_acec8764a6a16efac6a56148f4cec65e6"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#acec8764a6a16efac6a56148f4cec65e6">Gyanis::core::FdContext::setTimeout</a></div><div class="ttdeci">void setTimeout(int type, uint64_t value)</div><div class="ttdoc">设置文件描述符的超时值</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8cpp_source.html#l00063">FdManager.cpp:63</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_adc3248423755ab4663f135cb9aeb7839"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#adc3248423755ab4663f135cb9aeb7839">Gyanis::core::FdContext::m_isSocket</a></div><div class="ttdeci">bool m_isSocket</div><div class="ttdoc">是否为 Socket</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8h_source.html#l00094">FdManager.h:94</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_af9f7fd65fec1cb5917d6a53723ec62ac"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#af9f7fd65fec1cb5917d6a53723ec62ac">Gyanis::core::FdContext::m_fd</a></div><div class="ttdeci">int m_fd</div><div class="ttdoc">文件描述符</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8h_source.html#l00098">FdManager.h:98</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_afdb89709337d82c5fc14c446fa7f0967"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#afdb89709337d82c5fc14c446fa7f0967">Gyanis::core::FdContext::m_sysNonblock</a></div><div class="ttdeci">bool m_sysNonblock</div><div class="ttdoc">是否为系统非阻塞</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8h_source.html#l00095">FdManager.h:95</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdContext_html_afe9a55eff04bbc4349ce17de57983891"><div class="ttname"><a href="classGyanis_1_1core_1_1FdContext.html#afe9a55eff04bbc4349ce17de57983891">Gyanis::core::FdContext::m_isInit</a></div><div class="ttdeci">bool m_isInit</div><div class="ttdoc">是否初始化</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8h_source.html#l00093">FdManager.h:93</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdManager_html"><div class="ttname"><a href="classGyanis_1_1core_1_1FdManager.html">Gyanis::core::FdManager</a></div><div class="ttdoc">文件描述符管理器类状态</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8h_source.html#l00106">FdManager.h:107</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdManager_html_a02aff89fadd740e9187538c9059a343c"><div class="ttname"><a href="classGyanis_1_1core_1_1FdManager.html#a02aff89fadd740e9187538c9059a343c">Gyanis::core::FdManager::FdManager</a></div><div class="ttdeci">FdManager()</div><div class="ttdoc">构造函数</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8cpp_source.html#l00130">FdManager.cpp:130</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdManager_html_a211faa09e149f4725d66aee395d5b264"><div class="ttname"><a href="classGyanis_1_1core_1_1FdManager.html#a211faa09e149f4725d66aee395d5b264">Gyanis::core::FdManager::del</a></div><div class="ttdeci">void del(int fd)</div><div class="ttdoc">删除文件描述符的上下文</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8cpp_source.html#l00172">FdManager.cpp:172</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdManager_html_a63bf880bbd840472abbe3ca163a979b5"><div class="ttname"><a href="classGyanis_1_1core_1_1FdManager.html#a63bf880bbd840472abbe3ca163a979b5">Gyanis::core::FdManager::~FdManager</a></div><div class="ttdeci">~FdManager()</div><div class="ttdoc">析构函数</div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdManager_html_a698515a994af5dffed6b458128e6de6f"><div class="ttname"><a href="classGyanis_1_1core_1_1FdManager.html#a698515a994af5dffed6b458128e6de6f">Gyanis::core::FdManager::m_mutex</a></div><div class="ttdeci">std::shared_mutex m_mutex</div><div class="ttdoc">保护文件描述符上下文的互斥锁</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8h_source.html#l00133">FdManager.h:133</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdManager_html_a914241fb64cd63baa4b53bf6317d4538"><div class="ttname"><a href="classGyanis_1_1core_1_1FdManager.html#a914241fb64cd63baa4b53bf6317d4538">Gyanis::core::FdManager::get</a></div><div class="ttdeci">std::shared_ptr&lt; FdContext &gt; get(int fd, bool auto_create=false)</div><div class="ttdoc">获取文件描述符的上下文</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8cpp_source.html#l00137">FdManager.cpp:137</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1FdManager_html_ab52ee20882b073c293972b4bc59ea941"><div class="ttname"><a href="classGyanis_1_1core_1_1FdManager.html#ab52ee20882b073c293972b4bc59ea941">Gyanis::core::FdManager::m_datas</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; FdContext &gt; &gt; m_datas</div><div class="ttdoc">存储文件描述符上下文</div><div class="ttdef"><b>Definition</b> <a href="FdManager_8h_source.html#l00134">FdManager.h:134</a></div></div>
+<div class="ttc" id="aclassSingleton_html"><div class="ttname"><a href="classSingleton.html">Singleton</a></div><div class="ttdoc">单例模式封装类</div><div class="ttdef"><b>Definition</b> <a href="Singleton_8h_source.html#l00018">Singleton.h:19</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1core_html"><div class="ttname"><a href="namespaceGyanis_1_1core.html">Gyanis::core</a></div><div class="ttdef"><b>Definition</b> <a href="Daemon_8h_source.html#l00013">Daemon.h:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_3d69f64eaf81436fe2b22361382717e5.html">core</a></li><li class="navelem"><a class="el" href="FdManager_8h.html">FdManager.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

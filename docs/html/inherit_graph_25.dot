@@ -1,0 +1,9 @@
+digraph "类继承关系图"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="Gyanis::base::LogDefine",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structGyanis_1_1base_1_1LogDefine.html",tooltip="日志定义，包含日志器名称、级别、格式器和多个日志输出目标"];
+}

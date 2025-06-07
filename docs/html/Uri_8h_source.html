@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: include/net/http/Uri.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Uri_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Uri.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Uri_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef URI_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define URI_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="Address_8h.html">net/Address.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceGyanis_1_1net_1_1http.html">Gyanis::net::http</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html">   24</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyanis_1_1net_1_1http_1_1Uri.html">Uri</a></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#a6e50c580aadebeecb53d125cf800d5e6">Uri</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html#aa25ba25500a975c57ebd3fb697ee2fd9">   35</a></span>        [[nodiscard]] <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#aa25ba25500a975c57ebd3fb697ee2fd9">getScheme</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1Uri.html#a023c60456f12a1c69bb1f3387fac2c3e">m_scheme</a>; }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html#a9f77a3b0e1012b648c7cd3fe0f3259f2">   40</a></span>        [[nodiscard]] <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#a9f77a3b0e1012b648c7cd3fe0f3259f2">getHost</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1Uri.html#ad88d3e2a71732b30f27434a3d3b50e09">m_host</a>; }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        [[nodiscard]] <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#aad027bc28162580cf852fd1810708c0d">getPath</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html#a3bdd5270cd087e2e8b1fa17a13fed996">   50</a></span>        [[nodiscard]] <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#a3bdd5270cd087e2e8b1fa17a13fed996">getQuery</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1Uri.html#ad9144e09b30cd40a018b57e040a52f22">m_query</a>; }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html#a14c0a0d94c4cb7749577073effa9b0c9">   55</a></span>        [[nodiscard]] <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#a14c0a0d94c4cb7749577073effa9b0c9">getFragment</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1Uri.html#a8369b8d3b95127a25a353d3abfcaf4a9">m_fragment</a>; }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html#ab1752f6b3e6df8cdf44eee7fb4814476">   60</a></span>        [[nodiscard]] <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#ab1752f6b3e6df8cdf44eee7fb4814476">getUserinfo</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1Uri.html#a16938a0da27081d6de78e4b13fdd73fd">m_userinfo</a>; }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        [[nodiscard]] int32_t <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#a274eed08cf727129321200669b677d8d">getPort</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html#a43b90adda7365540fd8635158820b479">   70</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#a43b90adda7365540fd8635158820b479">setScheme</a>(<span class="keyword">const</span> std::string&amp; scheme) { <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1Uri.html#a023c60456f12a1c69bb1f3387fac2c3e">m_scheme</a> = scheme; }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html#ad06cac14d8288e207fcfd5627cf43c31">   75</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#ad06cac14d8288e207fcfd5627cf43c31">setHost</a>(<span class="keyword">const</span> std::string&amp; host) { <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1Uri.html#ad88d3e2a71732b30f27434a3d3b50e09">m_host</a> = host; }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html#a293c80891c3a20b8d262e4119051ed88">   80</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#a293c80891c3a20b8d262e4119051ed88">setPath</a>(<span class="keyword">const</span> std::string&amp; path) { <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1Uri.html#a0cf7f17ff2698d1d9b20d4cd6a80ef1f">m_path</a> = path; }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html#a09151a2d8f230806bba37220340277ad">   85</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#a09151a2d8f230806bba37220340277ad">setQuery</a>(<span class="keyword">const</span> std::string&amp; query) { <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1Uri.html#ad9144e09b30cd40a018b57e040a52f22">m_query</a> = query; }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html#aa6a8515bad07744efd8e4ffaa4c97012">   90</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#aa6a8515bad07744efd8e4ffaa4c97012">setFragment</a>(<span class="keyword">const</span> std::string&amp; fragment) { <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1Uri.html#a8369b8d3b95127a25a353d3abfcaf4a9">m_fragment</a> = fragment; }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html#a217722f835272a4fa5841e8f83a06b37">   95</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#a217722f835272a4fa5841e8f83a06b37">setUserinfo</a>(<span class="keyword">const</span> std::string&amp; info) { <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1Uri.html#a16938a0da27081d6de78e4b13fdd73fd">m_userinfo</a> = info; }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html#aa65cd298a075644a643f0b7fae7ed3df">  100</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#aa65cd298a075644a643f0b7fae7ed3df">setPort</a>(<span class="keyword">const</span> int32_t port) { <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1Uri.html#a20dd52948baf23781d17fedd65264c54">m_port</a> = port; }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        std::ostream&amp; <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#a8a35f535b91636f5e39455f2a16eccf2">dump</a>(std::ostream&amp; os) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        [[nodiscard]] std::string <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#a7a07843ba25a0c194a75de5ae903b489">toString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        [[nodiscard]] std::shared_ptr&lt;Address&gt; <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#ae5d9dcba6fc05d5f22ebf60ef393d076">createAddress</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keyword">static</span> std::shared_ptr&lt;Uri&gt; <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#a1ce42ac3e38071ebb38d4797de8f4956">Create</a>(<span class="keyword">const</span> std::string&amp; uri);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1Uri.html#af480093b76f9ed0ab698373d9581ad20">isDefaultPort</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html#a023c60456f12a1c69bb1f3387fac2c3e">  129</a></span>        std::string <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1Uri.html#a023c60456f12a1c69bb1f3387fac2c3e">m_scheme</a>; </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html#a16938a0da27081d6de78e4b13fdd73fd">  130</a></span>        std::string <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1Uri.html#a16938a0da27081d6de78e4b13fdd73fd">m_userinfo</a>; </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html#ad88d3e2a71732b30f27434a3d3b50e09">  131</a></span>        std::string <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1Uri.html#ad88d3e2a71732b30f27434a3d3b50e09">m_host</a>; </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html#a0cf7f17ff2698d1d9b20d4cd6a80ef1f">  132</a></span>        std::string <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1Uri.html#a0cf7f17ff2698d1d9b20d4cd6a80ef1f">m_path</a>; </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html#ad9144e09b30cd40a018b57e040a52f22">  133</a></span>        std::string <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1Uri.html#ad9144e09b30cd40a018b57e040a52f22">m_query</a>; </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html#a8369b8d3b95127a25a353d3abfcaf4a9">  134</a></span>        std::string <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1Uri.html#a8369b8d3b95127a25a353d3abfcaf4a9">m_fragment</a>; </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1Uri.html#a20dd52948baf23781d17fedd65264c54">  135</a></span>        int32_t <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1Uri.html#a20dd52948baf23781d17fedd65264c54">m_port</a>; </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    };</div>
+</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>}</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aAddress_8h_html"><div class="ttname"><a href="Address_8h.html">Address.h</a></div><div class="ttdoc">网络地址的封装(IPv4,IPv6,Unix)</div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html">Gyanis::net::http::Uri</a></div><div class="ttdoc">URI 解析类</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00024">Uri.h:25</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_a023c60456f12a1c69bb1f3387fac2c3e"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#a023c60456f12a1c69bb1f3387fac2c3e">Gyanis::net::http::Uri::m_scheme</a></div><div class="ttdeci">std::string m_scheme</div><div class="ttdoc">URI 协议部分（如 http、https）。</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00129">Uri.h:129</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_a09151a2d8f230806bba37220340277ad"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#a09151a2d8f230806bba37220340277ad">Gyanis::net::http::Uri::setQuery</a></div><div class="ttdeci">void setQuery(const std::string &amp;query)</div><div class="ttdoc">设置 URI 查询（query）</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00085">Uri.h:85</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_a0cf7f17ff2698d1d9b20d4cd6a80ef1f"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#a0cf7f17ff2698d1d9b20d4cd6a80ef1f">Gyanis::net::http::Uri::m_path</a></div><div class="ttdeci">std::string m_path</div><div class="ttdoc">URI 路径部分（如 /over/there）。</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00132">Uri.h:132</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_a14c0a0d94c4cb7749577073effa9b0c9"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#a14c0a0d94c4cb7749577073effa9b0c9">Gyanis::net::http::Uri::getFragment</a></div><div class="ttdeci">const std::string &amp; getFragment() const</div><div class="ttdoc">获取 URI 片段（fragment）（例如 #nose）</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00055">Uri.h:55</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_a16938a0da27081d6de78e4b13fdd73fd"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#a16938a0da27081d6de78e4b13fdd73fd">Gyanis::net::http::Uri::m_userinfo</a></div><div class="ttdeci">std::string m_userinfo</div><div class="ttdoc">URI 用户信息部分（如 user@baidu.com）。</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00130">Uri.h:130</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_a1ce42ac3e38071ebb38d4797de8f4956"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#a1ce42ac3e38071ebb38d4797de8f4956">Gyanis::net::http::Uri::Create</a></div><div class="ttdeci">static std::shared_ptr&lt; Uri &gt; Create(const std::string &amp;uri)</div><div class="ttdoc">创建 URI 对象</div><div class="ttdef"><b>Definition</b> <a href="Uri_8cpp_source.html#l00019">Uri.cpp:19</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_a20dd52948baf23781d17fedd65264c54"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#a20dd52948baf23781d17fedd65264c54">Gyanis::net::http::Uri::m_port</a></div><div class="ttdeci">int32_t m_port</div><div class="ttdoc">URI 端口号（如 8042）。</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00135">Uri.h:135</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_a217722f835272a4fa5841e8f83a06b37"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#a217722f835272a4fa5841e8f83a06b37">Gyanis::net::http::Uri::setUserinfo</a></div><div class="ttdeci">void setUserinfo(const std::string &amp;info)</div><div class="ttdoc">设置 URI 用户信息（userinfo）</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00095">Uri.h:95</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_a274eed08cf727129321200669b677d8d"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#a274eed08cf727129321200669b677d8d">Gyanis::net::http::Uri::getPort</a></div><div class="ttdeci">int32_t getPort() const</div><div class="ttdoc">获取 URI 端口（port）</div><div class="ttdef"><b>Definition</b> <a href="Uri_8cpp_source.html#l10891">Uri.cpp:10891</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_a293c80891c3a20b8d262e4119051ed88"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#a293c80891c3a20b8d262e4119051ed88">Gyanis::net::http::Uri::setPath</a></div><div class="ttdeci">void setPath(const std::string &amp;path)</div><div class="ttdoc">设置 URI 路径（path）</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00080">Uri.h:80</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_a3bdd5270cd087e2e8b1fa17a13fed996"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#a3bdd5270cd087e2e8b1fa17a13fed996">Gyanis::net::http::Uri::getQuery</a></div><div class="ttdeci">const std::string &amp; getQuery() const</div><div class="ttdoc">获取 URI 查询（query）</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00050">Uri.h:50</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_a43b90adda7365540fd8635158820b479"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#a43b90adda7365540fd8635158820b479">Gyanis::net::http::Uri::setScheme</a></div><div class="ttdeci">void setScheme(const std::string &amp;scheme)</div><div class="ttdoc">设置 URI 协议（scheme）</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00070">Uri.h:70</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_a6e50c580aadebeecb53d125cf800d5e6"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#a6e50c580aadebeecb53d125cf800d5e6">Gyanis::net::http::Uri::Uri</a></div><div class="ttdeci">Uri()</div><div class="ttdoc">默认构造 URI 对象</div><div class="ttdef"><b>Definition</b> <a href="Uri_8cpp_source.html#l10868">Uri.cpp:10868</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_a7a07843ba25a0c194a75de5ae903b489"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#a7a07843ba25a0c194a75de5ae903b489">Gyanis::net::http::Uri::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdoc">将 URI 转换为字符串</div><div class="ttdef"><b>Definition</b> <a href="Uri_8cpp_source.html#l10919">Uri.cpp:10919</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_a8369b8d3b95127a25a353d3abfcaf4a9"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#a8369b8d3b95127a25a353d3abfcaf4a9">Gyanis::net::http::Uri::m_fragment</a></div><div class="ttdeci">std::string m_fragment</div><div class="ttdoc">URI 片段部分（如 #nose）。</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00134">Uri.h:134</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_a8a35f535b91636f5e39455f2a16eccf2"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#a8a35f535b91636f5e39455f2a16eccf2">Gyanis::net::http::Uri::dump</a></div><div class="ttdeci">std::ostream &amp; dump(std::ostream &amp;os) const</div><div class="ttdoc">打印 URI 对象</div><div class="ttdef"><b>Definition</b> <a href="Uri_8cpp_source.html#l10905">Uri.cpp:10905</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_a9f77a3b0e1012b648c7cd3fe0f3259f2"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#a9f77a3b0e1012b648c7cd3fe0f3259f2">Gyanis::net::http::Uri::getHost</a></div><div class="ttdeci">const std::string &amp; getHost() const</div><div class="ttdoc">获取 URI 主机（host）</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00040">Uri.h:40</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_aa25ba25500a975c57ebd3fb697ee2fd9"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#aa25ba25500a975c57ebd3fb697ee2fd9">Gyanis::net::http::Uri::getScheme</a></div><div class="ttdeci">const std::string &amp; getScheme() const</div><div class="ttdoc">获取 URI 协议（scheme）</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00035">Uri.h:35</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_aa65cd298a075644a643f0b7fae7ed3df"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#aa65cd298a075644a643f0b7fae7ed3df">Gyanis::net::http::Uri::setPort</a></div><div class="ttdeci">void setPort(const int32_t port)</div><div class="ttdoc">设置 URI 端口（port）</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00100">Uri.h:100</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_aa6a8515bad07744efd8e4ffaa4c97012"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#aa6a8515bad07744efd8e4ffaa4c97012">Gyanis::net::http::Uri::setFragment</a></div><div class="ttdeci">void setFragment(const std::string &amp;fragment)</div><div class="ttdoc">设置 URI 片段（fragment）</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00090">Uri.h:90</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_aad027bc28162580cf852fd1810708c0d"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#aad027bc28162580cf852fd1810708c0d">Gyanis::net::http::Uri::getPath</a></div><div class="ttdeci">const std::string &amp; getPath() const</div><div class="ttdoc">获取 URI 路径（path）</div><div class="ttdef"><b>Definition</b> <a href="Uri_8cpp_source.html#l10886">Uri.cpp:10886</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_ab1752f6b3e6df8cdf44eee7fb4814476"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#ab1752f6b3e6df8cdf44eee7fb4814476">Gyanis::net::http::Uri::getUserinfo</a></div><div class="ttdeci">const std::string &amp; getUserinfo() const</div><div class="ttdoc">获取 URI 用户信息（userinfo）（例如 user@baidu.com）</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00060">Uri.h:60</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_ad06cac14d8288e207fcfd5627cf43c31"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#ad06cac14d8288e207fcfd5627cf43c31">Gyanis::net::http::Uri::setHost</a></div><div class="ttdeci">void setHost(const std::string &amp;host)</div><div class="ttdoc">设置 URI 主机（host）</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00075">Uri.h:75</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_ad88d3e2a71732b30f27434a3d3b50e09"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#ad88d3e2a71732b30f27434a3d3b50e09">Gyanis::net::http::Uri::m_host</a></div><div class="ttdeci">std::string m_host</div><div class="ttdoc">URI 主机部分（如 www.example.com）。</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00131">Uri.h:131</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_ad9144e09b30cd40a018b57e040a52f22"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#ad9144e09b30cd40a018b57e040a52f22">Gyanis::net::http::Uri::m_query</a></div><div class="ttdeci">std::string m_query</div><div class="ttdoc">URI 查询部分（如 name=ferret）。</div><div class="ttdef"><b>Definition</b> <a href="Uri_8h_source.html#l00133">Uri.h:133</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_ae5d9dcba6fc05d5f22ebf60ef393d076"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#ae5d9dcba6fc05d5f22ebf60ef393d076">Gyanis::net::http::Uri::createAddress</a></div><div class="ttdeci">std::shared_ptr&lt; Address &gt; createAddress() const</div><div class="ttdoc">创建 URI 地址对象</div><div class="ttdef"><b>Definition</b> <a href="Uri_8cpp_source.html#l10925">Uri.cpp:10925</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Uri_html_af480093b76f9ed0ab698373d9581ad20"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Uri.html#af480093b76f9ed0ab698373d9581ad20">Gyanis::net::http::Uri::isDefaultPort</a></div><div class="ttdeci">bool isDefaultPort() const</div><div class="ttdoc">检查 URI 是否使用默认端口</div><div class="ttdef"><b>Definition</b> <a href="Uri_8cpp_source.html#l10872">Uri.cpp:10872</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html">Gyanis::net::http</a></div><div class="ttdoc">示例 URI：foo://user@baidu.com:8042/over/there?name=ferret::nose 解析后的组成部分： _/ ______________/_________/ ...</div><div class="ttdef"><b>Definition</b> <a href="Http_8h_source.html#l00014">Http.h:15</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_2fa1ed3146d6c2b96c5cfe4341985326.html">net</a></li><li class="navelem"><a class="el" href="dir_7dceb8d0fc1433f0ba9a48a61d388f8d.html">http</a></li><li class="navelem"><a class="el" href="Uri_8h.html">Uri.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: Gyanis::net::http::WSServer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGyanis_1_1net_1_1http_1_1WSServer.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="classGyanis_1_1net_1_1http_1_1WSServer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Gyanis::net::http::WSServer类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>WebSocket 服务器类，继承自 <code>TcpServer</code>，用于管理 WebSocket 协议的连接和消息处理  
+ <a href="classGyanis_1_1net_1_1http_1_1WSServer.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="WebSocketServer_8h_source.html">WebSocketServer.h</a>&gt;</code></p>
+<div class="dynheader">
+类 Gyanis::net::http::WSServer 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1WSServer__inherit__graph.png" border="0" usemap="#aGyanis_1_1net_1_1http_1_1WSServer_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+Gyanis::net::http::WSServer 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1http_1_1WSServer__coll__graph.png" border="0" usemap="#aGyanis_1_1net_1_1http_1_1WSServer_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a41a9e9483677b3f76d40a136a231ca67" id="r_a41a9e9483677b3f76d40a136a231ca67"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSServer.html#a41a9e9483677b3f76d40a136a231ca67">WSServer</a> (<a class="el" href="classGyanis_1_1core_1_1IOManager.html">core::IOManager</a> *worker=<a class="el" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">core::IOManager::GetThis</a>(), <a class="el" href="classGyanis_1_1core_1_1IOManager.html">core::IOManager</a> *io_worker=<a class="el" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">core::IOManager::GetThis</a>(), <a class="el" href="classGyanis_1_1core_1_1IOManager.html">core::IOManager</a> *accept_worker=<a class="el" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">core::IOManager::GetThis</a>())</td></tr>
+<tr class="memdesc:a41a9e9483677b3f76d40a136a231ca67"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数，初始化 WebSocket 服务器  <br /></td></tr>
+<tr class="separator:a41a9e9483677b3f76d40a136a231ca67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e1c416706b109714af7c40c5126f7f7" id="r_a8e1c416706b109714af7c40c5126f7f7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1WSServletDispatch.html">WSServletDispatch</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSServer.html#a8e1c416706b109714af7c40c5126f7f7">getWSServletDispatch</a> () const</td></tr>
+<tr class="memdesc:a8e1c416706b109714af7c40c5126f7f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 WebSocket 服务调度器  <br /></td></tr>
+<tr class="separator:a8e1c416706b109714af7c40c5126f7f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a67ea303f06b4f464f385a5c8a0d6e6" id="r_a2a67ea303f06b4f464f385a5c8a0d6e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSServer.html#a2a67ea303f06b4f464f385a5c8a0d6e6">setWSServletDispatch</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1WSServletDispatch.html">WSServletDispatch</a> &gt; &amp;value)</td></tr>
+<tr class="memdesc:a2a67ea303f06b4f464f385a5c8a0d6e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置 WebSocket 服务调度器  <br /></td></tr>
+<tr class="separator:a2a67ea303f06b4f464f385a5c8a0d6e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html">Gyanis::net::web::TcpServer</a></td></tr>
+<tr class="memitem:a5432ccbe0935fec483979e6b84bd6668 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_a5432ccbe0935fec483979e6b84bd6668"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a5432ccbe0935fec483979e6b84bd6668">TcpServer</a> (<a class="el" href="classGyanis_1_1core_1_1IOManager.html">core::IOManager</a> *worker=<a class="el" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">core::IOManager::GetThis</a>(), <a class="el" href="classGyanis_1_1core_1_1IOManager.html">core::IOManager</a> *io_worker=<a class="el" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">core::IOManager::GetThis</a>(), <a class="el" href="classGyanis_1_1core_1_1IOManager.html">core::IOManager</a> *accept_worker=<a class="el" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">core::IOManager::GetThis</a>())</td></tr>
+<tr class="memdesc:a5432ccbe0935fec483979e6b84bd6668 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <br /></td></tr>
+<tr class="separator:a5432ccbe0935fec483979e6b84bd6668 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9e52d9dc31f46c45f10c1564f15a529 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_aa9e52d9dc31f46c45f10c1564f15a529"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#aa9e52d9dc31f46c45f10c1564f15a529">~TcpServer</a> ()</td></tr>
+<tr class="memdesc:aa9e52d9dc31f46c45f10c1564f15a529 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <br /></td></tr>
+<tr class="separator:aa9e52d9dc31f46c45f10c1564f15a529 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5ea4b5de1c656f3cdee7e3024b9cbf6 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_ab5ea4b5de1c656f3cdee7e3024b9cbf6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#ab5ea4b5de1c656f3cdee7e3024b9cbf6">bind</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Address.html">Address</a> &gt; &amp;address, bool ssl)</td></tr>
+<tr class="memdesc:ab5ea4b5de1c656f3cdee7e3024b9cbf6 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定地址并启动监听  <br /></td></tr>
+<tr class="separator:ab5ea4b5de1c656f3cdee7e3024b9cbf6 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d148fcfacbe6a6884a1b6bd117dca89 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_a4d148fcfacbe6a6884a1b6bd117dca89"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a4d148fcfacbe6a6884a1b6bd117dca89">bind</a> (const std::vector&lt; std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Address.html">Address</a> &gt; &gt; &amp;addresses, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Address.html">Address</a> &gt; &gt; &amp;fails, bool ssl)</td></tr>
+<tr class="memdesc:a4d148fcfacbe6a6884a1b6bd117dca89 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定多个地址并启动监听  <br /></td></tr>
+<tr class="separator:a4d148fcfacbe6a6884a1b6bd117dca89 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb3f61b4b6e4e922c554e9390999dbff inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_abb3f61b4b6e4e922c554e9390999dbff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#abb3f61b4b6e4e922c554e9390999dbff">loadCertificates</a> (const std::string &amp;cert_file, const std::string &amp;key_file) const</td></tr>
+<tr class="memdesc:abb3f61b4b6e4e922c554e9390999dbff inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">加载 SSL 证书  <br /></td></tr>
+<tr class="separator:abb3f61b4b6e4e922c554e9390999dbff inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7299a926a152d6a68a0729ba4055c38 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_ad7299a926a152d6a68a0729ba4055c38"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#ad7299a926a152d6a68a0729ba4055c38">start</a> ()</td></tr>
+<tr class="memdesc:ad7299a926a152d6a68a0729ba4055c38 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动服务器  <br /></td></tr>
+<tr class="separator:ad7299a926a152d6a68a0729ba4055c38 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af74590ab037819bb82105f2d6a77f9dc inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_af74590ab037819bb82105f2d6a77f9dc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#af74590ab037819bb82105f2d6a77f9dc">stop</a> ()</td></tr>
+<tr class="memdesc:af74590ab037819bb82105f2d6a77f9dc inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止服务器  <br /></td></tr>
+<tr class="separator:af74590ab037819bb82105f2d6a77f9dc inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1527ce1a4f3dc362f630672ee9baf2a2 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_a1527ce1a4f3dc362f630672ee9baf2a2"><td class="memItemLeft" align="right" valign="top">std::chrono::milliseconds&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a1527ce1a4f3dc362f630672ee9baf2a2">getRecvTimeout</a> () const</td></tr>
+<tr class="memdesc:a1527ce1a4f3dc362f630672ee9baf2a2 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取接收超时时间  <br /></td></tr>
+<tr class="separator:a1527ce1a4f3dc362f630672ee9baf2a2 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc8f09c81ac5315d8f326804107fcabe inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_afc8f09c81ac5315d8f326804107fcabe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#afc8f09c81ac5315d8f326804107fcabe">setRecvTimeout</a> (const std::chrono::milliseconds timeout)</td></tr>
+<tr class="memdesc:afc8f09c81ac5315d8f326804107fcabe inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置接收超时时间  <br /></td></tr>
+<tr class="separator:afc8f09c81ac5315d8f326804107fcabe inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af40da1b2554f25f939e944ecec41616e inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_af40da1b2554f25f939e944ecec41616e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#af40da1b2554f25f939e944ecec41616e">isStop</a> () const</td></tr>
+<tr class="memdesc:af40da1b2554f25f939e944ecec41616e inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查服务器是否已停止  <br /></td></tr>
+<tr class="separator:af40da1b2554f25f939e944ecec41616e inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af67b80e77946f46e5ed637c7b06893bf inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_af67b80e77946f46e5ed637c7b06893bf"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structGyanis_1_1base_1_1TcpServerConf.html">base::TcpServerConf</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#af67b80e77946f46e5ed637c7b06893bf">getConf</a> () const</td></tr>
+<tr class="memdesc:af67b80e77946f46e5ed637c7b06893bf inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取服务器配置  <br /></td></tr>
+<tr class="separator:af67b80e77946f46e5ed637c7b06893bf inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64372e8da7f8f1729b878629dba412fc inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_a64372e8da7f8f1729b878629dba412fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a64372e8da7f8f1729b878629dba412fc">setConf</a> (const std::shared_ptr&lt; <a class="el" href="structGyanis_1_1base_1_1TcpServerConf.html">base::TcpServerConf</a> &gt; &amp;value)</td></tr>
+<tr class="memdesc:a64372e8da7f8f1729b878629dba412fc inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置服务器配置  <br /></td></tr>
+<tr class="separator:a64372e8da7f8f1729b878629dba412fc inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76aa5202eef5b8d711b9f66284341ecd inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_a76aa5202eef5b8d711b9f66284341ecd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a76aa5202eef5b8d711b9f66284341ecd">setConf</a> (const <a class="el" href="structGyanis_1_1base_1_1TcpServerConf.html">base::TcpServerConf</a> &amp;value)</td></tr>
+<tr class="memdesc:a76aa5202eef5b8d711b9f66284341ecd inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置服务器配置（通过传值）  <br /></td></tr>
+<tr class="separator:a76aa5202eef5b8d711b9f66284341ecd inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56d6dc12bffed366778a58a1fe976b39 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_a56d6dc12bffed366778a58a1fe976b39"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a56d6dc12bffed366778a58a1fe976b39">toString</a> (const std::string &amp;prefix)</td></tr>
+<tr class="memdesc:a56d6dc12bffed366778a58a1fe976b39 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取服务器的字符串表示  <br /></td></tr>
+<tr class="separator:a56d6dc12bffed366778a58a1fe976b39 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad50ce7e907d58e7c6652bfc97050a2c2 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_ad50ce7e907d58e7c6652bfc97050a2c2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Socket.html">Socket</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#ad50ce7e907d58e7c6652bfc97050a2c2">getSockets</a> () const</td></tr>
+<tr class="memdesc:ad50ce7e907d58e7c6652bfc97050a2c2 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取服务器的套接字列表  <br /></td></tr>
+<tr class="separator:ad50ce7e907d58e7c6652bfc97050a2c2 inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36e2d606ace05aa0d1232b2f47c1951e inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_a36e2d606ace05aa0d1232b2f47c1951e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a36e2d606ace05aa0d1232b2f47c1951e">getName</a> () const</td></tr>
+<tr class="memdesc:a36e2d606ace05aa0d1232b2f47c1951e inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回服务器名称  <br /></td></tr>
+<tr class="separator:a36e2d606ace05aa0d1232b2f47c1951e inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cecddf31e0ed986f1076223d571817d inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_a4cecddf31e0ed986f1076223d571817d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a4cecddf31e0ed986f1076223d571817d">setName</a> (const std::string &amp;value)</td></tr>
+<tr class="memdesc:a4cecddf31e0ed986f1076223d571817d inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置服务器名称  <br /></td></tr>
+<tr class="separator:a4cecddf31e0ed986f1076223d571817d inherit pub_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a9b4a629d2a5da392a70e598a28aaed08" id="r_a9b4a629d2a5da392a70e598a28aaed08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSServer.html#a9b4a629d2a5da392a70e598a28aaed08">handleClient</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Socket.html">Socket</a> &gt; &amp;client) override</td></tr>
+<tr class="memdesc:a9b4a629d2a5da392a70e598a28aaed08"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理 WebSocket 客户端连接  <br /></td></tr>
+<tr class="separator:a9b4a629d2a5da392a70e598a28aaed08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classGyanis_1_1net_1_1web_1_1TcpServer')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html">Gyanis::net::web::TcpServer</a></td></tr>
+<tr class="memitem:ac0f73556a3ba7c3f0a7d0a68ebaf0973 inherit pro_methods_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_ac0f73556a3ba7c3f0a7d0a68ebaf0973"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#ac0f73556a3ba7c3f0a7d0a68ebaf0973">startAccept</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Socket.html">Socket</a> &gt; &amp;sock)</td></tr>
+<tr class="memdesc:ac0f73556a3ba7c3f0a7d0a68ebaf0973 inherit pro_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动接收客户端连接  <br /></td></tr>
+<tr class="separator:ac0f73556a3ba7c3f0a7d0a68ebaf0973 inherit pro_methods_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:ab8511d07b9dc5d3d357d6c68279d241a" id="r_ab8511d07b9dc5d3d357d6c68279d241a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1WSServletDispatch.html">WSServletDispatch</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSServer.html#ab8511d07b9dc5d3d357d6c68279d241a">m_dispatch</a></td></tr>
+<tr class="memdesc:ab8511d07b9dc5d3d357d6c68279d241a"><td class="mdescLeft">&#160;</td><td class="mdescRight">WebSocket 服务调度器，用于管理 WebSocket 服务和请求  <br /></td></tr>
+<tr class="separator:ab8511d07b9dc5d3d357d6c68279d241a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html">Gyanis::net::web::TcpServer</a></td></tr>
+<tr class="memitem:a3abb116196110aa98df0713f6faeea4c inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_a3abb116196110aa98df0713f6faeea4c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Socket.html">Socket</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a3abb116196110aa98df0713f6faeea4c">m_sockets</a></td></tr>
+<tr class="memdesc:a3abb116196110aa98df0713f6faeea4c inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务器监听的套接字列表  <br /></td></tr>
+<tr class="separator:a3abb116196110aa98df0713f6faeea4c inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06961e424882459c243db740299daaea inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_a06961e424882459c243db740299daaea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGyanis_1_1core_1_1IOManager.html">core::IOManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a06961e424882459c243db740299daaea">m_worker</a></td></tr>
+<tr class="memdesc:a06961e424882459c243db740299daaea inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">IO 工作线程  <br /></td></tr>
+<tr class="separator:a06961e424882459c243db740299daaea inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11ceef650bfaa0bd1f83e4c5e44b5eca inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_a11ceef650bfaa0bd1f83e4c5e44b5eca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGyanis_1_1core_1_1IOManager.html">core::IOManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a11ceef650bfaa0bd1f83e4c5e44b5eca">m_ioWorker</a></td></tr>
+<tr class="memdesc:a11ceef650bfaa0bd1f83e4c5e44b5eca inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">IO 线程  <br /></td></tr>
+<tr class="separator:a11ceef650bfaa0bd1f83e4c5e44b5eca inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae5db058b07726fb2def8576d1b62a9c inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_aae5db058b07726fb2def8576d1b62a9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGyanis_1_1core_1_1IOManager.html">core::IOManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#aae5db058b07726fb2def8576d1b62a9c">m_acceptWorker</a></td></tr>
+<tr class="memdesc:aae5db058b07726fb2def8576d1b62a9c inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">接受连接的工作线程  <br /></td></tr>
+<tr class="separator:aae5db058b07726fb2def8576d1b62a9c inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af41a3be9455abfc9d077b2f5aa3cd9bf inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_af41a3be9455abfc9d077b2f5aa3cd9bf"><td class="memItemLeft" align="right" valign="top">std::chrono::milliseconds&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#af41a3be9455abfc9d077b2f5aa3cd9bf">m_recvTimeout</a></td></tr>
+<tr class="memdesc:af41a3be9455abfc9d077b2f5aa3cd9bf inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">接收超时时间  <br /></td></tr>
+<tr class="separator:af41a3be9455abfc9d077b2f5aa3cd9bf inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d5d5901fab2ccf82bc906f86085abff inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_a3d5d5901fab2ccf82bc906f86085abff"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a3d5d5901fab2ccf82bc906f86085abff">m_type</a> = &quot;tcp&quot;</td></tr>
+<tr class="memdesc:a3d5d5901fab2ccf82bc906f86085abff inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务器类型（默认为 TCP）  <br /></td></tr>
+<tr class="separator:a3d5d5901fab2ccf82bc906f86085abff inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ea227675349bfd04277a5e59a7a86ad inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_a1ea227675349bfd04277a5e59a7a86ad"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a1ea227675349bfd04277a5e59a7a86ad">m_name</a></td></tr>
+<tr class="memdesc:a1ea227675349bfd04277a5e59a7a86ad inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务器名称  <br /></td></tr>
+<tr class="separator:a1ea227675349bfd04277a5e59a7a86ad inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb829ba830dd6f88fdb50570e94d586a inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_afb829ba830dd6f88fdb50570e94d586a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#afb829ba830dd6f88fdb50570e94d586a">m_isStop</a></td></tr>
+<tr class="memdesc:afb829ba830dd6f88fdb50570e94d586a inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否停止服务器  <br /></td></tr>
+<tr class="separator:afb829ba830dd6f88fdb50570e94d586a inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb046b1faa335fcf332292f9ccd91226 inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_adb046b1faa335fcf332292f9ccd91226"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#adb046b1faa335fcf332292f9ccd91226">m_ssl</a> = false</td></tr>
+<tr class="memdesc:adb046b1faa335fcf332292f9ccd91226 inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否启用 SSL  <br /></td></tr>
+<tr class="separator:adb046b1faa335fcf332292f9ccd91226 inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae06b52d79808efe327322d0d4b3911f6 inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer" id="r_ae06b52d79808efe327322d0d4b3911f6"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structGyanis_1_1base_1_1TcpServerConf.html">base::TcpServerConf</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#ae06b52d79808efe327322d0d4b3911f6">m_conf</a></td></tr>
+<tr class="separator:ae06b52d79808efe327322d0d4b3911f6 inherit pro_attribs_classGyanis_1_1net_1_1web_1_1TcpServer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>WebSocket 服务器类，继承自 <code>TcpServer</code>，用于管理 WebSocket 协议的连接和消息处理 </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketServer_8h_source.html">WebSocketServer.h</a> 第 <a class="el" href="WebSocketServer_8h_source.html#l00018">18</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a41a9e9483677b3f76d40a136a231ca67" name="a41a9e9483677b3f76d40a136a231ca67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41a9e9483677b3f76d40a136a231ca67">&#9670;&#160;</a></span>WSServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gyanis::net::http::WSServer::WSServer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGyanis_1_1core_1_1IOManager.html">core::IOManager</a> *&#160;</td>
+          <td class="paramname"><em>worker</em> = <code><a class="el" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">core::IOManager::GetThis</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classGyanis_1_1core_1_1IOManager.html">core::IOManager</a> *&#160;</td>
+          <td class="paramname"><em>io_worker</em> = <code><a class="el" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">core::IOManager::GetThis</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classGyanis_1_1core_1_1IOManager.html">core::IOManager</a> *&#160;</td>
+          <td class="paramname"><em>accept_worker</em> = <code><a class="el" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">core::IOManager::GetThis</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数，初始化 WebSocket 服务器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">worker</td><td>工作线程 IO 管理器，默认为 <code><a class="el" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530" title="获取当前 IO 管理器实例">core::IOManager::GetThis()</a></code> </td></tr>
+    <tr><td class="paramname">io_worker</td><td>IO 工作线程 IO 管理器，默认为 <code><a class="el" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530" title="获取当前 IO 管理器实例">core::IOManager::GetThis()</a></code> </td></tr>
+    <tr><td class="paramname">accept_worker</td><td>接收线程 IO 管理器，默认为 <code><a class="el" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530" title="获取当前 IO 管理器实例">core::IOManager::GetThis()</a></code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="WebSocketServer_8cpp_source.html">WebSocketServer.cpp</a> 第 <a class="el" href="WebSocketServer_8cpp_source.html#l00007">7</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">    7</span>                                                                                                    : <a class="code hl_function" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a5432ccbe0935fec483979e6b84bd6668">TcpServer</a>(</div>
+<div class="line"><span class="lineno">    8</span>        worker, io_worker, accept_worker)</div>
+<div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1WSServer.html#ab8511d07b9dc5d3d357d6c68279d241a">m_dispatch</a> = std::make_shared&lt;WSServletDispatch&gt;();</div>
+<div class="line"><span class="lineno">   11</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a3d5d5901fab2ccf82bc906f86085abff">m_type</a> = <span class="stringliteral">&quot;ws&quot;</span>;</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1WSServer_html_ab8511d07b9dc5d3d357d6c68279d241a"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1WSServer.html#ab8511d07b9dc5d3d357d6c68279d241a">Gyanis::net::http::WSServer::m_dispatch</a></div><div class="ttdeci">std::shared_ptr&lt; WSServletDispatch &gt; m_dispatch</div><div class="ttdoc">WebSocket 服务调度器，用于管理 WebSocket 服务和请求</div><div class="ttdef"><b>Definition</b> <a href="WebSocketServer_8h_source.html#l00050">WebSocketServer.h:50</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1web_1_1TcpServer_html_a3d5d5901fab2ccf82bc906f86085abff"><div class="ttname"><a href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a3d5d5901fab2ccf82bc906f86085abff">Gyanis::net::web::TcpServer::m_type</a></div><div class="ttdeci">std::string m_type</div><div class="ttdoc">服务器类型（默认为 TCP）</div><div class="ttdef"><b>Definition</b> <a href="TcpServer_8h_source.html#l00137">TcpServer.h:137</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1web_1_1TcpServer_html_a5432ccbe0935fec483979e6b84bd6668"><div class="ttname"><a href="classGyanis_1_1net_1_1web_1_1TcpServer.html#a5432ccbe0935fec483979e6b84bd6668">Gyanis::net::web::TcpServer::TcpServer</a></div><div class="ttdeci">TcpServer(core::IOManager *worker=core::IOManager::GetThis(), core::IOManager *io_worker=core::IOManager::GetThis(), core::IOManager *accept_worker=core::IOManager::GetThis())</div><div class="ttdoc">构造函数</div><div class="ttdef"><b>Definition</b> <a href="TcpServer_8cpp_source.html#l00014">TcpServer.cpp:14</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a8e1c416706b109714af7c40c5126f7f7" name="a8e1c416706b109714af7c40c5126f7f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e1c416706b109714af7c40c5126f7f7">&#9670;&#160;</a></span>getWSServletDispatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1WSServletDispatch.html">WSServletDispatch</a> &gt; Gyanis::net::http::WSServer::getWSServletDispatch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取 WebSocket 服务调度器 </p>
+<dl class="section return"><dt>返回</dt><dd>返回一个 <code><a class="el" href="classGyanis_1_1net_1_1http_1_1WSServletDispatch.html" title="WebSocket Servlet 分发器类，用于管理和调度多个 WebSocket Servlet 它允许将请求分发到适当的 FunctionWSServlet 实例">WSServletDispatch</a></code> 对象的共享指针 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="WebSocketServer_8cpp_source.html">WebSocketServer.cpp</a> 第 <a class="el" href="WebSocketServer_8cpp_source.html#l00014">14</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   15</span>    {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1WSServer.html#ab8511d07b9dc5d3d357d6c68279d241a">m_dispatch</a>;</div>
+<div class="line"><span class="lineno">   17</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9b4a629d2a5da392a70e598a28aaed08" name="a9b4a629d2a5da392a70e598a28aaed08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b4a629d2a5da392a70e598a28aaed08">&#9670;&#160;</a></span>handleClient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::WSServer::handleClient </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Socket.html">Socket</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>client</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>处理 WebSocket 客户端连接 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">client</td><td>客户端连接的套接字对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>重载 <a class="el" href="classGyanis_1_1net_1_1web_1_1TcpServer.html#aa1b7136c98520d0f499d57e8eda5aff6">Gyanis::net::web::TcpServer</a> .</p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketServer_8cpp_source.html">WebSocketServer.cpp</a> 第 <a class="el" href="WebSocketServer_8cpp_source.html#l00024">24</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>    {</div>
+<div class="line"><span class="lineno">   26</span>        <a class="code hl_define" href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>)</div>
+<div class="line"><span class="lineno">   27</span>            &lt;&lt; <span class="stringliteral">&quot;Handling client connection. &quot;</span></div>
+<div class="line"><span class="lineno">   28</span>            &lt;&lt; <span class="stringliteral">&quot;Client details: &quot;</span> &lt;&lt; client-&gt;toString();</div>
+<div class="line"><span class="lineno">   29</span>        <span class="keyword">const</span> <span class="keyword">auto</span> session = std::make_shared&lt;WSSession&gt;(client);</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">   31</span>        {</div>
+<div class="line"><span class="lineno">   32</span>            <span class="keyword">const</span> <span class="keyword">auto</span> header = session-&gt;handleShake();</div>
+<div class="line"><span class="lineno">   33</span>            <span class="keywordflow">if</span> (!header)</div>
+<div class="line"><span class="lineno">   34</span>            {</div>
+<div class="line"><span class="lineno">   35</span>                <a class="code hl_define" href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>)</div>
+<div class="line"><span class="lineno">   36</span>                    &lt;&lt; <span class="stringliteral">&quot;WSServer::handleClient() failed to handle handshake. &quot;</span></div>
+<div class="line"><span class="lineno">   37</span>                    &lt;&lt; <span class="stringliteral">&quot;An error occurred while processing the WebSocket handshake.&quot;</span>;</div>
+<div class="line"><span class="lineno">   38</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   39</span>            }</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keyword">const</span> <span class="keyword">auto</span> servlet = <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1WSServer.html#ab8511d07b9dc5d3d357d6c68279d241a">m_dispatch</a>-&gt;getWSServlet(header-&gt;getPath());</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (!servlet)</div>
+<div class="line"><span class="lineno">   42</span>            {</div>
+<div class="line"><span class="lineno">   43</span>                <a class="code hl_define" href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>)</div>
+<div class="line"><span class="lineno">   44</span>                    &lt;&lt; <span class="stringliteral">&quot;No matching WSServlet found. &quot;</span></div>
+<div class="line"><span class="lineno">   45</span>                    &lt;&lt; <span class="stringliteral">&quot;The requested servlet could not be matched to a valid handler.&quot;</span>;</div>
+<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   47</span>            }</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordtype">int</span> result = servlet-&gt;onConnect(header, session);</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span> (result)</div>
+<div class="line"><span class="lineno">   50</span>            {</div>
+<div class="line"><span class="lineno">   51</span>                <a class="code hl_define" href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>)</div>
+<div class="line"><span class="lineno">   52</span>                    &lt;&lt; <span class="stringliteral">&quot;onConnect() returned. &quot;</span></div>
+<div class="line"><span class="lineno">   53</span>                    &lt;&lt; <span class="stringliteral">&quot;Return value: &quot;</span> &lt;&lt; result;</div>
+<div class="line"><span class="lineno">   54</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   55</span>            }</div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">   57</span>            {</div>
+<div class="line"><span class="lineno">   58</span>                <span class="keyword">auto</span> msg = session-&gt;recvMessage();</div>
+<div class="line"><span class="lineno">   59</span>                <span class="keywordflow">if</span> (!msg)</div>
+<div class="line"><span class="lineno">   60</span>                {</div>
+<div class="line"><span class="lineno">   61</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   62</span>                }</div>
+<div class="line"><span class="lineno">   63</span>                result = servlet-&gt;handle(header, msg, session);</div>
+<div class="line"><span class="lineno">   64</span>                <span class="keywordflow">if</span> (result)</div>
+<div class="line"><span class="lineno">   65</span>                {</div>
+<div class="line"><span class="lineno">   66</span>                    <a class="code hl_define" href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">g_logger</a>)</div>
+<div class="line"><span class="lineno">   67</span>                        &lt;&lt; <span class="stringliteral">&quot;Handle method returned. &quot;</span></div>
+<div class="line"><span class="lineno">   68</span>                        &lt;&lt; <span class="stringliteral">&quot;Result: &quot;</span> &lt;&lt; result;</div>
+<div class="line"><span class="lineno">   69</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   70</span>                }</div>
+<div class="line"><span class="lineno">   71</span>            }</div>
+<div class="line"><span class="lineno">   72</span>            servlet-&gt;onClose(header, session);</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">while</span> (<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   75</span>        session-&gt;close();</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
+<div class="ttc" id="aLog_8h_html_aa689601a9413bd4f1c41974694746f4e"><div class="ttname"><a href="Log_8h.html#aa689601a9413bd4f1c41974694746f4e">LOG_DEBUG</a></div><div class="ttdeci">#define LOG_DEBUG(logger)</div><div class="ttdoc">输出 debug 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00031">Log.h:31</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html_a9e698df600de971647f36fff7d1b70ab"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html#a9e698df600de971647f36fff7d1b70ab">Gyanis::net::http::g_logger</a></div><div class="ttdeci">static auto g_logger</div><div class="ttdef"><b>Definition</b> <a href="HttpConnection_8cpp_source.html#l00009">HttpConnection.cpp:9</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2a67ea303f06b4f464f385a5c8a0d6e6" name="a2a67ea303f06b4f464f385a5c8a0d6e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a67ea303f06b4f464f385a5c8a0d6e6">&#9670;&#160;</a></span>setWSServletDispatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::http::WSServer::setWSServletDispatch </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1http_1_1WSServletDispatch.html">WSServletDispatch</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置 WebSocket 服务调度器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>设置的 <code><a class="el" href="classGyanis_1_1net_1_1http_1_1WSServletDispatch.html" title="WebSocket Servlet 分发器类，用于管理和调度多个 WebSocket Servlet 它允许将请求分发到适当的 FunctionWSServlet 实例">WSServletDispatch</a></code> 对象的共享指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="WebSocketServer_8cpp_source.html">WebSocketServer.cpp</a> 第 <a class="el" href="WebSocketServer_8cpp_source.html#l00019">19</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    {</div>
+<div class="line"><span class="lineno">   21</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1http_1_1WSServer.html#ab8511d07b9dc5d3d357d6c68279d241a">m_dispatch</a> = value;</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ab8511d07b9dc5d3d357d6c68279d241a" name="ab8511d07b9dc5d3d357d6c68279d241a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8511d07b9dc5d3d357d6c68279d241a">&#9670;&#160;</a></span>m_dispatch</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classGyanis_1_1net_1_1http_1_1WSServletDispatch.html">WSServletDispatch</a>&gt; Gyanis::net::http::WSServer::m_dispatch</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>WebSocket 服务调度器，用于管理 WebSocket 服务和请求 </p>
+
+<p class="definition">在文件 <a class="el" href="WebSocketServer_8h_source.html">WebSocketServer.h</a> 第 <a class="el" href="WebSocketServer_8h_source.html#l00050">50</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/net/http/<a class="el" href="WebSocketServer_8h_source.html">WebSocketServer.h</a></li>
+<li>src/net/http/<a class="el" href="WebSocketServer_8cpp_source.html">WebSocketServer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGyanis.html">Gyanis</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1net.html">net</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1net_1_1http.html">http</a></li><li class="navelem"><a class="el" href="classGyanis_1_1net_1_1http_1_1WSServer.html">WSServer</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

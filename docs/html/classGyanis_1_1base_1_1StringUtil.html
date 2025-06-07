@@ -1,0 +1,669 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: Gyanis::base::StringUtil类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGyanis_1_1base_1_1StringUtil.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="classGyanis_1_1base_1_1StringUtil-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Gyanis::base::StringUtil类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Utils_8h_source.html">Utils.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a59293578770984a7e72268412bba4fa7" id="r_a59293578770984a7e72268412bba4fa7"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1StringUtil.html#a59293578770984a7e72268412bba4fa7">Format</a> (const char *fmt,...)</td></tr>
+<tr class="memdesc:a59293578770984a7e72268412bba4fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">格式化字符串，类似 printf 的功能  <br /></td></tr>
+<tr class="separator:a59293578770984a7e72268412bba4fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee6fb467c33c004bb364dac307c5b0ff" id="r_aee6fb467c33c004bb364dac307c5b0ff"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1StringUtil.html#aee6fb467c33c004bb364dac307c5b0ff">Formatv</a> (const char *fmt, va_list ap)</td></tr>
+<tr class="memdesc:aee6fb467c33c004bb364dac307c5b0ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">格式化字符串，接收 va_list 参数  <br /></td></tr>
+<tr class="separator:aee6fb467c33c004bb364dac307c5b0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ef4c0081c90d1600034b3eaccce79dd" id="r_a2ef4c0081c90d1600034b3eaccce79dd"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1StringUtil.html#a2ef4c0081c90d1600034b3eaccce79dd">UrlEncode</a> (const std::string &amp;str, bool space_as_plus=true)</td></tr>
+<tr class="memdesc:a2ef4c0081c90d1600034b3eaccce79dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">URL 编码  <br /></td></tr>
+<tr class="separator:a2ef4c0081c90d1600034b3eaccce79dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3f0e3a5c037cb443ba33e377bdaab9" id="r_aca3f0e3a5c037cb443ba33e377bdaab9"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1StringUtil.html#aca3f0e3a5c037cb443ba33e377bdaab9">UrlDecode</a> (const std::string &amp;str, bool space_as_plus=true)</td></tr>
+<tr class="memdesc:aca3f0e3a5c037cb443ba33e377bdaab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">URL 解码  <br /></td></tr>
+<tr class="separator:aca3f0e3a5c037cb443ba33e377bdaab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74b71ef66d63fb4c5d0113b6da3e0e5f" id="r_a74b71ef66d63fb4c5d0113b6da3e0e5f"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1StringUtil.html#a74b71ef66d63fb4c5d0113b6da3e0e5f">Trim</a> (const std::string &amp;str, const std::string &amp;delimit=&quot; \t\r\n&quot;)</td></tr>
+<tr class="memdesc:a74b71ef66d63fb4c5d0113b6da3e0e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">去掉字符串两边的指定字符（默认为空格、制表符、回车、换行）  <br /></td></tr>
+<tr class="separator:a74b71ef66d63fb4c5d0113b6da3e0e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07ba10a547bc1586f1ae998b14864beb" id="r_a07ba10a547bc1586f1ae998b14864beb"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1StringUtil.html#a07ba10a547bc1586f1ae998b14864beb">TrimLeft</a> (const std::string &amp;str, const std::string &amp;delimit=&quot; \t\r\n&quot;)</td></tr>
+<tr class="memdesc:a07ba10a547bc1586f1ae998b14864beb"><td class="mdescLeft">&#160;</td><td class="mdescRight">去掉字符串左边的指定字符（默认为空格、制表符、回车、换行）  <br /></td></tr>
+<tr class="separator:a07ba10a547bc1586f1ae998b14864beb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59fdc3696004147140a1bccf63c06cc3" id="r_a59fdc3696004147140a1bccf63c06cc3"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1StringUtil.html#a59fdc3696004147140a1bccf63c06cc3">TrimRight</a> (const std::string &amp;str, const std::string &amp;delimit=&quot; \t\r\n&quot;)</td></tr>
+<tr class="memdesc:a59fdc3696004147140a1bccf63c06cc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">去掉字符串右边的指定字符（默认为空格、制表符、回车、换行）  <br /></td></tr>
+<tr class="separator:a59fdc3696004147140a1bccf63c06cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23fbe24ebd89b37b9bdf90655275e02a" id="r_a23fbe24ebd89b37b9bdf90655275e02a"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1StringUtil.html#a23fbe24ebd89b37b9bdf90655275e02a">WStringToString</a> (const std::wstring &amp;ws)</td></tr>
+<tr class="memdesc:a23fbe24ebd89b37b9bdf90655275e02a"><td class="mdescLeft">&#160;</td><td class="mdescRight">将 std::wstring 转换为 std::string  <br /></td></tr>
+<tr class="separator:a23fbe24ebd89b37b9bdf90655275e02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a7d418f17c80e00230a1859641d5fea" id="r_a9a7d418f17c80e00230a1859641d5fea"><td class="memItemLeft" align="right" valign="top">static std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1base_1_1StringUtil.html#a9a7d418f17c80e00230a1859641d5fea">StringToWString</a> (const std::string &amp;s)</td></tr>
+<tr class="memdesc:a9a7d418f17c80e00230a1859641d5fea"><td class="mdescLeft">&#160;</td><td class="mdescRight">将 std::string 转换为 std::wstring  <br /></td></tr>
+<tr class="separator:a9a7d418f17c80e00230a1859641d5fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock">
+<p class="definition">在文件 <a class="el" href="Utils_8h_source.html">Utils.h</a> 第 <a class="el" href="Utils_8h_source.html#l00132">132</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a59293578770984a7e72268412bba4fa7" name="a59293578770984a7e72268412bba4fa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59293578770984a7e72268412bba4fa7">&#9670;&#160;</a></span>Format()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::base::StringUtil::Format </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>格式化字符串，类似 printf 的功能 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fmt</td><td>格式化字符串 </td></tr>
+    <tr><td class="paramname">...</td><td>可变参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Utils_8cpp_source.html">Utils.cpp</a> 第 <a class="el" href="Utils_8cpp_source.html#l00265">265</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  266</span>    {</div>
+<div class="line"><span class="lineno">  267</span>        va_list args;</div>
+<div class="line"><span class="lineno">  268</span>        va_start(args, fmt);</div>
+<div class="line"><span class="lineno">  269</span>        std::string result = <a class="code hl_function" href="classGyanis_1_1base_1_1StringUtil.html#aee6fb467c33c004bb364dac307c5b0ff">Formatv</a>(fmt, args);</div>
+<div class="line"><span class="lineno">  270</span>        va_end(args);</div>
+<div class="line"><span class="lineno">  271</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  272</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1StringUtil_html_aee6fb467c33c004bb364dac307c5b0ff"><div class="ttname"><a href="classGyanis_1_1base_1_1StringUtil.html#aee6fb467c33c004bb364dac307c5b0ff">Gyanis::base::StringUtil::Formatv</a></div><div class="ttdeci">static std::string Formatv(const char *fmt, va_list ap)</div><div class="ttdoc">格式化字符串，接收 va_list 参数</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00347">Utils.cpp:347</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1StringUtil_a59293578770984a7e72268412bba4fa7_cgraph.png" border="0" usemap="#aclassGyanis_1_1base_1_1StringUtil_a59293578770984a7e72268412bba4fa7_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aee6fb467c33c004bb364dac307c5b0ff" name="aee6fb467c33c004bb364dac307c5b0ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee6fb467c33c004bb364dac307c5b0ff">&#9670;&#160;</a></span>Formatv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::base::StringUtil::Formatv </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">va_list&#160;</td>
+          <td class="paramname"><em>ap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>格式化字符串，接收 va_list 参数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fmt</td><td>格式化字符串 </td></tr>
+    <tr><td class="paramname">ap</td><td>va_list 参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Utils_8cpp_source.html">Utils.cpp</a> 第 <a class="el" href="Utils_8cpp_source.html#l00347">347</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  348</span>    {</div>
+<div class="line"><span class="lineno">  349</span>        <span class="comment">// 计算格式化后的字符串所需的缓冲区大小</span></div>
+<div class="line"><span class="lineno">  350</span>        va_list ap_copy;</div>
+<div class="line"><span class="lineno">  351</span>        va_copy(ap_copy, ap);</div>
+<div class="line"><span class="lineno">  352</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> size = std::vsnprintf(<span class="keyword">nullptr</span>, 0, fmt, ap_copy) + 1; <span class="comment">// +1 for null terminator</span></div>
+<div class="line"><span class="lineno">  353</span>        va_end(ap_copy);</div>
+<div class="line"><span class="lineno">  354</span> </div>
+<div class="line"><span class="lineno">  355</span>        <span class="keywordflow">if</span> (size &lt;= 0)</div>
+<div class="line"><span class="lineno">  356</span>        {</div>
+<div class="line"><span class="lineno">  357</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Runtime Error: An error occurred during the formatting process.&quot;</span>);</div>
+<div class="line"><span class="lineno">  358</span>        }</div>
+<div class="line"><span class="lineno">  359</span> </div>
+<div class="line"><span class="lineno">  360</span>        std::vector&lt;char&gt; buf(size);</div>
+<div class="line"><span class="lineno">  361</span>        <span class="keywordflow">if</span> (std::vsnprintf(buf.data(), size, fmt, ap) &lt; 0)</div>
+<div class="line"><span class="lineno">  362</span>        {</div>
+<div class="line"><span class="lineno">  363</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Runtime Error: An error occurred during the formatting process.&quot;</span>);</div>
+<div class="line"><span class="lineno">  364</span>        }</div>
+<div class="line"><span class="lineno">  365</span> </div>
+<div class="line"><span class="lineno">  366</span>        <span class="keywordflow">return</span> buf.data();</div>
+<div class="line"><span class="lineno">  367</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1StringUtil_aee6fb467c33c004bb364dac307c5b0ff_icgraph.png" border="0" usemap="#aclassGyanis_1_1base_1_1StringUtil_aee6fb467c33c004bb364dac307c5b0ff_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9a7d418f17c80e00230a1859641d5fea" name="a9a7d418f17c80e00230a1859641d5fea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a7d418f17c80e00230a1859641d5fea">&#9670;&#160;</a></span>StringToWString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::wstring Gyanis::base::StringUtil::StringToWString </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将 std::string 转换为 std::wstring </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>输入窄字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Utils_8cpp_source.html">Utils.cpp</a> 第 <a class="el" href="Utils_8cpp_source.html#l00451">451</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  452</span>    {</div>
+<div class="line"><span class="lineno">  453</span>        std::wstring_convert&lt;std::codecvt_utf8&lt;wchar_t&gt;&gt; converter;</div>
+<div class="line"><span class="lineno">  454</span>        <span class="keywordflow">return</span> converter.from_bytes(s);</div>
+<div class="line"><span class="lineno">  455</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a74b71ef66d63fb4c5d0113b6da3e0e5f" name="a74b71ef66d63fb4c5d0113b6da3e0e5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74b71ef66d63fb4c5d0113b6da3e0e5f">&#9670;&#160;</a></span>Trim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::base::StringUtil::Trim </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>delimit</em> = <code>&quot;&#160;\t\r\n&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>去掉字符串两边的指定字符（默认为空格、制表符、回车、换行） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>输入字符串 </td></tr>
+    <tr><td class="paramname">delimit</td><td>要去掉的字符（默认值为 " \t\r\n"） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Utils_8cpp_source.html">Utils.cpp</a> 第 <a class="el" href="Utils_8cpp_source.html#l00422">422</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  423</span>    {</div>
+<div class="line"><span class="lineno">  424</span>        <span class="keyword">const</span> <span class="keyword">auto</span> begin = str.find_first_not_of(delimit);</div>
+<div class="line"><span class="lineno">  425</span>        <span class="keywordflow">if</span> (begin == std::string::npos)</div>
+<div class="line"><span class="lineno">  426</span>        {</div>
+<div class="line"><span class="lineno">  427</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  428</span>        }</div>
+<div class="line"><span class="lineno">  429</span>        <span class="keyword">const</span> <span class="keyword">auto</span> end = str.find_last_not_of(delimit);</div>
+<div class="line"><span class="lineno">  430</span>        <span class="keywordflow">return</span> str.substr(begin, end - begin + 1);</div>
+<div class="line"><span class="lineno">  431</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a07ba10a547bc1586f1ae998b14864beb" name="a07ba10a547bc1586f1ae998b14864beb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07ba10a547bc1586f1ae998b14864beb">&#9670;&#160;</a></span>TrimLeft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::base::StringUtil::TrimLeft </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>delimit</em> = <code>&quot;&#160;\t\r\n&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>去掉字符串左边的指定字符（默认为空格、制表符、回车、换行） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>输入字符串 </td></tr>
+    <tr><td class="paramname">delimit</td><td>要去掉的字符（默认值为 " \t\r\n"） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Utils_8cpp_source.html">Utils.cpp</a> 第 <a class="el" href="Utils_8cpp_source.html#l00433">433</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  434</span>    {</div>
+<div class="line"><span class="lineno">  435</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> start = str.find_first_not_of(delimit);</div>
+<div class="line"><span class="lineno">  436</span>        <span class="keywordflow">return</span> (start == std::string::npos) ? <span class="stringliteral">&quot;&quot;</span> : str.substr(start);</div>
+<div class="line"><span class="lineno">  437</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a59fdc3696004147140a1bccf63c06cc3" name="a59fdc3696004147140a1bccf63c06cc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59fdc3696004147140a1bccf63c06cc3">&#9670;&#160;</a></span>TrimRight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::base::StringUtil::TrimRight </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>delimit</em> = <code>&quot;&#160;\t\r\n&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>去掉字符串右边的指定字符（默认为空格、制表符、回车、换行） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>输入字符串 </td></tr>
+    <tr><td class="paramname">delimit</td><td>要去掉的字符（默认值为 " \t\r\n"） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Utils_8cpp_source.html">Utils.cpp</a> 第 <a class="el" href="Utils_8cpp_source.html#l00439">439</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  440</span>    {</div>
+<div class="line"><span class="lineno">  441</span>        <span class="keyword">const</span> <span class="keywordtype">size_t</span> end = str.find_last_not_of(delimit);</div>
+<div class="line"><span class="lineno">  442</span>        <span class="keywordflow">return</span> (end == std::string::npos) ? <span class="stringliteral">&quot;&quot;</span> : str.substr(0, end + 1);</div>
+<div class="line"><span class="lineno">  443</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aca3f0e3a5c037cb443ba33e377bdaab9" name="aca3f0e3a5c037cb443ba33e377bdaab9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca3f0e3a5c037cb443ba33e377bdaab9">&#9670;&#160;</a></span>UrlDecode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::base::StringUtil::UrlDecode </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>space_as_plus</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>URL 解码 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>编码后的字符串 </td></tr>
+    <tr><td class="paramname">space_as_plus</td><td>是否将 "+" 转换为空格（默认 true） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Utils_8cpp_source.html">Utils.cpp</a> 第 <a class="el" href="Utils_8cpp_source.html#l00393">393</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  394</span>    {</div>
+<div class="line"><span class="lineno">  395</span>        std::string result;</div>
+<div class="line"><span class="lineno">  396</span>        result.reserve(str.size()); <span class="comment">// 预分配内存，减少多次分配</span></div>
+<div class="line"><span class="lineno">  397</span> </div>
+<div class="line"><span class="lineno">  398</span>        <span class="keyword">const</span> <span class="keywordtype">char</span>* end = str.c_str() + str.length();</div>
+<div class="line"><span class="lineno">  399</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">char</span>* c = str.c_str(); c &lt; end; ++c)</div>
+<div class="line"><span class="lineno">  400</span>        {</div>
+<div class="line"><span class="lineno">  401</span>            <span class="keywordflow">if</span> (*c == <span class="charliteral">&#39;+&#39;</span> &amp;&amp; space_as_plus)</div>
+<div class="line"><span class="lineno">  402</span>            {</div>
+<div class="line"><span class="lineno">  403</span>                result.push_back(<span class="charliteral">&#39; &#39;</span>); <span class="comment">// 将 &quot;+&quot; 转换为空格</span></div>
+<div class="line"><span class="lineno">  404</span>            }</div>
+<div class="line"><span class="lineno">  405</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (*c == <span class="charliteral">&#39;%&#39;</span> &amp;&amp; (c + 2) &lt; end</div>
+<div class="line"><span class="lineno">  406</span>                &amp;&amp; std::isxdigit(*(c + 1)) &amp;&amp; std::isxdigit(*(c + 2)))</div>
+<div class="line"><span class="lineno">  407</span>            {</div>
+<div class="line"><span class="lineno">  408</span>                <span class="comment">// 解析百分号编码</span></div>
+<div class="line"><span class="lineno">  409</span>                <span class="keyword">const</span> <span class="keywordtype">char</span> hex_value = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>((<a class="code hl_function" href="namespaceGyanis_1_1base.html#abb8cc64e63cb95624288f9c9d265035d">hex_digit_to_value</a>(*(c + 1)) &lt;&lt; 4) | <a class="code hl_function" href="namespaceGyanis_1_1base.html#abb8cc64e63cb95624288f9c9d265035d">hex_digit_to_value</a>(</div>
+<div class="line"><span class="lineno">  410</span>                    *(c + 2)));</div>
+<div class="line"><span class="lineno">  411</span>                result.push_back(hex_value);</div>
+<div class="line"><span class="lineno">  412</span>                c += 2; <span class="comment">// 跳过已处理的两个字符</span></div>
+<div class="line"><span class="lineno">  413</span>            }</div>
+<div class="line"><span class="lineno">  414</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  415</span>            {</div>
+<div class="line"><span class="lineno">  416</span>                result.push_back(*c);</div>
+<div class="line"><span class="lineno">  417</span>            }</div>
+<div class="line"><span class="lineno">  418</span>        }</div>
+<div class="line"><span class="lineno">  419</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  420</span>    }</div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_abb8cc64e63cb95624288f9c9d265035d"><div class="ttname"><a href="namespaceGyanis_1_1base.html#abb8cc64e63cb95624288f9c9d265035d">Gyanis::base::hex_digit_to_value</a></div><div class="ttdeci">int hex_digit_to_value(char c)</div><div class="ttdoc">将单个十六进制字符转换为对应的数值</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00087">Utils.cpp:87</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1base_1_1StringUtil_aca3f0e3a5c037cb443ba33e377bdaab9_cgraph.png" border="0" usemap="#aclassGyanis_1_1base_1_1StringUtil_aca3f0e3a5c037cb443ba33e377bdaab9_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a2ef4c0081c90d1600034b3eaccce79dd" name="a2ef4c0081c90d1600034b3eaccce79dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ef4c0081c90d1600034b3eaccce79dd">&#9670;&#160;</a></span>UrlEncode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::base::StringUtil::UrlEncode </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>space_as_plus</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>URL 编码 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>输入字符串 </td></tr>
+    <tr><td class="paramname">space_as_plus</td><td>是否将空格转换为 "+"（默认 true） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Utils_8cpp_source.html">Utils.cpp</a> 第 <a class="el" href="Utils_8cpp_source.html#l00369">369</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  370</span>    {</div>
+<div class="line"><span class="lineno">  371</span>        std::ostringstream encoded;</div>
+<div class="line"><span class="lineno">  372</span> </div>
+<div class="line"><span class="lineno">  373</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> c : str)</div>
+<div class="line"><span class="lineno">  374</span>        {</div>
+<div class="line"><span class="lineno">  375</span>            <span class="keywordflow">if</span> (isalnum(c) || c == <span class="charliteral">&#39;-&#39;</span> || c == <span class="charliteral">&#39;_&#39;</span> || c == <span class="charliteral">&#39;.&#39;</span> || c == <span class="charliteral">&#39;~&#39;</span>)</div>
+<div class="line"><span class="lineno">  376</span>            {</div>
+<div class="line"><span class="lineno">  377</span>                encoded.put(c); <span class="comment">// 直接添加字母或数字</span></div>
+<div class="line"><span class="lineno">  378</span>            }</div>
+<div class="line"><span class="lineno">  379</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c == <span class="charliteral">&#39; &#39;</span> &amp;&amp; space_as_plus)</div>
+<div class="line"><span class="lineno">  380</span>            {</div>
+<div class="line"><span class="lineno">  381</span>                encoded.put(<span class="charliteral">&#39;+&#39;</span>); <span class="comment">// 空格转换为 &#39;+&#39;</span></div>
+<div class="line"><span class="lineno">  382</span>            }</div>
+<div class="line"><span class="lineno">  383</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  384</span>            {</div>
+<div class="line"><span class="lineno">  385</span>                <span class="comment">// 转换为十六进制格式并写入输出流</span></div>
+<div class="line"><span class="lineno">  386</span>                encoded &lt;&lt; &#39;%&#39; &lt;&lt; std::uppercase &lt;&lt; std::setw(2) &lt;&lt; std::setfill(&#39;0&#39;) &lt;&lt; static_cast&lt;int&gt;(c);</div>
+<div class="line"><span class="lineno">  387</span>            }</div>
+<div class="line"><span class="lineno">  388</span>        }</div>
+<div class="line"><span class="lineno">  389</span> </div>
+<div class="line"><span class="lineno">  390</span>        <span class="keywordflow">return</span> encoded.str();</div>
+<div class="line"><span class="lineno">  391</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a23fbe24ebd89b37b9bdf90655275e02a" name="a23fbe24ebd89b37b9bdf90655275e02a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23fbe24ebd89b37b9bdf90655275e02a">&#9670;&#160;</a></span>WStringToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::base::StringUtil::WStringToString </td>
+          <td>(</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
+          <td class="paramname"><em>ws</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将 std::wstring 转换为 std::string </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ws</td><td>输入宽字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Utils_8cpp_source.html">Utils.cpp</a> 第 <a class="el" href="Utils_8cpp_source.html#l00445">445</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  446</span>    {</div>
+<div class="line"><span class="lineno">  447</span>        std::wstring_convert&lt;std::codecvt_utf8&lt;wchar_t&gt;&gt; converter;</div>
+<div class="line"><span class="lineno">  448</span>        <span class="keywordflow">return</span> converter.to_bytes(ws);</div>
+<div class="line"><span class="lineno">  449</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/base/<a class="el" href="Utils_8h_source.html">Utils.h</a></li>
+<li>src/base/<a class="el" href="Utils_8cpp_source.html">Utils.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGyanis.html">Gyanis</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1base.html">base</a></li><li class="navelem"><a class="el" href="classGyanis_1_1base_1_1StringUtil.html">StringUtil</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

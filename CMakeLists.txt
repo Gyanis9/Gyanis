@@ -1,12 +1,5 @@
-###############################################################################
-# 项目基础配置
-###############################################################################
 cmake_minimum_required(VERSION 3.20)
 project(Gyanis VERSION 1.0.0 DESCRIPTION "高性能网络服务框架" LANGUAGES C CXX)
-
-# 使用vcpkg进行第三方依赖管理
-set(CMAKE_PREFIX_PATH "/home/study/vcpkg/installed/x64-linux/share" CACHE PATH "Vcpkg package installation directory")
-set(CMAKE_TOOLCHAIN_FILE "/home/study/vcpkg/scripts/buildsystems/vcpkg.cmake" CACHE FILEPATH "Vcpkg toolchain file")
 
 # 输出目录配置
 #-------------------------------------------------------------------------------
@@ -19,12 +12,12 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)   # 可执行文�
 # 全局编译配置
 ###############################################################################
 # C++标准配置
-set(CMAKE_CXX_STANDARD 17)       # 强制使用C++17标准
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)     # 禁用编译器扩展
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 # C标准配置
-set(CMAKE_C_STANDARD 11)         # 强制使用C11标准
+set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_C_EXTENSIONS OFF)
 
@@ -58,7 +51,6 @@ endif ()
 ###############################################################################
 # 依赖项配置
 ###############################################################################
-# 使用find_package查找预安装的库
 find_package(yaml-cpp CONFIG REQUIRED)       # YAML配置文件解析库
 find_package(Boost CONFIG REQUIRED COMPONENTS coroutine2 system filesystem)  # Boost协程组件
 find_package(nlohmann_json CONFIG REQUIRED)  # JSON解析库
@@ -81,7 +73,7 @@ include(cmake/utils.cmake)
 # 基础功能模块 (base)
 # 包含日志系统、工具类、配置管理等基础功能
 ###############################################################################
-add_library(base SHARED
+set(base
         # 日志系统
         include/base/Log.h
         src/base/Log.cpp
@@ -113,24 +105,11 @@ add_library(base SHARED
         src/base/HashUtils.cpp
 )
 
-target_include_directories(base PUBLIC
-        include
-)
-
-
-target_link_libraries(base PUBLIC
-        yaml-cpp::yaml-cpp           # YAML解析依赖
-        nlohmann_json::nlohmann_json  # JSON解析依赖
-        Boost::system
-)
-
-force_redefine_file_macro_for_sources(base)
-
 ###############################################################################
 # 核心功能模块 (core)
 # 协程调度、IO管理、Hook系统等核心功能
 ###############################################################################
-add_library(core SHARED
+set(core
         # 协程实现
         include/core/Fiber.h         # 协程类定义
         src/core/Fiber.cpp
@@ -162,14 +141,6 @@ add_library(core SHARED
         src/core/Worker.cpp
 )
 
-target_link_libraries(core PUBLIC
-        base                # 依赖基础模块
-        Boost::coroutine2   # Boost协程库
-)
-
-
-force_redefine_file_macro_for_sources(core)
-
 ###############################################################################
 # 网络模块 (net)
 # 网络通信、协议解析、HTTP服务器等网络相关功能
@@ -189,7 +160,7 @@ add_custom_command(
         ${PROJECT_SOURCE_DIR}/src/net/http/Uri.rl
 )
 
-add_library(net SHARED
+set(net
         # 网络基础
         include/net/Socket.h          # Socket封装
         src/net/Socket.cpp
@@ -263,18 +234,11 @@ add_library(net SHARED
         src/net/Library.cpp
 )
 
-target_link_libraries(net PRIVATE
-        core        # 依赖核心模块
-        base        # 依赖基础模块
-)
-
-force_redefine_file_macro_for_sources(net)
-
 ###############################################################################
 # 数据库模块 (db)
 # 数据库连接与操作
 ###############################################################################
-add_library(db SHARED
+set(db
         include/db/Db.h          # 数据库接口定义
         src/db/Mysql.cpp         # MySQL实现
         include/db/Mysql.h
@@ -284,41 +248,38 @@ add_library(db SHARED
         include/db/Redis.h
 )
 
-target_include_directories(db PUBLIC
-        ${MYSQL_INCLUDE_DIR}     # MySQL头文件目录
-)
-
-target_link_libraries(db PUBLIC
-        base                # 依赖基础模块
-        core
-        libevent::core
-        libevent::extra
-        libevent::pthreads
-        hiredis::hiredis
-        redis++::redis++_static
-        ${MYSQL_LIB_DIR}    # MySQL客户端库
-)
-
-force_redefine_file_macro_for_sources(db)
-
 ###############################################################################
-# 主程序
+# 主程序配置
 ###############################################################################
-add_executable(Gyanis src/main.cpp)
+add_executable(Gyanis src/main.cpp ${base} ${core} ${net} ${db})
+
 target_link_libraries(Gyanis PUBLIC
-        core
-        dl                  # 动态加载支持
-        base
-        net
-        OpenSSL::SSL        # SSL支持
-        ZLIB::ZLIB          # 压缩支持
-        protobuf::libprotoc
-        protobuf::libprotobuf
-        protobuf::libprotobuf-lite
+        dl                            # 支持动态库加载（如 dlsym, dlopen 等）
+        yaml-cpp::yaml-cpp            # YAML 配置解析库
+        nlohmann_json::nlohmann_json  # JSON 解析库（现代C++风格）
+        Boost::coroutine2             # Boost 协程库
+        Boost::system                 # Boost 系统库，处理错误码等
+        OpenSSL::SSL                  # OpenSSL 库，用于SSL加密与通信
+        ZLIB::ZLIB                    # Zlib 库，支持数据压缩
+        protobuf::libprotoc           # Protocol Buffers 编码/解码（protoc工具）
+        protobuf::libprotobuf         # Protocol Buffers 主库
+        protobuf::libprotobuf-lite    # Protocol Buffers 轻量级版本
+        libevent::core                # libevent 核心事件驱动支持
+        libevent::extra               # libevent 扩展库
+        libevent::pthreads            # libevent 多线程支持
+        hiredis::hiredis              # Redis C客户端库
+        redis++::redis++_static       # Redis++ C++客户端库（静态链接）
+        ${MYSQL_LIB_DIR}              # MySQL 客户端库路径变量
 )
 
-# 强制重新定义文件宏（来自自定义工具函数）
+target_include_directories(Gyanis PUBLIC
+        include                       # 项目主头文件目录
+        ${MYSQL_INCLUDE_DIR}          # MySQL 头文件目录
+)
+
+# 强制重定义 __FILE__ 宏，方便日志打印/调试
 force_redefine_file_macro_for_sources(Gyanis)
+
 
 ###############################################################################
 # 子目录

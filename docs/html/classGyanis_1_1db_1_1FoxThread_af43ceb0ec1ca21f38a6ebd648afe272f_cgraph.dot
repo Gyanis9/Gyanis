@@ -1,0 +1,38 @@
+digraph "Gyanis::db::FoxThread::FoxThread"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="Gyanis::db::FoxThread\l::FoxThread",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="构造函数，初始化线程"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::db::FoxThread\l::read_cb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1db_1_1FoxThread.html#ad271786523ef00d03c9873bba19cbac2",tooltip="事件回调函数，用于处理事件"];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Gyanis::base::Atomic\l::addFetch",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1base_1_1Atomic.html#af3d3c86cdb4ae7bf29b8d6155db0a822",tooltip=" "];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="recv",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Hook_8cpp.html#a49c565342c0f29cec5461ec22c3b1b3d",tooltip=" "];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="do_io",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Hook_8cpp.html#a54f397edba31e0013f8b0cb510c5311e",tooltip="执行 IO 操作的通用函数，支持钩取"];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="Gyanis::base::TimerManager\l::cancel",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1base_1_1TimerManager.html#a0a2ccb0e88edf5a2128b5f1b429a671e",tooltip="取消一个定时器"];
+  Node5 -> Node7 [id="edge6_Node000005_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="Singleton::GetInstance",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classSingleton.html#a7b90075f8e4471743fd3596be874e5d1",tooltip="获取单例实例的裸指针"];
+  Node5 -> Node8 [id="edge7_Node000005_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="Gyanis::core::IOManager\l::GetThis",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530",tooltip="获取当前 IO 管理器实例"];
+  Node8 -> Node9 [id="edge8_Node000008_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="Gyanis::core::Scheduler\l::GetThis",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1Scheduler.html#ae66d0482d82d0c1573eda8ec3cb0c973",tooltip="获取当前调度器实例"];
+  Node5 -> Node10 [id="edge9_Node000005_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="Gyanis::core::Fiber\l::Yield",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1Fiber.html#a662e27df3d4da3b7704db7327eaf07e0",tooltip="挂起当前协程并切换到其他协程"];
+  Node10 -> Node11 [id="edge10_Node000010_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="Gyanis::core::Fiber\l::GetThis",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1Fiber.html#aecf9535459ef9e66bf472f56326c7401",tooltip="获取当前协程实例"];
+  Node10 -> Node12 [id="edge11_Node000010_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="Gyanis::core::Fiber\l::yield",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1Fiber.html#aad0f3323207781209779db14fb233589",tooltip="挂起当前协程"];
+  Node2 -> Node13 [id="edge12_Node000002_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="Gyanis::db::FoxThread\l::unsetThis",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1db_1_1FoxThread.html#a6694b81c9380267ba3c21050f3f1a3ff",tooltip="取消设置当前线程为本线程"];
+  Node13 -> Node14 [id="edge13_Node000013_Node000014",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="Gyanis::base::GetThreadID",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1base.html#aa80cc0a553c8b24f4d7be5dd98f9451d",tooltip="获取当前线程的ID"];
+  Node1 -> Node15 [id="edge14_Node000001_Node000015",color="steelblue1",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="Gyanis::db::FoxThread\l::setThis",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1db_1_1FoxThread.html#a8ca7df44aeb8cda32029db877816b95d",tooltip="设置当前线程为本线程"];
+  Node15 -> Node14 [id="edge15_Node000015_Node000014",color="steelblue1",style="solid",tooltip=" "];
+}

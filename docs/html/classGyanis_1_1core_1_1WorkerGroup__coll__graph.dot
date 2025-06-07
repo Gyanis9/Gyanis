@@ -1,0 +1,21 @@
+digraph "Gyanis::core::WorkerGroup"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="Gyanis::core::WorkerGroup",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="该类负责管理一组工作任务（工人）并调度它们的执行"];
+  Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="std::enable_shared\l_from_this\< WorkerGroup \>",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [id="edge2_Node000001_Node000003",dir="back",color="firebrick4",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="NonCopyable",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classNonCopyable.html",tooltip="对象无法拷贝,赋值"];
+  Node4 -> Node1 [id="edge3_Node000001_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_scheduler",fontcolor="grey" ];
+  Node4 [id="Node000004",label="Gyanis::core::Scheduler",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1Scheduler.html",tooltip="协程调度器类"];
+  Node5 -> Node1 [id="edge4_Node000001_Node000005",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_sem",fontcolor="grey" ];
+  Node5 [id="Node000005",label="Gyanis::core::FiberSemaphore",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1FiberSemaphore.html",tooltip="协程信号量类"];
+  Node3 -> Node5 [id="edge5_Node000005_Node000003",dir="back",color="firebrick4",style="solid",tooltip=" "];
+  Node6 -> Node5 [id="edge6_Node000005_Node000006",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" m_mutex",fontcolor="grey" ];
+  Node6 [id="Node000006",label="Gyanis::base::Spinlock",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classGyanis_1_1base_1_1Spinlock.html",tooltip="自旋锁类"];
+  Node3 -> Node6 [id="edge7_Node000006_Node000003",dir="back",color="firebrick4",style="solid",tooltip=" "];
+}

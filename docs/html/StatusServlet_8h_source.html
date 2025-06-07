@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: include/net/http/servlets/StatusServlet.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('StatusServlet_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">StatusServlet.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="StatusServlet_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifndef STATUSSERVLET_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define STATUSSERVLET_H</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="Servlet_8h.html">Servlet.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceGyanis_1_1net_1_1http.html">Gyanis::net::http</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classGyanis_1_1net_1_1http_1_1StatusServlet.html">   18</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classGyanis_1_1net_1_1http_1_1StatusServlet.html">StatusServlet</a> final : <span class="keyword">public</span> <a class="code hl_class" href="classGyanis_1_1net_1_1http_1_1Servlet.html">Servlet</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1StatusServlet.html#a3c6c3ab3f035dab096018e7c8eca06f0">StatusServlet</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        int32_t <a class="code hl_function" href="classGyanis_1_1net_1_1http_1_1StatusServlet.html#a2eae2a6fc752d05ad7661af92114858e">handle</a>(<span class="keyword">const</span> std::shared_ptr&lt;HttpRequest&gt;&amp; request,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                       <span class="keyword">const</span> std::shared_ptr&lt;HttpResponse&gt;&amp; response,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                       <span class="keyword">const</span> std::shared_ptr&lt;HttpSession&gt;&amp; session) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    };</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aServlet_8h_html"><div class="ttname"><a href="Servlet_8h.html">Servlet.h</a></div><div class="ttdoc">Servlet模块封装</div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1Servlet_html"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1Servlet.html">Gyanis::net::http::Servlet</a></div><div class="ttdoc">Servlet 基类</div><div class="ttdef"><b>Definition</b> <a href="Servlet_8h_source.html#l00021">Servlet.h:22</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1StatusServlet_html"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1StatusServlet.html">Gyanis::net::http::StatusServlet</a></div><div class="ttdoc">该类继承自 Servlet，用于处理与系统状态相关的 HTTP 请求</div><div class="ttdef"><b>Definition</b> <a href="StatusServlet_8h_source.html#l00018">StatusServlet.h:19</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1StatusServlet_html_a2eae2a6fc752d05ad7661af92114858e"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1StatusServlet.html#a2eae2a6fc752d05ad7661af92114858e">Gyanis::net::http::StatusServlet::handle</a></div><div class="ttdeci">int32_t handle(const std::shared_ptr&lt; HttpRequest &gt; &amp;request, const std::shared_ptr&lt; HttpResponse &gt; &amp;response, const std::shared_ptr&lt; HttpSession &gt; &amp;session) override</div><div class="ttdoc">处理 HTTP 请求并生成响应</div><div class="ttdef"><b>Definition</b> <a href="StatusServlet_8cpp_source.html#l00120">StatusServlet.cpp:120</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1http_1_1StatusServlet_html_a3c6c3ab3f035dab096018e7c8eca06f0"><div class="ttname"><a href="classGyanis_1_1net_1_1http_1_1StatusServlet.html#a3c6c3ab3f035dab096018e7c8eca06f0">Gyanis::net::http::StatusServlet::StatusServlet</a></div><div class="ttdeci">StatusServlet()</div><div class="ttdoc">构造函数，初始化 StatusServlet 对象</div><div class="ttdef"><b>Definition</b> <a href="StatusServlet_8cpp_source.html#l00115">StatusServlet.cpp:115</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1http_html"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1http.html">Gyanis::net::http</a></div><div class="ttdoc">示例 URI：foo://user@baidu.com:8042/over/there?name=ferret::nose 解析后的组成部分： _/ ______________/_________/ ...</div><div class="ttdef"><b>Definition</b> <a href="Http_8h_source.html#l00014">Http.h:15</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_2fa1ed3146d6c2b96c5cfe4341985326.html">net</a></li><li class="navelem"><a class="el" href="dir_7dceb8d0fc1433f0ba9a48a61d388f8d.html">http</a></li><li class="navelem"><a class="el" href="dir_a6aa53d6017f7e3e19b3c5c3e08161fb.html">servlets</a></li><li class="navelem"><a class="el" href="StatusServlet_8h.html">StatusServlet.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

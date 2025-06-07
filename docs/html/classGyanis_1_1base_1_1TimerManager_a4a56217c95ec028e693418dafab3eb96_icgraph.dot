@@ -1,0 +1,33 @@
+digraph "Gyanis::base::TimerManager::onTimerInsertedAtFront"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="Gyanis::base::TimerManager\l::onTimerInsertedAtFront",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="子类需要实现的虚函数，用于在定时器插入时执行特殊操作"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::base::TimerManager\l::addTimerInternal",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1base_1_1TimerManager.html#a768b2b5531106c7fb9b43fd9b06bed29",tooltip="添加定时器的内部实现"];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Gyanis::base::TimerManager\l::addConditionTimer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1base_1_1TimerManager.html#a13fc09b620e8d828f566cb0811e92ffe",tooltip="添加一个依赖条件的定时器"];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Gyanis::base::TimerManager\l::addTimer",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1base_1_1TimerManager.html#af7727acb34ed68e8b012d3ac3e5a08e9",tooltip="添加一个定时器"];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="sleep",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Hook_8cpp.html#a69c97039c9ec10a30e5edbdf365e3bbd",tooltip=" "];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="Gyanis::core::real\l_daemon",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1core.html#a042ef807a18a79bf6d0ad9ddf695e625",tooltip=" "];
+  Node6 -> Node7 [id="edge6_Node000006_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="Gyanis::core::start\l_daemon",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespaceGyanis_1_1core.html#ada90e141eab7453720ee551e963effc0",tooltip=" "];
+  Node1 -> Node8 [id="edge7_Node000001_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="Gyanis::base::TimerManager\l::handleTimeRollback",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1base_1_1TimerManager.html#a91c6972de0c8cf575a0180d9151282c6",tooltip="处理时间回滚的情况"];
+  Node8 -> Node9 [id="edge8_Node000008_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="Gyanis::base::TimerManager\l::checkTimeRollback",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1base_1_1TimerManager.html#ae111e847cc7b48b70ab9d70f913148e1",tooltip="检查系统时间是否发生回滚"];
+  Node9 -> Node10 [id="edge9_Node000009_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="Gyanis::base::TimerManager\l::ListExpiredCb",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1base_1_1TimerManager.html#a7ade1522bef5cadf2ebb82ac97406a37",tooltip="列出所有已经过期的定时器的回调函数"];
+  Node10 -> Node11 [id="edge10_Node000010_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="Gyanis::core::IOManager\l::idle",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1core_1_1IOManager.html#ab34f904bb6d8b2b8f83fe77acbe8c03e",tooltip="空闲时的操作"];
+  Node1 -> Node12 [id="edge11_Node000001_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="Gyanis::base::TimerManager\l::refresh",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1base_1_1TimerManager.html#a5ee064b97fbd8a6508706b6196f1251e",tooltip="刷新定时器，使其重置过期时间"];
+  Node1 -> Node13 [id="edge12_Node000001_Node000013",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="Gyanis::base::TimerManager\l::reset",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1base_1_1TimerManager.html#a6441fac2adba7cd1838b983dc407dd1e",tooltip="重置定时器的过期时间"];
+}

@@ -1,0 +1,1887 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: Gyanis::db::FoxThread类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGyanis_1_1db_1_1FoxThread.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classGyanis_1_1db_1_1FoxThread-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Gyanis::db::FoxThread类 参考<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="classGyanis_1_1db_1_1FoxThread.html" title="FoxThread 类，继承自 IFoxThread，用于实现线程管理和任务调度">FoxThread</a> 类，继承自 IFoxThread，用于实现线程管理和任务调度  
+ <a href="classGyanis_1_1db_1_1FoxThread.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="FoxThread_8h_source.html">FoxThread.h</a>&gt;</code></p>
+<div class="dynheader">
+类 Gyanis::db::FoxThread 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread__inherit__graph.png" border="0" usemap="#aGyanis_1_1db_1_1FoxThread_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+Gyanis::db::FoxThread 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread__coll__graph.png" border="0" usemap="#aGyanis_1_1db_1_1FoxThread_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:aeb54c56ecefa221b2e8dcc279c926ac1" id="r_aeb54c56ecefa221b2e8dcc279c926ac1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#aeb54c56ecefa221b2e8dcc279c926ac1">callback</a> = std::function&lt; void()&gt;</td></tr>
+<tr class="memdesc:aeb54c56ecefa221b2e8dcc279c926ac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义回调类型，表示不带参数且不返回值的函数  <br /></td></tr>
+<tr class="separator:aeb54c56ecefa221b2e8dcc279c926ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b111a9513af4142d99d85e12184f869" id="r_a7b111a9513af4142d99d85e12184f869"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a7b111a9513af4142d99d85e12184f869">init_cb</a> = std::function&lt; void(<a class="el" href="classGyanis_1_1db_1_1FoxThread.html">FoxThread</a> *)&gt;</td></tr>
+<tr class="memdesc:a7b111a9513af4142d99d85e12184f869"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化回调类型，用于线程初始化时的操作  <br /></td></tr>
+<tr class="separator:a7b111a9513af4142d99d85e12184f869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classGyanis_1_1db_1_1IFoxThread"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classGyanis_1_1db_1_1IFoxThread')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html">Gyanis::db::IFoxThread</a></td></tr>
+<tr class="memitem:a3f2777395f1d2ba11b4383ac9ea52ce4 inherit pub_types_classGyanis_1_1db_1_1IFoxThread" id="r_a3f2777395f1d2ba11b4383ac9ea52ce4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a3f2777395f1d2ba11b4383ac9ea52ce4">callback</a> = std::function&lt; void()&gt;</td></tr>
+<tr class="memdesc:a3f2777395f1d2ba11b4383ac9ea52ce4 inherit pub_types_classGyanis_1_1db_1_1IFoxThread"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义回调类型，表示不带参数且不返回值的函数  <br /></td></tr>
+<tr class="separator:a3f2777395f1d2ba11b4383ac9ea52ce4 inherit pub_types_classGyanis_1_1db_1_1IFoxThread"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af43ceb0ec1ca21f38a6ebd648afe272f" id="r_af43ceb0ec1ca21f38a6ebd648afe272f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#af43ceb0ec1ca21f38a6ebd648afe272f">FoxThread</a> (std::string name=&quot;&quot;, event_base *base=nullptr)</td></tr>
+<tr class="memdesc:af43ceb0ec1ca21f38a6ebd648afe272f"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数，初始化线程  <br /></td></tr>
+<tr class="separator:af43ceb0ec1ca21f38a6ebd648afe272f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4139aa39d871173ceede1499381c4783" id="r_a4139aa39d871173ceede1499381c4783"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a4139aa39d871173ceede1499381c4783">~FoxThread</a> () override</td></tr>
+<tr class="memdesc:a4139aa39d871173ceede1499381c4783"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数，释放线程资源  <br /></td></tr>
+<tr class="separator:a4139aa39d871173ceede1499381c4783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ca7df44aeb8cda32029db877816b95d" id="r_a8ca7df44aeb8cda32029db877816b95d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a8ca7df44aeb8cda32029db877816b95d">setThis</a> ()</td></tr>
+<tr class="memdesc:a8ca7df44aeb8cda32029db877816b95d"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置当前线程为本线程  <br /></td></tr>
+<tr class="separator:a8ca7df44aeb8cda32029db877816b95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bff3aff85f5cc94a346de99fb66b2c6" id="r_a6bff3aff85f5cc94a346de99fb66b2c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a6bff3aff85f5cc94a346de99fb66b2c6">start</a> () override</td></tr>
+<tr class="memdesc:a6bff3aff85f5cc94a346de99fb66b2c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动线程  <br /></td></tr>
+<tr class="separator:a6bff3aff85f5cc94a346de99fb66b2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fdac2dd01aeb23be9ee7a7c4af90f3d" id="r_a5fdac2dd01aeb23be9ee7a7c4af90f3d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a5fdac2dd01aeb23be9ee7a7c4af90f3d">dispatch</a> (const <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#aeb54c56ecefa221b2e8dcc279c926ac1">callback</a> &amp;cb) override</td></tr>
+<tr class="memdesc:a5fdac2dd01aeb23be9ee7a7c4af90f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">派发回调任务到线程  <br /></td></tr>
+<tr class="separator:a5fdac2dd01aeb23be9ee7a7c4af90f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30196e171f44beefb09d1835ba36b9bf" id="r_a30196e171f44beefb09d1835ba36b9bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a30196e171f44beefb09d1835ba36b9bf">dispatch</a> (uint32_t id, const <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#aeb54c56ecefa221b2e8dcc279c926ac1">callback</a> &amp;cb) override</td></tr>
+<tr class="memdesc:a30196e171f44beefb09d1835ba36b9bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据任务 ID 派发回调任务到线程  <br /></td></tr>
+<tr class="separator:a30196e171f44beefb09d1835ba36b9bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae7aa2f35b33c92f70fe3f2e83cc79a" id="r_a0ae7aa2f35b33c92f70fe3f2e83cc79a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a0ae7aa2f35b33c92f70fe3f2e83cc79a">batchDispatch</a> (const std::vector&lt; <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#aeb54c56ecefa221b2e8dcc279c926ac1">callback</a> &gt; &amp;cbs) override</td></tr>
+<tr class="memdesc:a0ae7aa2f35b33c92f70fe3f2e83cc79a"><td class="mdescLeft">&#160;</td><td class="mdescRight">批量派发回调任务到线程  <br /></td></tr>
+<tr class="separator:a0ae7aa2f35b33c92f70fe3f2e83cc79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad337b4048962036e8fde60445f9e224e" id="r_ad337b4048962036e8fde60445f9e224e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#ad337b4048962036e8fde60445f9e224e">broadcast</a> (const <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#aeb54c56ecefa221b2e8dcc279c926ac1">callback</a> &amp;cb) override</td></tr>
+<tr class="memdesc:ad337b4048962036e8fde60445f9e224e"><td class="mdescLeft">&#160;</td><td class="mdescRight">向所有线程广播回调任务  <br /></td></tr>
+<tr class="separator:ad337b4048962036e8fde60445f9e224e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8b0580f49fe97f6de6232e8cc8375d6" id="r_ab8b0580f49fe97f6de6232e8cc8375d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#ab8b0580f49fe97f6de6232e8cc8375d6">join</a> () override</td></tr>
+<tr class="memdesc:ab8b0580f49fe97f6de6232e8cc8375d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">等待线程完成任务  <br /></td></tr>
+<tr class="separator:ab8b0580f49fe97f6de6232e8cc8375d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40da331bdd54091a32ba76a1e82ba4de" id="r_a40da331bdd54091a32ba76a1e82ba4de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a40da331bdd54091a32ba76a1e82ba4de">stop</a> () override</td></tr>
+<tr class="memdesc:a40da331bdd54091a32ba76a1e82ba4de"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止线程  <br /></td></tr>
+<tr class="separator:a40da331bdd54091a32ba76a1e82ba4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153ea0fed61e276e9d2727917ba1f31a" id="r_a153ea0fed61e276e9d2727917ba1f31a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a153ea0fed61e276e9d2727917ba1f31a">isStart</a> () const</td></tr>
+<tr class="memdesc:a153ea0fed61e276e9d2727917ba1f31a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取线程是否已启动  <br /></td></tr>
+<tr class="separator:a153ea0fed61e276e9d2727917ba1f31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89d48c638d2a6df38fd87abff012cd53" id="r_a89d48c638d2a6df38fd87abff012cd53"><td class="memItemLeft" align="right" valign="top">event_base *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a89d48c638d2a6df38fd87abff012cd53">getBase</a> () const</td></tr>
+<tr class="memdesc:a89d48c638d2a6df38fd87abff012cd53"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 libevent 事件基对象  <br /></td></tr>
+<tr class="separator:a89d48c638d2a6df38fd87abff012cd53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c7625fe271c761201b109bb37834293" id="r_a9c7625fe271c761201b109bb37834293"><td class="memItemLeft" align="right" valign="top">std::thread::id&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a9c7625fe271c761201b109bb37834293">getId</a> () const</td></tr>
+<tr class="memdesc:a9c7625fe271c761201b109bb37834293"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取线程的 ID  <br /></td></tr>
+<tr class="separator:a9c7625fe271c761201b109bb37834293"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a975c52b274abe23bbf72807cf371f495" id="r_a975c52b274abe23bbf72807cf371f495"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a975c52b274abe23bbf72807cf371f495">getData</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a975c52b274abe23bbf72807cf371f495"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取线程中的数据  <br /></td></tr>
+<tr class="separator:a975c52b274abe23bbf72807cf371f495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab849601f0090a5271ce9d43aa1811ac6" id="r_ab849601f0090a5271ce9d43aa1811ac6"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ab849601f0090a5271ce9d43aa1811ac6"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#ab849601f0090a5271ce9d43aa1811ac6">getData</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:ab849601f0090a5271ce9d43aa1811ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取线程中的特定类型的数据  <br /></td></tr>
+<tr class="separator:ab849601f0090a5271ce9d43aa1811ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a231fe9e8b4e52aad79a4f6228bf212b7" id="r_a231fe9e8b4e52aad79a4f6228bf212b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a231fe9e8b4e52aad79a4f6228bf212b7">setData</a> (const std::string &amp;name, void *value)</td></tr>
+<tr class="memdesc:a231fe9e8b4e52aad79a4f6228bf212b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置线程中的数据  <br /></td></tr>
+<tr class="separator:a231fe9e8b4e52aad79a4f6228bf212b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac74425f80c5834e221b8d26886420faa" id="r_ac74425f80c5834e221b8d26886420faa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#ac74425f80c5834e221b8d26886420faa">setInitCb</a> (const <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a7b111a9513af4142d99d85e12184f869">init_cb</a> &amp;value)</td></tr>
+<tr class="memdesc:ac74425f80c5834e221b8d26886420faa"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置线程初始化回调函数  <br /></td></tr>
+<tr class="separator:ac74425f80c5834e221b8d26886420faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae850352e87dd123b063f6123c3b2eaa5" id="r_ae850352e87dd123b063f6123c3b2eaa5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#ae850352e87dd123b063f6123c3b2eaa5">dump</a> (std::ostream &amp;os) override</td></tr>
+<tr class="memdesc:ae850352e87dd123b063f6123c3b2eaa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">打印线程信息  <br /></td></tr>
+<tr class="separator:ae850352e87dd123b063f6123c3b2eaa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1937831f79f79472eeee5aaafcf2bbca" id="r_a1937831f79f79472eeee5aaafcf2bbca"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a1937831f79f79472eeee5aaafcf2bbca">getTotal</a> () override</td></tr>
+<tr class="memdesc:a1937831f79f79472eeee5aaafcf2bbca"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取线程的总任务数  <br /></td></tr>
+<tr class="separator:a1937831f79f79472eeee5aaafcf2bbca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classGyanis_1_1db_1_1IFoxThread"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classGyanis_1_1db_1_1IFoxThread')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html">Gyanis::db::IFoxThread</a></td></tr>
+<tr class="memitem:a285bc55cb1e5ed5280903f3f953e1757 inherit pub_methods_classGyanis_1_1db_1_1IFoxThread" id="r_a285bc55cb1e5ed5280903f3f953e1757"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a285bc55cb1e5ed5280903f3f953e1757">~IFoxThread</a> ()=default</td></tr>
+<tr class="memdesc:a285bc55cb1e5ed5280903f3f953e1757 inherit pub_methods_classGyanis_1_1db_1_1IFoxThread"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚拟析构函数  <br /></td></tr>
+<tr class="separator:a285bc55cb1e5ed5280903f3f953e1757 inherit pub_methods_classGyanis_1_1db_1_1IFoxThread"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ad75fd7d5162f54bba293d68889a38095" id="r_ad75fd7d5162f54bba293d68889a38095"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classGyanis_1_1db_1_1FoxThread.html">FoxThread</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#ad75fd7d5162f54bba293d68889a38095">GetThis</a> ()</td></tr>
+<tr class="memdesc:ad75fd7d5162f54bba293d68889a38095"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前线程对象  <br /></td></tr>
+<tr class="separator:ad75fd7d5162f54bba293d68889a38095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe11b9fac55646dc8ee70ea8354c679e" id="r_afe11b9fac55646dc8ee70ea8354c679e"><td class="memItemLeft" align="right" valign="top">static const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#afe11b9fac55646dc8ee70ea8354c679e">GetFoxThreadName</a> ()</td></tr>
+<tr class="memdesc:afe11b9fac55646dc8ee70ea8354c679e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前线程的名称  <br /></td></tr>
+<tr class="separator:afe11b9fac55646dc8ee70ea8354c679e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e5ad1af2e1a96e677a707c5b1dcba37" id="r_a0e5ad1af2e1a96e677a707c5b1dcba37"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a0e5ad1af2e1a96e677a707c5b1dcba37">GetAllFoxThreadName</a> (std::unordered_map&lt; uint64_t, std::string &gt; &amp;names)</td></tr>
+<tr class="memdesc:a0e5ad1af2e1a96e677a707c5b1dcba37"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取所有 <a class="el" href="classGyanis_1_1db_1_1FoxThread.html" title="FoxThread 类，继承自 IFoxThread，用于实现线程管理和任务调度">FoxThread</a> 的名称  <br /></td></tr>
+<tr class="separator:a0e5ad1af2e1a96e677a707c5b1dcba37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6694b81c9380267ba3c21050f3f1a3ff" id="r_a6694b81c9380267ba3c21050f3f1a3ff"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a6694b81c9380267ba3c21050f3f1a3ff">unsetThis</a> ()</td></tr>
+<tr class="memdesc:a6694b81c9380267ba3c21050f3f1a3ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">取消设置当前线程为本线程  <br /></td></tr>
+<tr class="separator:a6694b81c9380267ba3c21050f3f1a3ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:abaed0dcf40e4d5ac2273d1e3e1c43fc9" id="r_abaed0dcf40e4d5ac2273d1e3e1c43fc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#abaed0dcf40e4d5ac2273d1e3e1c43fc9">thread_cb</a> ()</td></tr>
+<tr class="memdesc:abaed0dcf40e4d5ac2273d1e3e1c43fc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程的回调函数  <br /></td></tr>
+<tr class="separator:abaed0dcf40e4d5ac2273d1e3e1c43fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:ad271786523ef00d03c9873bba19cbac2" id="r_ad271786523ef00d03c9873bba19cbac2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#ad271786523ef00d03c9873bba19cbac2">read_cb</a> (evutil_socket_t sock, short which, void *args)</td></tr>
+<tr class="memdesc:ad271786523ef00d03c9873bba19cbac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">事件回调函数，用于处理事件  <br /></td></tr>
+<tr class="separator:ad271786523ef00d03c9873bba19cbac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:af82136d38bdc28ef4fea3938e924a798" id="r_af82136d38bdc28ef4fea3938e924a798"><td class="memItemLeft" align="right" valign="top">evutil_socket_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#af82136d38bdc28ef4fea3938e924a798">m_read</a></td></tr>
+<tr class="memdesc:af82136d38bdc28ef4fea3938e924a798"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取套接字  <br /></td></tr>
+<tr class="separator:af82136d38bdc28ef4fea3938e924a798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46443eb690e4d0c7d57b427ce9ee6502" id="r_a46443eb690e4d0c7d57b427ce9ee6502"><td class="memItemLeft" align="right" valign="top">evutil_socket_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a46443eb690e4d0c7d57b427ce9ee6502">m_write</a></td></tr>
+<tr class="memdesc:a46443eb690e4d0c7d57b427ce9ee6502"><td class="mdescLeft">&#160;</td><td class="mdescRight">写入套接字  <br /></td></tr>
+<tr class="separator:a46443eb690e4d0c7d57b427ce9ee6502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5ec11c90ea59b4f16fa1fd1c43a449f" id="r_af5ec11c90ea59b4f16fa1fd1c43a449f"><td class="memItemLeft" align="right" valign="top">event_base *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#af5ec11c90ea59b4f16fa1fd1c43a449f">m_base</a></td></tr>
+<tr class="memdesc:af5ec11c90ea59b4f16fa1fd1c43a449f"><td class="mdescLeft">&#160;</td><td class="mdescRight">libevent 事件基对象  <br /></td></tr>
+<tr class="separator:af5ec11c90ea59b4f16fa1fd1c43a449f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd35d00d96168e0d55a16e2860d26b32" id="r_afd35d00d96168e0d55a16e2860d26b32"><td class="memItemLeft" align="right" valign="top">event *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#afd35d00d96168e0d55a16e2860d26b32">m_event</a></td></tr>
+<tr class="memdesc:afd35d00d96168e0d55a16e2860d26b32"><td class="mdescLeft">&#160;</td><td class="mdescRight">libevent 事件  <br /></td></tr>
+<tr class="separator:afd35d00d96168e0d55a16e2860d26b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaea971d46526c20b740ae841d1e1a80" id="r_aaaea971d46526c20b740ae841d1e1a80"><td class="memItemLeft" align="right" valign="top">std::thread *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#aaaea971d46526c20b740ae841d1e1a80">m_thread</a></td></tr>
+<tr class="memdesc:aaaea971d46526c20b740ae841d1e1a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程对象  <br /></td></tr>
+<tr class="separator:aaaea971d46526c20b740ae841d1e1a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e908980e52cb163fdd326fb420a06df" id="r_a4e908980e52cb163fdd326fb420a06df"><td class="memItemLeft" align="right" valign="top">std::shared_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a4e908980e52cb163fdd326fb420a06df">m_mutex</a></td></tr>
+<tr class="memdesc:a4e908980e52cb163fdd326fb420a06df"><td class="mdescLeft">&#160;</td><td class="mdescRight">共享互斥锁，用于保护线程操作  <br /></td></tr>
+<tr class="separator:a4e908980e52cb163fdd326fb420a06df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39b14891627f4752077cce94ddb88c7e" id="r_a39b14891627f4752077cce94ddb88c7e"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#aeb54c56ecefa221b2e8dcc279c926ac1">callback</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a39b14891627f4752077cce94ddb88c7e">m_callbacks</a></td></tr>
+<tr class="memdesc:a39b14891627f4752077cce94ddb88c7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">存储待处理的回调函数  <br /></td></tr>
+<tr class="separator:a39b14891627f4752077cce94ddb88c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dba356dabe54b44d3f1038ee6bedc2a" id="r_a4dba356dabe54b44d3f1038ee6bedc2a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a4dba356dabe54b44d3f1038ee6bedc2a">m_name</a></td></tr>
+<tr class="memdesc:a4dba356dabe54b44d3f1038ee6bedc2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程名称  <br /></td></tr>
+<tr class="separator:a4dba356dabe54b44d3f1038ee6bedc2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609abeba2f145a2002ec8f17ae024a5b" id="r_a609abeba2f145a2002ec8f17ae024a5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a7b111a9513af4142d99d85e12184f869">init_cb</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a609abeba2f145a2002ec8f17ae024a5b">m_initCb</a></td></tr>
+<tr class="memdesc:a609abeba2f145a2002ec8f17ae024a5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化回调函数  <br /></td></tr>
+<tr class="separator:a609abeba2f145a2002ec8f17ae024a5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f408c7fe5f602fe2ced01075ad48c2" id="r_a33f408c7fe5f602fe2ced01075ad48c2"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, void * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a33f408c7fe5f602fe2ced01075ad48c2">m_datas</a></td></tr>
+<tr class="memdesc:a33f408c7fe5f602fe2ced01075ad48c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">存储线程中的数据  <br /></td></tr>
+<tr class="separator:a33f408c7fe5f602fe2ced01075ad48c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8376ec22a84373998db54b77511cf0d5" id="r_a8376ec22a84373998db54b77511cf0d5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a8376ec22a84373998db54b77511cf0d5">m_working</a></td></tr>
+<tr class="memdesc:a8376ec22a84373998db54b77511cf0d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程是否正在工作  <br /></td></tr>
+<tr class="separator:a8376ec22a84373998db54b77511cf0d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a8c5543165fa2e5ed92b406062cdc99" id="r_a0a8c5543165fa2e5ed92b406062cdc99"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a0a8c5543165fa2e5ed92b406062cdc99">m_start</a></td></tr>
+<tr class="memdesc:a0a8c5543165fa2e5ed92b406062cdc99"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程是否已启动  <br /></td></tr>
+<tr class="separator:a0a8c5543165fa2e5ed92b406062cdc99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7d371f15f5a2d44dbfa0c00f983c5f0" id="r_ac7d371f15f5a2d44dbfa0c00f983c5f0"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#ac7d371f15f5a2d44dbfa0c00f983c5f0">m_total</a></td></tr>
+<tr class="memdesc:ac7d371f15f5a2d44dbfa0c00f983c5f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程的总任务数  <br /></td></tr>
+<tr class="separator:ac7d371f15f5a2d44dbfa0c00f983c5f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><a class="el" href="classGyanis_1_1db_1_1FoxThread.html" title="FoxThread 类，继承自 IFoxThread，用于实现线程管理和任务调度">FoxThread</a> 类，继承自 IFoxThread，用于实现线程管理和任务调度 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8h_source.html">FoxThread.h</a> 第 <a class="el" href="FoxThread_8h_source.html#l00094">94</a> 行定义.</p>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="aeb54c56ecefa221b2e8dcc279c926ac1" name="aeb54c56ecefa221b2e8dcc279c926ac1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb54c56ecefa221b2e8dcc279c926ac1">&#9670;&#160;</a></span>callback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#aeb54c56ecefa221b2e8dcc279c926ac1">Gyanis::db::FoxThread::callback</a> =  std::function&lt;void ()&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定义回调类型，表示不带参数且不返回值的函数 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8h_source.html">FoxThread.h</a> 第 <a class="el" href="FoxThread_8h_source.html#l00097">97</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a7b111a9513af4142d99d85e12184f869" name="a7b111a9513af4142d99d85e12184f869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b111a9513af4142d99d85e12184f869">&#9670;&#160;</a></span>init_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a7b111a9513af4142d99d85e12184f869">Gyanis::db::FoxThread::init_cb</a> =  std::function&lt;void(<a class="el" href="classGyanis_1_1db_1_1FoxThread.html">FoxThread</a>*)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化回调类型，用于线程初始化时的操作 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8h_source.html">FoxThread.h</a> 第 <a class="el" href="FoxThread_8h_source.html#l00098">98</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="af43ceb0ec1ca21f38a6ebd648afe272f" name="af43ceb0ec1ca21f38a6ebd648afe272f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af43ceb0ec1ca21f38a6ebd648afe272f">&#9670;&#160;</a></span>FoxThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gyanis::db::FoxThread::FoxThread </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">event_base *&#160;</td>
+          <td class="paramname"><em>base</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数，初始化线程 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>线程名称 </td></tr>
+    <tr><td class="paramname">base</td><td>libevent 事件循环基对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00021">21</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>        : <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#af82136d38bdc28ef4fea3938e924a798">m_read</a>(0)</div>
+<div class="line"><span class="lineno">   23</span>          , <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a46443eb690e4d0c7d57b427ce9ee6502">m_write</a>(0)</div>
+<div class="line"><span class="lineno">   24</span>          , <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#af5ec11c90ea59b4f16fa1fd1c43a449f">m_base</a>(<span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">   25</span>          , <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#afd35d00d96168e0d55a16e2860d26b32">m_event</a>(<span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">   26</span>          , <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#aaaea971d46526c20b740ae841d1e1a80">m_thread</a>(<span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">   27</span>          , <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a4dba356dabe54b44d3f1038ee6bedc2a">m_name</a>(std::move(name))</div>
+<div class="line"><span class="lineno">   28</span>          , <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a8376ec22a84373998db54b77511cf0d5">m_working</a>(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">   29</span>          , <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a0a8c5543165fa2e5ed92b406062cdc99">m_start</a>(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">   30</span>          , <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#ac7d371f15f5a2d44dbfa0c00f983c5f0">m_total</a>(0)</div>
+<div class="line"><span class="lineno">   31</span>    {</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordtype">int</span> fds[2];</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">if</span> (evutil_socketpair(AF_UNIX, SOCK_STREAM, 0, fds) == -1)</div>
+<div class="line"><span class="lineno">   34</span>        {</div>
+<div class="line"><span class="lineno">   35</span>            <a class="code hl_define" href="Log_8h.html#a983ab72109ed1168518f25e064114bdf">LOG_FATAL</a>(<a class="code hl_variable" href="namespaceGyanis_1_1db.html#a9a8f83b8159af8d6adba3a4b97c5932b">g_logger</a>)</div>
+<div class="line"><span class="lineno">   36</span>                &lt;&lt; <span class="stringliteral">&quot;FoxThread::FoxThread - evutil_socketpair failed &quot;</span></div>
+<div class="line"><span class="lineno">   37</span>                &lt;&lt; <span class="stringliteral">&quot; | Status: Critical&quot;</span>;</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;thread init error&quot;</span>);</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>        evutil_make_socket_nonblocking(fds[0]);</div>
+<div class="line"><span class="lineno">   42</span>        evutil_make_socket_nonblocking(fds[1]);</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#af82136d38bdc28ef4fea3938e924a798">m_read</a> = fds[0];</div>
+<div class="line"><span class="lineno">   45</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a46443eb690e4d0c7d57b427ce9ee6502">m_write</a> = fds[1];</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">if</span> (base)</div>
+<div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#af5ec11c90ea59b4f16fa1fd1c43a449f">m_base</a> = base;</div>
+<div class="line"><span class="lineno">   50</span>            <a class="code hl_function" href="classGyanis_1_1db_1_1FoxThread.html#a8ca7df44aeb8cda32029db877816b95d">setThis</a>();</div>
+<div class="line"><span class="lineno">   51</span>        }</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   53</span>        {</div>
+<div class="line"><span class="lineno">   54</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#af5ec11c90ea59b4f16fa1fd1c43a449f">m_base</a> = event_base_new();</div>
+<div class="line"><span class="lineno">   55</span>        }</div>
+<div class="line"><span class="lineno">   56</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#afd35d00d96168e0d55a16e2860d26b32">m_event</a> = event_new(<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#af5ec11c90ea59b4f16fa1fd1c43a449f">m_base</a>, <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#af82136d38bdc28ef4fea3938e924a798">m_read</a>, EV_READ | EV_PERSIST, <a class="code hl_function" href="classGyanis_1_1db_1_1FoxThread.html#ad271786523ef00d03c9873bba19cbac2">read_cb</a>, <span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   57</span>        event_add(<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#afd35d00d96168e0d55a16e2860d26b32">m_event</a>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+<div class="ttc" id="aLog_8h_html_a983ab72109ed1168518f25e064114bdf"><div class="ttname"><a href="Log_8h.html#a983ab72109ed1168518f25e064114bdf">LOG_FATAL</a></div><div class="ttdeci">#define LOG_FATAL(logger)</div><div class="ttdoc">输出 fatal 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00051">Log.h:51</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_a0a8c5543165fa2e5ed92b406062cdc99"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#a0a8c5543165fa2e5ed92b406062cdc99">Gyanis::db::FoxThread::m_start</a></div><div class="ttdeci">bool m_start</div><div class="ttdoc">线程是否已启动</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8h_source.html#l00257">FoxThread.h:257</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_a46443eb690e4d0c7d57b427ce9ee6502"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#a46443eb690e4d0c7d57b427ce9ee6502">Gyanis::db::FoxThread::m_write</a></div><div class="ttdeci">evutil_socket_t m_write</div><div class="ttdoc">写入套接字</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8h_source.html#l00247">FoxThread.h:247</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_a4dba356dabe54b44d3f1038ee6bedc2a"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#a4dba356dabe54b44d3f1038ee6bedc2a">Gyanis::db::FoxThread::m_name</a></div><div class="ttdeci">std::string m_name</div><div class="ttdoc">线程名称</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8h_source.html#l00253">FoxThread.h:253</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_a8376ec22a84373998db54b77511cf0d5"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#a8376ec22a84373998db54b77511cf0d5">Gyanis::db::FoxThread::m_working</a></div><div class="ttdeci">bool m_working</div><div class="ttdoc">线程是否正在工作</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8h_source.html#l00256">FoxThread.h:256</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_a8ca7df44aeb8cda32029db877816b95d"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#a8ca7df44aeb8cda32029db877816b95d">Gyanis::db::FoxThread::setThis</a></div><div class="ttdeci">void setThis()</div><div class="ttdoc">设置当前线程为本线程</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8cpp_source.html#l00128">FoxThread.cpp:128</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_aaaea971d46526c20b740ae841d1e1a80"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#aaaea971d46526c20b740ae841d1e1a80">Gyanis::db::FoxThread::m_thread</a></div><div class="ttdeci">std::thread * m_thread</div><div class="ttdoc">线程对象</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8h_source.html#l00250">FoxThread.h:250</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_ac7d371f15f5a2d44dbfa0c00f983c5f0"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#ac7d371f15f5a2d44dbfa0c00f983c5f0">Gyanis::db::FoxThread::m_total</a></div><div class="ttdeci">uint64_t m_total</div><div class="ttdoc">线程的总任务数</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8h_source.html#l00258">FoxThread.h:258</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_ad271786523ef00d03c9873bba19cbac2"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#ad271786523ef00d03c9873bba19cbac2">Gyanis::db::FoxThread::read_cb</a></div><div class="ttdeci">static void read_cb(evutil_socket_t sock, short which, void *args)</div><div class="ttdoc">事件回调函数，用于处理事件</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8cpp_source.html#l00280">FoxThread.cpp:280</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_af5ec11c90ea59b4f16fa1fd1c43a449f"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#af5ec11c90ea59b4f16fa1fd1c43a449f">Gyanis::db::FoxThread::m_base</a></div><div class="ttdeci">event_base * m_base</div><div class="ttdoc">libevent 事件基对象</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8h_source.html#l00248">FoxThread.h:248</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_af82136d38bdc28ef4fea3938e924a798"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#af82136d38bdc28ef4fea3938e924a798">Gyanis::db::FoxThread::m_read</a></div><div class="ttdeci">evutil_socket_t m_read</div><div class="ttdoc">读取套接字</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8h_source.html#l00246">FoxThread.h:246</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_afd35d00d96168e0d55a16e2860d26b32"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#afd35d00d96168e0d55a16e2860d26b32">Gyanis::db::FoxThread::m_event</a></div><div class="ttdeci">event * m_event</div><div class="ttdoc">libevent 事件</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8h_source.html#l00249">FoxThread.h:249</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1db_html_a9a8f83b8159af8d6adba3a4b97c5932b"><div class="ttname"><a href="namespaceGyanis_1_1db.html#a9a8f83b8159af8d6adba3a4b97c5932b">Gyanis::db::g_logger</a></div><div class="ttdeci">static auto g_logger</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8cpp_source.html#l00009">FoxThread.cpp:9</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_af43ceb0ec1ca21f38a6ebd648afe272f_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_af43ceb0ec1ca21f38a6ebd648afe272f_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a4139aa39d871173ceede1499381c4783" name="a4139aa39d871173ceede1499381c4783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4139aa39d871173ceede1499381c4783">&#9670;&#160;</a></span>~FoxThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gyanis::db::FoxThread::~FoxThread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>析构函数，释放线程资源 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00060">60</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#af82136d38bdc28ef4fea3938e924a798">m_read</a>)</div>
+<div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            <a class="code hl_function" href="Hook_8cpp.html#aafbcde67669a1b96577e735ddebd8634">close</a>(<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#af82136d38bdc28ef4fea3938e924a798">m_read</a>);</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a46443eb690e4d0c7d57b427ce9ee6502">m_write</a>)</div>
+<div class="line"><span class="lineno">   67</span>        {</div>
+<div class="line"><span class="lineno">   68</span>            <a class="code hl_function" href="Hook_8cpp.html#aafbcde67669a1b96577e735ddebd8634">close</a>(<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a46443eb690e4d0c7d57b427ce9ee6502">m_write</a>);</div>
+<div class="line"><span class="lineno">   69</span>        }</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>        <a class="code hl_function" href="classGyanis_1_1db_1_1FoxThread.html#a40da331bdd54091a32ba76a1e82ba4de">stop</a>();</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>        <a class="code hl_function" href="classGyanis_1_1db_1_1FoxThread.html#ab8b0580f49fe97f6de6232e8cc8375d6">join</a>();</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>        <span class="keyword">delete</span> <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#aaaea971d46526c20b740ae841d1e1a80">m_thread</a>;</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#afd35d00d96168e0d55a16e2860d26b32">m_event</a>)</div>
+<div class="line"><span class="lineno">   79</span>        {</div>
+<div class="line"><span class="lineno">   80</span>            event_free(<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#afd35d00d96168e0d55a16e2860d26b32">m_event</a>);</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#af5ec11c90ea59b4f16fa1fd1c43a449f">m_base</a>)</div>
+<div class="line"><span class="lineno">   83</span>        {</div>
+<div class="line"><span class="lineno">   84</span>            event_base_free(<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#af5ec11c90ea59b4f16fa1fd1c43a449f">m_base</a>);</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
+<div class="ttc" id="aHook_8cpp_html_aafbcde67669a1b96577e735ddebd8634"><div class="ttname"><a href="Hook_8cpp.html#aafbcde67669a1b96577e735ddebd8634">close</a></div><div class="ttdeci">int close(int fd)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00410">Hook.cpp:410</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_a40da331bdd54091a32ba76a1e82ba4de"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#a40da331bdd54091a32ba76a1e82ba4de">Gyanis::db::FoxThread::stop</a></div><div class="ttdeci">void stop() override</div><div class="ttdoc">停止线程</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8cpp_source.html#l00207">FoxThread.cpp:207</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_ab8b0580f49fe97f6de6232e8cc8375d6"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#ab8b0580f49fe97f6de6232e8cc8375d6">Gyanis::db::FoxThread::join</a></div><div class="ttdeci">void join() override</div><div class="ttdoc">等待线程完成任务</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8cpp_source.html#l00197">FoxThread.cpp:197</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_a4139aa39d871173ceede1499381c4783_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_a4139aa39d871173ceede1499381c4783_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a0ae7aa2f35b33c92f70fe3f2e83cc79a" name="a0ae7aa2f35b33c92f70fe3f2e83cc79a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ae7aa2f35b33c92f70fe3f2e83cc79a">&#9670;&#160;</a></span>batchDispatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::db::FoxThread::batchDispatch </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#aeb54c56ecefa221b2e8dcc279c926ac1">callback</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cbs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>批量派发回调任务到线程 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cbs</td><td>回调函数列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#aa96ed1fd2912c99cc31e29bf8f8c7ccf">Gyanis::db::IFoxThread</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00176">176</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  177</span>    {</div>
+<div class="line"><span class="lineno">  178</span>        std::unique_lock lock(<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a4e908980e52cb163fdd326fb420a06df">m_mutex</a>);</div>
+<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; i : cbs)</div>
+<div class="line"><span class="lineno">  180</span>        {</div>
+<div class="line"><span class="lineno">  181</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a39b14891627f4752077cce94ddb88c7e">m_callbacks</a>.push_back(i);</div>
+<div class="line"><span class="lineno">  182</span>        }</div>
+<div class="line"><span class="lineno">  183</span>        lock.unlock();</div>
+<div class="line"><span class="lineno">  184</span>        <span class="keyword">constexpr</span> uint8_t cmd = 1;</div>
+<div class="line"><span class="lineno">  185</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="Hook_8cpp.html#a9da4ddaf95f37c1457e545a65ee1a506">send</a>(<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a46443eb690e4d0c7d57b427ce9ee6502">m_write</a>, &amp;cmd, <span class="keyword">sizeof</span>(cmd), 0) &lt;= 0)</div>
+<div class="line"><span class="lineno">  186</span>        {</div>
+<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  188</span>        }</div>
+<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  190</span>    }</div>
+<div class="ttc" id="aHook_8cpp_html_a9da4ddaf95f37c1457e545a65ee1a506"><div class="ttname"><a href="Hook_8cpp.html#a9da4ddaf95f37c1457e545a65ee1a506">send</a></div><div class="ttdeci">ssize_t send(int s, const void *msg, size_t len, int flags)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00395">Hook.cpp:395</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_a39b14891627f4752077cce94ddb88c7e"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#a39b14891627f4752077cce94ddb88c7e">Gyanis::db::FoxThread::m_callbacks</a></div><div class="ttdeci">std::list&lt; callback &gt; m_callbacks</div><div class="ttdoc">存储待处理的回调函数</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8h_source.html#l00252">FoxThread.h:252</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_a4e908980e52cb163fdd326fb420a06df"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#a4e908980e52cb163fdd326fb420a06df">Gyanis::db::FoxThread::m_mutex</a></div><div class="ttdeci">std::shared_mutex m_mutex</div><div class="ttdoc">共享互斥锁，用于保护线程操作</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8h_source.html#l00251">FoxThread.h:251</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_a0ae7aa2f35b33c92f70fe3f2e83cc79a_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_a0ae7aa2f35b33c92f70fe3f2e83cc79a_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ad337b4048962036e8fde60445f9e224e" name="ad337b4048962036e8fde60445f9e224e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad337b4048962036e8fde60445f9e224e">&#9670;&#160;</a></span>broadcast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::db::FoxThread::broadcast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#aeb54c56ecefa221b2e8dcc279c926ac1">callback</a> &amp;&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>向所有线程广播回调任务 </p>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a7ed6dabd139a0d753c5e3e49731fd99f">Gyanis::db::IFoxThread</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00192">192</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  193</span>    {</div>
+<div class="line"><span class="lineno">  194</span>        <a class="code hl_function" href="classGyanis_1_1db_1_1FoxThread.html#a5fdac2dd01aeb23be9ee7a7c4af90f3d">dispatch</a>(cb);</div>
+<div class="line"><span class="lineno">  195</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_a5fdac2dd01aeb23be9ee7a7c4af90f3d"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#a5fdac2dd01aeb23be9ee7a7c4af90f3d">Gyanis::db::FoxThread::dispatch</a></div><div class="ttdeci">bool dispatch(const callback &amp;cb) override</div><div class="ttdoc">派发回调任务到线程</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8cpp_source.html#l00158">FoxThread.cpp:158</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_ad337b4048962036e8fde60445f9e224e_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_ad337b4048962036e8fde60445f9e224e_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a5fdac2dd01aeb23be9ee7a7c4af90f3d" name="a5fdac2dd01aeb23be9ee7a7c4af90f3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fdac2dd01aeb23be9ee7a7c4af90f3d">&#9670;&#160;</a></span>dispatch() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::db::FoxThread::dispatch </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#aeb54c56ecefa221b2e8dcc279c926ac1">callback</a> &amp;&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>派发回调任务到线程 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#aa0942dfb5143014c23a35650aaad39f1">Gyanis::db::IFoxThread</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00158">158</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>    {</div>
+<div class="line"><span class="lineno">  160</span>        std::unique_lock lock(<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a4e908980e52cb163fdd326fb420a06df">m_mutex</a>);</div>
+<div class="line"><span class="lineno">  161</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a39b14891627f4752077cce94ddb88c7e">m_callbacks</a>.push_back(cb);</div>
+<div class="line"><span class="lineno">  162</span>        lock.unlock();</div>
+<div class="line"><span class="lineno">  163</span>        <span class="keyword">constexpr</span> uint8_t cmd = 1;</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="Hook_8cpp.html#a9da4ddaf95f37c1457e545a65ee1a506">send</a>(<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a46443eb690e4d0c7d57b427ce9ee6502">m_write</a>, &amp;cmd, <span class="keyword">sizeof</span>(cmd), 0) &lt;= 0)</div>
+<div class="line"><span class="lineno">  165</span>        {</div>
+<div class="line"><span class="lineno">  166</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  167</span>        }</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  169</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_a5fdac2dd01aeb23be9ee7a7c4af90f3d_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_a5fdac2dd01aeb23be9ee7a7c4af90f3d_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_a5fdac2dd01aeb23be9ee7a7c4af90f3d_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_a5fdac2dd01aeb23be9ee7a7c4af90f3d_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a30196e171f44beefb09d1835ba36b9bf" name="a30196e171f44beefb09d1835ba36b9bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30196e171f44beefb09d1835ba36b9bf">&#9670;&#160;</a></span>dispatch() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::db::FoxThread::dispatch </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#aeb54c56ecefa221b2e8dcc279c926ac1">callback</a> &amp;&#160;</td>
+          <td class="paramname"><em>cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>根据任务 ID 派发回调任务到线程 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>任务 ID </td></tr>
+    <tr><td class="paramname">cb</td><td>回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a0a059467fa1f0470a7ac583e656d30fa">Gyanis::db::IFoxThread</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00171">171</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  172</span>    {</div>
+<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classGyanis_1_1db_1_1FoxThread.html#a5fdac2dd01aeb23be9ee7a7c4af90f3d">dispatch</a>(cb);</div>
+<div class="line"><span class="lineno">  174</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_a30196e171f44beefb09d1835ba36b9bf_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_a30196e171f44beefb09d1835ba36b9bf_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae850352e87dd123b063f6123c3b2eaa5" name="ae850352e87dd123b063f6123c3b2eaa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae850352e87dd123b063f6123c3b2eaa5">&#9670;&#160;</a></span>dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::db::FoxThread::dump </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>打印线程信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>输出流 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a9de894ff571da0c9d8c0be3973299616">Gyanis::db::IFoxThread</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00253">253</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  254</span>    {</div>
+<div class="line"><span class="lineno">  255</span>        std::shared_lock lock(<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a4e908980e52cb163fdd326fb420a06df">m_mutex</a>);</div>
+<div class="line"><span class="lineno">  256</span>        os &lt;&lt; <span class="stringliteral">&quot;[Thread Name: &quot;</span> &lt;&lt; <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a4dba356dabe54b44d3f1038ee6bedc2a">m_name</a></div>
+<div class="line"><span class="lineno">  257</span>            &lt;&lt; <span class="stringliteral">&quot;, Working Status: &quot;</span> &lt;&lt; (<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a8376ec22a84373998db54b77511cf0d5">m_working</a> ? <span class="stringliteral">&quot;Active&quot;</span> : <span class="stringliteral">&quot;Idle&quot;</span>)</div>
+<div class="line"><span class="lineno">  258</span>            &lt;&lt; <span class="stringliteral">&quot;, Pending Tasks: &quot;</span> &lt;&lt; <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a39b14891627f4752077cce94ddb88c7e">m_callbacks</a>.size()</div>
+<div class="line"><span class="lineno">  259</span>            &lt;&lt; <span class="stringliteral">&quot;, Total Tasks Completed: &quot;</span> &lt;&lt; <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#ac7d371f15f5a2d44dbfa0c00f983c5f0">m_total</a></div>
+<div class="line"><span class="lineno">  260</span>            &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  261</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0e5ad1af2e1a96e677a707c5b1dcba37" name="a0e5ad1af2e1a96e677a707c5b1dcba37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e5ad1af2e1a96e677a707c5b1dcba37">&#9670;&#160;</a></span>GetAllFoxThreadName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::db::FoxThread::GetAllFoxThreadName </td>
+          <td>(</td>
+          <td class="paramtype">std::unordered_map&lt; uint64_t, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>names</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取所有 <a class="el" href="classGyanis_1_1db_1_1FoxThread.html" title="FoxThread 类，继承自 IFoxThread，用于实现线程管理和任务调度">FoxThread</a> 的名称 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00119">119</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>    {</div>
+<div class="line"><span class="lineno">  121</span>        std::shared_lock lock(<a class="code hl_variable" href="namespaceGyanis_1_1db.html#a0702c16af247e3ac9cb0d9c85b87b149">s_thread_mutex</a>);</div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; s_thread_name : <a class="code hl_variable" href="namespaceGyanis_1_1db.html#a45d8fa536f39a263db56135dd8f59269">s_thread_names</a>)</div>
+<div class="line"><span class="lineno">  123</span>        {</div>
+<div class="line"><span class="lineno">  124</span>            names.insert(s_thread_name);</div>
+<div class="line"><span class="lineno">  125</span>        }</div>
+<div class="line"><span class="lineno">  126</span>    }</div>
+<div class="ttc" id="anamespaceGyanis_1_1db_html_a0702c16af247e3ac9cb0d9c85b87b149"><div class="ttname"><a href="namespaceGyanis_1_1db.html#a0702c16af247e3ac9cb0d9c85b87b149">Gyanis::db::s_thread_mutex</a></div><div class="ttdeci">static std::shared_mutex s_thread_mutex</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8cpp_source.html#l00015">FoxThread.cpp:15</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1db_html_a45d8fa536f39a263db56135dd8f59269"><div class="ttname"><a href="namespaceGyanis_1_1db.html#a45d8fa536f39a263db56135dd8f59269">Gyanis::db::s_thread_names</a></div><div class="ttdeci">static std::unordered_map&lt; uint64_t, std::string &gt; s_thread_names</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8cpp_source.html#l00016">FoxThread.cpp:16</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_a0e5ad1af2e1a96e677a707c5b1dcba37_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_a0e5ad1af2e1a96e677a707c5b1dcba37_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a89d48c638d2a6df38fd87abff012cd53" name="a89d48c638d2a6df38fd87abff012cd53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89d48c638d2a6df38fd87abff012cd53">&#9670;&#160;</a></span>getBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">event_base * Gyanis::db::FoxThread::getBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取 libevent 事件基对象 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00223">223</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  224</span>    {</div>
+<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#af5ec11c90ea59b4f16fa1fd1c43a449f">m_base</a>;</div>
+<div class="line"><span class="lineno">  226</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a975c52b274abe23bbf72807cf371f495" name="a975c52b274abe23bbf72807cf371f495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a975c52b274abe23bbf72807cf371f495">&#9670;&#160;</a></span>getData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * Gyanis::db::FoxThread::getData </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取线程中的数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>数据名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00237">237</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  238</span>    {</div>
+<div class="line"><span class="lineno">  239</span>        <span class="keyword">const</span> <span class="keyword">auto</span> it = <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a33f408c7fe5f602fe2ced01075ad48c2">m_datas</a>.find(name);</div>
+<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">return</span> it == <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a33f408c7fe5f602fe2ced01075ad48c2">m_datas</a>.end() ? nullptr : it-&gt;second;</div>
+<div class="line"><span class="lineno">  241</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_a33f408c7fe5f602fe2ced01075ad48c2"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#a33f408c7fe5f602fe2ced01075ad48c2">Gyanis::db::FoxThread::m_datas</a></div><div class="ttdeci">std::unordered_map&lt; std::string, void * &gt; m_datas</div><div class="ttdoc">存储线程中的数据</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8h_source.html#l00255">FoxThread.h:255</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_a975c52b274abe23bbf72807cf371f495_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_a975c52b274abe23bbf72807cf371f495_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ab849601f0090a5271ce9d43aa1811ac6" name="ab849601f0090a5271ce9d43aa1811ac6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab849601f0090a5271ce9d43aa1811ac6">&#9670;&#160;</a></span>getData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T * Gyanis::db::FoxThread::getData </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取线程中的特定类型的数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>数据名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8h_source.html">FoxThread.h</a> 第 <a class="el" href="FoxThread_8h_source.html#l00202">202</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  203</span>        {</div>
+<div class="line"><span class="lineno">  204</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classGyanis_1_1db_1_1FoxThread.html#a975c52b274abe23bbf72807cf371f495">getData</a>(name));</div>
+<div class="line"><span class="lineno">  205</span>        }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_a975c52b274abe23bbf72807cf371f495"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#a975c52b274abe23bbf72807cf371f495">Gyanis::db::FoxThread::getData</a></div><div class="ttdeci">void * getData(const std::string &amp;name)</div><div class="ttdoc">获取线程中的数据</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8cpp_source.html#l00237">FoxThread.cpp:237</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_ab849601f0090a5271ce9d43aa1811ac6_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_ab849601f0090a5271ce9d43aa1811ac6_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="afe11b9fac55646dc8ee70ea8354c679e" name="afe11b9fac55646dc8ee70ea8354c679e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe11b9fac55646dc8ee70ea8354c679e">&#9670;&#160;</a></span>GetFoxThreadName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; Gyanis::db::FoxThread::GetFoxThreadName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前线程的名称 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00093">93</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>    {</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (FoxThread* thread = <a class="code hl_function" href="classGyanis_1_1db_1_1FoxThread.html#ad75fd7d5162f54bba293d68889a38095">GetThis</a>())</div>
+<div class="line"><span class="lineno">   96</span>        {</div>
+<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">return</span> thread-&gt;m_name;</div>
+<div class="line"><span class="lineno">   98</span>        }</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>        <span class="keyword">const</span> uint64_t tid = <a class="code hl_function" href="namespaceGyanis_1_1base.html#aa80cc0a553c8b24f4d7be5dd98f9451d">base::GetThreadID</a>();</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  102</span>        {</div>
+<div class="line"><span class="lineno">  103</span>            std::shared_lock lock(<a class="code hl_variable" href="namespaceGyanis_1_1db.html#a0702c16af247e3ac9cb0d9c85b87b149">s_thread_mutex</a>);</div>
+<div class="line"><span class="lineno">  104</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> it = <a class="code hl_variable" href="namespaceGyanis_1_1db.html#a45d8fa536f39a263db56135dd8f59269">s_thread_names</a>.find(tid); it != <a class="code hl_variable" href="namespaceGyanis_1_1db.html#a45d8fa536f39a263db56135dd8f59269">s_thread_names</a>.end())</div>
+<div class="line"><span class="lineno">  105</span>            {</div>
+<div class="line"><span class="lineno">  106</span>                <span class="keywordflow">return</span> it-&gt;second;</div>
+<div class="line"><span class="lineno">  107</span>            }</div>
+<div class="line"><span class="lineno">  108</span>        }</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">while</span> (<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  111</span>        {</div>
+<div class="line"><span class="lineno">  112</span>            std::unique_lock lock(<a class="code hl_variable" href="namespaceGyanis_1_1db.html#a0702c16af247e3ac9cb0d9c85b87b149">s_thread_mutex</a>);</div>
+<div class="line"><span class="lineno">  113</span>            <a class="code hl_variable" href="namespaceGyanis_1_1db.html#a45d8fa536f39a263db56135dd8f59269">s_thread_names</a>[tid] = <span class="stringliteral">&quot;UNNAME_&quot;</span> + std::to_string(tid);</div>
+<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="namespaceGyanis_1_1db.html#a45d8fa536f39a263db56135dd8f59269">s_thread_names</a>[tid];</div>
+<div class="line"><span class="lineno">  115</span>        }</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">while</span> (<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_ad75fd7d5162f54bba293d68889a38095"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#ad75fd7d5162f54bba293d68889a38095">Gyanis::db::FoxThread::GetThis</a></div><div class="ttdeci">static FoxThread * GetThis()</div><div class="ttdoc">获取当前线程对象</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8cpp_source.html#l00088">FoxThread.cpp:88</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_aa80cc0a553c8b24f4d7be5dd98f9451d"><div class="ttname"><a href="namespaceGyanis_1_1base.html#aa80cc0a553c8b24f4d7be5dd98f9451d">Gyanis::base::GetThreadID</a></div><div class="ttdeci">pid_t GetThreadID()</div><div class="ttdoc">获取当前线程的ID</div><div class="ttdef"><b>Definition</b> <a href="Utils_8cpp_source.html#l00018">Utils.cpp:18</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_afe11b9fac55646dc8ee70ea8354c679e_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_afe11b9fac55646dc8ee70ea8354c679e_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9c7625fe271c761201b109bb37834293" name="a9c7625fe271c761201b109bb37834293"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c7625fe271c761201b109bb37834293">&#9670;&#160;</a></span>getId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::thread::id Gyanis::db::FoxThread::getId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取线程的 ID </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00228">228</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  229</span>    {</div>
+<div class="line"><span class="lineno">  230</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#aaaea971d46526c20b740ae841d1e1a80">m_thread</a>)</div>
+<div class="line"><span class="lineno">  231</span>        {</div>
+<div class="line"><span class="lineno">  232</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#aaaea971d46526c20b740ae841d1e1a80">m_thread</a>-&gt;get_id();</div>
+<div class="line"><span class="lineno">  233</span>        }</div>
+<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">return</span> {};</div>
+<div class="line"><span class="lineno">  235</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad75fd7d5162f54bba293d68889a38095" name="ad75fd7d5162f54bba293d68889a38095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad75fd7d5162f54bba293d68889a38095">&#9670;&#160;</a></span>GetThis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html">FoxThread</a> * Gyanis::db::FoxThread::GetThis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前线程对象 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00088">88</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>    {</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="namespaceGyanis_1_1db.html#a82eb72c0ac344ec655990d7dcecd3ebc">s_thread</a>;</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
+<div class="ttc" id="anamespaceGyanis_1_1db_html_a82eb72c0ac344ec655990d7dcecd3ebc"><div class="ttname"><a href="namespaceGyanis_1_1db.html#a82eb72c0ac344ec655990d7dcecd3ebc">Gyanis::db::s_thread</a></div><div class="ttdeci">thread_local FoxThread * s_thread</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8cpp_source.html#l00018">FoxThread.cpp:18</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_ad75fd7d5162f54bba293d68889a38095_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_ad75fd7d5162f54bba293d68889a38095_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a1937831f79f79472eeee5aaafcf2bbca" name="a1937831f79f79472eeee5aaafcf2bbca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1937831f79f79472eeee5aaafcf2bbca">&#9670;&#160;</a></span>getTotal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t Gyanis::db::FoxThread::getTotal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取线程的总任务数 </p>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a9f9823a72b57f26f20861a18acd20a46">Gyanis::db::IFoxThread</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00263">263</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  264</span>    {</div>
+<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#ac7d371f15f5a2d44dbfa0c00f983c5f0">m_total</a>;</div>
+<div class="line"><span class="lineno">  266</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a153ea0fed61e276e9d2727917ba1f31a" name="a153ea0fed61e276e9d2727917ba1f31a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a153ea0fed61e276e9d2727917ba1f31a">&#9670;&#160;</a></span>isStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::db::FoxThread::isStart </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取线程是否已启动 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00218">218</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  219</span>    {</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a0a8c5543165fa2e5ed92b406062cdc99">m_start</a>;</div>
+<div class="line"><span class="lineno">  221</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab8b0580f49fe97f6de6232e8cc8375d6" name="ab8b0580f49fe97f6de6232e8cc8375d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8b0580f49fe97f6de6232e8cc8375d6">&#9670;&#160;</a></span>join()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::db::FoxThread::join </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>等待线程完成任务 </p>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#ae0f91d6e1ce70d2f301fbc84f8ec5e39">Gyanis::db::IFoxThread</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00197">197</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  198</span>    {</div>
+<div class="line"><span class="lineno">  199</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#aaaea971d46526c20b740ae841d1e1a80">m_thread</a>)</div>
+<div class="line"><span class="lineno">  200</span>        {</div>
+<div class="line"><span class="lineno">  201</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#aaaea971d46526c20b740ae841d1e1a80">m_thread</a>-&gt;join();</div>
+<div class="line"><span class="lineno">  202</span>            <span class="keyword">delete</span> <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#aaaea971d46526c20b740ae841d1e1a80">m_thread</a>;</div>
+<div class="line"><span class="lineno">  203</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#aaaea971d46526c20b740ae841d1e1a80">m_thread</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  204</span>        }</div>
+<div class="line"><span class="lineno">  205</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_ab8b0580f49fe97f6de6232e8cc8375d6_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_ab8b0580f49fe97f6de6232e8cc8375d6_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ad271786523ef00d03c9873bba19cbac2" name="ad271786523ef00d03c9873bba19cbac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad271786523ef00d03c9873bba19cbac2">&#9670;&#160;</a></span>read_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::db::FoxThread::read_cb </td>
+          <td>(</td>
+          <td class="paramtype">evutil_socket_t&#160;</td>
+          <td class="paramname"><em>sock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>which</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>事件回调函数，用于处理事件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sock</td><td>套接字 </td></tr>
+    <tr><td class="paramname">which</td><td>事件类型 </td></tr>
+    <tr><td class="paramname">args</td><td>事件参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00280">280</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  281</span>    {</div>
+<div class="line"><span class="lineno">  282</span>        <span class="keyword">const</span> <span class="keyword">auto</span> thread = <span class="keyword">static_cast&lt;</span><a class="code hl_function" href="classGyanis_1_1db_1_1FoxThread.html#af43ceb0ec1ca21f38a6ebd648afe272f">FoxThread</a>*<span class="keyword">&gt;</span>(args);</div>
+<div class="line"><span class="lineno">  283</span>        uint8_t cmd[4096];</div>
+<div class="line"><span class="lineno">  284</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="Hook_8cpp.html#a49c565342c0f29cec5461ec22c3b1b3d">recv</a>(sock, cmd, <span class="keyword">sizeof</span>(cmd), 0) &gt; 0)</div>
+<div class="line"><span class="lineno">  285</span>        {</div>
+<div class="line"><span class="lineno">  286</span>            std::list&lt;callback&gt; callbacks;</div>
+<div class="line"><span class="lineno">  287</span>            std::unique_lock lock(thread-&gt;m_mutex);</div>
+<div class="line"><span class="lineno">  288</span>            callbacks.swap(thread-&gt;m_callbacks);</div>
+<div class="line"><span class="lineno">  289</span>            lock.unlock();</div>
+<div class="line"><span class="lineno">  290</span>            thread-&gt;m_working = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  291</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; <a class="code hl_typedef" href="classGyanis_1_1db_1_1FoxThread.html#aeb54c56ecefa221b2e8dcc279c926ac1">callback</a> : callbacks)</div>
+<div class="line"><span class="lineno">  292</span>            {</div>
+<div class="line"><span class="lineno">  293</span>                <span class="keywordflow">if</span> (<a class="code hl_typedef" href="classGyanis_1_1db_1_1FoxThread.html#aeb54c56ecefa221b2e8dcc279c926ac1">callback</a>)</div>
+<div class="line"><span class="lineno">  294</span>                {</div>
+<div class="line"><span class="lineno">  295</span>                    <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  296</span>                    {</div>
+<div class="line"><span class="lineno">  297</span>                        <a class="code hl_typedef" href="classGyanis_1_1db_1_1FoxThread.html#aeb54c56ecefa221b2e8dcc279c926ac1">callback</a>();</div>
+<div class="line"><span class="lineno">  298</span>                    }</div>
+<div class="line"><span class="lineno">  299</span>                    <span class="keywordflow">catch</span> (std::exception&amp; ex)</div>
+<div class="line"><span class="lineno">  300</span>                    {</div>
+<div class="line"><span class="lineno">  301</span>                        <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1db.html#a9a8f83b8159af8d6adba3a4b97c5932b">g_logger</a>) &lt;&lt; <span class="stringliteral">&quot;exception:&quot;</span> &lt;&lt; ex.what();</div>
+<div class="line"><span class="lineno">  302</span>                    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <span class="keywordtype">char</span>* c)</div>
+<div class="line"><span class="lineno">  303</span>                    {</div>
+<div class="line"><span class="lineno">  304</span>                        <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1db.html#a9a8f83b8159af8d6adba3a4b97c5932b">g_logger</a>) &lt;&lt; <span class="stringliteral">&quot;exception:&quot;</span> &lt;&lt; c;</div>
+<div class="line"><span class="lineno">  305</span>                    } <span class="keywordflow">catch</span> (...)</div>
+<div class="line"><span class="lineno">  306</span>                    {</div>
+<div class="line"><span class="lineno">  307</span>                        <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1db.html#a9a8f83b8159af8d6adba3a4b97c5932b">g_logger</a>) &lt;&lt; <span class="stringliteral">&quot;uncatch exception&quot;</span>;</div>
+<div class="line"><span class="lineno">  308</span>                    }</div>
+<div class="line"><span class="lineno">  309</span>                }</div>
+<div class="line"><span class="lineno">  310</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  311</span>                {</div>
+<div class="line"><span class="lineno">  312</span>                    event_base_loopbreak(thread-&gt;m_base);</div>
+<div class="line"><span class="lineno">  313</span>                    thread-&gt;m_start = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  314</span>                    <a class="code hl_function" href="classGyanis_1_1db_1_1FoxThread.html#a6694b81c9380267ba3c21050f3f1a3ff">unsetThis</a>();</div>
+<div class="line"><span class="lineno">  315</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  316</span>                }</div>
+<div class="line"><span class="lineno">  317</span>            }</div>
+<div class="line"><span class="lineno">  318</span>            <a class="code hl_function" href="classGyanis_1_1base_1_1Atomic.html#af3d3c86cdb4ae7bf29b8d6155db0a822">base::Atomic::addFetch</a>(thread-&gt;m_total, callbacks.size());</div>
+<div class="line"><span class="lineno">  319</span>            thread-&gt;m_working = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  320</span>        }</div>
+<div class="line"><span class="lineno">  321</span>    }</div>
+<div class="ttc" id="aHook_8cpp_html_a49c565342c0f29cec5461ec22c3b1b3d"><div class="ttname"><a href="Hook_8cpp.html#a49c565342c0f29cec5461ec22c3b1b3d">recv</a></div><div class="ttdeci">ssize_t recv(int sockfd, void *buf, size_t len, int flags)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00369">Hook.cpp:369</a></div></div>
+<div class="ttc" id="aLog_8h_html_a80a932ee56f777358b3d82e5fa3203c8"><div class="ttname"><a href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a></div><div class="ttdeci">#define LOG_ERROR(logger)</div><div class="ttdoc">输出 error 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00046">Log.h:46</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1Atomic_html_af3d3c86cdb4ae7bf29b8d6155db0a822"><div class="ttname"><a href="classGyanis_1_1base_1_1Atomic.html#af3d3c86cdb4ae7bf29b8d6155db0a822">Gyanis::base::Atomic::addFetch</a></div><div class="ttdeci">static T addFetch(volatile T &amp;t, S v=1)</div><div class="ttdef"><b>Definition</b> <a href="Utils_8h_source.html#l00334">Utils.h:334</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_a6694b81c9380267ba3c21050f3f1a3ff"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#a6694b81c9380267ba3c21050f3f1a3ff">Gyanis::db::FoxThread::unsetThis</a></div><div class="ttdeci">static void unsetThis()</div><div class="ttdoc">取消设置当前线程为本线程</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8cpp_source.html#l00137">FoxThread.cpp:137</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_aeb54c56ecefa221b2e8dcc279c926ac1"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#aeb54c56ecefa221b2e8dcc279c926ac1">Gyanis::db::FoxThread::callback</a></div><div class="ttdeci">std::function&lt; void()&gt; callback</div><div class="ttdoc">定义回调类型，表示不带参数且不返回值的函数</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8h_source.html#l00097">FoxThread.h:97</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_af43ceb0ec1ca21f38a6ebd648afe272f"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#af43ceb0ec1ca21f38a6ebd648afe272f">Gyanis::db::FoxThread::FoxThread</a></div><div class="ttdeci">FoxThread(std::string name=&quot;&quot;, event_base *base=nullptr)</div><div class="ttdoc">构造函数，初始化线程</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8cpp_source.html#l00021">FoxThread.cpp:21</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_ad271786523ef00d03c9873bba19cbac2_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_ad271786523ef00d03c9873bba19cbac2_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_ad271786523ef00d03c9873bba19cbac2_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_ad271786523ef00d03c9873bba19cbac2_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a231fe9e8b4e52aad79a4f6228bf212b7" name="a231fe9e8b4e52aad79a4f6228bf212b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a231fe9e8b4e52aad79a4f6228bf212b7">&#9670;&#160;</a></span>setData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::db::FoxThread::setData </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置线程中的数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>数据名称 </td></tr>
+    <tr><td class="paramname">value</td><td>数据指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00243">243</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  244</span>    {</div>
+<div class="line"><span class="lineno">  245</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a33f408c7fe5f602fe2ced01075ad48c2">m_datas</a>[name] = value;</div>
+<div class="line"><span class="lineno">  246</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac74425f80c5834e221b8d26886420faa" name="ac74425f80c5834e221b8d26886420faa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac74425f80c5834e221b8d26886420faa">&#9670;&#160;</a></span>setInitCb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::db::FoxThread::setInitCb </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a7b111a9513af4142d99d85e12184f869">init_cb</a> &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置线程初始化回调函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>初始化回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00248">248</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  249</span>    {</div>
+<div class="line"><span class="lineno">  250</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a609abeba2f145a2002ec8f17ae024a5b">m_initCb</a> = value;</div>
+<div class="line"><span class="lineno">  251</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_a609abeba2f145a2002ec8f17ae024a5b"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#a609abeba2f145a2002ec8f17ae024a5b">Gyanis::db::FoxThread::m_initCb</a></div><div class="ttdeci">init_cb m_initCb</div><div class="ttdoc">初始化回调函数</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8h_source.html#l00254">FoxThread.h:254</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8ca7df44aeb8cda32029db877816b95d" name="a8ca7df44aeb8cda32029db877816b95d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ca7df44aeb8cda32029db877816b95d">&#9670;&#160;</a></span>setThis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::db::FoxThread::setThis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置当前线程为本线程 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00128">128</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  129</span>    {</div>
+<div class="line"><span class="lineno">  130</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a4dba356dabe54b44d3f1038ee6bedc2a">m_name</a> = <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a4dba356dabe54b44d3f1038ee6bedc2a">m_name</a> + <span class="stringliteral">&quot;_&quot;</span> + std::to_string(<a class="code hl_function" href="namespaceGyanis_1_1base.html#aa80cc0a553c8b24f4d7be5dd98f9451d">base::GetThreadID</a>());</div>
+<div class="line"><span class="lineno">  131</span>        <a class="code hl_variable" href="namespaceGyanis_1_1db.html#a82eb72c0ac344ec655990d7dcecd3ebc">s_thread</a> = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>        std::unique_lock lock(<a class="code hl_variable" href="namespaceGyanis_1_1db.html#a0702c16af247e3ac9cb0d9c85b87b149">s_thread_mutex</a>);</div>
+<div class="line"><span class="lineno">  134</span>        <a class="code hl_variable" href="namespaceGyanis_1_1db.html#a45d8fa536f39a263db56135dd8f59269">s_thread_names</a>[<a class="code hl_function" href="namespaceGyanis_1_1base.html#aa80cc0a553c8b24f4d7be5dd98f9451d">base::GetThreadID</a>()] = <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a4dba356dabe54b44d3f1038ee6bedc2a">m_name</a>;</div>
+<div class="line"><span class="lineno">  135</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_a8ca7df44aeb8cda32029db877816b95d_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_a8ca7df44aeb8cda32029db877816b95d_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_a8ca7df44aeb8cda32029db877816b95d_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_a8ca7df44aeb8cda32029db877816b95d_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a6bff3aff85f5cc94a346de99fb66b2c6" name="a6bff3aff85f5cc94a346de99fb66b2c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bff3aff85f5cc94a346de99fb66b2c6">&#9670;&#160;</a></span>start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::db::FoxThread::start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动线程 </p>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a3e54e24150393ba08331750cabf22fea">Gyanis::db::IFoxThread</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00144">144</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>    {</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#aaaea971d46526c20b740ae841d1e1a80">m_thread</a>)</div>
+<div class="line"><span class="lineno">  147</span>        {</div>
+<div class="line"><span class="lineno">  148</span>            <a class="code hl_define" href="Log_8h.html#a983ab72109ed1168518f25e064114bdf">LOG_FATAL</a>(<a class="code hl_variable" href="namespaceGyanis_1_1db.html#a9a8f83b8159af8d6adba3a4b97c5932b">g_logger</a>)</div>
+<div class="line"><span class="lineno">  149</span>                &lt;&lt; <span class="stringliteral">&quot;FoxThread::start - FoxThread is running. &quot;</span></div>
+<div class="line"><span class="lineno">  150</span>                &lt;&lt; <span class="stringliteral">&quot; | Status: Critical&quot;</span>;</div>
+<div class="line"><span class="lineno">  151</span>            <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;FoxThread is running&quot;</span>);</div>
+<div class="line"><span class="lineno">  152</span>        }</div>
+<div class="line"><span class="lineno">  153</span> </div>
+<div class="line"><span class="lineno">  154</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#aaaea971d46526c20b740ae841d1e1a80">m_thread</a> = <span class="keyword">new</span> std::thread([<span class="keyword">this</span>] { <a class="code hl_function" href="classGyanis_1_1db_1_1FoxThread.html#abaed0dcf40e4d5ac2273d1e3e1c43fc9">thread_cb</a>(); });</div>
+<div class="line"><span class="lineno">  155</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a0a8c5543165fa2e5ed92b406062cdc99">m_start</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  156</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1db_1_1FoxThread_html_abaed0dcf40e4d5ac2273d1e3e1c43fc9"><div class="ttname"><a href="classGyanis_1_1db_1_1FoxThread.html#abaed0dcf40e4d5ac2273d1e3e1c43fc9">Gyanis::db::FoxThread::thread_cb</a></div><div class="ttdeci">void thread_cb()</div><div class="ttdoc">线程的回调函数</div><div class="ttdef"><b>Definition</b> <a href="FoxThread_8cpp_source.html#l00268">FoxThread.cpp:268</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_a6bff3aff85f5cc94a346de99fb66b2c6_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_a6bff3aff85f5cc94a346de99fb66b2c6_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a40da331bdd54091a32ba76a1e82ba4de" name="a40da331bdd54091a32ba76a1e82ba4de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40da331bdd54091a32ba76a1e82ba4de">&#9670;&#160;</a></span>stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::db::FoxThread::stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>停止线程 </p>
+
+<p>实现了 <a class="el" href="classGyanis_1_1db_1_1IFoxThread.html#a4f6ca00a2ac41c2c3ff80e10e91a72c4">Gyanis::db::IFoxThread</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00207">207</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  208</span>    {</div>
+<div class="line"><span class="lineno">  209</span>        std::unique_lock lock(<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a4e908980e52cb163fdd326fb420a06df">m_mutex</a>);</div>
+<div class="line"><span class="lineno">  210</span>        <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a39b14891627f4752077cce94ddb88c7e">m_callbacks</a>.emplace_back(<span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#aaaea971d46526c20b740ae841d1e1a80">m_thread</a>)</div>
+<div class="line"><span class="lineno">  212</span>        {</div>
+<div class="line"><span class="lineno">  213</span>            <span class="keyword">constexpr</span> uint8_t cmd = 0;</div>
+<div class="line"><span class="lineno">  214</span>            <a class="code hl_function" href="Hook_8cpp.html#a9da4ddaf95f37c1457e545a65ee1a506">send</a>(<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a46443eb690e4d0c7d57b427ce9ee6502">m_write</a>, &amp;cmd, <span class="keyword">sizeof</span>(cmd), 0);</div>
+<div class="line"><span class="lineno">  215</span>        }</div>
+<div class="line"><span class="lineno">  216</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_a40da331bdd54091a32ba76a1e82ba4de_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_a40da331bdd54091a32ba76a1e82ba4de_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_a40da331bdd54091a32ba76a1e82ba4de_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_a40da331bdd54091a32ba76a1e82ba4de_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="abaed0dcf40e4d5ac2273d1e3e1c43fc9" name="abaed0dcf40e4d5ac2273d1e3e1c43fc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaed0dcf40e4d5ac2273d1e3e1c43fc9">&#9670;&#160;</a></span>thread_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::db::FoxThread::thread_cb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>线程的回调函数 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00268">268</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  269</span>    {</div>
+<div class="line"><span class="lineno">  270</span>        <a class="code hl_function" href="classGyanis_1_1db_1_1FoxThread.html#a8ca7df44aeb8cda32029db877816b95d">setThis</a>();</div>
+<div class="line"><span class="lineno">  271</span>        pthread_setname_np(pthread_self(), <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a4dba356dabe54b44d3f1038ee6bedc2a">m_name</a>.substr(0, 15).c_str());</div>
+<div class="line"><span class="lineno">  272</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a609abeba2f145a2002ec8f17ae024a5b">m_initCb</a>)</div>
+<div class="line"><span class="lineno">  273</span>        {</div>
+<div class="line"><span class="lineno">  274</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a609abeba2f145a2002ec8f17ae024a5b">m_initCb</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  275</span>            <a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#a609abeba2f145a2002ec8f17ae024a5b">m_initCb</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  276</span>        }</div>
+<div class="line"><span class="lineno">  277</span>        event_base_loop(<a class="code hl_variable" href="classGyanis_1_1db_1_1FoxThread.html#af5ec11c90ea59b4f16fa1fd1c43a449f">m_base</a>, 0);</div>
+<div class="line"><span class="lineno">  278</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_abaed0dcf40e4d5ac2273d1e3e1c43fc9_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_abaed0dcf40e4d5ac2273d1e3e1c43fc9_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_abaed0dcf40e4d5ac2273d1e3e1c43fc9_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_abaed0dcf40e4d5ac2273d1e3e1c43fc9_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a6694b81c9380267ba3c21050f3f1a3ff" name="a6694b81c9380267ba3c21050f3f1a3ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6694b81c9380267ba3c21050f3f1a3ff">&#9670;&#160;</a></span>unsetThis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::db::FoxThread::unsetThis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>取消设置当前线程为本线程 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a> 第 <a class="el" href="FoxThread_8cpp_source.html#l00137">137</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>    {</div>
+<div class="line"><span class="lineno">  139</span>        <a class="code hl_variable" href="namespaceGyanis_1_1db.html#a82eb72c0ac344ec655990d7dcecd3ebc">s_thread</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  140</span>        std::unique_lock lock(<a class="code hl_variable" href="namespaceGyanis_1_1db.html#a0702c16af247e3ac9cb0d9c85b87b149">s_thread_mutex</a>);</div>
+<div class="line"><span class="lineno">  141</span>        <a class="code hl_variable" href="namespaceGyanis_1_1db.html#a45d8fa536f39a263db56135dd8f59269">s_thread_names</a>.erase(<a class="code hl_function" href="namespaceGyanis_1_1base.html#aa80cc0a553c8b24f4d7be5dd98f9451d">base::GetThreadID</a>());</div>
+<div class="line"><span class="lineno">  142</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_a6694b81c9380267ba3c21050f3f1a3ff_cgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_a6694b81c9380267ba3c21050f3f1a3ff_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1db_1_1FoxThread_a6694b81c9380267ba3c21050f3f1a3ff_icgraph.png" border="0" usemap="#aclassGyanis_1_1db_1_1FoxThread_a6694b81c9380267ba3c21050f3f1a3ff_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="af5ec11c90ea59b4f16fa1fd1c43a449f" name="af5ec11c90ea59b4f16fa1fd1c43a449f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5ec11c90ea59b4f16fa1fd1c43a449f">&#9670;&#160;</a></span>m_base</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">event_base* Gyanis::db::FoxThread::m_base</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>libevent 事件基对象 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8h_source.html">FoxThread.h</a> 第 <a class="el" href="FoxThread_8h_source.html#l00248">248</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a39b14891627f4752077cce94ddb88c7e" name="a39b14891627f4752077cce94ddb88c7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39b14891627f4752077cce94ddb88c7e">&#9670;&#160;</a></span>m_callbacks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::list&lt;<a class="el" href="classGyanis_1_1db_1_1FoxThread.html#aeb54c56ecefa221b2e8dcc279c926ac1">callback</a>&gt; Gyanis::db::FoxThread::m_callbacks</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>存储待处理的回调函数 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8h_source.html">FoxThread.h</a> 第 <a class="el" href="FoxThread_8h_source.html#l00252">252</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a33f408c7fe5f602fe2ced01075ad48c2" name="a33f408c7fe5f602fe2ced01075ad48c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33f408c7fe5f602fe2ced01075ad48c2">&#9670;&#160;</a></span>m_datas</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, void*&gt; Gyanis::db::FoxThread::m_datas</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>存储线程中的数据 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8h_source.html">FoxThread.h</a> 第 <a class="el" href="FoxThread_8h_source.html#l00255">255</a> 行定义.</p>
+
+</div>
+</div>
+<a id="afd35d00d96168e0d55a16e2860d26b32" name="afd35d00d96168e0d55a16e2860d26b32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd35d00d96168e0d55a16e2860d26b32">&#9670;&#160;</a></span>m_event</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">event* Gyanis::db::FoxThread::m_event</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>libevent 事件 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8h_source.html">FoxThread.h</a> 第 <a class="el" href="FoxThread_8h_source.html#l00249">249</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a609abeba2f145a2002ec8f17ae024a5b" name="a609abeba2f145a2002ec8f17ae024a5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a609abeba2f145a2002ec8f17ae024a5b">&#9670;&#160;</a></span>m_initCb</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html#a7b111a9513af4142d99d85e12184f869">init_cb</a> Gyanis::db::FoxThread::m_initCb</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化回调函数 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8h_source.html">FoxThread.h</a> 第 <a class="el" href="FoxThread_8h_source.html#l00254">254</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a4e908980e52cb163fdd326fb420a06df" name="a4e908980e52cb163fdd326fb420a06df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e908980e52cb163fdd326fb420a06df">&#9670;&#160;</a></span>m_mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_mutex Gyanis::db::FoxThread::m_mutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>共享互斥锁，用于保护线程操作 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8h_source.html">FoxThread.h</a> 第 <a class="el" href="FoxThread_8h_source.html#l00251">251</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a4dba356dabe54b44d3f1038ee6bedc2a" name="a4dba356dabe54b44d3f1038ee6bedc2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dba356dabe54b44d3f1038ee6bedc2a">&#9670;&#160;</a></span>m_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Gyanis::db::FoxThread::m_name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>线程名称 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8h_source.html">FoxThread.h</a> 第 <a class="el" href="FoxThread_8h_source.html#l00253">253</a> 行定义.</p>
+
+</div>
+</div>
+<a id="af82136d38bdc28ef4fea3938e924a798" name="af82136d38bdc28ef4fea3938e924a798"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af82136d38bdc28ef4fea3938e924a798">&#9670;&#160;</a></span>m_read</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">evutil_socket_t Gyanis::db::FoxThread::m_read</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>读取套接字 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8h_source.html">FoxThread.h</a> 第 <a class="el" href="FoxThread_8h_source.html#l00246">246</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a0a8c5543165fa2e5ed92b406062cdc99" name="a0a8c5543165fa2e5ed92b406062cdc99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a8c5543165fa2e5ed92b406062cdc99">&#9670;&#160;</a></span>m_start</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::db::FoxThread::m_start</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>线程是否已启动 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8h_source.html">FoxThread.h</a> 第 <a class="el" href="FoxThread_8h_source.html#l00257">257</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aaaea971d46526c20b740ae841d1e1a80" name="aaaea971d46526c20b740ae841d1e1a80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaea971d46526c20b740ae841d1e1a80">&#9670;&#160;</a></span>m_thread</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::thread* Gyanis::db::FoxThread::m_thread</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>线程对象 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8h_source.html">FoxThread.h</a> 第 <a class="el" href="FoxThread_8h_source.html#l00250">250</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac7d371f15f5a2d44dbfa0c00f983c5f0" name="ac7d371f15f5a2d44dbfa0c00f983c5f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7d371f15f5a2d44dbfa0c00f983c5f0">&#9670;&#160;</a></span>m_total</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t Gyanis::db::FoxThread::m_total</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>线程的总任务数 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8h_source.html">FoxThread.h</a> 第 <a class="el" href="FoxThread_8h_source.html#l00258">258</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a8376ec22a84373998db54b77511cf0d5" name="a8376ec22a84373998db54b77511cf0d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8376ec22a84373998db54b77511cf0d5">&#9670;&#160;</a></span>m_working</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gyanis::db::FoxThread::m_working</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>线程是否正在工作 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8h_source.html">FoxThread.h</a> 第 <a class="el" href="FoxThread_8h_source.html#l00256">256</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a46443eb690e4d0c7d57b427ce9ee6502" name="a46443eb690e4d0c7d57b427ce9ee6502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46443eb690e4d0c7d57b427ce9ee6502">&#9670;&#160;</a></span>m_write</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">evutil_socket_t Gyanis::db::FoxThread::m_write</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>写入套接字 </p>
+
+<p class="definition">在文件 <a class="el" href="FoxThread_8h_source.html">FoxThread.h</a> 第 <a class="el" href="FoxThread_8h_source.html#l00247">247</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/db/<a class="el" href="FoxThread_8h_source.html">FoxThread.h</a></li>
+<li>src/db/<a class="el" href="FoxThread_8cpp_source.html">FoxThread.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGyanis.html">Gyanis</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1db.html">db</a></li><li class="navelem"><a class="el" href="classGyanis_1_1db_1_1FoxThread.html">FoxThread</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

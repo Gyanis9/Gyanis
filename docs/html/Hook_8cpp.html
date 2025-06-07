@@ -1,0 +1,1857 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: src/core/Hook.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Hook_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">Hook.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="Hook_8h_source.html">core/Hook.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Macro_8h_source.html">base/Macro.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Fiber_8h_source.html">core/Fiber.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="FdManager_8h_source.html">core/FdManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="IOManager_8h_source.html">core/IOManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Log_8h_source.html">base/Log.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Config_8h_source.html">base/Config.h</a>&quot;</code><br />
+<code>#include &lt;dlfcn.h&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;cstdarg&gt;</code><br />
+<code>#include &lt;fcntl.h&gt;</code><br />
+<code>#include &lt;sys/socket.h&gt;</code><br />
+<code>#include &lt;sys/ioctl.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Hook.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp__incl.png" border="0" usemap="#asrc_2core_2Hook_8cpp" alt=""/></div>
+</div>
+</div>
+<p><a href="Hook_8cpp_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1core_1_1HookIniter.html">Gyanis::core::HookIniter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structGyanis_1_1core_1_1HookIniter.html" title="HookIniter 用于在程序启动时初始化钩子">HookIniter</a> 用于在程序启动时初始化钩子  <a href="structGyanis_1_1core_1_1HookIniter.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtimer__info.html">timer_info</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespaceGyanis" id="r_namespaceGyanis"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis.html">Gyanis</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceGyanis_1_1core" id="r_namespaceGyanis_1_1core"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1core.html">Gyanis::core</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a6b4d903a5c66b4d728f44e739f45f77e" id="r_a6b4d903a5c66b4d728f44e739f45f77e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#a6b4d903a5c66b4d728f44e739f45f77e">HOOK_FUN</a>(<a class="el" href="Hook_8cpp.html#a05f4bdc8cf2b17d08f5f7870244e6124">XX</a>)</td></tr>
+<tr class="memdesc:a6b4d903a5c66b4d728f44e739f45f77e"><td class="mdescLeft">&#160;</td><td class="mdescRight">宏定义，用于钩取系统调用函数  <br /></td></tr>
+<tr class="separator:a6b4d903a5c66b4d728f44e739f45f77e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05f4bdc8cf2b17d08f5f7870244e6124" id="r_a05f4bdc8cf2b17d08f5f7870244e6124"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#a05f4bdc8cf2b17d08f5f7870244e6124">XX</a>(name)&#160;&#160;&#160;name ## _f = (name ## _fun)dlsym(RTLD_NEXT, #name);</td></tr>
+<tr class="separator:a05f4bdc8cf2b17d08f5f7870244e6124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05f4bdc8cf2b17d08f5f7870244e6124" id="r_a05f4bdc8cf2b17d08f5f7870244e6124"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#a05f4bdc8cf2b17d08f5f7870244e6124">XX</a>(name)&#160;&#160;&#160;name ## _fun name ## _f = nullptr;</td></tr>
+<tr class="separator:a05f4bdc8cf2b17d08f5f7870244e6124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a6bbecfc09acc392ab1d5f0354e7aa3ad" id="r_a6bbecfc09acc392ab1d5f0354e7aa3ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1core.html#a6bbecfc09acc392ab1d5f0354e7aa3ad">Gyanis::core::hook_init</a> ()</td></tr>
+<tr class="separator:a6bbecfc09acc392ab1d5f0354e7aa3ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a460d90cfa0bd7b8f0e15d5a5821d9637" id="r_a460d90cfa0bd7b8f0e15d5a5821d9637"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1core.html#a460d90cfa0bd7b8f0e15d5a5821d9637">Gyanis::core::is_hook_enable</a> ()</td></tr>
+<tr class="memdesc:a460d90cfa0bd7b8f0e15d5a5821d9637"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查是否启用钩子  <br /></td></tr>
+<tr class="separator:a460d90cfa0bd7b8f0e15d5a5821d9637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a084c221a542e93ef90746526bc298e6e" id="r_a084c221a542e93ef90746526bc298e6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1core.html#a084c221a542e93ef90746526bc298e6e">Gyanis::core::set_hook_enable</a> (bool flag)</td></tr>
+<tr class="memdesc:a084c221a542e93ef90746526bc298e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置是否启用钩子  <br /></td></tr>
+<tr class="separator:a084c221a542e93ef90746526bc298e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54f397edba31e0013f8b0cb510c5311e" id="r_a54f397edba31e0013f8b0cb510c5311e"><td class="memTemplParams" colspan="2">template&lt;typename OriginFun , typename... Args&gt; </td></tr>
+<tr class="memitem:a54f397edba31e0013f8b0cb510c5311e"><td class="memTemplItemLeft" align="right" valign="top">static ssize_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#a54f397edba31e0013f8b0cb510c5311e">do_io</a> (int fd, OriginFun fun, const char *hook_fun_name, uint32_t event, const int timeout_so, Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a54f397edba31e0013f8b0cb510c5311e"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行 IO 操作的通用函数，支持钩取  <br /></td></tr>
+<tr class="separator:a54f397edba31e0013f8b0cb510c5311e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69c97039c9ec10a30e5edbdf365e3bbd" id="r_a69c97039c9ec10a30e5edbdf365e3bbd"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#a69c97039c9ec10a30e5edbdf365e3bbd">sleep</a> (unsigned int seconds)</td></tr>
+<tr class="separator:a69c97039c9ec10a30e5edbdf365e3bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0383719bafa9b5b2aa25fabc586bd1f" id="r_ac0383719bafa9b5b2aa25fabc586bd1f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#ac0383719bafa9b5b2aa25fabc586bd1f">usleep</a> (useconds_t usec)</td></tr>
+<tr class="separator:ac0383719bafa9b5b2aa25fabc586bd1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcc3c77a81d5a4c457fd8e4f7f830fe3" id="r_abcc3c77a81d5a4c457fd8e4f7f830fe3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#abcc3c77a81d5a4c457fd8e4f7f830fe3">nanosleep</a> (const timespec *req, timespec *rem)</td></tr>
+<tr class="separator:abcc3c77a81d5a4c457fd8e4f7f830fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4e0711877c45a41168ac677b0670ccd" id="r_af4e0711877c45a41168ac677b0670ccd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#af4e0711877c45a41168ac677b0670ccd">socket</a> (int domain, int type, int protocol)</td></tr>
+<tr class="separator:af4e0711877c45a41168ac677b0670ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa82ee2b907b8f26e0c463e4808b7c08c" id="r_aa82ee2b907b8f26e0c463e4808b7c08c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#aa82ee2b907b8f26e0c463e4808b7c08c">connect_with_timeout</a> (int fd, const sockaddr *addr, socklen_t addrlen, uint64_t timeout_ms)</td></tr>
+<tr class="memdesc:aa82ee2b907b8f26e0c463e4808b7c08c"><td class="mdescLeft">&#160;</td><td class="mdescRight">自定义带超时的 connect 函数  <br /></td></tr>
+<tr class="separator:aa82ee2b907b8f26e0c463e4808b7c08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e25aa713668904b3a6e8d209c3beeb5" id="r_a7e25aa713668904b3a6e8d209c3beeb5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#a7e25aa713668904b3a6e8d209c3beeb5">connect</a> (int sockfd, const sockaddr *addr, socklen_t addrlen)</td></tr>
+<tr class="separator:a7e25aa713668904b3a6e8d209c3beeb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9656e13df74b50d7af5798542c678dbd" id="r_a9656e13df74b50d7af5798542c678dbd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#a9656e13df74b50d7af5798542c678dbd">accept</a> (int s, sockaddr *addr, socklen_t *addrlen)</td></tr>
+<tr class="separator:a9656e13df74b50d7af5798542c678dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af32a16ad2dd9e48482f8f790db7dbbd2" id="r_af32a16ad2dd9e48482f8f790db7dbbd2"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#af32a16ad2dd9e48482f8f790db7dbbd2">read</a> (int fd, void *buf, size_t count)</td></tr>
+<tr class="separator:af32a16ad2dd9e48482f8f790db7dbbd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5da56354f209063569fd2139d078b4cc" id="r_a5da56354f209063569fd2139d078b4cc"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#a5da56354f209063569fd2139d078b4cc">readv</a> (int fd, const iovec *iov, int iovcnt)</td></tr>
+<tr class="separator:a5da56354f209063569fd2139d078b4cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49c565342c0f29cec5461ec22c3b1b3d" id="r_a49c565342c0f29cec5461ec22c3b1b3d"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#a49c565342c0f29cec5461ec22c3b1b3d">recv</a> (int sockfd, void *buf, size_t len, int flags)</td></tr>
+<tr class="separator:a49c565342c0f29cec5461ec22c3b1b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af349f83f970edca39786829704899327" id="r_af349f83f970edca39786829704899327"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#af349f83f970edca39786829704899327">recvfrom</a> (int sockfd, void *buf, size_t len, int flags, sockaddr *src_addr, socklen_t *addrlen)</td></tr>
+<tr class="separator:af349f83f970edca39786829704899327"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed70d2ce8d3411341530d14ae6572e26" id="r_aed70d2ce8d3411341530d14ae6572e26"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#aed70d2ce8d3411341530d14ae6572e26">recvmsg</a> (int sockfd, msghdr *msg, int flags)</td></tr>
+<tr class="separator:aed70d2ce8d3411341530d14ae6572e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb39b21888372e95ad3e5c59b166f5c8" id="r_abb39b21888372e95ad3e5c59b166f5c8"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#abb39b21888372e95ad3e5c59b166f5c8">write</a> (int fd, const void *buf, size_t count)</td></tr>
+<tr class="separator:abb39b21888372e95ad3e5c59b166f5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25a77f2e043f64c6ce9b478e7490847c" id="r_a25a77f2e043f64c6ce9b478e7490847c"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#a25a77f2e043f64c6ce9b478e7490847c">writev</a> (int fd, const iovec *iov, int iovcnt)</td></tr>
+<tr class="separator:a25a77f2e043f64c6ce9b478e7490847c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9da4ddaf95f37c1457e545a65ee1a506" id="r_a9da4ddaf95f37c1457e545a65ee1a506"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#a9da4ddaf95f37c1457e545a65ee1a506">send</a> (int s, const void *msg, size_t len, int flags)</td></tr>
+<tr class="separator:a9da4ddaf95f37c1457e545a65ee1a506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71618f206e322dac502ff5a415d1bee2" id="r_a71618f206e322dac502ff5a415d1bee2"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#a71618f206e322dac502ff5a415d1bee2">sendto</a> (int s, const void *msg, size_t len, int flags, const sockaddr *to, socklen_t tolen)</td></tr>
+<tr class="separator:a71618f206e322dac502ff5a415d1bee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a111a319409c86e7eee7708c03d8c3724" id="r_a111a319409c86e7eee7708c03d8c3724"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#a111a319409c86e7eee7708c03d8c3724">sendmsg</a> (int s, const msghdr *msg, int flags)</td></tr>
+<tr class="separator:a111a319409c86e7eee7708c03d8c3724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafbcde67669a1b96577e735ddebd8634" id="r_aafbcde67669a1b96577e735ddebd8634"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#aafbcde67669a1b96577e735ddebd8634">close</a> (int fd)</td></tr>
+<tr class="separator:aafbcde67669a1b96577e735ddebd8634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad39ebe4c4767eaa9a680777400cfaafe" id="r_ad39ebe4c4767eaa9a680777400cfaafe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#ad39ebe4c4767eaa9a680777400cfaafe">fcntl</a> (int fd, int cmd,...)</td></tr>
+<tr class="separator:ad39ebe4c4767eaa9a680777400cfaafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af25470c292673efe078205874a378d7a" id="r_af25470c292673efe078205874a378d7a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#af25470c292673efe078205874a378d7a">ioctl</a> (int d, unsigned long int request,...)</td></tr>
+<tr class="separator:af25470c292673efe078205874a378d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab81d992040a0b29b4f9fd20a263ab1d0" id="r_ab81d992040a0b29b4f9fd20a263ab1d0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#ab81d992040a0b29b4f9fd20a263ab1d0">getsockopt</a> (int sockfd, int level, int optname, void *optval, socklen_t *optlen)</td></tr>
+<tr class="separator:ab81d992040a0b29b4f9fd20a263ab1d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af188b4433461a4224c209231689e8270" id="r_af188b4433461a4224c209231689e8270"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#af188b4433461a4224c209231689e8270">setsockopt</a> (int sockfd, int level, int optname, const void *optval, socklen_t optlen)</td></tr>
+<tr class="separator:af188b4433461a4224c209231689e8270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a9677ee99477f7229e3b4b99565af0745" id="r_a9677ee99477f7229e3b4b99565af0745"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Hook_8cpp.html#a9677ee99477f7229e3b4b99565af0745">g_logger</a> = <a class="el" href="Log_8h.html#a30907c2011b31fbe54269ddc6052ebe3">LOG_NAME</a>(&quot;system&quot;)</td></tr>
+<tr class="separator:a9677ee99477f7229e3b4b99565af0745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34e01c61a85576e257e87094e64160fd" id="r_a34e01c61a85576e257e87094e64160fd"><td class="memItemLeft" align="right" valign="top">static thread_local bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1core.html#a34e01c61a85576e257e87094e64160fd">Gyanis::core::t_hook_enable</a> = false</td></tr>
+<tr class="separator:a34e01c61a85576e257e87094e64160fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6b0e91a401a3183dae19cc7fcc71414" id="r_ac6b0e91a401a3183dae19cc7fcc71414"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1core.html#ac6b0e91a401a3183dae19cc7fcc71414">Gyanis::core::g_tcp_connect_timeout</a> = <a class="el" href="classGyanis_1_1base_1_1Config.html#aaac5d5509f3135d327d6daa085417fd7">base::Config::LookUp</a>&lt;uint64_t&gt;(&quot;tcp.connect.timeout&quot;, 5000, &quot;tcp <a class="el" href="Hook_8cpp.html#a7e25aa713668904b3a6e8d209c3beeb5">connect</a> timeout&quot;)</td></tr>
+<tr class="memdesc:ac6b0e91a401a3183dae19cc7fcc71414"><td class="mdescLeft">&#160;</td><td class="mdescRight">全局变量，控制是否启用钩子功能  <br /></td></tr>
+<tr class="separator:ac6b0e91a401a3183dae19cc7fcc71414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb3b2ecdabd0c334c1a9dfb819e23d6c" id="r_aeb3b2ecdabd0c334c1a9dfb819e23d6c"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1core.html#aeb3b2ecdabd0c334c1a9dfb819e23d6c">Gyanis::core::s_connect_timeout</a> = -1</td></tr>
+<tr class="separator:aeb3b2ecdabd0c334c1a9dfb819e23d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6689b97d8b2ddfa991c21a3dc4430db4" id="r_a6689b97d8b2ddfa991c21a3dc4430db4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structGyanis_1_1core_1_1HookIniter.html">HookIniter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1core.html#a6689b97d8b2ddfa991c21a3dc4430db4">Gyanis::core::s_hook_initer</a></td></tr>
+<tr class="memdesc:a6689b97d8b2ddfa991c21a3dc4430db4"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建一个全局的 <a class="el" href="structGyanis_1_1core_1_1HookIniter.html" title="HookIniter 用于在程序启动时初始化钩子">HookIniter</a> 实例，用于初始化钩子  <br /></td></tr>
+<tr class="separator:a6689b97d8b2ddfa991c21a3dc4430db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a6b4d903a5c66b4d728f44e739f45f77e" name="a6b4d903a5c66b4d728f44e739f45f77e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b4d903a5c66b4d728f44e739f45f77e">&#9670;&#160;</a></span>HOOK_FUN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HOOK_FUN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="Hook_8cpp.html#a05f4bdc8cf2b17d08f5f7870244e6124">XX</a></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line"><a class="code hl_define" href="Hook_8cpp.html#a05f4bdc8cf2b17d08f5f7870244e6124">XX</a>(<a class="code hl_function" href="Hook_8cpp.html#a69c97039c9ec10a30e5edbdf365e3bbd">sleep</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#ac0383719bafa9b5b2aa25fabc586bd1f">usleep</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#abcc3c77a81d5a4c457fd8e4f7f830fe3">nanosleep</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#af4e0711877c45a41168ac677b0670ccd">socket</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#a7e25aa713668904b3a6e8d209c3beeb5">connect</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#a9656e13df74b50d7af5798542c678dbd">accept</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#af32a16ad2dd9e48482f8f790db7dbbd2">read</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#a5da56354f209063569fd2139d078b4cc">readv</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#a49c565342c0f29cec5461ec22c3b1b3d">recv</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#af349f83f970edca39786829704899327">recvfrom</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#aed70d2ce8d3411341530d14ae6572e26">recvmsg</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#abb39b21888372e95ad3e5c59b166f5c8">write</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#a25a77f2e043f64c6ce9b478e7490847c">writev</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#a9da4ddaf95f37c1457e545a65ee1a506">send</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#a71618f206e322dac502ff5a415d1bee2">sendto</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#a111a319409c86e7eee7708c03d8c3724">sendmsg</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#aafbcde67669a1b96577e735ddebd8634">close</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#ad39ebe4c4767eaa9a680777400cfaafe">fcntl</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#af25470c292673efe078205874a378d7a">ioctl</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#ab81d992040a0b29b4f9fd20a263ab1d0">getsockopt</a>) \</div>
+<div class="line">XX(<a class="code hl_function" href="Hook_8cpp.html#af188b4433461a4224c209231689e8270">setsockopt</a>)</div>
+<div class="ttc" id="aHook_8cpp_html_a05f4bdc8cf2b17d08f5f7870244e6124"><div class="ttname"><a href="Hook_8cpp.html#a05f4bdc8cf2b17d08f5f7870244e6124">XX</a></div><div class="ttdeci">#define XX(name)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00188">Hook.cpp:188</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_a111a319409c86e7eee7708c03d8c3724"><div class="ttname"><a href="Hook_8cpp.html#a111a319409c86e7eee7708c03d8c3724">sendmsg</a></div><div class="ttdeci">ssize_t sendmsg(int s, const msghdr *msg, int flags)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00405">Hook.cpp:405</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_a25a77f2e043f64c6ce9b478e7490847c"><div class="ttname"><a href="Hook_8cpp.html#a25a77f2e043f64c6ce9b478e7490847c">writev</a></div><div class="ttdeci">ssize_t writev(int fd, const iovec *iov, int iovcnt)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00390">Hook.cpp:390</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_a49c565342c0f29cec5461ec22c3b1b3d"><div class="ttname"><a href="Hook_8cpp.html#a49c565342c0f29cec5461ec22c3b1b3d">recv</a></div><div class="ttdeci">ssize_t recv(int sockfd, void *buf, size_t len, int flags)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00369">Hook.cpp:369</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_a5da56354f209063569fd2139d078b4cc"><div class="ttname"><a href="Hook_8cpp.html#a5da56354f209063569fd2139d078b4cc">readv</a></div><div class="ttdeci">ssize_t readv(int fd, const iovec *iov, int iovcnt)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00364">Hook.cpp:364</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_a69c97039c9ec10a30e5edbdf365e3bbd"><div class="ttname"><a href="Hook_8cpp.html#a69c97039c9ec10a30e5edbdf365e3bbd">sleep</a></div><div class="ttdeci">unsigned int sleep(unsigned int seconds)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00192">Hook.cpp:192</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_a71618f206e322dac502ff5a415d1bee2"><div class="ttname"><a href="Hook_8cpp.html#a71618f206e322dac502ff5a415d1bee2">sendto</a></div><div class="ttdeci">ssize_t sendto(int s, const void *msg, size_t len, int flags, const sockaddr *to, socklen_t tolen)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00400">Hook.cpp:400</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_a7e25aa713668904b3a6e8d209c3beeb5"><div class="ttname"><a href="Hook_8cpp.html#a7e25aa713668904b3a6e8d209c3beeb5">connect</a></div><div class="ttdeci">int connect(int sockfd, const sockaddr *addr, socklen_t addrlen)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00344">Hook.cpp:344</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_a9656e13df74b50d7af5798542c678dbd"><div class="ttname"><a href="Hook_8cpp.html#a9656e13df74b50d7af5798542c678dbd">accept</a></div><div class="ttdeci">int accept(int s, sockaddr *addr, socklen_t *addrlen)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00349">Hook.cpp:349</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_a9da4ddaf95f37c1457e545a65ee1a506"><div class="ttname"><a href="Hook_8cpp.html#a9da4ddaf95f37c1457e545a65ee1a506">send</a></div><div class="ttdeci">ssize_t send(int s, const void *msg, size_t len, int flags)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00395">Hook.cpp:395</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_aafbcde67669a1b96577e735ddebd8634"><div class="ttname"><a href="Hook_8cpp.html#aafbcde67669a1b96577e735ddebd8634">close</a></div><div class="ttdeci">int close(int fd)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00410">Hook.cpp:410</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_ab81d992040a0b29b4f9fd20a263ab1d0"><div class="ttname"><a href="Hook_8cpp.html#ab81d992040a0b29b4f9fd20a263ab1d0">getsockopt</a></div><div class="ttdeci">int getsockopt(int sockfd, int level, int optname, void *optval, socklen_t *optlen)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00536">Hook.cpp:536</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_abb39b21888372e95ad3e5c59b166f5c8"><div class="ttname"><a href="Hook_8cpp.html#abb39b21888372e95ad3e5c59b166f5c8">write</a></div><div class="ttdeci">ssize_t write(int fd, const void *buf, size_t count)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00385">Hook.cpp:385</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_abcc3c77a81d5a4c457fd8e4f7f830fe3"><div class="ttname"><a href="Hook_8cpp.html#abcc3c77a81d5a4c457fd8e4f7f830fe3">nanosleep</a></div><div class="ttdeci">int nanosleep(const timespec *req, timespec *rem)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00226">Hook.cpp:226</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_ac0383719bafa9b5b2aa25fabc586bd1f"><div class="ttname"><a href="Hook_8cpp.html#ac0383719bafa9b5b2aa25fabc586bd1f">usleep</a></div><div class="ttdeci">int usleep(useconds_t usec)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00210">Hook.cpp:210</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_ad39ebe4c4767eaa9a680777400cfaafe"><div class="ttname"><a href="Hook_8cpp.html#ad39ebe4c4767eaa9a680777400cfaafe">fcntl</a></div><div class="ttdeci">int fcntl(int fd, int cmd,...)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00428">Hook.cpp:428</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_aed70d2ce8d3411341530d14ae6572e26"><div class="ttname"><a href="Hook_8cpp.html#aed70d2ce8d3411341530d14ae6572e26">recvmsg</a></div><div class="ttdeci">ssize_t recvmsg(int sockfd, msghdr *msg, int flags)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00380">Hook.cpp:380</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_af188b4433461a4224c209231689e8270"><div class="ttname"><a href="Hook_8cpp.html#af188b4433461a4224c209231689e8270">setsockopt</a></div><div class="ttdeci">int setsockopt(int sockfd, int level, int optname, const void *optval, socklen_t optlen)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00541">Hook.cpp:541</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_af25470c292673efe078205874a378d7a"><div class="ttname"><a href="Hook_8cpp.html#af25470c292673efe078205874a378d7a">ioctl</a></div><div class="ttdeci">int ioctl(int d, unsigned long int request,...)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00516">Hook.cpp:516</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_af32a16ad2dd9e48482f8f790db7dbbd2"><div class="ttname"><a href="Hook_8cpp.html#af32a16ad2dd9e48482f8f790db7dbbd2">read</a></div><div class="ttdeci">ssize_t read(int fd, void *buf, size_t count)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00359">Hook.cpp:359</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_af349f83f970edca39786829704899327"><div class="ttname"><a href="Hook_8cpp.html#af349f83f970edca39786829704899327">recvfrom</a></div><div class="ttdeci">ssize_t recvfrom(int sockfd, void *buf, size_t len, int flags, sockaddr *src_addr, socklen_t *addrlen)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00374">Hook.cpp:374</a></div></div>
+<div class="ttc" id="aHook_8cpp_html_af4e0711877c45a41168ac677b0670ccd"><div class="ttname"><a href="Hook_8cpp.html#af4e0711877c45a41168ac677b0670ccd">socket</a></div><div class="ttdeci">int socket(int domain, int type, int protocol)</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00244">Hook.cpp:244</a></div></div>
+</div><!-- fragment -->
+<p>宏定义，用于钩取系统调用函数 </p>
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00024">24</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a05f4bdc8cf2b17d08f5f7870244e6124" name="a05f4bdc8cf2b17d08f5f7870244e6124"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05f4bdc8cf2b17d08f5f7870244e6124">&#9670;&#160;</a></span>XX <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define XX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td>&#160;&#160;&#160;name ## _f = (name ## _fun)dlsym(RTLD_NEXT, #name);</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00188">188</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a05f4bdc8cf2b17d08f5f7870244e6124" name="a05f4bdc8cf2b17d08f5f7870244e6124"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05f4bdc8cf2b17d08f5f7870244e6124">&#9670;&#160;</a></span>XX <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define XX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name</td><td>)</td>
+          <td>&#160;&#160;&#160;name ## _fun name ## _f = nullptr;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00188">188</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a9656e13df74b50d7af5798542c678dbd" name="a9656e13df74b50d7af5798542c678dbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9656e13df74b50d7af5798542c678dbd">&#9670;&#160;</a></span>accept()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int accept </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sockaddr *&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">socklen_t *&#160;</td>
+          <td class="paramname"><em>addrlen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00349">349</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  350</span>{</div>
+<div class="line"><span class="lineno">  351</span>    <span class="keyword">const</span> <span class="keyword">auto</span> fd = <a class="code hl_function" href="Hook_8cpp.html#a54f397edba31e0013f8b0cb510c5311e">do_io</a>(s, <a class="code hl_variable" href="Hook_8h.html#ab319e66249a1e8af1a58038dc4f97f17">accept_f</a>, <span class="stringliteral">&quot;accept&quot;</span>, <a class="code hl_enumvalue" href="classGyanis_1_1core_1_1IOManager.html#a22ef35d8bf1f4e08ee02093ee2fc53d8ac77057a3a52c0a2656347002328cefbc">Gyanis::core::IOManager::READ</a>, SO_RCVTIMEO, addr, addrlen);</div>
+<div class="line"><span class="lineno">  352</span>    <span class="keywordflow">if</span> (fd &gt;= 0)</div>
+<div class="line"><span class="lineno">  353</span>    {</div>
+<div class="line"><span class="lineno">  354</span>        <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">Gyanis::core::FdMgr::GetInstance</a>()-&gt;get(fd, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  355</span>    }</div>
+<div class="line"><span class="lineno">  356</span>    <span class="keywordflow">return</span> fd;</div>
+<div class="line"><span class="lineno">  357</span>}</div>
+<div class="ttc" id="aHook_8cpp_html_a54f397edba31e0013f8b0cb510c5311e"><div class="ttname"><a href="Hook_8cpp.html#a54f397edba31e0013f8b0cb510c5311e">do_io</a></div><div class="ttdeci">static ssize_t do_io(int fd, OriginFun fun, const char *hook_fun_name, uint32_t event, const int timeout_so, Args &amp;&amp;... args)</div><div class="ttdoc">执行 IO 操作的通用函数，支持钩取</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00101">Hook.cpp:101</a></div></div>
+<div class="ttc" id="aHook_8h_html_ab319e66249a1e8af1a58038dc4f97f17"><div class="ttname"><a href="Hook_8h.html#ab319e66249a1e8af1a58038dc4f97f17">accept_f</a></div><div class="ttdeci">accept_fun accept_f</div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1IOManager_html_a22ef35d8bf1f4e08ee02093ee2fc53d8ac77057a3a52c0a2656347002328cefbc"><div class="ttname"><a href="classGyanis_1_1core_1_1IOManager.html#a22ef35d8bf1f4e08ee02093ee2fc53d8ac77057a3a52c0a2656347002328cefbc">Gyanis::core::IOManager::READ</a></div><div class="ttdeci">@ READ</div><div class="ttdef"><b>Definition</b> <a href="IOManager_8h_source.html#l00019">IOManager.h:19</a></div></div>
+<div class="ttc" id="aclassSingleton_html_a7b90075f8e4471743fd3596be874e5d1"><div class="ttname"><a href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">Singleton::GetInstance</a></div><div class="ttdeci">static T * GetInstance()</div><div class="ttdoc">获取单例实例的裸指针</div><div class="ttdef"><b>Definition</b> <a href="Singleton_8h_source.html#l00024">Singleton.h:24</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_a9656e13df74b50d7af5798542c678dbd_cgraph.png" border="0" usemap="#aHook_8cpp_a9656e13df74b50d7af5798542c678dbd_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aafbcde67669a1b96577e735ddebd8634" name="aafbcde67669a1b96577e735ddebd8634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafbcde67669a1b96577e735ddebd8634">&#9670;&#160;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int close </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00410">410</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  411</span>{</div>
+<div class="line"><span class="lineno">  412</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="namespaceGyanis_1_1core.html#a34e01c61a85576e257e87094e64160fd">Gyanis::core::t_hook_enable</a>)</div>
+<div class="line"><span class="lineno">  413</span>    {</div>
+<div class="line"><span class="lineno">  414</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#a3466c7d802010ddbbb95c5190a3b03d5">close_f</a>(fd);</div>
+<div class="line"><span class="lineno">  415</span>    }</div>
+<div class="line"><span class="lineno">  416</span> </div>
+<div class="line"><span class="lineno">  417</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> ctx = <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">Gyanis::core::FdMgr::GetInstance</a>()-&gt;get(fd))</div>
+<div class="line"><span class="lineno">  418</span>    {</div>
+<div class="line"><span class="lineno">  419</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> iom = <a class="code hl_function" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">Gyanis::core::IOManager::GetThis</a>())</div>
+<div class="line"><span class="lineno">  420</span>        {</div>
+<div class="line"><span class="lineno">  421</span>            iom-&gt;cancelAll(fd);</div>
+<div class="line"><span class="lineno">  422</span>        }</div>
+<div class="line"><span class="lineno">  423</span>        <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">Gyanis::core::FdMgr::GetInstance</a>()-&gt;del(fd);</div>
+<div class="line"><span class="lineno">  424</span>    }</div>
+<div class="line"><span class="lineno">  425</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#a3466c7d802010ddbbb95c5190a3b03d5">close_f</a>(fd);</div>
+<div class="line"><span class="lineno">  426</span>}</div>
+<div class="ttc" id="aHook_8h_html_a3466c7d802010ddbbb95c5190a3b03d5"><div class="ttname"><a href="Hook_8h.html#a3466c7d802010ddbbb95c5190a3b03d5">close_f</a></div><div class="ttdeci">close_fun close_f</div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1IOManager_html_a00206639f4404ed49640f5f485d8f530"><div class="ttname"><a href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">Gyanis::core::IOManager::GetThis</a></div><div class="ttdeci">static IOManager * GetThis()</div><div class="ttdoc">获取当前 IO 管理器实例</div><div class="ttdef"><b>Definition</b> <a href="IOManager_8cpp_source.html#l00445">IOManager.cpp:445</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1core_html_a34e01c61a85576e257e87094e64160fd"><div class="ttname"><a href="namespaceGyanis_1_1core.html#a34e01c61a85576e257e87094e64160fd">Gyanis::core::t_hook_enable</a></div><div class="ttdeci">static thread_local bool t_hook_enable</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00020">Hook.cpp:20</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_aafbcde67669a1b96577e735ddebd8634_cgraph.png" border="0" usemap="#aHook_8cpp_aafbcde67669a1b96577e735ddebd8634_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_aafbcde67669a1b96577e735ddebd8634_icgraph.png" border="0" usemap="#aHook_8cpp_aafbcde67669a1b96577e735ddebd8634_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a7e25aa713668904b3a6e8d209c3beeb5" name="a7e25aa713668904b3a6e8d209c3beeb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e25aa713668904b3a6e8d209c3beeb5">&#9670;&#160;</a></span>connect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int connect </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sockfd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sockaddr *&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">socklen_t&#160;</td>
+          <td class="paramname"><em>addrlen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00344">344</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  345</span>{</div>
+<div class="line"><span class="lineno">  346</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="Hook_8cpp.html#aa82ee2b907b8f26e0c463e4808b7c08c">connect_with_timeout</a>(sockfd, addr, addrlen, <a class="code hl_variable" href="namespaceGyanis_1_1core.html#aeb3b2ecdabd0c334c1a9dfb819e23d6c">Gyanis::core::s_connect_timeout</a>);</div>
+<div class="line"><span class="lineno">  347</span>}</div>
+<div class="ttc" id="aHook_8cpp_html_aa82ee2b907b8f26e0c463e4808b7c08c"><div class="ttname"><a href="Hook_8cpp.html#aa82ee2b907b8f26e0c463e4808b7c08c">connect_with_timeout</a></div><div class="ttdeci">int connect_with_timeout(int fd, const sockaddr *addr, socklen_t addrlen, uint64_t timeout_ms)</div><div class="ttdoc">自定义带超时的 connect 函数</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00259">Hook.cpp:259</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1core_html_aeb3b2ecdabd0c334c1a9dfb819e23d6c"><div class="ttname"><a href="namespaceGyanis_1_1core.html#aeb3b2ecdabd0c334c1a9dfb819e23d6c">Gyanis::core::s_connect_timeout</a></div><div class="ttdeci">static uint64_t s_connect_timeout</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00060">Hook.cpp:60</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_a7e25aa713668904b3a6e8d209c3beeb5_cgraph.png" border="0" usemap="#aHook_8cpp_a7e25aa713668904b3a6e8d209c3beeb5_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aa82ee2b907b8f26e0c463e4808b7c08c" name="aa82ee2b907b8f26e0c463e4808b7c08c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa82ee2b907b8f26e0c463e4808b7c08c">&#9670;&#160;</a></span>connect_with_timeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int connect_with_timeout </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sockaddr *&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">socklen_t&#160;</td>
+          <td class="paramname"><em>addrlen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>自定义带超时的 connect 函数 </p>
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00259">259</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  260</span>{</div>
+<div class="line"><span class="lineno">  261</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="namespaceGyanis_1_1core.html#a34e01c61a85576e257e87094e64160fd">Gyanis::core::t_hook_enable</a>)</div>
+<div class="line"><span class="lineno">  262</span>    {</div>
+<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#a2f8319664f570a791c194adbc5218753">connect_f</a>(fd, addr, addrlen);</div>
+<div class="line"><span class="lineno">  264</span>    }</div>
+<div class="line"><span class="lineno">  265</span>    <span class="keyword">const</span> <span class="keyword">auto</span> ctx = <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">Gyanis::core::FdMgr::GetInstance</a>()-&gt;get(fd);</div>
+<div class="line"><span class="lineno">  266</span>    <span class="keywordflow">if</span> (!ctx || ctx-&gt;isClose())</div>
+<div class="line"><span class="lineno">  267</span>    {</div>
+<div class="line"><span class="lineno">  268</span>        errno = EBADF;</div>
+<div class="line"><span class="lineno">  269</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  270</span>    }</div>
+<div class="line"><span class="lineno">  271</span> </div>
+<div class="line"><span class="lineno">  272</span>    <span class="keywordflow">if</span> (!ctx-&gt;isSocket())</div>
+<div class="line"><span class="lineno">  273</span>    {</div>
+<div class="line"><span class="lineno">  274</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#a2f8319664f570a791c194adbc5218753">connect_f</a>(fd, addr, addrlen);</div>
+<div class="line"><span class="lineno">  275</span>    }</div>
+<div class="line"><span class="lineno">  276</span> </div>
+<div class="line"><span class="lineno">  277</span>    <span class="keywordflow">if</span> (ctx-&gt;getUserNonblock())</div>
+<div class="line"><span class="lineno">  278</span>    {</div>
+<div class="line"><span class="lineno">  279</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#a2f8319664f570a791c194adbc5218753">connect_f</a>(fd, addr, addrlen);</div>
+<div class="line"><span class="lineno">  280</span>    }</div>
+<div class="line"><span class="lineno">  281</span> </div>
+<div class="line"><span class="lineno">  282</span>    <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keywordtype">int</span> n = <a class="code hl_variable" href="Hook_8h.html#a2f8319664f570a791c194adbc5218753">connect_f</a>(fd, addr, addrlen); n == 0)</div>
+<div class="line"><span class="lineno">  283</span>    {</div>
+<div class="line"><span class="lineno">  284</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  285</span>    }</div>
+<div class="line"><span class="lineno">  286</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (n != -1 || errno != EINPROGRESS)</div>
+<div class="line"><span class="lineno">  287</span>    {</div>
+<div class="line"><span class="lineno">  288</span>        <span class="keywordflow">return</span> n;</div>
+<div class="line"><span class="lineno">  289</span>    }</div>
+<div class="line"><span class="lineno">  290</span>    <span class="keyword">auto</span>* iom = <a class="code hl_function" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">Gyanis::core::IOManager::GetThis</a>();</div>
+<div class="line"><span class="lineno">  291</span>    uint64_t timer = 0;</div>
+<div class="line"><span class="lineno">  292</span>    <span class="keyword">const</span> std::shared_ptr&lt;timer_info&gt; tinfo(<span class="keyword">new</span> <a class="code hl_struct" href="structtimer__info.html">timer_info</a>);</div>
+<div class="line"><span class="lineno">  293</span>    std::weak_ptr winfo(tinfo);</div>
+<div class="line"><span class="lineno">  294</span> </div>
+<div class="line"><span class="lineno">  295</span>    <span class="keywordflow">if</span> (timeout_ms != <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(-1))</div>
+<div class="line"><span class="lineno">  296</span>    {</div>
+<div class="line"><span class="lineno">  297</span>        timer = iom-&gt;addConditionTimer(timeout_ms, [winfo, fd, iom]()</div>
+<div class="line"><span class="lineno">  298</span>        {</div>
+<div class="line"><span class="lineno">  299</span>            <span class="keyword">const</span> <span class="keyword">auto</span> t = winfo.lock();</div>
+<div class="line"><span class="lineno">  300</span>            <span class="keywordflow">if</span> (!t || t-&gt;cancelled)</div>
+<div class="line"><span class="lineno">  301</span>            {</div>
+<div class="line"><span class="lineno">  302</span>                return;</div>
+<div class="line"><span class="lineno">  303</span>            }</div>
+<div class="line"><span class="lineno">  304</span>            t-&gt;cancelled = ETIMEDOUT;</div>
+<div class="line"><span class="lineno">  305</span>            iom-&gt;cancelEvent(fd, <a class="code hl_enumvalue" href="classGyanis_1_1core_1_1IOManager.html#a22ef35d8bf1f4e08ee02093ee2fc53d8aacbc3fb0b28d86b0022b2b383fb20eb1">Gyanis::core::IOManager::WRITE</a>);</div>
+<div class="line"><span class="lineno">  306</span>        }, winfo);</div>
+<div class="line"><span class="lineno">  307</span>    }</div>
+<div class="line"><span class="lineno">  308</span> </div>
+<div class="line"><span class="lineno">  309</span>    <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keywordtype">int</span> rt = iom-&gt;addEvent(fd, <a class="code hl_enumvalue" href="classGyanis_1_1core_1_1IOManager.html#a22ef35d8bf1f4e08ee02093ee2fc53d8aacbc3fb0b28d86b0022b2b383fb20eb1">Gyanis::core::IOManager::WRITE</a>); rt == 0)</div>
+<div class="line"><span class="lineno">  310</span>    {</div>
+<div class="line"><span class="lineno">  311</span>        <a class="code hl_function" href="classGyanis_1_1core_1_1Fiber.html#a662e27df3d4da3b7704db7327eaf07e0">Gyanis::core::Fiber::Yield</a>();</div>
+<div class="line"><span class="lineno">  312</span>        <span class="keywordflow">if</span> (timer)</div>
+<div class="line"><span class="lineno">  313</span>        {</div>
+<div class="line"><span class="lineno">  314</span>            iom-&gt;cancel(timer);</div>
+<div class="line"><span class="lineno">  315</span>        }</div>
+<div class="line"><span class="lineno">  316</span>        <span class="keywordflow">if</span> (tinfo-&gt;cancelled)</div>
+<div class="line"><span class="lineno">  317</span>        {</div>
+<div class="line"><span class="lineno">  318</span>            errno = tinfo-&gt;cancelled;</div>
+<div class="line"><span class="lineno">  319</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  320</span>        }</div>
+<div class="line"><span class="lineno">  321</span>    }</div>
+<div class="line"><span class="lineno">  322</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  323</span>    {</div>
+<div class="line"><span class="lineno">  324</span>        <span class="keywordflow">if</span> (timer)</div>
+<div class="line"><span class="lineno">  325</span>        {</div>
+<div class="line"><span class="lineno">  326</span>            iom-&gt;cancel(timer);</div>
+<div class="line"><span class="lineno">  327</span>        }</div>
+<div class="line"><span class="lineno">  328</span>    }</div>
+<div class="line"><span class="lineno">  329</span> </div>
+<div class="line"><span class="lineno">  330</span>    <span class="keywordtype">int</span> error = 0;</div>
+<div class="line"><span class="lineno">  331</span>    socklen_t len = <span class="keyword">sizeof</span>(int);</div>
+<div class="line"><span class="lineno">  332</span>    <span class="keywordflow">if</span> (-1 == <a class="code hl_function" href="Hook_8cpp.html#ab81d992040a0b29b4f9fd20a263ab1d0">getsockopt</a>(fd, SOL_SOCKET, SO_ERROR, &amp;error, &amp;len))</div>
+<div class="line"><span class="lineno">  333</span>    {</div>
+<div class="line"><span class="lineno">  334</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  335</span>    }</div>
+<div class="line"><span class="lineno">  336</span>    <span class="keywordflow">if</span> (!error)</div>
+<div class="line"><span class="lineno">  337</span>    {</div>
+<div class="line"><span class="lineno">  338</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  339</span>    }</div>
+<div class="line"><span class="lineno">  340</span>    errno = error;</div>
+<div class="line"><span class="lineno">  341</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  342</span>}</div>
+<div class="ttc" id="aHook_8h_html_a2f8319664f570a791c194adbc5218753"><div class="ttname"><a href="Hook_8h.html#a2f8319664f570a791c194adbc5218753">connect_f</a></div><div class="ttdeci">connect_fun connect_f</div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1Fiber_html_a662e27df3d4da3b7704db7327eaf07e0"><div class="ttname"><a href="classGyanis_1_1core_1_1Fiber.html#a662e27df3d4da3b7704db7327eaf07e0">Gyanis::core::Fiber::Yield</a></div><div class="ttdeci">static void Yield()</div><div class="ttdoc">挂起当前协程并切换到其他协程</div><div class="ttdef"><b>Definition</b> <a href="Fiber_8cpp_source.html#l00100">Fiber.cpp:100</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1IOManager_html_a22ef35d8bf1f4e08ee02093ee2fc53d8aacbc3fb0b28d86b0022b2b383fb20eb1"><div class="ttname"><a href="classGyanis_1_1core_1_1IOManager.html#a22ef35d8bf1f4e08ee02093ee2fc53d8aacbc3fb0b28d86b0022b2b383fb20eb1">Gyanis::core::IOManager::WRITE</a></div><div class="ttdeci">@ WRITE</div><div class="ttdef"><b>Definition</b> <a href="IOManager_8h_source.html#l00019">IOManager.h:19</a></div></div>
+<div class="ttc" id="astructtimer__info_html"><div class="ttname"><a href="structtimer__info.html">timer_info</a></div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00094">Hook.cpp:95</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_aa82ee2b907b8f26e0c463e4808b7c08c_cgraph.png" border="0" usemap="#aHook_8cpp_aa82ee2b907b8f26e0c463e4808b7c08c_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_aa82ee2b907b8f26e0c463e4808b7c08c_icgraph.png" border="0" usemap="#aHook_8cpp_aa82ee2b907b8f26e0c463e4808b7c08c_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a54f397edba31e0013f8b0cb510c5311e" name="a54f397edba31e0013f8b0cb510c5311e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54f397edba31e0013f8b0cb510c5311e">&#9670;&#160;</a></span>do_io()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OriginFun , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ssize_t do_io </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OriginFun&#160;</td>
+          <td class="paramname"><em>fun</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>hook_fun_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>timeout_so</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>执行 IO 操作的通用函数，支持钩取 </p>
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00101">101</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>{</div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="namespaceGyanis_1_1core.html#a34e01c61a85576e257e87094e64160fd">Gyanis::core::t_hook_enable</a>)</div>
+<div class="line"><span class="lineno">  105</span>    {</div>
+<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">return</span> fun(fd, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">  107</span>    }</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>    <span class="keyword">const</span> <span class="keyword">auto</span> ctx = <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">Gyanis::core::FdMgr::GetInstance</a>()-&gt;get(fd);</div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">if</span> (!ctx)</div>
+<div class="line"><span class="lineno">  111</span>    {</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordflow">return</span> fun(fd, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">  113</span>    }</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">if</span> (ctx-&gt;isClose())</div>
+<div class="line"><span class="lineno">  116</span>    {</div>
+<div class="line"><span class="lineno">  117</span>        errno = EBADF;</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">if</span> (!ctx-&gt;isSocket() || ctx-&gt;getUserNonblock())</div>
+<div class="line"><span class="lineno">  122</span>    {</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> fun(fd, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
+<div class="line"><span class="lineno">  125</span> </div>
+<div class="line"><span class="lineno">  126</span>    <span class="keyword">const</span> <span class="keyword">auto</span> to = ctx-&gt;getTimeout(timeout_so);</div>
+<div class="line"><span class="lineno">  127</span>    <span class="keyword">const</span> std::shared_ptr&lt;timer_info&gt; tinfo(<span class="keyword">new</span> <a class="code hl_struct" href="structtimer__info.html">timer_info</a>);</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  130</span>    {</div>
+<div class="line"><span class="lineno">  131</span>        ssize_t n = fun(fd, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">while</span> (n == -1 &amp;&amp; errno == EINTR)</div>
+<div class="line"><span class="lineno">  133</span>        {</div>
+<div class="line"><span class="lineno">  134</span>            n = fun(fd, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">if</span> (n == -1 &amp;&amp; errno == EAGAIN)</div>
+<div class="line"><span class="lineno">  137</span>        {</div>
+<div class="line"><span class="lineno">  138</span>            <span class="keyword">auto</span>* iom = <a class="code hl_function" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">Gyanis::core::IOManager::GetThis</a>();</div>
+<div class="line"><span class="lineno">  139</span>            uint64_t timerID = 0;</div>
+<div class="line"><span class="lineno">  140</span>            std::weak_ptr winfo(tinfo);</div>
+<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">if</span> (to != std::chrono::milliseconds::max())</div>
+<div class="line"><span class="lineno">  142</span>            {</div>
+<div class="line"><span class="lineno">  143</span>                timerID = iom-&gt;addConditionTimer(to.count(), [winfo, fd, iom, event]</div>
+<div class="line"><span class="lineno">  144</span>                {</div>
+<div class="line"><span class="lineno">  145</span>                    const auto t = winfo.lock();</div>
+<div class="line"><span class="lineno">  146</span>                    if (!t || t-&gt;cancelled.load(std::memory_order_relaxed))</div>
+<div class="line"><span class="lineno">  147</span>                    {</div>
+<div class="line"><span class="lineno">  148</span>                        return;</div>
+<div class="line"><span class="lineno">  149</span>                    }</div>
+<div class="line"><span class="lineno">  150</span>                    t-&gt;cancelled.store(ETIMEDOUT, std::memory_order_release);</div>
+<div class="line"><span class="lineno">  151</span>                    iom-&gt;cancelEvent(fd, <span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="classGyanis_1_1core_1_1IOManager.html#a22ef35d8bf1f4e08ee02093ee2fc53d8">Gyanis::core::IOManager::Event</a><span class="keyword">&gt;</span>(event));</div>
+<div class="line"><span class="lineno">  152</span>                }, winfo);</div>
+<div class="line"><span class="lineno">  153</span>            }</div>
+<div class="line"><span class="lineno">  154</span> </div>
+<div class="line"><span class="lineno">  155</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keywordtype">int</span> rt = iom-&gt;addEvent(fd, <span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="classGyanis_1_1core_1_1IOManager.html#a22ef35d8bf1f4e08ee02093ee2fc53d8">Gyanis::core::IOManager::Event</a><span class="keyword">&gt;</span>(event)); <a class="code hl_define" href="Macro_8h.html#ab10d0a221f4d7a706701b806c8135fd7">UNLIKELY</a>(rt))</div>
+<div class="line"><span class="lineno">  156</span>            {</div>
+<div class="line"><span class="lineno">  157</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="Hook_8cpp.html#a9677ee99477f7229e3b4b99565af0745">g_logger</a>)</div>
+<div class="line"><span class="lineno">  158</span>                    &lt;&lt; <span class="stringliteral">&quot;do_io - &quot;</span> &lt;&lt; hook_fun_name &lt;&lt; <span class="stringliteral">&quot;: addEvent failed with parameters. &quot;</span></div>
+<div class="line"><span class="lineno">  159</span>                    &lt;&lt; <span class="stringliteral">&quot;File Descriptor (fd): &quot;</span> &lt;&lt; fd</div>
+<div class="line"><span class="lineno">  160</span>                    &lt;&lt; <span class="stringliteral">&quot; | Event: &quot;</span> &lt;&lt; <span class="keyword">event</span></div>
+<div class="line"><span class="lineno">  161</span>                    &lt;&lt; <span class="stringliteral">&quot; | Status: Invalid&quot;</span>;</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>                <span class="keywordflow">if</span> (timerID)</div>
+<div class="line"><span class="lineno">  164</span>                {</div>
+<div class="line"><span class="lineno">  165</span>                    <a class="code hl_function" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">Gyanis::core::IOManager::GetThis</a>()-&gt;<a class="code hl_function" href="classGyanis_1_1base_1_1TimerManager.html#a0a2ccb0e88edf5a2128b5f1b429a671e">cancel</a>(timerID);</div>
+<div class="line"><span class="lineno">  166</span>                }</div>
+<div class="line"><span class="lineno">  167</span>                <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  168</span>            }</div>
+<div class="line"><span class="lineno">  169</span>            <a class="code hl_function" href="classGyanis_1_1core_1_1Fiber.html#a662e27df3d4da3b7704db7327eaf07e0">Gyanis::core::Fiber::Yield</a>();</div>
+<div class="line"><span class="lineno">  170</span>            <span class="keywordflow">if</span> (timerID)</div>
+<div class="line"><span class="lineno">  171</span>            {</div>
+<div class="line"><span class="lineno">  172</span>                <a class="code hl_function" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">Gyanis::core::IOManager::GetThis</a>()-&gt;<a class="code hl_function" href="classGyanis_1_1base_1_1TimerManager.html#a0a2ccb0e88edf5a2128b5f1b429a671e">cancel</a>(timerID);</div>
+<div class="line"><span class="lineno">  173</span>            }</div>
+<div class="line"><span class="lineno">  174</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keywordtype">int</span> cancelled = tinfo-&gt;cancelled.load(std::memory_order_acquire))</div>
+<div class="line"><span class="lineno">  175</span>            {</div>
+<div class="line"><span class="lineno">  176</span>                errno = cancelled;</div>
+<div class="line"><span class="lineno">  177</span>                <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  178</span>            }</div>
+<div class="line"><span class="lineno">  179</span>        }</div>
+<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  181</span>        {</div>
+<div class="line"><span class="lineno">  182</span>            <span class="keywordflow">return</span> n;</div>
+<div class="line"><span class="lineno">  183</span>        }</div>
+<div class="line"><span class="lineno">  184</span>    }</div>
+<div class="line"><span class="lineno">  185</span>}</div>
+<div class="ttc" id="aHook_8cpp_html_a9677ee99477f7229e3b4b99565af0745"><div class="ttname"><a href="Hook_8cpp.html#a9677ee99477f7229e3b4b99565af0745">g_logger</a></div><div class="ttdeci">static auto g_logger</div><div class="ttdef"><b>Definition</b> <a href="Hook_8cpp_source.html#l00016">Hook.cpp:16</a></div></div>
+<div class="ttc" id="aLog_8h_html_a80a932ee56f777358b3d82e5fa3203c8"><div class="ttname"><a href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a></div><div class="ttdeci">#define LOG_ERROR(logger)</div><div class="ttdoc">输出 error 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00046">Log.h:46</a></div></div>
+<div class="ttc" id="aMacro_8h_html_ab10d0a221f4d7a706701b806c8135fd7"><div class="ttname"><a href="Macro_8h.html#ab10d0a221f4d7a706701b806c8135fd7">UNLIKELY</a></div><div class="ttdeci">#define UNLIKELY(x)</div><div class="ttdef"><b>Definition</b> <a href="Macro_8h_source.html#l00028">Macro.h:28</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_a0a2ccb0e88edf5a2128b5f1b429a671e"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#a0a2ccb0e88edf5a2128b5f1b429a671e">Gyanis::base::TimerManager::cancel</a></div><div class="ttdeci">bool cancel(uint64_t id)</div><div class="ttdoc">取消一个定时器</div><div class="ttdef"><b>Definition</b> <a href="Timer_8cpp_source.html#l00048">Timer.cpp:48</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1IOManager_html_a22ef35d8bf1f4e08ee02093ee2fc53d8"><div class="ttname"><a href="classGyanis_1_1core_1_1IOManager.html#a22ef35d8bf1f4e08ee02093ee2fc53d8">Gyanis::core::IOManager::Event</a></div><div class="ttdeci">Event</div><div class="ttdef"><b>Definition</b> <a href="IOManager_8h_source.html#l00019">IOManager.h:19</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_a54f397edba31e0013f8b0cb510c5311e_cgraph.png" border="0" usemap="#aHook_8cpp_a54f397edba31e0013f8b0cb510c5311e_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_a54f397edba31e0013f8b0cb510c5311e_icgraph.png" border="0" usemap="#aHook_8cpp_a54f397edba31e0013f8b0cb510c5311e_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ad39ebe4c4767eaa9a680777400cfaafe" name="ad39ebe4c4767eaa9a680777400cfaafe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad39ebe4c4767eaa9a680777400cfaafe">&#9670;&#160;</a></span>fcntl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fcntl </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00428">428</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  429</span>{</div>
+<div class="line"><span class="lineno">  430</span>    va_list va;</div>
+<div class="line"><span class="lineno">  431</span>    va_start(va, cmd);</div>
+<div class="line"><span class="lineno">  432</span>    <span class="keywordflow">switch</span> (cmd)</div>
+<div class="line"><span class="lineno">  433</span>    {</div>
+<div class="line"><span class="lineno">  434</span>    <span class="keywordflow">case</span> F_SETFL:</div>
+<div class="line"><span class="lineno">  435</span>        {</div>
+<div class="line"><span class="lineno">  436</span>            <span class="keywordtype">int</span> arg = va_arg(va, <span class="keywordtype">int</span>);</div>
+<div class="line"><span class="lineno">  437</span>            va_end(va);</div>
+<div class="line"><span class="lineno">  438</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ctx = <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">Gyanis::core::FdMgr::GetInstance</a>()-&gt;get(fd);</div>
+<div class="line"><span class="lineno">  439</span>            <span class="keywordflow">if</span> (!ctx || ctx-&gt;isClose() || !ctx-&gt;isSocket())</div>
+<div class="line"><span class="lineno">  440</span>            {</div>
+<div class="line"><span class="lineno">  441</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#abb24ea265f6aa7c740c0e6da842b6d7f">fcntl_f</a>(fd, cmd, arg);</div>
+<div class="line"><span class="lineno">  442</span>            }</div>
+<div class="line"><span class="lineno">  443</span>            ctx-&gt;setUserNonblock(arg &amp; O_NONBLOCK);</div>
+<div class="line"><span class="lineno">  444</span>            <span class="keywordflow">if</span> (ctx-&gt;getSysNonblock())</div>
+<div class="line"><span class="lineno">  445</span>            {</div>
+<div class="line"><span class="lineno">  446</span>                arg |= O_NONBLOCK;</div>
+<div class="line"><span class="lineno">  447</span>            }</div>
+<div class="line"><span class="lineno">  448</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  449</span>            {</div>
+<div class="line"><span class="lineno">  450</span>                arg &amp;= ~O_NONBLOCK;</div>
+<div class="line"><span class="lineno">  451</span>            }</div>
+<div class="line"><span class="lineno">  452</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#abb24ea265f6aa7c740c0e6da842b6d7f">fcntl_f</a>(fd, cmd, arg);</div>
+<div class="line"><span class="lineno">  453</span>        }</div>
+<div class="line"><span class="lineno">  454</span>    <span class="keywordflow">case</span> F_GETFL:</div>
+<div class="line"><span class="lineno">  455</span>        {</div>
+<div class="line"><span class="lineno">  456</span>            va_end(va);</div>
+<div class="line"><span class="lineno">  457</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> arg = <a class="code hl_variable" href="Hook_8h.html#abb24ea265f6aa7c740c0e6da842b6d7f">fcntl_f</a>(fd, cmd);</div>
+<div class="line"><span class="lineno">  458</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ctx = <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">Gyanis::core::FdMgr::GetInstance</a>()-&gt;get(fd);</div>
+<div class="line"><span class="lineno">  459</span>            <span class="keywordflow">if</span> (!ctx || ctx-&gt;isClose() || !ctx-&gt;isSocket())</div>
+<div class="line"><span class="lineno">  460</span>            {</div>
+<div class="line"><span class="lineno">  461</span>                <span class="keywordflow">return</span> arg;</div>
+<div class="line"><span class="lineno">  462</span>            }</div>
+<div class="line"><span class="lineno">  463</span>            <span class="keywordflow">if</span> (ctx-&gt;getUserNonblock())</div>
+<div class="line"><span class="lineno">  464</span>            {</div>
+<div class="line"><span class="lineno">  465</span>                <span class="keywordflow">return</span> arg | O_NONBLOCK;</div>
+<div class="line"><span class="lineno">  466</span>            }</div>
+<div class="line"><span class="lineno">  467</span>            <span class="keywordflow">return</span> arg &amp; ~O_NONBLOCK;</div>
+<div class="line"><span class="lineno">  468</span>        }</div>
+<div class="line"><span class="lineno">  469</span>    <span class="keywordflow">case</span> F_DUPFD:</div>
+<div class="line"><span class="lineno">  470</span>    <span class="keywordflow">case</span> F_DUPFD_CLOEXEC:</div>
+<div class="line"><span class="lineno">  471</span>    <span class="keywordflow">case</span> F_SETFD:</div>
+<div class="line"><span class="lineno">  472</span>    <span class="keywordflow">case</span> F_SETOWN:</div>
+<div class="line"><span class="lineno">  473</span>    <span class="keywordflow">case</span> F_SETSIG:</div>
+<div class="line"><span class="lineno">  474</span>    <span class="keywordflow">case</span> F_SETLEASE:</div>
+<div class="line"><span class="lineno">  475</span>    <span class="keywordflow">case</span> F_NOTIFY:</div>
+<div class="line"><span class="lineno">  476</span><span class="preprocessor">#ifdef F_SETPIPE_SZ</span></div>
+<div class="line"><span class="lineno">  477</span>    <span class="keywordflow">case</span> F_SETPIPE_SZ:</div>
+<div class="line"><span class="lineno">  478</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  479</span>        {</div>
+<div class="line"><span class="lineno">  480</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> arg = va_arg(va, <span class="keywordtype">int</span>);</div>
+<div class="line"><span class="lineno">  481</span>            va_end(va);</div>
+<div class="line"><span class="lineno">  482</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#abb24ea265f6aa7c740c0e6da842b6d7f">fcntl_f</a>(fd, cmd, arg);</div>
+<div class="line"><span class="lineno">  483</span>        }</div>
+<div class="line"><span class="lineno">  484</span>    <span class="keywordflow">case</span> F_GETFD:</div>
+<div class="line"><span class="lineno">  485</span>    <span class="keywordflow">case</span> F_GETOWN:</div>
+<div class="line"><span class="lineno">  486</span>    <span class="keywordflow">case</span> F_GETSIG:</div>
+<div class="line"><span class="lineno">  487</span>    <span class="keywordflow">case</span> F_GETLEASE:</div>
+<div class="line"><span class="lineno">  488</span><span class="preprocessor">#ifdef F_GETPIPE_SZ</span></div>
+<div class="line"><span class="lineno">  489</span>    <span class="keywordflow">case</span> F_GETPIPE_SZ:</div>
+<div class="line"><span class="lineno">  490</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  491</span>        {</div>
+<div class="line"><span class="lineno">  492</span>            va_end(va);</div>
+<div class="line"><span class="lineno">  493</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#abb24ea265f6aa7c740c0e6da842b6d7f">fcntl_f</a>(fd, cmd);</div>
+<div class="line"><span class="lineno">  494</span>        }</div>
+<div class="line"><span class="lineno">  495</span>    <span class="keywordflow">case</span> F_SETLK:</div>
+<div class="line"><span class="lineno">  496</span>    <span class="keywordflow">case</span> F_SETLKW:</div>
+<div class="line"><span class="lineno">  497</span>    <span class="keywordflow">case</span> F_GETLK:</div>
+<div class="line"><span class="lineno">  498</span>        {</div>
+<div class="line"><span class="lineno">  499</span>            flock* arg = va_arg(va, <span class="keyword">struct</span> flock *);</div>
+<div class="line"><span class="lineno">  500</span>            va_end(va);</div>
+<div class="line"><span class="lineno">  501</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#abb24ea265f6aa7c740c0e6da842b6d7f">fcntl_f</a>(fd, cmd, arg);</div>
+<div class="line"><span class="lineno">  502</span>        }</div>
+<div class="line"><span class="lineno">  503</span>    <span class="keywordflow">case</span> F_GETOWN_EX:</div>
+<div class="line"><span class="lineno">  504</span>    <span class="keywordflow">case</span> F_SETOWN_EX:</div>
+<div class="line"><span class="lineno">  505</span>        {</div>
+<div class="line"><span class="lineno">  506</span>            <span class="keyword">struct </span>f_owner_exlock* arg = va_arg(va, <span class="keyword">struct</span> f_owner_exlock *);</div>
+<div class="line"><span class="lineno">  507</span>            va_end(va);</div>
+<div class="line"><span class="lineno">  508</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#abb24ea265f6aa7c740c0e6da842b6d7f">fcntl_f</a>(fd, cmd, arg);</div>
+<div class="line"><span class="lineno">  509</span>        }</div>
+<div class="line"><span class="lineno">  510</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  511</span>        va_end(va);</div>
+<div class="line"><span class="lineno">  512</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#abb24ea265f6aa7c740c0e6da842b6d7f">fcntl_f</a>(fd, cmd);</div>
+<div class="line"><span class="lineno">  513</span>    }</div>
+<div class="line"><span class="lineno">  514</span>}</div>
+<div class="ttc" id="aHook_8h_html_abb24ea265f6aa7c740c0e6da842b6d7f"><div class="ttname"><a href="Hook_8h.html#abb24ea265f6aa7c740c0e6da842b6d7f">fcntl_f</a></div><div class="ttdeci">fcntl_fun fcntl_f</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_ad39ebe4c4767eaa9a680777400cfaafe_cgraph.png" border="0" usemap="#aHook_8cpp_ad39ebe4c4767eaa9a680777400cfaafe_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ab81d992040a0b29b4f9fd20a263ab1d0" name="ab81d992040a0b29b4f9fd20a263ab1d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab81d992040a0b29b4f9fd20a263ab1d0">&#9670;&#160;</a></span>getsockopt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getsockopt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sockfd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>optname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>optval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">socklen_t *&#160;</td>
+          <td class="paramname"><em>optlen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00536">536</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  537</span>{</div>
+<div class="line"><span class="lineno">  538</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#a0ccaa6f4964423584c7e5e37c2fba2f4">getsockopt_f</a>(sockfd, level, optname, optval, optlen);</div>
+<div class="line"><span class="lineno">  539</span>}</div>
+<div class="ttc" id="aHook_8h_html_a0ccaa6f4964423584c7e5e37c2fba2f4"><div class="ttname"><a href="Hook_8h.html#a0ccaa6f4964423584c7e5e37c2fba2f4">getsockopt_f</a></div><div class="ttdeci">getsockopt_fun getsockopt_f</div></div>
+</div><!-- fragment --><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_ab81d992040a0b29b4f9fd20a263ab1d0_icgraph.png" border="0" usemap="#aHook_8cpp_ab81d992040a0b29b4f9fd20a263ab1d0_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af25470c292673efe078205874a378d7a" name="af25470c292673efe078205874a378d7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af25470c292673efe078205874a378d7a">&#9670;&#160;</a></span>ioctl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ioctl </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long int&#160;</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00516">516</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  517</span>{</div>
+<div class="line"><span class="lineno">  518</span>    va_list va;</div>
+<div class="line"><span class="lineno">  519</span>    va_start(va, request);</div>
+<div class="line"><span class="lineno">  520</span>    <span class="keywordtype">void</span>* arg = va_arg(va, <span class="keywordtype">void</span>*);</div>
+<div class="line"><span class="lineno">  521</span>    va_end(va);</div>
+<div class="line"><span class="lineno">  522</span> </div>
+<div class="line"><span class="lineno">  523</span>    <span class="keywordflow">if</span> (FIONBIO == request)</div>
+<div class="line"><span class="lineno">  524</span>    {</div>
+<div class="line"><span class="lineno">  525</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> user_nonblock = !!*<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span>*<span class="keyword">&gt;</span>(arg);</div>
+<div class="line"><span class="lineno">  526</span>        <span class="keyword">const</span> <span class="keyword">auto</span> ctx = <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">Gyanis::core::FdMgr::GetInstance</a>()-&gt;get(d);</div>
+<div class="line"><span class="lineno">  527</span>        <span class="keywordflow">if</span> (!ctx || ctx-&gt;isClose() || !ctx-&gt;isSocket())</div>
+<div class="line"><span class="lineno">  528</span>        {</div>
+<div class="line"><span class="lineno">  529</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#a17d068c63810b47db209546097f5bcfc">ioctl_f</a>(d, request, arg);</div>
+<div class="line"><span class="lineno">  530</span>        }</div>
+<div class="line"><span class="lineno">  531</span>        ctx-&gt;setUserNonblock(user_nonblock);</div>
+<div class="line"><span class="lineno">  532</span>    }</div>
+<div class="line"><span class="lineno">  533</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#a17d068c63810b47db209546097f5bcfc">ioctl_f</a>(d, request, arg);</div>
+<div class="line"><span class="lineno">  534</span>}</div>
+<div class="ttc" id="aHook_8h_html_a17d068c63810b47db209546097f5bcfc"><div class="ttname"><a href="Hook_8h.html#a17d068c63810b47db209546097f5bcfc">ioctl_f</a></div><div class="ttdeci">ioctl_fun ioctl_f</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_af25470c292673efe078205874a378d7a_cgraph.png" border="0" usemap="#aHook_8cpp_af25470c292673efe078205874a378d7a_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_af25470c292673efe078205874a378d7a_icgraph.png" border="0" usemap="#aHook_8cpp_af25470c292673efe078205874a378d7a_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="abcc3c77a81d5a4c457fd8e4f7f830fe3" name="abcc3c77a81d5a4c457fd8e4f7f830fe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcc3c77a81d5a4c457fd8e4f7f830fe3">&#9670;&#160;</a></span>nanosleep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int nanosleep </td>
+          <td>(</td>
+          <td class="paramtype">const timespec *&#160;</td>
+          <td class="paramname"><em>req</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">timespec *&#160;</td>
+          <td class="paramname"><em>rem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00226">226</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  227</span>{</div>
+<div class="line"><span class="lineno">  228</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="namespaceGyanis_1_1core.html#a34e01c61a85576e257e87094e64160fd">Gyanis::core::t_hook_enable</a>)</div>
+<div class="line"><span class="lineno">  229</span>    {</div>
+<div class="line"><span class="lineno">  230</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#aa9cfabd22e8e34e52edcd9a6dc52d6d7">nanosleep_f</a>(req, rem);</div>
+<div class="line"><span class="lineno">  231</span>    }</div>
+<div class="line"><span class="lineno">  232</span> </div>
+<div class="line"><span class="lineno">  233</span>    <span class="keyword">const</span> <span class="keyword">auto</span> timeout_ms = req-&gt;tv_sec * 1000 + req-&gt;tv_nsec / 1000 / 1000;</div>
+<div class="line"><span class="lineno">  234</span>    <span class="keyword">auto</span> fiber = <a class="code hl_function" href="classGyanis_1_1core_1_1Fiber.html#aecf9535459ef9e66bf472f56326c7401">Gyanis::core::Fiber::GetThis</a>();</div>
+<div class="line"><span class="lineno">  235</span>    <span class="keyword">auto</span>* iom = <a class="code hl_function" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">Gyanis::core::IOManager::GetThis</a>();</div>
+<div class="line"><span class="lineno">  236</span>    iom-&gt;addTimer(timeout_ms, [iom, fiber]()</div>
+<div class="line"><span class="lineno">  237</span>    {</div>
+<div class="line"><span class="lineno">  238</span>        iom-&gt;schedule(fiber, -1); <span class="comment">// 调用带参数的成员函数</span></div>
+<div class="line"><span class="lineno">  239</span>    });</div>
+<div class="line"><span class="lineno">  240</span>    <a class="code hl_function" href="classGyanis_1_1core_1_1Fiber.html#a662e27df3d4da3b7704db7327eaf07e0">Gyanis::core::Fiber::Yield</a>();</div>
+<div class="line"><span class="lineno">  241</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  242</span>}</div>
+<div class="ttc" id="aHook_8h_html_aa9cfabd22e8e34e52edcd9a6dc52d6d7"><div class="ttname"><a href="Hook_8h.html#aa9cfabd22e8e34e52edcd9a6dc52d6d7">nanosleep_f</a></div><div class="ttdeci">nanosleep_fun nanosleep_f</div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1Fiber_html_aecf9535459ef9e66bf472f56326c7401"><div class="ttname"><a href="classGyanis_1_1core_1_1Fiber.html#aecf9535459ef9e66bf472f56326c7401">Gyanis::core::Fiber::GetThis</a></div><div class="ttdeci">static std::shared_ptr&lt; Fiber &gt; GetThis()</div><div class="ttdoc">获取当前协程实例</div><div class="ttdef"><b>Definition</b> <a href="Fiber_8cpp_source.html#l00089">Fiber.cpp:89</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_abcc3c77a81d5a4c457fd8e4f7f830fe3_cgraph.png" border="0" usemap="#aHook_8cpp_abcc3c77a81d5a4c457fd8e4f7f830fe3_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af32a16ad2dd9e48482f8f790db7dbbd2" name="af32a16ad2dd9e48482f8f790db7dbbd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af32a16ad2dd9e48482f8f790db7dbbd2">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t read </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00359">359</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  360</span>{</div>
+<div class="line"><span class="lineno">  361</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="Hook_8cpp.html#a54f397edba31e0013f8b0cb510c5311e">do_io</a>(fd, <a class="code hl_variable" href="Hook_8h.html#acf96a8abe9b6bea12e487302aa85b535">read_f</a>, <span class="stringliteral">&quot;read&quot;</span>, <a class="code hl_enumvalue" href="classGyanis_1_1core_1_1IOManager.html#a22ef35d8bf1f4e08ee02093ee2fc53d8ac77057a3a52c0a2656347002328cefbc">Gyanis::core::IOManager::READ</a>, SO_RCVTIMEO, buf, count);</div>
+<div class="line"><span class="lineno">  362</span>}</div>
+<div class="ttc" id="aHook_8h_html_acf96a8abe9b6bea12e487302aa85b535"><div class="ttname"><a href="Hook_8h.html#acf96a8abe9b6bea12e487302aa85b535">read_f</a></div><div class="ttdeci">read_fun read_f</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_af32a16ad2dd9e48482f8f790db7dbbd2_cgraph.png" border="0" usemap="#aHook_8cpp_af32a16ad2dd9e48482f8f790db7dbbd2_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a5da56354f209063569fd2139d078b4cc" name="a5da56354f209063569fd2139d078b4cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5da56354f209063569fd2139d078b4cc">&#9670;&#160;</a></span>readv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t readv </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const iovec *&#160;</td>
+          <td class="paramname"><em>iov</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iovcnt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00364">364</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  365</span>{</div>
+<div class="line"><span class="lineno">  366</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="Hook_8cpp.html#a54f397edba31e0013f8b0cb510c5311e">do_io</a>(fd, <a class="code hl_variable" href="Hook_8h.html#a112f4396291ee49da44a1e031dd51603">readv_f</a>, <span class="stringliteral">&quot;readv&quot;</span>, <a class="code hl_enumvalue" href="classGyanis_1_1core_1_1IOManager.html#a22ef35d8bf1f4e08ee02093ee2fc53d8ac77057a3a52c0a2656347002328cefbc">Gyanis::core::IOManager::READ</a>, SO_RCVTIMEO, iov, iovcnt);</div>
+<div class="line"><span class="lineno">  367</span>}</div>
+<div class="ttc" id="aHook_8h_html_a112f4396291ee49da44a1e031dd51603"><div class="ttname"><a href="Hook_8h.html#a112f4396291ee49da44a1e031dd51603">readv_f</a></div><div class="ttdeci">readv_fun readv_f</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_a5da56354f209063569fd2139d078b4cc_cgraph.png" border="0" usemap="#aHook_8cpp_a5da56354f209063569fd2139d078b4cc_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a49c565342c0f29cec5461ec22c3b1b3d" name="a49c565342c0f29cec5461ec22c3b1b3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49c565342c0f29cec5461ec22c3b1b3d">&#9670;&#160;</a></span>recv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t recv </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sockfd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00369">369</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  370</span>{</div>
+<div class="line"><span class="lineno">  371</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="Hook_8cpp.html#a54f397edba31e0013f8b0cb510c5311e">do_io</a>(sockfd, <a class="code hl_variable" href="Hook_8h.html#a288cb0fdb8677d2452fce75a7e2f2364">recv_f</a>, <span class="stringliteral">&quot;recv&quot;</span>, <a class="code hl_enumvalue" href="classGyanis_1_1core_1_1IOManager.html#a22ef35d8bf1f4e08ee02093ee2fc53d8ac77057a3a52c0a2656347002328cefbc">Gyanis::core::IOManager::READ</a>, SO_RCVTIMEO, buf, len, flags);</div>
+<div class="line"><span class="lineno">  372</span>}</div>
+<div class="ttc" id="aHook_8h_html_a288cb0fdb8677d2452fce75a7e2f2364"><div class="ttname"><a href="Hook_8h.html#a288cb0fdb8677d2452fce75a7e2f2364">recv_f</a></div><div class="ttdeci">recv_fun recv_f</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_a49c565342c0f29cec5461ec22c3b1b3d_cgraph.png" border="0" usemap="#aHook_8cpp_a49c565342c0f29cec5461ec22c3b1b3d_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_a49c565342c0f29cec5461ec22c3b1b3d_icgraph.png" border="0" usemap="#aHook_8cpp_a49c565342c0f29cec5461ec22c3b1b3d_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af349f83f970edca39786829704899327" name="af349f83f970edca39786829704899327"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af349f83f970edca39786829704899327">&#9670;&#160;</a></span>recvfrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t recvfrom </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sockfd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sockaddr *&#160;</td>
+          <td class="paramname"><em>src_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">socklen_t *&#160;</td>
+          <td class="paramname"><em>addrlen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00374">374</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  375</span>{</div>
+<div class="line"><span class="lineno">  376</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="Hook_8cpp.html#a54f397edba31e0013f8b0cb510c5311e">do_io</a>(sockfd, <a class="code hl_variable" href="Hook_8h.html#a567a076666812070b9dec5ed1a6f4989">recvfrom_f</a>, <span class="stringliteral">&quot;recvfrom&quot;</span>, <a class="code hl_enumvalue" href="classGyanis_1_1core_1_1IOManager.html#a22ef35d8bf1f4e08ee02093ee2fc53d8ac77057a3a52c0a2656347002328cefbc">Gyanis::core::IOManager::READ</a>, SO_RCVTIMEO, buf, len, flags, src_addr,</div>
+<div class="line"><span class="lineno">  377</span>                 addrlen);</div>
+<div class="line"><span class="lineno">  378</span>}</div>
+<div class="ttc" id="aHook_8h_html_a567a076666812070b9dec5ed1a6f4989"><div class="ttname"><a href="Hook_8h.html#a567a076666812070b9dec5ed1a6f4989">recvfrom_f</a></div><div class="ttdeci">recvfrom_fun recvfrom_f</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_af349f83f970edca39786829704899327_cgraph.png" border="0" usemap="#aHook_8cpp_af349f83f970edca39786829704899327_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aed70d2ce8d3411341530d14ae6572e26" name="aed70d2ce8d3411341530d14ae6572e26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed70d2ce8d3411341530d14ae6572e26">&#9670;&#160;</a></span>recvmsg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t recvmsg </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sockfd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">msghdr *&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00380">380</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  381</span>{</div>
+<div class="line"><span class="lineno">  382</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="Hook_8cpp.html#a54f397edba31e0013f8b0cb510c5311e">do_io</a>(sockfd, <a class="code hl_variable" href="Hook_8h.html#a9a40ce88798df665aed14ed03efc95bc">recvmsg_f</a>, <span class="stringliteral">&quot;recvmsg&quot;</span>, <a class="code hl_enumvalue" href="classGyanis_1_1core_1_1IOManager.html#a22ef35d8bf1f4e08ee02093ee2fc53d8ac77057a3a52c0a2656347002328cefbc">Gyanis::core::IOManager::READ</a>, SO_RCVTIMEO, msg, flags);</div>
+<div class="line"><span class="lineno">  383</span>}</div>
+<div class="ttc" id="aHook_8h_html_a9a40ce88798df665aed14ed03efc95bc"><div class="ttname"><a href="Hook_8h.html#a9a40ce88798df665aed14ed03efc95bc">recvmsg_f</a></div><div class="ttdeci">recvmsg_fun recvmsg_f</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_aed70d2ce8d3411341530d14ae6572e26_cgraph.png" border="0" usemap="#aHook_8cpp_aed70d2ce8d3411341530d14ae6572e26_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9da4ddaf95f37c1457e545a65ee1a506" name="a9da4ddaf95f37c1457e545a65ee1a506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9da4ddaf95f37c1457e545a65ee1a506">&#9670;&#160;</a></span>send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t send </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00395">395</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  396</span>{</div>
+<div class="line"><span class="lineno">  397</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="Hook_8cpp.html#a54f397edba31e0013f8b0cb510c5311e">do_io</a>(s, <a class="code hl_variable" href="Hook_8h.html#a3c701d5d4319de6facdd24b95a31cf18">send_f</a>, <span class="stringliteral">&quot;send&quot;</span>, <a class="code hl_enumvalue" href="classGyanis_1_1core_1_1IOManager.html#a22ef35d8bf1f4e08ee02093ee2fc53d8aacbc3fb0b28d86b0022b2b383fb20eb1">Gyanis::core::IOManager::WRITE</a>, SO_SNDTIMEO, msg, len, flags);</div>
+<div class="line"><span class="lineno">  398</span>}</div>
+<div class="ttc" id="aHook_8h_html_a3c701d5d4319de6facdd24b95a31cf18"><div class="ttname"><a href="Hook_8h.html#a3c701d5d4319de6facdd24b95a31cf18">send_f</a></div><div class="ttdeci">send_fun send_f</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_a9da4ddaf95f37c1457e545a65ee1a506_cgraph.png" border="0" usemap="#aHook_8cpp_a9da4ddaf95f37c1457e545a65ee1a506_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_a9da4ddaf95f37c1457e545a65ee1a506_icgraph.png" border="0" usemap="#aHook_8cpp_a9da4ddaf95f37c1457e545a65ee1a506_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a111a319409c86e7eee7708c03d8c3724" name="a111a319409c86e7eee7708c03d8c3724"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a111a319409c86e7eee7708c03d8c3724">&#9670;&#160;</a></span>sendmsg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t sendmsg </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const msghdr *&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00405">405</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  406</span>{</div>
+<div class="line"><span class="lineno">  407</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="Hook_8cpp.html#a54f397edba31e0013f8b0cb510c5311e">do_io</a>(s, <a class="code hl_variable" href="Hook_8h.html#a9ec84f761f2fade2a1e55e44598f6f7f">sendmsg_f</a>, <span class="stringliteral">&quot;sendmsg&quot;</span>, <a class="code hl_enumvalue" href="classGyanis_1_1core_1_1IOManager.html#a22ef35d8bf1f4e08ee02093ee2fc53d8aacbc3fb0b28d86b0022b2b383fb20eb1">Gyanis::core::IOManager::WRITE</a>, SO_SNDTIMEO, msg, flags);</div>
+<div class="line"><span class="lineno">  408</span>}</div>
+<div class="ttc" id="aHook_8h_html_a9ec84f761f2fade2a1e55e44598f6f7f"><div class="ttname"><a href="Hook_8h.html#a9ec84f761f2fade2a1e55e44598f6f7f">sendmsg_f</a></div><div class="ttdeci">sendmsg_fun sendmsg_f</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_a111a319409c86e7eee7708c03d8c3724_cgraph.png" border="0" usemap="#aHook_8cpp_a111a319409c86e7eee7708c03d8c3724_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a71618f206e322dac502ff5a415d1bee2" name="a71618f206e322dac502ff5a415d1bee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71618f206e322dac502ff5a415d1bee2">&#9670;&#160;</a></span>sendto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t sendto </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sockaddr *&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">socklen_t&#160;</td>
+          <td class="paramname"><em>tolen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00400">400</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  401</span>{</div>
+<div class="line"><span class="lineno">  402</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="Hook_8cpp.html#a54f397edba31e0013f8b0cb510c5311e">do_io</a>(s, <a class="code hl_variable" href="Hook_8h.html#a422a97edabc8edb0cc439f65d754600c">sendto_f</a>, <span class="stringliteral">&quot;sendto&quot;</span>, <a class="code hl_enumvalue" href="classGyanis_1_1core_1_1IOManager.html#a22ef35d8bf1f4e08ee02093ee2fc53d8aacbc3fb0b28d86b0022b2b383fb20eb1">Gyanis::core::IOManager::WRITE</a>, SO_SNDTIMEO, msg, len, flags, to, tolen);</div>
+<div class="line"><span class="lineno">  403</span>}</div>
+<div class="ttc" id="aHook_8h_html_a422a97edabc8edb0cc439f65d754600c"><div class="ttname"><a href="Hook_8h.html#a422a97edabc8edb0cc439f65d754600c">sendto_f</a></div><div class="ttdeci">sendto_fun sendto_f</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_a71618f206e322dac502ff5a415d1bee2_cgraph.png" border="0" usemap="#aHook_8cpp_a71618f206e322dac502ff5a415d1bee2_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af188b4433461a4224c209231689e8270" name="af188b4433461a4224c209231689e8270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af188b4433461a4224c209231689e8270">&#9670;&#160;</a></span>setsockopt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int setsockopt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sockfd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>optname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>optval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">socklen_t&#160;</td>
+          <td class="paramname"><em>optlen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00541">541</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  542</span>{</div>
+<div class="line"><span class="lineno">  543</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="namespaceGyanis_1_1core.html#a34e01c61a85576e257e87094e64160fd">Gyanis::core::t_hook_enable</a>)</div>
+<div class="line"><span class="lineno">  544</span>    {</div>
+<div class="line"><span class="lineno">  545</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#a65b06a0a021b84494a58db4a03df24d2">setsockopt_f</a>(sockfd, level, optname, optval, optlen);</div>
+<div class="line"><span class="lineno">  546</span>    }</div>
+<div class="line"><span class="lineno">  547</span>    <span class="keywordflow">if</span> (level == SOL_SOCKET)</div>
+<div class="line"><span class="lineno">  548</span>    {</div>
+<div class="line"><span class="lineno">  549</span>        <span class="keywordflow">if</span> (optname == SO_RCVTIMEO || optname == SO_SNDTIMEO)</div>
+<div class="line"><span class="lineno">  550</span>        {</div>
+<div class="line"><span class="lineno">  551</span>            <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> ctx = <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">Gyanis::core::FdMgr::GetInstance</a>()-&gt;get(sockfd))</div>
+<div class="line"><span class="lineno">  552</span>            {</div>
+<div class="line"><span class="lineno">  553</span>                <span class="keyword">const</span> <span class="keyword">auto</span> v = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span>timeval*<span class="keyword">&gt;</span>(optval);</div>
+<div class="line"><span class="lineno">  554</span>                ctx-&gt;setTimeout(optname, v-&gt;tv_sec * 1000 + v-&gt;tv_usec / 1000);</div>
+<div class="line"><span class="lineno">  555</span>            }</div>
+<div class="line"><span class="lineno">  556</span>        }</div>
+<div class="line"><span class="lineno">  557</span>    }</div>
+<div class="line"><span class="lineno">  558</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#a65b06a0a021b84494a58db4a03df24d2">setsockopt_f</a>(sockfd, level, optname, optval, optlen);</div>
+<div class="line"><span class="lineno">  559</span>}</div>
+<div class="ttc" id="aHook_8h_html_a65b06a0a021b84494a58db4a03df24d2"><div class="ttname"><a href="Hook_8h.html#a65b06a0a021b84494a58db4a03df24d2">setsockopt_f</a></div><div class="ttdeci">setsockopt_fun setsockopt_f</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_af188b4433461a4224c209231689e8270_cgraph.png" border="0" usemap="#aHook_8cpp_af188b4433461a4224c209231689e8270_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_af188b4433461a4224c209231689e8270_icgraph.png" border="0" usemap="#aHook_8cpp_af188b4433461a4224c209231689e8270_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a69c97039c9ec10a30e5edbdf365e3bbd" name="a69c97039c9ec10a30e5edbdf365e3bbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69c97039c9ec10a30e5edbdf365e3bbd">&#9670;&#160;</a></span>sleep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int sleep </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>seconds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00192">192</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  193</span>{</div>
+<div class="line"><span class="lineno">  194</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="namespaceGyanis_1_1core.html#a34e01c61a85576e257e87094e64160fd">Gyanis::core::t_hook_enable</a>)</div>
+<div class="line"><span class="lineno">  195</span>    {</div>
+<div class="line"><span class="lineno">  196</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#a28fa9f842d916efcf5cd02888151777c">sleep_f</a>(seconds);</div>
+<div class="line"><span class="lineno">  197</span>    }</div>
+<div class="line"><span class="lineno">  198</span> </div>
+<div class="line"><span class="lineno">  199</span>    <span class="keyword">auto</span> fiber = <a class="code hl_function" href="classGyanis_1_1core_1_1Fiber.html#aecf9535459ef9e66bf472f56326c7401">Gyanis::core::Fiber::GetThis</a>();</div>
+<div class="line"><span class="lineno">  200</span>    <a class="code hl_class" href="classGyanis_1_1core_1_1IOManager.html">Gyanis::core::IOManager</a>* iom = <a class="code hl_function" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">Gyanis::core::IOManager::GetThis</a>();</div>
+<div class="line"><span class="lineno">  201</span>    iom-&gt;<a class="code hl_function" href="classGyanis_1_1base_1_1TimerManager.html#af7727acb34ed68e8b012d3ac3e5a08e9">addTimer</a>(seconds * 1000, [iom, fiber]()</div>
+<div class="line"><span class="lineno">  202</span>    {</div>
+<div class="line"><span class="lineno">  203</span>        iom-&gt;<a class="code hl_function" href="classGyanis_1_1core_1_1Scheduler.html#a5a3b6eeb615bba1d9d5549584feea5d1">schedule</a>(fiber, -1); <span class="comment">// 调用带参数的成员函数</span></div>
+<div class="line"><span class="lineno">  204</span>    });</div>
+<div class="line"><span class="lineno">  205</span> </div>
+<div class="line"><span class="lineno">  206</span>    <a class="code hl_function" href="classGyanis_1_1core_1_1Fiber.html#a662e27df3d4da3b7704db7327eaf07e0">Gyanis::core::Fiber::Yield</a>();</div>
+<div class="line"><span class="lineno">  207</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  208</span>}</div>
+<div class="ttc" id="aHook_8h_html_a28fa9f842d916efcf5cd02888151777c"><div class="ttname"><a href="Hook_8h.html#a28fa9f842d916efcf5cd02888151777c">sleep_f</a></div><div class="ttdeci">sleep_fun sleep_f</div></div>
+<div class="ttc" id="aclassGyanis_1_1base_1_1TimerManager_html_af7727acb34ed68e8b012d3ac3e5a08e9"><div class="ttname"><a href="classGyanis_1_1base_1_1TimerManager.html#af7727acb34ed68e8b012d3ac3e5a08e9">Gyanis::base::TimerManager::addTimer</a></div><div class="ttdeci">uint64_t addTimer(uint64_t interval, const std::function&lt; void()&gt; &amp;callback, bool recurring=false)</div><div class="ttdoc">添加一个定时器</div><div class="ttdef"><b>Definition</b> <a href="Timer_8cpp_source.html#l00028">Timer.cpp:28</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1IOManager_html"><div class="ttname"><a href="classGyanis_1_1core_1_1IOManager.html">Gyanis::core::IOManager</a></div><div class="ttdoc">IO事件类型枚举</div><div class="ttdef"><b>Definition</b> <a href="IOManager_8h_source.html#l00016">IOManager.h:17</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1core_1_1Scheduler_html_a5a3b6eeb615bba1d9d5549584feea5d1"><div class="ttname"><a href="classGyanis_1_1core_1_1Scheduler.html#a5a3b6eeb615bba1d9d5549584feea5d1">Gyanis::core::Scheduler::schedule</a></div><div class="ttdeci">void schedule(const FiberOrCb &amp;fc, int thread=-1)</div><div class="ttdoc">调度一个协程或回调函数</div><div class="ttdef"><b>Definition</b> <a href="Scheduler_8h_source.html#l00060">Scheduler.h:60</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_a69c97039c9ec10a30e5edbdf365e3bbd_cgraph.png" border="0" usemap="#aHook_8cpp_a69c97039c9ec10a30e5edbdf365e3bbd_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_a69c97039c9ec10a30e5edbdf365e3bbd_icgraph.png" border="0" usemap="#aHook_8cpp_a69c97039c9ec10a30e5edbdf365e3bbd_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af4e0711877c45a41168ac677b0670ccd" name="af4e0711877c45a41168ac677b0670ccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4e0711877c45a41168ac677b0670ccd">&#9670;&#160;</a></span>socket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int socket </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>domain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>protocol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00244">244</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  245</span>{</div>
+<div class="line"><span class="lineno">  246</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="namespaceGyanis_1_1core.html#a34e01c61a85576e257e87094e64160fd">Gyanis::core::t_hook_enable</a>)</div>
+<div class="line"><span class="lineno">  247</span>    {</div>
+<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#a5c92da2058edaebc2948da048d1efe08">socket_f</a>(domain, type, protocol);</div>
+<div class="line"><span class="lineno">  249</span>    }</div>
+<div class="line"><span class="lineno">  250</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> fd = <a class="code hl_variable" href="Hook_8h.html#a5c92da2058edaebc2948da048d1efe08">socket_f</a>(domain, type, protocol);</div>
+<div class="line"><span class="lineno">  251</span>    <span class="keywordflow">if</span> (fd == -1)</div>
+<div class="line"><span class="lineno">  252</span>    {</div>
+<div class="line"><span class="lineno">  253</span>        <span class="keywordflow">return</span> fd;</div>
+<div class="line"><span class="lineno">  254</span>    }</div>
+<div class="line"><span class="lineno">  255</span>    <a class="code hl_function" href="classSingleton.html#a7b90075f8e4471743fd3596be874e5d1">Gyanis::core::FdMgr::GetInstance</a>()-&gt;get(fd, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  256</span>    <span class="keywordflow">return</span> fd;</div>
+<div class="line"><span class="lineno">  257</span>}</div>
+<div class="ttc" id="aHook_8h_html_a5c92da2058edaebc2948da048d1efe08"><div class="ttname"><a href="Hook_8h.html#a5c92da2058edaebc2948da048d1efe08">socket_f</a></div><div class="ttdeci">socket_fun socket_f</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_af4e0711877c45a41168ac677b0670ccd_cgraph.png" border="0" usemap="#aHook_8cpp_af4e0711877c45a41168ac677b0670ccd_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_af4e0711877c45a41168ac677b0670ccd_icgraph.png" border="0" usemap="#aHook_8cpp_af4e0711877c45a41168ac677b0670ccd_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ac0383719bafa9b5b2aa25fabc586bd1f" name="ac0383719bafa9b5b2aa25fabc586bd1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0383719bafa9b5b2aa25fabc586bd1f">&#9670;&#160;</a></span>usleep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int usleep </td>
+          <td>(</td>
+          <td class="paramtype">useconds_t&#160;</td>
+          <td class="paramname"><em>usec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00210">210</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  211</span>{</div>
+<div class="line"><span class="lineno">  212</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="namespaceGyanis_1_1core.html#a34e01c61a85576e257e87094e64160fd">Gyanis::core::t_hook_enable</a>)</div>
+<div class="line"><span class="lineno">  213</span>    {</div>
+<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="Hook_8h.html#a00747f17a364e2773f98bbed73a661ab">usleep_f</a>(usec);</div>
+<div class="line"><span class="lineno">  215</span>    }</div>
+<div class="line"><span class="lineno">  216</span>    <span class="keyword">auto</span> fiber = <a class="code hl_function" href="classGyanis_1_1core_1_1Fiber.html#aecf9535459ef9e66bf472f56326c7401">Gyanis::core::Fiber::GetThis</a>();</div>
+<div class="line"><span class="lineno">  217</span>    <span class="keyword">auto</span>* iom = <a class="code hl_function" href="classGyanis_1_1core_1_1IOManager.html#a00206639f4404ed49640f5f485d8f530">Gyanis::core::IOManager::GetThis</a>();</div>
+<div class="line"><span class="lineno">  218</span>    iom-&gt;addTimer(usec / 1000, [iom, fiber]()</div>
+<div class="line"><span class="lineno">  219</span>    {</div>
+<div class="line"><span class="lineno">  220</span>        iom-&gt;schedule(fiber, -1); <span class="comment">// 调用带参数的成员函数</span></div>
+<div class="line"><span class="lineno">  221</span>    });</div>
+<div class="line"><span class="lineno">  222</span>    <a class="code hl_function" href="classGyanis_1_1core_1_1Fiber.html#a662e27df3d4da3b7704db7327eaf07e0">Gyanis::core::Fiber::Yield</a>();</div>
+<div class="line"><span class="lineno">  223</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  224</span>}</div>
+<div class="ttc" id="aHook_8h_html_a00747f17a364e2773f98bbed73a661ab"><div class="ttname"><a href="Hook_8h.html#a00747f17a364e2773f98bbed73a661ab">usleep_f</a></div><div class="ttdeci">usleep_fun usleep_f</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_ac0383719bafa9b5b2aa25fabc586bd1f_cgraph.png" border="0" usemap="#aHook_8cpp_ac0383719bafa9b5b2aa25fabc586bd1f_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="abb39b21888372e95ad3e5c59b166f5c8" name="abb39b21888372e95ad3e5c59b166f5c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb39b21888372e95ad3e5c59b166f5c8">&#9670;&#160;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t write </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00385">385</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  386</span>{</div>
+<div class="line"><span class="lineno">  387</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="Hook_8cpp.html#a54f397edba31e0013f8b0cb510c5311e">do_io</a>(fd, <a class="code hl_variable" href="Hook_8h.html#ad93804cea84b095a5103807738fb5286">write_f</a>, <span class="stringliteral">&quot;write&quot;</span>, <a class="code hl_enumvalue" href="classGyanis_1_1core_1_1IOManager.html#a22ef35d8bf1f4e08ee02093ee2fc53d8aacbc3fb0b28d86b0022b2b383fb20eb1">Gyanis::core::IOManager::WRITE</a>, SO_SNDTIMEO, buf, count);</div>
+<div class="line"><span class="lineno">  388</span>}</div>
+<div class="ttc" id="aHook_8h_html_ad93804cea84b095a5103807738fb5286"><div class="ttname"><a href="Hook_8h.html#ad93804cea84b095a5103807738fb5286">write_f</a></div><div class="ttdeci">write_fun write_f</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_abb39b21888372e95ad3e5c59b166f5c8_cgraph.png" border="0" usemap="#aHook_8cpp_abb39b21888372e95ad3e5c59b166f5c8_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a25a77f2e043f64c6ce9b478e7490847c" name="a25a77f2e043f64c6ce9b478e7490847c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25a77f2e043f64c6ce9b478e7490847c">&#9670;&#160;</a></span>writev()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t writev </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const iovec *&#160;</td>
+          <td class="paramname"><em>iov</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iovcnt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00390">390</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  391</span>{</div>
+<div class="line"><span class="lineno">  392</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="Hook_8cpp.html#a54f397edba31e0013f8b0cb510c5311e">do_io</a>(fd, <a class="code hl_variable" href="Hook_8h.html#a20264910fb49a96856e915d42317f328">writev_f</a>, <span class="stringliteral">&quot;writev&quot;</span>, <a class="code hl_enumvalue" href="classGyanis_1_1core_1_1IOManager.html#a22ef35d8bf1f4e08ee02093ee2fc53d8aacbc3fb0b28d86b0022b2b383fb20eb1">Gyanis::core::IOManager::WRITE</a>, SO_SNDTIMEO, iov, iovcnt);</div>
+<div class="line"><span class="lineno">  393</span>}</div>
+<div class="ttc" id="aHook_8h_html_a20264910fb49a96856e915d42317f328"><div class="ttname"><a href="Hook_8h.html#a20264910fb49a96856e915d42317f328">writev_f</a></div><div class="ttdeci">writev_fun writev_f</div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Hook_8cpp_a25a77f2e043f64c6ce9b478e7490847c_cgraph.png" border="0" usemap="#aHook_8cpp_a25a77f2e043f64c6ce9b478e7490847c_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a9677ee99477f7229e3b4b99565af0745" name="a9677ee99477f7229e3b4b99565af0745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9677ee99477f7229e3b4b99565af0745">&#9670;&#160;</a></span>g_logger</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto g_logger = <a class="el" href="Log_8h.html#a30907c2011b31fbe54269ddc6052ebe3">LOG_NAME</a>(&quot;system&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="Hook_8cpp_source.html">Hook.cpp</a> 第 <a class="el" href="Hook_8cpp_source.html#l00016">16</a> 行定义.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li><li class="navelem"><a class="el" href="Hook_8cpp.html">Hook.cpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

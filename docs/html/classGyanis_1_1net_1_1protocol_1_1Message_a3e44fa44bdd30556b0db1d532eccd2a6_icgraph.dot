@@ -1,0 +1,15 @@
+digraph "Gyanis::net::protocol::Message::getType"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="Gyanis::net::protocol\l::Message::getType",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="获取消息类型（REQUEST、RESPONSE、NOTIFY）"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::net::protocol\l::Request::serializeToByteArray",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1protocol_1_1Request.html#ab96aba1afd1db0b9098fb8e92b9342f1",tooltip="将请求消息序列化到字节数组中"];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Gyanis::net::protocol\l::Response::serializeToByte\lArray",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1protocol_1_1Response.html#af007e9bcfae793f4ae17d12a0f2627d9",tooltip="将响应消息序列化到字节数组中"];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Gyanis::net::protocol\l::Notify::serializeToByteArray",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1protocol_1_1Notify.html#a782241c4727e0702dec1bafebfe6ff2f",tooltip="将通知消息序列化到字节数组中。"];
+}

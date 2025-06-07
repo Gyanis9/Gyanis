@@ -1,0 +1,21 @@
+digraph "Gyanis::base::Trim"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="Gyanis::base::Trim",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="字符串修剪"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::net::http::\lHttpRequest::initCookies",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1HttpRequest.html#a036bf182ca5a9f3b19a6b6e7242b5d7a",tooltip="初始化 cookies"];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Gyanis::net::http::\lHttpRequest::checkGetCookieAs",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1HttpRequest.html#a7a04cd41b238d720c07259c1e2a5ef37",tooltip="检查并获取 Cookie 的值，转换为指定类型"];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Gyanis::net::http::\lHttpRequest::getCookie",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1HttpRequest.html#abe7bcbbd3a01184777a8f1aae8cc5d0f",tooltip="获取请求 cookies 的值"];
+  Node2 -> Node5 [id="edge4_Node000002_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="Gyanis::net::http::\lHttpRequest::getCookieAs",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1HttpRequest.html#ae04060ae2f29cff10715f4252117dcf4",tooltip="获取 Cookie 的值，转换为指定类型"];
+  Node2 -> Node6 [id="edge5_Node000002_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="Gyanis::net::http::\lHttpRequest::hasCookie",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1HttpRequest.html#a0109e14cb70272ec3021802e7ea032e4",tooltip="检查请求 cookies 是否包含指定字段"];
+  Node2 -> Node7 [id="edge6_Node000002_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="Gyanis::net::http::\lHttpRequest::initParam",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1HttpRequest.html#a645647fd1f099ce7e12180e482cc2e4a",tooltip="初始化 HTTP 请求参数"];
+}

@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: include/net/http/Http.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Http_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">Http.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>HTTP定义结构体封装  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;boost/lexical_cast.hpp&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Http.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="Http_8h__incl.png" border="0" usemap="#ainclude_2net_2http_2Http_8h" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="Http_8h__dep__incl.png" border="0" usemap="#ainclude_2net_2http_2Http_8hdep" alt=""/></div>
+</div>
+</div>
+<p><a href="Http_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGyanis_1_1net_1_1http_1_1CaseInsensitiveLess.html">Gyanis::net::http::CaseInsensitiveLess</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">比较两个字符串，忽略大小写  <a href="structGyanis_1_1net_1_1http_1_1CaseInsensitiveLess.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html">Gyanis::net::http::HttpRequest</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP 请求类  <a href="classGyanis_1_1net_1_1http_1_1HttpRequest.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1http_1_1HttpResponse.html">Gyanis::net::http::HttpResponse</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespaceGyanis" id="r_namespaceGyanis"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis.html">Gyanis</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceGyanis_1_1net" id="r_namespaceGyanis_1_1net"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1net.html">Gyanis::net</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceGyanis_1_1net_1_1http" id="r_namespaceGyanis_1_1net_1_1http"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1net_1_1http.html">Gyanis::net::http</a></td></tr>
+<tr class="memdesc:namespaceGyanis_1_1net_1_1http"><td class="mdescLeft">&#160;</td><td class="mdescRight">示例 URI：foo://user@baidu.com:8042/over/there?name=ferret::nose 解析后的组成部分： _/ ______________/_________/ _________/ __/ | | | | | scheme authority path query fragment <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ac838f95183819f91457f9370778dfb57" id="r_ac838f95183819f91457f9370778dfb57"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57">Gyanis::net::http::HttpMethod</a> { <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a32f68a60cef40faedbc6af20298c1a1e">Gyanis::net::http::DELETE</a> = 0
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a7528035a93ee69cedb1dbddb2f0bfcc8">Gyanis::net::http::GET</a> = 1
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57ae15e216fc1c639f787b1231ecdfa1bf8">Gyanis::net::http::HEAD</a> = 2
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57aa02439ec229d8be0e74b0c1602392310">Gyanis::net::http::POST</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a3e75383a5992a6d15fb81e872e46e256">Gyanis::net::http::PUT</a> = 4
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57ab57e2519e26151feacdbe52076bc39ec">Gyanis::net::http::CONNECT</a> = 5
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a164dd62adb30ca051b5289672a572f9b">Gyanis::net::http::OPTIONS</a> = 6
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a2d3e4144aa384b18849ab9a8abad74d6">Gyanis::net::http::TRACE</a> = 7
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57ae8606d021da140a92c7eba8d9b8af84f">Gyanis::net::http::COPY</a> = 8
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57af510b97de4ace11844b85f23d0fc012f">Gyanis::net::http::LOCK</a> = 9
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57aa02411acd2f70fdd738894061f7d87c1">Gyanis::net::http::MKCOL</a> = 10
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57af7f93635f8e193a924ae4a691bb66b8f">Gyanis::net::http::MOVE</a> = 11
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a599a96a4db707f1cdcb9affd34ca8d72">Gyanis::net::http::PROPFIND</a> = 12
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57afe20db8c57ee09e59fcc6ae857443e02">Gyanis::net::http::PROPPATCH</a> = 13
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a0f544d682c3a664870f025f48c4b04b5">Gyanis::net::http::SEARCH</a> = 14
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a08f473e8e1515801cb25e584a6832f34">Gyanis::net::http::UNLOCK</a> = 15
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a5c179f2c26f1208979f95a11f886c7c6">Gyanis::net::http::BIND</a> = 16
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a165c797424624799cb60ff4fe6d5164c">Gyanis::net::http::REBIND</a> = 17
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a82c3132801d8e123a351387716e61247">Gyanis::net::http::UNBIND</a> = 18
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a5bec55d452dbea99476cd51a1c821b8a">Gyanis::net::http::ACL</a> = 19
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57ad02a38d7ff75e9aed743437fd9539a44">Gyanis::net::http::REPORT</a> = 20
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57aabc1e2b31f1af0e5b07860bd52ac5841">Gyanis::net::http::MKACTIVITY</a> = 21
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57ae488f04180a5804feba48dbc87f0787d">Gyanis::net::http::CHECKOUT</a> = 22
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a97c51054c5ed46d2f88641ac57ff6347">Gyanis::net::http::MERGE</a> = 23
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a1a05a7da73d0e7a957db62621927ce17">Gyanis::net::http::MSEARCH</a> = 24
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a9d087bfb809874e1b3e9adcbae8ca761">Gyanis::net::http::NOTIFY</a> = 25
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a45b73ef479821e71be9f69a190f2bb86">Gyanis::net::http::SUBSCRIBE</a> = 26
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a62b18b8274e34fd701d0b684a32c633f">Gyanis::net::http::UNSUBSCRIBE</a> = 27
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a63bc9a3997d66d835d9f3ec29451407d">Gyanis::net::http::PATCH</a> = 28
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57af29973ceeff9e3672f9827d2b3615283">Gyanis::net::http::PURGE</a> = 29
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a2f79dc519744e08cebb04946a6b9e9f9">Gyanis::net::http::MKCALENDAR</a> = 30
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a58c0a0e97e6d2f615bc264c2775fda44">Gyanis::net::http::LINK</a> = 31
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57aa07e75cb3ec757003bb6b1284024135b">Gyanis::net::http::UNLINK</a> = 32
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57ae60b4854b44ccfb2d92aa6f035171bb4">Gyanis::net::http::SOURCE</a> = 33
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57a0287a379ca2c3ad10431b4ff17491106">Gyanis::net::http::INVALID_METHOD</a> = 34
+<br />
+ }</td></tr>
+<tr class="memdesc:ac838f95183819f91457f9370778dfb57"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP方法枚举  <a href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57">更多...</a><br /></td></tr>
+<tr class="separator:ac838f95183819f91457f9370778dfb57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4899242d3f57596ebbf6af49fc6f3d5" id="r_ab4899242d3f57596ebbf6af49fc6f3d5"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5">Gyanis::net::http::HttpStatus</a> { <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a2f453cfe638e57e27bb0c9512436111e">Gyanis::net::http::CONTINUE</a> = 100
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5af65c2e25f74e831cf2af44707695f440">Gyanis::net::http::SWITCHING_PROTOCOLS</a> = 101
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5ae133e9a63fd4950f19c2180be4047ecc">Gyanis::net::http::PROCESSING</a> = 102
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5ae0aa021e21dddbd6d8cecec71e9cf564">Gyanis::net::http::OK</a> = 200
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a98690bf632c29c17c9e4c5a64069903c">Gyanis::net::http::CREATED</a> = 201
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5aa806f1d2c42338ef5fa6497b66153e79">Gyanis::net::http::ACCEPTED</a> = 202
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5adcf814002d3921abdce381139b3f21e8">Gyanis::net::http::NON_AUTHORITATIVE_INFORMATION</a> = 203
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5af84f5b7a440bd2021a9049dd8cf8d13e">Gyanis::net::http::NO_CONTENT</a> = 204
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a674c0a5a76a51ee504b65421e29b5126">Gyanis::net::http::RESET_CONTENT</a> = 205
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5ad906a5a1be7a9fc5d8546e34d1608a1e">Gyanis::net::http::PARTIAL_CONTENT</a> = 206
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a612f69c41a0c6a02417fa7d61823458b">Gyanis::net::http::MULTI_STATUS</a> = 207
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5add51945b15998270e9872f55849966c0">Gyanis::net::http::ALREADY_REPORTED</a> = 208
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5ac9b4931017bb4be4f7f48ca799c8a724">Gyanis::net::http::IM_USED</a> = 226
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5acfcb28ddf47c74db504f5432a7c1cb69">Gyanis::net::http::MULTIPLE_CHOICES</a> = 300
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5abbe3b000d07140412431bb07d043c287">Gyanis::net::http::MOVED_PERMANENTLY</a> = 301
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a3e918e9c9f594bda6b0cf358391c3b1a">Gyanis::net::http::FOUND</a> = 302
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a4093e2ac3e1287ac13d1d0ca3317b503">Gyanis::net::http::SEE_OTHER</a> = 303
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5aa6809b1b35a6debe4edc98fc79a02944">Gyanis::net::http::NOT_MODIFIED</a> = 304
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5aa48862350ffe6149a62081634a725e94">Gyanis::net::http::USE_PROXY</a> = 305
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a698dcee850e80b3dfc04ad8b5dcedd3a">Gyanis::net::http::TEMPORARY_REDIRECT</a> = 307
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a5b2d8349de9fbd020a9cb81cd38fb1b0">Gyanis::net::http::PERMANENT_REDIRECT</a> = 308
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a0bbffe9eb8bbfc49246e867fccaefb73">Gyanis::net::http::BAD_REQUEST</a> = 400
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a0ab06e7c28266cc1ed601325013a874c">Gyanis::net::http::UNAUTHORIZED</a> = 401
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a6713760be5f3d289ab8f42e837c126de">Gyanis::net::http::PAYMENT_REQUIRED</a> = 402
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a4a76a6ecac6e4077588fd966db329fa3">Gyanis::net::http::FORBIDDEN</a> = 403
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a8c02547a8a3b02382bac3557bcb2280d">Gyanis::net::http::NOT_FOUND</a> = 404
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a109f8ca7d4aeb39feec752e24fac4098">Gyanis::net::http::METHOD_NOT_ALLOWED</a> = 405
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a9846b1a1c52dfc91442151cd7f3fd4e7">Gyanis::net::http::NOT_ACCEPTABLE</a> = 406
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a0cf3ee42fff927594af686698d09e863">Gyanis::net::http::PROXY_AUTHENTICATION_REQUIRED</a> = 407
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5ac8ab880d2064ef632e61f01c05cd0b66">Gyanis::net::http::REQUEST_TIMEOUT</a> = 408
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5addbe277f267f119df2ef18a8fe3364ae">Gyanis::net::http::CONFLICT</a> = 409
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a9c745ef7d5f5c7618ce90dbec9a62b74">Gyanis::net::http::GONE</a> = 410
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5aef31f194fc00edd0b1986110a13a13f9">Gyanis::net::http::LENGTH_REQUIRED</a> = 411
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a8e4ccfab0ccae403001d7ac710307c31">Gyanis::net::http::PRECONDITION_FAILED</a> = 412
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5ac379e50491099134897f11767ac77544">Gyanis::net::http::PAYLOAD_TOO_LARGE</a> = 413
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a7b62eb07bf8f336f3cb07d87946bbd98">Gyanis::net::http::URI_TOO_LONG</a> = 414
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5ac8def42f5dfe44bd1ea86a055fb1b5a6">Gyanis::net::http::UNSUPPORTED_MEDIA_TYPE</a> = 415
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a31163f1786f767168ccaecdcbab3091b">Gyanis::net::http::RANGE_NOT_SATISFIABLE</a> = 416
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a0dd5a8948b360d099aaffe504790bcfb">Gyanis::net::http::EXPECTATION_FAILED</a> = 417
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5aca1b553b7585bdb2afb81ff7a5f2030c">Gyanis::net::http::MISDIRECTED_REQUEST</a> = 421
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a55d31a1f9d6c33da738c94ffeeaec098">Gyanis::net::http::UNPROCESSABLE_ENTITY</a> = 422
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5aaeff3f3f2731681b2ed6a27786a56203">Gyanis::net::http::LOCKED</a> = 423
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a7894182637bd7b11407afb64611c9076">Gyanis::net::http::FAILED_DEPENDENCY</a> = 424
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a3d13751f7a8fa303bf9e174565f4b3a5">Gyanis::net::http::UPGRADE_REQUIRED</a> = 426
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5afb732ece400d47e243d17f5148c2546b">Gyanis::net::http::PRECONDITION_REQUIRED</a> = 428
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a48217406fa20a472560abdf9b6ec8c17">Gyanis::net::http::TOO_MANY_REQUESTS</a> = 429
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5aa068b18a529a332654b3e1b6e1f35a1a">Gyanis::net::http::REQUEST_HEADER_FIELDS_TOO_LARGE</a> = 431
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a12a8da4071af3736c45e96ddd7e7ebc0">Gyanis::net::http::UNAVAILABLE_FOR_LEGAL_REASONS</a> = 451
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a45d9cc15c3d3229e11b4c33387598850">Gyanis::net::http::INTERNAL_SERVER_ERROR</a> = 500
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a3e860a081575fc82cc7b6ed2ca602947">Gyanis::net::http::NOT_IMPLEMENTED</a> = 501
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a2a685d68f06ec03e4b658cc0d6ca4e54">Gyanis::net::http::BAD_GATEWAY</a> = 502
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a321504743197244f08c01a4fd2df88b5">Gyanis::net::http::SERVICE_UNAVAILABLE</a> = 503
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a2210ac0628249cd94f48da970567a831">Gyanis::net::http::GATEWAY_TIMEOUT</a> = 504
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5aede7ad622f9c071f0cf49c5e3fd8877b">Gyanis::net::http::HTTP_VERSION_NOT_SUPPORTED</a> = 505
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a68fcc540a15e9c14189e827f9a377c8d">Gyanis::net::http::VARIANT_ALSO_NEGOTIATES</a> = 506
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a074310dbdba1ad6baa62010d4976cd90">Gyanis::net::http::INSUFFICIENT_STORAGE</a> = 507
+, <br />
+&#160;&#160;<a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5aa54f3bcfde10d3e91c692354fdf24eff">Gyanis::net::http::LOOP_DETECTED</a> = 508
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5ad3779f15343d9c7f6f22604ec39c414f">Gyanis::net::http::NOT_EXTENDED</a> = 510
+, <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5a59fcbddf624ebbffc2ba7518667a336a">Gyanis::net::http::NETWORK_AUTHENTICATION_REQUIRED</a> = 511
+<br />
+ }</td></tr>
+<tr class="memdesc:ab4899242d3f57596ebbf6af49fc6f3d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">HTTP状态码枚举  <a href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5">更多...</a><br /></td></tr>
+<tr class="separator:ab4899242d3f57596ebbf6af49fc6f3d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a062f2c3bbc2630d7e8685ed06c45971d" id="r_a062f2c3bbc2630d7e8685ed06c45971d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57">HttpMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1net_1_1http.html#a062f2c3bbc2630d7e8685ed06c45971d">Gyanis::net::http::StringToHttpMethod</a> (const std::string &amp;method)</td></tr>
+<tr class="memdesc:a062f2c3bbc2630d7e8685ed06c45971d"><td class="mdescLeft">&#160;</td><td class="mdescRight">将字符串转换为 HTTP 方法枚举  <br /></td></tr>
+<tr class="separator:a062f2c3bbc2630d7e8685ed06c45971d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a745ae1a072512964d2833d3576cd8f66" id="r_a745ae1a072512964d2833d3576cd8f66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57">HttpMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1net_1_1http.html#a745ae1a072512964d2833d3576cd8f66">Gyanis::net::http::CharsToHttpMethod</a> (const char *method)</td></tr>
+<tr class="memdesc:a745ae1a072512964d2833d3576cd8f66"><td class="mdescLeft">&#160;</td><td class="mdescRight">将字符数组转换为 HTTP 方法枚举  <br /></td></tr>
+<tr class="separator:a745ae1a072512964d2833d3576cd8f66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae298029aed3a77d7600e339ea071db6b" id="r_ae298029aed3a77d7600e339ea071db6b"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1net_1_1http.html#ae298029aed3a77d7600e339ea071db6b">Gyanis::net::http::HttpMethodToString</a> (const <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ac838f95183819f91457f9370778dfb57">HttpMethod</a> &amp;method)</td></tr>
+<tr class="memdesc:ae298029aed3a77d7600e339ea071db6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">将 HTTP 方法枚举转换为字符串  <br /></td></tr>
+<tr class="separator:ae298029aed3a77d7600e339ea071db6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48475f4c4b3b1fcadfc5c4def5318ae9" id="r_a48475f4c4b3b1fcadfc5c4def5318ae9"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1net_1_1http.html#a48475f4c4b3b1fcadfc5c4def5318ae9">Gyanis::net::http::HttpStatusToString</a> (const <a class="el" href="namespaceGyanis_1_1net_1_1http.html#ab4899242d3f57596ebbf6af49fc6f3d5">HttpStatus</a> &amp;status)</td></tr>
+<tr class="memdesc:a48475f4c4b3b1fcadfc5c4def5318ae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">将 HTTP 状态码枚举转换为字符串  <br /></td></tr>
+<tr class="separator:a48475f4c4b3b1fcadfc5c4def5318ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd35be0798e1de1bb60cec1ebc18d810" id="r_acd35be0798e1de1bb60cec1ebc18d810"><td class="memTemplParams" colspan="2">template&lt;typename MapType , typename T &gt; </td></tr>
+<tr class="memitem:acd35be0798e1de1bb60cec1ebc18d810"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1net_1_1http.html#acd35be0798e1de1bb60cec1ebc18d810">Gyanis::net::http::checkGetAs</a> (const MapType &amp;map, const std::string &amp;key, const T &amp;value, const T &amp;defaultValue=T())</td></tr>
+<tr class="memdesc:acd35be0798e1de1bb60cec1ebc18d810"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 Map 中获取指定键的值并进行类型转换  <br /></td></tr>
+<tr class="separator:acd35be0798e1de1bb60cec1ebc18d810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a2f0ab2cb6f0ff142437cd97fa36157" id="r_a5a2f0ab2cb6f0ff142437cd97fa36157"><td class="memTemplParams" colspan="2">template&lt;typename MapType , typename T &gt; </td></tr>
+<tr class="memitem:a5a2f0ab2cb6f0ff142437cd97fa36157"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1net_1_1http.html#a5a2f0ab2cb6f0ff142437cd97fa36157">Gyanis::net::http::getAs</a> (const MapType &amp;map, const std::string &amp;key, const T &amp;defaultValue=T())</td></tr>
+<tr class="memdesc:a5a2f0ab2cb6f0ff142437cd97fa36157"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 Map 中获取指定键的值并进行类型转换  <br /></td></tr>
+<tr class="separator:a5a2f0ab2cb6f0ff142437cd97fa36157"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a483de5a4bb9de7c122f6884e21cf2d" id="r_a8a483de5a4bb9de7c122f6884e21cf2d"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1net_1_1http.html#a8a483de5a4bb9de7c122f6884e21cf2d">Gyanis::net::http::operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpRequest.html">HttpRequest</a> &amp;request)</td></tr>
+<tr class="memdesc:a8a483de5a4bb9de7c122f6884e21cf2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">将 HTTP 请求对象输出到流  <br /></td></tr>
+<tr class="separator:a8a483de5a4bb9de7c122f6884e21cf2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afebf6c8665ea4f88fa6ae1c87053fe5e" id="r_afebf6c8665ea4f88fa6ae1c87053fe5e"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceGyanis_1_1net_1_1http.html#afebf6c8665ea4f88fa6ae1c87053fe5e">Gyanis::net::http::operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classGyanis_1_1net_1_1http_1_1HttpResponse.html">HttpResponse</a> &amp;response)</td></tr>
+<tr class="memdesc:afebf6c8665ea4f88fa6ae1c87053fe5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">将 HTTP 响应对象输出到流  <br /></td></tr>
+<tr class="separator:afebf6c8665ea4f88fa6ae1c87053fe5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>HTTP定义结构体封装 </p>
+<dl class="section date"><dt>日期</dt><dd>2025-03-16 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="Http_8h_source.html">Http.h</a> 中定义.</p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_2fa1ed3146d6c2b96c5cfe4341985326.html">net</a></li><li class="navelem"><a class="el" href="dir_7dceb8d0fc1433f0ba9a48a61d388f8d.html">http</a></li><li class="navelem"><a class="el" href="Http_8h.html">Http.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

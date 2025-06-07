@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: Gyanis::net::rock::RockMessageDecoder类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGyanis_1_1net_1_1rock_1_1RockMessageDecoder.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classGyanis_1_1net_1_1rock_1_1RockMessageDecoder-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Gyanis::net::rock::RockMessageDecoder类 参考<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="classGyanis_1_1net_1_1rock_1_1RockMessageDecoder.html" title="RockMessageDecoder 类用于解析和序列化 Rock 协议的消息">RockMessageDecoder</a> 类用于解析和序列化 Rock 协议的消息  
+ <a href="classGyanis_1_1net_1_1rock_1_1RockMessageDecoder.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="RockProtocol_8h_source.html">RockProtocol.h</a>&gt;</code></p>
+<div class="dynheader">
+类 Gyanis::net::rock::RockMessageDecoder 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1rock_1_1RockMessageDecoder__inherit__graph.png" border="0" usemap="#aGyanis_1_1net_1_1rock_1_1RockMessageDecoder_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+Gyanis::net::rock::RockMessageDecoder 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1rock_1_1RockMessageDecoder__coll__graph.png" border="0" usemap="#aGyanis_1_1net_1_1rock_1_1RockMessageDecoder_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a3c3238e9292dadd4d6a2b1d8d8490ea9" id="r_a3c3238e9292dadd4d6a2b1d8d8490ea9"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1rock_1_1RockMessageDecoder.html#a3c3238e9292dadd4d6a2b1d8d8490ea9">serializeTo</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html">stream::Stream</a> &gt; &amp;stream, const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1protocol_1_1Message.html">protocol::Message</a> &gt; &amp;message) override</td></tr>
+<tr class="memdesc:a3c3238e9292dadd4d6a2b1d8d8490ea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">将消息序列化到流中 <br  />
+  <br /></td></tr>
+<tr class="separator:a3c3238e9292dadd4d6a2b1d8d8490ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adda07eb79e7afaad7d90b34c8a0d37bc" id="r_adda07eb79e7afaad7d90b34c8a0d37bc"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1protocol_1_1Message.html">protocol::Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1rock_1_1RockMessageDecoder.html#adda07eb79e7afaad7d90b34c8a0d37bc">parseForm</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html">stream::Stream</a> &gt; &amp;stream) override</td></tr>
+<tr class="memdesc:adda07eb79e7afaad7d90b34c8a0d37bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">从流中解析消息 <br  />
+  <br /></td></tr>
+<tr class="separator:adda07eb79e7afaad7d90b34c8a0d37bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classGyanis_1_1net_1_1protocol_1_1MessageDecoder"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classGyanis_1_1net_1_1protocol_1_1MessageDecoder')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classGyanis_1_1net_1_1protocol_1_1MessageDecoder.html">Gyanis::net::protocol::MessageDecoder</a></td></tr>
+<tr class="memitem:ac2f58cd6c62e385d6fa63109edfd568f inherit pub_methods_classGyanis_1_1net_1_1protocol_1_1MessageDecoder" id="r_ac2f58cd6c62e385d6fa63109edfd568f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1protocol_1_1MessageDecoder.html#ac2f58cd6c62e385d6fa63109edfd568f">~MessageDecoder</a> ()=default</td></tr>
+<tr class="separator:ac2f58cd6c62e385d6fa63109edfd568f inherit pub_methods_classGyanis_1_1net_1_1protocol_1_1MessageDecoder"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ab134b50e8f38864240d6c24482a778 inherit pub_methods_classGyanis_1_1net_1_1protocol_1_1MessageDecoder" id="r_a8ab134b50e8f38864240d6c24482a778"><td class="memItemLeft" align="right" valign="top">virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1protocol_1_1MessageDecoder.html#a8ab134b50e8f38864240d6c24482a778">serializeTo</a> (const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html">stream::Stream</a> &gt; &amp;stream, const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1protocol_1_1Message.html">Message</a> &gt; &amp;message)=0</td></tr>
+<tr class="memdesc:a8ab134b50e8f38864240d6c24482a778 inherit pub_methods_classGyanis_1_1net_1_1protocol_1_1MessageDecoder"><td class="mdescLeft">&#160;</td><td class="mdescRight">将消息序列化到流中  <br /></td></tr>
+<tr class="separator:a8ab134b50e8f38864240d6c24482a778 inherit pub_methods_classGyanis_1_1net_1_1protocol_1_1MessageDecoder"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><a class="el" href="classGyanis_1_1net_1_1rock_1_1RockMessageDecoder.html" title="RockMessageDecoder 类用于解析和序列化 Rock 协议的消息">RockMessageDecoder</a> 类用于解析和序列化 Rock 协议的消息 </p>
+
+<p class="definition">在文件 <a class="el" href="RockProtocol_8h_source.html">RockProtocol.h</a> 第 <a class="el" href="RockProtocol_8h_source.html#l00226">226</a> 行定义.</p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="adda07eb79e7afaad7d90b34c8a0d37bc" name="adda07eb79e7afaad7d90b34c8a0d37bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adda07eb79e7afaad7d90b34c8a0d37bc">&#9670;&#160;</a></span>parseForm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1protocol_1_1Message.html">protocol::Message</a> &gt; Gyanis::net::rock::RockMessageDecoder::parseForm </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html">stream::Stream</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从流中解析消息 <br  />
+ </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>输入流 <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回解析得到的消息对象 <br  />
+ </dd></dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1net_1_1protocol_1_1MessageDecoder.html#a6ac45e7d28656a8a791f5c1c84ae9d79">Gyanis::net::protocol::MessageDecoder</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="RockProtocol_8cpp_source.html">RockProtocol.cpp</a> 第 <a class="el" href="RockProtocol_8cpp_source.html#l00280">280</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  281</span>    {</div>
+<div class="line"><span class="lineno">  282</span>        <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  283</span>        {</div>
+<div class="line"><span class="lineno">  284</span>            RockMsgHeader header;</div>
+<div class="line"><span class="lineno">  285</span>            <span class="keywordflow">if</span> (stream-&gt;readFixSize(&amp;header, <span class="keyword">sizeof</span>(header)) &lt;= 0)</div>
+<div class="line"><span class="lineno">  286</span>            {</div>
+<div class="line"><span class="lineno">  287</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#ae99d6a80a1f93dc0d08a97151810e18b">g_logger</a>)</div>
+<div class="line"><span class="lineno">  288</span>                    &lt;&lt; <span class="stringliteral">&quot;RockMessageDecoder header decoding failed. &quot;</span></div>
+<div class="line"><span class="lineno">  289</span>                    &lt;&lt; <span class="stringliteral">&quot;An error occurred while decoding the message header.&quot;</span>;</div>
+<div class="line"><span class="lineno">  290</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  291</span>            }</div>
+<div class="line"><span class="lineno">  292</span> </div>
+<div class="line"><span class="lineno">  293</span>            <span class="keywordflow">if</span> (memcmp(header.magic, <a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#acc2581d8ce90a9bafe74aeb00fd05535">s_rock_magic</a>, <span class="keyword">sizeof</span>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#acc2581d8ce90a9bafe74aeb00fd05535">s_rock_magic</a>)) != 0)</div>
+<div class="line"><span class="lineno">  294</span>            {</div>
+<div class="line"><span class="lineno">  295</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#ae99d6a80a1f93dc0d08a97151810e18b">g_logger</a>)</div>
+<div class="line"><span class="lineno">  296</span>                    &lt;&lt; <span class="stringliteral">&quot;RockMessageDecoder header magic validation failed. &quot;</span></div>
+<div class="line"><span class="lineno">  297</span>                    &lt;&lt; <span class="stringliteral">&quot;The magic value in the header is incorrect or invalid.&quot;</span>;</div>
+<div class="line"><span class="lineno">  298</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  299</span>            }</div>
+<div class="line"><span class="lineno">  300</span> </div>
+<div class="line"><span class="lineno">  301</span>            <span class="keywordflow">if</span> (header.version != 0x1)</div>
+<div class="line"><span class="lineno">  302</span>            {</div>
+<div class="line"><span class="lineno">  303</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#ae99d6a80a1f93dc0d08a97151810e18b">g_logger</a>)</div>
+<div class="line"><span class="lineno">  304</span>                &lt;&lt; <span class="stringliteral">&quot;RockMessageDecoder header version mismatch. &quot;</span></div>
+<div class="line"><span class="lineno">  305</span>                &lt;&lt; <span class="stringliteral">&quot;Expected version: 0x1, but found: &quot;</span> &lt;&lt; header.version;</div>
+<div class="line"><span class="lineno">  306</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  307</span>            }</div>
+<div class="line"><span class="lineno">  308</span> </div>
+<div class="line"><span class="lineno">  309</span>            header.length = <a class="code hl_function" href="namespaceGyanis_1_1base.html#aa2e357643627fbc99e9b4b37e1e97590">base::byteswapOnLittleEndian</a>(header.length);</div>
+<div class="line"><span class="lineno">  310</span>            <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(header.length) &gt;= <a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#a3617519a6d30ff6da72d008af8be7cca">g_rock_protocol_max_length</a>-&gt;getValue())</div>
+<div class="line"><span class="lineno">  311</span>            {</div>
+<div class="line"><span class="lineno">  312</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#ae99d6a80a1f93dc0d08a97151810e18b">g_logger</a>)</div>
+<div class="line"><span class="lineno">  313</span>                    &lt;&lt; <span class="stringliteral">&quot;RockMessageDecoder header length exceeds maximum allowed. &quot;</span></div>
+<div class="line"><span class="lineno">  314</span>                    &lt;&lt; <span class="stringliteral">&quot;Header length: &quot;</span> &lt;&lt; header.length</div>
+<div class="line"><span class="lineno">  315</span>                    &lt;&lt; <span class="stringliteral">&quot; | Maximum allowed length: &quot;</span> &lt;&lt; <a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#a3617519a6d30ff6da72d008af8be7cca">g_rock_protocol_max_length</a>-&gt;getValue();</div>
+<div class="line"><span class="lineno">  316</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  317</span>            }</div>
+<div class="line"><span class="lineno">  318</span>            <span class="keyword">auto</span> ba = std::make_shared&lt;stream::ByteArray&gt;();</div>
+<div class="line"><span class="lineno">  319</span>            <span class="keywordflow">if</span> (stream-&gt;readFixSize(ba, header.length) &lt;= 0)</div>
+<div class="line"><span class="lineno">  320</span>            {</div>
+<div class="line"><span class="lineno">  321</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#ae99d6a80a1f93dc0d08a97151810e18b">g_logger</a>)</div>
+<div class="line"><span class="lineno">  322</span>                   &lt;&lt; <span class="stringliteral">&quot;RockMessageDecoder failed to read body. &quot;</span></div>
+<div class="line"><span class="lineno">  323</span>                   &lt;&lt; <span class="stringliteral">&quot;Body length: &quot;</span> &lt;&lt; header.length</div>
+<div class="line"><span class="lineno">  324</span>                   &lt;&lt; <span class="stringliteral">&quot; | An error occurred while reading the message body.&quot;</span>;</div>
+<div class="line"><span class="lineno">  325</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  326</span>            }</div>
+<div class="line"><span class="lineno">  327</span> </div>
+<div class="line"><span class="lineno">  328</span>            ba-&gt;setPosition(0);</div>
+<div class="line"><span class="lineno">  329</span>            <span class="keywordflow">if</span> (header.flag &amp; 0x1)</div>
+<div class="line"><span class="lineno">  330</span>            {</div>
+<div class="line"><span class="lineno">  331</span>                <span class="keyword">const</span> <span class="keyword">auto</span> zstream = <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a7686750be87d7258375aaf885c738611">stream::ZlibStream::CreateGzip</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  332</span>                <span class="keywordflow">if</span> (zstream-&gt;write(ba, -1) != Z_OK)</div>
+<div class="line"><span class="lineno">  333</span>                {</div>
+<div class="line"><span class="lineno">  334</span>                    <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#ae99d6a80a1f93dc0d08a97151810e18b">g_logger</a>)</div>
+<div class="line"><span class="lineno">  335</span>                      &lt;&lt; <span class="stringliteral">&quot;RockMessageDecoder GZIP decompression failed. &quot;</span></div>
+<div class="line"><span class="lineno">  336</span>                      &lt;&lt; <span class="stringliteral">&quot;An error occurred while decompressing the data using GZIP.&quot;</span>;</div>
+<div class="line"><span class="lineno">  337</span>                    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  338</span>                }</div>
+<div class="line"><span class="lineno">  339</span>                <span class="keywordflow">if</span> (zstream-&gt;flush() != Z_OK)</div>
+<div class="line"><span class="lineno">  340</span>                {</div>
+<div class="line"><span class="lineno">  341</span>                    <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#ae99d6a80a1f93dc0d08a97151810e18b">g_logger</a>)</div>
+<div class="line"><span class="lineno">  342</span>                       &lt;&lt; <span class="stringliteral">&quot;RockMessageDecoder GZIP flush failed. &quot;</span></div>
+<div class="line"><span class="lineno">  343</span>                       &lt;&lt; <span class="stringliteral">&quot;An error occurred while flushing the decompressed data in GZIP format.&quot;</span>;</div>
+<div class="line"><span class="lineno">  344</span>                    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  345</span>                }</div>
+<div class="line"><span class="lineno">  346</span>                ba = zstream-&gt;getByteArray();</div>
+<div class="line"><span class="lineno">  347</span>            }</div>
+<div class="line"><span class="lineno">  348</span>            <span class="keyword">const</span> uint8_t type = ba-&gt;readFuint8();</div>
+<div class="line"><span class="lineno">  349</span>            std::shared_ptr&lt;protocol::Message&gt; msg;</div>
+<div class="line"><span class="lineno">  350</span>            <span class="keywordflow">switch</span> (type)</div>
+<div class="line"><span class="lineno">  351</span>            {</div>
+<div class="line"><span class="lineno">  352</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1protocol_1_1Message.html#ad6f9e6573261b9655ac0b396d05292d8a4afe521492bd248cc20af9bdc96e3955">protocol::Message::REQUEST</a>:</div>
+<div class="line"><span class="lineno">  353</span>                msg = std::make_shared&lt;RockRequest&gt;();</div>
+<div class="line"><span class="lineno">  354</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  355</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1protocol_1_1Message.html#ad6f9e6573261b9655ac0b396d05292d8a2354c2bef401fff1df816b0a03afd556">protocol::Message::RESPONSE</a>:</div>
+<div class="line"><span class="lineno">  356</span>                msg = std::make_shared&lt;RockResponse&gt;();</div>
+<div class="line"><span class="lineno">  357</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  358</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classGyanis_1_1net_1_1protocol_1_1Message.html#ad6f9e6573261b9655ac0b396d05292d8aa80f184b7812e8e1e8be9e33644dd4c3">protocol::Message::NOTIFY</a>:</div>
+<div class="line"><span class="lineno">  359</span>                msg = std::make_shared&lt;RockNotify&gt;();</div>
+<div class="line"><span class="lineno">  360</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  361</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  362</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#ae99d6a80a1f93dc0d08a97151810e18b">g_logger</a>)</div>
+<div class="line"><span class="lineno">  363</span>                    &lt;&lt; <span class="stringliteral">&quot;RockMessageDecoder received invalid type. &quot;</span></div>
+<div class="line"><span class="lineno">  364</span>                    &lt;&lt; <span class="stringliteral">&quot;Type value: &quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(type)</div>
+<div class="line"><span class="lineno">  365</span>                    &lt;&lt; <span class="stringliteral">&quot;. Please verify the message type.&quot;</span>;</div>
+<div class="line"><span class="lineno">  366</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  367</span>            }</div>
+<div class="line"><span class="lineno">  368</span> </div>
+<div class="line"><span class="lineno">  369</span>            <span class="keywordflow">if</span> (!msg-&gt;parseFromByteArray(ba))</div>
+<div class="line"><span class="lineno">  370</span>            {</div>
+<div class="line"><span class="lineno">  371</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#ae99d6a80a1f93dc0d08a97151810e18b">g_logger</a>)</div>
+<div class="line"><span class="lineno">  372</span>                    &lt;&lt; <span class="stringliteral">&quot;RockMessageDecoder deserialization failed. &quot;</span></div>
+<div class="line"><span class="lineno">  373</span>                    &lt;&lt; <span class="stringliteral">&quot;Invalid type: &quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(type)</div>
+<div class="line"><span class="lineno">  374</span>                    &lt;&lt; <span class="stringliteral">&quot;. An error occurred while parsing the byte array.&quot;</span>;</div>
+<div class="line"><span class="lineno">  375</span>                <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  376</span>            }</div>
+<div class="line"><span class="lineno">  377</span>            <span class="keywordflow">return</span> msg;</div>
+<div class="line"><span class="lineno">  378</span>        }</div>
+<div class="line"><span class="lineno">  379</span>        <span class="keywordflow">catch</span> (std::exception&amp; e)</div>
+<div class="line"><span class="lineno">  380</span>        {</div>
+<div class="line"><span class="lineno">  381</span>            <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#ae99d6a80a1f93dc0d08a97151810e18b">g_logger</a>)</div>
+<div class="line"><span class="lineno">  382</span>                &lt;&lt; <span class="stringliteral">&quot;RockMessageDecoder exception occurred. &quot;</span></div>
+<div class="line"><span class="lineno">  383</span>                &lt;&lt; <span class="stringliteral">&quot;Error details: &quot;</span> &lt;&lt; e.what();</div>
+<div class="line"><span class="lineno">  384</span>        } <span class="keywordflow">catch</span> (...)</div>
+<div class="line"><span class="lineno">  385</span>        {</div>
+<div class="line"><span class="lineno">  386</span>            <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#ae99d6a80a1f93dc0d08a97151810e18b">g_logger</a>)</div>
+<div class="line"><span class="lineno">  387</span>                &lt;&lt; <span class="stringliteral">&quot;RockMessageDecoder exception occurred. &quot;</span></div>
+<div class="line"><span class="lineno">  388</span>                &lt;&lt; <span class="stringliteral">&quot;An unexpected error has occurred during the decoding process.&quot;</span>;</div>
+<div class="line"><span class="lineno">  389</span>        }</div>
+<div class="line"><span class="lineno">  390</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  391</span>    }</div>
+<div class="ttc" id="aLog_8h_html_a80a932ee56f777358b3d82e5fa3203c8"><div class="ttname"><a href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a></div><div class="ttdeci">#define LOG_ERROR(logger)</div><div class="ttdoc">输出 error 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00046">Log.h:46</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1protocol_1_1Message_html_ad6f9e6573261b9655ac0b396d05292d8a2354c2bef401fff1df816b0a03afd556"><div class="ttname"><a href="classGyanis_1_1net_1_1protocol_1_1Message.html#ad6f9e6573261b9655ac0b396d05292d8a2354c2bef401fff1df816b0a03afd556">Gyanis::net::protocol::Message::RESPONSE</a></div><div class="ttdeci">@ RESPONSE</div><div class="ttdoc">响应类型</div><div class="ttdef"><b>Definition</b> <a href="Protocol_8h_source.html#l00026">Protocol.h:26</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1protocol_1_1Message_html_ad6f9e6573261b9655ac0b396d05292d8a4afe521492bd248cc20af9bdc96e3955"><div class="ttname"><a href="classGyanis_1_1net_1_1protocol_1_1Message.html#ad6f9e6573261b9655ac0b396d05292d8a4afe521492bd248cc20af9bdc96e3955">Gyanis::net::protocol::Message::REQUEST</a></div><div class="ttdeci">@ REQUEST</div><div class="ttdoc">请求类型</div><div class="ttdef"><b>Definition</b> <a href="Protocol_8h_source.html#l00025">Protocol.h:25</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1protocol_1_1Message_html_ad6f9e6573261b9655ac0b396d05292d8aa80f184b7812e8e1e8be9e33644dd4c3"><div class="ttname"><a href="classGyanis_1_1net_1_1protocol_1_1Message.html#ad6f9e6573261b9655ac0b396d05292d8aa80f184b7812e8e1e8be9e33644dd4c3">Gyanis::net::protocol::Message::NOTIFY</a></div><div class="ttdeci">@ NOTIFY</div><div class="ttdoc">通知类型</div><div class="ttdef"><b>Definition</b> <a href="Protocol_8h_source.html#l00028">Protocol.h:27</a></div></div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1stream_1_1ZlibStream_html_a7686750be87d7258375aaf885c738611"><div class="ttname"><a href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a7686750be87d7258375aaf885c738611">Gyanis::net::stream::ZlibStream::CreateGzip</a></div><div class="ttdeci">static std::shared_ptr&lt; ZlibStream &gt; CreateGzip(bool encode, uint32_t buff_size=4096)</div><div class="ttdoc">创建一个 Gzip 压缩流对象</div><div class="ttdef"><b>Definition</b> <a href="ZlibStream_8cpp_source.html#l00010">ZlibStream.cpp:10</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_aa2e357643627fbc99e9b4b37e1e97590"><div class="ttname"><a href="namespaceGyanis_1_1base.html#aa2e357643627fbc99e9b4b37e1e97590">Gyanis::base::byteswapOnLittleEndian</a></div><div class="ttdeci">T byteswapOnLittleEndian(T t)</div><div class="ttdoc">只在小端机器上执行 byteswap, 在大端机器上什么都不做</div><div class="ttdef"><b>Definition</b> <a href="Endian_8h_source.html#l00057">Endian.h:57</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1rock_html_a3617519a6d30ff6da72d008af8be7cca"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1rock.html#a3617519a6d30ff6da72d008af8be7cca">Gyanis::net::rock::g_rock_protocol_max_length</a></div><div class="ttdeci">static auto g_rock_protocol_max_length</div><div class="ttdef"><b>Definition</b> <a href="RockProtocol_8cpp_source.html#l00011">RockProtocol.cpp:12</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1rock_html_acc2581d8ce90a9bafe74aeb00fd05535"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1rock.html#acc2581d8ce90a9bafe74aeb00fd05535">Gyanis::net::rock::s_rock_magic</a></div><div class="ttdeci">static constexpr uint8_t s_rock_magic[2]</div><div class="ttdef"><b>Definition</b> <a href="RockProtocol_8cpp_source.html#l00223">RockProtocol.cpp:223</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1rock_html_ae99d6a80a1f93dc0d08a97151810e18b"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1rock.html#ae99d6a80a1f93dc0d08a97151810e18b">Gyanis::net::rock::g_logger</a></div><div class="ttdeci">static auto g_logger</div><div class="ttdef"><b>Definition</b> <a href="RockProtocol_8cpp_source.html#l00010">RockProtocol.cpp:10</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1rock_1_1RockMessageDecoder_adda07eb79e7afaad7d90b34c8a0d37bc_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1rock_1_1RockMessageDecoder_adda07eb79e7afaad7d90b34c8a0d37bc_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a3c3238e9292dadd4d6a2b1d8d8490ea9" name="a3c3238e9292dadd4d6a2b1d8d8490ea9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c3238e9292dadd4d6a2b1d8d8490ea9">&#9670;&#160;</a></span>serializeTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t Gyanis::net::rock::RockMessageDecoder::serializeTo </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1stream_1_1Stream.html">stream::Stream</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1protocol_1_1Message.html">protocol::Message</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将消息序列化到流中 <br  />
+ </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>目标流 <br  />
+ </td></tr>
+    <tr><td class="paramname">message</td><td>需要序列化的消息 <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回序列化的字节数 <br  />
+ </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="RockProtocol_8cpp_source.html">RockProtocol.cpp</a> 第 <a class="el" href="RockProtocol_8cpp_source.html#l00231">231</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  233</span>    {</div>
+<div class="line"><span class="lineno">  234</span>        RockMsgHeader header;</div>
+<div class="line"><span class="lineno">  235</span>        <span class="keyword">auto</span> byteArray = message-&gt;toByteArray();</div>
+<div class="line"><span class="lineno">  236</span>        byteArray-&gt;setPosition(0);</div>
+<div class="line"><span class="lineno">  237</span>        header.length = byteArray-&gt;getSize();</div>
+<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(header.length) &gt;= <a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#a51dcd8dd91b050865d64eb262f693601">g_rock_protocol_gzip_min_length</a>-&gt;getValue())</div>
+<div class="line"><span class="lineno">  239</span>        {</div>
+<div class="line"><span class="lineno">  240</span>            <span class="keyword">const</span> <span class="keyword">auto</span> zstream = <a class="code hl_function" href="classGyanis_1_1net_1_1stream_1_1ZlibStream.html#a7686750be87d7258375aaf885c738611">stream::ZlibStream::CreateGzip</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  241</span>            <span class="keywordflow">if</span> (zstream-&gt;write(byteArray, -1) != Z_OK)</div>
+<div class="line"><span class="lineno">  242</span>            {</div>
+<div class="line"><span class="lineno">  243</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#ae99d6a80a1f93dc0d08a97151810e18b">g_logger</a>)</div>
+<div class="line"><span class="lineno">  244</span>                    &lt;&lt; <span class="stringliteral">&quot;RockMessageDecoder serialization to GZIP failed. &quot;</span></div>
+<div class="line"><span class="lineno">  245</span>                    &lt;&lt; <span class="stringliteral">&quot;An error occurred while serializing the message to GZIP format.&quot;</span>;</div>
+<div class="line"><span class="lineno">  246</span> </div>
+<div class="line"><span class="lineno">  247</span>                <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  248</span>            }</div>
+<div class="line"><span class="lineno">  249</span>            <span class="keywordflow">if</span> (zstream-&gt;flush() != Z_OK)</div>
+<div class="line"><span class="lineno">  250</span>            {</div>
+<div class="line"><span class="lineno">  251</span>                <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#ae99d6a80a1f93dc0d08a97151810e18b">g_logger</a>)</div>
+<div class="line"><span class="lineno">  252</span>                    &lt;&lt; <span class="stringliteral">&quot;RockMessageDecoder GZIP flush failed. &quot;</span></div>
+<div class="line"><span class="lineno">  253</span>                    &lt;&lt; <span class="stringliteral">&quot;An error occurred while flushing the GZIP buffer.&quot;</span>;</div>
+<div class="line"><span class="lineno">  254</span>                <span class="keywordflow">return</span> -2;</div>
+<div class="line"><span class="lineno">  255</span>            }</div>
+<div class="line"><span class="lineno">  256</span> </div>
+<div class="line"><span class="lineno">  257</span>            byteArray = zstream-&gt;getByteArray();</div>
+<div class="line"><span class="lineno">  258</span>            header.flag |= 0x1;</div>
+<div class="line"><span class="lineno">  259</span>            header.length = byteArray-&gt;getSize();</div>
+<div class="line"><span class="lineno">  260</span>        }</div>
+<div class="line"><span class="lineno">  261</span>        header.length = <a class="code hl_function" href="namespaceGyanis_1_1base.html#aa2e357643627fbc99e9b4b37e1e97590">base::byteswapOnLittleEndian</a>(header.length);</div>
+<div class="line"><span class="lineno">  262</span>        <span class="keywordflow">if</span> (stream-&gt;writeFixSize(&amp;header, <span class="keyword">sizeof</span>(header)) &lt;= 0)</div>
+<div class="line"><span class="lineno">  263</span>        {</div>
+<div class="line"><span class="lineno">  264</span>            <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#ae99d6a80a1f93dc0d08a97151810e18b">g_logger</a>)</div>
+<div class="line"><span class="lineno">  265</span>                &lt;&lt; <span class="stringliteral">&quot;RockMessageDecoder header write failed. &quot;</span></div>
+<div class="line"><span class="lineno">  266</span>                &lt;&lt; <span class="stringliteral">&quot;An error occurred while writing the header during serialization.&quot;</span>;</div>
+<div class="line"><span class="lineno">  267</span>            <span class="keywordflow">return</span> -3;</div>
+<div class="line"><span class="lineno">  268</span>        }</div>
+<div class="line"><span class="lineno">  269</span>        <span class="keywordflow">if</span> (stream-&gt;writeFixSize(byteArray, byteArray-&gt;getReadSize()) &lt;= 0)</div>
+<div class="line"><span class="lineno">  270</span>        {</div>
+<div class="line"><span class="lineno">  271</span>            <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net_1_1rock.html#ae99d6a80a1f93dc0d08a97151810e18b">g_logger</a>)</div>
+<div class="line"><span class="lineno">  272</span>                &lt;&lt; <span class="stringliteral">&quot;RockMessageDecoder body write failed. &quot;</span></div>
+<div class="line"><span class="lineno">  273</span>                &lt;&lt; <span class="stringliteral">&quot;An error occurred while writing the body during serialization.&quot;</span>;</div>
+<div class="line"><span class="lineno">  274</span> </div>
+<div class="line"><span class="lineno">  275</span>            <span class="keywordflow">return</span> -4;</div>
+<div class="line"><span class="lineno">  276</span>        }</div>
+<div class="line"><span class="lineno">  277</span>        <span class="keywordflow">return</span> <span class="keyword">sizeof</span>(header) + byteArray-&gt;getSize();</div>
+<div class="line"><span class="lineno">  278</span>    }</div>
+<div class="ttc" id="anamespaceGyanis_1_1net_1_1rock_html_a51dcd8dd91b050865d64eb262f693601"><div class="ttname"><a href="namespaceGyanis_1_1net_1_1rock.html#a51dcd8dd91b050865d64eb262f693601">Gyanis::net::rock::g_rock_protocol_gzip_min_length</a></div><div class="ttdeci">static auto g_rock_protocol_gzip_min_length</div><div class="ttdef"><b>Definition</b> <a href="RockProtocol_8cpp_source.html#l00014">RockProtocol.cpp:15</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1rock_1_1RockMessageDecoder_a3c3238e9292dadd4d6a2b1d8d8490ea9_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1rock_1_1RockMessageDecoder_a3c3238e9292dadd4d6a2b1d8d8490ea9_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/net/rock/<a class="el" href="RockProtocol_8h_source.html">RockProtocol.h</a></li>
+<li>src/net/rock/<a class="el" href="RockProtocol_8cpp_source.html">RockProtocol.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGyanis.html">Gyanis</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1net.html">net</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1net_1_1rock.html">rock</a></li><li class="navelem"><a class="el" href="classGyanis_1_1net_1_1rock_1_1RockMessageDecoder.html">RockMessageDecoder</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

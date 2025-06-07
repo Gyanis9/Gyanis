@@ -1,0 +1,9 @@
+digraph "类继承关系图"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="Gyanis::core::ProcessInfo",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structGyanis_1_1core_1_1ProcessInfo.html",tooltip="用于保存进程的信息结构，包含父进程ID、主进程ID、启动时间和重启次数等信息。"];
+}

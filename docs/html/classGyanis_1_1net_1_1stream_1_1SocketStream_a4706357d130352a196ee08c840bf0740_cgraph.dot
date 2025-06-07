@@ -1,0 +1,11 @@
+digraph "Gyanis::net::stream::SocketStream::getRemoteAddressString"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="Gyanis::net::stream\l::SocketStream::getRemoteAddress\lString",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="获取远程地址的字符串表示"];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::net::stream\l::SocketStream::getRemoteAddress",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1stream_1_1SocketStream.html#a79f7237bac7923990394a8f4f72e071e",tooltip="获取远程地址"];
+}

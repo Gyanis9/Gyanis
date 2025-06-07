@@ -1,0 +1,849 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gyanis: Gyanis::net::IPv6Address类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gyanis
+   </div>
+   <div id="projectbrief">Gyanis 项目自动化文档生成</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classGyanis_1_1net_1_1IPv6Address.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classGyanis_1_1net_1_1IPv6Address-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Gyanis::net::IPv6Address类 参考<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>IPv6地址  
+ <a href="classGyanis_1_1net_1_1IPv6Address.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Address_8h_source.html">Address.h</a>&gt;</code></p>
+<div class="dynheader">
+类 Gyanis::net::IPv6Address 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1IPv6Address__inherit__graph.png" border="0" usemap="#aGyanis_1_1net_1_1IPv6Address_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+Gyanis::net::IPv6Address 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1IPv6Address__coll__graph.png" border="0" usemap="#aGyanis_1_1net_1_1IPv6Address_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:adbeda07b9203f61b2ce2c2ce0fa0b508" id="r_adbeda07b9203f61b2ce2c2ce0fa0b508"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1IPv6Address.html#adbeda07b9203f61b2ce2c2ce0fa0b508">IPv6Address</a> ()</td></tr>
+<tr class="memdesc:adbeda07b9203f61b2ce2c2ce0fa0b508"><td class="mdescLeft">&#160;</td><td class="mdescRight">无参构造函数  <br /></td></tr>
+<tr class="separator:adbeda07b9203f61b2ce2c2ce0fa0b508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40521bc1b313889993f1ffcc1a2fca88" id="r_a40521bc1b313889993f1ffcc1a2fca88"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1IPv6Address.html#a40521bc1b313889993f1ffcc1a2fca88">IPv6Address</a> (const sockaddr_in6 &amp;address)</td></tr>
+<tr class="memdesc:a40521bc1b313889993f1ffcc1a2fca88"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过sockaddr_in6构造IPv6Address  <br /></td></tr>
+<tr class="separator:a40521bc1b313889993f1ffcc1a2fca88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f4431e58d0c112d73c3654ef4acb49b" id="r_a2f4431e58d0c112d73c3654ef4acb49b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1IPv6Address.html#a2f4431e58d0c112d73c3654ef4acb49b">IPv6Address</a> (const uint8_t address[16], uint16_t port=0)</td></tr>
+<tr class="memdesc:a2f4431e58d0c112d73c3654ef4acb49b"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过IPv6二进制地址构造IPv6Address  <br /></td></tr>
+<tr class="separator:a2f4431e58d0c112d73c3654ef4acb49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff60fe500e92f036953c84ed5a3e551f" id="r_aff60fe500e92f036953c84ed5a3e551f"><td class="memItemLeft" align="right" valign="top">const sockaddr *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1IPv6Address.html#aff60fe500e92f036953c84ed5a3e551f">getSockAddr</a> () const override</td></tr>
+<tr class="memdesc:aff60fe500e92f036953c84ed5a3e551f"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回sockaddr指针,只读  <br /></td></tr>
+<tr class="separator:aff60fe500e92f036953c84ed5a3e551f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae30be6e4703ca0744a600413ed23d1c7" id="r_ae30be6e4703ca0744a600413ed23d1c7"><td class="memItemLeft" align="right" valign="top">sockaddr *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1IPv6Address.html#ae30be6e4703ca0744a600413ed23d1c7">getSockAddr</a> () override</td></tr>
+<tr class="memdesc:ae30be6e4703ca0744a600413ed23d1c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回sockaddr指针,读写  <br /></td></tr>
+<tr class="separator:ae30be6e4703ca0744a600413ed23d1c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32f2c92f4e644a3107e51d9dbeb78d8f" id="r_a32f2c92f4e644a3107e51d9dbeb78d8f"><td class="memItemLeft" align="right" valign="top">socklen_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1IPv6Address.html#a32f2c92f4e644a3107e51d9dbeb78d8f">getSockAddrLen</a> () const override</td></tr>
+<tr class="memdesc:a32f2c92f4e644a3107e51d9dbeb78d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回sockaddr的长度  <br /></td></tr>
+<tr class="separator:a32f2c92f4e644a3107e51d9dbeb78d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b027ef14a17bcbd0a80c965a0660d2a" id="r_a8b027ef14a17bcbd0a80c965a0660d2a"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1IPv6Address.html#a8b027ef14a17bcbd0a80c965a0660d2a">insert</a> (std::ostream &amp;os) const override</td></tr>
+<tr class="memdesc:a8b027ef14a17bcbd0a80c965a0660d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">可读性输出地址  <br /></td></tr>
+<tr class="separator:a8b027ef14a17bcbd0a80c965a0660d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4c582effe63c5e1e877f63e06a22904" id="r_aa4c582effe63c5e1e877f63e06a22904"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1IPAddress.html">IPAddress</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1IPv6Address.html#aa4c582effe63c5e1e877f63e06a22904">broadcastAddress</a> (uint32_t prefix_len) override</td></tr>
+<tr class="memdesc:aa4c582effe63c5e1e877f63e06a22904"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取该地址的广播地址  <br /></td></tr>
+<tr class="separator:aa4c582effe63c5e1e877f63e06a22904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab109b3557e7cae91bc3bb5fb3e009e" id="r_a4ab109b3557e7cae91bc3bb5fb3e009e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1IPAddress.html">IPAddress</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1IPv6Address.html#a4ab109b3557e7cae91bc3bb5fb3e009e">networdAddress</a> (uint32_t prefix_len) override</td></tr>
+<tr class="memdesc:a4ab109b3557e7cae91bc3bb5fb3e009e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取该地址的网段  <br /></td></tr>
+<tr class="separator:a4ab109b3557e7cae91bc3bb5fb3e009e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98a31a3d84aad55fe7e45c464982c59d" id="r_a98a31a3d84aad55fe7e45c464982c59d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1IPAddress.html">IPAddress</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1IPv6Address.html#a98a31a3d84aad55fe7e45c464982c59d">subnetMask</a> (uint32_t prefix_len) override</td></tr>
+<tr class="memdesc:a98a31a3d84aad55fe7e45c464982c59d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取子网掩码地址  <br /></td></tr>
+<tr class="separator:a98a31a3d84aad55fe7e45c464982c59d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ae9ceec4cbfeb302e0f49ff53749709" id="r_a4ae9ceec4cbfeb302e0f49ff53749709"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1IPv6Address.html#a4ae9ceec4cbfeb302e0f49ff53749709">getPort</a> () const override</td></tr>
+<tr class="memdesc:a4ae9ceec4cbfeb302e0f49ff53749709"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回端口号  <br /></td></tr>
+<tr class="separator:a4ae9ceec4cbfeb302e0f49ff53749709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dddcf27b707341bbf14f3c373b21456" id="r_a6dddcf27b707341bbf14f3c373b21456"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1IPv6Address.html#a6dddcf27b707341bbf14f3c373b21456">setPort</a> (uint16_t port) override</td></tr>
+<tr class="memdesc:a6dddcf27b707341bbf14f3c373b21456"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置端口号  <br /></td></tr>
+<tr class="separator:a6dddcf27b707341bbf14f3c373b21456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classGyanis_1_1net_1_1Address"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classGyanis_1_1net_1_1Address')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classGyanis_1_1net_1_1Address.html">Gyanis::net::Address</a></td></tr>
+<tr class="memitem:aa4e6a24805146003eef8d6ced61f80f1 inherit pub_methods_classGyanis_1_1net_1_1Address" id="r_aa4e6a24805146003eef8d6ced61f80f1"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1Address.html#aa4e6a24805146003eef8d6ced61f80f1">~Address</a> ()=default</td></tr>
+<tr class="memdesc:aa4e6a24805146003eef8d6ced61f80f1 inherit pub_methods_classGyanis_1_1net_1_1Address"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚析构函数  <br /></td></tr>
+<tr class="separator:aa4e6a24805146003eef8d6ced61f80f1 inherit pub_methods_classGyanis_1_1net_1_1Address"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b404b75c7781a749546b6ef0c752ef9 inherit pub_methods_classGyanis_1_1net_1_1Address" id="r_a8b404b75c7781a749546b6ef0c752ef9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1Address.html#a8b404b75c7781a749546b6ef0c752ef9">getFamily</a> () const</td></tr>
+<tr class="memdesc:a8b404b75c7781a749546b6ef0c752ef9 inherit pub_methods_classGyanis_1_1net_1_1Address"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回协议簇  <br /></td></tr>
+<tr class="separator:a8b404b75c7781a749546b6ef0c752ef9 inherit pub_methods_classGyanis_1_1net_1_1Address"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae8180b32f447707847ee532dbd4b6b9 inherit pub_methods_classGyanis_1_1net_1_1Address" id="r_aae8180b32f447707847ee532dbd4b6b9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1Address.html#aae8180b32f447707847ee532dbd4b6b9">toString</a> () const</td></tr>
+<tr class="memdesc:aae8180b32f447707847ee532dbd4b6b9 inherit pub_methods_classGyanis_1_1net_1_1Address"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回可读性字符串  <br /></td></tr>
+<tr class="separator:aae8180b32f447707847ee532dbd4b6b9 inherit pub_methods_classGyanis_1_1net_1_1Address"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2d8f251e76c2c2d3c751cb21abf1deb inherit pub_methods_classGyanis_1_1net_1_1Address" id="r_ab2d8f251e76c2c2d3c751cb21abf1deb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1Address.html#ab2d8f251e76c2c2d3c751cb21abf1deb">operator&lt;</a> (const <a class="el" href="classGyanis_1_1net_1_1Address.html">Address</a> &amp;other) const</td></tr>
+<tr class="memdesc:ab2d8f251e76c2c2d3c751cb21abf1deb inherit pub_methods_classGyanis_1_1net_1_1Address"><td class="mdescLeft">&#160;</td><td class="mdescRight">小于号比较函数  <br /></td></tr>
+<tr class="separator:ab2d8f251e76c2c2d3c751cb21abf1deb inherit pub_methods_classGyanis_1_1net_1_1Address"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf3b4d6ff32dbd55847f186cb97712bc inherit pub_methods_classGyanis_1_1net_1_1Address" id="r_adf3b4d6ff32dbd55847f186cb97712bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1Address.html#adf3b4d6ff32dbd55847f186cb97712bc">operator==</a> (const <a class="el" href="classGyanis_1_1net_1_1Address.html">Address</a> &amp;other) const</td></tr>
+<tr class="memdesc:adf3b4d6ff32dbd55847f186cb97712bc inherit pub_methods_classGyanis_1_1net_1_1Address"><td class="mdescLeft">&#160;</td><td class="mdescRight">等于函数  <br /></td></tr>
+<tr class="separator:adf3b4d6ff32dbd55847f186cb97712bc inherit pub_methods_classGyanis_1_1net_1_1Address"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8da857b6f8f25e67ba9a18d2ed4eab66 inherit pub_methods_classGyanis_1_1net_1_1Address" id="r_a8da857b6f8f25e67ba9a18d2ed4eab66"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1Address.html#a8da857b6f8f25e67ba9a18d2ed4eab66">operator!=</a> (const <a class="el" href="classGyanis_1_1net_1_1Address.html">Address</a> &amp;other) const</td></tr>
+<tr class="memdesc:a8da857b6f8f25e67ba9a18d2ed4eab66 inherit pub_methods_classGyanis_1_1net_1_1Address"><td class="mdescLeft">&#160;</td><td class="mdescRight">不等于函数  <br /></td></tr>
+<tr class="separator:a8da857b6f8f25e67ba9a18d2ed4eab66 inherit pub_methods_classGyanis_1_1net_1_1Address"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ae6d36c02e6e80b30c680e6440a75dec4" id="r_ae6d36c02e6e80b30c680e6440a75dec4"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1IPv6Address.html">IPv6Address</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1IPv6Address.html#ae6d36c02e6e80b30c680e6440a75dec4">Create</a> (const char *address, uint16_t port=0)</td></tr>
+<tr class="memdesc:ae6d36c02e6e80b30c680e6440a75dec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过IPv6地址字符串构造IPv6Address  <br /></td></tr>
+<tr class="separator:ae6d36c02e6e80b30c680e6440a75dec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_classGyanis_1_1net_1_1IPAddress"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classGyanis_1_1net_1_1IPAddress')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="classGyanis_1_1net_1_1IPAddress.html">Gyanis::net::IPAddress</a></td></tr>
+<tr class="memitem:a846aeb3649d35bc4214d2ddd284b690a inherit pub_static_methods_classGyanis_1_1net_1_1IPAddress" id="r_a846aeb3649d35bc4214d2ddd284b690a"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1IPAddress.html">IPAddress</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1IPAddress.html#a846aeb3649d35bc4214d2ddd284b690a">Create</a> (const char *address, uint16_t port=0)</td></tr>
+<tr class="memdesc:a846aeb3649d35bc4214d2ddd284b690a inherit pub_static_methods_classGyanis_1_1net_1_1IPAddress"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过域名、IP、服务器名创建IPAddress  <br /></td></tr>
+<tr class="separator:a846aeb3649d35bc4214d2ddd284b690a inherit pub_static_methods_classGyanis_1_1net_1_1IPAddress"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_classGyanis_1_1net_1_1Address"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classGyanis_1_1net_1_1Address')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="classGyanis_1_1net_1_1Address.html">Gyanis::net::Address</a></td></tr>
+<tr class="memitem:a66d51d78f038921ef3f98a4594fbaf1f inherit pub_static_methods_classGyanis_1_1net_1_1Address" id="r_a66d51d78f038921ef3f98a4594fbaf1f"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Address.html">Address</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1Address.html#a66d51d78f038921ef3f98a4594fbaf1f">Create</a> (const sockaddr *address, socklen_t addrLen)</td></tr>
+<tr class="memdesc:a66d51d78f038921ef3f98a4594fbaf1f inherit pub_static_methods_classGyanis_1_1net_1_1Address"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过sockaddr指针创建Address  <br /></td></tr>
+<tr class="separator:a66d51d78f038921ef3f98a4594fbaf1f inherit pub_static_methods_classGyanis_1_1net_1_1Address"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a358c272a2dd036cd19b7a72ab0b53cee inherit pub_static_methods_classGyanis_1_1net_1_1Address" id="r_a358c272a2dd036cd19b7a72ab0b53cee"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1Address.html#a358c272a2dd036cd19b7a72ab0b53cee">Lookup</a> (std::vector&lt; std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Address.html">Address</a> &gt; &gt; &amp;result, const std::string &amp;host, int family=AF_INET, int type=0, int protocol=0)</td></tr>
+<tr class="memdesc:a358c272a2dd036cd19b7a72ab0b53cee inherit pub_static_methods_classGyanis_1_1net_1_1Address"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过host地址返回对应条件的所有Address  <br /></td></tr>
+<tr class="separator:a358c272a2dd036cd19b7a72ab0b53cee inherit pub_static_methods_classGyanis_1_1net_1_1Address"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89340afcd322f4abc832616a49f2ea02 inherit pub_static_methods_classGyanis_1_1net_1_1Address" id="r_a89340afcd322f4abc832616a49f2ea02"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Address.html">Address</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1Address.html#a89340afcd322f4abc832616a49f2ea02">LookupAny</a> (const std::string &amp;host, int family=AF_INET, int type=0, int protocol=0)</td></tr>
+<tr class="memdesc:a89340afcd322f4abc832616a49f2ea02 inherit pub_static_methods_classGyanis_1_1net_1_1Address"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过host地址返回对应条件的任意Address  <br /></td></tr>
+<tr class="separator:a89340afcd322f4abc832616a49f2ea02 inherit pub_static_methods_classGyanis_1_1net_1_1Address"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70f317af77b86e5a2557442f3fb21e77 inherit pub_static_methods_classGyanis_1_1net_1_1Address" id="r_a70f317af77b86e5a2557442f3fb21e77"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1IPAddress.html">IPAddress</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1Address.html#a70f317af77b86e5a2557442f3fb21e77">LookupAnyIPAddress</a> (const std::string &amp;host, int family=AF_INET, int type=0, int protocol=0)</td></tr>
+<tr class="memdesc:a70f317af77b86e5a2557442f3fb21e77 inherit pub_static_methods_classGyanis_1_1net_1_1Address"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过host地址返回对应条件的任意IPAddress  <br /></td></tr>
+<tr class="separator:a70f317af77b86e5a2557442f3fb21e77 inherit pub_static_methods_classGyanis_1_1net_1_1Address"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f2719bc5fb5b34954231aafb5e14343 inherit pub_static_methods_classGyanis_1_1net_1_1Address" id="r_a0f2719bc5fb5b34954231aafb5e14343"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1Address.html#a0f2719bc5fb5b34954231aafb5e14343">GetInterfaceAddresses</a> (std::multimap&lt; std::string, std::pair&lt; std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Address.html">Address</a> &gt;, uint32_t &gt; &gt; &amp;result, int family=AF_INET)</td></tr>
+<tr class="memdesc:a0f2719bc5fb5b34954231aafb5e14343 inherit pub_static_methods_classGyanis_1_1net_1_1Address"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回本机所有网卡的&lt;网卡名, 地址, 子网掩码位数&gt;  <br /></td></tr>
+<tr class="separator:a0f2719bc5fb5b34954231aafb5e14343 inherit pub_static_methods_classGyanis_1_1net_1_1Address"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4efbbfba9a819e36cc5ec0377e86b3fd inherit pub_static_methods_classGyanis_1_1net_1_1Address" id="r_a4efbbfba9a819e36cc5ec0377e86b3fd"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1Address.html#a4efbbfba9a819e36cc5ec0377e86b3fd">GetInterfaceAddresses</a> (std::vector&lt; std::pair&lt; std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1Address.html">Address</a> &gt;, uint32_t &gt; &gt; &amp;result, const std::string &amp;iface, int family=AF_INET)</td></tr>
+<tr class="memdesc:a4efbbfba9a819e36cc5ec0377e86b3fd inherit pub_static_methods_classGyanis_1_1net_1_1Address"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定网卡的地址和子网掩码位数  <br /></td></tr>
+<tr class="separator:a4efbbfba9a819e36cc5ec0377e86b3fd inherit pub_static_methods_classGyanis_1_1net_1_1Address"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a672dd6b54209e54748d89b4241986b3a" id="r_a672dd6b54209e54748d89b4241986b3a"><td class="memItemLeft" align="right" valign="top">sockaddr_in6&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGyanis_1_1net_1_1IPv6Address.html#a672dd6b54209e54748d89b4241986b3a">m_address</a> {}</td></tr>
+<tr class="memdesc:a672dd6b54209e54748d89b4241986b3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv6 地址结构体  <br /></td></tr>
+<tr class="separator:a672dd6b54209e54748d89b4241986b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>IPv6地址 </p>
+
+<p class="definition">在文件 <a class="el" href="Address_8h_source.html">Address.h</a> 第 <a class="el" href="Address_8h_source.html#l00266">266</a> 行定义.</p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="adbeda07b9203f61b2ce2c2ce0fa0b508" name="adbeda07b9203f61b2ce2c2ce0fa0b508"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbeda07b9203f61b2ce2c2ce0fa0b508">&#9670;&#160;</a></span>IPv6Address() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gyanis::net::IPv6Address::IPv6Address </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>无参构造函数 </p>
+
+<p class="definition">在文件 <a class="el" href="Address_8cpp_source.html">Address.cpp</a> 第 <a class="el" href="Address_8cpp_source.html#l00425">425</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  426</span>    {</div>
+<div class="line"><span class="lineno">  427</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1IPv6Address.html#a672dd6b54209e54748d89b4241986b3a">m_address</a>.sin6_family = AF_INET6;</div>
+<div class="line"><span class="lineno">  428</span>    }</div>
+<div class="ttc" id="aclassGyanis_1_1net_1_1IPv6Address_html_a672dd6b54209e54748d89b4241986b3a"><div class="ttname"><a href="classGyanis_1_1net_1_1IPv6Address.html#a672dd6b54209e54748d89b4241986b3a">Gyanis::net::IPv6Address::m_address</a></div><div class="ttdeci">sockaddr_in6 m_address</div><div class="ttdoc">IPv6 地址结构体</div><div class="ttdef"><b>Definition</b> <a href="Address_8h_source.html#l00345">Address.h:345</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a40521bc1b313889993f1ffcc1a2fca88" name="a40521bc1b313889993f1ffcc1a2fca88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40521bc1b313889993f1ffcc1a2fca88">&#9670;&#160;</a></span>IPv6Address() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gyanis::net::IPv6Address::IPv6Address </td>
+          <td>(</td>
+          <td class="paramtype">const sockaddr_in6 &amp;&#160;</td>
+          <td class="paramname"><em>address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>通过sockaddr_in6构造IPv6Address </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td><code>sockaddr_in6</code> 结构体 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Address_8cpp_source.html">Address.cpp</a> 第 <a class="el" href="Address_8cpp_source.html#l00430">430</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  430</span>                                                       : <a class="code hl_variable" href="classGyanis_1_1net_1_1IPv6Address.html#a672dd6b54209e54748d89b4241986b3a">m_address</a>(address)</div>
+<div class="line"><span class="lineno">  431</span>    {</div>
+<div class="line"><span class="lineno">  432</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2f4431e58d0c112d73c3654ef4acb49b" name="a2f4431e58d0c112d73c3654ef4acb49b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f4431e58d0c112d73c3654ef4acb49b">&#9670;&#160;</a></span>IPv6Address() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gyanis::net::IPv6Address::IPv6Address </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t&#160;</td>
+          <td class="paramname"><em>address</em>[16], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>port</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>通过IPv6二进制地址构造IPv6Address </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td>IPv6 二进制地址 </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">port</td><td>端口号 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Address_8cpp_source.html">Address.cpp</a> 第 <a class="el" href="Address_8cpp_source.html#l00434">434</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  435</span>    {</div>
+<div class="line"><span class="lineno">  436</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1IPv6Address.html#a672dd6b54209e54748d89b4241986b3a">m_address</a>.sin6_family = AF_INET6;</div>
+<div class="line"><span class="lineno">  437</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1IPv6Address.html#a672dd6b54209e54748d89b4241986b3a">m_address</a>.sin6_port = <a class="code hl_function" href="namespaceGyanis_1_1base.html#aa2e357643627fbc99e9b4b37e1e97590">base::byteswapOnLittleEndian</a>(port);</div>
+<div class="line"><span class="lineno">  438</span>        memcpy(&amp;<a class="code hl_variable" href="classGyanis_1_1net_1_1IPv6Address.html#a672dd6b54209e54748d89b4241986b3a">m_address</a>.sin6_addr.s6_addr, address, 16);</div>
+<div class="line"><span class="lineno">  439</span>    }</div>
+<div class="ttc" id="anamespaceGyanis_1_1base_html_aa2e357643627fbc99e9b4b37e1e97590"><div class="ttname"><a href="namespaceGyanis_1_1base.html#aa2e357643627fbc99e9b4b37e1e97590">Gyanis::base::byteswapOnLittleEndian</a></div><div class="ttdeci">T byteswapOnLittleEndian(T t)</div><div class="ttdoc">只在小端机器上执行 byteswap, 在大端机器上什么都不做</div><div class="ttdef"><b>Definition</b> <a href="Endian_8h_source.html#l00057">Endian.h:57</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1IPv6Address_a2f4431e58d0c112d73c3654ef4acb49b_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1IPv6Address_a2f4431e58d0c112d73c3654ef4acb49b_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aa4c582effe63c5e1e877f63e06a22904" name="aa4c582effe63c5e1e877f63e06a22904"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4c582effe63c5e1e877f63e06a22904">&#9670;&#160;</a></span>broadcastAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1IPAddress.html">IPAddress</a> &gt; Gyanis::net::IPv6Address::broadcastAddress </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>prefix_len</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取该地址的广播地址 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">prefix_len</td><td>子网掩码位数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1net_1_1IPAddress.html#a61d0b54db42a9a585384ddfa854334e0">Gyanis::net::IPAddress</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Address_8cpp_source.html">Address.cpp</a> 第 <a class="el" href="Address_8cpp_source.html#l00488">488</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  489</span>    {</div>
+<div class="line"><span class="lineno">  490</span>        sockaddr_in6 baddr(<a class="code hl_variable" href="classGyanis_1_1net_1_1IPv6Address.html#a672dd6b54209e54748d89b4241986b3a">m_address</a>);</div>
+<div class="line"><span class="lineno">  491</span>        baddr.sin6_addr.s6_addr[prefix_len / 8] |=</div>
+<div class="line"><span class="lineno">  492</span>            CreateMask&lt;uint8_t&gt;(prefix_len % 8);</div>
+<div class="line"><span class="lineno">  493</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(prefix_len / 8) + 1; i &lt; 16; ++i)</div>
+<div class="line"><span class="lineno">  494</span>        {</div>
+<div class="line"><span class="lineno">  495</span>            baddr.sin6_addr.s6_addr[i] = 0xff;</div>
+<div class="line"><span class="lineno">  496</span>        }</div>
+<div class="line"><span class="lineno">  497</span>        <span class="keywordflow">return</span> std::make_shared&lt;IPv6Address&gt;(baddr);</div>
+<div class="line"><span class="lineno">  498</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae6d36c02e6e80b30c680e6440a75dec4" name="ae6d36c02e6e80b30c680e6440a75dec4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6d36c02e6e80b30c680e6440a75dec4">&#9670;&#160;</a></span>Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1IPv6Address.html">IPv6Address</a> &gt; Gyanis::net::IPv6Address::Create </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>port</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>通过IPv6地址字符串构造IPv6Address </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td>IPv6 地址字符串 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">port</td><td>端口号 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="Address_8cpp_source.html">Address.cpp</a> 第 <a class="el" href="Address_8cpp_source.html#l00409">409</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  410</span>    {</div>
+<div class="line"><span class="lineno">  411</span>        <span class="keyword">auto</span> rt = std::make_shared&lt;IPv6Address&gt;();</div>
+<div class="line"><span class="lineno">  412</span>        rt-&gt;m_address.sin6_port = <a class="code hl_function" href="namespaceGyanis_1_1base.html#aa2e357643627fbc99e9b4b37e1e97590">base::byteswapOnLittleEndian</a>(port);</div>
+<div class="line"><span class="lineno">  413</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keywordtype">int</span> result = inet_pton(AF_INET6, address, &amp;rt-&gt;m_address.sin6_addr); result &lt; 0)</div>
+<div class="line"><span class="lineno">  414</span>        {</div>
+<div class="line"><span class="lineno">  415</span>            <a class="code hl_define" href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a>(<a class="code hl_variable" href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">g_logger</a>)</div>
+<div class="line"><span class="lineno">  416</span>                &lt;&lt; <span class="stringliteral">&quot;IPv6Address::Create - failed. &quot;</span></div>
+<div class="line"><span class="lineno">  417</span>                &lt;&lt; <span class="stringliteral">&quot;Address: &quot;</span> &lt;&lt; address &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; port</div>
+<div class="line"><span class="lineno">  418</span>                &lt;&lt; <span class="stringliteral">&quot; | errno: &quot;</span> &lt;&lt; errno</div>
+<div class="line"><span class="lineno">  419</span>                &lt;&lt; <span class="stringliteral">&quot; | Error description: &quot;</span> &lt;&lt; strerror(errno);</div>
+<div class="line"><span class="lineno">  420</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  421</span>        }</div>
+<div class="line"><span class="lineno">  422</span>        <span class="keywordflow">return</span> rt;</div>
+<div class="line"><span class="lineno">  423</span>    }</div>
+<div class="ttc" id="aLog_8h_html_a80a932ee56f777358b3d82e5fa3203c8"><div class="ttname"><a href="Log_8h.html#a80a932ee56f777358b3d82e5fa3203c8">LOG_ERROR</a></div><div class="ttdeci">#define LOG_ERROR(logger)</div><div class="ttdoc">输出 error 级别日志</div><div class="ttdef"><b>Definition</b> <a href="Log_8h_source.html#l00046">Log.h:46</a></div></div>
+<div class="ttc" id="anamespaceGyanis_1_1net_html_aca537c66753087eb059d9c858122ede9"><div class="ttname"><a href="namespaceGyanis_1_1net.html#aca537c66753087eb059d9c858122ede9">Gyanis::net::g_logger</a></div><div class="ttdeci">static auto g_logger</div><div class="ttdef"><b>Definition</b> <a href="Address_8cpp_source.html#l00013">Address.cpp:13</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1IPv6Address_ae6d36c02e6e80b30c680e6440a75dec4_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1IPv6Address_ae6d36c02e6e80b30c680e6440a75dec4_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a4ae9ceec4cbfeb302e0f49ff53749709" name="a4ae9ceec4cbfeb302e0f49ff53749709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ae9ceec4cbfeb302e0f49ff53749709">&#9670;&#160;</a></span>getPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Gyanis::net::IPv6Address::getPort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回端口号 </p>
+
+<p>实现了 <a class="el" href="classGyanis_1_1net_1_1IPAddress.html#a9acff518b4f44dcc00b2323dad63f245">Gyanis::net::IPAddress</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Address_8cpp_source.html">Address.cpp</a> 第 <a class="el" href="Address_8cpp_source.html#l00526">526</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  527</span>    {</div>
+<div class="line"><span class="lineno">  528</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceGyanis_1_1base.html#aa2e357643627fbc99e9b4b37e1e97590">base::byteswapOnLittleEndian</a>(<a class="code hl_variable" href="classGyanis_1_1net_1_1IPv6Address.html#a672dd6b54209e54748d89b4241986b3a">m_address</a>.sin6_port);</div>
+<div class="line"><span class="lineno">  529</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1IPv6Address_a4ae9ceec4cbfeb302e0f49ff53749709_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1IPv6Address_a4ae9ceec4cbfeb302e0f49ff53749709_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aff60fe500e92f036953c84ed5a3e551f" name="aff60fe500e92f036953c84ed5a3e551f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff60fe500e92f036953c84ed5a3e551f">&#9670;&#160;</a></span>getSockAddr() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const sockaddr * Gyanis::net::IPv6Address::getSockAddr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回sockaddr指针,只读 </p>
+
+<p>实现了 <a class="el" href="classGyanis_1_1net_1_1Address.html#a5687f53a0075d5a187b6dea95a900ec1">Gyanis::net::Address</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Address_8cpp_source.html">Address.cpp</a> 第 <a class="el" href="Address_8cpp_source.html#l00441">441</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  442</span>    {</div>
+<div class="line"><span class="lineno">  443</span>        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>sockaddr*<span class="keyword">&gt;</span>(&amp;<a class="code hl_variable" href="classGyanis_1_1net_1_1IPv6Address.html#a672dd6b54209e54748d89b4241986b3a">m_address</a>);</div>
+<div class="line"><span class="lineno">  444</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae30be6e4703ca0744a600413ed23d1c7" name="ae30be6e4703ca0744a600413ed23d1c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae30be6e4703ca0744a600413ed23d1c7">&#9670;&#160;</a></span>getSockAddr() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sockaddr * Gyanis::net::IPv6Address::getSockAddr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回sockaddr指针,读写 </p>
+
+<p>实现了 <a class="el" href="classGyanis_1_1net_1_1Address.html#ac9a370828db82f8ea83910c659f20182">Gyanis::net::Address</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Address_8cpp_source.html">Address.cpp</a> 第 <a class="el" href="Address_8cpp_source.html#l00446">446</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  447</span>    {</div>
+<div class="line"><span class="lineno">  448</span>        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span>sockaddr*<span class="keyword">&gt;</span>(&amp;<a class="code hl_variable" href="classGyanis_1_1net_1_1IPv6Address.html#a672dd6b54209e54748d89b4241986b3a">m_address</a>);</div>
+<div class="line"><span class="lineno">  449</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a32f2c92f4e644a3107e51d9dbeb78d8f" name="a32f2c92f4e644a3107e51d9dbeb78d8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32f2c92f4e644a3107e51d9dbeb78d8f">&#9670;&#160;</a></span>getSockAddrLen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">socklen_t Gyanis::net::IPv6Address::getSockAddrLen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回sockaddr的长度 </p>
+
+<p>实现了 <a class="el" href="classGyanis_1_1net_1_1Address.html#a981c9cfe3cc534b111a93474434cd080">Gyanis::net::Address</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Address_8cpp_source.html">Address.cpp</a> 第 <a class="el" href="Address_8cpp_source.html#l00451">451</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  452</span>    {</div>
+<div class="line"><span class="lineno">  453</span>        <span class="keywordflow">return</span> <span class="keyword">sizeof</span>(<a class="code hl_variable" href="classGyanis_1_1net_1_1IPv6Address.html#a672dd6b54209e54748d89b4241986b3a">m_address</a>);</div>
+<div class="line"><span class="lineno">  454</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8b027ef14a17bcbd0a80c965a0660d2a" name="a8b027ef14a17bcbd0a80c965a0660d2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b027ef14a17bcbd0a80c965a0660d2a">&#9670;&#160;</a></span>insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; Gyanis::net::IPv6Address::insert </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>可读性输出地址 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>输出流 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>std::ostream&amp; 返回输出流 </dd></dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1net_1_1Address.html#a97e83f5e5e3efe8dd4029742fa5c90a0">Gyanis::net::Address</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Address_8cpp_source.html">Address.cpp</a> 第 <a class="el" href="Address_8cpp_source.html#l00456">456</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  457</span>    {</div>
+<div class="line"><span class="lineno">  458</span>        os &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
+<div class="line"><span class="lineno">  459</span>        <span class="keyword">const</span> <span class="keyword">auto</span>* addr = (uint16_t*)<a class="code hl_variable" href="classGyanis_1_1net_1_1IPv6Address.html#a672dd6b54209e54748d89b4241986b3a">m_address</a>.sin6_addr.s6_addr;</div>
+<div class="line"><span class="lineno">  460</span>        <span class="keywordtype">bool</span> used_zeros = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  461</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 8; ++i)</div>
+<div class="line"><span class="lineno">  462</span>        {</div>
+<div class="line"><span class="lineno">  463</span>            <span class="keywordflow">if</span> (addr[i] == 0 &amp;&amp; !used_zeros)</div>
+<div class="line"><span class="lineno">  464</span>            {</div>
+<div class="line"><span class="lineno">  465</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  466</span>            }</div>
+<div class="line"><span class="lineno">  467</span>            <span class="keywordflow">if</span> (i &amp;&amp; addr[i - 1] == 0 &amp;&amp; !used_zeros)</div>
+<div class="line"><span class="lineno">  468</span>            {</div>
+<div class="line"><span class="lineno">  469</span>                os &lt;&lt; <span class="stringliteral">&quot;:&quot;</span>;</div>
+<div class="line"><span class="lineno">  470</span>                used_zeros = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  471</span>            }</div>
+<div class="line"><span class="lineno">  472</span>            <span class="keywordflow">if</span> (i)</div>
+<div class="line"><span class="lineno">  473</span>            {</div>
+<div class="line"><span class="lineno">  474</span>                os &lt;&lt; <span class="stringliteral">&quot;:&quot;</span>;</div>
+<div class="line"><span class="lineno">  475</span>            }</div>
+<div class="line"><span class="lineno">  476</span>            os &lt;&lt; std::hex &lt;&lt; static_cast&lt;int&gt;(<a class="code hl_function" href="namespaceGyanis_1_1base.html#aa2e357643627fbc99e9b4b37e1e97590">base::byteswapOnLittleEndian</a>(addr[i])) &lt;&lt; std::dec;</div>
+<div class="line"><span class="lineno">  477</span>        }</div>
+<div class="line"><span class="lineno">  478</span> </div>
+<div class="line"><span class="lineno">  479</span>        <span class="keywordflow">if</span> (!used_zeros &amp;&amp; addr[7] == 0)</div>
+<div class="line"><span class="lineno">  480</span>        {</div>
+<div class="line"><span class="lineno">  481</span>            os &lt;&lt; <span class="stringliteral">&quot;::&quot;</span>;</div>
+<div class="line"><span class="lineno">  482</span>        }</div>
+<div class="line"><span class="lineno">  483</span> </div>
+<div class="line"><span class="lineno">  484</span>        os &lt;&lt; <span class="stringliteral">&quot;]:&quot;</span> &lt;&lt; <a class="code hl_function" href="namespaceGyanis_1_1base.html#aa2e357643627fbc99e9b4b37e1e97590">base::byteswapOnLittleEndian</a>(<a class="code hl_variable" href="classGyanis_1_1net_1_1IPv6Address.html#a672dd6b54209e54748d89b4241986b3a">m_address</a>.sin6_port);</div>
+<div class="line"><span class="lineno">  485</span>        <span class="keywordflow">return</span> os;</div>
+<div class="line"><span class="lineno">  486</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1IPv6Address_a8b027ef14a17bcbd0a80c965a0660d2a_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1IPv6Address_a8b027ef14a17bcbd0a80c965a0660d2a_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a4ab109b3557e7cae91bc3bb5fb3e009e" name="a4ab109b3557e7cae91bc3bb5fb3e009e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab109b3557e7cae91bc3bb5fb3e009e">&#9670;&#160;</a></span>networdAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1IPAddress.html">IPAddress</a> &gt; Gyanis::net::IPv6Address::networdAddress </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>prefix_len</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取该地址的网段 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">prefix_len</td><td>子网掩码位数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1net_1_1IPAddress.html#a129ad5cea660adead46bb872b5511180">Gyanis::net::IPAddress</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Address_8cpp_source.html">Address.cpp</a> 第 <a class="el" href="Address_8cpp_source.html#l00500">500</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  501</span>    {</div>
+<div class="line"><span class="lineno">  502</span>        sockaddr_in6 baddr(<a class="code hl_variable" href="classGyanis_1_1net_1_1IPv6Address.html#a672dd6b54209e54748d89b4241986b3a">m_address</a>);</div>
+<div class="line"><span class="lineno">  503</span>        baddr.sin6_addr.s6_addr[prefix_len / 8] &amp;=</div>
+<div class="line"><span class="lineno">  504</span>            CreateMask&lt;uint8_t&gt;(prefix_len % 8);</div>
+<div class="line"><span class="lineno">  505</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(prefix_len / 8 + 1); i &lt; 16; ++i)</div>
+<div class="line"><span class="lineno">  506</span>        {</div>
+<div class="line"><span class="lineno">  507</span>            baddr.sin6_addr.s6_addr[i] = 0x00;</div>
+<div class="line"><span class="lineno">  508</span>        }</div>
+<div class="line"><span class="lineno">  509</span>        <span class="keywordflow">return</span> std::make_shared&lt;IPv6Address&gt;(baddr);</div>
+<div class="line"><span class="lineno">  510</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6dddcf27b707341bbf14f3c373b21456" name="a6dddcf27b707341bbf14f3c373b21456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dddcf27b707341bbf14f3c373b21456">&#9670;&#160;</a></span>setPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gyanis::net::IPv6Address::setPort </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>port</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置端口号 </p>
+
+<p>实现了 <a class="el" href="classGyanis_1_1net_1_1IPAddress.html#a0108fc1d7b7357886d94fe664f5ef810">Gyanis::net::IPAddress</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Address_8cpp_source.html">Address.cpp</a> 第 <a class="el" href="Address_8cpp_source.html#l00531">531</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  532</span>    {</div>
+<div class="line"><span class="lineno">  533</span>        <a class="code hl_variable" href="classGyanis_1_1net_1_1IPv6Address.html#a672dd6b54209e54748d89b4241986b3a">m_address</a>.sin6_port = <a class="code hl_function" href="namespaceGyanis_1_1base.html#aa2e357643627fbc99e9b4b37e1e97590">base::byteswapOnLittleEndian</a>(port);</div>
+<div class="line"><span class="lineno">  534</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGyanis_1_1net_1_1IPv6Address_a6dddcf27b707341bbf14f3c373b21456_cgraph.png" border="0" usemap="#aclassGyanis_1_1net_1_1IPv6Address_a6dddcf27b707341bbf14f3c373b21456_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a98a31a3d84aad55fe7e45c464982c59d" name="a98a31a3d84aad55fe7e45c464982c59d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98a31a3d84aad55fe7e45c464982c59d">&#9670;&#160;</a></span>subnetMask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classGyanis_1_1net_1_1IPAddress.html">IPAddress</a> &gt; Gyanis::net::IPv6Address::subnetMask </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>prefix_len</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取子网掩码地址 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">prefix_len</td><td>子网掩码位数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classGyanis_1_1net_1_1IPAddress.html#a6b5cb4e2cfb16e5abdf0f2da0d436a31">Gyanis::net::IPAddress</a>.</p>
+
+<p class="definition">在文件 <a class="el" href="Address_8cpp_source.html">Address.cpp</a> 第 <a class="el" href="Address_8cpp_source.html#l00512">512</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  513</span>    {</div>
+<div class="line"><span class="lineno">  514</span>        sockaddr_in6 subnet = {};</div>
+<div class="line"><span class="lineno">  515</span>        subnet.sin6_family = AF_INET6;</div>
+<div class="line"><span class="lineno">  516</span>        subnet.sin6_addr.s6_addr[prefix_len / 8] =</div>
+<div class="line"><span class="lineno">  517</span>            ~CreateMask&lt;uint8_t&gt;(prefix_len % 8);</div>
+<div class="line"><span class="lineno">  518</span> </div>
+<div class="line"><span class="lineno">  519</span>        <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; prefix_len / 8; ++i)</div>
+<div class="line"><span class="lineno">  520</span>        {</div>
+<div class="line"><span class="lineno">  521</span>            subnet.sin6_addr.s6_addr[i] = 0xff;</div>
+<div class="line"><span class="lineno">  522</span>        }</div>
+<div class="line"><span class="lineno">  523</span>        <span class="keywordflow">return</span> std::make_shared&lt;IPv6Address&gt;(subnet);</div>
+<div class="line"><span class="lineno">  524</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a672dd6b54209e54748d89b4241986b3a" name="a672dd6b54209e54748d89b4241986b3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a672dd6b54209e54748d89b4241986b3a">&#9670;&#160;</a></span>m_address</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sockaddr_in6 Gyanis::net::IPv6Address::m_address {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>IPv6 地址结构体 </p>
+
+<p class="definition">在文件 <a class="el" href="Address_8h_source.html">Address.h</a> 第 <a class="el" href="Address_8h_source.html#l00345">345</a> 行定义.</p>
+<div class="fragment"><div class="line"><span class="lineno">  345</span>{}; </div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>include/net/<a class="el" href="Address_8h_source.html">Address.h</a></li>
+<li>src/net/<a class="el" href="Address_8cpp_source.html">Address.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceGyanis.html">Gyanis</a></li><li class="navelem"><a class="el" href="namespaceGyanis_1_1net.html">net</a></li><li class="navelem"><a class="el" href="classGyanis_1_1net_1_1IPv6Address.html">IPv6Address</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

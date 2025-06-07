@@ -1,0 +1,25 @@
+digraph "类继承关系图"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
+  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="Gyanis::net::http::\lServlet",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1Servlet.html",tooltip="Servlet 基类"];
+  Node0 -> Node1 [id="edge22_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 [id="Node000001",label="Gyanis::net::http::\lConfigServlet",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1ConfigServlet.html",tooltip="配置管理 Servlet"];
+  Node0 -> Node2 [id="edge23_Node000000_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Gyanis::net::http::\lFunctionServlet",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1FunctionServlet.html",tooltip="基于回调函数的 Servlet 实现"];
+  Node0 -> Node3 [id="edge24_Node000000_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Gyanis::net::http::\lNotFoundServlet",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1NotFoundServlet.html",tooltip="404 错误响应 Servlet"];
+  Node0 -> Node4 [id="edge25_Node000000_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Gyanis::net::http::\lServletDispatch",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1ServletDispatch.html",tooltip="Servlet 调度器"];
+  Node4 -> Node5 [id="edge26_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="Gyanis::net::http::\lWSServletDispatch",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1WSServletDispatch.html",tooltip="WebSocket Servlet 分发器类，用于管理和调度多个 WebSocket Servlet 它允许将请求分发到适当的 FunctionWSServlet 实例"];
+  Node0 -> Node6 [id="edge27_Node000000_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="Gyanis::net::http::\lStatusServlet",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1StatusServlet.html",tooltip="该类继承自 Servlet，用于处理与系统状态相关的 HTTP 请求"];
+  Node0 -> Node7 [id="edge28_Node000000_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="Gyanis::net::http::\lWSServlet",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1WSServlet.html",tooltip="WebSocket Servlet 基类，用于处理 WebSocket 连接的握手、消息收发和关闭"];
+  Node7 -> Node8 [id="edge29_Node000007_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="Gyanis::net::http::\lFunctionWSServlet",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1FunctionWSServlet.html",tooltip="WebSocket Servlet 的函数实现类，通过回调函数处理 WebSocket 连接、关闭和消息 该类允许用户自定义处理 WebSocket 连接、关闭以及消息接收的逻辑"];
+}

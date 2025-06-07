@@ -1,5 +1,5 @@
 
-#line 1 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 1 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 /**
  *
  * Copyright (c) 2010, Zed A. Shaw and Mongrel2 Project Contributors.
@@ -48,12 +48,12 @@
 /** Machine **/
 
 
-#line 256 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 256 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 
 
 /** Data **/
 
-#line 52 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 52 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 static const int http_parser_start = 1;
 static const int http_parser_first_final = 354;
 static const int http_parser_error = 0;
@@ -61,17 +61,17 @@ static const int http_parser_error = 0;
 static const int http_parser_en_main = 1;
 
 
-#line 260 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 260 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 
 int http_parser_init(http_parser *parser) {
   int cs = 0;
   
-#line 61 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 61 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	{
 	cs = http_parser_start;
 	}
 
-#line 264 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 264 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
   parser->cs = cs;
   parser->body_start = 0;
   parser->content_len = 0;
@@ -106,7 +106,7 @@ size_t http_parser_execute(http_parser *parser, const char *buffer, size_t len, 
   assert(pe - p == (int)len - (int)off && "pointers aren't same distance");
 
   
-#line 97 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 97 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	{
 	short _widec;
 	if ( p == pe )
@@ -128,14 +128,14 @@ st0:
 cs = 0;
 	goto _out;
 tr0:
-#line 52 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 52 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{MARK(mark, p); }
 	goto st2;
 st2:
 	if ( ++p == pe )
 		goto _test_eof2;
 case 2:
-#line 124 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 124 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	if ( (*p) == 32 )
 		goto tr4;
 	if ( (*p) > 57 ) {
@@ -145,7 +145,7 @@ case 2:
 		goto st178;
 	goto st0;
 tr4:
-#line 68 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 68 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->request_method != NULL)
       parser->request_method(parser->data, PTR_TO(mark), LEN(mark, p));
@@ -155,26 +155,26 @@ st3:
 	if ( ++p == pe )
 		goto _test_eof3;
 case 3:
-#line 142 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 142 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	_widec = (*p);
 	if ( (*p) < 123 ) {
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -203,33 +203,33 @@ case 3:
 		goto tr7;
 	goto st0;
 tr6:
-#line 52 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 52 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{MARK(mark, p); }
 	goto st4;
 st4:
 	if ( ++p == pe )
 		goto _test_eof4;
 case 4:
-#line 192 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 192 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	_widec = (*p);
 	if ( (*p) < 123 ) {
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -261,54 +261,54 @@ case 4:
 		goto st4;
 	goto st0;
 tr12:
-#line 94 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 94 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->request_path != NULL)
       parser->request_path(parser->data, PTR_TO(mark), LEN(mark,p));
   }
-#line 73 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 73 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->request_uri != NULL)
       parser->request_uri(parser->data, PTR_TO(mark), LEN(mark, p));
   }
 	goto st5;
 tr41:
-#line 52 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 52 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{MARK(mark, p); }
-#line 78 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 78 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->fragment != NULL)
       parser->fragment(parser->data, PTR_TO(mark), LEN(mark, p));
   }
 	goto st5;
 tr44:
-#line 78 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 78 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->fragment != NULL)
       parser->fragment(parser->data, PTR_TO(mark), LEN(mark, p));
   }
 	goto st5;
 tr49:
-#line 83 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 83 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{MARK(query_start, p); }
-#line 84 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 84 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->query_string != NULL)
       parser->query_string(parser->data, PTR_TO(query_start), LEN(query_start, p));
   }
-#line 73 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 73 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->request_uri != NULL)
       parser->request_uri(parser->data, PTR_TO(mark), LEN(mark, p));
   }
 	goto st5;
 tr53:
-#line 84 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 84 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->query_string != NULL)
       parser->query_string(parser->data, PTR_TO(query_start), LEN(query_start, p));
   }
-#line 73 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 73 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->request_uri != NULL)
       parser->request_uri(parser->data, PTR_TO(mark), LEN(mark, p));
@@ -318,19 +318,19 @@ st5:
 	if ( ++p == pe )
 		goto _test_eof5;
 case 5:
-#line 286 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 286 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	if ( (*p) == 72 )
 		goto tr16;
 	goto st0;
 tr16:
-#line 52 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 52 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{MARK(mark, p); }
 	goto st6;
 st6:
 	if ( ++p == pe )
 		goto _test_eof6;
 case 6:
-#line 296 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 296 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	if ( (*p) == 84 )
 		goto st7;
 	goto st0;
@@ -386,16 +386,16 @@ case 13:
 	}
 	goto st0;
 tr24:
-#line 89 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 89 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->http_version != NULL)
       parser->http_version(parser->data, PTR_TO(mark), LEN(mark, p));
   }
 	goto st14;
 tr33:
-#line 60 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 60 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{ MARK(mark, p); }
-#line 62 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 62 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->http_field != NULL) {
       parser->http_field(parser->data, PTR_TO(field_start), parser->field_len, PTR_TO(mark), LEN(mark, p));
@@ -403,7 +403,7 @@ tr33:
   }
 	goto st14;
 tr36:
-#line 62 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 62 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->http_field != NULL) {
       parser->http_field(parser->data, PTR_TO(field_start), parser->field_len, PTR_TO(mark), LEN(mark, p));
@@ -414,7 +414,7 @@ st14:
 	if ( ++p == pe )
 		goto _test_eof14;
 case 14:
-#line 375 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 375 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	switch( (*p) ) {
 		case 10: goto tr27;
 		case 13: goto tr28;
@@ -447,14 +447,14 @@ case 14:
 		goto tr26;
 	goto st0;
 tr26:
-#line 55 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 55 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{ MARK(field_start, p); }
 	goto st15;
 st15:
 	if ( ++p == pe )
 		goto _test_eof15;
 case 15:
-#line 413 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 413 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	switch( (*p) ) {
 		case 33: goto st15;
 		case 58: goto tr30;
@@ -486,20 +486,20 @@ case 15:
 		goto st15;
 	goto st0;
 tr30:
-#line 56 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 56 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     parser->field_len = LEN(field_start, p);
   }
 	goto st16;
 tr32:
-#line 60 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 60 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{ MARK(mark, p); }
 	goto st16;
 st16:
 	if ( ++p == pe )
 		goto _test_eof16;
 case 16:
-#line 455 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 455 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	switch( (*p) ) {
 		case 0: goto st0;
 		case 9: goto tr32;
@@ -510,14 +510,14 @@ case 16:
 	}
 	goto tr31;
 tr31:
-#line 60 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 60 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{ MARK(mark, p); }
 	goto st17;
 st17:
 	if ( ++p == pe )
 		goto _test_eof17;
 case 17:
-#line 471 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 471 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	switch( (*p) ) {
 		case 0: goto st0;
 		case 10: goto tr36;
@@ -526,16 +526,16 @@ case 17:
 	}
 	goto st17;
 tr25:
-#line 89 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 89 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->http_version != NULL)
       parser->http_version(parser->data, PTR_TO(mark), LEN(mark, p));
   }
 	goto st18;
 tr34:
-#line 60 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 60 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{ MARK(mark, p); }
-#line 62 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 62 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->http_field != NULL) {
       parser->http_field(parser->data, PTR_TO(field_start), parser->field_len, PTR_TO(mark), LEN(mark, p));
@@ -543,7 +543,7 @@ tr34:
   }
 	goto st18;
 tr37:
-#line 62 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 62 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->http_field != NULL) {
       parser->http_field(parser->data, PTR_TO(field_start), parser->field_len, PTR_TO(mark), LEN(mark, p));
@@ -554,14 +554,14 @@ st18:
 	if ( ++p == pe )
 		goto _test_eof18;
 case 18:
-#line 503 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 503 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	if ( (*p) == 10 )
 		goto st14;
 	goto st0;
 tr27:
-#line 55 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 55 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{ MARK(field_start, p); }
-#line 99 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 99 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
       if(parser->xml_sent || parser->json_sent) {
         parser->body_start = PTR_TO(mark) - buffer;
@@ -578,7 +578,7 @@ tr27:
   }
 	goto st354;
 tr39:
-#line 99 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 99 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
       if(parser->xml_sent || parser->json_sent) {
         parser->body_start = PTR_TO(mark) - buffer;
@@ -598,7 +598,7 @@ st354:
 	if ( ++p == pe )
 		goto _test_eof354;
 case 354:
-#line 543 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 543 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	switch( (*p) ) {
 		case 33: goto st15;
 		case 58: goto tr30;
@@ -630,14 +630,14 @@ case 354:
 		goto st15;
 	goto st0;
 tr28:
-#line 55 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 55 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{ MARK(field_start, p); }
 	goto st19;
 st19:
 	if ( ++p == pe )
 		goto _test_eof19;
 case 19:
-#line 580 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 580 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	switch( (*p) ) {
 		case 10: goto tr39;
 		case 33: goto st15;
@@ -670,38 +670,38 @@ case 19:
 		goto st15;
 	goto st0;
 tr13:
-#line 94 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 94 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->request_path != NULL)
       parser->request_path(parser->data, PTR_TO(mark), LEN(mark,p));
   }
-#line 73 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 73 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->request_uri != NULL)
       parser->request_uri(parser->data, PTR_TO(mark), LEN(mark, p));
   }
 	goto st20;
 tr50:
-#line 83 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 83 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{MARK(query_start, p); }
-#line 84 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 84 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->query_string != NULL)
       parser->query_string(parser->data, PTR_TO(query_start), LEN(query_start, p));
   }
-#line 73 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 73 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->request_uri != NULL)
       parser->request_uri(parser->data, PTR_TO(mark), LEN(mark, p));
   }
 	goto st20;
 tr54:
-#line 84 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 84 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->query_string != NULL)
       parser->query_string(parser->data, PTR_TO(query_start), LEN(query_start, p));
   }
-#line 73 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 73 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->request_uri != NULL)
       parser->request_uri(parser->data, PTR_TO(mark), LEN(mark, p));
@@ -711,26 +711,26 @@ st20:
 	if ( ++p == pe )
 		goto _test_eof20;
 case 20:
-#line 646 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 646 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	_widec = (*p);
 	if ( (*p) < 123 ) {
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -757,33 +757,33 @@ case 20:
 		goto tr40;
 	goto st0;
 tr40:
-#line 52 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 52 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{MARK(mark, p); }
 	goto st21;
 st21:
 	if ( ++p == pe )
 		goto _test_eof21;
 case 21:
-#line 694 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 694 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	_widec = (*p);
 	if ( (*p) < 123 ) {
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -810,14 +810,14 @@ case 21:
 		goto st21;
 	goto st0;
 tr42:
-#line 52 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 52 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{MARK(mark, p); }
 	goto st22;
 st22:
 	if ( ++p == pe )
 		goto _test_eof22;
 case 22:
-#line 742 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 742 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	if ( (*p) < 65 ) {
 		if ( 48 <= (*p) && (*p) <= 57 )
 			goto st23;
@@ -867,7 +867,7 @@ case 25:
 		goto st4;
 	goto st0;
 tr15:
-#line 94 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 94 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->request_path != NULL)
       parser->request_path(parser->data, PTR_TO(mark), LEN(mark,p));
@@ -877,26 +877,26 @@ st26:
 	if ( ++p == pe )
 		goto _test_eof26;
 case 26:
-#line 800 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 800 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	_widec = (*p);
 	if ( (*p) < 123 ) {
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -924,33 +924,33 @@ case 26:
 		goto tr48;
 	goto st0;
 tr48:
-#line 83 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 83 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{MARK(query_start, p); }
 	goto st27;
 st27:
 	if ( ++p == pe )
 		goto _test_eof27;
 case 27:
-#line 849 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 849 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	_widec = (*p);
 	if ( (*p) < 123 ) {
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -978,14 +978,14 @@ case 27:
 		goto st27;
 	goto st0;
 tr51:
-#line 83 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 83 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{MARK(query_start, p); }
 	goto st28;
 st28:
 	if ( ++p == pe )
 		goto _test_eof28;
 case 28:
-#line 898 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 898 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	if ( (*p) < 65 ) {
 		if ( 48 <= (*p) && (*p) <= 57 )
 			goto st29;
@@ -1009,33 +1009,33 @@ case 29:
 		goto st27;
 	goto st0;
 tr7:
-#line 52 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 52 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{MARK(mark, p); }
 	goto st30;
 st30:
 	if ( ++p == pe )
 		goto _test_eof30;
 case 30:
-#line 927 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 927 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	_widec = (*p);
 	if ( (*p) < 123 ) {
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -1066,14 +1066,14 @@ case 30:
 		goto st30;
 	goto st0;
 tr8:
-#line 52 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 52 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{MARK(mark, p); }
 	goto st31;
 st31:
 	if ( ++p == pe )
 		goto _test_eof31;
 case 31:
-#line 979 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 979 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	if ( (*p) < 65 ) {
 		if ( 48 <= (*p) && (*p) <= 57 )
 			goto st32;
@@ -1097,33 +1097,33 @@ case 32:
 		goto st30;
 	goto st0;
 tr204:
-#line 52 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 52 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{MARK(mark, p); }
 	goto st33;
 st33:
 	if ( ++p == pe )
 		goto _test_eof33;
 case 33:
-#line 1008 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 1008 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	_widec = (*p);
 	if ( (*p) < 123 ) {
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -1152,14 +1152,14 @@ case 33:
 		goto st33;
 	goto st0;
 tr205:
-#line 52 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 52 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{MARK(mark, p); }
 	goto st34;
 st34:
 	if ( ++p == pe )
 		goto _test_eof34;
 case 34:
-#line 1058 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 1058 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	if ( (*p) < 65 ) {
 		if ( 48 <= (*p) && (*p) <= 57 )
 			goto st35;
@@ -1183,33 +1183,33 @@ case 35:
 		goto st33;
 	goto st0;
 tr9:
-#line 52 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 52 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{MARK(mark, p); }
 	goto st36;
 st36:
 	if ( ++p == pe )
 		goto _test_eof36;
 case 36:
-#line 1087 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 1087 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	_widec = (*p);
 	if ( (*p) < 123 ) {
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -1247,20 +1247,20 @@ case 37:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -1298,20 +1298,20 @@ case 38:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -1374,20 +1374,20 @@ case 41:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -1429,20 +1429,20 @@ case 42:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -1503,20 +1503,20 @@ case 45:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -1553,20 +1553,20 @@ case 46:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -3347,20 +3347,20 @@ case 174:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -3394,20 +3394,20 @@ case 175:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -3434,33 +3434,33 @@ case 175:
 		goto st175;
 	goto st0;
 tr10:
-#line 52 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 52 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{MARK(mark, p); }
 	goto st176;
 st176:
 	if ( ++p == pe )
 		goto _test_eof176;
 case 176:
-#line 3309 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 3309 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	_widec = (*p);
 	if ( (*p) < 123 ) {
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -3505,20 +3505,20 @@ case 177:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -3771,14 +3771,14 @@ case 196:
 		goto tr4;
 	goto st0;
 tr2:
-#line 52 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 52 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{MARK(mark, p); }
 	goto st197;
 st197:
 	if ( ++p == pe )
 		goto _test_eof197;
 case 197:
-#line 3638 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 3638 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	if ( (*p) < 48 ) {
 		if ( 45 <= (*p) && (*p) <= 46 )
 			goto st198;
@@ -3813,7 +3813,7 @@ case 198:
 		goto st198;
 	goto st0;
 tr225:
-#line 94 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 94 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->request_path != NULL)
       parser->request_path(parser->data, PTR_TO(mark), LEN(mark,p));
@@ -3823,7 +3823,7 @@ st199:
 	if ( ++p == pe )
 		goto _test_eof199;
 case 199:
-#line 3681 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 3681 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	if ( (*p) == 62 )
 		goto st200;
 	goto st199;
@@ -3837,11 +3837,11 @@ case 200:
 	}
 	goto st199;
 tr228:
-#line 114 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 114 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
       parser->xml_sent = 1;
   }
-#line 99 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 99 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
       if(parser->xml_sent || parser->json_sent) {
         parser->body_start = PTR_TO(mark) - buffer;
@@ -3858,11 +3858,11 @@ tr228:
   }
 	goto st355;
 tr238:
-#line 118 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 118 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
       parser->json_sent = 1;
   }
-#line 99 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 99 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
       if(parser->xml_sent || parser->json_sent) {
         parser->body_start = PTR_TO(mark) - buffer;
@@ -3882,36 +3882,36 @@ st355:
 	if ( ++p == pe )
 		goto _test_eof355;
 case 355:
-#line 3735 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 3735 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	goto st0;
 tr3:
-#line 52 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 52 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{MARK(mark, p); }
 	goto st201;
 st201:
 	if ( ++p == pe )
 		goto _test_eof201;
 case 201:
-#line 3743 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 3743 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	_widec = (*p);
 	if ( (*p) < 123 ) {
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -3947,20 +3947,20 @@ case 202:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -3990,7 +3990,7 @@ case 202:
 		goto st202;
 	goto st0;
 tr233:
-#line 94 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 94 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{
     if(parser->request_path != NULL)
       parser->request_path(parser->data, PTR_TO(mark), LEN(mark,p));
@@ -4000,19 +4000,19 @@ st203:
 	if ( ++p == pe )
 		goto _test_eof203;
 case 203:
-#line 3843 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 3843 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	if ( (*p) == 123 )
 		goto tr235;
 	goto st0;
 tr235:
-#line 52 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 52 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 	{MARK(mark, p); }
 	goto st204;
 st204:
 	if ( ++p == pe )
 		goto _test_eof204;
 case 204:
-#line 3853 "/home/study/projects/Gyanis/src/net/http/http11_parser.cpp"
+#line 3853 "/root/projects/Gyanis/src/net/http/http11_parser.cpp"
 	if ( (*p) == 125 )
 		goto st205;
 	goto st204;
@@ -4060,20 +4060,20 @@ case 208:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -4136,20 +4136,20 @@ case 211:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -4210,20 +4210,20 @@ case 214:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -4259,20 +4259,20 @@ case 215:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -4308,20 +4308,20 @@ case 216:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -4382,20 +4382,20 @@ case 219:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -4435,20 +4435,20 @@ case 220:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -4509,20 +4509,20 @@ case 223:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -4557,20 +4557,20 @@ case 224:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -6345,20 +6345,20 @@ case 352:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -6392,20 +6392,20 @@ case 353:
 		if ( 94 <= (*p) && (*p) <= 94 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else if ( (*p) > 123 ) {
 		if ( 125 <= (*p) && (*p) <= 125 ) {
 			_widec = (short)(128 + ((*p) - -128));
 			if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 		}
 	} else {
 		_widec = (short)(128 + ((*p) - -128));
 		if ( 
-#line 128 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 128 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
  parser->uri_relaxed  ) _widec += 256;
 	}
 	switch( _widec ) {
@@ -6791,7 +6791,7 @@ case 353:
 	_out: {}
 	}
 
-#line 298 "/home/study/projects/Gyanis/src/net/http/http11_parser.rl"
+#line 298 "/root/projects/Gyanis/src/net/http/http11_parser.rl"
 
   assert(p <= pe && "Buffer overflow after parsing.");
 
