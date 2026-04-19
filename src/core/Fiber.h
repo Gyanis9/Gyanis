@@ -1,33 +1,77 @@
-/**
- * @file Fiber.h
- * @brief 协程模块封装
- * @date 2025-03-12
- */
 #ifndef FIBER_H
 #define FIBER_H
-#include <boost/coroutine2/coroutine.hpp>
-#include <memory>
 
+#include <coroutine>
+#include <cstdint>
+#include <exception>
+#include <functional>
+#include <memory>
 
 namespace Gyanis::core
 {
     /**
-     * @brief Fiber 类，表示一个协程实例
+     * @brief Fiber 类，表示一个协程实例（基于 C++20 协程）
      */
     class Fiber : public std::enable_shared_from_this<Fiber>
     {
     public:
-        using CoroType = boost::coroutines2::asymmetric_coroutine<void>;
-
         enum State
         {
             INIT, HOLD, EXEC, TERM, READY, EXCEPT
-        }; /// 协程状态枚举，表示协程的不同状态
+        }; ///< 协程状态枚举，表示协程的不同状态
+
+        class Task
+        {
+        public:
+            struct promise_type
+            {
+                std::exception_ptr exception = nullptr;
+
+                [[nodiscard]] Task get_return_object() noexcept;
+                [[nodiscard]] std::suspend_always initial_suspend() const noexcept;
+                [[nodiscard]] std::suspend_always final_suspend() const noexcept;
+                void unhandled_exception() noexcept;
+                void return_void() const noexcept;
+            };
+
+            using Handle = std::coroutine_handle<promise_type>;
+
+            explicit Task(Handle handle = nullptr) noexcept;
+            Task(Task &&other) noexcept;
+            Task &operator=(Task &&other) noexcept;
+            Task(const Task &) = delete;
+            Task &operator=(const Task &) = delete;
+            ~Task();
+
+            [[nodiscard]] bool done() const noexcept;
+            [[nodiscard]] bool valid() const noexcept;
+            void resume() const;
+            void destroy();
+            [[nodiscard]] std::exception_ptr getException() const noexcept;
+
+        private:
+            Handle m_handle = nullptr;
+        };
+
+        struct SuspendAwaitable
+        {
+            [[nodiscard]] bool await_ready() const noexcept;
+            void await_suspend(std::coroutine_handle<>) const noexcept;
+            void await_resume() const noexcept;
+        };
+
+        using Callback = std::function<void()>;
+        using CoroutineCallback = std::function<Task()>;
 
         /**
-         * @brief 构造函数
+         * @brief 构造函数（兼容旧回调签名）
          */
-        explicit Fiber(std::function<void()> callback, uint32_t stackSize = 0);
+        explicit Fiber(Callback callback, uint32_t stackSize = 0);
+
+        /**
+         * @brief 构造函数（推荐：C++20 协程回调）
+         */
+        explicit Fiber(CoroutineCallback callback, uint32_t stackSize = 0);
 
         /**
          * @brief 析构函数
@@ -40,9 +84,9 @@ namespace Gyanis::core
         void resume();
 
         /**
-         * @brief 挂起当前协程
+         * @brief 旧接口：标记当前协程为 HOLD（不执行真正挂起）
          */
-        void yield() const;
+        void yield();
 
         /**
          * @brief 获取当前协程的状态
@@ -60,14 +104,19 @@ namespace Gyanis::core
         void setReady();
 
         /**
-         * @brief 重置协程
+         * @brief 重置协程（兼容旧回调签名）
          */
-        void reset(std::function<void()> callback);
+        void reset(Callback callback);
+
+        /**
+         * @brief 重置协程（推荐：C++20 协程回调）
+         */
+        void reset(CoroutineCallback callback);
 
         /**
          * @brief 设置当前协程实例
          */
-        static void SetThis(Fiber* fiber);
+        static void SetThis(Fiber *fiber);
 
         /**
          * @brief 获取当前协程实例
@@ -75,21 +124,25 @@ namespace Gyanis::core
         static std::shared_ptr<Fiber> GetThis();
 
         /**
-         * @brief 挂起当前协程并切换到其他协程
+         * @brief 旧接口：兼容层调用，建议改为 co_await Suspend()
          */
         static void Yield();
 
         /**
-         * @brief 协程的入口函数
+         * @brief C++20 挂起接口：在协程回调中使用 co_await Fiber::Suspend()
          */
-        static void Entry(CoroType::pull_type& yield);
+        [[nodiscard]] static SuspendAwaitable Suspend();
 
     private:
-        std::unique_ptr<CoroType::push_type> m_coro = nullptr; ///< 协程的推送类型，用于控制协程的执行
-        std::function<void()> m_callback; ///< 协程的回调函数
-        uint32_t m_stackSize; ///< 协程的栈大小
-        State m_state = INIT; ///< 当前协程的状态
-        CoroType::pull_type* m_yield = nullptr; ///< 用于控制协程的拉取类型
+        static Task WrapLegacyCallback(Callback callback);
+        void rebuildTask();
+
+    private:
+        Task              m_task;
+        Callback          m_legacyCallback;
+        CoroutineCallback m_coroutineCallback;
+        uint32_t          m_stackSize = 0;
+        State             m_state     = INIT;
     };
 }
 

@@ -1,55 +1,237 @@
 #include "core/Fiber.h"
+
+#include <atomic>
+#include <utility>
+
+#include "base/Log.h"
 #include "base/Macro.h"
-#include "base/Config.h"
-
-#include <boost/coroutine2/fixedsize_stack.hpp>
-
 
 namespace Gyanis::core
 {
-    static auto g_logger = LOG_NAME("system");
-    static auto global_fiber_stack_size = base::Config::LookUp<uint32_t>(
-        "fiber.stack_size", 128 * 1024, "fiber stack size");
-
-    static thread_local Fiber* currentFiber = nullptr;
-    static thread_local Fiber* preFiber = nullptr;
-
-    Fiber::Fiber(std::function<void()> callback, const uint32_t stackSize): m_callback(std::move(callback)),
-                                                                            m_stackSize(
-                                                                                stackSize == 0
-                                                                                    ? global_fiber_stack_size->
-                                                                                    getValue()
-                                                                                    : stackSize)
+    namespace
     {
-        m_coro = std::make_unique<CoroType::push_type>(boost::coroutines2::fixedsize_stack(m_stackSize),
-                                                       [](CoroType::pull_type& yield)
-                                                       {
-                                                           Entry(yield);
-                                                       });
+        static auto g_logger = LOG_NAME("system");
+
+        static thread_local Fiber *current_fiber = nullptr;
+
+        class FiberContextGuard
+        {
+        public:
+            explicit FiberContextGuard(Fiber *fiber) : m_previous(current_fiber)
+            {
+                current_fiber = fiber;
+            }
+
+            ~FiberContextGuard()
+            {
+                current_fiber = m_previous;
+            }
+
+        private:
+            Fiber *m_previous = nullptr;
+        };
+    }
+
+    Fiber::Task::Task(const Handle handle) noexcept : m_handle(handle)
+    {
+    }
+
+    Fiber::Task::Task(Task &&other) noexcept : m_handle(other.m_handle)
+    {
+        other.m_handle = nullptr;
+    }
+
+    Fiber::Task &Fiber::Task::operator=(Task &&other) noexcept
+    {
+        if (this == &other)
+        {
+            return *this;
+        }
+        destroy();
+        m_handle = other.m_handle;
+        other.m_handle = nullptr;
+        return *this;
+    }
+
+    Fiber::Task::~Task()
+    {
+        destroy();
+    }
+
+    bool Fiber::Task::done() const noexcept
+    {
+        return !m_handle || m_handle.done();
+    }
+
+    bool Fiber::Task::valid() const noexcept
+    {
+        return static_cast<bool>(m_handle);
+    }
+
+    void Fiber::Task::resume() const
+    {
+        if (m_handle && !m_handle.done())
+        {
+            m_handle.resume();
+        }
+    }
+
+    void Fiber::Task::destroy()
+    {
+        if (m_handle)
+        {
+            m_handle.destroy();
+            m_handle = nullptr;
+        }
+    }
+
+    std::exception_ptr Fiber::Task::getException() const noexcept
+    {
+        if (!m_handle)
+        {
+            return nullptr;
+        }
+        return m_handle.promise().exception;
+    }
+
+    Fiber::Task Fiber::Task::promise_type::get_return_object() noexcept
+    {
+        return Task{Handle::from_promise(*this)};
+    }
+
+    std::suspend_always Fiber::Task::promise_type::initial_suspend() const noexcept
+    {
+        return {};
+    }
+
+    std::suspend_always Fiber::Task::promise_type::final_suspend() const noexcept
+    {
+        return {};
+    }
+
+    void Fiber::Task::promise_type::unhandled_exception() noexcept
+    {
+        exception = std::current_exception();
+    }
+
+    void Fiber::Task::promise_type::return_void() const noexcept
+    {
+    }
+
+    bool Fiber::SuspendAwaitable::await_ready() const noexcept
+    {
+        return false;
+    }
+
+    void Fiber::SuspendAwaitable::await_suspend(const std::coroutine_handle<>) const noexcept
+    {
+        if (current_fiber && current_fiber->m_state == Fiber::EXEC)
+        {
+            current_fiber->m_state = Fiber::HOLD;
+        }
+    }
+
+    void Fiber::SuspendAwaitable::await_resume() const noexcept
+    {
+    }
+
+    Fiber::Task Fiber::WrapLegacyCallback(Callback callback)
+    {
+        if (callback)
+        {
+            callback();
+        }
+        co_return;
+    }
+
+    Fiber::Fiber(Callback callback, const uint32_t stackSize)
+        : m_legacyCallback(std::move(callback)),
+          m_stackSize(stackSize == 0 ? 128 * 1024U : stackSize)
+    {
+        m_coroutineCallback = [cb = m_legacyCallback]() mutable
+        {
+            return WrapLegacyCallback(std::move(cb));
+        };
+        rebuildTask();
+    }
+
+    Fiber::Fiber(CoroutineCallback callback, const uint32_t stackSize)
+        : m_coroutineCallback(std::move(callback)),
+          m_stackSize(stackSize == 0 ? 128 * 1024U : stackSize)
+    {
+        rebuildTask();
     }
 
     Fiber::~Fiber() = default;
 
     void Fiber::resume()
     {
-        SetThis(this);
         if (m_state == EXEC)
         {
-            LOG_ERROR(g_logger) << "Fiber::resume - Fiber is already running.";
+            LOG_ERROR(g_logger) << "[协程] resume 失败：当前协程正在执行中。";
             return;
         }
-        m_state = EXEC;
-        if (m_coro && m_coro.get())
+        if (!m_task.valid())
         {
-            m_coro->operator()();
+            LOG_WARN(g_logger) << "[协程] resume 失败：协程任务未初始化。";
+            m_state = TERM;
+            return;
+        }
+        if (m_task.done())
+        {
+            if (m_state != TERM && m_state != EXCEPT)
+            {
+                m_state = TERM;
+            }
+            return;
+        }
+
+        FiberContextGuard guard(this);
+        m_state = EXEC;
+        m_task.resume();
+
+        if (m_task.done())
+        {
+            if (const auto ex = m_task.getException())
+            {
+                try
+                {
+                    std::rethrow_exception(ex);
+                } catch (const std::exception &e)
+                {
+                    LOG_ERROR(g_logger) << "[协程] 执行异常：" << e.what();
+                } catch (...)
+                {
+                    LOG_ERROR(g_logger) << "[协程] 执行异常：发生未知异常。";
+                }
+                m_state = EXCEPT;
+            }
+            else
+            {
+                m_state = TERM;
+            }
+            return;
+        }
+
+        if (m_state == EXEC)
+        {
+            m_state = HOLD;
         }
     }
 
-    void Fiber::yield() const
+    void Fiber::yield()
     {
-        if (m_yield)
+        if (m_state == EXEC)
         {
-            m_yield->operator()();
+            m_state = HOLD;
+        }
+
+        static std::atomic_flag warned = ATOMIC_FLAG_INIT;
+        if (!warned.test_and_set())
+        {
+            LOG_WARN(g_logger)
+                << "[协程] 兼容接口 Fiber::yield/Fiber::Yield 不会触发真正挂起。"
+                << "请在 C++20 协程回调中使用 co_await Fiber::Suspend()。";
         }
     }
 
@@ -68,32 +250,37 @@ namespace Gyanis::core
         m_state = READY;
     }
 
-    void Fiber::reset(std::function<void()> callback)
+    void Fiber::reset(Callback callback)
     {
-        ASSERT(m_state == TERM|| m_state == EXCEPT|| m_state == INIT);
-        m_callback = std::move(callback);
-        m_coro = std::make_unique<CoroType::push_type>(boost::coroutines2::fixedsize_stack(m_stackSize),
-                                                       [](CoroType::pull_type& yield)
-                                                       {
-                                                           Entry(yield);
-                                                       });
-        m_state = INIT;
+        ASSERT(m_state == TERM || m_state == EXCEPT || m_state == INIT);
+        m_legacyCallback = std::move(callback);
+        m_coroutineCallback = [cb = m_legacyCallback]() mutable
+        {
+            return WrapLegacyCallback(std::move(cb));
+        };
+        rebuildTask();
     }
 
-    void Fiber::SetThis(Fiber* fiber)
+    void Fiber::reset(CoroutineCallback callback)
     {
-        preFiber = currentFiber;
-        currentFiber = fiber;
+        ASSERT(m_state == TERM || m_state == EXCEPT || m_state == INIT);
+        m_legacyCallback = nullptr;
+        m_coroutineCallback = std::move(callback);
+        rebuildTask();
+    }
+
+    void Fiber::SetThis(Fiber *fiber)
+    {
+        current_fiber = fiber;
     }
 
     std::shared_ptr<Fiber> Fiber::GetThis()
     {
-        if (currentFiber)
+        if (current_fiber)
         {
-            return currentFiber->shared_from_this();
+            return current_fiber->shared_from_this();
         }
-        LOG_WARN(g_logger) << "Fiber::GetThis - Fiber is null"
-                           << " | Status: Invalid";
+        LOG_WARN(g_logger) << "[协程] 获取当前协程失败：当前线程不存在活跃 Fiber。";
         return nullptr;
     }
 
@@ -105,31 +292,23 @@ namespace Gyanis::core
         }
     }
 
-    void Fiber::Entry(CoroType::pull_type& yield)
+    Fiber::SuspendAwaitable Fiber::Suspend()
     {
-        const auto fiber = GetThis();
-        fiber->m_yield = &yield;
-        ASSERT(fiber);
-        try
+        return {};
+    }
+
+    void Fiber::rebuildTask()
+    {
+        if (!m_coroutineCallback)
         {
-            fiber->m_callback();
-            fiber->m_callback = nullptr;
-            fiber->m_state = TERM;
+            LOG_WARN(g_logger) << "[协程] 重建任务时回调为空，协程将直接终止。";
+            m_task.destroy();
+            m_state = TERM;
+            return;
         }
-        catch (std::exception& e)
-        {
-            LOG_ERROR(g_logger)
-                << "Fiber::Entry - encountered an exception. "
-                << "Error details: " << e.what();
-            fiber->m_state = EXCEPT;
-        }catch (...)
-        {
-            LOG_ERROR(g_logger)
-                << "Fiber::Entry - Unknown exception encountered. "
-                << "An unexpected error occurred during fiber entry.";
-            fiber->m_state = EXCEPT;
-        }
-        fiber->m_yield = nullptr;
-        SetThis(preFiber);
+
+        m_task.destroy();
+        m_task = m_coroutineCallback();
+        m_state = INIT;
     }
 }
