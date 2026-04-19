@@ -93,7 +93,7 @@ namespace Gyanis::core
                 std::lock_guard lock(m_mutex);
                 while (begin != end)
                 {
-                    need_tickle = scheduleNoLock(&*begin, -1) || need_tickle; // 批量调度任务
+                    need_tickle = scheduleNoLock(*begin, -1) || need_tickle; // 批量调度任务
                     ++begin;
                 }
             }

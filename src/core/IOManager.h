@@ -1,12 +1,17 @@
-/**
- * @file IOManager.h
- * @brief IO协程调度器模块封装
- * @date 2025-03-13
- */
 #ifndef IOMANAGER_H
 #define IOMANAGER_H
+
+#include <atomic>
+#include <condition_variable>
+#include <functional>
+#include <memory>
+#include <mutex>
+#include <shared_mutex>
+#include <string>
+#include <vector>
+
 #include "Scheduler.h"
-#include "../base/Timer.h"
+#include "base/Timer.h"
 
 namespace Gyanis::core
 {
@@ -29,20 +34,20 @@ namespace Gyanis::core
              */
             struct EventContext
             {
-                Scheduler* scheduler = nullptr; ///< 关联的调度器
-                std::shared_ptr<Fiber> fiber = nullptr; ///< 关联的协程对象
-                std::function<void()> cb = nullptr; ///< 事件触发时执行的回调函数
+                Scheduler *            scheduler = nullptr; ///< 关联的调度器
+                std::shared_ptr<Fiber> fiber     = nullptr; ///< 关联的协程对象
+                std::function<void()>  cb        = nullptr; ///< 事件触发时执行的回调函数
             };
 
             /**
              * @brief 获取指定事件的上下文
              */
-            EventContext& getContext(Event event);
+            EventContext &getContext(Event event);
 
             /**
              * @brief 重置事件上下文
              */
-            static void resetContext(EventContext& ctx);
+            static void resetContext(EventContext &ctx);
 
             /**
              * @brief 触发指定事件
@@ -50,18 +55,18 @@ namespace Gyanis::core
              */
             void triggerEvent(Event event);
 
-            EventContext read; ///< 读取事件的上下文
-            EventContext write; ///< 写入事件的上下文
-            int fd = 0; ///< 文件描述符
-            Event events = NONE; ///< 当前文件描述符的事件类型
-            std::mutex mutex; ///< 保护事件上下文的互斥锁
+            EventContext read;          ///< 读取事件的上下文
+            EventContext write;         ///< 写入事件的上下文
+            int          fd     = 0;    ///< 文件描述符
+            Event        events = NONE; ///< 当前文件描述符的事件类型
+            std::mutex   mutex;         ///< 保护事件上下文的互斥锁
         };
 
     public:
         /**
          * @brief 构造函数
          */
-        explicit IOManager(size_t threadCount = 1, const std::string& name = "");
+        explicit IOManager(size_t threadCount = 1, const std::string &name = "");
 
         /**
          * @brief 析构函数
@@ -76,22 +81,22 @@ namespace Gyanis::core
         /**
          * @brief 删除 IO 事件
          */
-        bool delEvent(int fd, Event event);
+        [[nodiscard]] bool delEvent(int fd, Event event);
 
         /**
          * @brief 取消 IO 事件
          */
-        bool cancelEvent(int fd, Event event);
+        [[nodiscard]] bool cancelEvent(int fd, Event event);
 
         /**
          * @brief 取消所有 IO 事件
          */
-        bool cancelAll(int fd);
+        [[nodiscard]] bool cancelAll(int fd);
 
         /**
          * @brief 获取当前 IO 管理器实例
          */
-        static IOManager* GetThis();
+        static IOManager *GetThis();
 
     protected:
         /**
@@ -102,7 +107,7 @@ namespace Gyanis::core
         /**
          * @brief 判断是否停止 IO 管理器
          */
-        bool stopping() override;
+        [[nodiscard]] bool stopping() override;
 
         /**
          * @brief 空闲时的操作
@@ -122,14 +127,17 @@ namespace Gyanis::core
         /**
          * @brief 判断是否停止 IO 管理器，并等待指定超时
          */
-        bool stopping(std::chrono::milliseconds& timeout);
+        [[nodiscard]] bool stopping(std::chrono::milliseconds &timeout);
 
     private:
-        int m_epFd = 0; ///< epoll 文件描述符
-        int m_wakeFd = 0; ///< 唤醒文件描述符
-        std::atomic<size_t> m_pendingEventCount{0}; ///< 当前挂起的事件数量
-        std::shared_mutex m_mutex; ///< 保护文件描述符上下文的互斥锁
-        std::vector<FdContext*> m_fdContexts; ///< 存储文件描述符上下文
+        int                      m_epFd   = -1;          ///< epoll 文件描述符（仅 Linux 可用）
+        int                      m_wakeFd = -1;          ///< 唤醒文件描述符（仅 Linux 可用）
+        std::atomic<size_t>      m_pendingEventCount{0}; ///< 当前挂起的事件数量
+        std::shared_mutex        m_mutex;                ///< 保护文件描述符上下文的互斥锁
+        std::vector<FdContext *> m_fdContexts;           ///< 存储文件描述符上下文
+        std::mutex               m_wakeMutex;            ///< Windows 回退模式下用于唤醒空闲线程
+        std::condition_variable  m_wakeCv;               ///< Windows 回退模式下的唤醒条件变量
+        bool                     m_tickleRequested = false;
     };
 }
 

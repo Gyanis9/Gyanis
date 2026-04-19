@@ -3,6 +3,8 @@ set(sources
         Fiber.cpp
         Scheduler.h
         Scheduler.cpp
+        IOManager.h
+        IOManager.cpp
 )
 
 add_library(Core SHARED ${sources})
