@@ -3,14 +3,13 @@ set(sources
         Log.cpp
         Singleton.h
         NonCopyable.h
+        Config.h
+        Config.cpp
+        Utils.h
+        Utils.cpp
 
-        #
-        #        # 工具类
-        #        Config.h
-        #        Config.cpp
         #        Endian.h
-        #        Utils.h
-        #        Utils.cpp
+
         #        Macro.h
         #
         #        Timer.h
@@ -29,7 +28,9 @@ if (WIN32)
 endif ()
 target_include_directories(Base PUBLIC
         ${PROJECT_SOURCE_DIR}/src
+        ${Boost_INCLUDE_DIRS}
 )
 target_link_libraries(Base PUBLIC
         yaml-cpp::yaml-cpp
+        nlohmann_json::nlohmann_json
 )
