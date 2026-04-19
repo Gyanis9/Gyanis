@@ -9,14 +9,14 @@ set(TEST_BASE_SOURCES
         TestHashUtils.cpp
 )
 
-add_executable(TestLog ${TEST_BASE_SOURCES})
-target_link_libraries(TestLog PRIVATE
+add_executable(TestBase ${TEST_BASE_SOURCES})
+target_link_libraries(TestBase PRIVATE
         Base
         Catch2::Catch2WithMain
 )
 
-target_include_directories(TestLog PRIVATE
+target_include_directories(TestBase PRIVATE
         ${PROJECT_SOURCE_DIR}/src
 )
 
-add_test(NAME TestLog COMMAND TestLog)
+add_test(NAME TestBase COMMAND TestBase)
