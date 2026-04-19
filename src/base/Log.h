@@ -241,7 +241,7 @@ namespace Gyanis::base
         /**
          * @brief 获取日志内容流
          */
-        [[nodiscard]] std::stringstream &getSS() const;
+        std::stringstream &getSS() const;
 
     private:
         std::shared_ptr<LogEvent> m_event; ///< 日志事件

@@ -1,7 +1,7 @@
 #include <algorithm>
 #include <cctype>
-#include <stack>
 #include <ranges>
+#include <stack>
 
 #include "Config.h"
 
@@ -115,40 +115,40 @@ namespace Gyanis::base
             }
 
             // 顺序处理文件，保证跨平台编译和行为一致性
-            std::for_each(file_metas.begin(), file_metas.end(),
-                          [&](const FileMeta &meta)
-                          {
-                              {
-                                  std::shared_lock read_lock(s_rwmutex);
-                                  if (!force && s_file2ModifyTime.count(meta.path) &&
-                                      s_file2ModifyTime.at(meta.path) == meta.mtime)
+            std::ranges::for_each(file_metas,
+                                  [&](const FileMeta &meta)
                                   {
-                                      return;
-                                  }
-                              }
-                              try
-                              {
-                                  const YAML::Node root = YAML::LoadFile(meta.path);
-                                  std::unique_lock write_lock(s_rwmutex);
-                                  LoadFromYaml(root);
-                                  s_file2ModifyTime[meta.path] = meta.mtime;
-                                  LOG_INFO(g_logger)
+                                      {
+                                          std::shared_lock read_lock(s_rwmutex);
+                                          if (!force && s_file2ModifyTime.count(meta.path) &&
+                                              s_file2ModifyTime.at(meta.path) == meta.mtime)
+                                          {
+                                              return;
+                                          }
+                                      }
+                                      try
+                                      {
+                                          const YAML::Node root = YAML::LoadFile(meta.path);
+                                          std::unique_lock write_lock(s_rwmutex);
+                                          LoadFromYaml(root);
+                                          s_file2ModifyTime[meta.path] = meta.mtime;
+                                          LOG_INFO(g_logger)
                                       << "[配置] 配置文件加载成功"
                                       << " | 路径: " << meta.path;
-                              } catch (const YAML::Exception &e)
-                              {
-                                  LOG_ERROR(g_logger)
+                                      } catch (const YAML::Exception &e)
+                                      {
+                                          LOG_ERROR(g_logger)
                                       << "[配置] YAML 解析失败"
                                       << " | 路径: " << meta.path
                                       << " | 错误: " << e.what();
-                              } catch (const std::exception &e)
-                              {
-                                  LOG_ERROR(g_logger)
+                                      } catch (const std::exception &e)
+                                      {
+                                          LOG_ERROR(g_logger)
                                       << "[配置] 配置文件加载失败"
                                       << " | 路径: " << meta.path
                                       << " | 错误: " << e.what();
-                              }
-                          }
+                                      }
+                                  }
             );
         } catch (const std::filesystem::filesystem_error &e)
         {
