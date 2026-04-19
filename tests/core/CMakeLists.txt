@@ -3,6 +3,7 @@ set(TEST_CORE_SOURCES
         TestScheduler.cpp
         TestIOManager.cpp
         TestFdManager.cpp
+        TestHook.cpp
 )
 
 add_executable(TestCore ${TEST_CORE_SOURCES})

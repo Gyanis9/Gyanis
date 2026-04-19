@@ -7,6 +7,10 @@ set(sources
         IOManager.cpp
         FdManager.h
         FdManager.cpp
+        Hook.h
+        Hook.cpp
+#        Daemon.h
+#        Daemon.cpp
 )
 
 add_library(Core SHARED ${sources})
