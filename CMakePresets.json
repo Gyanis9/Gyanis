@@ -1,0 +1,38 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 4,
+    "minor": 2,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "conan-debug",
+      "displayName": "conan-debug",
+      "description": "Use Ninja with conan_provider.cmake and build tests",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_POLICY_DEFAULT_CMP0091": "NEW",
+        "CMAKE_PROJECT_TOP_LEVEL_INCLUDES": "${sourceDir}/conan_provider.cmake",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "BUILD_TEST": "ON"
+      }
+    },
+    {
+      "name": "conan-release",
+      "displayName": "conan-release",
+      "description": "Use Ninja with conan_provider.cmake for release build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_POLICY_DEFAULT_CMP0091": "NEW",
+        "CMAKE_PROJECT_TOP_LEVEL_INCLUDES": "${sourceDir}/conan_provider.cmake",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "BUILD_TEST": "OFF"
+      }
+    }
+  ]
+}

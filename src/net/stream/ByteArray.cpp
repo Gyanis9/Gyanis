@@ -1,4 +1,4 @@
-#include "net/stream/ByteArray.h"
+#include "ByteArray.h"
 #include "base/Log.h"
 #include "base/Endian.h"
 

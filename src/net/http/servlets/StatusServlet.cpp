@@ -6,8 +6,8 @@
 #include "core/Worker.h"
 #include "base/Utils.h"
 #include "core/Daemon.h"
-#include "net/web/TcpServer.h"
-#include "net/Application.h"
+#include "../../web/TcpServer.h"
+#include "../../Application.h"
 #include "net/http/HttpServer.h"
 
 namespace Gyanis::net::http

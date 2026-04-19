@@ -1,6 +1,6 @@
 #include "net/http/HttpConnection.h"
 #include "base/Log.h"
-#include "net/stream/ZlibStream.h"
+#include "../stream/ZlibStream.h"
 #include <functional>
 #include <utility>
 

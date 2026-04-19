@@ -3,7 +3,7 @@
 #include <sys/stat.h>
 #include <execution>
 
-#include "base/Config.h"
+#include "Config.h"
 
 namespace Gyanis::base
 {

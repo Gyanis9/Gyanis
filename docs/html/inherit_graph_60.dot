@@ -1,9 +1,0 @@
-digraph "类继承关系图"
-{
- // LATEX_PDF_SIZE
-  bgcolor="transparent";
-  edge [fontname="Microsoft YaHei",fontsize=10,labelfontname="Microsoft YaHei",labelfontsize=10];
-  node [fontname="Microsoft YaHei",fontsize=10,shape=box,height=0.2,width=0.4];
-  rankdir="LR";
-  Node0 [id="Node000000",label="Gyanis::net::http::\lHttpRequest",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classGyanis_1_1net_1_1http_1_1HttpRequest.html",tooltip="HTTP 请求类"];
-}

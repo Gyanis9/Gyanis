@@ -38,7 +38,6 @@ include(cmake/utils.cmake)
 
 
 add_subdirectory(src)
-add_subdirectory(tests/base)
 
 
 #set(base
