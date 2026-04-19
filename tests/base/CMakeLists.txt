@@ -3,6 +3,7 @@ set(TEST_BASE_SOURCES
         TestSingleton.cpp
         TestConfigUtils.cpp
         TestEndian.cpp
+        TestMacro.cpp
 )
 
 add_executable(TestLog ${TEST_BASE_SOURCES})

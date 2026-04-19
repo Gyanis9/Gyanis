@@ -8,8 +8,7 @@ set(sources
         Utils.h
         Utils.cpp
         Endian.h
-
-        #        Macro.h
+        Macro.h
         #
         #        Timer.h
         #        Timer.cpp
