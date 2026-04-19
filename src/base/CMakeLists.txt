@@ -7,7 +7,6 @@ set(sources
         Config.cpp
         Utils.h
         Utils.cpp
-
         Endian.h
 
         #        Macro.h

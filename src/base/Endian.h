@@ -24,11 +24,10 @@ namespace Gyanis::base
     /**
      * @brief 对 2/4/8 字节整型执行字节序交换
      */
-    template<typename T>
-        requires ByteSwapType<T>
+    template<typename T> requires ByteSwapType<T>
     constexpr T byteswap(const T value) noexcept
     {
-        using UnsignedT = std::make_unsigned_t<T>;
+        using UnsignedT           = std::make_unsigned_t<T>;
         const auto unsigned_value = static_cast<UnsignedT>(value);
 
 #if defined(_MSC_VER)
@@ -92,8 +91,7 @@ namespace Gyanis::base
     /**
      * @brief 只在小端机器上执行 byteswap, 在大端机器上什么都不做
      */
-    template<typename T>
-        requires ByteSwapType<T>
+    template<typename T> requires ByteSwapType<T>
     constexpr T byteswapOnLittleEndian(const T t) noexcept
     {
 #if defined(__cpp_lib_endian)
@@ -114,8 +112,7 @@ namespace Gyanis::base
     /**
      * @brief 只在大端机器上执行 byteswap, 在小端机器上什么都不做
      */
-    template<typename T>
-        requires ByteSwapType<T>
+    template<typename T> requires ByteSwapType<T>
     constexpr T byteswapOnBigEndian(const T t) noexcept
     {
 #if defined(__cpp_lib_endian)
