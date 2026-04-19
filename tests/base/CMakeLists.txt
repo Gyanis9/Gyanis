@@ -5,6 +5,7 @@ set(TEST_BASE_SOURCES
         TestEndian.cpp
         TestMacro.cpp
         TestTimer.cpp
+        TestJsonUtils.cpp
 )
 
 add_executable(TestLog ${TEST_BASE_SOURCES})

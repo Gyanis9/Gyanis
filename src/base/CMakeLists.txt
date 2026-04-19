@@ -11,9 +11,8 @@ set(sources
         Macro.h
         Timer.h
         Timer.cpp
-        #
-        #        JsonUtils.h
-        #        JsonUtils.cpp
+        JsonUtils.h
+        JsonUtils.cpp
         #
         #        HashUtils.h
         #        HashUtils.cpp
