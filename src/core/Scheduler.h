@@ -1,24 +1,32 @@
-/**
- * @file Scheduler.h
- * @brief 协程调度器模块封装
- * @date 2025-03-12
- */
 #ifndef SCHEDULER_H
 #define SCHEDULER_H
-#include <vector>
-#include <thread>
-#include <mutex>
-#include <list>
-#include <queue>
-#include <shared_mutex>
-#include <atomic>
 
-#include "../base/Mutex.h"
+#include <atomic>
+#include <concepts>
+#include <functional>
+#include <list>
+#include <mutex>
+#include <shared_mutex>
+#include <string>
+#include <thread>
+#include <type_traits>
+#include <utility>
+#include <vector>
+
 #include "Fiber.h"
 #include "base/NonCopyable.h"
 
 namespace Gyanis::core
 {
+    namespace detail
+    {
+        template<typename T>
+        concept SchedulableTask =
+                std::same_as<std::remove_cvref_t<T>, std::shared_ptr<Fiber> > ||
+                std::same_as<std::remove_cvref_t<T>, std::function<void()> > ||
+                std::invocable<std::remove_cvref_t<T> >;
+    }
+
     /**
      * @brief 协程调度器类
      */
@@ -38,7 +46,7 @@ namespace Gyanis::core
         /**
          * @brief 返回协程调度器名称
          */
-        [[nodiscard]] const std::string& getName() const;
+        [[nodiscard]] const std::string &getName() const;
 
         /**
          * @brief 启动调度器
@@ -56,13 +64,13 @@ namespace Gyanis::core
          * @param thread 指定调度的线程（默认为 -1，表示不指定线程）
          *               默认为 -1 表示由调度器选择一个合适的线程。
          */
-        template <class FiberOrCb>
-        void schedule(const FiberOrCb& fc, int thread = -1)
+        template<detail::SchedulableTask FiberOrCb>
+        void schedule(FiberOrCb &&fc, int thread = -1)
         {
             bool need_tickle = false;
             {
                 std::lock_guard lock(m_mutex);
-                need_tickle = scheduleNoLock(fc, thread); // 调用内部调度方法
+                need_tickle = scheduleNoLock(std::forward<FiberOrCb>(fc), thread); // 调用内部调度方法
             }
 
             if (need_tickle)
@@ -77,7 +85,7 @@ namespace Gyanis::core
          * @param end 迭代器指向任务列表的结束
          *            批量调度一组任务，适用于批量添加任务的场景。
          */
-        template <class InputIterator>
+        template<class InputIterator>
         void schedule(InputIterator begin, InputIterator end)
         {
             bool need_tickle = false;
@@ -105,7 +113,7 @@ namespace Gyanis::core
         /**
          * @brief 输出调度器信息
          */
-        std::ostream& dump(std::ostream& os) const;
+        std::ostream &dump(std::ostream &os) const;
 
         /**
          * @brief 输出信息
@@ -150,11 +158,11 @@ namespace Gyanis::core
          * @param thread 指定线程
          * @return `true` 如果任务调度队列为空且需要唤醒其他线程；`false` 否则
          */
-        template <class FiberOrCb>
-        bool scheduleNoLock(FiberOrCb fc, int thread)
+        template<detail::SchedulableTask FiberOrCb>
+        bool scheduleNoLock(FiberOrCb &&fc, int thread)
         {
             const bool need_tickle = m_fibers.empty();
-            if (const FiberAndThread ft(fc, thread); ft.fiber || ft.cb)
+            if (const FiberAndThread ft(std::forward<FiberOrCb>(fc), thread); ft.fiber || ft.cb)
             {
                 m_fibers.push_back(ft);
             }
@@ -165,7 +173,7 @@ namespace Gyanis::core
         /**
          * @brief 获取当前调度器实例
          */
-        static Scheduler* GetThis();
+        static Scheduler *GetThis();
 
     private:
         /**
@@ -174,8 +182,8 @@ namespace Gyanis::core
         struct FiberAndThread
         {
             std::shared_ptr<Fiber> fiber = nullptr; ///< 协程实例
-            std::function<void()> cb = nullptr; ///< 回调函数
-            int thread; ///< 指定的线程
+            std::function<void()>  cb    = nullptr; ///< 回调函数
+            int                    thread;          ///< 指定的线程
             /**
              * @brief 构造函数：初始化协程和线程信息
              */
@@ -184,17 +192,17 @@ namespace Gyanis::core
             /**
              * @brief 构造函数：初始化协程指针和线程信息
              */
-            FiberAndThread(std::shared_ptr<Fiber>* f, int thr);
+            FiberAndThread(std::shared_ptr<Fiber> *f, int thr);
 
             /**
              * @brief 构造函数：初始化回调函数和线程信息
              */
-            FiberAndThread(std::function<void()> fiber, int thr);
+            FiberAndThread(std::function<void()> callback, int thr);
 
             /**
              * @brief 构造函数：初始化回调函数指针和线程信息
              */
-            FiberAndThread(std::function<void()>* fiber, int thr);
+            FiberAndThread(std::function<void()> *callback, int thr);
 
             /**
              * @brief 默认构造函数：设置线程为 -1
@@ -208,16 +216,16 @@ namespace Gyanis::core
         };
 
     protected:
-        size_t m_threadCount = 0; ///< 线程池大小
+        size_t              m_threadCount = 0;      ///< 线程池大小
         std::atomic<size_t> m_activeThreadCount{0}; ///< 当前活动线程数量
-        std::atomic<size_t> m_idleThreadCount{0}; ///< 当前空闲线程数量
-        bool m_stopping = true; ///< 是否停止调度器
+        std::atomic<size_t> m_idleThreadCount{0};   ///< 当前空闲线程数量
+        bool                m_stopping = true;      ///< 是否停止调度器
 
     private:
-        std::string m_name; ///< 协程调度器名称
-        mutable std::shared_mutex m_mutex; ///< 保护调度器全局数据的共享互斥锁
-        std::vector<std::unique_ptr<std::thread>> m_threads; ///< 线程池
-        std::list<FiberAndThread> m_fibers; ///< 待执行的协程队列
+        std::string                                m_name;    ///< 协程调度器名称
+        mutable std::shared_mutex                  m_mutex;   ///< 保护调度器全局数据的共享互斥锁
+        std::vector<std::unique_ptr<std::thread> > m_threads; ///< 线程池
+        std::list<FiberAndThread>                  m_fibers;  ///< 待执行的协程队列
     };
 
 
@@ -227,8 +235,8 @@ namespace Gyanis::core
     class FiberSemaphore : NonCopyable
     {
     public:
-        /// 类型定义：互斥量类型，使用自旋锁保证线程安全
-        using MutexType = base::Spinlock;
+        /// 类型定义：互斥量类型，使用标准互斥锁保证线程安全
+        using MutexType = std::mutex;
 
         /**
          * @brief 构造函数
@@ -267,9 +275,9 @@ namespace Gyanis::core
         void reset();
 
     private:
-        MutexType m_mutex; ///< 保护信号量的互斥量，确保线程安全
-        std::list<std::pair<Scheduler*, std::shared_ptr<Fiber>>> m_waiters; ///< 等待信号量的协程队列
-        size_t m_concurrency; ///< 当前信号量的计数，表示可用的并发数量
+        MutexType                                                   m_mutex;       ///< 保护信号量的互斥量，确保线程安全
+        std::list<std::pair<Scheduler *, std::shared_ptr<Fiber> > > m_waiters;     ///< 等待信号量的协程队列
+        size_t                                                      m_concurrency; ///< 当前信号量的计数，表示可用的并发数量
     };
 
 
@@ -283,7 +291,7 @@ namespace Gyanis::core
          * @brief 构造函数
          * @param target 目标调度器，指定要切换到的调度器。
          */
-        explicit SchedulerSwitcher(Scheduler* target = nullptr);
+        explicit SchedulerSwitcher(Scheduler *target = nullptr);
 
         /**
          * @brief 析构函数
@@ -291,7 +299,7 @@ namespace Gyanis::core
         ~SchedulerSwitcher();
 
     private:
-        Scheduler* m_caller; ///< 保存切换前的调度器指针
+        Scheduler *m_caller; ///< 保存切换前的调度器指针
     };
 }
 

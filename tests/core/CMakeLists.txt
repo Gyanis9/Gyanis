@@ -1,11 +1,12 @@
 set(TEST_CORE_SOURCES
         TestFiber.cpp
+        TestScheduler.cpp
 )
 
 add_executable(TestCore ${TEST_CORE_SOURCES})
 target_link_libraries(TestCore PRIVATE
-        Core
         Base
+        Core
         Catch2::Catch2WithMain
 )
 
