@@ -9,8 +9,8 @@ set(sources
         FdManager.cpp
         Hook.h
         Hook.cpp
-#        Daemon.h
-#        Daemon.cpp
+        Daemon.h
+        Daemon.cpp
 )
 
 add_library(Core SHARED ${sources})

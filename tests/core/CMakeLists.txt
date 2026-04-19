@@ -4,6 +4,7 @@ set(TEST_CORE_SOURCES
         TestIOManager.cpp
         TestFdManager.cpp
         TestHook.cpp
+        TestDaemon.cpp
 )
 
 add_executable(TestCore ${TEST_CORE_SOURCES})
