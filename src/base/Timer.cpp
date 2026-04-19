@@ -6,11 +6,13 @@
 
 namespace Gyanis::base
 {
+    static auto g_logger = LOG_NAME("system");
+
     Timer::Timer(const uint64_t                  id,
                  const std::chrono::milliseconds interval,
                  std::function<void()>           callback,
                  const bool                      recurring) : id(id),
-                                         expired(std::chrono::high_resolution_clock::now() + interval),
+                                         expired(TimerClock::now() + interval),
                                          interval(interval),
                                          callback(std::move(callback)),
                                          recurring(recurring)
@@ -19,10 +21,18 @@ namespace Gyanis::base
 
     bool Timer::Comparator::operator()(const std::shared_ptr<Timer> &lhs, const std::shared_ptr<Timer> &rhs) const
     {
+        if (lhs == rhs)
+        {
+            return false;
+        }
+        if (lhs->expired == rhs->expired)
+        {
+            return lhs->id < rhs->id;
+        }
         return lhs->expired < rhs->expired;
     }
 
-    TimerManager::TimerManager() : m_last_check_time(std::chrono::high_resolution_clock::now())
+    TimerManager::TimerManager() : m_last_check_time(TimerClock::now())
     {
     }
 
@@ -34,8 +44,10 @@ namespace Gyanis::base
         return addTimerInternal(timer);
     }
 
-    uint64_t TimerManager::addConditionTimer(const uint64_t      interval, std::function<void()> callback,
-                                             std::weak_ptr<void> weak_cond, bool                 recurring)
+    uint64_t TimerManager::addConditionTimer(const uint64_t        interval,
+                                             std::function<void()> callback,
+                                             std::weak_ptr<void>   weak_cond,
+                                             bool                  recurring)
     {
         auto wrapped = [condition = std::move(weak_cond), cb = std::move(callback)]
         {
@@ -54,6 +66,8 @@ namespace Gyanis::base
         const auto       it = m_timer_map.find(id);
         if (it == m_timer_map.end())
         {
+            LOG_WARN(g_logger) << "[定时器] 取消失败：未找到定时器"
+                               << " | id: " << id;
             return false;
         }
         m_timers.erase(it->second);
@@ -63,13 +77,18 @@ namespace Gyanis::base
 
     bool TimerManager::refresh(const uint64_t id)
     {
-        const auto it = m_timer_map.find(id);
+        std::unique_lock lock(m_mutex);
+        const auto       it = m_timer_map.find(id);
         if (it == m_timer_map.end())
+        {
+            LOG_WARN(g_logger) << "[定时器] 刷新失败：未找到定时器"
+                               << " | id: " << id;
             return false;
+        }
 
         const auto timer = *(it->second);
         m_timers.erase(it->second);
-        timer->expired    = std::chrono::high_resolution_clock::now() + timer->interval;
+        timer->expired    = TimerClock::now() + timer->interval;
         const auto new_it = m_timers.insert(timer);
         m_timer_map[id]   = new_it;
 
@@ -86,17 +105,23 @@ namespace Gyanis::base
         std::unique_lock lock(m_mutex);
         const auto       it = m_timer_map.find(id);
         if (it == m_timer_map.end())
+        {
+            LOG_WARN(g_logger) << "[定时器] 重置失败：未找到定时器"
+                               << " | id: " << id;
             return false;
+        }
 
-        const auto timer = *(it->second);
+        const auto new_interval = std::chrono::milliseconds(interval);
+        const auto timer        = *(it->second);
         m_timers.erase(it->second);
+        timer->interval = new_interval;
 
         if (from_now)
         {
-            timer->expired = std::chrono::high_resolution_clock::now() + std::chrono::milliseconds(interval);
+            timer->expired = TimerClock::now() + new_interval;
         } else
         {
-            timer->expired += std::chrono::milliseconds(interval);
+            timer->expired += new_interval;
         }
 
         const auto new_it = m_timers.insert(timer);
@@ -115,17 +140,22 @@ namespace Gyanis::base
         std::shared_lock lock(m_mutex);
         m_tickled = false;
         if (m_timers.empty())
+        {
             return std::chrono::milliseconds::max();
-        const auto now = std::chrono::high_resolution_clock::now();
+        }
+        const auto now = TimerClock::now();
         if (const auto duration = (*m_timers.begin())->expired - now; duration > std::chrono::milliseconds(0))
+        {
             return std::chrono::duration_cast<std::chrono::milliseconds>(duration);
+        }
+
         return std::chrono::milliseconds::zero();
     }
 
     void TimerManager::ListExpiredCb(std::vector<std::function<void()> > &callbacks)
     {
         checkTimeRollback();
-        const auto now = std::chrono::high_resolution_clock::now();
+        const auto now = TimerClock::now();
 
         std::unique_lock lock(m_mutex);
         while (!m_timers.empty())
@@ -134,7 +164,9 @@ namespace Gyanis::base
             auto timer = *it;
 
             if (timer->expired > now)
+            {
                 break;
+            }
 
             callbacks.push_back(timer->callback);
             m_timers.erase(it);
@@ -159,7 +191,8 @@ namespace Gyanis::base
 
     void TimerManager::handleTimeRollback()
     {
-        const auto                           now = std::chrono::high_resolution_clock::now();
+        const auto now = TimerClock::now();
+
         std::vector<std::shared_ptr<Timer> > affected_timers;
 
         for (auto it = m_timers.begin(); it != m_timers.end();)
@@ -192,9 +225,10 @@ namespace Gyanis::base
     void TimerManager::checkTimeRollback()
     {
         std::unique_lock lock(m_mutex);
-        const auto       current = std::chrono::high_resolution_clock::now();
+        const auto       current = TimerClock::now();
         if (current < m_last_check_time)
         {
+            LOG_WARN(g_logger) << "[定时器] 检测到系统时间回退，正在重排定时器。";
             handleTimeRollback();
         }
         m_last_check_time = current;

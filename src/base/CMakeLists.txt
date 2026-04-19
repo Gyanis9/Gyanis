@@ -9,9 +9,8 @@ set(sources
         Utils.cpp
         Endian.h
         Macro.h
-        #
-        #        Timer.h
-        #        Timer.cpp
+        Timer.h
+        Timer.cpp
         #
         #        JsonUtils.h
         #        JsonUtils.cpp
