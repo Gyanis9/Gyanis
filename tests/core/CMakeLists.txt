@@ -2,6 +2,7 @@ set(TEST_CORE_SOURCES
         TestFiber.cpp
         TestScheduler.cpp
         TestIOManager.cpp
+        TestFdManager.cpp
 )
 
 add_executable(TestCore ${TEST_CORE_SOURCES})

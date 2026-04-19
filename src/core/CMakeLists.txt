@@ -5,6 +5,8 @@ set(sources
         Scheduler.cpp
         IOManager.h
         IOManager.cpp
+        FdManager.h
+        FdManager.cpp
 )
 
 add_library(Core SHARED ${sources})
