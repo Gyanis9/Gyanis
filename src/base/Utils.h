@@ -2,9 +2,6 @@
 #define UTILS_H
 
 #include <atomic>
-#include <cctype>
-#include <cerrno>
-#include <cstdint>
 #include <ctime>
 #include <filesystem>
 #include <fstream>
@@ -13,8 +10,8 @@
 #include <memory>
 #include <string>
 #include <string_view>
-#include <type_traits>
 #include <typeinfo>
+#include <type_traits>
 #include <utility>
 #include <vector>
 
@@ -35,7 +32,8 @@ namespace Gyanis::base
     [[nodiscard]] std::string TypeToName()
     {
 #if defined(__GNUG__)
-        int                                         status = 0;
+        int status = 0;
+
         std::unique_ptr<char, decltype(&std::free)> demangled(
             abi::__cxa_demangle(typeid(T).name(), nullptr, nullptr, &status),
             &std::free);
@@ -81,8 +79,8 @@ namespace Gyanis::base
                                                                          map.find(lookup_key);
                                                                          map.end();
                                                                      }
-                                                                     && std::is_convertible_v<decltype(std::declval<const MapType &>().find(
-                                                                                                  std::declval<const KeyType &>())->second), std::string>
+                                                                     && std::is_convertible_v<
+                                                                         decltype(std::declval<const MapType &>().find(std::declval<const KeyType &>())->second), std::string>
     ValueType GetParamValue(const MapType &param_map, const KeyType &key, const ValueType &default_value = ValueType())
     {
         // 查找键值对是否存在

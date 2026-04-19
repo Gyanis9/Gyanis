@@ -147,8 +147,7 @@ namespace Gyanis::base
                        && std::isxdigit(*(c + 1)) && std::isxdigit(*(c + 2)))
             {
                 // 解析百分号编码
-                const char hex_value = static_cast<char>((hex_digit_to_value(*(c + 1)) << 4) | hex_digit_to_value(
-                                                             *(c + 2)));
+                const char hex_value = static_cast<char>((hex_digit_to_value(*(c + 1)) << 4) | hex_digit_to_value(*(c + 2)));
                 result.push_back(hex_value);
                 c += 2; // 跳过已处理的两个字符
             } else
@@ -391,13 +390,13 @@ namespace Gyanis::base
         freeifaddrs(ifas);
         return ipv4;
     }
-    #endif
+#endif
 
     std::string _GetIPv4()
     {
-    #if defined(_WIN32)
+#if defined(_WIN32)
         return "127.0.0.1";
-    #else
+#else
         // 使用 std::array 来管理内存
         std::array<char, INET_ADDRSTRLEN> ipv4{};
 
@@ -487,8 +486,7 @@ namespace Gyanis::base
                        && std::isxdigit(*(c + 1)) && std::isxdigit(*(c + 2)))
             {
                 // 解析百分号编码
-                const char hex_value = static_cast<char>((hex_digit_to_value(*(c + 1)) << 4) | hex_digit_to_value(
-                                                             *(c + 2)));
+                const char hex_value = static_cast<char>((hex_digit_to_value(*(c + 1)) << 4) | hex_digit_to_value(*(c + 2)));
                 result.push_back(hex_value);
                 c += 2; // 跳过已处理的两个字符
             } else
@@ -746,8 +744,8 @@ namespace Gyanis::base
             return false;
         }
 #if defined(_WIN32)
-    // Windows 下不依赖系统 API，保守返回 false
-    return false;
+        // Windows 下不依赖系统 API，保守返回 false
+        return false;
 #else
         if (pid <= 1)
         {
