@@ -1,13 +1,11 @@
 set(sources
         Log.h
         Log.cpp
-
         Singleton.h
-#        Mutex.h
-#        Mutex.cpp
+        NonCopyable.h
+
         #
         #        # 工具类
-        #        NonCopyable.h
         #        Config.h
         #        Config.cpp
         #        Endian.h
@@ -27,7 +25,7 @@ set(sources
 
 add_library(Base SHARED ${sources})
 if (WIN32)
-        set_target_properties(Base PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS ON)
+    set_target_properties(Base PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS ON)
 endif ()
 target_include_directories(Base PUBLIC
         ${PROJECT_SOURCE_DIR}/src

@@ -1,8 +1,3 @@
-/**
- * @file NonCopyable.h
- * @brief 不可复制类
- * @date 2025-03-13
- */
 #ifndef NONCOPYABLE_H
 #define NONCOPYABLE_H
 /**
@@ -14,11 +9,12 @@ public:
     /**
      * @brief 拷贝构造函数(禁用)
      */
-    NonCopyable(const NonCopyable& other) = delete;
+    NonCopyable(const NonCopyable &other) = delete;
+
     /**
      * @brief 赋值函数(禁用)
      */
-    NonCopyable& operator=(const NonCopyable& other) = delete;
+    NonCopyable &operator=(const NonCopyable &other) = delete;
 
 protected:
     /**

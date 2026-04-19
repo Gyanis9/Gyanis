@@ -1,5 +1,6 @@
 set(TEST_BASE_SOURCES
-        testLog.cpp
+        TestLog.cpp
+        TestSingleton.cpp
 )
 
 add_executable(TestLog ${TEST_BASE_SOURCES})
