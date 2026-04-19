@@ -13,9 +13,8 @@ set(sources
         Timer.cpp
         JsonUtils.h
         JsonUtils.cpp
-        #
-        #        HashUtils.h
-        #        HashUtils.cpp
+        HashUtils.h
+        HashUtils.cpp
 )
 
 add_library(Base SHARED ${sources})
@@ -29,4 +28,5 @@ target_include_directories(Base PUBLIC
 target_link_libraries(Base PUBLIC
         yaml-cpp::yaml-cpp
         nlohmann_json::nlohmann_json
+        openssl::openssl
 )

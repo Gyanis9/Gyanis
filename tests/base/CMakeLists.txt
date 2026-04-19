@@ -6,6 +6,7 @@ set(TEST_BASE_SOURCES
         TestMacro.cpp
         TestTimer.cpp
         TestJsonUtils.cpp
+        TestHashUtils.cpp
 )
 
 add_executable(TestLog ${TEST_BASE_SOURCES})

@@ -1,11 +1,7 @@
-/**
- * @file HashUtils.h
- * @brief 哈希计算、编码/解码、加密算法和字符串处理模块封装
- * @date 2025-04-03
- */
 #ifndef HASHUTILS_H
 #define HASHUTILS_H
 
+#include <cstdint>
 #include <string>
 #include <vector>
 
@@ -17,7 +13,7 @@ namespace Gyanis::base
      * @param[in] seed 哈希种子，默认值为 1060627423
      * @return 返回计算出的 32 位哈希值
      */
-    uint32_t murmur3_hash(const char* str, const uint32_t& seed = 1060627423) ;
+    [[nodiscard]] uint32_t murmur3_hash(const char *str, uint32_t seed = 1060627423);
 
     /**
      * @brief Murmur3 哈希函数 (32位版本) - 从内存数据计算
@@ -26,7 +22,7 @@ namespace Gyanis::base
      * @param[in] seed 哈希种子，默认值为 1060627423
      * @return 返回计算出的 32 位哈希值
      */
-    uint32_t murmur3_hash(const void* data, const uint32_t& size, const uint32_t& seed = 1060627423) ;
+    [[nodiscard]] uint32_t murmur3_hash(const void *data, uint32_t size, uint32_t seed = 1060627423);
 
     /**
      * @brief Murmur3 哈希函数 (64位版本)
@@ -35,7 +31,7 @@ namespace Gyanis::base
      * @param[in] seed2 第二个哈希种子，默认值为 1050126127
      * @return 返回计算出的 64 位哈希值
      */
-    uint64_t murmur3_hash64(const char* str, const uint32_t& seed = 1060627423, const uint32_t& seed2 = 1050126127);
+    [[nodiscard]] uint64_t murmur3_hash64(const char *str, uint32_t seed = 1060627423, uint32_t seed2 = 1050126127);
 
 
     /**
@@ -46,15 +42,15 @@ namespace Gyanis::base
      * @param[in] seed2 第二个哈希种子，默认值为 1050126127
      * @return 返回计算出的 64 位哈希值
      */
-    uint64_t murmur3_hash64(const void* str, const uint32_t& size, const uint32_t& seed = 1060627423,
-                            const uint32_t& seed2 = 1050126127);
+    [[nodiscard]] uint64_t murmur3_hash64(const void *str, uint32_t size, uint32_t seed = 1060627423,
+                                          uint32_t seed2 = 1050126127);
 
     /**
      * @brief 快速哈希函数 (32位版本)
      * @param[in] str 待计算哈希的字符串
      * @return 返回计算出的 32 位哈希值
      */
-    uint32_t quick_hash(const char* str);
+    [[nodiscard]] uint32_t quick_hash(const char *str);
 
     /**
      * @brief 快速哈希函数 (32位版本) - 从内存数据计算
@@ -62,21 +58,21 @@ namespace Gyanis::base
      * @param[in] size 数据大小
      * @return 返回计算出的 32 位哈希值
      */
-    uint32_t quick_hash(const void* tmp, uint32_t size);
+    [[nodiscard]] uint32_t quick_hash(const void *tmp, uint32_t size);
 
     /**
      * @brief Base64 解码
      * @param[in] src Base64 编码的字符串
      * @return 返回解码后的字符串
      */
-    std::string base64decode(const std::string& src);
+    [[nodiscard]] std::string base64decode(const std::string &src);
 
     /**
      * @brief Base64 编码
      * @param[in] data 待编码的原始数据
      * @return 返回 Base64 编码后的字符串
      */
-    std::string base64encode(const std::string& data);
+    [[nodiscard]] std::string base64encode(const std::string &data);
 
     /**
      * @brief Base64 编码 - 从内存数据计算
@@ -84,28 +80,28 @@ namespace Gyanis::base
      * @param[in] len 数据长度
      * @return 返回 Base64 编码后的字符串
      */
-    std::string base64encode(const void* data, size_t len);
+    [[nodiscard]] std::string base64encode(const void *data, size_t len);
 
     /**
      * @brief MD5 哈希计算
      * @param[in] data 待计算哈希的字符串
      * @return 返回计算出的 MD5 哈希值
      */
-    std::string md5(const std::string& data);
+    [[nodiscard]] std::string md5(const std::string &data);
 
     /**
      * @brief SHA1 哈希计算
      * @param[in] data 待计算哈希的字符串
      * @return 返回计算出的 SHA1 哈希值
      */
-    std::string sha1(const std::string& data);
+    [[nodiscard]] std::string sha1(const std::string &data);
 
     /**
      * @brief MD5 校验和计算
      * @param[in] data 待计算校验和的字符串
      * @return 返回计算出的 MD5 校验和
      */
-    std::string md5sum(const std::string& data);
+    [[nodiscard]] std::string md5sum(const std::string &data);
 
     /**
      * @brief MD5 校验和计算 - 从内存数据计算
@@ -113,14 +109,14 @@ namespace Gyanis::base
      * @param[in] len 数据长度
      * @return 返回计算出的 MD5 校验和
      */
-    std::string md5sum(const void* data, size_t len);
+    [[nodiscard]] std::string md5sum(const void *data, size_t len);
 
     /**
      * @brief SHA1 校验和计算
      * @param[in] data 待计算校验和的字符串
      * @return 返回计算出的 SHA1 校验和
      */
-    std::string sha1sum(const std::string& data);
+    [[nodiscard]] std::string sha1sum(const std::string &data);
 
     /**
      * @brief SHA1 校验和计算 - 从内存数据计算
@@ -128,7 +124,7 @@ namespace Gyanis::base
      * @param[in] len 数据长度
      * @return 返回计算出的 SHA1 校验和
      */
-    std::string sha1sum(const void* data, size_t len);
+    [[nodiscard]] std::string sha1sum(const void *data, size_t len);
 
     /**
      * @brief HMAC-MD5 计算
@@ -136,7 +132,7 @@ namespace Gyanis::base
      * @param[in] key HMAC 使用的密钥
      * @return 返回计算出的 HMAC-MD5 值
      */
-    std::string hmac_md5(const std::string& text, const std::string& key);
+    [[nodiscard]] std::string hmac_md5(const std::string &text, const std::string &key);
 
     /**
      * @brief HMAC-SHA1 计算
@@ -144,7 +140,7 @@ namespace Gyanis::base
      * @param[in] key HMAC 使用的密钥
      * @return 返回计算出的 HMAC-SHA1 值
      */
-    std::string hmac_sha1(const std::string& text, const std::string& key);
+    [[nodiscard]] std::string hmac_sha1(const std::string &text, const std::string &key);
 
     /**
      * @brief HMAC-SHA256 计算
@@ -152,7 +148,7 @@ namespace Gyanis::base
      * @param[in] key HMAC 使用的密钥
      * @return 返回计算出的 HMAC-SHA256 值
      */
-    std::string hmac_sha256(const std::string& text, const std::string& key);
+    [[nodiscard]] std::string hmac_sha256(const std::string &text, const std::string &key);
 
     /**
      * @brief 将数据转换为十六进制字符串
@@ -160,7 +156,7 @@ namespace Gyanis::base
      * @param[in] len 数据长度
      * @param[out] output 输出缓冲区，保存十六进制字符串
      */
-    void hexstring_from_data(const void* data, size_t len, char* output);
+    void hexstring_from_data(const void *data, size_t len, char *output);
 
     /**
      * @brief 将数据转换为十六进制字符串
@@ -168,14 +164,14 @@ namespace Gyanis::base
      * @param[in] len 数据长度
      * @return 返回转换后的十六进制字符串
      */
-    std::string hexstring_from_data(const void* data, size_t len);
+    [[nodiscard]] std::string hexstring_from_data(const void *data, size_t len);
 
     /**
      * @brief 将字符串转换为十六进制字符串
      * @param[in] data 待转换的字符串
      * @return 返回转换后的十六进制字符串
      */
-    std::string hexstring_from_data(const std::string& data);
+    [[nodiscard]] std::string hexstring_from_data(const std::string &data);
 
     /**
      * @brief 将十六进制字符串转换为数据
@@ -183,7 +179,7 @@ namespace Gyanis::base
      * @param[in] length 字符串长度
      * @param[out] output 输出缓冲区，保存转换后的数据
      */
-    void data_from_hexstring(const char* hexstring, size_t length, void* output);
+    void data_from_hexstring(const char *hexstring, size_t length, void *output);
 
     /**
      * @brief 将十六进制字符串转换为数据
@@ -191,14 +187,14 @@ namespace Gyanis::base
      * @param[in] length 字符串长度
      * @return 返回转换后的原始数据
      */
-    std::string data_from_hexstring(const char* hexstring, size_t length);
+    [[nodiscard]] std::string data_from_hexstring(const char *hexstring, size_t length);
 
     /**
      * @brief 将十六进制字符串转换为数据
      * @param[in] hexstring 十六进制字符串
      * @return 返回转换后的原始数据
      */
-    std::string data_from_hexstring(const std::string& hexstring);
+    [[nodiscard]] std::string data_from_hexstring(const std::string &hexstring);
 
     /**
      * @brief 替换字符串中的指定字符
@@ -207,7 +203,7 @@ namespace Gyanis::base
      * @param[in] replaceWith 替换为的字符
      * @return 返回替换后的字符串
      */
-    std::string replace(const std::string& str, char find, char replaceWith);
+    [[nodiscard]] std::string replace(const std::string &str, char find, char replaceWith);
 
     /**
      * @brief 替换字符串中的指定字符
@@ -216,7 +212,7 @@ namespace Gyanis::base
      * @param[in] replaceWith 替换为的字符串
      * @return 返回替换后的字符串
      */
-    std::string replace(const std::string& str, char find, const std::string& replaceWith);
+    [[nodiscard]] std::string replace(const std::string &str, char find, const std::string &replaceWith);
 
     /**
      * @brief 替换字符串中的指定子字符串
@@ -225,7 +221,7 @@ namespace Gyanis::base
      * @param[in] replaceWith 替换为的子字符串
      * @return 返回替换后的字符串
      */
-    std::string replace(const std::string& str, const std::string& find, const std::string& replaceWith);
+    [[nodiscard]] std::string replace(const std::string &str, const std::string &find, const std::string &replaceWith);
 
     /**
      * @brief 按指定分隔符分割字符串
@@ -234,7 +230,7 @@ namespace Gyanis::base
      * @param[in] max 最大拆分次数
      * @return 返回拆分后的字符串向量
      */
-    std::vector<std::string> split(const std::string& str, char delim, size_t max = ~0);
+    [[nodiscard]] std::vector<std::string> split(const std::string &str, char delim, size_t max = ~0U);
 
     /**
      * @brief 按多个指定分隔符分割字符串
@@ -243,7 +239,7 @@ namespace Gyanis::base
      * @param[in] max 最大拆分次数
      * @return 返回拆分后的字符串向量
      */
-    std::vector<std::string> split(const std::string& str, const char* delims, size_t max = ~0);
+    [[nodiscard]] std::vector<std::string> split(const std::string &str, const char *delims, size_t max = ~0U);
 
     /**
      * @brief 生成随机字符串
@@ -251,9 +247,9 @@ namespace Gyanis::base
      * @param[in] chars 可选的字符集，默认包含数字和字母
      * @return 返回生成的随机字符串
      */
-    std::string random_string(size_t len,
-                              const std::string& chars =
-                                  "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
+        [[nodiscard]] std::string random_string(size_t             len,
+                            const std::string &chars =
+                                "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
 }
 
 #endif
