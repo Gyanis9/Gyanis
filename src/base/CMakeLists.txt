@@ -1,4 +1,6 @@
 set(BASE_SOURCES
+        Mutex.h
+        Mutex.cpp
         Log.h
         Log.cpp
 )

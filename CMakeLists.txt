@@ -43,10 +43,18 @@ find_package(Libevent)
 find_package(hiredis)
 find_package(redis++)
 find_package(libmysqlclient)
+find_package(Catch2)
 
 include(cmake/utils.cmake)
 
+option(BUILD_TEST "Build tests" OFF)
+
 add_subdirectory(src)
+
+if (BUILD_TEST)
+    enable_testing()
+    add_subdirectory(tests)
+endif ()
 
 
 #

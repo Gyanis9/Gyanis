@@ -6,15 +6,22 @@
 #ifndef LOG_H
 #define LOG_H
 
+#include <atomic>
+#include <chrono>
+#include <condition_variable>
+#include <deque>
 #include <memory>
 #include <vector>
 #include <map>
+#include <functional>
 #include <string>
+#include <string_view>
+#include <source_location>
 #include <sstream>
 #include <list>
 #include <fstream>
-#include <sys/syscall.h>
-#include <unistd.h>
+#include <mutex>
+#include <thread>
 
 #include "Singleton.h"
 #include "base/Mutex.h"
@@ -23,8 +30,9 @@
  * @brief 根据日志级别，使用流式方式将日志写入 logger
  */
 #define LOG_LEVEL(logger, level) \
-    if((logger)->getLevel() <= (level)) \
-        Gyanis::base::LogEventWrap(std::make_shared<Gyanis::base::LogEvent>(logger, level,__FILE__, __LINE__, syscall(SYS_gettid),time(nullptr))).getSS()
+    if((logger) && (logger)->getLevel() <= (level)) \
+        Gyanis::base::LogEventWrap(std::make_shared<Gyanis::base::LogEvent>((logger), (level), std::source_location::current(), \
+            Gyanis::base::LogEvent::GetCurrentThreadId(), Gyanis::base::LogEvent::GetCurrentTime())).getSS()
 /**
  * @brief 输出 debug 级别日志
  */
@@ -54,34 +62,34 @@
  * @brief 使用格式化方式将日志写入 logger
  */
 #define LOG_FMT_LEVEL(logger, level, fmt, ...) \
-    if(logger->getLevel() <= level) \
-        Gyanis::base::LogEventWrap(std::make_shared<Gyanis::base::LogEvent>(logger, level, __FILE__, __LINE__, syscall(SYS_gettid),\
-                time(nullptr))).getEvent()->format(fmt, __VA_ARGS__)
+    if((logger) && (logger)->getLevel() <= (level)) \
+        Gyanis::base::LogEventWrap(std::make_shared<Gyanis::base::LogEvent>((logger), (level), std::source_location::current(), \
+                Gyanis::base::LogEvent::GetCurrentThreadId(), Gyanis::base::LogEvent::GetCurrentTime())).getEvent()->format((fmt) __VA_OPT__(,) __VA_ARGS__)
 
 /**
  * @brief 输出 debug 级别格式化日志
  */
-#define LOG_FMT_DEBUG(logger, fmt, ...) LOG_FMT_LEVEL(logger, Gyanis::base::LogLevel::DEBUG, fmt, __VA_ARGS__
+#define LOG_FMT_DEBUG(logger, fmt, ...) LOG_FMT_LEVEL((logger), Gyanis::base::LogLevel::DEBUG, (fmt) __VA_OPT__(,) __VA_ARGS__)
 
 /**
  * @brief 输出 info 级别格式化日志
  */
-#define LOG_FMT_INFO(logger, fmt, ...)  LOG_FMT_LEVEL(logger, Gyanis::base::LogLevel::INFO, fmt, __VA_ARGS__)
+#define LOG_FMT_INFO(logger, fmt, ...)  LOG_FMT_LEVEL((logger), Gyanis::base::LogLevel::INFO, (fmt) __VA_OPT__(,) __VA_ARGS__)
 
 /**
  * @brief 输出 warn 级别格式化日志
  */
-#define LOG_FMT_WARN(logger, fmt, ...)  LOG_FMT_LEVEL(logger, Gyanis::base::LogLevel::WARN, fmt, __VA_ARGS__)
+#define LOG_FMT_WARN(logger, fmt, ...)  LOG_FMT_LEVEL((logger), Gyanis::base::LogLevel::WARN, (fmt) __VA_OPT__(,) __VA_ARGS__)
 
 /**
  * @brief 输出 error 级别格式化日志
  */
-#define LOG_FMT_ERROR(logger, fmt, ...) LOG_FMT_LEVEL(logger, Gyanis::base::LogLevel::ERROR, fmt, __VA_ARGS__)
+#define LOG_FMT_ERROR(logger, fmt, ...) LOG_FMT_LEVEL((logger), Gyanis::base::LogLevel::ERROR, (fmt) __VA_OPT__(,) __VA_ARGS__)
 
 /**
  * @brief 输出 fatal 级别格式化日志
  */
-#define LOG_FMT_FATAL(logger, fmt, ...) LOG_FMT_LEVEL(logger, Gyanis::base::LogLevel::FATAL, fmt, __VA_ARGS__)
+#define LOG_FMT_FATAL(logger, fmt, ...) LOG_FMT_LEVEL((logger), Gyanis::base::LogLevel::FATAL, (fmt) __VA_OPT__(,) __VA_ARGS__)
 
 /**
  * @brief 获取根日志器
@@ -126,7 +134,7 @@ namespace Gyanis::base
         /**
          * @brief 将字符串转换为日志级别
          */
-        static Level FromString(const std::string &str);
+        static Level FromString(std::string_view str);
     };
 
     /**
@@ -145,44 +153,67 @@ namespace Gyanis::base
          * @param[in] thread_id 线程ID
          * @param[in] time 时间戳
          */
-        explicit LogEvent(const std::shared_ptr<Logger> &logger, LogLevel::Level level, const char *file, int32_t line,
-                          uint32_t                       thread_id, uint64_t     time
+        explicit LogEvent(const std::shared_ptr<Logger> &logger,
+                          LogLevel::Level                level,
+                          const char *                   file,
+                          int32_t                        line,
+                          uint32_t                       thread_id,
+                          uint64_t                       time
                 );
+
+        /**
+         * @brief 使用 C++20 source_location 构造日志事件
+         */
+        explicit LogEvent(const std::shared_ptr<Logger> &logger,
+                          LogLevel::Level                level,
+                          const std::source_location &   location,
+                          uint32_t                       thread_id,
+                          uint64_t                       time);
+
+        /**
+         * @brief 获取当前线程 ID
+         */
+        [[nodiscard]] static uint32_t GetCurrentThreadId() noexcept;
+
+        /**
+         * @brief 获取当前 Unix 时间戳（秒）
+         */
+        [[nodiscard]] static uint64_t GetCurrentTime() noexcept;
 
         /**
          * @brief 获取当前日志文件名
          */
-        const char *getFile() const;
+        [[nodiscard]] const char *getFile() const;
 
         /**
          * @brief 获取当前日志行号
          */
-        int32_t getLine() const;
+        [[nodiscard]] int32_t getLine() const;
 
         /**
          * @brief 获取当前线程ID
          */
-        uint32_t getThreadId() const;
+        [[nodiscard]] uint32_t getThreadId() const;
 
         /**
          * @brief 获取当前时间戳
          */
-        uint64_t getTime() const;
+        [[nodiscard]] uint64_t getTime() const;
 
         /**
          * @brief 获取日志内容
          */
-        std::string getContent() const;
+        [[nodiscard]] std::string getContent() const;
 
         /**
          * @brief 获取与该日志相关联的Logger对象
          */
-        std::shared_ptr<Logger> getLogger() const;
+        [[nodiscard]] std::shared_ptr<Logger> getLogger() const;
 
         /**
          * @brief 获取日志级别
          */
-        LogLevel::Level getLevel() const;
+        [[nodiscard]] LogLevel::Level getLevel() const;
 
         /**
          * @brief 获取输出日志内容的字符串流
@@ -263,7 +294,8 @@ namespace Gyanis::base
          * @param[in] event 日志事件
          * @return 格式化后的日志字符串
          */
-        [[nodiscard]] std::string format(const std::shared_ptr<Logger> &  logger, LogLevel::Level level,
+        [[nodiscard]] std::string format(const std::shared_ptr<Logger> &  logger,
+                                         LogLevel::Level                  level,
                                          const std::shared_ptr<LogEvent> &event) const;
 
         /**
@@ -274,7 +306,9 @@ namespace Gyanis::base
          * @param[in] event 日志事件
          * @return 输出流
          */
-        std::ostream &format(std::ostream &                   ofs, const std::shared_ptr<Logger> &logger, LogLevel::Level level,
+        std::ostream &format(std::ostream &                   ofs,
+                             const std::shared_ptr<Logger> &  logger,
+                             LogLevel::Level                  level,
                              const std::shared_ptr<LogEvent> &event) const;
 
         /**
@@ -292,7 +326,9 @@ namespace Gyanis::base
              * @param[in] level 日志级别
              * @param[in] event 日志事件
              */
-            virtual void format(std::ostream &                   os, const std::shared_ptr<Logger> &logger, LogLevel::Level level,
+            virtual void format(std::ostream &                   os,
+                                const std::shared_ptr<Logger> &  logger,
+                                LogLevel::Level                  level,
                                 const std::shared_ptr<LogEvent> &event) = 0;
         };
 
@@ -319,7 +355,9 @@ namespace Gyanis::base
             std::string content;     ///< 内容（字面量或格式符）
             std::string format_spec; ///< 格式说明（如时间格式）
             SegmentType type;        ///< 类型标记
-            explicit    PatternSegment(std::string content, std::string format_spec, SegmentType type);
+            explicit    PatternSegment(std::string content,
+                                    std::string    format_spec,
+                                    SegmentType    type);
         };
 
         std::string                              m_pattern;       ///< 日志格式模板
@@ -348,7 +386,8 @@ namespace Gyanis::base
          * @param[in] level 日志级别
          * @param[in] event 日志事件
          */
-        virtual void log(const std::shared_ptr<Logger> &  logger, LogLevel::Level level,
+        virtual void log(const std::shared_ptr<Logger> &  logger,
+                         LogLevel::Level                  level,
                          const std::shared_ptr<LogEvent> &event) = 0;
 
         /**
@@ -379,7 +418,7 @@ namespace Gyanis::base
     protected:
         LogLevel::Level               m_level        = LogLevel::INFO; /// 日志级别
         bool                          m_hasFormatter = false;          /// 是否有自己的日志格式器
-        MutexType                     m_mutex;                         ///< Mutex
+        mutable MutexType             m_mutex;                         ///< Mutex
         std::shared_ptr<LogFormatter> m_formatter;                     ///< 日志格式器
     };
 
@@ -397,7 +436,7 @@ namespace Gyanis::base
          * @brief 构造函数
          * @param[in] name 日志器名称
          */
-        explicit Logger(std::string name = "root");
+        explicit Logger(std::string_view name = "root");
 
         /**
          * @brief 写入日志
@@ -449,7 +488,7 @@ namespace Gyanis::base
         /**
          * @brief 获取日志级别
          */
-        LogLevel::Level getLevel() const;
+        [[nodiscard]] LogLevel::Level getLevel() const;
 
         /**
          * @brief 设置日志级别
@@ -459,7 +498,7 @@ namespace Gyanis::base
         /**
          * @brief 获取日志器名称
          */
-        const std::string &getName() const;
+        [[nodiscard]] const std::string &getName() const;
 
         /**
          * @brief 设置日志格式器
@@ -485,7 +524,7 @@ namespace Gyanis::base
     private:
         std::string                             m_name;      ///< 日志名称
         LogLevel::Level                         m_level;     ///< 日志级别
-        MutexType                               m_mutex;     ///< Mutex
+        mutable MutexType                       m_mutex;     ///< Mutex
         std::list<std::shared_ptr<LogAppender>> m_appenders; ///< 日志目标集合
         std::shared_ptr<LogFormatter>           m_formatter; ///< 日志格式器
         std::shared_ptr<Logger>                 m_root;      ///< 主日志器
@@ -497,7 +536,8 @@ namespace Gyanis::base
     class StdoutLogAppender final : public LogAppender
     {
     public:
-        void log(const std::shared_ptr<Logger> &  logger, LogLevel::Level level,
+        void log(const std::shared_ptr<Logger> &  logger,
+                 LogLevel::Level                  level,
                  const std::shared_ptr<LogEvent> &event) override;
 
         std::string toYamlString() override;
@@ -511,17 +551,50 @@ namespace Gyanis::base
     public:
         explicit FileLogAppender(std::string filename);
 
-        void log(const std::shared_ptr<Logger> &  logger, LogLevel::Level level,
+        ~FileLogAppender() override;
+
+        void log(const std::shared_ptr<Logger> &  logger,
+                 LogLevel::Level                  level,
                  const std::shared_ptr<LogEvent> &event) override;
 
         std::string toYamlString() override;
 
+        void setAsyncConfig(size_t                    max_queue_size,
+                            size_t                    flush_batch_size,
+                            std::chrono::milliseconds flush_interval);
+
         bool reopen(); ///< 重新打开日志文件
 
     private:
-        std::string   m_filename;     ///< 文件路径
-        std::ofstream m_filestream;   ///< 文件流
-        uint64_t      m_lastTime = 0; ///<< 上次重新打开时间
+        struct AsyncLogTask
+        {
+            std::shared_ptr<Logger>       logger;
+            std::shared_ptr<LogFormatter> formatter;
+            std::shared_ptr<LogEvent>     event;
+            LogLevel::Level               level = LogLevel::UNKNOW;
+        };
+
+        void enqueue(AsyncLogTask task);
+
+        void workerLoop();
+
+        static constexpr size_t kDefaultMaxQueueSize   = 8192;
+        static constexpr size_t kDefaultFlushBatchSize = 256;
+
+        std::string       m_filename;      ///< 文件路径
+        std::ofstream     m_filestream;    ///< 文件流
+        std::atomic<bool> m_running{true}; ///< worker 运行状态
+
+        std::mutex               m_queueMutex;
+        std::condition_variable  m_queueCv;
+        std::deque<AsyncLogTask> m_pendingLogs;
+        std::thread              m_worker;
+
+        size_t                                m_maxQueueSize   = kDefaultMaxQueueSize;
+        size_t                                m_flushBatchSize = kDefaultFlushBatchSize;
+        std::chrono::milliseconds             m_flushInterval{500};
+        std::chrono::seconds                  m_reopenInterval{3};
+        std::chrono::steady_clock::time_point m_lastReopen = std::chrono::steady_clock::now();
     };
 
     /**
@@ -538,7 +611,7 @@ namespace Gyanis::base
          * @brief 获取日志器
          * @param[in] name 日志器名称
          */
-        std::shared_ptr<Logger> getLogger(const std::string &name);
+        std::shared_ptr<Logger> getLogger(std::string_view name);
 
         /**
          * @brief 获取根日志器
@@ -551,9 +624,9 @@ namespace Gyanis::base
         std::string toYamlString();
 
     private:
-        MutexType                                      m_mutex;   ///< 互斥锁
-        std::map<std::string, std::shared_ptr<Logger>> m_loggers; ///< 日志器容器
-        std::shared_ptr<Logger>                        m_root;    ///< 根日志器
+        mutable MutexType                                           m_mutex;   ///< 互斥锁
+        std::map<std::string, std::shared_ptr<Logger>, std::less<>> m_loggers; ///< 日志器容器
+        std::shared_ptr<Logger>                                     m_root;    ///< 根日志器
     };
 
     /// 日志器管理类单例模式
