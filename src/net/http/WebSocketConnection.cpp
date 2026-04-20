@@ -1,5 +1,5 @@
 #include "net/http/WebSocketConnection.h"
-#include "../../../include/base/HashUtils.h"
+#include "base/HashUtils.h"
 
 namespace Gyanis::net::http
 {
