@@ -1,5 +1,0 @@
-workers:
-  http_io:
-    thread_num: 2
-  accept:
-    thread_num: 10

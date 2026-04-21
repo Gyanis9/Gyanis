@@ -1,3 +1,0 @@
-server:
-  work_path: work
-  pid_file: project_name.pid
