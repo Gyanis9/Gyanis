@@ -19,7 +19,9 @@ set(CMAKE_C_EXTENSIONS OFF)
 option(BUILD_TEST "Set to ON to compile and build tests" OFF)
 
 if (BUILD_TEST)
+    enable_testing()
     find_package(Catch2 CONFIG REQUIRED)
+    add_subdirectory(tests)
 endif ()
 
 find_package(yaml-cpp)
@@ -28,4 +30,3 @@ include(cmake/utils.cmake)
 
 
 add_subdirectory(src)
-add_subdirectory(tests)

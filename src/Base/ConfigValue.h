@@ -232,6 +232,22 @@ namespace Base
         [[nodiscard]] std::optional<std::reference_wrapper<const ConfigValue> > get(std::string_view key) const noexcept;
 
         /**
+         * @brief 通过键安全访问子配置值并转换为指定类型
+         * @tparam T 目标类型 (bool, int64_t, double, std::string, ConfigArray, ConfigObject)
+         * @param key 配置键
+         * @return std::optional<T> 如果键存在且类型匹配则返回值，否则返回 std::nullopt
+         */
+        template<typename T>
+        [[nodiscard]] std::optional<T> get(const std::string_view key) const noexcept
+        {
+            if (const auto opt = get(key))
+            {
+                return opt->get().get<T>();
+            }
+            return std::nullopt;
+        }
+
+        /**
          * @brief 通过索引访问数组元素（仅当类型为 Array 时有效）
          */
         const ConfigValue &operator[](size_t index) const;

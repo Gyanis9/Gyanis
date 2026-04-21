@@ -1,0 +1,32 @@
+logging:
+  global_level: INFO
+  loggers:
+    root:
+      level: TRACE
+      sinks:
+        - type: console
+          color: true
+        - type: file
+          path: logs/root.log
+    network:
+      level: TRACE
+      sinks:
+        - type: rolling_file
+          base_filename: network.log
+          directory: logs
+          policy: daily
+          max_backup: 7
+    database:
+      level: INFO
+      sinks:
+        - type: async
+          queue_size: 2048
+          overflow_policy: block
+          wrapped:
+            type: file
+            path: logs/db.log
+    worker:
+      level: DEBUG
+      sinks:
+        - type: console
+          color: false

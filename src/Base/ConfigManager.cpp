@@ -123,6 +123,11 @@ namespace Base
 
         if (yaml_files.empty())
         {
+            const auto new_data = std::make_shared<ConfigData>();
+            new_data->config_dir = config_dir;
+            new_data->load_time = result.timestamp;
+            m_data.store(new_data, std::memory_order_release);
+
             result.success = true;
             return result;
         }

@@ -9,6 +9,13 @@ add_library(Base
         ConfigFileWatcher.cpp
         Expection.cpp
         Expection.h
+        LogCommon.h
+        LogSink.cpp
+        LogSink.h
+        Logger.cpp
+        Logger.h
+        LoggerConfig.cpp
+        LoggerConfig.h
 )
 
 target_link_libraries(Base PUBLIC
