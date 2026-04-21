@@ -10,6 +10,12 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_C_EXTENSIONS OFF)
 
+#if (MSVC)
+#    add_compile_options(/W4 /WX- /utf-8)
+#else ()
+#    add_compile_options(-Wall -Wextra -Wpedantic -Werror -Wshadow -Wconversion)
+#endif ()
+
 option(BUILD_TEST "Set to ON to compile and build tests" OFF)
 
 if (BUILD_TEST)
@@ -17,17 +23,9 @@ if (BUILD_TEST)
 endif ()
 
 find_package(yaml-cpp)
-find_package(Boost)
-find_package(nlohmann_json)
-find_package(OpenSSL)
-find_package(ZLIB)
-find_package(protobuf)
-find_package(Libevent)
-find_package(hiredis)
-find_package(redis++)
-find_package(Catch2)
 
 include(cmake/utils.cmake)
 
 
 add_subdirectory(src)
+add_subdirectory(tests)
