@@ -12,10 +12,6 @@
 
 namespace Base
 {
-    // ============================================================================
-    // 配置值类型枚举
-    // ============================================================================
-
     /**
      * @brief 配置值的基础类型
      */
@@ -31,21 +27,24 @@ namespace Base
     };
 
     /**
-     * @brief 获取类型名称字符串
+     * @brief 将配置值类型枚举转换为可读字符串。
+     * @param type 配置值类型枚举。
+     * @return const char* 对应的类型名称，未知类型返回 "unknown"。
      */
     const char *typeName(ConfigValueType type) noexcept;
 
-    // ============================================================================
-    // 文件扩展名工具
-    // ============================================================================
-
     /**
-     * @brief 检查文件是否为 YAML/YML 格式
+     * @brief 判断文件路径是否为 YAML 配置文件后缀。
+     * @param file_path 待检查的文件路径。
+     * @return bool 当后缀为 .yaml 或 .yml 时返回 true。
      */
     bool isYamlFile(std::string_view file_path) noexcept;
 
     /**
-     * @brief 字符串分割工具（用于解析点号分隔的键）
+     * @brief 使用指定分隔符拆分配置键字符串。
+     * @param key 待拆分的原始键字符串。
+     * @param delimiter 分隔字符。
+     * @return std::vector<std::string> 拆分后的键片段列表。
      */
     std::vector<std::string> splitKey(std::string_view key, char delimiter = '.');
 }
