@@ -1,32 +1,22 @@
-add_executable(ConfigTest ConfigTest.cpp)
+add_executable(BaseTest
+        ConfigTest.cpp
+        LoggerTest.cpp
+)
 
-target_link_libraries(ConfigTest PRIVATE
+target_link_libraries(BaseTest PRIVATE
         Base
         Catch2::Catch2WithMain
 )
 
-target_compile_definitions(ConfigTest PRIVATE
+target_compile_definitions(BaseTest PRIVATE
         CONFIG_TEST_CONFIG_DIR="${CMAKE_SOURCE_DIR}/config"
 )
 
-add_test(NAME Base.ConfigTest COMMAND ConfigTest "~[slow]")
-set_tests_properties(Base.ConfigTest PROPERTIES
+add_test(NAME BaseTest COMMAND BaseTest "~[slow]")
+set_tests_properties(BaseTest PROPERTIES
         WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
 )
 
-add_executable(LoggerTest LoggerTest.cpp)
-
-
-target_link_libraries(LoggerTest PRIVATE
-        Base
-        Catch2::Catch2WithMain
-)
-
-target_compile_definitions(LoggerTest PRIVATE
-        CONFIG_TEST_CONFIG_DIR="${CMAKE_SOURCE_DIR}/config"
-)
-
-add_test(NAME Base.LoggerTest COMMAND LoggerTest "~[slow]")
-set_tests_properties(Base.LoggerTest PROPERTIES
-        WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
+target_include_directories(BaseTest PUBLIC
+        ${CMAKE_SOURCE_DIR}/src
 )
