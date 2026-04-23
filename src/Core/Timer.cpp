@@ -35,7 +35,14 @@ namespace Core
         setNonblocking(m_wake_socket, true);
         sockaddr_in addr{};
         addr.sin_family = AF_INET;
-        addr.sin_addr.s_addr = ::inet_addr("127.0.0.1");
+
+        if (::inet_pton(AF_INET, "127.0.0.1", &addr.sin_addr) != 1)
+        {
+            // 处理错误，比如抛异常或关闭资源
+            ::closesocket(m_wake_socket);
+            ::CloseHandle(m_timer_queue);
+            throw std::system_error(::WSAGetLastError(), std::system_category(), "inet_pton failed");
+        }
         addr.sin_port = 0;
         ::bind(m_wake_socket, reinterpret_cast<sockaddr *>(&addr), sizeof(addr));
         int len = sizeof(addr);
