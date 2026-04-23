@@ -52,15 +52,25 @@ namespace Base
     {
     public:
         /**
-         * @brief 从配置管理器加载日志配置
-         * @param config_prefix 配置键前缀，默认为 "logging"
+         * @brief 从配置系统读取日志器配置并应用到注册表。
+         * @param config_prefix 日志配置根键前缀。
          */
         static void loadFromConfig(const std::string &config_prefix = "logging");
 
     private:
-        static std::unique_ptr<LogSink> createSinkFromConfig(const ConfigValue &sink_cfg);
-
+        /**
+         * @brief 将单个日志器配置应用到指定日志器实例。
+         * @param logger 目标日志器。
+         * @param logger_cfg 日志器配置对象，包含 level 与 sinks 等键。
+         */
         static void applyLoggerConfig(Logger &logger, const ConfigValue &logger_cfg);
+
+        /**
+         * @brief 根据配置对象创建具体日志 Sink 实例。
+         * @param sink_cfg Sink 配置对象。
+         * @return std::unique_ptr<LogSink> 构造成功返回 Sink，失败返回 nullptr。
+         */
+        static std::unique_ptr<LogSink> createSinkFromConfig(const ConfigValue &sink_cfg);
     };
 }
 

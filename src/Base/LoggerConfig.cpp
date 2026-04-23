@@ -1,7 +1,7 @@
 #include "LoggerConfig.h"
 
 #include <iostream>
-
+#include <set>
 
 namespace Base
 {
@@ -9,34 +9,63 @@ namespace Base
     {
         const auto &cfg = ConfigManager::instance();
 
-        // 全局日志等级（可选）
         const std::string global_level_key = config_prefix + ".global_level";
-        if (cfg.has(global_level_key))
+        const auto global_level = cfg.get<std::string>(global_level_key, "INFO");
+        const auto default_level = logLevelFromString(global_level);
+
+        // ConfigManager 使用扁平化键存储，此处从 key 前缀提取 logger 名。
+        const std::string logger_prefix = config_prefix + ".loggers.";
+        std::set<std::string> logger_names;
+        for (const auto &key: cfg.keys())
         {
-            auto level_str = cfg.get<std::string>(global_level_key, "INFO");
-            // 可设置全局默认等级，但各 logger 可覆盖
+            if (key.rfind(logger_prefix, 0) != 0)
+            {
+                continue;
+            }
+
+            const auto name_start = logger_prefix.size();
+            const auto dot_pos = key.find('.', name_start);
+            const auto name = key.substr(name_start, dot_pos == std::string::npos ? std::string::npos : dot_pos - name_start);
+            if (!name.empty())
+            {
+                logger_names.insert(name);
+            }
         }
 
-        // 读取 loggers 配置节
-        const std::string loggers_key = config_prefix + ".loggers";
-        auto loggers_opt = cfg.getOptional(loggers_key);
-        if (!loggers_opt || !loggers_opt->is<ConfigObject>())
+        if (logger_names.empty())
         {
             // 无 loggers 配置，创建默认 root logger
             auto &root = LoggerRegistry::instance().getRootLogger();
+            root.clearSinks();
+            root.setLevel(default_level);
             root.addSink(std::make_unique<ConsoleSink>(true));
             return;
         }
 
-        for (const auto &loggers_obj = loggers_opt->as<ConfigObject>(); const auto &[name, logger_cfg]: loggers_obj)
+        for (const auto &name: logger_names)
         {
             auto &logger = LoggerRegistry::instance().getLogger(name);
-            applyLoggerConfig(logger, logger_cfg);
+
+            ConfigObject logger_cfg_obj;
+            const auto base = logger_prefix + name;
+            if (const auto level_opt = cfg.getOptional(base + ".level"); level_opt.has_value())
+            {
+                logger_cfg_obj.emplace("level", *level_opt);
+            }
+            if (const auto sinks_opt = cfg.getOptional(base + ".sinks"); sinks_opt.has_value())
+            {
+                logger_cfg_obj.emplace("sinks", *sinks_opt);
+            }
+
+            logger.setLevel(default_level);
+            applyLoggerConfig(logger, ConfigValue(std::move(logger_cfg_obj)));
         }
     }
 
     void LoggerConfigLoader::applyLoggerConfig(Logger &logger, const ConfigValue &logger_cfg)
     {
+        logger.clearSinks();
+
         // 设置等级
         if (logger_cfg.contains("level"))
         {
