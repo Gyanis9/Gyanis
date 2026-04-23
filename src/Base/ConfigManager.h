@@ -51,7 +51,7 @@ namespace Base
     /**
      * @brief 配置管理器类
      *
-     * 企业级配置管理器，提供以下核心功能：
+     * 配置管理器，提供以下核心功能：
      *   - 从指定目录递归加载所有 .yml/.yaml 文件
      *   - 扁平化存储配置键值对（支持点号访问：server.port）
      *   - 线程安全的读写访问（std::shared_mutex）
@@ -93,7 +93,8 @@ namespace Base
     {
     public:
         /**
-         * @brief 获取单例实例
+         * @brief 获取配置管理器单例。
+         * @return ConfigManager& 单例引用。
          */
         static ConfigManager &instance() noexcept;
 
@@ -111,23 +112,23 @@ namespace Base
         // ========================================================================
 
         /**
-         * @brief 从指定目录加载所有 YAML/YML 配置文件
-         * @param config_dir 配置文件目录路径
-         * @param recursive 是否递归扫描子目录
-         * @return 加载结果，包含成功/失败信息
+         * @brief 从目录加载 YAML 配置文件。
+         * @param config_dir 配置目录。
+         * @param recursive 是否递归扫描子目录。
+         * @return ConfigLoadResult 加载结果。
          */
         ConfigLoadResult loadFromDirectory(const std::filesystem::path &config_dir, bool recursive = true);
 
         /**
-         * @brief 加载指定的配置文件列表
-         * @param file_paths 配置文件路径列表
-         * @return 加载结果，包含成功/失败信息
+         * @brief 加载指定文件列表中的配置。
+         * @param file_paths 配置文件路径列表。
+         * @return ConfigLoadResult 加载结果。
          */
         ConfigLoadResult loadFiles(const std::vector<std::filesystem::path> &file_paths);
 
         /**
-         * @brief 重新加载配置（使用之前设置的配置目录）
-         * @return 加载结果
+         * @brief 使用当前目录配置执行一次重载。
+         * @return ConfigLoadResult 重载结果。
          */
         ConfigLoadResult reload();
 
@@ -144,12 +145,13 @@ namespace Base
         bool enableHotReload(HotReloadCallback callback = nullptr, std::chrono::milliseconds debounce_ms = std::chrono::milliseconds(500));
 
         /**
-         * @brief 禁用热加载
+         * @brief 关闭热重载监听并释放监听资源。
          */
         void disableHotReload();
 
         /**
-         * @brief 检查热加载是否已启用
+         * @brief 查询热重载当前是否启用。
+         * @return bool 启用返回 true。
          */
         bool isHotReloadEnabled() const noexcept;
 
@@ -158,15 +160,16 @@ namespace Base
         // ========================================================================
 
         /**
-         * @brief 获取配置值（强类型，返回 ConfigValue 对象）
-         * @param key 配置键，支持点号访问嵌套结构（如 "server.port"）
-         * @return ConfigValue 对象
-         * @throws ConfigKeyNotFoundException 键不存在时抛出
+         * @brief 按键获取配置值，键不存在时抛出异常。
+         * @param key 配置键。
+         * @return ConfigValue 配置值副本。
          */
         ConfigValue get(std::string_view key) const;
 
         /**
-         * @brief 安全获取配置值（返回 std::optional<ConfigValue>）
+         * @brief 安全获取配置值。
+         * @param key 配置键。
+         * @return std::optional<ConfigValue> 键存在时返回值，否则为空。
          */
         std::optional<ConfigValue> getOptional(std::string_view key) const noexcept;
 
@@ -200,13 +203,36 @@ namespace Base
             return get(key).template as<T>();
         }
 
-        // 便捷方法
+        /**
+         * @brief 读取布尔配置值，缺失或类型不匹配时返回默认值。
+         * @param key 配置键。
+         * @param default_value 默认值。
+         * @return bool 配置值或默认值。
+         */
         bool getBool(std::string_view key, bool default_value = false) const noexcept;
 
+        /**
+         * @brief 读取整型配置值，缺失或类型不匹配时返回默认值。
+         * @param key 配置键。
+         * @param default_value 默认值。
+         * @return int64_t 配置值或默认值。
+         */
         int64_t getInt(std::string_view key, int64_t default_value = 0) const noexcept;
 
+        /**
+         * @brief 读取浮点配置值，缺失或类型不匹配时返回默认值。
+         * @param key 配置键。
+         * @param default_value 默认值。
+         * @return double 配置值或默认值。
+         */
         double getDouble(std::string_view key, double default_value = 0.0) const noexcept;
 
+        /**
+         * @brief 读取字符串配置值，缺失或类型不匹配时返回默认值。
+         * @param key 配置键。
+         * @param default_value 默认值。
+         * @return std::string 配置值或默认值。
+         */
         std::string getString(std::string_view key, const std::string &default_value = "") const;
 
         // ========================================================================
@@ -214,32 +240,38 @@ namespace Base
         // ========================================================================
 
         /**
-         * @brief 检查配置键是否存在
+         * @brief 检查配置键是否存在。
+         * @param key 配置键。
+         * @return bool 存在返回 true。
          */
         bool has(std::string_view key) const noexcept;
 
         /**
-         * @brief 获取所有配置键
+         * @brief 返回所有配置键并按字典序排序。
+         * @return std::vector<std::string> 配置键列表。
          */
         std::vector<std::string> keys() const;
 
         /**
-         * @brief 获取所有配置项（用于调试）
+         * @brief 导出当前配置快照。
+         * @return std::unordered_map<std::string, ConfigValue> 配置字典副本。
          */
         std::unordered_map<std::string, ConfigValue> dump() const;
 
         /**
-         * @brief 获取已加载的配置文件列表
+         * @brief 获取当前已加载文件列表。
+         * @return std::vector<std::string> 文件路径列表。
          */
         std::vector<std::string> loadedFiles() const;
 
         /**
-         * @brief 获取配置目录
+         * @brief 获取当前配置目录。
+         * @return std::filesystem::path 配置目录路径。
          */
         std::filesystem::path configDirectory() const;
 
         /**
-         * @brief 清空所有配置
+         * @brief 清空所有配置数据。
          */
         void clear();
 
@@ -248,15 +280,18 @@ namespace Base
         // ========================================================================
 
         /**
-         * @brief 验证必需的配置键是否存在
-         * @param required_keys 必需的配置键列表
-         * @return 缺失的配置键列表
+         * @brief 校验必需配置键是否都已存在。
+         * @param required_keys 必需键列表。
+         * @return std::vector<std::string> 缺失键列表。
          */
         std::vector<std::string> validateRequired(const std::vector<std::string> &required_keys) const;
 
     private:
         ConfigManager() = default;
 
+        /**
+         * @brief 析构时自动关闭热重载监听。
+         */
         ~ConfigManager();
 
         // 内部数据结构：使用原子 shared_ptr 实现无锁热替换
@@ -278,20 +313,56 @@ namespace Base
         HotReloadCallback m_hot_reload_callback;
         std::atomic<bool> m_hot_reload_enabled{false};
 
-        // 内部方法
+        /**
+         * @brief 目录加载的内部实现，负责扫描、解析并原子替换配置快照。
+         * @param config_dir 配置目录。
+         * @param recursive 是否递归扫描。
+         * @return ConfigLoadResult 加载结果。
+         */
         ConfigLoadResult loadFromDirectoryImpl(const std::filesystem::path &config_dir, bool recursive);
 
+        /**
+         * @brief 读取并扁平化单个 YAML 文件到配置字典。
+         * @param file_path YAML 文件路径。
+         * @param values 目标配置字典。
+         * @param errors 错误信息收集容器。
+         */
         void loadYamlFile(const std::filesystem::path &file_path, std::unordered_map<std::string, ConfigValue> &values, std::vector<std::string> &errors);
 
+        /**
+         * @brief 递归扁平化 YAML 节点，将嵌套键转换为点号路径。
+         * @param node 当前 YAML 节点。
+         * @param prefix 键前缀。
+         * @param values 扁平化结果容器。
+         */
         void flattenYamlNode(const YAML::Node &node, const std::string &prefix, std::unordered_map<std::string, ConfigValue> &values);
 
+        /**
+         * @brief 将 YAML 节点转换为 ConfigValue。
+         * @param node YAML 节点。
+         * @return ConfigValue 转换后的配置值。
+         */
         ConfigValue convertYamlNode(const YAML::Node &node);
 
+        /**
+         * @brief 处理文件监听回调并触发后台重载。
+         * @param file_path 发生变化的文件路径。
+         * @param event 文件变更事件。
+         */
         void handleFileChange(std::string_view file_path, FileChangeEvent event);
 
+        /**
+         * @brief 在互斥保护下执行一次目录重载。
+         * @return ConfigLoadResult 重载结果。
+         */
         ConfigLoadResult doReload();
 
-        // 递归扫描 YAML 文件
+        /**
+         * @brief 扫描目录中的 YAML 文件并按路径排序。
+         * @param dir 待扫描目录。
+         * @param recursive 是否递归。
+         * @return std::vector<std::filesystem::path> YAML 文件路径列表。
+         */
         std::vector<std::filesystem::path> scanYamlFiles(const std::filesystem::path &dir, bool recursive) const;
     };
 }
