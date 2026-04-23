@@ -1,5 +1,5 @@
 /**
- * @file logger.h
+ * @file Logger.h
  * @brief 日志器类与全局注册表
  * @copyright Copyright (c) 2026
  */
@@ -36,8 +36,15 @@ namespace Base
     class Logger
     {
     public:
+        /**
+         * @brief 构造日志器实例。
+         * @param name 日志器名称。
+         */
         explicit Logger(std::string name);
 
+        /**
+         * @brief 析构日志器并释放所有 Sink。
+         */
         ~Logger();
 
         // 禁止拷贝，允许移动
@@ -45,49 +52,72 @@ namespace Base
 
         Logger &operator=(const Logger &) = delete;
 
-        Logger(Logger &&) = default;
+        Logger(Logger &&) = delete;
 
-        Logger &operator=(Logger &&) = default;
+        Logger &operator=(Logger &&) = delete;
 
         /**
-         * @brief 记录日志
+         * @brief 按当前日志级别过滤后写入日志事件。
+         * @param level 本次日志级别。
+         * @param message 日志消息内容。
+         * @param location 源码位置信息。
+         */
+        void log(LogLevel level, std::string_view message, const SourceLocation &location = SourceLocation::current()) const;
+
+        /**
+         * @brief 兼容旧参数顺序的日志记录重载。
+         * @param level 本次日志级别。
+         * @param location 源码位置信息。
+         * @param message 日志消息内容。
          */
         void log(LogLevel level, const SourceLocation &location, std::string_view message) const;
 
         /**
-         * @brief 添加 Sink
+         * @brief 向日志器追加一个输出 Sink。
+         * @param sink 待接管所有权的 Sink。
          */
         void addSink(std::unique_ptr<LogSink> sink);
 
         /**
-         * @brief 清空 Sink
+         * @brief 清空所有已注册 Sink。
          */
         void clearSinks();
 
         /**
-         * @brief 设置日志器等级
+         * @brief 设置日志器最低输出级别。
+         * @param level 目标日志级别。
          */
         void setLevel(LogLevel level);
 
         /**
-         * @brief 获取日志器等级
+         * @brief 获取当前日志器级别。
+         * @return LogLevel 当前日志级别。
          */
         LogLevel getLevel() const;
 
         /**
-         * @brief 获取日志器名称
+         * @brief 获取日志器名称。
+         * @return const std::string& 日志器名称引用。
          */
         const std::string &name() const;
 
         /**
-         * @brief 刷新所有 Sink
+         * @brief 刷新所有 Sink 的缓冲区。
          */
         void flush() const;
 
-        // 便捷方法（用于宏）
+        /**
+         * @brief 判断指定级别是否满足输出条件。
+         * @param level 待判断日志级别。
+         * @return bool 当级别不低于当前阈值时返回 true。
+         */
         bool shouldLog(LogLevel level) const;
 
     private:
+        /**
+         * @brief 将日志事件分发到全部可用 Sink。
+         * @param event 已构造好的日志事件对象。
+         */
         void writeToSinks(const LogEvent &event) const;
 
         std::string m_name;
@@ -110,6 +140,10 @@ namespace Base
     class LoggerRegistry
     {
     public:
+        /**
+         * @brief 获取全局日志器注册表单例。
+         * @return LoggerRegistry& 注册表实例引用。
+         */
         static LoggerRegistry &instance();
 
         // 禁止拷贝移动
@@ -118,39 +152,44 @@ namespace Base
         LoggerRegistry &operator=(const LoggerRegistry &) = delete;
 
         /**
-         * @brief 获取或创建指定名称的日志器
-         * @param name 日志器名称
-         * @return Logger 引用
+         * @brief 按名称获取日志器，不存在时自动创建。
+         * @param name 日志器名称。
+         * @return Logger& 日志器引用。
          */
         Logger &getLogger(const std::string &name);
 
         /**
-         * @brief 获取默认根日志器
+         * @brief 获取默认根日志器。
+         * @return Logger& 根日志器引用。
          */
         Logger &getRootLogger();
 
         /**
-         * @brief 注册一个已创建的日志器（若已存在则替换）
+         * @brief 注册外部创建的日志器，若同名则覆盖。
+         * @param logger 待注册日志器对象。
          */
         void registerLogger(std::unique_ptr<Logger> logger);
 
         /**
-         * @brief 移除指定日志器
+         * @brief 注销指定名称日志器。
+         * @param name 日志器名称。
          */
         void unregisterLogger(const std::string &name);
 
         /**
-         * @brief 获取所有日志器名称
+         * @brief 返回当前所有已注册日志器名称。
+         * @return std::vector<std::string> 日志器名称列表。
          */
         std::vector<std::string> getLoggerNames() const;
 
         /**
-         * @brief 清空所有日志器
+         * @brief 清空注册表中的所有日志器。
          */
         void clear();
 
         /**
-         * @brief 对所有日志器应用操作
+         * @brief 对每个已注册日志器执行回调。
+         * @param func 作用于日志器的回调函数。
          */
         void forEachLogger(const std::function<void(Logger &)> &func) const;
 
@@ -170,7 +209,7 @@ namespace Base
     do { \
         auto& __logger = (logger_expr); \
         if (__logger.shouldLog(level)) { \
-            __logger.log(level, LOG_SOURCE_LOCATION(), (message)); \
+            __logger.log(level, (message)); \
         } \
     } while (0)
 
@@ -193,7 +232,7 @@ namespace Base
         if (__logger.shouldLog(level)) { \
             std::ostringstream __oss; \
             __oss << stream_expr; \
-            __logger.log(level, LOG_SOURCE_LOCATION(), __oss.str()); \
+            __logger.log(level, __oss.str()); \
         } \
     } while (0)
 

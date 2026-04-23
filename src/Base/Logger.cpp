@@ -13,7 +13,7 @@ namespace Base
         clearSinks();
     }
 
-    void Logger::log(const LogLevel level, const SourceLocation &location, const std::string_view message) const
+    void Logger::log(const LogLevel level, const std::string_view message, const SourceLocation &location) const
     {
         if (!shouldLog(level))
         {
@@ -30,6 +30,11 @@ namespace Base
         };
 
         writeToSinks(event);
+    }
+
+    void Logger::log(const LogLevel level, const SourceLocation &location, const std::string_view message) const
+    {
+        log(level, message, location);
     }
 
     void Logger::addSink(std::unique_ptr<LogSink> sink)
