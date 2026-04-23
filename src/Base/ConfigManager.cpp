@@ -160,45 +160,6 @@ namespace Base
         return result;
     }
 
-    std::vector<std::filesystem::path> ConfigManager::scanYamlFiles(const std::filesystem::path &dir, const bool recursive) const
-    {
-        std::vector<std::filesystem::path> yaml_files;
-
-        std::error_code ec;
-        if (recursive)
-        {
-            for (const auto &entry: std::filesystem::recursive_directory_iterator(dir, ec))
-            {
-                if (ec)
-                {
-                    break;
-                }
-                if (entry.is_regular_file() && isYamlFile(entry.path().string()))
-                {
-                    yaml_files.push_back(entry.path());
-                }
-            }
-        } else
-        {
-            for (const auto &entry: std::filesystem::directory_iterator(dir, ec))
-            {
-                if (ec)
-                {
-                    break;
-                }
-                if (entry.is_regular_file() && isYamlFile(entry.path().string()))
-                {
-                    yaml_files.push_back(entry.path());
-                }
-            }
-        }
-
-        // 按文件名排序，保证加载顺序一致
-        std::ranges::sort(yaml_files);
-
-        return yaml_files;
-    }
-
     void ConfigManager::loadYamlFile(const std::filesystem::path &file_path, std::unordered_map<std::string, ConfigValue> &values, std::vector<std::string> &errors)
     {
         try
@@ -311,6 +272,45 @@ namespace Base
         }
 
         return ConfigValue(nullptr);
+    }
+
+    std::vector<std::filesystem::path> ConfigManager::scanYamlFiles(const std::filesystem::path &dir, const bool recursive) const
+    {
+        std::vector<std::filesystem::path> yaml_files;
+
+        std::error_code ec;
+        if (recursive)
+        {
+            for (const auto &entry: std::filesystem::recursive_directory_iterator(dir, ec))
+            {
+                if (ec)
+                {
+                    break;
+                }
+                if (entry.is_regular_file() && isYamlFile(entry.path().string()))
+                {
+                    yaml_files.push_back(entry.path());
+                }
+            }
+        } else
+        {
+            for (const auto &entry: std::filesystem::directory_iterator(dir, ec))
+            {
+                if (ec)
+                {
+                    break;
+                }
+                if (entry.is_regular_file() && isYamlFile(entry.path().string()))
+                {
+                    yaml_files.push_back(entry.path());
+                }
+            }
+        }
+
+        // 按文件名排序，保证加载顺序一致
+        std::ranges::sort(yaml_files);
+
+        return yaml_files;
     }
 
     // ============================================================================
