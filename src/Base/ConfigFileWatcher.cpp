@@ -278,18 +278,6 @@ namespace Base
         }
     }
 
-    std::wstring Win32FileWatcher::toWideString(const std::string_view str) const
-    {
-        if (str.empty())
-        {
-            return std::wstring();
-        }
-        const int size = MultiByteToWideChar(CP_UTF8, 0, str.data(), static_cast<int>(str.size()), nullptr, 0);
-        std::wstring result(size, 0);
-        MultiByteToWideChar(CP_UTF8, 0, str.data(), static_cast<int>(str.size()), result.data(), size);
-        return result;
-    }
-
     bool Win32FileWatcher::start()
     {
         if (m_running.load(std::memory_order_acquire))
@@ -501,6 +489,18 @@ namespace Base
                 break;
             ptr += notify->NextEntryOffset;
         } while (true);
+    }
+
+    std::wstring Win32FileWatcher::toWideString(const std::string_view str) const
+    {
+        if (str.empty())
+        {
+            return std::wstring();
+        }
+        const int size = MultiByteToWideChar(CP_UTF8, 0, str.data(), static_cast<int>(str.size()), nullptr, 0);
+        std::wstring result(size, 0);
+        MultiByteToWideChar(CP_UTF8, 0, str.data(), static_cast<int>(str.size()), result.data(), size);
+        return result;
     }
 
     // ============================================================================

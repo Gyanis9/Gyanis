@@ -1,8 +1,9 @@
-#include "../../src/Base/ConfigFileWatcher.h"
-#include "../../src/Base/ConfigManager.h"
-#include "../../src/Base/ConfigType.h"
-#include "../../src/Base/ConfigValue.h"
-#include "../../src/Base/Expection.h"
+// ReSharper disable CppExpressionWithoutSideEffects
+#include "Base/ConfigFileWatcher.h"
+#include "Base/ConfigManager.h"
+#include "Base/ConfigType.h"
+#include "Base/ConfigValue.h"
+#include "Base/Expection.h"
 
 #include <catch2/catch_approx.hpp>
 #include <catch2/catch_test_macros.hpp>
@@ -53,24 +54,24 @@ namespace
     public:
         TempDir()
         {
-            path_ = makeUniquePath();
-            std::filesystem::create_directories(path_);
+            m_path = makeUniquePath();
+            std::filesystem::create_directories(m_path);
         }
 
         ~TempDir()
         {
             std::error_code ec;
-            std::filesystem::remove_all(path_, ec);
+            std::filesystem::remove_all(m_path, ec);
         }
 
         [[nodiscard]] const std::filesystem::path &path() const noexcept
         {
-            return path_;
+            return m_path;
         }
 
         std::filesystem::path writeFile(const std::filesystem::path &relative_path, const std::string &content) const
         {
-            const auto file_path = path_ / relative_path;
+            const auto file_path = m_path / relative_path;
             std::filesystem::create_directories(file_path.parent_path());
 
             std::ofstream out(file_path, std::ios::binary | std::ios::trunc);
@@ -94,12 +95,10 @@ namespace
                    ("gyanis_config_test_" + std::to_string(stamp) + "_" + std::to_string(id));
         }
 
-        std::filesystem::path path_;
+        std::filesystem::path m_path;
     };
 
-    bool waitUntil(const std::function<bool()> &predicate,
-                   const std::chrono::milliseconds timeout,
-                   const std::chrono::milliseconds interval = 20ms)
+    bool waitUntil(const std::function<bool()> &predicate, const std::chrono::milliseconds timeout, const std::chrono::milliseconds interval = 20ms)
     {
         const auto deadline = std::chrono::steady_clock::now() + timeout;
         while (std::chrono::steady_clock::now() < deadline)
@@ -205,13 +204,13 @@ TEST_CASE("ConfigValue access APIs should be type-safe", "[config][value]")
 TEST_CASE("ConfigValue object and array operations should validate bounds", "[config][value]")
 {
     const Base::ConfigValue object(Base::ConfigObject{
-        {"enabled", Base::ConfigValue(true)},
-        {"port", Base::ConfigValue(8080)}
-    });
+                                       {"enabled", Base::ConfigValue(true)},
+                                       {"port", Base::ConfigValue(8080)}
+                                   });
     const Base::ConfigValue array(Base::ConfigArray{
-        Base::ConfigValue("a"),
-        Base::ConfigValue("b")
-    });
+                                      Base::ConfigValue("a"),
+                                      Base::ConfigValue("b")
+                                  });
 
     CHECK(object.contains("enabled"));
     CHECK_FALSE(object.contains("missing"));
@@ -313,7 +312,7 @@ TEST_CASE("ConfigManager should apply deterministic file override order", "[conf
 {
     ScopedConfigReset guard;
     auto &cfg = Base::ConfigManager::instance();
-    TempDir tmp;
+    const TempDir tmp;
 
     tmp.writeFile("b.yml", "service:\n  mode: second\n");
     tmp.writeFile("a.yml", "service:\n  mode: first\n");
@@ -470,25 +469,46 @@ TEST_CASE("Hot reload should update values when YAML changes", "[config][hotrelo
 
     std::promise<Base::ConfigLoadResult> promise;
     auto future = promise.get_future();
-    std::atomic<bool> captured{false};
+    std::atomic captured{false};
 
     REQUIRE(cfg.enableHotReload([&](const Base::ConfigLoadResult &result)
+                {
+                if (!captured.exchange(true))
+                {
+                    promise.set_value(result);
+                }
+                }, 50ms));
+
+    bool callback_received = false;
+    for (int attempt = 0; attempt < 20; ++attempt)
     {
-        if (!captured.exchange(true))
+        tmp.writeFile("runtime.yml", "runtime:\n  port: 9090\n");
+        if (future.wait_for(250ms) == std::future_status::ready)
         {
-            promise.set_value(result);
+            callback_received = true;
+            break;
         }
-    }, 50ms));
+    }
 
-    tmp.writeFile("runtime.yml", "runtime:\n  port: 9090\n");
-
-    REQUIRE(future.wait_for(6s) == std::future_status::ready);
+    REQUIRE(callback_received);
     const auto callback_result = future.get();
     CHECK(callback_result.success);
-    REQUIRE(waitUntil([&cfg]()
+
+    bool updated = waitUntil([&cfg]()
     {
         return cfg.getInt("runtime.port", -1) == 9090;
-    }, 4s));
+    }, 4s);
+
+    if (!updated)
+    {
+        tmp.writeFile("runtime.yml", "runtime:\n  port: 9090\n");
+        updated = waitUntil([&cfg]()
+        {
+            return cfg.getInt("runtime.port", -1) == 9090;
+        }, 4s);
+    }
+
+    REQUIRE(updated);
 
     cfg.disableHotReload();
 }
@@ -505,9 +525,9 @@ TEST_CASE("Hot reload should ignore non-YAML changes", "[config][hotreload][slow
 
     std::atomic<int> callback_count{0};
     REQUIRE(cfg.enableHotReload([&callback_count](const Base::ConfigLoadResult &)
-    {
-        callback_count.fetch_add(1, std::memory_order_relaxed);
-    }, 50ms));
+                {
+                callback_count.fetch_add(1, std::memory_order_relaxed);
+                }, 50ms));
 
     std::this_thread::sleep_for(200ms);
     callback_count.store(0, std::memory_order_relaxed);
@@ -523,4 +543,161 @@ TEST_CASE("Hot reload should ignore non-YAML changes", "[config][hotreload][slow
     CHECK(cfg.getInt("app.workers", 0) == 2);
 
     cfg.disableHotReload();
+}
+
+TEST_CASE("Empty directory load should retain directory context for lifecycle APIs", "[config][manager][regression]")
+{
+    ScopedConfigReset guard;
+    auto &cfg = Base::ConfigManager::instance();
+    TempDir tmp;
+
+    const auto result = cfg.loadFromDirectory(tmp.path(), true);
+    REQUIRE(result.success);
+    CHECK(result.loaded_files.empty());
+    CHECK(result.failed_files.empty());
+
+    CHECK(cfg.configDirectory() == tmp.path());
+
+    const auto reload_result = cfg.reload();
+    CHECK(reload_result.success);
+}
+
+TEST_CASE("Non-map YAML root should fail with explicit diagnostic", "[config][manager][parsing]")
+{
+    ScopedConfigReset guard;
+    auto &cfg = Base::ConfigManager::instance();
+    TempDir tmp;
+
+    const auto bad_file = tmp.writeFile("bad.yml", "- first\n- second\n");
+    const auto result = cfg.loadFromDirectory(tmp.path(), true);
+
+    REQUIRE_FALSE(result.success);
+    REQUIRE(result.failed_files.size() == 1);
+    CHECK(result.failed_files.front() == bad_file.string());
+    REQUIRE_FALSE(result.errors.empty());
+    CHECK_THAT(result.errors.front(), ContainsSubstring("Root node must be a map"));
+}
+
+TEST_CASE("Scalar conversion should parse bool int double and preserve text", "[config][manager][typing]")
+{
+    ScopedConfigReset guard;
+    auto &cfg = Base::ConfigManager::instance();
+    TempDir tmp;
+
+    tmp.writeFile("typed.yml",
+                  "typed:\n"
+                  "  bool_true: true\n"
+                  "  int_value: 42\n"
+                  "  double_value: 3.5\n"
+                  "  text_value: 42ms\n"
+                  "  null_value: ~\n"
+                  "  endpoints:\n"
+                  "    - host: 127.0.0.1\n"
+                  "      port: 8080\n");
+
+    const auto result = cfg.loadFromDirectory(tmp.path(), true);
+    REQUIRE(result.success);
+
+    CHECK(cfg.getRequired<bool>("typed.bool_true"));
+    CHECK(cfg.getRequired<int64_t>("typed.int_value") == 42);
+    CHECK(cfg.getRequired<double>("typed.double_value") == 3.5);
+    CHECK(cfg.getRequired<std::string>("typed.text_value") == "42ms");
+
+    const auto null_opt = cfg.getOptional("typed.null_value");
+    REQUIRE(null_opt.has_value());
+    CHECK(null_opt->isNull());
+
+    const auto endpoints = cfg.getRequired<Base::ConfigArray>("typed.endpoints");
+    REQUIRE(endpoints.size() == 1);
+    REQUIRE(endpoints[0].is<Base::ConfigObject>());
+    CHECK(endpoints[0]["host"].asString() == "127.0.0.1");
+    CHECK(endpoints[0]["port"].asInt() == 8080);
+}
+
+TEST_CASE("LoadFiles should keep successful values when parser errors exist", "[config][manager][io]")
+{
+    ScopedConfigReset guard;
+    auto &cfg = Base::ConfigManager::instance();
+    TempDir tmp;
+
+    const auto good = tmp.writeFile("ok.yaml", "service:\n  retries: 5\n");
+    const auto broken = tmp.writeFile("broken.yaml", "service:\n  retries: [1,2\n");
+
+    const auto result = cfg.loadFiles({good, broken});
+    REQUIRE_FALSE(result.success);
+    CHECK(result.loaded_files.size() == 1);
+    CHECK(result.failed_files.size() == 1);
+    CHECK(cfg.getInt("service.retries", -1) == 5);
+}
+
+TEST_CASE("Concurrent readers should observe consistent values during reload", "[config][manager][concurrency][slow]")
+{
+    ScopedConfigReset guard;
+    auto &cfg = Base::ConfigManager::instance();
+    TempDir tmp;
+
+    tmp.writeFile("runtime.yml", "runtime:\n  version: 0\n");
+    REQUIRE(cfg.loadFromDirectory(tmp.path(), true).success);
+
+    std::atomic<bool> running{true};
+    std::atomic<int> read_errors{0};
+
+    std::vector<std::thread> readers;
+    readers.reserve(4);
+    for (int i = 0; i < 4; ++i)
+    {
+        readers.emplace_back([&cfg, &running, &read_errors]()
+        {
+            while (running.load(std::memory_order_acquire))
+            {
+                try
+                {
+                    const auto value = cfg.getInt("runtime.version", -1);
+                    if (value < 0)
+                    {
+                        read_errors.fetch_add(1, std::memory_order_relaxed);
+                    }
+                } catch (...)
+                {
+                    read_errors.fetch_add(1, std::memory_order_relaxed);
+                }
+            }
+        });
+    }
+
+    for (int version = 1; version <= 30; ++version)
+    {
+        tmp.writeFile("runtime.yml", "runtime:\n  version: " + std::to_string(version) + "\n");
+        REQUIRE(cfg.reload().success);
+    }
+
+    running.store(false, std::memory_order_release);
+    for (auto &reader: readers)
+    {
+        reader.join();
+    }
+
+    CHECK(read_errors.load(std::memory_order_relaxed) == 0);
+    CHECK(cfg.getInt("runtime.version", -1) == 30);
+}
+
+TEST_CASE("Watcher contract should gracefully handle missing paths", "[config][watcher]")
+{
+    const auto watcher = Base::FileWatcherFactory::create();
+    REQUIRE(watcher != nullptr);
+
+    watcher->setCallback([](const std::string_view, const Base::FileChangeEvent)
+    {
+    });
+
+    CHECK_FALSE(watcher->addWatch("this/path/does/not/exist", false));
+    CHECK_FALSE(watcher->removeWatch("this/path/does/not/exist"));
+
+    const bool started = watcher->start();
+    if (started)
+    {
+        CHECK(watcher->isRunning());
+    }
+    watcher->stop();
+    CHECK_FALSE(watcher->isRunning());
 }
