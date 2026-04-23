@@ -18,15 +18,15 @@ namespace Base
     {
     }
 
-    ConfigValue::ConfigValue(const char *v) : m_value(std::string(v))
-    {
-    }
-
     ConfigValue::ConfigValue(int64_t v) noexcept : m_value(v)
     {
     }
 
     ConfigValue::ConfigValue(double v) noexcept : m_value(v)
+    {
+    }
+
+    ConfigValue::ConfigValue(const char *v) : m_value(std::string(v))
     {
     }
 
