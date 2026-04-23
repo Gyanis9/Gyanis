@@ -45,7 +45,7 @@ namespace Base
     }
 
     ConfigKeyNotFoundException::ConfigKeyNotFoundException(const std::string &key, const std::source_location &loc) : ConfigException("Configuration key not found: '" + key + "'",
-                                                                                                                          loc)
+                                                                                                                               loc)
                                                                                                                       , m_key(key)
     {
     }
