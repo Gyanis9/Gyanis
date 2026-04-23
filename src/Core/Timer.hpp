@@ -229,7 +229,7 @@ namespace Core
          * @details 创建一个 TimerContext，通过 CreateTimerQueueTimer 在系统线程池中触发。
          *          回调执行后会发送字节到内部 socket，以便 IOCP 循环可被唤醒处理。
          */
-        void scheduleAfter( milliseconds delay, Callback cb) override;
+        void scheduleAfter(milliseconds delay, Callback cb) override;
 
         /**
          * @brief 返回用于唤醒 IOCP 的 socket 描述符。
@@ -266,6 +266,21 @@ namespace Core
         HANDLE m_timer_queue = nullptr;          ///< 定时器队列句柄
         socket_t m_wake_socket = INVALID_SOCKET; ///< 自连接 UDP socket 用于唤醒
     };
+
+    /**
+ * @brief 创建跨平台定时器服务的工厂函数。
+ * @return 根据编译平台返回 TimerFdService 或 WindowsTimerService 实例的 unique_ptr。
+ */
+    inline std::unique_ptr<TimerService> createTimerService()
+    {
+#ifdef __linux__
+        return std::make_unique<TimerFdService>();
+#elif defined(_WIN32)
+        return std::make_unique<WindowsTimerService>();
+#else
+        static_assert(false, "Unsupported platform");
+#endif
+    }
 #endif // _WIN32
 }
 

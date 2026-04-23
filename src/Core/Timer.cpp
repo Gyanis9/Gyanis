@@ -3,21 +3,6 @@
 
 namespace Core
 {
-    /**
-     * @brief 创建跨平台定时器服务的工厂函数。
-     * @return 根据编译平台返回 TimerFdService 或 WindowsTimerService 实例的 unique_ptr。
-     */
-    inline std::unique_ptr<TimerService> createTimerService()
-    {
-#ifdef __linux__
-        return std::make_unique<TimerFdService>();
-#elif defined(_WIN32)
-        return std::make_unique<WindowsTimerService>();
-#else
-        static_assert(false, "Unsupported platform");
-#endif
-    }
-
     WindowsTimerService::WindowsTimerService()
     {
         m_timer_queue = ::CreateTimerQueue();
