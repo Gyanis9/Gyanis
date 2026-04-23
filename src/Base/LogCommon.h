@@ -10,6 +10,7 @@
 #include <chrono>
 #include <cstdint>
 #include <iomanip>
+#include <source_location>
 #include <sstream>
 #include <string>
 #include <string_view>
@@ -113,14 +114,27 @@ namespace Base
         int line = 0;
         const char *function_name = nullptr;
 
-        SourceLocation() = default;
+        constexpr SourceLocation() = default;
 
-        SourceLocation(const char *file, const int l, const char *func)
+        constexpr SourceLocation(const char *file, const int l, const char *func)
             : file_name(file), line(l), function_name(func)
         {
         }
 
-        const char *shortFileName() const
+        constexpr explicit SourceLocation(const std::source_location &loc)
+            : file_name(loc.file_name())
+              , line(static_cast<int>(loc.line()))
+              , function_name(loc.function_name())
+        {
+        }
+
+        [[nodiscard]] static constexpr SourceLocation current(
+            const std::source_location &loc = std::source_location::current())
+        {
+            return SourceLocation(loc);
+        }
+
+        [[nodiscard]] const char *shortFileName() const noexcept
         {
             if (!file_name)
             {
@@ -139,7 +153,7 @@ namespace Base
     };
 
 #define LOG_SOURCE_LOCATION() \
-    Base::SourceLocation(__FILE__, __LINE__, __FUNCTION__)
+    Base::SourceLocation::current()
 
     // ============================================================================
     // 日志事件
