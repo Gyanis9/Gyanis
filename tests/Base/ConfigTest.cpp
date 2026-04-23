@@ -475,7 +475,7 @@ TEST_CASE("Hot reload should update values when YAML changes", "[config][hotrelo
                 {
                 if (!captured.exchange(true))
                 {
-                    promise.set_value(result);
+                promise.set_value(result);
                 }
                 }, 50ms));
 
@@ -523,7 +523,7 @@ TEST_CASE("Hot reload should ignore non-YAML changes", "[config][hotreload][slow
     const auto loaded = cfg.loadFromDirectory(tmp.path(), true);
     REQUIRE(loaded.success);
 
-    std::atomic<int> callback_count{0};
+    std::atomic callback_count{0};
     REQUIRE(cfg.enableHotReload([&callback_count](const Base::ConfigLoadResult &)
                 {
                 callback_count.fetch_add(1, std::memory_order_relaxed);
@@ -639,8 +639,8 @@ TEST_CASE("Concurrent readers should observe consistent values during reload", "
     tmp.writeFile("runtime.yml", "runtime:\n  version: 0\n");
     REQUIRE(cfg.loadFromDirectory(tmp.path(), true).success);
 
-    std::atomic<bool> running{true};
-    std::atomic<int> read_errors{0};
+    std::atomic running{true};
+    std::atomic read_errors{0};
 
     std::vector<std::thread> readers;
     readers.reserve(4);
@@ -652,8 +652,7 @@ TEST_CASE("Concurrent readers should observe consistent values during reload", "
             {
                 try
                 {
-                    const auto value = cfg.getInt("runtime.version", -1);
-                    if (value < 0)
+                    if (const auto value = cfg.getInt("runtime.version", -1); value < 0)
                     {
                         read_errors.fetch_add(1, std::memory_order_relaxed);
                     }
@@ -693,8 +692,7 @@ TEST_CASE("Watcher contract should gracefully handle missing paths", "[config][w
     CHECK_FALSE(watcher->addWatch("this/path/does/not/exist", false));
     CHECK_FALSE(watcher->removeWatch("this/path/does/not/exist"));
 
-    const bool started = watcher->start();
-    if (started)
+    if (watcher->start())
     {
         CHECK(watcher->isRunning());
     }
