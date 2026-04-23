@@ -1,5 +1,11 @@
+/**
+ * @file LogSink.cpp
+ * @brief 日志 Sink、格式化器与滚动/异步输出实现。
+ */
+
 #include "LogSink.h"
 
+#include <iomanip>
 #include <iostream>
 #ifdef _WIN32
 #include <windows.h>
@@ -7,14 +13,18 @@
 
 namespace Base
 {
+    static constexpr int THREAD_WIDTH = 6;    // 线程ID固定6位右对齐
+    static constexpr int LOCATION_WIDTH = 13; // "文件名:行号" 固定15位左对齐
+
     std::string DefaultFormatter::format(const LogEvent &event)
     {
         std::ostringstream oss;
-        oss << "[" << event.timestamp << "] "
-                << "[" << event.thread_id << "] "
-                << "[" << logLevelToString(event.level) << "] "
+        oss << event.timestamp
+                << " " << std::right << std::setw(THREAD_WIDTH) << event.thread_id << " "
+                << "[" << std::left << std::setw(5) << logLevelToString(event.level) << "] "
                 << "[" << event.logger_name << "] "
-                << "[" << event.location.shortFileName() << ":" << event.location.line << "] "
+                << std::left << std::setw(LOCATION_WIDTH)
+                << (std::string(event.location.shortFileName()) + ":" + std::to_string(event.location.line)) << " "
                 << event.message;
         return oss.str();
     }
@@ -22,15 +32,20 @@ namespace Base
     std::string ColorFormatter::format(const LogEvent &event)
     {
         std::ostringstream oss;
-        const char *color_code = color::getColorForLevel(event.level);
-        oss << color_code
-                << "[" << event.timestamp << "] "
-                << "[" << event.thread_id << "] "
-                << "[" << logLevelToString(event.level) << "] "
-                << "[" << event.logger_name << "] "
-                << "[" << event.location.shortFileName() << ":" << event.location.line << "] "
-                << event.message
-                << color::RESET;
+        oss << event.timestamp << " "
+                << std::right << std::setw(THREAD_WIDTH) << event.thread_id << " "
+                << "["; // 左括号无色
+
+        oss << color::getColorForLevel(event.level)
+                << logLevelToString(event.level)
+                << color::RESET
+                << "] "; // 右括号无色
+
+        oss << "[" << event.logger_name << "] "
+                << std::left << std::setw(LOCATION_WIDTH)
+                << (std::string(event.location.shortFileName()) + ":" + std::to_string(event.location.line)) << " "
+                << event.message;
+
         return oss.str();
     }
 
@@ -70,7 +85,13 @@ namespace Base
 
     ConsoleSink::ConsoleSink(const bool enable_color) : m_color_enabled(enable_color)
     {
-        setFormatter(std::make_unique<ColorFormatter>());
+        if (enable_color)
+        {
+            setFormatter(std::make_unique<ColorFormatter>());
+        } else
+        {
+            setFormatter(std::make_unique<DefaultFormatter>());
+        }
 #ifdef _WIN32
         if (enable_color)
         {
@@ -131,10 +152,13 @@ namespace Base
         {
             std::filesystem::create_directories(parent);
         }
-        auto mode = std::ios::out | std::ios::app;
+        auto mode = std::ios::out;
         if (truncate)
         {
             mode |= std::ios::trunc;
+        } else
+        {
+            mode |= std::ios::app;
         }
         m_file.open(m_file_path, mode);
         if (!m_file.is_open())
