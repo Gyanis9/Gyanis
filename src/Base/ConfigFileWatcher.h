@@ -99,7 +99,8 @@ namespace Base
     {
     public:
         /**
-         * @brief 创建平台相关的文件监听器实例
+         * @brief 创建当前平台对应的文件监听器实现。
+         * @return std::unique_ptr<IFileWatcher> 监听器实例。
          */
         static std::unique_ptr<IFileWatcher> create();
     };
@@ -119,8 +120,14 @@ namespace Base
     class InotifyFileWatcher : public IFileWatcher
     {
     public:
+        /**
+         * @brief 构造 Linux inotify 监听器并初始化 inotify fd。
+         */
         InotifyFileWatcher();
 
+        /**
+         * @brief 析构 inotify 监听器并清理线程与文件描述符。
+         */
         ~InotifyFileWatcher() override;
 
         InotifyFileWatcher(const InotifyFileWatcher &) = delete;
@@ -131,24 +138,54 @@ namespace Base
 
         InotifyFileWatcher &operator=(InotifyFileWatcher &&) = delete;
 
+        /**
+         * @brief 启动 inotify 监听线程。
+         * @return bool 成功启动返回 true。
+         */
         bool start() override;
 
+        /**
+         * @brief 停止 inotify 监听线程。
+         */
         void stop() override;
 
+        /**
+         * @brief 添加监听路径，可选递归子目录。
+         * @param path 监听路径。
+         * @param recursive 是否递归监听。
+         * @return bool 添加成功返回 true。
+         */
         bool addWatch(std::string_view path, bool recursive = false) override;
 
+        /**
+         * @brief 移除指定监听路径。
+         * @param path 监听路径。
+         * @return bool 移除成功返回 true。
+         */
         bool removeWatch(std::string_view path) override;
 
+        /**
+         * @brief 设置文件变更回调函数。
+         * @param callback 回调函数对象。
+         */
         void setCallback(FileChangeCallback callback) override;
 
+        /**
+         * @brief 查询监听器运行状态。
+         * @return bool 运行中返回 true。
+         */
         bool isRunning() const noexcept override;
 
         /**
-         * @brief 设置防抖间隔（毫秒）
+         * @brief 设置事件防抖时间间隔。
+         * @param interval 防抖间隔。
          */
         void setDebounceInterval(std::chrono::milliseconds interval) noexcept;
 
     private:
+        /**
+         * @brief inotify 事件循环，读取并分发文件变更事件。
+         */
         void watchLoop();
 
         void processEvents();
@@ -186,8 +223,14 @@ namespace Base
     class Win32FileWatcher : public IFileWatcher
     {
     public:
+        /**
+         * @brief 构造 Win32 文件监听器。
+         */
         Win32FileWatcher();
 
+        /**
+         * @brief 析构 Win32 文件监听器并释放句柄资源。
+         */
         ~Win32FileWatcher() override;
 
         Win32FileWatcher(const Win32FileWatcher &) = delete;
@@ -198,25 +241,68 @@ namespace Base
 
         Win32FileWatcher &operator=(Win32FileWatcher &&) = delete;
 
+        /**
+         * @brief 启动 Win32 监听线程。
+         * @return bool 成功启动返回 true。
+         */
         bool start() override;
 
+        /**
+         * @brief 停止 Win32 监听线程。
+         */
         void stop() override;
 
+        /**
+         * @brief 添加目录监听。
+         * @param path 目录路径。
+         * @param recursive 是否递归监听子目录。
+         * @return bool 添加成功返回 true。
+         */
         bool addWatch(std::string_view path, bool recursive = false) override;
 
+        /**
+         * @brief 移除目录监听并释放相关句柄。
+         * @param path 目录路径。
+         * @return bool 移除成功返回 true。
+         */
         bool removeWatch(std::string_view path) override;
 
+        /**
+         * @brief 设置 Win32 监听回调。
+         * @param callback 回调函数对象。
+         */
         void setCallback(FileChangeCallback callback) override;
 
+        /**
+         * @brief 查询 Win32 监听器是否正在运行。
+         * @return bool 运行中返回 true。
+         */
         bool isRunning() const noexcept override;
 
+        /**
+         * @brief 设置 Win32 监听防抖时间间隔。
+         * @param interval 防抖间隔。
+         */
         void setDebounceInterval(std::chrono::milliseconds interval) noexcept;
 
     private:
+        /**
+         * @brief Win32 监听事件循环，轮询目录变更通知。
+         */
         void watchLoop();
 
+        /**
+         * @brief 处理 ReadDirectoryChangesW 原始通知缓冲区。
+         * @param buffer 通知缓冲区。
+         * @param bytes_transferred
+         */
         void processNotification(BYTE *buffer, DWORD bytes_transferred);
 
+        /**
+         * @brief 将 UTF-8 字符串转换为宽字符字符串。
+         * @param str UTF-8 输入字符串。
+         * @return std::wstring 宽字符结果。
+         */
         std::wstring toWideString(std::string_view str) const;
 
         struct WatchInfo
@@ -244,25 +330,64 @@ namespace Base
     class PollingFileWatcher : public IFileWatcher
     {
     public:
+        /**
+         * @brief 构造轮询监听器。
+         */
         PollingFileWatcher();
 
+        /**
+         * @brief 析构轮询监听器并停止后台线程。
+         */
         ~PollingFileWatcher() override;
 
+        /**
+         * @brief 启动轮询监听线程。
+         * @return bool 成功启动返回 true。
+         */
         bool start() override;
 
+        /**
+         * @brief 停止轮询监听线程。
+         */
         void stop() override;
 
+        /**
+         * @brief 添加轮询监听路径。
+         * @param path 监听路径。
+         * @param recursive 是否递归监听（轮询实现中仅记录该标志）。
+         * @return bool 添加成功返回 true。
+         */
         bool addWatch(std::string_view path, bool recursive = false) override;
 
+        /**
+         * @brief 移除轮询监听路径。
+         * @param path 监听路径。
+         * @return bool 移除成功返回 true。
+         */
         bool removeWatch(std::string_view path) override;
 
+        /**
+         * @brief 设置轮询监听回调。
+         * @param callback 回调函数对象。
+         */
         void setCallback(FileChangeCallback callback) override;
 
+        /**
+         * @brief 查询轮询监听器运行状态。
+         * @return bool 运行中返回 true。
+         */
         bool isRunning() const noexcept override;
 
+        /**
+         * @brief 设置轮询周期。
+         * @param interval 轮询时间间隔。
+         */
         void setPollInterval(std::chrono::milliseconds interval) noexcept;
 
     private:
+        /**
+         * @brief 轮询循环，检测文件时间戳变化并触发回调。
+         */
         void pollLoop();
 
         std::chrono::milliseconds poll_interval_{1000};
