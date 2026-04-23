@@ -17,7 +17,6 @@
 #include <string>
 #include <string_view>
 #include <type_traits>
-#include <utility>
 #include <variant>
 #include <vector>
 
@@ -60,30 +59,68 @@ namespace Base
             ConfigObject    ///< Object
         >;
 
-        // ========================================================================
-        // 构造函数
-        // ========================================================================
-
+        /**
+         * @brief 构造空配置值（Null）。
+         */
         ConfigValue() noexcept;
 
+        /**
+         * @brief 从空指针字面量构造 Null 配置值。
+         */
         explicit ConfigValue(std::nullptr_t) noexcept;
 
+        /**
+         * @brief 从布尔值构造配置值。
+         * @param v 布尔值。
+         */
         explicit ConfigValue(bool v) noexcept;
 
+        /**
+         * @brief 从整型值构造配置值。
+         * @param v 整型值。
+         */
         explicit ConfigValue(int v) noexcept;
 
+        /**
+         * @brief 从 64 位整型构造配置值。
+         * @param v 64 位整型值。
+         */
         explicit ConfigValue(int64_t v) noexcept;
 
+        /**
+         * @brief 从双精度浮点值构造配置值。
+         * @param v 浮点值。
+         */
         explicit ConfigValue(double v) noexcept;
 
+        /**
+         * @brief 从 C 字符串构造配置值。
+         * @param v C 字符串。
+         */
         explicit ConfigValue(const char *v);
 
+        /**
+         * @brief 从字符串构造配置值。
+         * @param v 字符串值。
+         */
         explicit ConfigValue(std::string v) noexcept;
 
+        /**
+         * @brief 从数组对象构造配置值。
+         * @param v 数组值。
+         */
         explicit ConfigValue(ConfigArray v) noexcept;
 
+        /**
+         * @brief 从对象映射构造配置值。
+         * @param v 对象值。
+         */
         explicit ConfigValue(ConfigObject v) noexcept;
 
+        /**
+         * @brief 获取当前配置值类型。
+         * @return ConfigValueType 当前值类型枚举。
+         */
         ConfigValue(const ConfigValue &) = default;
 
         ConfigValue(ConfigValue &&) noexcept = default;
@@ -113,12 +150,14 @@ namespace Base
         }
 
         /**
-         * @brief 检查是否为 Null
+         * @brief 判断当前值是否为 Null。
+         * @return bool 为 Null 时返回 true。
          */
         [[nodiscard]] bool isNull() const noexcept;
 
         /**
-         * @brief 检查值是否为空（Null 或空字符串/空容器）
+         * @brief 判断值是否为空（Null、空字符串、空数组或空对象）。
+         * @return bool 满足空语义时返回 true。
          */
         [[nodiscard]] bool empty() const noexcept;
 
@@ -154,17 +193,40 @@ namespace Base
                                      );
         }
 
-        // 便捷类型别名方法
+        /**
+         * @brief 将值转换为布尔类型。
+         * @return bool 布尔值。
+         */
         [[nodiscard]] bool asBool() const;
 
+        /**
+         * @brief 将值转换为整型。
+         * @return int64_t 整型值。
+         */
         [[nodiscard]] int64_t asInt() const;
 
+        /**
+         * @brief 将值转换为浮点类型。
+         * @return double 浮点值。
+         */
         [[nodiscard]] double asDouble() const;
 
+        /**
+         * @brief 将值转换为字符串类型。
+         * @return const std::string& 字符串引用。
+         */
         [[nodiscard]] const std::string &asString() const;
 
+        /**
+         * @brief 将值转换为数组类型。
+         * @return const ConfigArray& 数组引用。
+         */
         [[nodiscard]] const ConfigArray &asArray() const;
 
+        /**
+         * @brief 将值转换为对象类型。
+         * @return const ConfigObject& 对象引用。
+         */
         [[nodiscard]] const ConfigObject &asObject() const;
 
         // ========================================================================
@@ -181,16 +243,40 @@ namespace Base
             return std::nullopt;
         }
 
+        /**
+         * @brief 安全获取布尔值。
+         * @return std::optional<bool> 类型匹配时返回值，否则返回空。
+         */
         [[nodiscard]] std::optional<bool> getBool() const noexcept;
 
+        /**
+         * @brief 安全获取整型值。
+         * @return std::optional<int64_t> 类型匹配时返回值，否则返回空。
+         */
         [[nodiscard]] std::optional<int64_t> getInt() const noexcept;
 
+        /**
+         * @brief 安全获取浮点值。
+         * @return std::optional<double> 类型匹配时返回值，否则返回空。
+         */
         [[nodiscard]] std::optional<double> getDouble() const noexcept;
 
+        /**
+         * @brief 安全获取字符串值。
+         * @return std::optional<std::string> 类型匹配时返回值，否则返回空。
+         */
         [[nodiscard]] std::optional<std::string> getString() const noexcept;
 
+        /**
+         * @brief 安全获取数组值。
+         * @return std::optional<ConfigArray> 类型匹配时返回值，否则返回空。
+         */
         [[nodiscard]] std::optional<ConfigArray> getArray() const noexcept;
 
+        /**
+         * @brief 安全获取对象值。
+         * @return std::optional<ConfigObject> 类型匹配时返回值，否则返回空。
+         */
         [[nodiscard]] std::optional<ConfigObject> getObject() const noexcept;
 
         // ========================================================================
@@ -204,12 +290,32 @@ namespace Base
             return get<ValueType>().value_or(ValueType(std::forward<T>(default_value)));
         }
 
+        /**
+         * @brief 获取布尔值，类型不匹配时返回默认值。
+         * @param default_value 默认值。
+         * @return bool 布尔结果。
+         */
         [[nodiscard]] bool boolOr(bool default_value) const noexcept;
 
+        /**
+         * @brief 获取整型值，类型不匹配时返回默认值。
+         * @param default_value 默认值。
+         * @return int64_t 整型结果。
+         */
         [[nodiscard]] int64_t intOr(int64_t default_value) const noexcept;
 
+        /**
+         * @brief 获取浮点值，类型不匹配时返回默认值。
+         * @param default_value 默认值。
+         * @return double 浮点结果。
+         */
         [[nodiscard]] double doubleOr(double default_value) const noexcept;
 
+        /**
+         * @brief 获取字符串值，类型不匹配时返回默认值。
+         * @param default_value 默认值。
+         * @return std::string 字符串结果。
+         */
         [[nodiscard]] std::string stringOr(const std::string &default_value) const;
 
         // ========================================================================
@@ -217,17 +323,23 @@ namespace Base
         // ========================================================================
 
         /**
-         * @brief 判断是否包含指定键（仅当类型为 Object 时有效）
+         * @brief 判断对象中是否包含指定键。
+         * @param key 配置键。
+         * @return bool 键存在返回 true。
          */
         [[nodiscard]] bool contains(std::string_view key) const noexcept;
 
         /**
-         * @brief 通过键访问子配置值（仅当类型为 Object 时有效）
+         * @brief 通过键访问对象成员，不存在时抛出异常。
+         * @param key 配置键。
+         * @return const ConfigValue& 对应配置值引用。
          */
         const ConfigValue &operator[](std::string_view key) const;
 
         /**
-         * @brief 通过键安全访问子配置值
+         * @brief 安全通过键访问对象成员。
+         * @param key 配置键。
+         * @return std::optional<std::reference_wrapper<const ConfigValue>> 键存在时返回值引用。
          */
         [[nodiscard]] std::optional<std::reference_wrapper<const ConfigValue> > get(std::string_view key) const noexcept;
 
@@ -248,12 +360,15 @@ namespace Base
         }
 
         /**
-         * @brief 通过索引访问数组元素（仅当类型为 Array 时有效）
+         * @brief 通过索引访问数组元素，越界时抛出异常。
+         * @param index 数组下标。
+         * @return const ConfigValue& 对应元素引用。
          */
         const ConfigValue &operator[](size_t index) const;
 
         /**
-         * @brief 获取数组大小
+         * @brief 获取当前值的大小语义（字符串长度、数组/对象元素数）。
+         * @return size_t 语义大小，不适用类型返回 0。
          */
         [[nodiscard]] size_t size() const noexcept;
 
@@ -261,8 +376,16 @@ namespace Base
         // 底层 variant 访问
         // ========================================================================
 
+        /**
+         * @brief 获取底层变体常量引用。
+         * @return const ConfigValue::VariantType& 变体常量引用。
+         */
         [[nodiscard]] const VariantType &variant() const noexcept;
 
+        /**
+         * @brief 获取底层变体可变引用。
+         * @return ConfigValue::VariantType& 变体可变引用。
+         */
         VariantType &variant() noexcept;
 
     private:
