@@ -69,16 +69,6 @@ namespace Net
         return m_map.contains(lower);
     }
 
-    auto Http::HttpHeaderMap::begin() const
-    {
-        return m_map.begin();
-    }
-
-    auto Http::HttpHeaderMap::end() const
-    {
-        return m_map.end();
-    }
-
     Http::HttpResponse::HttpResponse()
     {
         setStatus(200);

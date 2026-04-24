@@ -76,13 +76,19 @@ namespace Net::Http
          * @brief 返回指向第一个元素的迭代器（用于范围 for 循环）。
          * @return 迭代器。
          */
-        auto begin() const;
+        auto begin() const
+        {
+            return m_map.begin();
+        }
 
         /**
          * @brief 返回指向末尾的迭代器。
          * @return 迭代器。
          */
-        auto end() const;
+        auto end() const
+        {
+            return m_map.end();
+        }
 
     private:
         std::unordered_map<std::string, std::string> m_map; ///< 实际存储，键为小写形式。
