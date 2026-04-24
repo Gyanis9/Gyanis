@@ -32,7 +32,7 @@ namespace Net::Http
          *          - 空行：\r\n
          *          - 消息体（如果非空）
          */
-        void serialize(const HttpResponse &res, Buffer &output)
+        void serialize(const HttpResponse &res, Buffer &output) const
         {
             // 状态行
             output.append(std::format("HTTP/1.1 {} {}\r\n", res.statusCode, res.statusMessage));
