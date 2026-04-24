@@ -1,6 +1,8 @@
 #include "Poller.hpp"
 
+#include <iostream>
 #include <ranges>
+#include <vector>
 
 namespace Core
 {
@@ -8,7 +10,7 @@ namespace Core
      * @brief Poller 对象工厂函数。
      * @return 平台特定的 Poller 实例。
      */
-    inline std::unique_ptr<Poller> createPoller()
+    std::unique_ptr<Poller> createPoller()
     {
 #ifdef __linux__
         return std::make_unique<EpollPoller>();
@@ -86,14 +88,12 @@ namespace Core
             auto *ctx = new SocketContext{fd, user_data, events, this};
             m_socket_contexts[fd] = ctx;
 
-            // 关联到 IOCP
+            // 关联到 IOCP。如果失败（例如 socket 已有关联），仍保留 ctx 以便 select 回退机制正常工作。
             if (!::CreateIoCompletionPort(reinterpret_cast<HANDLE>(fd), m_iocp, reinterpret_cast<ULONG_PTR>(ctx), 0))
             {
-                delete ctx;
-                m_socket_contexts.erase(fd);
-                return false;
+                // 不删除 ctx — select 回退机制仍可通过 m_socket_contexts 检测该 socket
             }
-            // 如果感兴趣读事件，立即投递一次 WSARecv
+            // 如果感兴趣读事件，立即投递一次 WSARecv（零字节通知）
             if (events & PollEvent::Read)
             {
                 postRecv(ctx);
@@ -103,7 +103,6 @@ namespace Core
             it->second->user_data = user_data;
             it->second->interested_events = events;
 
-            // 若之前未投递读而现在需要读，则投递
             if ((events & PollEvent::Read) && !(it->second->last_events & PollEvent::Read))
             {
                 postRecv(it->second);
@@ -142,94 +141,118 @@ namespace Core
         ULONG count = 0;
         const BOOL ok = ::GetQueuedCompletionStatusEx(m_iocp, entries, 64, &count, timeout, FALSE);
         std::vector<PollResult> results;
-        if (!ok && count == 0)
-        {
-            return results; // 超时或错误
-        }
-        for (ULONG i = 0; i < count; ++i)
-        {
-            auto *ctx = reinterpret_cast<SocketContext *>(entries[i].lpCompletionKey);
-            if (ctx->poller == this)
-            {
-                // 唤醒事件（来自 wake_socket_ 的接收完成）
-                // 消费数据
-                char buf[64];
-                while (::recv(m_wake_socket, buf, sizeof(buf), 0) > 0)
-                {
-                }
-                continue;
-            }
-            if (!ctx)
-            {
-                continue;
-            }
-            auto *ov = entries[i].lpOverlapped;
-            DWORD bytes = entries[i].dwNumberOfBytesTransferred;
-            bool error = !(entries[i].Internal == 0);
 
-            // 根据 OVERLAPPED 类型处理
-            if (ov == &ctx->read_overlapped)
+        // 处理 IOCP 完成事件
+        if (ok || count > 0)
+        {
+            for (ULONG i = 0; i < count; ++i)
             {
-                // 读完成
-                if (!error && bytes > 0)
+                // 唤醒事件：completion key == this（通过 PostQueuedCompletionStatus 发起）
+                if (entries[i].lpCompletionKey == reinterpret_cast<ULONG_PTR>(this))
                 {
-                    // 有数据可读，触发读事件
-                    PollResult res;
-                    res.fd = ctx->fd;
-                    res.events = PollEvent::Read;
-                    res.user_data = ctx->user_data;
-                    results.push_back(res);
-                    // 继续投递下一次读（如果仍然感兴趣）
-                    if (ctx->interested_events & PollEvent::Read)
+                    continue;
+                }
+
+                auto *ctx = reinterpret_cast<SocketContext *>(entries[i].lpCompletionKey);
+                if (!ctx)
+                {
+                    continue;
+                }
+                const auto *ov = entries[i].lpOverlapped;
+                const bool error = entries[i].Internal != 0;
+
+                if (ov == &ctx->read_overlapped)
+                {
+                    ctx->read_pending = false;
+                    if (!error)
                     {
-                        postRecv(ctx);
+                        // 零字节 WSARecv 完成 = 数据已到达（不消费数据）
+                        PollResult res;
+                        res.fd = ctx->fd;
+                        res.events = PollEvent::Read;
+                        res.user_data = ctx->user_data;
+                        results.push_back(res);
+                        // 继续投递下一次读通知
+                        if (ctx->interested_events & PollEvent::Read)
+                        {
+                            postRecv(ctx);
+                        }
+                    } else
+                    {
+                        if (ctx->interested_events & PollEvent::Read)
+                        {
+                            PollResult res;
+                            res.fd = ctx->fd;
+                            res.events = PollEvent::Closed | PollEvent::Error;
+                            res.user_data = ctx->user_data;
+                            results.push_back(res);
+                        }
                     }
-                } else
+                } else if (ov == &ctx->write_overlapped)
                 {
-                    // 连接关闭或错误
-                    if (ctx->interested_events & PollEvent::Read)
+                    if (!error)
                     {
                         PollResult res;
                         res.fd = ctx->fd;
-                        res.events = PollEvent::Closed | PollEvent::Error;
+                        res.events = PollEvent::Write;
+                        res.user_data = ctx->user_data;
+                        results.push_back(res);
+                    } else
+                    {
+                        PollResult res;
+                        res.fd = ctx->fd;
+                        res.events = PollEvent::Error;
                         res.user_data = ctx->user_data;
                         results.push_back(res);
                     }
                 }
-            } else if (ov == &ctx->write_overlapped)
+            }
+        }
+
+        // 轮询监听 socket：WSARecv 因 WSAEOPNOTSUPP/WSAENOTCONN 失败后
+        // postRecv 通过设置 Closed 标记将其标记为监听 socket。
+        // 使用 select() 检测可读性（不消费连接），若有新连接则触发 Read 事件。
+        {
+            std::lock_guard lock(m_mutex);
+            for (const auto &[fd, ctx]: m_socket_contexts)
             {
-                // 写完成
-                if (!error)
+                if (!(ctx->interested_events & PollEvent::Read))
+                    continue;
+                if (ctx->read_pending || !(ctx->interested_events & PollEvent::Closed))
+                    continue;
+
+                fd_set read_fds;
+                FD_ZERO(&read_fds);
+                FD_SET(fd, &read_fds);
+                struct timeval tv = {0, 0};
+                if (const int sel_ret = ::select(0, &read_fds, nullptr, nullptr, &tv); sel_ret > 0 && FD_ISSET(fd, &read_fds))
                 {
                     PollResult res;
-                    res.fd = ctx->fd;
-                    res.events = PollEvent::Write;
+                    res.fd = fd;
+                    res.events = PollEvent::Read;
                     res.user_data = ctx->user_data;
                     results.push_back(res);
-                } else
-                {
-                    PollResult res;
-                    res.fd = ctx->fd;
-                    res.events = PollEvent::Error;
-                    res.user_data = ctx->user_data;
-                    results.push_back(res);
+                    break; // 每个 poll 周期只处理一个 fd，降低延迟
                 }
             }
         }
+
         return results;
     }
 
     void IocpPoller::wake()
     {
-        // 向自连接 socket 发送一个字节唤醒 GetQueuedCompletionStatusEx
-        constexpr char dummy = 0;
-        ::send(m_wake_socket, &dummy, 1, 0);
+        // PostQueuedCompletionStatus 是唤醒 GetQueuedCompletionStatusEx 的标准方式
+        ::PostQueuedCompletionStatus(m_iocp, 0, reinterpret_cast<ULONG_PTR>(this), nullptr);
     }
 
-    IocpPoller::SocketContext::SocketContext(const socket_t fd_, void *ud, const PollEvent ev, IocpPoller *p) : fd(fd_), user_data(ud), interested_events(ev), poller(p)
+    IocpPoller::SocketContext::SocketContext(const socket_t fd_, void *ud, const PollEvent ev, IocpPoller *p)
+        : fd(fd_), user_data(ud), interested_events(ev), poller(p)
     {
-        read_buf.buf = read_buffer;
-        read_buf.len = sizeof(read_buffer);
+        // 零字节 WSABUF — WSARecv 仅作为数据到达通知，不消费数据
+        // 后续协程中的 ::recv() 仍能读取完整数据
+        read_buf.buf = nullptr;
+        read_buf.len = 0;
     }
 
     void IocpPoller::postRecv(SocketContext *ctx) const
@@ -242,10 +265,20 @@ namespace Core
         ctx->read_pending = true;
         const int ret = ::WSARecv(ctx->fd, &ctx->read_buf, 1, nullptr, &flags,
                                   &ctx->read_overlapped, nullptr);
-        if (ret == SOCKET_ERROR && ::WSAGetLastError() != WSA_IO_PENDING)
+        if (ret == SOCKET_ERROR)
         {
+            const int err = ::WSAGetLastError();
+            if (err == WSA_IO_PENDING)
+            {
+                return; // 正常 IOCP 等待
+            }
             ctx->read_pending = false;
-            // 投递失败，可能连接已关闭，稍后 poll 会处理
+            if (err == WSAEOPNOTSUPP || err == WSAENOTCONN)
+            {
+                // 监听 socket：标记为非数据 socket，由 poll() 中使用 accept 轮询
+                ctx->interested_events = ctx->interested_events | PollEvent::Closed;
+            }
+            // 其他错误：连接已关闭，不做特殊处理
         }
     }
 }

@@ -13,6 +13,7 @@
 #include "PlatformCompat.hpp"
 
 #include <cassert>
+#include <cstdint>
 #include <memory>
 #include <mutex>
 #include <unordered_map>
@@ -451,8 +452,7 @@ namespace Core
             IocpPoller *poller;                      ///< 所属的 IocpPoller 指针
             OVERLAPPED read_overlapped{};            ///< 用于读取操作的重叠结构
             OVERLAPPED write_overlapped{};           ///< 用于写入操作的重叠结构
-            WSABUF read_buf{};                       ///< WSARecv 使用的缓冲区描述
-            char read_buffer[4096];                  ///< 实际接收缓冲区
+            WSABUF read_buf{};                       ///< WSARecv 使用的缓冲区描述（零字节，仅通知不消费）
             bool read_pending = false;               ///< 是否已有读操作挂起
             bool write_pending = false;              ///< 是否已有写操作挂起
 
