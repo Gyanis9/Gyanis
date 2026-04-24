@@ -7,9 +7,7 @@
 #define MEMORYPOOL_H
 
 #include <array>
-#include <cstddef>
 #include <mutex>
-#include <new>
 #include <vector>
 
 namespace Core
@@ -27,11 +25,7 @@ namespace Core
          * @brief 获取内存池单例。
          * @return 单例实例的引用。
          */
-        static CoroutineMemoryPool &instance()
-        {
-            static CoroutineMemoryPool pool;
-            return pool;
-        }
+        static CoroutineMemoryPool &instance();
 
         /**
          * @brief 分配指定大小的内存块。
@@ -39,26 +33,7 @@ namespace Core
          * @return 指向已分配内存的指针，对齐到 std::max_align_t。
          * @note 若 size > MAX_BLOCK_SIZE，则直接调用 ::operator new，不从池中分配。
          */
-        void *allocate(std::size_t size)
-        {
-            size = alignSize(size);
-            if (size > MAX_BLOCK_SIZE)
-            {
-                return ::operator new(size, std::align_val_t{alignof(std::max_align_t)});
-            }
-
-            std::lock_guard lock(m_mutex);
-            auto &list = m_free_lists[indexOf(size)];
-
-            if (list.empty())
-            {
-                return ::operator new(size, std::align_val_t{alignof(std::max_align_t)});
-            }
-
-            void *ptr = list.back();
-            list.pop_back();
-            return ptr;
-        }
+        void *allocate(std::size_t size);
 
         /**
          * @brief 释放之前由 allocate() 分配的内存块。
@@ -66,21 +41,13 @@ namespace Core
          * @param size 分配时传入的原始大小，内部会重新对齐。
          * @note 必须保证 size 与分配时一致，否则行为未定义。
          */
-        void deallocate(void *ptr, std::size_t size) noexcept
-        {
-            if (!ptr)
-            {
-                return;
-            }
-            size = alignSize(size);
-            if (size > MAX_BLOCK_SIZE)
-            {
-                ::operator delete(ptr, std::align_val_t{alignof(std::max_align_t)});
-                return;
-            }
-            std::lock_guard lock(m_mutex);
-            m_free_lists[indexOf(size)].push_back(ptr);
-        }
+        void deallocate(void *ptr, std::size_t size) noexcept;
+
+        /**
+         * @brief 清空所有空闲列表（用于测试隔离）。
+         * @note 仅用于测试，清空前必须确保所有已分配块已被归还。
+         */
+        void clear() noexcept;
 
     private:
         static constexpr std::size_t ALIGNMENT = 8;                            ///<  对齐粒度
@@ -96,20 +63,14 @@ namespace Core
          * @param size 原始大小。
          * @return 对齐后的大小。
          */
-        static std::size_t alignSize(const std::size_t size)
-        {
-            return (size + ALIGNMENT - 1) & ~(ALIGNMENT - 1);
-        }
+        static std::size_t alignSize(const std::size_t size);
 
         /**
          * @brief 根据对齐后的大小计算对应的空闲列表桶索引。
          * @param size 对齐后的大小，必须为 ALIGNMENT 的正整数倍且 ≤ MAX_BLOCK_SIZE。
          * @return 桶索引（0-based）。
          */
-        static std::size_t indexOf(const std::size_t size)
-        {
-            return (size / ALIGNMENT) - 1;
-        }
+        static std::size_t indexOf(const std::size_t size);
 
         std::mutex m_mutex;                                        ///< 保护空闲列表的互斥锁。
         std::array<std::vector<void *>, NUM_BUCKETS> m_free_lists; ///< 分桶空闲列表，每个桶存放同大小块指针。
