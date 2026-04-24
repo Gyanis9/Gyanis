@@ -2,7 +2,7 @@
 
 namespace Net
 {
-    inline void ConnectionManager::add(TcpConnection *conn)
+    void ConnectionManager::add(TcpConnection *conn)
     {
         std::lock_guard lock(m_mutex);
         m_connections.insert(conn);
@@ -41,7 +41,7 @@ namespace Net
  * @brief TcpServer::start 的实现（定义在类外）。
  * @details 启动 acceptLoop 协程，并以 fire-and-forget 方式调度。
  */
-    inline void TcpServer::start() const
+    void TcpServer::start() const
     {
         auto acceptTask = acceptLoopTask(this);
         acceptTask = std::move(acceptTask).withExecutionContext(m_ctx);
