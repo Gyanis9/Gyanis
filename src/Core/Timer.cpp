@@ -25,7 +25,7 @@ namespace Core
         {
             // 处理错误，比如抛异常或关闭资源
             ::closesocket(m_wake_socket);
-            ::CloseHandle(m_timer_queue);
+            ::DeleteTimerQueueEx(m_timer_queue, nullptr);
             throw std::system_error(::WSAGetLastError(), std::system_category(), "inet_pton failed");
         }
         addr.sin_port = 0;
@@ -77,12 +77,17 @@ namespace Core
     void WindowsTimerService::TimerRoutine(const PVOID lpParam, BOOLEAN)
     {
         const auto *ctx = static_cast<TimerContext *>(lpParam);
+        // 在删除 ctx 前保存需要使用的字段
+        const socket_t wake_socket = ctx->service->m_wake_socket;
+        const HANDLE timer_queue = ctx->service->m_timer_queue;
+        const HANDLE timer = ctx->timer;
+
         ctx->callback();
-        ::DeleteTimerQueueTimer(ctx->service->m_timer_queue, ctx->timer, nullptr);
+        ::DeleteTimerQueueTimer(timer_queue, timer, nullptr);
         delete ctx;
 
         // 发送一个字节到自连接 socket 以唤醒 IOCP 循环（使得 poll 能够返回）
         constexpr char dummy = 0;
-        ::send(ctx->service->m_wake_socket, &dummy, 1, 0);
+        ::send(wake_socket, &dummy, 1, 0);
     }
 }

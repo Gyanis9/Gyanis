@@ -107,7 +107,7 @@ namespace Core
          * @throw std::system_error 若 timerfd_settime 失败。
          * @details 将回调按到期时间插入优先队列，并更新 timerfd 的超时时间。
          */
-        void schedule_after(milliseconds delay, Callback cb) override
+        void scheduleAfter(milliseconds delay, Callback cb) override
         {
             std::lock_guard<std::mutex> lock(mutex_);
             auto expire_time = steady_clock::now() + delay;
@@ -119,7 +119,7 @@ namespace Core
          * @brief 返回 timerfd 描述符。
          * @return fd_ 值。
          */
-        socket_t get_notifier_fd() const override
+        socket_t getNotifierFd() const override
         {
             return fd_;
         }
@@ -130,7 +130,7 @@ namespace Core
          *          然后从优先队列中取出所有不晚于当前时间的回调并执行。
          *          注意：回调在当前线程中同步执行，生产环境中可考虑提交到线程池。
          */
-        void process_expired() override
+        void processExpired() override
         {
             // 读取到期次数（边缘触发模式下必须读空）
             uint64_t exp = 0;
