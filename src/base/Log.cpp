@@ -1,5 +1,3 @@
-#include "base/Log.h"
-
 #include <algorithm>
 #include <cctype>
 #include <chrono>
@@ -7,16 +5,92 @@
 #include <cstdio>
 #include <ctime>
 #include <filesystem>
+#include <iomanip>
 #include <iostream>
 #include <mutex>
 #include <utility>
 
-#include <sys/syscall.h>
 #include <unistd.h>
 #include <yaml-cpp/yaml.h>
 
+#include "base/Log.h"
+
+
 namespace
 {
+    constexpr std::string_view kAnsiColorReset = "\033[0m";
+
+    std::string_view LevelAnsiColor(const Gyanis::base::LogLevel::Level level)
+    {
+        switch (level)
+        {
+            case Gyanis::base::LogLevel::Level::DEBUG:
+                return "\033[36m";
+            case Gyanis::base::LogLevel::Level::INFO:
+                return "\033[32m";
+            case Gyanis::base::LogLevel::Level::WARN:
+                return "\033[33m";
+            case Gyanis::base::LogLevel::Level::ERROR:
+                return "\033[31m";
+            case Gyanis::base::LogLevel::Level::FATAL:
+                return "\033[1;31m";
+            default:
+                return "";
+        }
+    }
+
+    std::string ColorizeLevelToken(std::string formatted_text, const Gyanis::base::LogLevel::Level level)
+    {
+        const auto color = LevelAnsiColor(level);
+        if (color.empty())
+        {
+            return formatted_text;
+        }
+
+        const std::string level_text = Gyanis::base::LogLevel::ToString(level);
+        const std::string level_tag  = "[" + level_text + "]";
+
+        if (const auto pos = formatted_text.find(level_tag); pos != std::string::npos)
+        {
+            formatted_text.replace(pos, level_tag.size(),
+                                   std::string(color) + level_tag + std::string(kAnsiColorReset));
+            return formatted_text;
+        }
+
+        if (const auto pos = formatted_text.find(level_text); pos != std::string::npos)
+        {
+            formatted_text.replace(pos, level_text.size(),
+                                   std::string(color) + level_text + std::string(kAnsiColorReset));
+        }
+        return formatted_text;
+    }
+
+    bool SupportsAnsiColorOnStdout()
+    {
+        static const bool supports = []
+        {
+            if (const char *no_color = std::getenv("NO_COLOR"); no_color != nullptr && *no_color != '\0')
+            {
+                return false;
+            }
+
+            if (const char *force_color = std::getenv("FORCE_COLOR");
+                force_color != nullptr && *force_color != '\0' && std::string_view(force_color) != "0")
+            {
+                return true;
+            }
+
+            if (::isatty(STDOUT_FILENO) == 0)
+            {
+                return false;
+            }
+
+            const char *term = std::getenv("TERM");
+            return term != nullptr && *term != '\0' && std::string_view(term) != "dumb";
+        }();
+        return supports;
+    }
+
     bool IEquals(const std::string_view lhs, const std::string_view rhs)
     {
         if (lhs.size() != rhs.size())
@@ -41,15 +115,15 @@ namespace Gyanis::base
     {
         switch (level)
         {
-            case DEBUG:
+            case Level::DEBUG:
                 return "DEBUG";
-            case INFO:
+            case Level::INFO:
                 return "INFO";
-            case WARN:
+            case Level::WARN:
                 return "WARN";
-            case ERROR:
+            case Level::ERROR:
                 return "ERROR";
-            case FATAL:
+            case Level::FATAL:
                 return "FATAL";
             default:
                 return "UNKNOW";
@@ -60,29 +134,33 @@ namespace Gyanis::base
     {
         if (IEquals(str, "debug"))
         {
-            return DEBUG;
+            return Level::DEBUG;
         }
         if (IEquals(str, "info"))
         {
-            return INFO;
+            return Level::INFO;
         }
         if (IEquals(str, "warn"))
         {
-            return WARN;
+            return Level::WARN;
         }
         if (IEquals(str, "error"))
         {
-            return ERROR;
+            return Level::ERROR;
         }
         if (IEquals(str, "fatal"))
         {
-            return FATAL;
+            return Level::FATAL;
         }
-        return UNKNOW;
+        return Level::UNKNOW;
     }
 
-    LogEvent::LogEvent(const std::shared_ptr<Logger> &logger, const LogLevel::Level level, const char *       file,
-                       const int32_t                  line, const uint32_t          thread_id, const uint64_t time) :
+    LogEvent::LogEvent(const std::shared_ptr<Logger> &logger,
+                       const LogLevel::Level          level,
+                       const char *                   file,
+                       const int32_t                  line,
+                       const uint32_t                 thread_id,
+                       const uint64_t                 time) :
         m_file(file),
         m_line(line),
         m_threadId(thread_id),
@@ -92,8 +170,11 @@ namespace Gyanis::base
     {
     }
 
-    LogEvent::LogEvent(const std::shared_ptr<Logger> &logger, const LogLevel::Level level,
-                       const std::source_location &   location, const uint32_t      thread_id, const uint64_t time) :
+    LogEvent::LogEvent(const std::shared_ptr<Logger> &logger,
+                       const LogLevel::Level          level,
+                       const std::source_location &   location,
+                       const uint32_t                 thread_id,
+                       const uint64_t                 time) :
         m_file(location.file_name()),
         m_line(static_cast<int32_t>(location.line())),
         m_threadId(thread_id),
@@ -215,7 +296,8 @@ namespace Gyanis::base
         init();
     }
 
-    std::string LogFormatter::format(const std::shared_ptr<Logger> &  logger, const LogLevel::Level level,
+    std::string LogFormatter::format(const std::shared_ptr<Logger> &  logger,
+                                     const LogLevel::Level            level,
                                      const std::shared_ptr<LogEvent> &event) const
     {
         std::stringstream ss;
@@ -226,8 +308,10 @@ namespace Gyanis::base
         return ss.str();
     }
 
-    std::ostream &LogFormatter::format(std::ostream &        ofs, const std::shared_ptr<Logger> &    logger,
-                                       const LogLevel::Level level, const std::shared_ptr<LogEvent> &event) const
+    std::ostream &LogFormatter::format(std::ostream &                   ofs,
+                                       const std::shared_ptr<Logger> &  logger,
+                                       const LogLevel::Level            level,
+                                       const std::shared_ptr<LogEvent> &event) const
     {
         for (const auto &item: m_items)
         {
@@ -239,7 +323,9 @@ namespace Gyanis::base
     class MessageFormatItem final : public LogFormatter::FormatItem
     {
     public:
-        void format(std::ostream &                   os, const std::shared_ptr<Logger> &logger, const LogLevel::Level level,
+        void format(std::ostream &                   os,
+                    const std::shared_ptr<Logger> &  logger,
+                    const LogLevel::Level            level,
                     const std::shared_ptr<LogEvent> &event) override
         {
             (void) logger;
@@ -251,7 +337,9 @@ namespace Gyanis::base
     class LevelFormatItem final : public LogFormatter::FormatItem
     {
     public:
-        void format(std::ostream &                   os, const std::shared_ptr<Logger> &logger, const LogLevel::Level level,
+        void format(std::ostream &                   os,
+                    const std::shared_ptr<Logger> &  logger,
+                    const LogLevel::Level            level,
                     const std::shared_ptr<LogEvent> &event) override
         {
             (void) logger;
@@ -263,7 +351,9 @@ namespace Gyanis::base
     class NameFormatItem final : public LogFormatter::FormatItem
     {
     public:
-        void format(std::ostream &                   os, const std::shared_ptr<Logger> &logger, const LogLevel::Level level,
+        void format(std::ostream &                   os,
+                    const std::shared_ptr<Logger> &  logger,
+                    const LogLevel::Level            level,
                     const std::shared_ptr<LogEvent> &event) override
         {
             (void) logger;
@@ -275,7 +365,9 @@ namespace Gyanis::base
     class ThreadIdFormatItem final : public LogFormatter::FormatItem
     {
     public:
-        void format(std::ostream &                   os, const std::shared_ptr<Logger> &logger, const LogLevel::Level level,
+        void format(std::ostream &                   os,
+                    const std::shared_ptr<Logger> &  logger,
+                    const LogLevel::Level            level,
                     const std::shared_ptr<LogEvent> &event) override
         {
             (void) logger;
@@ -296,7 +388,9 @@ namespace Gyanis::base
             }
         }
 
-        void format(std::ostream &                   os, const std::shared_ptr<Logger> &logger, const LogLevel::Level level,
+        void format(std::ostream &                   os,
+                    const std::shared_ptr<Logger> &  logger,
+                    const LogLevel::Level            level,
                     const std::shared_ptr<LogEvent> &event) override
         {
             (void) logger;
@@ -324,31 +418,103 @@ namespace Gyanis::base
     class FilenameFormatItem final : public LogFormatter::FormatItem
     {
     public:
-        void format(std::ostream &                   os, const std::shared_ptr<Logger> &logger, const LogLevel::Level level,
+        explicit FilenameFormatItem(const std::string &width_spec = "")
+        {
+            if (width_spec.empty())
+            {
+                return;
+            }
+
+            try
+            {
+                if (const int width = std::stoi(width_spec); width > 0)
+                {
+                    m_width = width;
+                }
+            } catch (...)
+            {
+                m_width = 0;
+            }
+        }
+
+        void format(std::ostream &                   os,
+                    const std::shared_ptr<Logger> &  logger,
+                    const LogLevel::Level            level,
                     const std::shared_ptr<LogEvent> &event) override
         {
             (void) logger;
             (void) level;
-            os << event->getFile();
+
+            if (m_width <= 0)
+            {
+                os << event->getFile();
+                return;
+            }
+
+            const auto old_flags = os.flags();
+            const auto old_fill  = os.fill();
+            os << std::setw(m_width) << std::setfill(' ') << std::left << event->getFile();
+            os.flags(old_flags);
+            os.fill(old_fill);
         }
+
+    private:
+        int m_width = 0;
     };
 
     class LineFormatItem final : public LogFormatter::FormatItem
     {
     public:
-        void format(std::ostream &                   os, const std::shared_ptr<Logger> &logger, const LogLevel::Level level,
+        explicit LineFormatItem(const std::string &width_spec = "")
+        {
+            if (width_spec.empty())
+            {
+                return;
+            }
+
+            try
+            {
+                if (const int width = std::stoi(width_spec); width > 0)
+                {
+                    m_width = width;
+                }
+            } catch (...)
+            {
+                m_width = 0;
+            }
+        }
+
+        void format(std::ostream &                   os,
+                    const std::shared_ptr<Logger> &  logger,
+                    const LogLevel::Level            level,
                     const std::shared_ptr<LogEvent> &event) override
         {
             (void) logger;
             (void) level;
-            os << event->getLine();
+
+            if (m_width <= 0)
+            {
+                os << event->getLine();
+                return;
+            }
+
+            const auto old_flags = os.flags();
+            const auto old_fill  = os.fill();
+            os << std::setw(m_width) << std::setfill(' ') << std::right << event->getLine();
+            os.flags(old_flags);
+            os.fill(old_fill);
         }
+
+    private:
+        int m_width = 0;
     };
 
     class NewLineFormatItem final : public LogFormatter::FormatItem
     {
     public:
-        void format(std::ostream &                   os, const std::shared_ptr<Logger> &logger, const LogLevel::Level level,
+        void format(std::ostream &                   os,
+                    const std::shared_ptr<Logger> &  logger,
+                    const LogLevel::Level            level,
                     const std::shared_ptr<LogEvent> &event) override
         {
             (void) logger;
@@ -366,7 +532,9 @@ namespace Gyanis::base
         {
         }
 
-        void format(std::ostream &                   os, const std::shared_ptr<Logger> &logger, const LogLevel::Level level,
+        void format(std::ostream &                   os,
+                    const std::shared_ptr<Logger> &  logger,
+                    const LogLevel::Level            level,
                     const std::shared_ptr<LogEvent> &event) override
         {
             (void) logger;
@@ -382,7 +550,9 @@ namespace Gyanis::base
     class TabFormatItem final : public LogFormatter::FormatItem
     {
     public:
-        void format(std::ostream &                   os, const std::shared_ptr<Logger> &logger, const LogLevel::Level level,
+        void format(std::ostream &                   os,
+                    const std::shared_ptr<Logger> &  logger,
+                    const LogLevel::Level            level,
                     const std::shared_ptr<LogEvent> &event) override
         {
             (void) logger;
@@ -516,13 +686,13 @@ namespace Gyanis::base
                 m_items.push_back(std::make_shared<NameFormatItem>());
             } else if (segment.content == "l")
             {
-                m_items.push_back(std::make_shared<LineFormatItem>());
+                m_items.push_back(std::make_shared<LineFormatItem>(segment.format_spec));
             } else if (segment.content == "n")
             {
                 m_items.push_back(std::make_shared<NewLineFormatItem>());
             } else if (segment.content == "f")
             {
-                m_items.push_back(std::make_shared<FilenameFormatItem>());
+                m_items.push_back(std::make_shared<FilenameFormatItem>(segment.format_spec));
             } else if (segment.content == "T")
             {
                 m_items.push_back(std::make_shared<TabFormatItem>());
@@ -544,7 +714,9 @@ namespace Gyanis::base
         return m_pattern;
     }
 
-    LogFormatter::PatternSegment::PatternSegment(std::string content, std::string format_spec, const SegmentType type) :
+    LogFormatter::PatternSegment::PatternSegment(std::string       content,
+                                                 std::string       format_spec,
+                                                 const SegmentType type) :
         content(std::move(content)),
         format_spec(std::move(format_spec)),
         type(type)
@@ -578,9 +750,9 @@ namespace Gyanis::base
 
     Logger::Logger(const std::string_view name) :
         m_name(name),
-        m_level(LogLevel::DEBUG)
+        m_level(LogLevel::Level::DEBUG)
     {
-        m_formatter = std::make_shared<LogFormatter>("%d{%Y-%m-%d %H:%M:%S}%T%t%T[%p]%T[%c]%T%f:%l%T%m%n");
+        m_formatter = std::make_shared<LogFormatter>("%d{%Y-%m-%d %H:%M:%S}%T%t%T[%p]%T[%c]%T%f{32}:%l{4}%T%m%n");
     }
 
     void Logger::log(const LogLevel::Level level, const std::shared_ptr<LogEvent> &event)
@@ -616,27 +788,27 @@ namespace Gyanis::base
 
     void Logger::debug(const std::shared_ptr<LogEvent> &event)
     {
-        log(LogLevel::DEBUG, event);
+        log(LogLevel::Level::DEBUG, event);
     }
 
     void Logger::info(const std::shared_ptr<LogEvent> &event)
     {
-        log(LogLevel::INFO, event);
+        log(LogLevel::Level::INFO, event);
     }
 
     void Logger::warn(const std::shared_ptr<LogEvent> &event)
     {
-        log(LogLevel::WARN, event);
+        log(LogLevel::Level::WARN, event);
     }
 
     void Logger::error(const std::shared_ptr<LogEvent> &event)
     {
-        log(LogLevel::ERROR, event);
+        log(LogLevel::Level::ERROR, event);
     }
 
     void Logger::fatal(const std::shared_ptr<LogEvent> &event)
     {
-        log(LogLevel::FATAL, event);
+        log(LogLevel::Level::FATAL, event);
     }
 
     void Logger::addAppender(const std::shared_ptr<LogAppender> &appender)
@@ -738,7 +910,7 @@ namespace Gyanis::base
     std::string Logger::toYamlString()
     {
         std::string                               name;
-        LogLevel::Level                           level = LogLevel::UNKNOW;
+        LogLevel::Level                           level = LogLevel::Level::UNKNOW;
         std::shared_ptr<LogFormatter>             formatter;
         std::vector<std::shared_ptr<LogAppender>> appenders;
 
@@ -752,7 +924,7 @@ namespace Gyanis::base
 
         YAML::Node node;
         node["name"] = name;
-        if (level != LogLevel::UNKNOW)
+        if (level != LogLevel::Level::UNKNOW)
         {
             node["level"] = LogLevel::ToString(level);
         }
@@ -771,16 +943,30 @@ namespace Gyanis::base
         return ss.str();
     }
 
+    void StdoutLogAppender::setColorEnabled(const bool value)
+    {
+        std::scoped_lock lock(m_mutex);
+        m_enableColor = value;
+    }
+
+    bool StdoutLogAppender::isColorEnabled() const
+    {
+        std::scoped_lock lock(m_mutex);
+        return m_enableColor;
+    }
+
     void StdoutLogAppender::log(const std::shared_ptr<Logger> &  logger, const LogLevel::Level level,
                                 const std::shared_ptr<LogEvent> &event)
     {
-        LogLevel::Level               appender_level = LogLevel::UNKNOW;
+        LogLevel::Level               appender_level = LogLevel::Level::UNKNOW;
         std::shared_ptr<LogFormatter> formatter;
+        bool                          enable_color{};
 
         {
             std::scoped_lock lock(m_mutex);
             appender_level = m_level;
             formatter      = m_formatter;
+            enable_color   = m_enableColor;
         }
 
         if (level < appender_level)
@@ -798,6 +984,14 @@ namespace Gyanis::base
         }
 
         std::scoped_lock output_lock(g_stdoutMutex);
+
+        if (enable_color && SupportsAnsiColorOnStdout())
+        {
+            std::string formatted_text = formatter->format(logger, level, event);
+            std::cout << ColorizeLevelToken(std::move(formatted_text), level);
+            return;
+        }
+
         formatter->format(std::cout, logger, level, event);
     }
 
@@ -806,7 +1000,7 @@ namespace Gyanis::base
         std::scoped_lock lock(m_mutex);
         YAML::Node       node;
         node["type"] = "StdoutLogAppender";
-        if (m_level != LogLevel::UNKNOW)
+        if (m_level != LogLevel::Level::UNKNOW)
         {
             node["level"] = LogLevel::ToString(m_level);
         }
@@ -814,6 +1008,7 @@ namespace Gyanis::base
         {
             node["formatter"] = m_formatter->getPattern();
         }
+        node["color"] = m_enableColor;
         std::stringstream ss;
         ss << node;
         return ss.str();
@@ -843,7 +1038,8 @@ namespace Gyanis::base
         }
     }
 
-    void FileLogAppender::setAsyncConfig(const size_t                    max_queue_size, const size_t flush_batch_size,
+    void FileLogAppender::setAsyncConfig(const size_t                    max_queue_size,
+                                         const size_t                    flush_batch_size,
                                          const std::chrono::milliseconds flush_interval)
     {
         if (max_queue_size == 0 || flush_batch_size == 0 || flush_interval.count() <= 0)
@@ -851,16 +1047,16 @@ namespace Gyanis::base
             return;
         }
 
-        std::lock_guard<std::mutex> lock(m_queueMutex);
+        std::lock_guard lock(m_queueMutex);
         m_maxQueueSize   = max_queue_size;
         m_flushBatchSize = std::min(flush_batch_size, m_maxQueueSize);
         m_flushInterval  = flush_interval;
         m_queueCv.notify_all();
     }
 
-    void FileLogAppender::enqueue(FileLogAppender::AsyncLogTask task)
+    void FileLogAppender::enqueue(AsyncLogTask task)
     {
-        std::unique_lock<std::mutex> queue_lock(m_queueMutex);
+        std::unique_lock queue_lock(m_queueMutex);
         m_queueCv.wait(queue_lock,
                        [this]
                        {
@@ -880,16 +1076,16 @@ namespace Gyanis::base
 
     void FileLogAppender::workerLoop()
     {
-        std::vector<FileLogAppender::AsyncLogTask> batch;
+        std::vector<AsyncLogTask> batch;
         batch.reserve(m_flushBatchSize);
 
         while (true)
         {
-            std::chrono::milliseconds flush_interval{500};
-            size_t                    flush_batch_size = 1;
 
             {
-                std::unique_lock<std::mutex> queue_lock(m_queueMutex);
+                std::chrono::milliseconds flush_interval;
+                size_t                    flush_batch_size{};
+                std::unique_lock          queue_lock(m_queueMutex);
                 flush_interval   = m_flushInterval;
                 flush_batch_size = m_flushBatchSize;
 
@@ -940,7 +1136,7 @@ namespace Gyanis::base
                 std::scoped_lock stream_lock(m_mutex);
                 if (!m_filestream.is_open())
                 {
-                    std::lock_guard<std::mutex> queue_lock(m_queueMutex);
+                    std::lock_guard queue_lock(m_queueMutex);
                     for (auto it = batch.rbegin(); it != batch.rend(); ++it)
                     {
                         m_pendingLogs.emplace_front(std::move(*it));
@@ -950,9 +1146,9 @@ namespace Gyanis::base
                     continue;
                 }
 
-                for (const auto &task: batch)
+                for (const auto &[logger, formatter, event, level]: batch)
                 {
-                    task.formatter->format(m_filestream, task.logger, task.level, task.event);
+                    formatter->format(m_filestream, logger, level, event);
                 }
                 m_filestream.flush();
             }
@@ -967,10 +1163,11 @@ namespace Gyanis::base
         }
     }
 
-    void FileLogAppender::log(const std::shared_ptr<Logger> &  logger, const LogLevel::Level level,
+    void FileLogAppender::log(const std::shared_ptr<Logger> &  logger,
+                              const LogLevel::Level            level,
                               const std::shared_ptr<LogEvent> &event)
     {
-        LogLevel::Level               appender_level = LogLevel::UNKNOW;
+        LogLevel::Level               appender_level = LogLevel::Level::UNKNOW;
         std::shared_ptr<LogFormatter> formatter;
 
         {
@@ -993,16 +1190,16 @@ namespace Gyanis::base
             return;
         }
 
-        enqueue(FileLogAppender::AsyncLogTask{logger, std::move(formatter), event, level});
+        enqueue(AsyncLogTask{logger, std::move(formatter), event, level});
     }
 
     std::string FileLogAppender::toYamlString()
     {
         size_t                    max_queue_size   = 0;
         size_t                    flush_batch_size = 0;
-        std::chrono::milliseconds flush_interval{0};
+        std::chrono::milliseconds flush_interval{};
         {
-            std::lock_guard<std::mutex> queue_lock(m_queueMutex);
+            std::lock_guard queue_lock(m_queueMutex);
             max_queue_size   = m_maxQueueSize;
             flush_batch_size = m_flushBatchSize;
             flush_interval   = m_flushInterval;
@@ -1016,7 +1213,7 @@ namespace Gyanis::base
         node["max_queue_size"]    = max_queue_size;
         node["flush_batch_size"]  = flush_batch_size;
         node["flush_interval_ms"] = flush_interval.count();
-        if (m_level != LogLevel::UNKNOW)
+        if (m_level != LogLevel::Level::UNKNOW)
         {
             node["level"] = LogLevel::ToString(m_level);
         }

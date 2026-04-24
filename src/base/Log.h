@@ -36,27 +36,27 @@
 /**
  * @brief 输出 debug 级别日志
  */
-#define LOG_DEBUG(logger) LOG_LEVEL(logger, Gyanis::base::LogLevel::DEBUG)
+#define LOG_DEBUG(logger) LOG_LEVEL(logger, Gyanis::base::LogLevel::Level::DEBUG)
 
 /**
  * @brief 输出 info 级别日志
  */
-#define LOG_INFO(logger) LOG_LEVEL(logger, Gyanis::base::LogLevel::INFO)
+#define LOG_INFO(logger) LOG_LEVEL(logger, Gyanis::base::LogLevel::Level::INFO)
 
 /**
  * @brief 输出 warn 级别日志
  */
-#define LOG_WARN(logger) LOG_LEVEL(logger, Gyanis::base::LogLevel::WARN)
+#define LOG_WARN(logger) LOG_LEVEL(logger, Gyanis::base::LogLevel::Level::WARN)
 
 /**
  * @brief 输出 error 级别日志
  */
-#define LOG_ERROR(logger) LOG_LEVEL(logger, Gyanis::base::LogLevel::ERROR)
+#define LOG_ERROR(logger) LOG_LEVEL(logger, Gyanis::base::LogLevel::Level::ERROR)
 
 /**
  * @brief 输出 fatal 级别日志
  */
-#define LOG_FATAL(logger) LOG_LEVEL(logger, Gyanis::base::LogLevel::FATAL)
+#define LOG_FATAL(logger) LOG_LEVEL(logger, Gyanis::base::LogLevel::Level::FATAL)
 
 /**
  * @brief 使用格式化方式将日志写入 logger
@@ -69,27 +69,27 @@
 /**
  * @brief 输出 debug 级别格式化日志
  */
-#define LOG_FMT_DEBUG(logger, fmt, ...) LOG_FMT_LEVEL((logger), Gyanis::base::LogLevel::DEBUG, (fmt) __VA_OPT__(,) __VA_ARGS__)
+#define LOG_FMT_DEBUG(logger, fmt, ...) LOG_FMT_LEVEL((logger), Gyanis::base::LogLevel::Level::DEBUG, (fmt) __VA_OPT__(,) __VA_ARGS__)
 
 /**
  * @brief 输出 info 级别格式化日志
  */
-#define LOG_FMT_INFO(logger, fmt, ...)  LOG_FMT_LEVEL((logger), Gyanis::base::LogLevel::INFO, (fmt) __VA_OPT__(,) __VA_ARGS__)
+#define LOG_FMT_INFO(logger, fmt, ...)  LOG_FMT_LEVEL((logger), Gyanis::base::LogLevel::Level::INFO, (fmt) __VA_OPT__(,) __VA_ARGS__)
 
 /**
  * @brief 输出 warn 级别格式化日志
  */
-#define LOG_FMT_WARN(logger, fmt, ...)  LOG_FMT_LEVEL((logger), Gyanis::base::LogLevel::WARN, (fmt) __VA_OPT__(,) __VA_ARGS__)
+#define LOG_FMT_WARN(logger, fmt, ...)  LOG_FMT_LEVEL((logger), Gyanis::base::LogLevel::Level::WARN, (fmt) __VA_OPT__(,) __VA_ARGS__)
 
 /**
  * @brief 输出 error 级别格式化日志
  */
-#define LOG_FMT_ERROR(logger, fmt, ...) LOG_FMT_LEVEL((logger), Gyanis::base::LogLevel::ERROR, (fmt) __VA_OPT__(,) __VA_ARGS__)
+#define LOG_FMT_ERROR(logger, fmt, ...) LOG_FMT_LEVEL((logger), Gyanis::base::LogLevel::Level::ERROR, (fmt) __VA_OPT__(,) __VA_ARGS__)
 
 /**
  * @brief 输出 fatal 级别格式化日志
  */
-#define LOG_FMT_FATAL(logger, fmt, ...) LOG_FMT_LEVEL((logger), Gyanis::base::LogLevel::FATAL, (fmt) __VA_OPT__(,) __VA_ARGS__)
+#define LOG_FMT_FATAL(logger, fmt, ...) LOG_FMT_LEVEL((logger), Gyanis::base::LogLevel::Level::FATAL, (fmt) __VA_OPT__(,) __VA_ARGS__)
 
 /**
  * @brief 获取根日志器
@@ -116,7 +116,7 @@ namespace Gyanis::base
         /**
          * @brief 日志级别枚举
          */
-        enum Level
+        enum class Level
         {
             UNKNOW = 0, ///< 未知级别
             DEBUG = 1,  ///< DEBUG 级别
@@ -416,10 +416,10 @@ namespace Gyanis::base
         void setLevel(LogLevel::Level value);
 
     protected:
-        LogLevel::Level               m_level        = LogLevel::INFO; /// 日志级别
-        bool                          m_hasFormatter = false;          /// 是否有自己的日志格式器
-        mutable MutexType             m_mutex;                         ///< Mutex
-        std::shared_ptr<LogFormatter> m_formatter;                     ///< 日志格式器
+        LogLevel::Level               m_level        = LogLevel::Level::INFO; /// 日志级别
+        bool                          m_hasFormatter = false;                 /// 是否有自己的日志格式器
+        mutable MutexType             m_mutex;                                ///< Mutex
+        std::shared_ptr<LogFormatter> m_formatter;                            ///< 日志格式器
     };
 
     /**
@@ -536,11 +536,24 @@ namespace Gyanis::base
     class StdoutLogAppender final : public LogAppender
     {
     public:
+        /**
+         * @brief 是否启用按级别着色输出（仅标准输出）
+         */
+        void setColorEnabled(bool value);
+
+        /**
+         * @brief 获取是否启用按级别着色输出
+         */
+        [[nodiscard]] bool isColorEnabled() const;
+
         void log(const std::shared_ptr<Logger> &  logger,
                  LogLevel::Level                  level,
                  const std::shared_ptr<LogEvent> &event) override;
 
         std::string toYamlString() override;
+
+    private:
+        bool m_enableColor = true;
     };
 
     /**
@@ -571,7 +584,7 @@ namespace Gyanis::base
             std::shared_ptr<Logger>       logger;
             std::shared_ptr<LogFormatter> formatter;
             std::shared_ptr<LogEvent>     event;
-            LogLevel::Level               level = LogLevel::UNKNOW;
+            LogLevel::Level               level = LogLevel::Level::UNKNOW;
         };
 
         void enqueue(AsyncLogTask task);

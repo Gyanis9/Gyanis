@@ -279,25 +279,27 @@ namespace Gyanis::base
                     }
 
                     logger->clearAppenders();
-                    for (const auto& [type, level, formatter, file] : i.appenders)
+                    for (const auto& appender_define : i.appenders)
                     {
                         std::shared_ptr<LogAppender> ap = nullptr;
-                        if (type == 1)
+                        if (appender_define.type == 1)
                         {
-                            ap = std::make_shared<FileLogAppender>(file);
+                            ap = std::make_shared<FileLogAppender>(appender_define.file);
                         }
-                        else if (type == 2)
+                        else if (appender_define.type == 2)
                         {
-                            ap = std::make_shared<StdoutLogAppender>();
+                            auto stdout_ap = std::make_shared<StdoutLogAppender>();
+                            stdout_ap->setColorEnabled(appender_define.color);
+                            ap = stdout_ap;
                         }
                         else
                         {
                             continue;
                         }
-                        ap->setLevel(level);
-                        if (!formatter.empty())
+                        ap->setLevel(appender_define.level);
+                        if (!appender_define.formatter.empty())
                         {
-                            if (auto fmt = std::make_shared<LogFormatter>(formatter); !fmt->isError())
+                            if (auto fmt = std::make_shared<LogFormatter>(appender_define.formatter); !fmt->isError())
                             {
                                 ap->setFormatter(fmt);
                             }
@@ -305,8 +307,8 @@ namespace Gyanis::base
                             {
                                 LOG_WARN(g_logger) << "LogIniter - Invalid appender configuration. "
                                     << "Log name: " << i.name
-                                    << " | Appender type: " << type
-                                    << " | Formatter: " << formatter
+                                    << " | Appender type: " << appender_define.type
+                                    << " | Formatter: " << appender_define.formatter
                                     << " is invalid." << std::endl;
                             }
                         }

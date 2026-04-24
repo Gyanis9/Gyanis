@@ -589,20 +589,23 @@ namespace Gyanis::base
      * @param level 日志级别
      * @param formatter 输出格式化字符串
      * @param file 文件路径，仅在type为1时有效
+     * @param color 控制台颜色开关，仅在type为2时有效
      */
     struct LogAppenderDefine
     {
         int type = 0;
-        LogLevel::Level level = LogLevel::UNKNOW;
+        LogLevel::Level level = LogLevel::Level::UNKNOW;
         std::string formatter;
         std::string file;
+        bool color = true;
 
         bool operator==(const LogAppenderDefine& oth) const
         {
             return type == oth.type
                 && level == oth.level
                 && formatter == oth.formatter
-                && file == oth.file;
+                && file == oth.file
+                && color == oth.color;
         }
     };
 
@@ -617,7 +620,7 @@ namespace Gyanis::base
     struct LogDefine
     {
         std::string name;
-        LogLevel::Level level = LogLevel::UNKNOW;
+        LogLevel::Level level = LogLevel::Level::UNKNOW;
         std::string formatter;
         std::vector<LogAppenderDefine> appenders;
 
@@ -743,6 +746,7 @@ namespace Gyanis::base
                     else if (type == "StdoutLogAppender")
                     {
                         log_appender_define.type = 2;
+                        log_appender_define.color = appender["color"].as<bool>(true);
                         if (appender["formatter"].IsDefined())
                         {
                             log_appender_define.formatter = appender["formatter"].as<std::string>();
@@ -774,7 +778,7 @@ namespace Gyanis::base
         {
             YAML::Node node;
             node["name"] = value.name;
-            if (value.level != LogLevel::UNKNOW)
+            if (value.level != LogLevel::Level::UNKNOW)
             {
                 node["level"] = LogLevel::ToString(value.level);
             }
@@ -783,25 +787,26 @@ namespace Gyanis::base
                 node["formatter"] = value.formatter;
             }
 
-            for (const auto& [type, level, formatter, file] : value.appenders)
+            for (const auto& appender : value.appenders)
             {
                 YAML::Node node_appenders;
-                if (type == 1)
+                if (appender.type == 1)
                 {
                     node_appenders["type"] = "FileLogAppender";
-                    node_appenders["file"] = file;
+                    node_appenders["file"] = appender.file;
                 }
-                else if (type == 2)
+                else if (appender.type == 2)
                 {
                     node_appenders["type"] = "StdoutLogAppender";
+                    node_appenders["color"] = appender.color;
                 }
-                if (level != LogLevel::UNKNOW)
+                if (appender.level != LogLevel::Level::UNKNOW)
                 {
-                    node_appenders["level"] = LogLevel::ToString(level);
+                    node_appenders["level"] = LogLevel::ToString(appender.level);
                 }
-                if (!formatter.empty())
+                if (!appender.formatter.empty())
                 {
-                    node_appenders["formatter"] = formatter;
+                    node_appenders["formatter"] = appender.formatter;
                 }
                 node["appenders"].push_back(node_appenders);
             }
