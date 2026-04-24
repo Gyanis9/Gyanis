@@ -21,11 +21,3 @@ add_library(Base
 target_link_libraries(Base PUBLIC
         yaml-cpp::yaml-cpp
 )
-
-## 平台特定链接
-#if (LINUX)
-#    # inotify 不需要额外链接库
-#elseif (WIN32)
-#    # ReadDirectoryChangesW 在 kernel32 中
-#    target_link_libraries(Base PRIVATE kernel32)
-#endif ()
