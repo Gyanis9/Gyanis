@@ -12,9 +12,9 @@
 #define SCHEDULER_HPP
 
 #include "ExecutionContext.hpp"
-#include "poller.hpp"
+#include "Poller.hpp"
 #include "ThreadPool.hpp"
-#include "timer.hpp"
+#include "Timer.hpp"
 
 #include <atomic>
 #include <functional>
@@ -47,6 +47,14 @@ namespace Core
          *          注册到 Poller 中，以便在定时器到期时被唤醒。
          */
         explicit IoScheduler(PriorityThreadPool &thread_pool);
+
+        /**
+         * @brief 测试用构造器：注入预先创建的 Poller 和 TimerService。
+         * @param thread_pool 线程池引用。
+         * @param poller 已创建的 Poller 实例。
+         * @param timer_service 已创建的 TimerService 实例。
+         */
+        IoScheduler(PriorityThreadPool &thread_pool, std::unique_ptr<Poller> poller, std::unique_ptr<TimerService> timer_service);
 
         /**
          * @brief 析构函数，停止 I/O 线程并释放资源。
@@ -84,7 +92,7 @@ namespace Core
          * @brief 移除 I/O 事件监听。
          * @param fd 要移除的套接字描述符。
          */
-        void unwatch( socket_t fd);
+        void unwatch(socket_t fd);
 
         /**
          * @brief 延迟调度任务。
@@ -95,7 +103,7 @@ namespace Core
          * @details 使用 TimerService 创建一次性定时器，到期后将任务
          *          以指定优先级提交到线程池。
          */
-        void postDelayed( milliseconds delay, std::function<void()> task, TaskPriority priority) const;
+        void postDelayed(milliseconds delay, std::function<void()> task, TaskPriority priority) const;
 
         /**
          * @brief 获取执行上下文（供协程使用）。

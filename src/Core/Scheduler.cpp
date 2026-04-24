@@ -2,12 +2,17 @@
 
 namespace Core
 {
-    IoScheduler::IoScheduler(PriorityThreadPool &thread_pool) : m_thread_pool(thread_pool),
-                                                                m_poller(createPoller()),
-                                                                m_timer_service(createTimerService()),
-                                                                m_running(false)
+    IoScheduler::IoScheduler(PriorityThreadPool &thread_pool)
+        : IoScheduler(thread_pool, createPoller(), createTimerService())
     {
-        // 将 timer notifier fd 注册到 poller
+    }
+
+    IoScheduler::IoScheduler(PriorityThreadPool &thread_pool, std::unique_ptr<Poller> poller, std::unique_ptr<TimerService> timer_service)
+        : m_thread_pool(thread_pool),
+          m_poller(std::move(poller)),
+          m_timer_service(std::move(timer_service)),
+          m_running(false)
+    {
         if (const socket_t timer_fd = m_timer_service->getNotifierFd(); timer_fd != INVALID_SOCKET_VAL)
         {
             m_poller->add(timer_fd, PollEvent::Read, this);
@@ -52,7 +57,6 @@ namespace Core
         {
             CallbackEntry entry{std::move(callback), events, user_data};
             m_callbacks[fd] = std::move(entry);
-            // 向 Poller 注册时，将 fd 指针化作为 user_data 传递
             m_poller->add(fd, events, reinterpret_cast<void *>(fd));
         } else
         {
@@ -93,11 +97,9 @@ namespace Core
             {
                 if (res.user_data == this)
                 {
-                    // 定时器事件：处理到期定时器
                     m_timer_service->processExpired();
                     continue;
                 }
-                // 根据 fd 查找回调
                 socket_t fd = static_cast<socket_t>(reinterpret_cast<intptr_t>(res.user_data));
                 IoCallback cb;
                 void *ud = nullptr;
@@ -107,11 +109,12 @@ namespace Core
                     {
                         cb = it->second.callback;
                         ud = it->second.user_data;
+                        m_callbacks.erase(it);
+                        m_poller->remove(fd);
                     }
                 }
                 if (cb)
                 {
-                    // 以高优先级在线程池执行回调
                     m_thread_pool.submit(TaskPriority::High, [cb = std::move(cb), events = res.events, ud]
                     {
                         cb(events, ud);
