@@ -10,7 +10,7 @@
 #ifndef TASK_HPP
 #define TASK_HPP
 
-#include "cancellation.hpp"
+#include "Cancellation.hpp"
 #include "ExecutionContext.hpp"
 #include "MemoryPool.hpp"
 
@@ -51,7 +51,7 @@ namespace Core
             /**
              * @brief 总是挂起，不直接 ready。
              */
-            bool awaitReady() const noexcept
+            bool await_ready() const noexcept
             {
                 return false;
             }
@@ -63,11 +63,18 @@ namespace Core
              * @return 若存在 continuation_ 则返回其句柄，否则返回 std::noop_coroutine。
              */
             template<typename Promise>
-            std::coroutine_handle<> awaitSuspend(std::coroutine_handle<Promise> h) noexcept
+            std::coroutine_handle<> await_suspend(std::coroutine_handle<Promise> h) noexcept
             {
-                if (auto &promise = h.promise(); promise.continuation_)
+                auto &promise = h.promise();
+                if (promise.isDetached())
                 {
-                    return promise.continuation_;
+                    // 分离式 fire-and-forget：协程结束时自动销毁帧
+                    h.destroy();
+                    return std::noop_coroutine();
+                }
+                if (auto cont = promise.continuation())
+                {
+                    return cont;
                 }
                 return std::noop_coroutine();
             }
@@ -75,7 +82,7 @@ namespace Core
             /**
              * @brief 恢复执行后无操作。
              */
-            void awaitResume() const noexcept
+            void await_resume() const noexcept
             {
             }
         };
@@ -107,13 +114,13 @@ namespace Core
          * @brief 获取与此 Promise 关联的 Task 对象。
          * @return Task<T> 实例。
          */
-        Task<T> getReturnObject();
+        Task<T> get_return_object();
 
         /**
          * @brief 初始挂起点（总是挂起）。
          * @return std::suspend_always 实例。
          */
-        std::suspend_always initialSuspend() const noexcept
+        std::suspend_always initial_suspend() const noexcept
         {
             return {};
         }
@@ -122,7 +129,7 @@ namespace Core
          * @brief 最终挂起点，使用 FinalAwaiter 实现链式唤醒。
          * @return FinalAwaiter 实例。
          */
-        detail::FinalAwaiter finalSuspend() const noexcept
+        detail::FinalAwaiter final_suspend() const noexcept
         {
             return {};
         }
@@ -133,7 +140,7 @@ namespace Core
          * @param value 返回值。
          */
         template<typename U>
-        void returnValue(U &&value)
+        void return_value(U &&value)
         {
             m_result.template emplace<T>(std::forward<U>(value));
         }
@@ -142,7 +149,7 @@ namespace Core
          * @brief 协程抛出未捕获异常时调用。
          * @details 将当前异常指针存储到结果 variant 中。
          */
-        void unhandledException()
+        void unhandled_exception()
         {
             m_result.template emplace<std::exception_ptr>(std::current_exception());
         }
@@ -230,6 +237,32 @@ namespace Core
             return m_exec_ctx;
         }
 
+        /**
+         * @brief 获取 continuation 句柄（用于最终挂起时链式唤醒）。
+         * @return 后续待恢复的协程句柄，为空则表示无 continuation。
+         */
+        std::coroutine_handle<> continuation() const
+        {
+            return m_continuation;
+        }
+
+        /**
+         * @brief 标记 coroutine 为分离执行（fire-and-forget）。
+         *        在 final_suspend 时自动销毁帧。
+         */
+        void setDetached() noexcept
+        {
+            m_detached = true;
+        }
+
+        /**
+         * @brief 检查是否标记为分离执行。
+         */
+        bool isDetached() const noexcept
+        {
+            return m_detached;
+        }
+
         // --- await_transform 重载（具体实现在 awaitables.hpp 中）---
 
         /**
@@ -300,6 +333,7 @@ namespace Core
         TaskPriority m_priority = TaskPriority::Normal;               ///< 任务优先级。
         CancellationSource *m_cancel_source = nullptr;                ///< 取消源指针。
         ExecutionContext *m_exec_ctx = nullptr;                       ///< 执行上下文指针。
+        bool m_detached = false;                                      ///< 分离执行标志（fire-and-forget）。
 
         template<typename U>
         friend class Task; ///< 允许 Task 访问私有成员。
@@ -315,6 +349,7 @@ namespace Core
     {
     public:
         using promise_type = TaskPromise<T>; ///< 关联的 Promise 类型。
+        friend class TaskPromise<T>;         ///< 允许 Promise 访问私有成员（用于 awaitTransform）。
 
         /**
          * @brief 默认构造，空任务。
@@ -383,7 +418,7 @@ namespace Core
         {
             if (m_coro)
             {
-                m_coro.promise().set_priority(prio);
+                m_coro.promise().setPriority(prio);
             }
             return std::move(*this);
         }
@@ -397,7 +432,7 @@ namespace Core
         {
             if (m_coro)
             {
-                m_coro.promise().set_cancellation_source(&src);
+                m_coro.promise().setCancellationSource(&src);
             }
             return std::move(*this);
         }
@@ -411,15 +446,58 @@ namespace Core
         {
             if (m_coro)
             {
-                m_coro.promise().set_execution_context(&ctx);
+                m_coro.promise().setExecutionContext(&ctx);
             }
             return std::move(*this);
+        }
+
+        /**
+         * @brief 单次恢复协程执行。
+         * @note 协程会从当前暂停点继续执行直到下一个暂停点或完成。
+         *       适用于协程由外部调度器驱动的场景（如配合 I/O 事件循环）。
+         */
+        void resume()
+        {
+            if (m_coro && !m_coro.done())
+            {
+                m_coro.resume();
+            }
+        }
+
+        /**
+         * @brief 分离协程句柄，使 Task 析构时不再自动销毁协程帧。
+         * @return 底层 coroutine_handle，调用者需负责最终销毁。
+         * @note 用于协程由外部调度器异步驱动的场景，此时 Task 的生命周期
+         *       可能短于协程。调用后此 Task 的 get() 将抛出异常。
+         */
+        std::coroutine_handle<promise_type> detachHandle()
+        {
+            auto h = m_coro;
+            m_coro = nullptr;
+            return h;
+        }
+
+        /**
+         * @brief 分离协程句柄并标记为 fire-and-forget。
+         *        协程在 final_suspend 时自动销毁帧，无需手动 destroy。
+         * @return 底层 coroutine_handle。
+         */
+        std::coroutine_handle<promise_type> fireAndForget()
+        {
+            if (m_coro)
+            {
+                m_coro.promise().setDetached();
+            }
+            return detachHandle();
         }
 
         /**
          * @brief 阻塞方式获取任务结果（简易实现，生产环境应改用条件变量等）。
          * @return 协程返回的 T 类型结果。
          * @throw 如果任务为空，抛出 std::runtime_error；若协程以异常结束，则重新抛出该异常。
+         * @note 此方法仅适用于不会在外部 awaiter 中挂起的同步协程。
+         *       对于异步协程（如使用 co_await schedule/asyncRead/timeout），
+         *       请使用 resume() 配合外部调度器驱动。
          */
         T get()
         {
@@ -468,7 +546,7 @@ namespace Core
          * @brief 判断任务是否已就绪（完成）。
          * @return true 如果协程已结束。
          */
-        bool awaitReady() const noexcept
+        bool await_ready() const noexcept
         {
             return m_coro.done();
         }
@@ -478,9 +556,9 @@ namespace Core
          * @param h 当前协程句柄。
          * @return 当前 Task 的协程句柄。
          */
-        std::coroutine_handle<> awaitSuspend(std::coroutine_handle<> h) noexcept
+        std::coroutine_handle<> await_suspend(std::coroutine_handle<> h) noexcept
         {
-            m_coro.promise().set_continuation(h);
+            m_coro.promise().setContinuation(h);
             return m_coro;
         }
 
@@ -488,7 +566,7 @@ namespace Core
          * @brief 恢复后获取任务结果。
          * @return 任务返回值。
          */
-        T awaitResume()
+        T await_resume()
         {
             return m_coro.promise().result();
         }
@@ -508,9 +586,147 @@ namespace Core
 
     // getReturnObject 的实现必须在 Task 定义之后
     template<typename T>
-    Task<T> TaskPromise<T>::getReturnObject()
+    Task<T> TaskPromise<T>::get_return_object()
     {
         return Task<T>{std::coroutine_handle<TaskPromise>::from_promise(*this)};
+    }
+
+    /**
+     * @brief void 类型协程的 Promise 特化。
+     * @details 与泛型版本不同，不使用 std::variant 存储 void 值（非法），
+     *          改用 std::exception_ptr 仅存储异常。提供 return_void() 方法
+     *          以满足 void 协程的语义要求。
+     */
+    template<>
+    class TaskPromise<void>
+    {
+    public:
+        using result_type = void;
+
+        TaskPromise() : m_result(std::monostate{})
+        {
+        }
+
+        Task<void> get_return_object();
+
+        std::suspend_always initial_suspend() const noexcept
+        {
+            return {};
+        }
+
+        detail::FinalAwaiter final_suspend() const noexcept
+        {
+            return {};
+        }
+
+        void return_void() const noexcept
+        {
+        }
+
+        void unhandled_exception()
+        {
+            m_result = std::current_exception();
+        }
+
+        void *operator new(const std::size_t size)
+        {
+            return CoroutineMemoryPool::instance().allocate(size);
+        }
+
+        void operator delete(void *ptr, const std::size_t size)
+        {
+            CoroutineMemoryPool::instance().deallocate(ptr, size);
+        }
+
+        void setContinuation(const std::coroutine_handle<> cont)
+        {
+            m_continuation = cont;
+        }
+
+        void setPriority(const TaskPriority prio)
+        {
+            m_priority = prio;
+        }
+
+        void setCancellationSource(CancellationSource *src)
+        {
+            m_cancel_source = src;
+        }
+
+        void setExecutionContext(ExecutionContext *ctx)
+        {
+            m_exec_ctx = ctx;
+        }
+
+        TaskPriority priority() const
+        {
+            return m_priority;
+        }
+
+        CancellationToken cancellationToken() const
+        {
+            return m_cancel_source ? m_cancel_source->get_token() : CancellationToken{};
+        }
+
+        ExecutionContext *executionContext() const
+        {
+            return m_exec_ctx;
+        }
+
+        std::coroutine_handle<> continuation() const
+        {
+            return m_continuation;
+        }
+
+        void setDetached() noexcept
+        {
+            m_detached = true;
+        }
+
+        bool isDetached() const noexcept
+        {
+            return m_detached;
+        }
+
+        void result()
+        {
+            if (auto *ep = std::get_if<std::exception_ptr>(&m_result))
+            {
+                std::rethrow_exception(*ep);
+            }
+        }
+
+        // --- await_transform 声明（实现在 Awaitables.hpp）---
+
+        auto awaitTransform(Task<void> &&task) const;
+
+        auto awaitTransform(ScheduleAwaiter awaiter) const;
+
+        auto awaitTransform(IoAwaiter awaiter) const;
+
+        auto awaitTransform(TimeoutAwaiter awaiter) const;
+
+        template<typename U>
+        auto awaitTransform(FutureAwaiter<U> awaiter);
+
+        template<typename U>
+        auto awaitTransform(Task<U> &&task);
+
+    private:
+        std::variant<std::monostate, std::exception_ptr> m_result;
+        std::coroutine_handle<> m_continuation;
+        TaskPriority m_priority = TaskPriority::Normal;
+        CancellationSource *m_cancel_source = nullptr;
+        ExecutionContext *m_exec_ctx = nullptr;
+        bool m_detached = false;
+
+        template<typename U>
+        friend class Task;
+    };
+
+    inline Task<void> TaskPromise<void>::get_return_object()
+    {
+        return Task{std::coroutine_handle<TaskPromise>::from_promise(*this)};
     }
 }
 
