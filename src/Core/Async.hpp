@@ -28,7 +28,7 @@ namespace Core
     {
         auto task = std::invoke(std::forward<F>(f), std::forward<Args>(args)...);
         // 设置执行上下文和优先级
-        task = std::move(task).with_execution_context(ctx).with_priority(priority);
+        task = std::move(task).withExecutionContext(ctx).withPriority(priority);
         // 提交到调度器恢复执行
         ctx.scheduler()->schedule([task = std::move(task)]() mutable
         {
